@@ -1,0 +1,2 @@
+module VariantSuppliersHelper
+end

@@ -1,0 +1,33 @@
+<%= form_for(@variant_supplier) do |f| %>
+  <% if @variant_supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@variant_supplier.errors.count, "error") %> prohibited this variant_supplier from being saved:</h2>
+
+      <ul>
+      <% @variant_supplier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :variant_id %><br>
+    <%= f.number_field :variant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier_id %><br>
+    <%= f.number_field :supplier_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

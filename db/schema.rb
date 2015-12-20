@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151220133023) do
+ActiveRecord::Schema.define(version: 20151220140458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,6 +122,17 @@ ActiveRecord::Schema.define(version: 20151220133023) do
     t.datetime "updated_at"
   end
 
+  create_table "suppliers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -171,6 +182,15 @@ ActiveRecord::Schema.define(version: 20151220133023) do
   add_index "variant_properties", ["property_id"], name: "index_variant_properties_on_property_id", using: :btree
   add_index "variant_properties", ["variant_id"], name: "index_variant_properties_on_variant_id", using: :btree
   add_index "variant_properties", ["venue_id"], name: "index_variant_properties_on_venue_id", using: :btree
+
+  create_table "variant_suppliers", force: :cascade do |t|
+    t.integer  "variant_id"
+    t.integer  "supplier_id"
+    t.decimal  "cost"
+    t.boolean  "active"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "variants", force: :cascade do |t|
     t.integer  "product_id"
