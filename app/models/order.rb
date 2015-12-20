@@ -1,10 +1,13 @@
 class Order < ActiveRecord::Base
   # attr_accessible :fulfilled, :item, :placed, :person_id, :special_instructions, :priority, :flag, :milk
 
+  has_many   :order_items, :dependent => :destroy
   belongs_to :user
-  belongs_to :order_status
-  has_many :cart_items
-  has_and_belongs_to_many :venues
+
+  before_validation :set_email, :set_number
+  after_create      :save_order_number
+  before_save       :update_tax_rates
+
 
 
   # so that on creation, it hasn't be fulfilled yet and it was ordered now

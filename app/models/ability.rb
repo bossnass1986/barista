@@ -11,10 +11,10 @@ class Ability
       elsif user.has_role? :owner
         can :write, Venue, :id => Venue.with_role(:owner, user).pluck(:id)
       else
-        can :read, Venue
-        # can :manage, Forum if user.has_role?(:manager, Forum)
-        # can :write, Forum, :id => Forum.with_role(:moderator, user).pluck(:id)
+        can :read, Order, :user_id => user.id
+        can :manage, Order do |action, order|
+          action != :destroy && order.state != 'complete' && order.user_id == user.id
+        end
       end
   end
 end
-

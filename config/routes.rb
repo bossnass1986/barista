@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :order_items
   get 'payments/new'
 
   get 'payments/create'

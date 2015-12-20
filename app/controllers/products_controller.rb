@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
     products = Product.active.includes(:variants)
 
     product_types = nil
-    if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id]).order(name: asc)
+    if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id])
       product_types = product_type.self_and_descendants.map(&:id)
     end
     if product_types
-      @products = products.where(product_type_id: product_types).order(name: asc)
+      @products = products.where(product_type_id: product_types)
     else
       @products = products
     end
@@ -27,8 +27,7 @@ class ProductsController < ApplicationController
   # GET /Products/1
   # GET /Products/1.json
   def show
-    @product = Product.active.find(params[:id])
-    @variants = Variant.where(product_id: params[:id])
+    Product.includes({:variants => {:variant_properties => :property} }).find(params[:id])
     # @cart_item.variant_id = @product.active_variants.first.try(:id)
     respond_to do |format|
       format.html # show.html.haml
