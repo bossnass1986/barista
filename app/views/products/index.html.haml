@@ -2,8 +2,13 @@
 .grid-block
   .small-12.grid-content
     %section.block-list
-
       %header I would like a
       %ul
-        - @products.each do |product|
-          %li.with-chevron= link_to image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase) + product.name.titlecase, product
+        - @products.each_with_index do |product, i|
+          %li.with-chevron{id: i}
+            = link_to product_path(product), title: product.name do
+              = image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase) + product.name.titlecase
+              %strong= number_to_currency product.price_range.first
+              - if product.price_range?
+                to
+                %strong= number_to_currency product.price_range.last

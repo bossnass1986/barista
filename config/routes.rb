@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :cart_items
   devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :users
-  resources :store_configs
   resources :orders
   resources :products
   resources :payments
