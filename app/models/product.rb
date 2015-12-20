@@ -5,8 +5,6 @@ class Product < ActiveRecord::Base
 
   has_one :product_type
 
-  belongs_to :venue
-  belongs_to :cart_item
 
   has_many :product_properties
   has_many :properties,         through: :product_properties
@@ -19,6 +17,8 @@ class Product < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 165 }
   validates :product_type_id, presence: true
 
+  accepts_nested_attributes_for :variants,           reject_if: proc { |attributes| attributes['sku'].blank? }
+  accepts_nested_attributes_for :product_properties, reject_if: proc { |attributes| attributes['description'].blank? }, allow_destroy: true
 
   def hero_variant
     active_variants.detect{|v| v.master } || active_variants.first

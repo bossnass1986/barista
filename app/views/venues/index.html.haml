@@ -1,8 +1,0 @@
-.grid-block
-  .small-12.grid-content
-    %section.block-list
-      %header Coffee Venues
-      %ul
-        - @venues.each do |venue|
-          %li.with-chevron
-            = link_to venue.name.titlecase, venue

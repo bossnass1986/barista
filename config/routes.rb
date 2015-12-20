@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :variant_suppliers
+  resources :suppliers
   resources :order_items
   get 'payments/new'
 
@@ -12,7 +14,6 @@ Rails.application.routes.draw do
   resources :cart_items
   devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :users
-  resources :venues
   resources :store_configs
   resources :orders
   resources :products

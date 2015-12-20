@@ -14,37 +14,16 @@ class Order < ActiveRecord::Base
   before_create :set_order_times, :set_order_status
 
 
-  def set_order_times
-    self.fulfilled = nil
-    self.placed = Time.now
-  end
-
-  def set_order_status
-    self.order_status_id = 1
-  end
-
- # business rules?  oh... here, huh?
-  def get_queue_total
-    # the QUEUE is only for items created today     @orders = Order.where('fulfilled IS NULL AND created_at > ?', Time.zone.now.beginning_of_day)
-    Order.where('fulfilled IS NULL AND created_at > ?', Time.zone.now.beginning_of_day).count
-  end
-
-  def get_queue_place(order)
-    # must take priority into account.
-    Order.where('fulfilled IS NULL AND placed <= ? AND created_at > ?', order.placed, Time.zone.now.beginning_of_day).count 
-  end
-
-  def in_queue
-    if self.fulfilled.nil? and self.created_at > Time.zone.now.beginning_of_day
-      true
-    else
-      false
+  def add_cart_item( item, state_id = nil)
+    self.save! if self.new_record?
+    # tax_rate_id = state_id ? item.variant.product.tax_rate(state_id) : nil
+    item.quantity.times do
+      oi =  OrderItem.create(
+          :order        => self,
+          :variant_id   => item.variant.id,
+          :price        => item.variant.price)
+          # :tax_rate_id  => tax_rate_id)
+      self.order_items.push(oi)
     end
   end
-
-  # on the model object itself.
-  def self.get_queue_orders
-    Order.where('fulfilled IS NULL AND created_at > ?', Time.zone.now.beginning_of_day).order("priority DESC, created_at ASC")
-  end
-
 end
