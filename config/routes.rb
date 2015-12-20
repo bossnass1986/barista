@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :variant_suppliers
-  resources :suppliers
-  resources :order_items
+  resources :carts
   get 'payments/new'
 
   get 'payments/create'
@@ -18,13 +16,16 @@ Rails.application.routes.draw do
   resources :orders
   resources :products
   resources :payments
-  root :to => 'venues#index'
+  resources :variant_suppliers
+  resources :suppliers
+  resources :order_items
+  root :to => 'supplier#index'
 
   # for the queue-view
   match 'queue' => 'orders#queue', :via => [:get, :post]
   match 'orders/:id/complete' => 'orders#complete', :via => [:get, :post], :as => :complete_order
 
-  match '*path', to: redirect('/'), via: :all
+  # match '*path', to: redirect('/'), via: :all
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
