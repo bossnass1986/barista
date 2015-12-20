@@ -1,0 +1,11 @@
+- title 'My Order History'
+.grid-block
+  .small-12.grid-content
+    .grid-block
+      .grid-content
+        %section.block-list
+          %header Past Order Details
+          %ul
+            - @orders.each do |order|
+              %li.with-chevron
+                = link_to "Order ##{order.id} (#{order.placed.strftime('%a, %r')})", order

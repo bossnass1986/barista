@@ -1,0 +1,14 @@
+.grid-block
+  = form_for(resource, as: resource_name, url: session_path(resource_name), :html => { class: 'small-12 grid-content medium-8 medium-offset-2' }) do |f|
+    %section.block-list
+      %header Sign Into my Account
+      %ul
+        %li= f.email_field :email, placeholder: 'Email Address'
+        %li= f.password_field :password, placeholder: 'Password', autocomplete: 'off'
+        %li
+          = f.check_box :remember_me, id: :remember_me
+          %label{for: :remember_me} Remeber Me?
+    .grid-block
+      .small-12.grid-content
+        = f.submit 'Sign In', class: 'button expand large'
+

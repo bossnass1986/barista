@@ -1,0 +1,31 @@
+.grid-block
+  .small-12.grid-content
+    %section.block-list
+      %header Manage Information
+      %ul
+        %li.with-chevron= link_to 'Change your account information', edit_user_registration_path
+        %li.with-chevron= link_to 'Add or remove saved addresses', current_user
+        %li.with-chevron= link_to 'View your order history', orders_path
+    %section.block-list
+      %header Notification Settings
+      %ul
+        %li
+          %span Push Notifications
+          .switch
+            %input#push_notifications{type: 'checkbox'}
+              %label{for: 'push_notifications'}
+        %li
+          %span SMS Notifications
+          .switch
+            %input#sms_notifications{type: 'checkbox'}
+              %label{for: 'sms_notifications'}
+    - if current_user.has_role? :owner or :admin
+      %section.block-list
+        %header Configuration Settings
+        %ul
+          %li.with-chevron= link_to 'Owner Setting', ''
+          - if current_user.has_role? :admin
+            %li.with-chevron= link_to 'Admin Setting', ''
+    %section.block-list
+      %ul
+        %li.with-chevron=link_to 'Log Out', destroy_user_session_path, method: :delete

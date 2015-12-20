@@ -1,0 +1,16 @@
+.grid-block
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { class: 'small-12 grid-content medium-8 medium-offset-2' }) do |f|
+    = devise_error_messages!
+    %section.block-list
+      %header Update My Details
+      %ul
+        %li= f.text_field :name, placeholder: 'Name'
+        %li= f.email_field :email, placeholder: 'Email Address'
+        %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
+      %header Security Details
+      %ul
+        %li= f.password_field :password, autofocus: true, autocomplete: 'off', placeholder: 'Current Password'
+        %li= f.password_field :current_password, autofocus: true, autocomplete: 'off', placeholder: 'Confirm Password'
+    .grid-block
+      .small-12.grid-content
+        = f.submit class: 'button expand large'

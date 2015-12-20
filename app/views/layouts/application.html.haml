@@ -1,0 +1,38 @@
+!!!
+%html{lang: :en, 'ng-app' => 'foundation', 'zf-esc-close' => ''}
+  %head
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
+    %meta{:charset => 'utf-8'}/
+    %meta{:content => 'width=device-width, initial-scale=1.0', :name => 'viewport'}
+    %title= content_for?(:title) ? yield(:title) : 'Bean\'n\'Gone'
+    = stylesheet_link_tag    'application'
+    %script{src: :'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'}
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body{'ng-app':  :'app'}
+    %zf-notification-set#main-notifications
+    .grid-frame.vertical
+      .title-bar
+        .center.title= content_for?(:title) ? yield(:title) : 'Bean\'n\'Gone'
+        %span.left
+          = link_to 'Back', :back
+        -#%span.right
+          %a{:href => "#"} Right
+      .grid-block
+        #main.small-12.grid-block
+          %zf-notification-set#main-notifications{:position => "top-left"}
+          = notice
+          = yield
+      - if user_signed_in?
+        .grid-block.shrink
+          .grid.content.small-12
+            %ul.menu-bar
+              %li
+                %a{href: products_url}
+                  %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''} Coffees
+              %li
+                %a{href: users_url}
+                  %img{icon: 'person', size: 'medium', 'zf-iconic': :''} Account
+              %li
+                %a{href: cart_items_url}
+                  %img{icon: 'cart', size: 'medium', 'zf-iconic': :''} Checkout

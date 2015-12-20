@@ -1,0 +1,8 @@
+- title 'Find My Coffee'
+.grid-block
+  .small-12.grid-content
+    %section.block-list
+      %header I would like a
+      %ul
+        - @products.each do |product|
+          %li.with-chevron= link_to image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase) + product.name.titlecase, product

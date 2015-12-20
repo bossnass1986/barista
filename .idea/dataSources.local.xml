@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails barista: development" uuid="4ab14069-0621-4096-811b-6a492b108389">
+      <schema-pattern>beanngone_dev.public</schema-pattern>
+      <default-schemas>beanngone_dev.*</default-schemas>
+    </data-source>
+    <data-source name="Rails barista: test" uuid="6a1990b7-8cab-42b3-a60f-381d83b83b37">
+      <schema-pattern>beanngone_test.*</schema-pattern>
+      <default-schemas>beanngone_test.*</default-schemas>
+    </data-source>
+    <data-source name="Rails barista: production" uuid="d99f50ea-b9a5-434a-a955-9a9793c8f307">
+      <first-sync>true</first-sync>
+      <user-name>fhcqqpihhlfboe</user-name>
+      <user-password>dfd3df9fdffadf9cdfefdf99dffcdf9cdfe2dfc2dfdddf93dffadf9ddfdddfc0df9bdfdbdf9adfc8dff9dfc7dffddfe6df92dffe</user-password>
+    </data-source>
+  </component>
+</project>

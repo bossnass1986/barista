@@ -1,0 +1,49 @@
+-#.row
+  = form_for(@order) do |f|
+    = f.hidden_field :person_id, value: current_person.id
+    - if @order.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@order.errors.count, 'error')
+          prohibited this order from being saved:
+        %ul
+          - @order.errors.full_messages.each do |msg|
+            %li= msg
+    .large-2.columns
+      = f.label :priority
+      %br/
+      = f.text_field :priority
+    .large-3.columns
+      = f.label :item
+      %br/
+      = f.select(:item, MenuItem.all.map(&:name), {:include_blank => 'None', :prompt => 'Add Item to Order'})
+    .large-3.columns
+      = f.label :milk
+      %br/
+      = f.text_field :milk
+    -#.large-3.columns
+      = f.label :person_id
+      %br/
+      = f.text_field :person_id
+    -#.large-1.columns
+      = f.label :fulfilled
+      %br/
+      = f.datetime_select :fulfilled
+    .row
+      .large-12.columns
+        = f.label :special_instructions
+        %br/
+        = f.text_field :special_instructions
+    .actions
+      = f.submit class: 'button'
+
+
+.small-12.grid-content
+  %h4 I would like a...
+  .grid-block.small-up-2.medium-up-4.large-up-5
+    - products.each do |menu_item|
+      .grid-content
+        .card
+          = link_to image_tag("drinks/#{menu_item.name.titlecase.tr(' ','-')}.png"), menu_item
+          .card-divider
+            = menu_item.name.titlecase

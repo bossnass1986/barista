@@ -1,0 +1,90 @@
+- title "Order a #{@product.name}"
+.grid-block
+  .small-12.grid-content{style: 'background:#fff'}
+    - if @product.active_variants.empty?
+      .grid-block
+        .grid-content
+          %h2.text-center
+            Sorry this product is not currently available.
+    - else
+      .grid-block.text-center
+        .grid-content
+          = image_tag("drinks/#{@product.name.titlecase.tr(' ','-')}.png", size: '150', alt: @product.name.titlecase, title: @product.name.titlecase)
+      .grid-block
+        .grid-content
+          %h2.text-center= @product.name
+      .grid-block
+        .grid-content
+          %p.text-center= @product.description
+          %h4.text-center.price
+            = number_to_currency @product.price
+      .grid-block
+        .grid-content
+          %section.block-list
+            %ul
+              %li
+                .grid-block
+                  .small-4.grid-content.text-center
+                    - @product.active_variants.each_with_index do |variant, i|
+                      #variant_
+                        = variant.id
+                        = raw variant.properties
+                    -#- if @product.active_variants.count > 0
+                      - @product.active_variants.each_with_index do |var, i|
+                        = var.id
+                        %ul.vertical-list
+                          - var.variant_properties.each do |prop|
+                            %li
+                              %label
+                                = prop.property_name
+                                = prop.description
+                  .small-4.grid-content.text-center
+                    2 SUGARS
+                  .small-4.grid-content.text-center
+                    LARGE
+              %li
+                .grid-block
+                  .small-2.grid-content
+                    loc
+                  .small-6.grid-content
+                    address
+                  .small-4.grid-content
+                    change
+              %li
+                .grid-block
+                  .small-2.grid-content
+                    ext
+                  .small-10.grid-content
+                    ext deets
+      .grid-block
+        .grid-content.small-12.align-center
+          %a.button.large.expand{href: :'', 'zf-open': :panel} Order Now
+      #panel{position: :bottom, 'zf-panel': :''}
+        %a.close-button{'zf-close': :''} ×
+        .grid-content
+          %h2.text-center Preferences
+          %section.block-list
+            - @variants.each do |var|
+              %header= var.name
+              %ul
+                -#- @variants.variant_properties.each do |prop|
+                  %li.with-chevron= link_to prop.description, prop
+              -#- if @product.active_variants.count > 0
+                - @product.active_variants.each_with_index do |var|
+                  %header= var.variant_properties
+                  %ul
+                    - var.variant_properties.each do |prop|
+                      %li.with-chevron= link_to prop.description, prop
+
+
+            -#%ul
+              %li=link_to :Milk, ''
+              %li=link_to :Sugar, ''
+              %li
+                - @product.variants.each_with_index do |variant|
+                  %input{:name => "price", type: :radio, :value => "variant_#{variant.id}", id: "variant_#{variant.id}"}
+                    %label{:for => "variant_#{variant.id}"}= number_to_currency(variant.price)
+          .grid-block
+            .grid-content.small-12.align-center
+              %a.button.large.expand Complete Order
+

@@ -1,0 +1,27 @@
+.grid-block
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { class: 'small-12 grid-content medium-8 medium-offset-2' }) do |f|
+    = devise_error_messages!
+    %section.block-list
+      %header My Details
+      %ul
+        %li= f.text_field :name, placeholder: 'Name',  autofocus: true
+        %li= f.email_field :email, placeholder: 'Email Address'
+        %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
+      %header Notification Settings
+      %ul
+        %li
+          %span Push Notifications
+          .switch
+            = f.check_box :push_notification
+            = f.label :push_notification, :' '
+        %li
+          %span SMS Notifications
+          .switch
+            = f.check_box :sms_notification
+            = f.label :sms_notification, :' '
+      %header Security Details
+      %ul
+        %li= f.password_field :password, autocomplete: 'off', placeholder: 'Current Password'
+        %li= f.password_field :current_password, autocomplete: 'off', placeholder: 'Confirm Password'
+    .grid-block
+    = f.submit class: 'button expand large'

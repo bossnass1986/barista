@@ -1,0 +1,24 @@
+- title "Order #{@order.id}"
+.grid-block
+  .small-12.grid-content
+    %p= "#{@order.user.name or 'Guest User'}, your ##{@order.id} is being made and will be ready at approximately #{@order.placed.strftime('%l:%M%p')}"
+
+    %zf-accordion
+      - @order_status.each do |os|
+        - if @order.order_status_id == os.id
+          %zf-accordion-item{:title => os.name, 'auto-open': :true}
+            = os.description
+        - else
+          %zf-accordion-item{:title => os.name, 'auto-open': :false}
+            = os.description
+
+    -#%ul.vertical.icon-left.menu-bar
+      - @order_status.each do |os|
+        - if @order.order_status_id >= os.id
+          %li
+            %a{:href => "#"}
+              %img{icon: 'circle-check', size: 'small', 'zf-iconic': '', class: 'iconic-color-success'}= os.name
+        - else
+          %li
+            %a{:href => "#"}
+              %img.iconic-color-success{icon: 'circle-x', size: 'small', 'zf-iconic': ''}= os.name

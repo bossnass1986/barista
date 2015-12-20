@@ -1,0 +1,23 @@
+#nav_1 {
+  //border-top: 3px solid #80bca3;
+  &:hover {
+    color: #272422;
+    background: #80bca3
+  }
+}
+#nav_2 {
+  &:hover {
+    color: #272422;
+    background: #f6f7bd
+  }
+}
+#nav_3 {
+  &:hover {
+    background: #e6ac27
+  }
+}
+#nav_4 {
+  &:hover {
+    background: #bf4d28
+  }
+}

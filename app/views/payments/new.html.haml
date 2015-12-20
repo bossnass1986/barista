@@ -1,0 +1,35 @@
+.grid-block
+  = form_tag payments_path, id: 'card-details', class: 'small-12 grid-content medium-8 medium-offset-2' do
+    %section.block-list
+      %header Credit Card Details
+      %ul
+        %li
+          %input#card-number{'data-stripe': :number, type: :text, pattern:  :'\d*', placeholder: :'Credit Card Number'}
+        %li.with-dropdown
+          = select_month(Date.today)
+          = select_year(Date.today, :start_year => Date.today.year, :end_year => 8.years.from_now.year)
+          -#%input#card-exp-month{'data-stripe': :exp_month, :type => "text"}/
+          -#%input#card-exp-year{'data-stripe': :exp_year, :type => "text"}/
+        %li
+          %input#card-cvc{'data-stripe': :cvc, type: :text, pattern:  :'\d*', placeholder: :'CVC'}
+
+  -#.payment-errors
+    %div
+      %label{:for => "card-number"} Card Number:
+      %input#card-number{"data-stripe" => "number", :type => "text"}/
+    %div
+      %label{:for => "card-exp-month"} Card Expiry Month:
+      %input#card-exp-month{"data-stripe" => "exp_month", :type => "text"}/
+    %div
+      %label{:for => "card-exp-year"} Card Expiry Year:
+      %input#card-exp-year{"data-stripe" => "exp_year", :type => "text"}/
+    %div
+      %label{:for => "card-cvc"} CVC:
+      %input#card-cvc{"data-stripe" => "cvc", :type => "text"}/
+    %div
+      %label{:for => "payment-type"} Payment Type:
+      %select#payment-type{:name => "payment_type"}
+        %option{:value => "deposit"} $20 Deposit
+        %option{:value => "subscription"} Monthly subscription, $9.97
+    %div
+      %input{:type => "submit", :value => "Pay Now"}/
