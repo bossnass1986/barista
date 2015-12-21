@@ -33,7 +33,7 @@ class Product < ActiveRecord::Base
     active_variants.present? ? price_range.first : '-'
   end
 
-  # range of the product prices (Just teh low and high price) as an array
+  # range of the product prices (Just the low and high price) as an array
   #
   # @param [none]
   # @return [Array] [Low price, High price]
@@ -66,6 +66,10 @@ class Product < ActiveRecord::Base
     active(at)
   end
 
+  def available?
+    has_active_variants?
+  end
+
   private
 
     def has_active_variants?
@@ -74,6 +78,14 @@ class Product < ActiveRecord::Base
 
     def not_active_on_create!
       self.deleted_at ||= Time.zone.now
+    end
+
+    def ensure_available
+      if active? && deleted_at_changed?
+        self.errors.add(:base, 'There must be active variants.')  if active_variants.blank?
+        self.errors.add(:base, 'Variants must have inventory.')   unless active_variants.any?{|v| v.is_available? }
+        self.deleted_at = deleted_at_was if active_variants.blank? || !active_variants.any?{|v| v.is_available? }
+      end
     end
 
 end

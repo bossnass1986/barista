@@ -9,7 +9,7 @@ gem 'html2haml'
 gem 'devise'
 gem 'rolify'
 gem 'cancancan'
-gem 'stripe'
+gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 
 gem 'rails_12factor', group: :production
 # gem 'seed_dump'

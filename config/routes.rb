@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :invoices
+  resources :payment_profiles
+  resources :payments
   resources :carts
   get 'payments/new'
 
@@ -18,7 +21,7 @@ Rails.application.routes.draw do
   resources :variant_suppliers
   resources :suppliers
   resources :order_items
-  root :to => 'supplier#index'
+  root :to => 'suppliers#index'
 
   # for the queue-view
   match 'queue' => 'orders#queue', :via => [:get, :post]

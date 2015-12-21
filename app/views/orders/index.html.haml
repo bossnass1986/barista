@@ -1,5 +1,5 @@
 - title 'My Order History'
-.grid-block
+-#.grid-block
   .small-12.grid-content
     .grid-block
       .grid-content
@@ -9,3 +9,23 @@
             - @orders.each do |order|
               %li.with-chevron
                 = link_to "Order ##{order.id} (#{order.placed.strftime('%a, %r')})", order
+.nine.large-9.columns
+  %h3 Orders
+  - unless @orders.length > 0
+    You currently do not have any orders.
+  - @orders.each do |order|
+    .order-list-item.ten
+      %ul
+        %li
+          %label Number:
+          = link_to order.number, order
+        -#%li
+          %label Amount:
+          = number_to_currency( order.first_invoice_amount )
+        %li
+          %label Status:
+          = order.order_status.name
+        %li
+          %label Completed at:
+          = order.display_completed_at
+    %hr/

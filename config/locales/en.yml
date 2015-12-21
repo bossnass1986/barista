@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+      aus_date: "%d/%m/%Y"
+      aus_time: "%d/%m/%Y @ %I:%M %p"
+      long_date: "%B %d, %Y"
