@@ -1,52 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="grabbing missing cart files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151221225047_create_payments.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151221225305_create_payment_profiles.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151221230152_create_invoices.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/orders/_order_item.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/custom_validators.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/invoice.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/invoice_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/invoices.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/invoices.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/invoices.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/invoices_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/invoices_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/invoices_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/concerns/presentation/order_presenter.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/payment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/payment_profile.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/payment_profile_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/payment_profiles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/payment_profiles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/payment_profiles.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/payment_profiles_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/payment_profiles_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/payment_profiles_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/payment_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/payments.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/payments_controller_test.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/initializers/stripe.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb" afterPath="$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/barista.iml" afterPath="$PROJECT_DIR$/.idea/barista.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cart_items/index.html.haml" afterPath="$PROJECT_DIR$/app/views/cart_items/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/index.html.haml" afterPath="$PROJECT_DIR$/app/views/orders/index.html.haml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="invoices, payments and more fun stuff">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151222113357_create_referrals.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151222113519_create_referral_types.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151222113706_create_referral_programs.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151222113851_create_referral_bonus.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151222114216_rename_referral_bonu_to_referral_bonus.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/referral.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/referral_bonu_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/referral_bonus.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/referral_bonus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/referral_bonus.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/referral_bonus.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/referral_bonus_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/referral_bonus_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/referral_bonus_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/referral_program.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/referral_program_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/referral_programs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/referral_programs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/referral_programs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/referral_programs_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/referral_programs_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/referral_programs_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/referral_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/referral_type.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/referral_type_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/referral_types.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/referral_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/referral_types.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/referral_types_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/referral_types_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/referral_types_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/referrals.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/referrals.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/referrals.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/referrals_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/referrals_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/referrals_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/show.html.haml" afterPath="$PROJECT_DIR$/app/views/orders/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/supplier.rb" afterPath="$PROJECT_DIR$/app/models/supplier.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="barista.iws" />
@@ -151,18 +145,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="payment.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/payment.rb">
+      <file leaf-file-name="referral_types_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/referral_types_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20151221225305_create_payment_profiles.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20151221225305_create_payment_profiles.rb">
+      <file leaf-file-name="20151222113706_create_referral_programs.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20151222113706_create_referral_programs.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
@@ -171,11 +165,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment_profile.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/payment_profile.rb">
+      <file leaf-file-name="referral_program.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/referral_program.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="referral_type.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/referral_type.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="referral_programs_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/referral_programs_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20151222113851_create_referral_bonus.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20151222113851_create_referral_bonus.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="referral_bonus.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/referral_bonus.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,218 +222,202 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#barista</OriginalElement>
               <nodes>
-                <node x="206.0" y="975.501873868095">Ability</node>
-                <node x="1170.5" y="544.8747186956812">OrderStatus</node>
-                <node x="741.0" y="116.99025201293864">Role</node>
-                <node x="1601.0" y="792.251873868095">ProductProperty</node>
-                <node x="1952.0" y="514.6220430667124">Invoice</node>
-                <node x="1625.0" y="0.3220430667124674">PaymentProfile</node>
-                <node x="0.0" y="975.501873868095">VariantRequiredError</node>
-                <node x="1962.0" y="400.54896111992366">OrderItem</node>
-                <node x="1145.5" y="857.501873868095">VariantProperty</node>
-                <node x="359.0" y="759.6970430667125">Variant</node>
-                <node x="1951.0" y="91.69741984510642">CartItem</node>
-                <node x="376.5" y="668.6970430667125">VariantSupplier</node>
-                <node x="2177.0" y="536.6220430667124">Payment</node>
-                <node x="1089.0" y="646.251873868095">Product</node>
-                <node x="632.0" y="773.876873868095">Property</node>
-                <node x="1504.0" y="441.32204306671247">Order</node>
-                <node x="1048.0" y="6.99025201293864">User</node>
-                <node x="1539.5" y="127.32204306671247">Cart</node>
-                <node x="1607.5" y="701.251873868095">ProductType</node>
-                <node x="1599.5" y="350.32204306671247">ItemType</node>
-                <node x="0.0" y="714.1970430667125">Supplier</node>
+                <node x="1513.0" y="1528.2293103448278">Ability</node>
+                <node x="1610.5" y="913.4793103448278">OrderStatus</node>
+                <node x="951.0" y="362.93692629209875">Role</node>
+                <node x="2321.0" y="1277.9793103448278">ProductProperty</node>
+                <node x="2731.0" y="827.3004883047988">Invoice</node>
+                <node x="2242.0" y="0.0">PaymentProfile</node>
+                <node x="1307.0" y="1528.2293103448278">VariantRequiredError</node>
+                <node x="2771.0" y="667.6641588296764">OrderItem</node>
+                <node x="388.0" y="1662.2293103448278">ReferralProgram</node>
+                <node x="1575.5" y="1343.2293103448278">VariantProperty</node>
+                <node x="466.5" y="1548.2293103448278">ReferralType</node>
+                <node x="479.0" y="1175.6254883047986">Variant</node>
+                <node x="2760.0" y="320.5097701149426">CartItem</node>
+                <node x="526.5" y="1039.6254883047986">VariantSupplier</node>
+                <node x="1499.0" y="1049.4793103448278">Product</node>
+                <node x="3055.0" y="805.8004883047988">Payment</node>
+                <node x="0.0" y="1695.2293103448278">ReferralBonus</node>
+                <node x="852.0" y="1231.4793103448278">Property</node>
+                <node x="2164.0" y="730.0">Order</node>
+                <node x="1308.0" y="65.93692629209875">User</node>
+                <node x="2249.5" y="370.0">Cart</node>
+                <node x="2317.5" y="1155.5004883047986">ProductType</node>
+                <node x="2309.5" y="616.0">ItemType</node>
+                <node x="0.0" y="1080.1254883047986">Supplier</node>
+                <node x="801.0" y="1528.2293103448278">Referral</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="Cart" target="CartItem">
-                  <point x="148.0" y="-76.25" />
-                  <point x="1871.0" y="142.57204306671247" />
-                  <point x="-73.0" y="-0.0" />
+                  <point x="158.0" y="-17.166666666666686" />
+                  <point x="2651.0" y="455.8333333333333" />
+                  <point x="2731.0" y="412.0482316534042" />
+                  <point x="-93.0" y="21.538461538461547" />
                 </edge>
                 <edge source="Supplier" target="VariantSupplier">
-                  <point x="139.5" y="-18.25" />
-                  <point x="359.0" y="694.1970430667125" />
-                  <point x="-79.0" y="-0.0" />
+                  <point x="199.5" y="-51.5" />
+                  <point x="479.0" y="1087.6254883047986" />
+                  <point x="-99.0" y="-0.0" />
+                </edge>
+                <edge source="ReferralType" target="Referral">
+                  <point x="88.0" y="-0.0" />
+                  <point x="721.0" y="1585.2293103448278" />
+                  <point x="-230.5" y="-68.0" />
                 </edge>
                 <edge source="Property" target="VariantProperty">
-                  <point x="168.0" y="43.875" />
-                  <point x="-90.5" y="-18.25" />
+                  <point x="188.0" y="60.75" />
+                  <point x="1308.0" y="1378.2293103448278" />
+                  <point x="-120.5" y="-35.0" />
                 </edge>
                 <edge source="User" target="CartItem">
-                  <point x="188.0" y="-98.54545454545456" />
-                  <point x="1504.0" y="61.82204306671247" />
-                  <point x="1871.0" y="61.82204306671247" />
-                  <point x="-73.0" y="-43.84615384615381" />
+                  <point x="388.0" y="-194.18181818181813" />
+                  <point x="2164.0" y="315.50000000000006" />
+                  <point x="2651.0" y="315.50000000000006" />
+                  <point x="2731.0" y="336.66361626878876" />
+                  <point x="-93.0" y="-53.84615384615387" />
                 </edge>
                 <edge source="Order" target="OrderItem">
-                  <point x="183.5" y="-85.41666666666663" />
-                  <point x="-62.0" y="-0.0" />
+                  <point x="243.5" y="-140.83333333333337" />
+                  <point x="2731.0" y="715.6641588296764" />
+                  <point x="-82.0" y="-0.0" />
                 </edge>
                 <edge source="Product" target="Property">
-                  <point x="-147.0" y="20.125" />
-                  <point x="1048.0" y="746.876873868095" />
-                  <point x="168.0" y="-43.875" />
+                  <point x="-197.0" y="34.0" />
+                  <point x="1308.0" y="1219.4793103448278" />
+                  <point x="188.0" y="-60.75" />
                 </edge>
                 <edge source="Variant" target="VariantProperty">
-                  <point x="96.5" y="38.0" />
-                  <point x="632.0" y="912.251873868095" />
-                  <point x="-90.5" y="18.25" />
+                  <point x="146.5" y="82.40000000000009" />
+                  <point x="852.0" y="1448.2293103448278" />
+                  <point x="-120.5" y="35.0" />
                 </edge>
                 <edge source="ProductType" target="Product">
-                  <point x="-80.0" y="-12.75" />
-                  <point x="1504.0" y="714.001873868095" />
-                  <point x="1424.0" y="706.626873868095" />
-                  <point x="147.0" y="-20.125" />
+                  <point x="-90.0" y="-18.5" />
+                  <point x="2164.0" y="1174.0004883047986" />
+                  <point x="2084.0" y="1151.4793103448278" />
+                  <point x="197.0" y="-34.0" />
                 </edge>
                 <edge source="Variant" target="Property">
-                  <point x="96.5" y="19.0" />
-                  <point x="-168.0" y="29.25" />
+                  <point x="146.5" y="41.200000000000045" />
+                  <point x="-188.0" y="40.5" />
                 </edge>
                 <edge source="Product" target="ProductType">
-                  <point x="147.0" y="20.125" />
-                  <point x="1424.0" y="746.876873868095" />
-                  <point x="1504.0" y="739.501873868095" />
-                  <point x="-80.0" y="12.75" />
+                  <point x="197.0" y="34.0" />
+                  <point x="2084.0" y="1219.4793103448278" />
+                  <point x="2164.0" y="1211.0004883047986" />
+                  <point x="-90.0" y="18.5" />
                 </edge>
                 <edge source="Property" target="Product">
-                  <point x="168.0" y="-14.625" />
-                  <point x="1048.0" y="787.126873868095" />
-                  <point x="-147.0" y="60.375" />
+                  <point x="188.0" y="-20.25" />
+                  <point x="1308.0" y="1287.4793103448278" />
+                  <point x="-197.0" y="102.0" />
                 </edge>
-                <edge source="Product" target="ProductProperty">
-                  <point x="147.0" y="60.375" />
-                  <point x="1424.0" y="787.126873868095" />
-                  <point x="1504.0" y="810.501873868095" />
-                  <point x="-86.5" y="-18.25" />
+                <edge source="ReferralProgram" target="Referral">
+                  <point x="166.5" y="-0.0" />
+                  <point x="-230.5" y="68.0" />
                 </edge>
                 <edge source="Invoice" target="Payment">
-                  <point x="72.0" y="-0.0" />
-                  <point x="-42.5" y="-0.0" />
+                  <point x="122.0" y="-0.0" />
+                  <point x="-146.0" y="-0.0" />
+                </edge>
+                <edge source="Product" target="ProductProperty">
+                  <point x="197.0" y="102.0" />
+                  <point x="2084.0" y="1287.4793103448278" />
+                  <point x="2164.0" y="1296.2293103448278" />
+                  <point x="-86.5" y="-18.25" />
                 </edge>
                 <edge source="Property" target="ProductProperty">
-                  <point x="168.0" y="14.625" />
+                  <point x="188.0" y="20.25" />
                   <point x="-86.5" y="18.25" />
                 </edge>
                 <edge source="User" target="Order">
-                  <point x="188.0" y="98.5454545454545" />
-                  <point x="-183.5" y="-41.0" />
+                  <point x="388.0" y="194.18181818181824" />
+                  <point x="-243.5" y="-135.20000000000005" />
                 </edge>
                 <edge source="Order" target="Invoice">
-                  <point x="183.5" y="17.08333333333337" />
-                  <point x="-72.0" y="-0.0" />
+                  <point x="243.5" y="-28.16666666666663" />
+                  <point x="-122.0" y="-36.80000000000007" />
                 </edge>
                 <edge source="Property" target="Variant">
-                  <point x="-168.0" y="-29.25" />
-                  <point x="96.5" y="-0.0" />
+                  <point x="-188.0" y="-40.5" />
+                  <point x="146.5" y="-0.0" />
+                </edge>
+                <edge source="ReferralBonus" target="ReferralProgram">
+                  <point x="154.0" y="-0.0" />
+                  <point x="-166.5" y="-0.0" />
                 </edge>
                 <edge source="User" target="Cart">
-                  <point x="188.0" y="49.27272727272725" />
-                  <point x="1504.0" y="218.82204306671244" />
-                  <point x="-148.0" y="-0.0" />
+                  <point x="388.0" y="129.4545454545456" />
+                  <point x="2164.0" y="473.0" />
+                  <point x="-158.0" y="-0.0" />
                 </edge>
                 <edge source="Product" target="Order">
-                  <point x="147.0" y="-60.375" />
-                  <point x="1424.0" y="666.376873868095" />
-                  <point x="-183.5" y="82.0" />
+                  <point x="197.0" y="-102.0" />
+                  <point x="2084.0" y="1083.4793103448278" />
+                  <point x="-243.5" y="135.20000000000005" />
                 </edge>
                 <edge source="Supplier" target="Variant">
-                  <point x="139.5" y="18.25" />
-                  <point x="-96.5" y="-0.0" />
+                  <point x="199.5" y="51.5" />
+                  <point x="-146.5" y="-0.0" />
                 </edge>
                 <edge source="ItemType" target="CartItem">
-                  <point x="88.0" y="-0.0" />
-                  <point x="1871.0" y="375.82204306671247" />
-                  <point x="-73.0" y="43.84615384615384" />
+                  <point x="98.0" y="-0.0" />
+                  <point x="2651.0" y="653.0" />
+                  <point x="2731.0" y="455.12515473032727" />
+                  <point x="-93.0" y="64.61538461538464" />
                 </edge>
                 <edge source="Role" target="User">
-                  <point x="59.0" y="-0.0" />
-                  <point x="-188.0" y="-0.0" />
-                </edge>
-                <edge source="User" target="PaymentProfile">
-                  <point x="188.0" y="-123.18181818181819" />
-                  <point x="1504.0" y="25.822043066712467" />
-                  <point x="-62.5" y="-0.0" />
+                  <point x="89.0" y="-0.0" />
+                  <point x="-388.0" y="-0.0" />
                 </edge>
                 <edge source="Product" target="Variant">
-                  <point x="-147.0" y="-60.375" />
-                  <point x="1048.0" y="666.376873868095" />
-                  <point x="968.0" y="685.2497186956812" />
-                  <point x="632.0" y="685.2497186956812" />
-                  <point x="96.5" y="-38.0" />
+                  <point x="-197.0" y="-102.0" />
+                  <point x="1308.0" y="1083.4793103448278" />
+                  <point x="1228.0" y="1130.55" />
+                  <point x="852.0" y="1130.55" />
+                  <point x="146.5" y="-82.40000000000009" />
+                </edge>
+                <edge source="User" target="PaymentProfile">
+                  <point x="388.0" y="-323.6363636363637" />
+                  <point x="2164.0" y="147.0" />
+                  <point x="-165.5" y="-0.0" />
                 </edge>
                 <edge source="OrderStatus" target="Order">
-                  <point x="65.5" y="-0.0" />
-                  <point x="1424.0" y="570.3747186956812" />
-                  <point x="-183.5" y="41.0" />
+                  <point x="85.5" y="-0.0" />
+                  <point x="2084.0" y="961.4793103448278" />
+                  <point x="-243.5" y="67.60000000000002" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.5802804557405784" x="568.1687056335901" y="543.282887781302" />
+              <settings layout="Hierarchic Group" zoom="0.39848529848529846" x="1140.2306402325407" y="912.5" />
               <SelectedNodes>
-                <node>PaymentProfile</node>
+                <node>Ability</node>
               </SelectedNodes>
               <Categories>
                 <Category>Association fields</Category>
+                <Category>Migration fields</Category>
+                <Category>Own fields</Category>
               </Categories>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <file leaf-file-name="20151222114216_rename_referral_bonu_to_referral_bonus.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20151222114216_rename_referral_bonu_to_referral_bonus.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20151221230152_create_invoices.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20151221230152_create_invoices.rb">
+      <file leaf-file-name="referral.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/referral.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invoice.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/invoice.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invoices_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/invoices_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payment_profiles_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/payment_profiles_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="123" column="18" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -420,10 +438,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20150908130433_create_properties.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130109195538_create_products.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20151213142552_create_product_properties.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20151213140537_create_variants.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150908132702_create_variant_properties.rb" />
         <option value="$PROJECT_DIR$/app/models/variant.rb" />
@@ -471,6 +485,10 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/invoice.rb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/app/models/referral.rb" />
+        <option value="$PROJECT_DIR$/app/models/referral_bonus.rb" />
+        <option value="$PROJECT_DIR$/app/models/referral_program.rb" />
+        <option value="$PROJECT_DIR$/app/models/referral_type.rb" />
       </list>
     </option>
   </component>
@@ -1231,34 +1249,62 @@
       <option name="project" value="LOCAL" />
       <updated>1450653961742</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="invoices, payments and more fun stuff">
+      <created>1450739126567</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1450739126568</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3178808" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231788" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33907285" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3040057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.48855507" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231788" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33907285" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3178808" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231788" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33907285" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3040057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.48855507" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1273,7 +1319,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="convert to rails 4" />
     <MESSAGE value="adding order statuses" />
     <MESSAGE value="adding blocklist to menu items for cart prep" />
     <MESSAGE value="restyling menu bar, order screen, update details as block list&#10;preparing seeded data for testing" />
@@ -1298,7 +1343,8 @@
     <MESSAGE value="more work on carts" />
     <MESSAGE value="work on cart" />
     <MESSAGE value="grabbing missing cart files" />
-    <option name="LAST_COMMIT_MESSAGE" value="grabbing missing cart files" />
+    <MESSAGE value="invoices, payments and more fun stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoices, payments and more fun stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1307,118 +1353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/order_items_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/variant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151220140300_create_suppliers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/suppliers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151220140458_create_variant_suppliers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/variant_suppliers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/variant_supplier.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151220141620_create_carts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151220225858_create_item_types.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020519836">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/item_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29801324">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57615894">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151128115522_create_cart_items.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1719,10 +1653,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.order_statuses">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151222113357_create_referrals.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/referrals_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151222113519_create_referral_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/referral_types_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151222113706_create_referral_programs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/referral_programs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151222113851_create_referral_bonus.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/referral_bonus_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151222114216_rename_referral_bonu_to_referral_bonus.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/referral_bonus.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/referral.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="18" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/referral_program.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/referral_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1733,158 +1784,182 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#barista</OriginalElement>
           <nodes>
-            <node x="206.0" y="975.501873868095">Ability</node>
-            <node x="1170.5" y="544.8747186956812">OrderStatus</node>
-            <node x="741.0" y="116.99025201293864">Role</node>
-            <node x="1601.0" y="792.251873868095">ProductProperty</node>
-            <node x="1952.0" y="514.6220430667124">Invoice</node>
-            <node x="1625.0" y="0.3220430667124674">PaymentProfile</node>
-            <node x="0.0" y="975.501873868095">VariantRequiredError</node>
-            <node x="1962.0" y="400.54896111992366">OrderItem</node>
-            <node x="1145.5" y="857.501873868095">VariantProperty</node>
-            <node x="359.0" y="759.6970430667125">Variant</node>
-            <node x="1951.0" y="91.69741984510642">CartItem</node>
-            <node x="376.5" y="668.6970430667125">VariantSupplier</node>
-            <node x="2177.0" y="536.6220430667124">Payment</node>
-            <node x="1089.0" y="646.251873868095">Product</node>
-            <node x="632.0" y="773.876873868095">Property</node>
-            <node x="1504.0" y="441.32204306671247">Order</node>
-            <node x="1048.0" y="6.99025201293864">User</node>
-            <node x="1539.5" y="127.32204306671247">Cart</node>
-            <node x="1607.5" y="701.251873868095">ProductType</node>
-            <node x="1599.5" y="350.32204306671247">ItemType</node>
-            <node x="0.0" y="714.1970430667125">Supplier</node>
+            <node x="1513.0" y="1528.2293103448278">Ability</node>
+            <node x="1610.5" y="913.4793103448278">OrderStatus</node>
+            <node x="951.0" y="362.93692629209875">Role</node>
+            <node x="2321.0" y="1277.9793103448278">ProductProperty</node>
+            <node x="2731.0" y="827.3004883047988">Invoice</node>
+            <node x="2242.0" y="0.0">PaymentProfile</node>
+            <node x="1307.0" y="1528.2293103448278">VariantRequiredError</node>
+            <node x="2771.0" y="667.6641588296764">OrderItem</node>
+            <node x="388.0" y="1662.2293103448278">ReferralProgram</node>
+            <node x="1575.5" y="1343.2293103448278">VariantProperty</node>
+            <node x="466.5" y="1548.2293103448278">ReferralType</node>
+            <node x="479.0" y="1175.6254883047986">Variant</node>
+            <node x="2760.0" y="320.5097701149426">CartItem</node>
+            <node x="526.5" y="1039.6254883047986">VariantSupplier</node>
+            <node x="1499.0" y="1049.4793103448278">Product</node>
+            <node x="3055.0" y="805.8004883047988">Payment</node>
+            <node x="0.0" y="1695.2293103448278">ReferralBonus</node>
+            <node x="852.0" y="1231.4793103448278">Property</node>
+            <node x="2164.0" y="730.0">Order</node>
+            <node x="1308.0" y="65.93692629209875">User</node>
+            <node x="2249.5" y="370.0">Cart</node>
+            <node x="2317.5" y="1155.5004883047986">ProductType</node>
+            <node x="2309.5" y="616.0">ItemType</node>
+            <node x="0.0" y="1080.1254883047986">Supplier</node>
+            <node x="801.0" y="1528.2293103448278">Referral</node>
           </nodes>
           <notes />
           <edges>
             <edge source="Cart" target="CartItem">
-              <point x="148.0" y="-76.25" />
-              <point x="1871.0" y="142.57204306671247" />
-              <point x="-73.0" y="-0.0" />
+              <point x="158.0" y="-17.166666666666686" />
+              <point x="2651.0" y="455.8333333333333" />
+              <point x="2731.0" y="412.0482316534042" />
+              <point x="-93.0" y="21.538461538461547" />
             </edge>
             <edge source="Supplier" target="VariantSupplier">
-              <point x="139.5" y="-18.25" />
-              <point x="359.0" y="694.1970430667125" />
-              <point x="-79.0" y="-0.0" />
+              <point x="199.5" y="-51.5" />
+              <point x="479.0" y="1087.6254883047986" />
+              <point x="-99.0" y="-0.0" />
+            </edge>
+            <edge source="ReferralType" target="Referral">
+              <point x="88.0" y="-0.0" />
+              <point x="721.0" y="1585.2293103448278" />
+              <point x="-230.5" y="-68.0" />
             </edge>
             <edge source="Property" target="VariantProperty">
-              <point x="168.0" y="43.875" />
-              <point x="-90.5" y="-18.25" />
+              <point x="188.0" y="60.75" />
+              <point x="1308.0" y="1378.2293103448278" />
+              <point x="-120.5" y="-35.0" />
             </edge>
             <edge source="User" target="CartItem">
-              <point x="188.0" y="-98.54545454545456" />
-              <point x="1504.0" y="61.82204306671247" />
-              <point x="1871.0" y="61.82204306671247" />
-              <point x="-73.0" y="-43.84615384615381" />
+              <point x="388.0" y="-194.18181818181813" />
+              <point x="2164.0" y="315.50000000000006" />
+              <point x="2651.0" y="315.50000000000006" />
+              <point x="2731.0" y="336.66361626878876" />
+              <point x="-93.0" y="-53.84615384615387" />
             </edge>
             <edge source="Order" target="OrderItem">
-              <point x="183.5" y="-85.41666666666663" />
-              <point x="-62.0" y="-0.0" />
+              <point x="243.5" y="-140.83333333333337" />
+              <point x="2731.0" y="715.6641588296764" />
+              <point x="-82.0" y="-0.0" />
             </edge>
             <edge source="Product" target="Property">
-              <point x="-147.0" y="20.125" />
-              <point x="1048.0" y="746.876873868095" />
-              <point x="168.0" y="-43.875" />
+              <point x="-197.0" y="34.0" />
+              <point x="1308.0" y="1219.4793103448278" />
+              <point x="188.0" y="-60.75" />
             </edge>
             <edge source="Variant" target="VariantProperty">
-              <point x="96.5" y="38.0" />
-              <point x="632.0" y="912.251873868095" />
-              <point x="-90.5" y="18.25" />
+              <point x="146.5" y="82.40000000000009" />
+              <point x="852.0" y="1448.2293103448278" />
+              <point x="-120.5" y="35.0" />
             </edge>
             <edge source="ProductType" target="Product">
-              <point x="-80.0" y="-12.75" />
-              <point x="1504.0" y="714.001873868095" />
-              <point x="1424.0" y="706.626873868095" />
-              <point x="147.0" y="-20.125" />
+              <point x="-90.0" y="-18.5" />
+              <point x="2164.0" y="1174.0004883047986" />
+              <point x="2084.0" y="1151.4793103448278" />
+              <point x="197.0" y="-34.0" />
             </edge>
             <edge source="Variant" target="Property">
-              <point x="96.5" y="19.0" />
-              <point x="-168.0" y="29.25" />
+              <point x="146.5" y="41.200000000000045" />
+              <point x="-188.0" y="40.5" />
             </edge>
             <edge source="Product" target="ProductType">
-              <point x="147.0" y="20.125" />
-              <point x="1424.0" y="746.876873868095" />
-              <point x="1504.0" y="739.501873868095" />
-              <point x="-80.0" y="12.75" />
+              <point x="197.0" y="34.0" />
+              <point x="2084.0" y="1219.4793103448278" />
+              <point x="2164.0" y="1211.0004883047986" />
+              <point x="-90.0" y="18.5" />
             </edge>
             <edge source="Property" target="Product">
-              <point x="168.0" y="-14.625" />
-              <point x="1048.0" y="787.126873868095" />
-              <point x="-147.0" y="60.375" />
+              <point x="188.0" y="-20.25" />
+              <point x="1308.0" y="1287.4793103448278" />
+              <point x="-197.0" y="102.0" />
             </edge>
-            <edge source="Product" target="ProductProperty">
-              <point x="147.0" y="60.375" />
-              <point x="1424.0" y="787.126873868095" />
-              <point x="1504.0" y="810.501873868095" />
-              <point x="-86.5" y="-18.25" />
+            <edge source="ReferralProgram" target="Referral">
+              <point x="166.5" y="-0.0" />
+              <point x="-230.5" y="68.0" />
             </edge>
             <edge source="Invoice" target="Payment">
-              <point x="72.0" y="-0.0" />
-              <point x="-42.5" y="-0.0" />
+              <point x="122.0" y="-0.0" />
+              <point x="-146.0" y="-0.0" />
+            </edge>
+            <edge source="Product" target="ProductProperty">
+              <point x="197.0" y="102.0" />
+              <point x="2084.0" y="1287.4793103448278" />
+              <point x="2164.0" y="1296.2293103448278" />
+              <point x="-86.5" y="-18.25" />
             </edge>
             <edge source="Property" target="ProductProperty">
-              <point x="168.0" y="14.625" />
+              <point x="188.0" y="20.25" />
               <point x="-86.5" y="18.25" />
             </edge>
             <edge source="User" target="Order">
-              <point x="188.0" y="98.5454545454545" />
-              <point x="-183.5" y="-41.0" />
+              <point x="388.0" y="194.18181818181824" />
+              <point x="-243.5" y="-135.20000000000005" />
             </edge>
             <edge source="Order" target="Invoice">
-              <point x="183.5" y="17.08333333333337" />
-              <point x="-72.0" y="-0.0" />
+              <point x="243.5" y="-28.16666666666663" />
+              <point x="-122.0" y="-36.80000000000007" />
             </edge>
             <edge source="Property" target="Variant">
-              <point x="-168.0" y="-29.25" />
-              <point x="96.5" y="-0.0" />
+              <point x="-188.0" y="-40.5" />
+              <point x="146.5" y="-0.0" />
+            </edge>
+            <edge source="ReferralBonus" target="ReferralProgram">
+              <point x="154.0" y="-0.0" />
+              <point x="-166.5" y="-0.0" />
             </edge>
             <edge source="User" target="Cart">
-              <point x="188.0" y="49.27272727272725" />
-              <point x="1504.0" y="218.82204306671244" />
-              <point x="-148.0" y="-0.0" />
+              <point x="388.0" y="129.4545454545456" />
+              <point x="2164.0" y="473.0" />
+              <point x="-158.0" y="-0.0" />
             </edge>
             <edge source="Product" target="Order">
-              <point x="147.0" y="-60.375" />
-              <point x="1424.0" y="666.376873868095" />
-              <point x="-183.5" y="82.0" />
+              <point x="197.0" y="-102.0" />
+              <point x="2084.0" y="1083.4793103448278" />
+              <point x="-243.5" y="135.20000000000005" />
             </edge>
             <edge source="Supplier" target="Variant">
-              <point x="139.5" y="18.25" />
-              <point x="-96.5" y="-0.0" />
+              <point x="199.5" y="51.5" />
+              <point x="-146.5" y="-0.0" />
             </edge>
             <edge source="ItemType" target="CartItem">
-              <point x="88.0" y="-0.0" />
-              <point x="1871.0" y="375.82204306671247" />
-              <point x="-73.0" y="43.84615384615384" />
+              <point x="98.0" y="-0.0" />
+              <point x="2651.0" y="653.0" />
+              <point x="2731.0" y="455.12515473032727" />
+              <point x="-93.0" y="64.61538461538464" />
             </edge>
             <edge source="Role" target="User">
-              <point x="59.0" y="-0.0" />
-              <point x="-188.0" y="-0.0" />
-            </edge>
-            <edge source="User" target="PaymentProfile">
-              <point x="188.0" y="-123.18181818181819" />
-              <point x="1504.0" y="25.822043066712467" />
-              <point x="-62.5" y="-0.0" />
+              <point x="89.0" y="-0.0" />
+              <point x="-388.0" y="-0.0" />
             </edge>
             <edge source="Product" target="Variant">
-              <point x="-147.0" y="-60.375" />
-              <point x="1048.0" y="666.376873868095" />
-              <point x="968.0" y="685.2497186956812" />
-              <point x="632.0" y="685.2497186956812" />
-              <point x="96.5" y="-38.0" />
+              <point x="-197.0" y="-102.0" />
+              <point x="1308.0" y="1083.4793103448278" />
+              <point x="1228.0" y="1130.55" />
+              <point x="852.0" y="1130.55" />
+              <point x="146.5" y="-82.40000000000009" />
+            </edge>
+            <edge source="User" target="PaymentProfile">
+              <point x="388.0" y="-323.6363636363637" />
+              <point x="2164.0" y="147.0" />
+              <point x="-165.5" y="-0.0" />
             </edge>
             <edge source="OrderStatus" target="Order">
-              <point x="65.5" y="-0.0" />
-              <point x="1424.0" y="570.3747186956812" />
-              <point x="-183.5" y="41.0" />
+              <point x="85.5" y="-0.0" />
+              <point x="2084.0" y="961.4793103448278" />
+              <point x="-243.5" y="67.60000000000002" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5802804557405784" x="568.1687056335901" y="543.282887781302" />
+          <settings layout="Hierarchic Group" zoom="0.39848529848529846" x="1140.2306402325407" y="912.5" />
           <SelectedNodes>
-            <node>PaymentProfile</node>
+            <node>Ability</node>
           </SelectedNodes>
           <Categories>
             <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+            <Category>Own fields</Category>
           </Categories>
         </state>
       </provider>

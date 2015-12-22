@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  applied: false
+  clicked_at: 2015-12-22 22:33:57
+  email: MyString
+  name: MyString
+  purchased_at: 2015-12-22 22:33:57
+  referral_program_id: 1
+  referral_type_id: 1
+  referral_user_id: 1
+  referring_user_id: 1
+  registered_at: 2015-12-22 22:33:57
+  sent_at: 2015-12-22 22:33:57
+
+two:
+  applied: false
+  clicked_at: 2015-12-22 22:33:57
+  email: MyString
+  name: MyString
+  purchased_at: 2015-12-22 22:33:57
+  referral_program_id: 1
+  referral_type_id: 1
+  referral_user_id: 1
+  referring_user_id: 1
+  registered_at: 2015-12-22 22:33:57
+  sent_at: 2015-12-22 22:33:57

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :referral_bonus
+  resources :referral_programs
+  resources :referral_types
+  resources :referrals
   resources :invoices
   resources :payment_profiles
   resources :payments

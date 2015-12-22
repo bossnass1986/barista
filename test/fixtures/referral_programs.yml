@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active: false
+  description: MyText
+  name: MyString
+  referral_bonus_id: 1
+
+two:
+  active: false
+  description: MyText
+  name: MyString
+  referral_bonus_id: 1
