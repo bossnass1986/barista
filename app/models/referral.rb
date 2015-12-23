@@ -1,6 +1,6 @@
 class Referral < ActiveRecord::Base
-  belongs_to :referring_user, :foreign_key => "referring_user_id", :class_name => "User"
-  belongs_to :referral_user,  :foreign_key => "referral_user_id", :class_name => "User"
+  belongs_to :referring_user, foreign_key: :referring_user_id, class_name: 'User'
+  belongs_to :referral_user,  foreign_key: :referral_user_id, class_name: 'User'
   belongs_to :referral_program
   belongs_to :referral_type
 

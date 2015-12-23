@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221230152) do
+ActiveRecord::Schema.define(version: 20151222113851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -148,6 +148,44 @@ ActiveRecord::Schema.define(version: 20151221230152) do
     t.boolean  "active",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "referral_bonus", force: :cascade do |t|
+    t.integer  "amount"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "referral_programs", force: :cascade do |t|
+    t.boolean  "active"
+    t.text     "description"
+    t.string   "name"
+    t.integer  "referral_bonus_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "referral_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "referrals", force: :cascade do |t|
+    t.boolean  "applied"
+    t.datetime "clicked_at"
+    t.string   "email"
+    t.string   "name"
+    t.datetime "purchased_at"
+    t.integer  "referral_program_id"
+    t.integer  "referral_type_id"
+    t.integer  "referral_user_id"
+    t.integer  "referring_user_id"
+    t.datetime "registered_at"
+    t.datetime "sent_at"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "roles", force: :cascade do |t|

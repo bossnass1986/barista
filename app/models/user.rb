@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :mobile
   validates_uniqueness_of :mobile
 
+  has_many :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
+  has_one :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
+
   belongs_to :role
   has_and_belongs_to_many :orders
+
 
   has_many    :finished_orders,           -> { where(order_status_id: [3, 4]) },  class_name: 'Order'
   has_many    :completed_orders,          -> { where(order_status_id: 4) }, class_name: 'Order'
