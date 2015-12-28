@@ -20,8 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
+  meta_keywords:          'Ruby on Rails, ecommerce'
   time:
     formats:
       aus_date: "%d/%m/%Y"
       aus_time: "%d/%m/%Y @ %I:%M %p"
       long_date: "%B %d, %Y"
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      aus_date: "%d/%m/%Y"

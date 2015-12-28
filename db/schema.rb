@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222113851) do
+ActiveRecord::Schema.define(version: 20151227133330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "batches", force: :cascade do |t|
+    t.string   "batchable_type"
+    t.integer  "batchable_id"
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
@@ -206,6 +214,32 @@ ActiveRecord::Schema.define(version: 20151222113851) do
     t.float    "longitude"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transaction_accounts", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transaction_ledgers", force: :cascade do |t|
+    t.string   "accountable_type"
+    t.integer  "accountable_id"
+    t.integer  "transaction_id"
+    t.integer  "transaction_account_id"
+    t.decimal  "tax_amount"
+    t.decimal  "debit"
+    t.decimal  "credit"
+    t.string   "period"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "batch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  batchable_type: MyString
+  batchable_id: 1
+  name: MyString
+
+two:
+  batchable_type: MyString
+  batchable_id: 1
+  name: MyString

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :tax_rates
+  resources :batches
+  resources :transaction_accounts
+  resources :transaction_ledgers
+  resources :transactions
   resources :referral_bonus
   resources :referral_programs
   resources :referral_types
