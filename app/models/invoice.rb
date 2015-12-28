@@ -2,7 +2,7 @@ class Invoice < ActiveRecord::Base
   include AASM
 
   has_many :payments
-  # has_many :batches, as: :batchable#, :polymorphic => true
+  has_many :batches, as: :batchable#, :polymorphic => true
   belongs_to :order, required: true
 
 

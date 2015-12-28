@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151227133330) do
+ActiveRecord::Schema.define(version: 20151228033502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 20151227133330) do
     t.integer  "customer_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "abbreviation"
+    t.integer  "shipping_zone_id"
+    t.boolean  "active"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "invoices", force: :cascade do |t|
@@ -207,6 +216,16 @@ ActiveRecord::Schema.define(version: 20151227133330) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
+  create_table "states", force: :cascade do |t|
+    t.string   "name"
+    t.string   "abbreviation"
+    t.string   "described_as"
+    t.integer  "country_id"
+    t.integer  "shipping_zone_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "suppliers", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -214,6 +233,17 @@ ActiveRecord::Schema.define(version: 20151227133330) do
     t.float    "longitude"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tax_rates", force: :cascade do |t|
+    t.decimal  "percentage"
+    t.integer  "state_id"
+    t.integer  "country_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

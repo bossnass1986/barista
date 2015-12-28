@@ -4,7 +4,7 @@
       %header Manage Information
       %ul
         %li.with-chevron= link_to 'Change your account information', edit_user_registration_path
-        %li.with-chevron= link_to 'Add or remove saved addresses', current_user
+        -#%li.with-chevron= link_to 'Add or remove saved addresses', current_user
         %li.with-chevron= link_to 'View your order history', orders_path
     %section.block-list
       %header Notification Settings
@@ -23,9 +23,9 @@
       %section.block-list
         %header Configuration Settings
         %ul
-          %li.with-chevron= link_to 'Owner Setting', ''
+          %li.with-chevron= link_to 'Owner Settings', ''
           - if current_user.has_role? :admin
-            %li.with-chevron= link_to 'Admin Setting', ''
+            %li.with-chevron= link_to 'Admin Settings', ''
     %section.block-list
       %ul
         %li.with-chevron=link_to 'Log Out', destroy_user_session_path, method: :delete

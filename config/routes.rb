@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :states
+  resources :countries
   resources :tax_rates
   resources :batches
   resources :transaction_accounts

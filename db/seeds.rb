@@ -7,6 +7,20 @@ User.create!(id:1, name: 'Admin', mobile: '0430091464', email: 'admin@bng.com.au
 User.create!(id:2, name: 'Owner', mobile: '0430091461', email: 'owner@bng.com.au', password: 'paul1234').add_role(:owner)
 User.create!(id:3, name: 'User', mobile: '0430091462', email: 'user@bng.com.au', password: 'paul1234').add_role(:user)
 
+puts 'Deleting All Countries'
+Country.delete_all
+puts 'I\'ve got the whole world in my hands!'
+file_to_load  = Rails.root + 'db/seed/countries.yml'
+countries_list   = YAML::load( File.open( file_to_load ) )
+
+countries_list.each_pair do |key,country|
+  s = Country.find_by(abbreviation: country['abbreviation'])
+  unless s
+    c = Country.create(country) unless s
+    c.update_attribute(:active, true) if Country::ACTIVE_COUNTRY_IDS.include?(c.id)
+  end
+end
+
 
 puts 'Deleting Product Types'
 ProductType.delete_all
@@ -117,5 +131,5 @@ Order.create!([
   {id: 4, completed_at: '2013-02-06 22:22:00', user_id: '1', order_status_id: 4}
 ])
 
-puts 'She may not look like much, but she\'s got it where it counts, kid'
+puts 'She may not look like much, but she\'s got it where it counts, kid!'
 
