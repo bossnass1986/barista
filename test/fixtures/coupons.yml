@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  code: MyString
+  amount: 9.99
+  minimum_value: 9.99
+  percent: 1
+  description: MyText
+  combine: false
+  starts_at: 2015-12-28 22:11:24
+  expires_at: 2015-12-28 22:11:24
+
+two:
+  type: 
+  code: MyString
+  amount: 9.99
+  minimum_value: 9.99
+  percent: 1
+  description: MyText
+  combine: false
+  starts_at: 2015-12-28 22:11:24
+  expires_at: 2015-12-28 22:11:24

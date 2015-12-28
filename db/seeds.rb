@@ -9,7 +9,7 @@ User.create!(id:3, name: 'User', mobile: '0430091462', email: 'user@bng.com.au',
 
 puts 'Deleting All Countries'
 Country.delete_all
-puts 'I\'ve got the whole world in my hands!'
+puts 'They are now conducting an extensive search of the surrounding systems.'
 file_to_load  = Rails.root + 'db/seed/countries.yml'
 countries_list   = YAML::load( File.open( file_to_load ) )
 
@@ -19,6 +19,17 @@ countries_list.each_pair do |key,country|
     c = Country.create(country) unless s
     c.update_attribute(:active, true) if Country::ACTIVE_COUNTRY_IDS.include?(c.id)
   end
+end
+
+puts 'Deleting All States/Provinces/Territories'
+State.delete_all
+puts 'The regional governors now have direct control over their territories. '
+file_to_load  = Rails.root + 'db/seed/states.yml'
+states_list   = YAML::load( File.open( file_to_load ) )
+
+states_list.each_pair do |key,state|
+  s = State.find_by(abbreviation: state['attributes']['abbreviation'], country_id: state['attributes']['country_id'])
+  State.create(state['attributes']) unless s
 end
 
 

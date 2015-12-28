@@ -16,7 +16,9 @@
       .title-bar
         .center.title= content_for?(:title) ? yield(:title) : 'Bean\'n\'Gone'
         %span.left
-          = link_to 'Back', :back
+          -#= link_to image_tag('', 'data-direction': :left, icon: :chevron, :size => 'small', 'zf-iconic': :''), :back
+          -#%a{href: :back}
+            %img{"data-direction" => "left", :icon => "chevron", :size => "small", "zf-iconic" => ""}/
         -#%span.right
           %a{:href => "#"} Right
       .grid-block
@@ -30,10 +32,13 @@
             %ul.menu-bar
               %li
                 %a{href: products_url}
-                  %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''} Coffees
+                  %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''}
               %li
                 %a{href: users_url}
-                  %img{icon: 'person', size: 'medium', 'zf-iconic': :''} Account
+                  %img{icon: 'star', size: 'medium', 'zf-iconic': :''}
+              %li
+                %a{href: users_url}
+                  %img{icon: 'person', size: 'medium', 'zf-iconic': :''}
               %li
                 %a{href: cart_items_url}
-                  %img{icon: 'cart', size: 'medium', 'zf-iconic': :''} Checkout
+                  %img{icon: 'cart', size: 'medium', 'zf-iconic': :''}

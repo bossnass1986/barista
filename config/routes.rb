@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :coupons
   resources :states
   resources :countries
   resources :tax_rates

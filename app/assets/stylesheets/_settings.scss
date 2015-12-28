@@ -94,15 +94,16 @@
 // $body-background: #F9ECD2;
 // $body-background: #70CACC;
 //$body-background: #f0e7e4;
-// $body-font-color: #222;
-$body-font-family: 'Quicksand', sans-serif;;
+ $body-font-color: #212121;
+ $body-font-family: 'Quicksand', sans-serif;;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-$primary-color: #52B7B8;
+ $primary-color: #FF5252;
+//$primary-color: #52B7B8;
 // $primary-color: #E77C78;
  $secondary-color: #E77C78;
 // $alert-color: #F04124;
@@ -433,11 +434,11 @@ $blocklist-header-color: #524A4B;
 // - - - - - - - - - - - - - - -
 
 // $menubar-fontsize: 1rem;
-$menubar-background: $primary-color;
+$menubar-background: #BDBDBD;
 // $menubar-background-hover: smartscale($menubar-background, 7%);
 // $menubar-background-active: $menubar-background-hover;
 $menubar-color: #fff;
-// $menubar-color: isitlight($menubar-background);
+ //$menubar-color: isitlight($menubar-background);
  $menubar-color-hover: #fff;
  $menubar-color-active: $menubar-color-hover;
 
