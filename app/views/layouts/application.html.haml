@@ -5,7 +5,8 @@
     %meta{:charset => 'utf-8'}/
     %meta{:content => 'width=device-width, initial-scale=1.0', :name => 'viewport'}
     %meta{content: t('meta_description'), name: :description}
-    %title= content_for?(:title) ? yield(:title) : 'Bean\'n\'Gone'
+    %meta{content: t(:meta_keywords), name: :keywords}
+    %title= content_for?(:title) ? yield(:title) : t(:site_name)
     = stylesheet_link_tag    'application'
     %script{src: :'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'}
     = javascript_include_tag 'application'
@@ -14,7 +15,7 @@
     %zf-notification-set#main-notifications
     .grid-frame.vertical
       .title-bar
-        .center.title= content_for?(:title) ? yield(:title) : 'Bean\'n\'Gone'
+        .center.title= content_for?(:title) ? yield(:title).upcase : t(:site_name)
         %span.left
           -#= link_to image_tag('', 'data-direction': :left, icon: :chevron, :size => 'small', 'zf-iconic': :''), :back
           -#%a{href: :back}
@@ -24,7 +25,7 @@
       .grid-block
         #main.small-12.grid-block
           %zf-notification-set#main-notifications{:position => "top-left"}
-          = notice
+            = notice
           = yield
       - if user_signed_in?
         .grid-block.shrink

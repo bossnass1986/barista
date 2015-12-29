@@ -20,8 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  site_name: "Bean'n'Gone"
   meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
   meta_keywords:          'Ruby on Rails, ecommerce'
+  product:
+    show:
+      product_not_available: 'Sorry this product is not currently available.'
+  cart:
+    nothing_in_cart:       "You don't have anything in your cart."
+    only_items_saved_for_later: "You only have items Saved for Later."
+    add_items_saved_for_later: "Move items to the cart to checkout."
+
+
+
+
   time:
     formats:
       aus_date: "%d/%m/%Y"

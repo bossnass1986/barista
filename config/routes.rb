@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :prototype_properties
+  resources :prototypes
   resources :coupons
   resources :states
   resources :countries

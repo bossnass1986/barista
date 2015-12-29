@@ -27,12 +27,9 @@ class ProductsController < ApplicationController
   # GET /Products/1
   # GET /Products/1.json
   def show
-    Product.includes({:variants => {:variant_properties => :property} }).find(params[:id])
-    # @cart_item.variant_id = @product.active_variants.first.try(:id)
-    respond_to do |format|
-      format.html # show.html.haml
-      format.json { render json: @product }
-    end
+    @product = Product.active.find(params[:id])
+    form_info
+    @cart_item.variant_id = @product.active_variants.first.try(:id)
   end
 
   # GET /Products/new

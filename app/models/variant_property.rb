@@ -13,7 +13,7 @@ class VariantProperty < ActiveRecord::Base
   # @param [none]
   # @return [String]
   def property_name
-    property.name
+    property.display_name
   end
 
 end

@@ -1,57 +1,22 @@
 - title "Order a #{@product.name}"
 .grid-block
-  .small-12.grid-content{style: 'background:#fff'}
+  .small-12.grid-content
     - if @product.active_variants.empty?
-      .grid-block
+      .grid-block{style: 'background:#fff'}
         .grid-content
-          %h2.text-center
-            Sorry this product is not currently available.
+          %h2.text-center= t('product.show.product_not_available')
     - else
-      .grid-block.text-center
-        .grid-content
-          = image_tag("drinks/#{@product.name.titlecase.tr(' ','-')}.png", size: '150', alt: @product.name.titlecase, title: @product.name.titlecase)
       .grid-block
         .grid-content
-          %h2.text-center= @product.name
-      .grid-block
-        .grid-content
-          %p.text-center= @product.description
-          %h4.text-center.price
-            = number_to_currency @product.price
-      .grid-block
-        .grid-content
-          %section.block-list
-            %ul
-              %li
-                .grid-block
-                  .small-4.grid-content.text-center
-                    - if @product.active_variants.count > 0
-                      - @product.active_variants.each do |var|
-                        %header= var.variant_properties.name
-                        %ul.vertical-list
-                          - var.variant_properties.each do |prop|
-                            %li
-                              %label
-                                -#= prop.property_name
-                                = prop.description
-                  .small-4.grid-content.text-center
-                    2 SUGARS
-                  .small-4.grid-content.text-center
-                    LARGE
-              %li
-                .grid-block
-                  .small-2.grid-content
-                    loc
-                  .small-6.grid-content
-                    address
-                  .small-4.grid-content
-                    change
-              %li
-                .grid-block
-                  .small-2.grid-content
-                    ext
-                  .small-10.grid-content
-                    ext deets
+          - if @product.active_variants.count > 0
+            - @product.active_variants.each do |var|
+              %strong= var.variant_properties.name
+              %ul.menu-bar
+                - var.variant_properties.each do |prop|
+                  %li
+                    %label
+                      = prop.property_name
+                      = prop.description
       .grid-block
         .grid-content.small-12.align-center
           %a.button.large.expand{href: :'', 'zf-open': :panel} Order Now

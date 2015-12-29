@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228111124) do
+ActiveRecord::Schema.define(version: 20151229005628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,12 +88,16 @@ ActiveRecord::Schema.define(version: 20151228111124) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.decimal  "price"
-    t.decimal  "total"
-    t.integer  "order_id"
-    t.integer  "variant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "price",                        precision: 8, scale: 2
+    t.decimal  "total",                        precision: 8, scale: 2
+    t.integer  "order_id",                                             null: false
+    t.integer  "variant_id",                                           null: false
+    t.string   "state",            limit: 255,                         null: false
+    t.integer  "tax_rate_id"
+    t.integer  "shipping_rate_id"
+    t.integer  "shipment_id"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
   end
 
   create_table "order_statuses", force: :cascade do |t|
@@ -165,6 +169,7 @@ ActiveRecord::Schema.define(version: 20151228111124) do
     t.string   "name"
     t.text     "description"
     t.integer  "product_type_id"
+    t.integer  "venue_id"
     t.datetime "available_at"
     t.datetime "deleted_at"
     t.datetime "created_at"
@@ -175,10 +180,25 @@ ActiveRecord::Schema.define(version: 20151228111124) do
   add_index "products", ["product_type_id"], name: "index_products_on_product_type_id", using: :btree
 
   create_table "properties", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "active",     default: true
+    t.string   "display_name"
+    t.string   "identifying_name"
+    t.boolean  "active",           default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "prototype_properties", force: :cascade do |t|
+    t.integer  "prototype_id"
+    t.integer  "property_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "prototypes", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "referral_bonus", force: :cascade do |t|
@@ -327,7 +347,6 @@ ActiveRecord::Schema.define(version: 20151228111124) do
   create_table "variant_properties", force: :cascade do |t|
     t.integer  "property_id"
     t.integer  "variant_id"
-    t.integer  "venue_id"
     t.string   "description", limit: 255
     t.boolean  "primary",                 default: false
     t.datetime "created_at"
@@ -336,7 +355,6 @@ ActiveRecord::Schema.define(version: 20151228111124) do
 
   add_index "variant_properties", ["property_id"], name: "index_variant_properties_on_property_id", using: :btree
   add_index "variant_properties", ["variant_id"], name: "index_variant_properties_on_variant_id", using: :btree
-  add_index "variant_properties", ["venue_id"], name: "index_variant_properties_on_venue_id", using: :btree
 
   create_table "variant_suppliers", force: :cascade do |t|
     t.integer  "variant_id"

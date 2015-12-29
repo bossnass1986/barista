@@ -1,16 +1,15 @@
-- content_for :head do
-  = stylesheet_link_tag 'shopping_cart_page.css'
+- title 'Your Cart'
 #cart-items-wrapper.items-wrapper.nine.coloumns.last
   - if  @cart_items.blank? && @saved_cart_items.empty?
     %h2{:style => "text-align:center;"}
-      = I18n.t(:nothing_in_cart)
+      = I18n.t('cart.nothing_in_cart')
   - elsif  @cart_items.blank?
     %h2{:style => "text-align:center;"}
       = I18n.t(:only_items_saved_for_later)
     .panel.graceful
       %h3{:style => "text-align:center;color:#333;"}
         = I18n.t(:add_items_saved_for_later)
-  = form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'custom'}, :as => :cart do |cart_form|
+  = form_for session_cart, url: cart_item_path(session_cart), html: {class: 'custom'}, :as => :cart do |cart_form|
     - unless @cart_items.blank?
       #update-cart-wrapper.ten.large-10.columns
         #update_all_cart.small-gradientbuttons

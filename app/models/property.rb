@@ -5,8 +5,7 @@ class Property < ActiveRecord::Base
 
   has_many :variant_properties
   has_many :variants,          :through => :variant_properties
-  belongs_to :venue
 
-  validates :name,       :presence => true, :length => { :maximum => 165 }
+  validates :display_name,       :presence => true, :length => { :maximum => 165 }
 
 end

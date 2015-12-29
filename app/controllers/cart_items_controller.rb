@@ -3,8 +3,10 @@ class CartItemsController < ApplicationController
 
   # GET /cart_items
   def index
-    @cart_items = CartItem.all
+    @cart_items       = session_cart.shopping_cart_items
+    @saved_cart_items = session_cart.saved_cart_items
   end
+
 
   # GET /cart_items/1
   def show

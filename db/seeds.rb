@@ -83,13 +83,13 @@ puts 'Deleting All Properties'
 Property.delete_all
 puts 'Creating Standard Properties'
 Property.create!([
-  {id:1, name: 'Size'},
-  {id:2, name: 'Milk'},
-  {id:3, name: 'Sugar'},
-  {id:4, name: 'Coffee Blend'},
-  {id:5, name: 'Strength'},
-  {id:6, name: 'Extra Shot'},
-  {id:7, name: 'Syrup'}
+  {id:1, display_name: 'Size', identifying_name: :Size},
+  {id:2, display_name: 'Milk' , identifying_name: :Milk},
+  {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
+  {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
+  {id:5, display_name: 'Strength' , identifying_name: :Strenth},
+  {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
+  {id:7, display_name: 'Syrup', identifying_name: :Syrup}
 ])
 
 puts 'Deleting Sample Menu Items with Attributes'
