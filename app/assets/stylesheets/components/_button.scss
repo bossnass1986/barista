@@ -4,6 +4,7 @@ $button-padding: 0.85em 1em !default;
 $button-margin: 0 $global-padding $global-padding 0 !default;
 $button-style: solid !default;
 $button-background: $primary-color !default;
+$button-background-hollow: $gray-light;
 $button-background-hover: scale-color($button-background, $lightness: -15%) !default;
 $button-color: auto !default;
 $button-radius: 0 !default;
@@ -93,10 +94,10 @@ $button-tag-selector: false !default;
   $btngroup: false
 ){
   @if $style == hollow {
-    border: 1px solid $background;
+    border: 3px solid $button-background-hollow;
     background: transparent;
-    color: $background;
-
+    color: $body-font-color;
+    border-radius: 2.5rem;
     &:hover, &:focus {
       border-color: scale-color($background, $lightness: 25%);
       background: transparent;

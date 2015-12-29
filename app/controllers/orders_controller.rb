@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.where(:user_id => current_user).order(id: :desc).includes(:user)
+    @orders = Order.where(:user_id => current_user).order(id: :desc)
     # @orders = Order.all
     respond_to do |format|
       format.html # index.html.haml

@@ -112,8 +112,8 @@
 // $warning-color: #F08A24;
 // $dark-color: #232323;
 // $gray: #dfdfdf;
-// $gray-dark: darken($gray, 8);
-// $gray-light: lighten($gray, 8);
+ $gray-dark: #BDBDBD;
+ $gray-light: #E0E0E0;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
@@ -249,11 +249,11 @@
 
 // $button-padding: 0.85em 1em;
 // $button-margin: 0 $global-padding $global-padding 0;
-// $button-style: solid;
+ $button-style: solid;
  $button-background: $secondary-color;
 // $button-background-hover: scale-color($button-background, $lightness: -15%);
  $button-color: #fff;
-// $button-radius: 2.5rem;
+ //$button-radius: 2.5rem;
 // $button-sizes: (
 //   tiny: 0.7,
 //   small: 0.8,

@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
   # GET /Products
   # GET /Products.json
   def index
-    products = Product.active.includes(:variants)
+    products = Product.active
+    # products = Product.active.includes(:variants)
 
     product_types = nil
     if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id])

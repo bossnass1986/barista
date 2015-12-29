@@ -24,13 +24,28 @@ en:
   meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
   meta_keywords:          'Ruby on Rails, ecommerce'
   product:
+    index:
+      title: 'Find my drink'
     show:
       product_not_available: 'Sorry this product is not currently available.'
+  user:
+    index:
+      title: 'My account'
+      manage_information: 'Manage Information'
+      notification_settings: 'Notification Settings'
+      configuration_settings: 'Configuration Settings'
+      change_account_info: 'Change your account information'
+      order_history: 'View your order history'
+      owner_settings: 'Owner Settings'
+      admin_settings: 'Admin Settings'
+      log_out: 'Log Out'
   cart:
     nothing_in_cart:       "You don't have anything in your cart."
     only_items_saved_for_later: "You only have items Saved for Later."
     add_items_saved_for_later: "Move items to the cart to checkout."
-
+  supplier:
+    index:
+      title: 'Places'
 
 
 

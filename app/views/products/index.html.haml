@@ -1,26 +1,19 @@
-- title 'Find My Coffee'
-.grid-block
-  .small-12.grid-content
-    %section.block-list
-      %header I would like a
-      %ul
-        - @products.each_with_index do |product, i|
-          %li{id: i}
-            .grid-block
-              .small-8.grid-content
-                = link_to product_path(product), title: product.name do
-                  = product.name.titlecase
-                  %strong= number_to_currency product.price_range.first
-                  - if product.price_range?
-                    to
-                    %strong= number_to_currency product.price_range.last
-              .small-4.grid-content
-                = link_to product_path(product), title: product.name do
-                  = image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase)
+- title t('product.index.title')
+-#.small-12.grid-content.noscroll
+  %span.inline-label
+    %input{placeholder: :Search, type: :search}
+- @products.each_with_index do |product, i|
+  .product-list.grid-block
+    .small-8.grid-content.text-center
+      %h4= product.name.titlecase
+      = link_to 'S', product, class: 'hollow button'
+      = link_to 'M', product, class: 'hollow button'
+      = link_to 'L', product, class: 'hollow button'
+    .small-4
+      = link_to product_path(product), title: product.name do
+        - if Rails.application.assets.find_asset("drinks/#{product.name.downcase.tr(' ','-')}.jpg").nil?
+          = image_tag("drinks/generic.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)
+        - else
+          = image_tag("drinks/#{product.name.downcase.tr(' ','-')}.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)
 
-            -#= link_to product_path(product), title: product.name do
-              = image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase) + product.name.titlecase
-              %strong= number_to_currency product.price_range.first
-              - if product.price_range?
-                to
-                %strong= number_to_currency product.price_range.last
+        -#= image_tag("drinks/#{product.name.downcase.tr(' ','-')}.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)

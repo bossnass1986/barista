@@ -1,0 +1,14 @@
+- title t('supplier.index.title')
+-#.small-12.grid-content.noscroll
+  %span.inline-label
+    %input{placeholder: :Search, type: :search}
+- @suppliers.each_with_index do |supplier, i|
+  #product_list.grid-block
+    .small-8.grid-content.text-center
+      %h4= supplier.name.titlecase
+      -#= link_to 'S', product, class: 'hollow button'
+      -#= link_to 'M', product, class: 'hollow button'
+      -#= link_to 'L', product, class: 'hollow button'
+    .small-4
+      -#= link_to supplier_path(super), title: supplier.name do
+        -#= image_tag("drinks/#{product.name.titlecase.tr(' ','-')}.png", size: '50', alt: product.name.titlecase, title: product.name.titlecase)

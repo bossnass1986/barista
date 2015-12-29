@@ -37,8 +37,15 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
+  config.action_view.raise_on_missing_translations = true
   PUBLISHABLE_KEY='pk_test_6pRNASCoBOKtIshFeQd4XMUh'
   SECRET_KEY='sk_test_BQokikJOvBiI2HlWgH4olfQ2'
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+  end
 
 end

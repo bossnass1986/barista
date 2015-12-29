@@ -15,15 +15,10 @@
     %zf-notification-set#main-notifications
     .grid-frame.vertical
       .title-bar
-        .center.title= content_for?(:title) ? yield(:title).upcase : t(:site_name)
-        %span.left
-          -#= link_to image_tag('', 'data-direction': :left, icon: :chevron, :size => 'small', 'zf-iconic': :''), :back
-          -#%a{href: :back}
-            %img{"data-direction" => "left", :icon => "chevron", :size => "small", "zf-iconic" => ""}/
-        -#%span.right
-          %a{:href => "#"} Right
+        .center.title
+          = content_for?(:title) ? yield(:title).upcase : t(:site_name)
       .grid-block
-        #main.small-12.grid-block
+        #main.small-12
           %zf-notification-set#main-notifications{:position => "top-left"}
             = notice
           = yield
