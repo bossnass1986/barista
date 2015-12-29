@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="adding translations">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/payment_profile.rb" afterPath="$PROJECT_DIR$/app/models/payment_profile.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="heroku fixes" />
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -717,12 +714,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00006" summary="added drink icons and started on orders pages">
-      <created>1441549129886</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1441549129886</updated>
-    </task>
     <task id="LOCAL-00007" summary="adding in devise and auth">
       <created>1441801847605</created>
       <option name="number" value="00007" />
@@ -1011,7 +1002,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451386462535</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="heroku fixes">
+      <created>1451387156678</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1451387156678</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1075,7 +1072,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="setting up the cart" />
     <MESSAGE value="fixing attributes model for heroku" />
     <MESSAGE value="fixing seeds" />
     <MESSAGE value="adding error reporting gem" />
@@ -1100,7 +1096,8 @@
     <MESSAGE value="cleaning views up" />
     <MESSAGE value="lets start the fashion show" />
     <MESSAGE value="adding translations" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding translations" />
+    <MESSAGE value="heroku fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="heroku fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
