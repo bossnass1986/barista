@@ -1,3 +1,5 @@
+# TODO COMPLETED MODEL
+
 class Invoice < ActiveRecord::Base
   include AASM
 

@@ -1,3 +1,5 @@
+# TODO COMPLETED MODEL
+
 class Country < ActiveRecord::Base
   has_many :states
 
@@ -17,7 +19,7 @@ class Country < ActiveRecord::Base
 
   # Call this method to display the country_abbreviation - country with and appending name
   #
-  # @example abbreviation == USA, country == 'United States'
+  # @example abbreviation == AUS, country == 'Australia'
   #   country.abbreviation_name(': capitalist') => 'USA - United States : capitalist'
   #
   # @param [append name, optional]

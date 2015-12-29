@@ -70,14 +70,6 @@ class Product < ActiveRecord::Base
     has_active_variants?
   end
 
-  def display_image
-    if Rails.application.assets.find_asset("drinks/#{self.name}.jpg").nil?
-     return image_tag("drinks/generic.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
-    else
-     return image_tag("drinks/#{self.name.downcase.tr(' ','-')}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
-    end
-  end
-
   private
 
     def has_active_variants?

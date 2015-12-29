@@ -1,5 +1,6 @@
-class CartItem < ActiveRecord::Base
+# TODO COMPLETED MODEL
 
+class CartItem < ActiveRecord::Base
   belongs_to :item_type
   belongs_to :user
   belongs_to :cart
@@ -53,7 +54,7 @@ class CartItem < ActiveRecord::Base
   end
 
   def self.before(at)
-    where("cart_items.created_at <= ?", at )
+    where( "cart_items.created_at <= ?", at )
   end
 
   #def self.mark_items_purchased(cart, order)
@@ -65,5 +66,4 @@ class CartItem < ActiveRecord::Base
   def inactivate_zero_quantity
     active = false if quantity == 0
   end
-
 end

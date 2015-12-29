@@ -15,5 +15,4 @@ class VariantProperty < ActiveRecord::Base
   def property_name
     property.display_name
   end
-
 end

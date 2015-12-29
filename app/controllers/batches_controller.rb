@@ -1,3 +1,5 @@
+# TODO Remove this controller
+
 class BatchesController < ApplicationController
   before_action :set_batch, only: [:show, :edit, :update, :destroy]
 

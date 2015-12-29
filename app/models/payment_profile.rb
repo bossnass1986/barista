@@ -1,5 +1,5 @@
 class PaymentProfile < ActiveRecord::Base
-  # include PaymentProfileCim
+  include PaymentProfileCim
   belongs_to :user
   # belongs_to :address
 
