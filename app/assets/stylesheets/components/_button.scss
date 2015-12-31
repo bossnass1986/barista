@@ -98,10 +98,11 @@ $button-tag-selector: false !default;
     background: transparent;
     color: $body-font-color;
     border-radius: 2.5rem;
+    margin: 0 !important;
     &:hover, &:focus {
-      border-color: scale-color($background, $lightness: 25%);
+      border-color: scale-color($primary-color, $lightness: 25%);
       background: transparent;
-      color: scale-color($background, $lightness: 25%);
+      color: $primary-color;
     }
   }
   // Solid is the default

@@ -1,19 +1,15 @@
 - title t('product.index.title')
--#.small-12.grid-content.noscroll
-  %span.inline-label
-    %input{placeholder: :Search, type: :search}
 - @products.each_with_index do |product, i|
   .product-list.grid-block
     .small-8.grid-content.text-center
       %h4= product.name.titlecase
-      = link_to 'S', product, class: 'hollow button'
-      = link_to 'M', product, class: 'hollow button'
-      = link_to 'L', product, class: 'hollow button'
+      - @sizes.each do |size|
+        - if size[0] == product.id
+          = link_to size[1], product, class: 'hollow button tiny'
+          %small= number_to_currency(size[2])
     .small-4
       = link_to product_path(product), title: product.name do
         - if Rails.application.assets.find_asset("drinks/#{product.name.downcase.tr(' ','-')}.jpg").nil?
           = image_tag("drinks/generic.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)
         - else
           = image_tag("drinks/#{product.name.downcase.tr(' ','-')}.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)
-
-        -#= image_tag("drinks/#{product.name.downcase.tr(' ','-')}.jpg", size: '50', alt: product.name.titlecase, title: product.name.titlecase)

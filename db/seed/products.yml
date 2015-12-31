@@ -1,0 +1,71 @@
+vic:
+  attributes:
+    name: Victoria
+    abbreviation: VIC
+    country_id: 12
+    shipping_zone_id: 2
+    described_as: State
+    id: 1
+
+nsw:
+  attributes:
+    name: New South Wales
+    abbreviation: NSW
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: State
+    id: 2
+qld:
+  attributes:
+    name: Queensland
+    abbreviation: QLD
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: State
+    id: 3
+
+tas:
+  attributes:
+    name: Tasmania
+    abbreviation: TAS
+    country_id: 12
+    shipping_zone_id: 4
+    described_as: State
+    id: 4
+
+sa:
+  attributes:
+    name: South Australia
+    abbreviation: SA
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: State
+    id: 5
+
+wa:
+  attributes:
+    name: Western Australia
+    abbreviation: WA
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: State
+    id: 6
+
+nt:
+  attributes:
+    name: Northern Territory
+    abbreviation: NT
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: Territory
+    id: 7
+
+act:
+  attributes:
+    name: Australia Capital Territory
+    abbreviation: ACT
+    country_id: 12
+    shipping_zone_id: 1
+    described_as: Territory
+    id: 8
+

@@ -1,42 +1,20 @@
 - title "Order a #{@product.name}"
 .grid-block
   .small-12.grid-content
-    - if @product.active_variants.empty?
+    -#- if @product.active_variants.empty?
       .grid-block{style: 'background:#fff'}
         .grid-content
           %h2.text-center= t('product.show.product_not_available')
-    - else
-      #product_list.grid-block
-        .small-12.grid-content.text-center
-          %h4= @product.name.titlecase
-          %ul.menu-bar
-            - if @product.active_variants.count > 0
-              - @product.active_variants.each do |var|
-                - var.variant_properties.each do |prop|
-                  %li
-                    %label
-                      = prop.property_name
-                      = prop.description
-      -#.grid-block
-        .grid-content
-          - if @product.active_variants.count > 0
-            - @product.active_variants.each do |var|
-              %strong= var.variant_properties.name
-              %ul.menu-bar
-                - var.variant_properties.each do |prop|
-                  %li
-                    %label
-                      = prop.property_name
-                      = prop.description
-      -#.grid-block
-        .grid-content.small-12.align-center
-          %a.button.large.expand{href: :'', 'zf-open': :panel} Order Now
-      -##panel{position: :bottom, 'zf-panel': :''}
-        %a.close-button{'zf-close': :''} ×
-        .grid-content
-          %h2.text-center Preferences
-          %section.block-list
-          .grid-block
-            .grid-content.small-12.align-center
-              %a.button.large.expand Complete Order
+    -#- else
+    #product_list.grid-block
+      .small-12.grid-content.text-center
+        -#%h4= @product.name.titlecase
+        %ul.menu-bar
+          -#- if @product.active_variants.count > 0
+          = @prop
+          -#- @prop.each do |var|
+            - var.each do |v2|
+              %li
+                %label
+                  = v2
 

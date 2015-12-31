@@ -50,8 +50,8 @@ $subheader-top-margin: .2rem !default;
 $subheader-bottom-margin: .5rem !default;
 
 // A general <small> styling
-$small-font-size: 60% !default;
-$small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
+$small-font-size: 70% !default;
+$small-font-color: $body-font-color !default;
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit !default;
