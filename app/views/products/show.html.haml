@@ -1,20 +1,21 @@
 - title "Order a #{@product.name}"
 .grid-block
   .small-12.grid-content
-    -#- if @product.active_variants.empty?
+    - if @product.active_variants.empty?
       .grid-block{style: 'background:#fff'}
         .grid-content
           %h2.text-center= t('product.show.product_not_available')
-    -#- else
-    #product_list.grid-block
-      .small-12.grid-content.text-center
-        -#%h4= @product.name.titlecase
-        %ul.menu-bar
-          -#- if @product.active_variants.count > 0
-          = @prop
-          -#- @prop.each do |var|
-            - var.each do |v2|
-              %li
-                %label
-                  = v2
+    - else
+      #product_list.grid-block
+        .small-12.grid-content.text-center
+          - @properties.each do |property|
+            %h4= property[1]
+            -#= link_to size[1], product, class: 'hollow button tiny'
+          -#%small= number_to_currency(size[2])
+          -#%h4= @product.name.titlecase
+          -#%ul.menu-bar
+            - if @product.active_variants.count > 0
+                %li
+                  %label
+                    = v2
 
