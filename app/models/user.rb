@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   rolify
 
   validates_presence_of :name, :mobile
+  validates_format_of :name, :with => /\A[^0-9`!@#\$%\^&*+_=]+\z/, message: 'It looks like your name might not be your authentic name'
   validates_uniqueness_of :mobile
 
   has_many :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred

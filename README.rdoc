@@ -83,16 +83,16 @@ There are several types of entities in the system, each with certain required da
 
 ==Product
 
-* A product must have a title, description, and price.
-* A product must belong to at least one product type.
-* The title and description cannot be empty strings.
-* The price must be a valid decimal numeric value and greater than zero.
-* The photo is optional. If not present, a stand-in photo is used.
+* ~~A product must have a name and price.~~~
+* ~~A product must belong to at least one product type.~~
+* ~~The title cannot be empty strings.~~
+* ~~The price must be a valid decimal numeric value and greater than zero.~~
+* The photo is optional. ~~If not present, a stand-in photo is used.~~
 
 ==User
 
-* A user must have a plausibly valid email address that is unique across all users
-* A user must have a full name that is not blank
+* ~~A user must have a plausibly valid email address that is unique across all users~~
+* ~~A user must have a full name that is not blank~~
 
 ==Order
 

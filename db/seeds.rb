@@ -5,7 +5,7 @@ User.delete_all
 puts 'Creating Control Users'
 User.create!(id:1, name: 'Admin', mobile: '0430091464', email: 'admin@bng.com.au', password: 'paul1234').add_role(:admin)
 User.create!(id:2, name: 'Owner', mobile: '0430091461', email: 'owner@bng.com.au', password: 'paul1234').add_role(:owner)
-User.create!(id:3, name: 'User', mobile: '0430091462', email: 'user@bng.com.au', password: 'paul1234').add_role(:user)
+User.create!(id:3, name: 'Paul McGuane', mobile: '0430091462', email: 'user@bng.com.au', password: 'paul1234').add_role(:user)
 
 puts 'Deleting All Countries'
 Country.delete_all

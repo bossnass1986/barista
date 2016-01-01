@@ -21,7 +21,7 @@ class Variant < ActiveRecord::Base
   #after_save :expire_cache
 
   # validates :inventory_id, presence: true
-  validates :price,       presence: true
+  validates :price,       presence: true, :numericality => true, :format => { :with => /\A(\$)?(\d+)(\.|,)?\d{0,2}?\z/ }
   validates :product_id,  presence: true
   # validates :sku,         presence: true,       length: { maximum: 255 }
 
