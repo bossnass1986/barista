@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="allowing variants and prices to be displayed on index">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/cafes/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/cafes/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/cafes/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/suppliers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/suppliers/show.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/views/suppliers/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/suppliers/show.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="fixed controllers, beginning of README">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/barista.iml" afterPath="$PROJECT_DIR$/.idea/barista.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.haml" afterPath="$PROJECT_DIR$/app/views/products/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/suppliers/index.html.haml" afterPath="$PROJECT_DIR$/app/views/suppliers/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.haml" afterPath="$PROJECT_DIR$/app/views/products/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/supplier.rb" afterPath="$PROJECT_DIR$/app/models/supplier.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/suppliers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/suppliers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/variant.rb" afterPath="$PROJECT_DIR$/app/models/variant.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/variant_property.rb" afterPath="$PROJECT_DIR$/app/models/variant_property.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/variant_supplier.rb" afterPath="$PROJECT_DIR$/app/models/variant_supplier.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="barista.iws" />
@@ -169,8 +147,8 @@
       <file leaf-file-name="README.rdoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6940874">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.57840616">
+              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -694,12 +672,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00011" summary="adding order statuses">
-      <created>1448194184361</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1448194184361</updated>
-    </task>
     <task id="LOCAL-00012" summary="adding blocklist to menu items for cart prep">
       <created>1448197829939</created>
       <option name="number" value="00012" />
@@ -988,7 +960,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451563318364</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fixed controllers, beginning of README">
+      <created>1451651089797</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1451651089798</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1003,6 +981,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231788" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33817703" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1011,7 +990,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1052,7 +1030,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="adding error reporting gem" />
     <MESSAGE value="fixing layout template for heroku" />
     <MESSAGE value="update user model to handle changes to names/mobiles" />
     <MESSAGE value="better colour scheme" />
@@ -1077,7 +1054,8 @@
     <MESSAGE value="heroku fixes" />
     <MESSAGE value="fixing models" />
     <MESSAGE value="allowing variants and prices to be displayed on index" />
-    <option name="LAST_COMMIT_MESSAGE" value="allowing variants and prices to be displayed on index" />
+    <MESSAGE value="fixed controllers, beginning of README" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed controllers, beginning of README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1733,8 +1711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6940874">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.57840616">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>

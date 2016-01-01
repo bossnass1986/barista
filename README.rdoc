@@ -3,20 +3,20 @@
 
 As an unauthenticated user, I can:
 
-*Browse all items
-*Browse items by category
-*Add an item to my cart
-*View my cart
-*Remove an item from my cart
-*Increase the quantity of a item in my cart
-*Log in, which does not clear the cart
+  *Browse all items
+  *Browse items by category
+  *Add an item to my cart
+  *View my cart
+  *Remove an item from my cart
+  *Increase the quantity of a item in my cart
+  *Log in, which does not clear the cart
 
 Unauthenticated users are NOT allowed to:
 
-*View another user’s private data (such as current order, etc.)
-*Checkout (until they log in)
-*View the administrator screens or use administrator functionality
-*Make themselves an administrator
+  *View another user’s private data (such as current order, etc.)
+  *Checkout (until they log in)
+  *View the administrator screens or use administrator functionality
+  *Make themselves an administrator
 
 ==Authenticated Users (Non-Administrators)
 
