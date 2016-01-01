@@ -123,8 +123,8 @@
       <file leaf-file-name="README.rdoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6915167">
-              <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.3314917">
+              <caret line="46" column="18" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -665,12 +665,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00017" summary="adding cart items">
-      <created>1448714970888</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1448714970888</updated>
-    </task>
     <task id="LOCAL-00018" summary="setting up the cart">
       <created>1448799092775</created>
       <option name="number" value="00018" />
@@ -959,7 +953,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451652470839</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="readme formatting">
+      <created>1451653323607</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1451653323607</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1716,8 +1716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6915167">
-          <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.3314917">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="18" />
           <folding />
         </state>
       </provider>

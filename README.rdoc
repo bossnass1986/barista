@@ -3,12 +3,12 @@
 
 As an unauthenticated user, I can:
 
-* Browse all items
-* Browse items by product types
-* Add an item to my cart
+* Browse all products
+* Browse products by product types
+* Add a product to my cart
 * View my cart
-* Remove an item from my cart
-* Increase the quantity of a item in my cart
+* Remove a product from my cart
+* Increase the quantity of a product in my cart
 * Log in, which does not clear the cart
 
 Unauthenticated users are NOT allowed to:
@@ -26,14 +26,14 @@ Allowed To:
 * log out
 * view their past orders with links to display each order
 * on that order display page there are:
-  * items with quantity ordered and line-item subtotals
-  * links to each item description page
+  * products with quantity ordered and line-item subtotals
+  * links to each product description page
   * the current status of the order
   * order total price
   * date/time order was submitted
   * if completed or cancelled, display a timestamp when that action took place
-  * if any item is retired from the menu:
-    * they can still access the item page
+  * if any product is retired from the menu:
+    * they can still access the product page
     * they cannot add it to a new cart
 
 NOT allowed to:
@@ -47,10 +47,10 @@ NOT allowed to:
 As an authenticated Administrator, I can:
 
 * Create product listings including a name, description, price, and upload a photo
-* Modify existing items’ name, description, price, and photo
-* Create named product types for items (eg: "Hot Drinks", "Juices")
+* Modify existing products’ name, description, price, and photo
+* Create named product types for products (eg: "Hot Drinks", "Juices")
 * Assign products to product types or remove them from product types. Products can belong to only one product type.
-* Retire a item from being sold, which hides it from browsing by any non-administrator
+* Retire a product from being sold, which hides it from browsing by any non-administrator
 
 As an Administrator, I can also view an order "dashboard" where I can:
 
@@ -65,11 +65,11 @@ As an Administrator, I can also view an order "dashboard" where I can:
 * Access details of an individual order, including:
   * Order date and time
   * Purchaser full name and email address
-  * For each item on the order:
-    * Name linked to the item page
+  * For each product on the order:
+    * Name linked to the product page
     * Quantity
     * Price
-    * Line item subtotal
+    * Line product subtotal
   * Total for the order
   * Status of the order
 
@@ -107,13 +107,13 @@ There are several types of entities in the system, each with certain required da
 
 You can’t place a pickup order and expect it ready immediately. Predict the pickup time when an order is submitted:
 
-* Each item in the store has a preparation time, defaulting to 4 minutes. Products can be edited to take longer.
-* If an order has more than 4 items, add 6 minutes for every additional 4 items.
+* Each product in the store has a preparation time, defaulting to 4 minutes. Products can be edited to take longer.
+* If an order has more than 4 products, add 6 minutes for every additional 4 products.
 * Each already "paid" order in the system which is not "complete" delays the production start of this new order by 4 minutes.
 
 ===SAVINGS! SAVINGS! SAVINGS!
 
-Administrators may put items or entire product types of products on sale. They can:
+Administrators may put products or entire product types of products on sale. They can:
 * Create a "sale" and connect it with individual products or entire product types
 * Sales are created as a percentage off the normal price
 * View a list of all active sales
@@ -129,12 +129,12 @@ As an Unauthenticated User:
 
 ===What’s Good Here?
 
-On any item I can, as an Unauthenticated User:
+On any product I can, as an Unauthenticated User:
 * See the posted reviews including:
   * title, body, and a star rating 0-5
   * the display name of the reviewer
 * See an average of the ratings broken down to half-stars
-On items I’ve purchased, as an Authenticated User I can:
+On products I’ve purchased, as an Authenticated User I can:
 * Add a rating including:
   * Star rating 0-5
   * Title
@@ -146,8 +146,8 @@ On items I’ve purchased, as an Authenticated User I can:
 Implement simple recommendations including:
 
 * The ability to easily see your last order and add the same products to the current order
-* After a product is added to and order, recommend three products other customers have ordered with this item. If there aren’t three other things that’ve been ordered, fill in with the most popular overall products
-* Combinations of several items (ex: an espresso, latte, and bubble tea) with a small discount over ordering them individually
+* After a product is added to and order, recommend three products other customers have ordered with this product. If there aren’t three other things that’ve been ordered, fill in with the most popular overall products
+* Combinations of several products (ex: an espresso, latte, and bubble tea) with a small discount over ordering them individually
 
 ===Where Is It?
 
@@ -155,8 +155,8 @@ Implement full-text search for both the consumer and administrator:
 
 ====Consumer
 
-* Search for items in the whole site
-* Search through "My Orders" for matches in the item name or description
+* Search for products in the whole site
+* Search through "My Orders" for matches in the product name or description
 
 ====Administrator
 
@@ -180,6 +180,6 @@ As a supplier I have a registered contact phone number. When an order is placed 
 * "Hi, this is BNG calling with an online order. Press 1 to accept, 3 to reject". They press "1"
 * "The customer name is Jeff Fenton."
 * "The customer will pickup the order at 5:45PM"
-* "The order includes: an espresso, latte, and bubble tea. There are a total of 3 items."
+* "The order includes: an espresso, latte, and bubble tea. There are a total of 3 products."
 * "Press 1 to confirm the order, 2 to repeat, or 3 to cancel."
 * The result of the call updates the order in the database and sends an email to the customer.
