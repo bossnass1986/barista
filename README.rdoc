@@ -1,5 +1,5 @@
-= Users
-== Unauthenticated Users
+# Users
+## Unauthenticated Users
 
 As an unauthenticated user, I can:
 
@@ -18,7 +18,7 @@ Unauthenticated users are NOT allowed to:
 * View the administrator screens or use administrator functionality
 * Make themselves an administrator
 
-== Authenticated Users (Non-Administrators)
+## Authenticated Users (Non-Administrators)
 
 Allowed To:
 
@@ -42,7 +42,7 @@ NOT allowed to:
 * view the administrator screens or use administrator functionality
 * make themselves an administrator
 
-==Administrators
+## Administrators
 
 As an authenticated Administrator, I can:
 
@@ -77,33 +77,33 @@ NOT allowed to:
 
 * Modify any personal data aside from their own
 
-=Data Validity
+# Data Validity
 
 There are several types of entities in the system, each with certain required data. Any attempt to create or modify a record with invalid attributes should return the user to the input form with a validation error indicating the problem along with suggestions how to fix it.
 
-==Product
+## Product
 
-~~* A product must have a name and price.~~
+* ~~A product must have a name and price.~~
 * ~~A product must belong to at least one product type.~~
 * ~~The title cannot be empty strings.~~
 * ~~The price must be a valid decimal numeric value and greater than zero.~~
 * The photo is optional. ~~If not present, a stand-in photo is used.~~
 
-==User
+## User
 
 * ~~A user must have a plausibly valid email address that is unique across all users~~
 * ~~A user must have a full name that is not blank~~
 
-==Order
+## Order
 
 * An order must belong to a user
 * An order must be for one or more products currently being sold
 
-=Extensions
+# Extensions
 
-==Is My Order Ready?
+## Is My Order Ready?
 
-===Magic 8-ball
+### Magic 8-ball
 
 You can’t place a pickup order and expect it ready immediately. Predict the pickup time when an order is submitted:
 
@@ -111,7 +111,7 @@ You can’t place a pickup order and expect it ready immediately. Predict the pi
 * If an order has more than 4 products, add 6 minutes for every additional 4 products.
 * Each already "paid" order in the system which is not "complete" delays the production start of this new order by 4 minutes.
 
-===SAVINGS! SAVINGS! SAVINGS!
+### SAVINGS! SAVINGS! SAVINGS!
 
 Administrators may put products or entire product types of products on sale. They can:
 * Create a "sale" and connect it with individual products or entire product types
@@ -127,7 +127,7 @@ On the order "dashboard" they can:
 As an Unauthenticated User:
 * Sale prices are displayed in product listings alongside normal price and percentage savings
 
-===What’s Good Here?
+### What’s Good Here?
 
 On any product I can, as an Unauthenticated User:
 * See the posted reviews including:
@@ -141,7 +141,7 @@ On products I’ve purchased, as an Authenticated User I can:
   * Body text
 * Edit a review I’ve previously submitted until 15 minutes after I first submitted it
 
-===The Machine Knows What You Like
+### The Machine Knows What You Like
 
 Implement simple recommendations including:
 
@@ -149,16 +149,16 @@ Implement simple recommendations including:
 * After a product is added to and order, recommend three products other customers have ordered with this product. If there aren’t three other things that’ve been ordered, fill in with the most popular overall products
 * Combinations of several products (ex: an espresso, latte, and bubble tea) with a small discount over ordering them individually
 
-===Where Is It?
+### Where Is It?
 
 Implement full-text search for both the consumer and administrator:
 
-====Consumer
+#### Consumer
 
 * Search for products in the whole site
 * Search through "My Orders" for matches in the product name or description
 
-====Administrator
+##### Administrator
 
 Search orders using a builder-style interface (like Google’s "Advanced Search") allowing them to specify any of these:
 
@@ -167,13 +167,13 @@ Search orders using a builder-style interface (like Google’s "Advanced Search"
 * Order date (drop-down for >, <, = and a text field for a date)
 * Email address of purchaser
 
-===Transaction Processor
+### Transaction Processor
 
 Implement a "checkout" procedure using Stripe, Paypal or another service to handle credit card transactions in a "sandboxed" developer environment.
 
 When the card is processed, update the order to "paid" and send a confirmation email to the user.
 
-===Phone Confirmation
+### Phone Confirmation
 
 As a supplier I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
 
