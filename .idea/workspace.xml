@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="fixed controllers, beginning of README">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="readme formatting">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -147,8 +147,8 @@
       <file leaf-file-name="README.rdoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57840616">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.42416453">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -672,12 +672,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00012" summary="adding blocklist to menu items for cart prep">
-      <created>1448197829939</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1448197829939</updated>
-    </task>
     <task id="LOCAL-00013" summary="restyling menu bar, order screen, update details as block list&#10;preparing seeded data for testing">
       <created>1448375146269</created>
       <option name="number" value="00013" />
@@ -966,7 +960,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451651089798</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="readme formatting">
+      <created>1451651168420</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1451651168420</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1030,7 +1030,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fixing layout template for heroku" />
     <MESSAGE value="update user model to handle changes to names/mobiles" />
     <MESSAGE value="better colour scheme" />
     <MESSAGE value="better colour scheme, gets even better" />
@@ -1055,7 +1054,8 @@
     <MESSAGE value="fixing models" />
     <MESSAGE value="allowing variants and prices to be displayed on index" />
     <MESSAGE value="fixed controllers, beginning of README" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed controllers, beginning of README" />
+    <MESSAGE value="readme formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1711,8 +1711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57840616">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.42416453">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
