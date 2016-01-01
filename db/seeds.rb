@@ -66,31 +66,30 @@ Product.create!([
   {id: 18, product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.'},
 ])
 
+puts 'Deleting All Variants'
+Variant.delete_all
+'Creating Sample Variants'
+Variant.create!([
+  {id: 1, product_id: 1, price: 2.95, name: 'Bubble Tea - Short'},
+  {id: 2, product_id: 1, price: 3.95, name: 'Bubble Tea - Tall'},
+  {id: 3, product_id: 1, price: 4.95, name: 'Bubble Tea - Grande'},
+  {id: 4, product_id: 2, price: 3.95, name: 'Cappuccino - Venti'},
+  {id: 5, product_id: 4, price: 2.95, name: 'Bubble Tea - Short'},
+  {id: 6, product_id: 4, price: 3.95, name: 'Bubble Tea - Tall'},
+  {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
+  {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
+])
 
 
-puts 'Deleting Sample Menu Items with Attributes'
+puts 'Deleting Sample Products with Attributes'
 ProductProperty.delete_all
-puts 'Creating Sample Menu Items with Attributes'
+puts 'Creating Sample Products with Attributes'
 ProductProperty.create!([
   {property_id: 1, product_id: 1},
   {property_id: 1, product_id: 2},
   {property_id: 1, product_id: 3},
   {property_id: 1, product_id: 4},
   {property_id: 3, product_id: 1},
-])
-
-puts 'Deleting All Variants'
-Variant.delete_all
-'Creating Sample Variants'
-Variant.create!([
-    {id: 1, product_id: 1, price: 2.95, name: 'Bubble Tea - Short'},
-    {id: 2, product_id: 1, price: 3.95, name: 'Bubble Tea - Tall'},
-    {id: 3, product_id: 1, price: 4.95, name: 'Bubble Tea - Grande'},
-    {id: 4, product_id: 2, price: 3.95, name: 'Cappuccino - Venti'},
-    {id: 5, product_id: 4, price: 2.95, name: 'Bubble Tea - Short'},
-    {id: 6, product_id: 4, price: 3.95, name: 'Bubble Tea - Tall'},
-    {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-    {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 ])
 
 puts 'Deleting Sample Menu Items with Attributes'
@@ -105,7 +104,9 @@ VariantProperty.create!([
     {property_id: 1, variant_id: 6, description: 'Tall', primary: 1},
     {property_id: 1, variant_id: 7, description: 'Grande', primary: 0},
     {property_id: 1, variant_id: 8, description: 'Venti', primary: 1},
-    {property_id: 3, variant_id: 1, description: 'Regular'},
+    {property_id: 2, variant_id: 1, description: 'Full Cream'},
+    {property_id: 2, variant_id: 1, description: 'Skim'},
+    {property_id: 2, variant_id: 1, description: 'Soy'},
 ])
 
 puts 'Deleting All Properties'
@@ -122,7 +123,6 @@ Property.create!([
 ])
 
 
-
 puts 'Deleting All Suppliers'
 Supplier.delete_all
 puts 'Creating Sample Suppliers'
@@ -131,6 +131,20 @@ Supplier.create!([
  {id: 2, name: 'Wedgewood Cafe', address: 'Unit 1/ 94 Wedgewood Rd, Hallam, VIC 3803', email: 'test@test.com'},
  {id: 3, name: 'Fresch Cafe', address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email: 'test@test.com'},
  {id: 4, name: 'Nar Nar Goon Take-Away Cafe', address: '1 Main St, Nar Nar Goon, VIC 3812', email: 'test@test.com'}
+])
+
+puts 'Deleting Sample Suppliers with Menu Items'
+VariantSupplier.delete_all
+puts 'Creating Sample Suppliers with Menu Items'
+VariantSupplier.create!([
+    {supplier_id: 1, variant_id: 1},
+    {supplier_id: 1, variant_id: 2},
+    {supplier_id: 1, variant_id: 3},
+    {supplier_id: 1, variant_id: 4},
+    {supplier_id: 2, variant_id: 5},
+    {supplier_id: 2, variant_id: 6},
+    {supplier_id: 2, variant_id: 7},
+    {supplier_id: 2, variant_id: 8}
 ])
 
 puts 'Deleting All Order Statues'

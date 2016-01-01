@@ -5,5 +5,5 @@ class VariantSupplier < ActiveRecord::Base
 
   validates :variant_id,  :presence => true
   validates :supplier_id, :presence => true
-  validates :cost,        :presence => true
+  # validates :cost,        :presence => true
 end

@@ -39,7 +39,7 @@ class Product < ActiveRecord::Base
   # @return [Array] [Low price, High price]
   def price_range
     return @price_range if @price_range
-    return @price_range = ['N/A', 'N/A'] if active_variants.empty?
+    return @price_range = %w(N/A N/A) if active_variants.empty?
     @price_range = active_variants.minmax {|a,b| a.price <=> b.price }.map(&:price)
   end
 
@@ -58,12 +58,22 @@ class Product < ActiveRecord::Base
     #where("products.available_at IS NULL OR products.available_at >= ?", Time.zone.now)
   end
 
+  def image_available
+    (Rails.application.assets.find_asset("drinks/#{self.name.downcase.tr(' ', '-')}.jpg").nil?) ?
+        ActionController::Base.helpers.image_tag('drinks/generic.jpg', size: '50', alt: self.name.titlecase, title: self.name.titlecase) :
+        ActionController::Base.helpers.image_tag("drinks/#{self.name.downcase.tr(' ', '-')}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
+  end
+
   def active(at = Time.zone.now)
     deleted_at.nil? || deleted_at > (at + 1.second)
   end
 
   def active?(at = Time.zone.now)
     active(at)
+  end
+
+  def is_available
+    has_active_variants?
   end
 
   def available?

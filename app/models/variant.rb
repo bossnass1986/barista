@@ -26,14 +26,13 @@ class Variant < ActiveRecord::Base
   # validates :sku,         presence: true,       length: { maximum: 255 }
 
   accepts_nested_attributes_for :variant_properties#, :inventory
-  delegate  :brand, :to => :product, :allow_nil => true
 
-  delegate  :count_on_hand,
-            :count_pending_to_customer,
-            :count_pending_from_supplier,
-            :count_on_hand=,
-            :count_pending_to_customer=,
-            :count_pending_from_supplier=, to: :inventory, allow_nil: false
+  # delegate  :count_on_hand,
+  #           :count_pending_to_customer,
+  #           :count_pending_from_supplier,
+  #           :count_on_hand=,
+  #           :count_pending_to_customer=,
+  #           :count_pending_from_supplier=, to: :inventory, allow_nil: false
 
   ADMIN_OUT_OF_STOCK_QTY  = 0
   OUT_OF_STOCK_QTY        = 2
@@ -193,15 +192,6 @@ class Variant < ActiveRecord::Base
     primary_property ? "#{primary_property.description}" : ''
   end
 
-  # returns the brand's name or a blank string
-  #  ex: obj.brand_name => 'Nike'
-  #
-  # @param [none]
-  # @return [String]
-  def brand_name
-    product.brand_name
-  end
-
   # The variant has many properties.  but only one is the primary property
   #  this will return the primary property.  (good for primary info)
   #
@@ -212,21 +202,12 @@ class Variant < ActiveRecord::Base
     pp ? pp : self.variant_properties.first
   end
 
-  # returns the product name with sku
-  #  ex: obj.name_with_sku => Nike: 1234-12345-1234
-  #
-  # @param [none]
-  # @return [String]
-  def name_with_sku
-    [product_name, sku].compact.join(': ')
-  end
-
   # returns true or false based on if the count_available is above 0
   #
   # @param [Integer] number of variants to subtract
   # @return [Boolean]
   def is_available?
-    count_available > 0
+    # count_available > 0
   end
 
   # returns number available to purchase
@@ -235,7 +216,7 @@ class Variant < ActiveRecord::Base
   # @return [Integer] number available to purchase
   def count_available(reload_variant = true)
     self.reload if reload_variant
-    count_on_hand - count_pending_to_customer
+    # count_on_hand - count_pending_to_customer
   end
 
   # with SQL math add to count_on_hand attribute

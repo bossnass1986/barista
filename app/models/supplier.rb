@@ -8,4 +8,10 @@ class Supplier < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode
+
+  def image_available
+    (Rails.application.assets.find_asset("cafes/#{self.id}.jpg").nil?) ?
+        ActionController::Base.helpers.image_tag('cafes/generic.jpg', size: '50', alt: self.name.titlecase, title: self.name.titlecase) :
+        ActionController::Base.helpers.image_tag("cafes/#{self.id}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
+  end
 end

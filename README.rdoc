@@ -1,261 +1,246 @@
-== Welcome to Rails
+= Users
+== Unauthenticated Users
 
-Rails is a web-application framework that includes everything needed to create
-database-backed web applications according to the Model-View-Control pattern.
+As an unauthenticated user, I can:
 
-This pattern splits the view (also called the presentation) into "dumb"
-templates that are primarily responsible for inserting pre-built data in between
-HTML tags. The model contains the "smart" domain objects (such as Account,
-Product, Person, Post) that holds all the business logic and knows how to
-persist themselves to a database. The controller handles the incoming requests
-(such as Save New Account, Update Product, Show Post) by manipulating the model
-and directing data to the view.
+*Browse all items
+*Browse items by category
+*Add an item to my cart
+*View my cart
+*Remove an item from my cart
+*Increase the quantity of a item in my cart
+*Log in, which does not clear the cart
 
-In Rails, the model is handled by what's called an object-relational mapping
-layer entitled Active Record. This layer allows you to present the data from
-database rows as objects and embellish these data objects with business logic
-methods. You can read more about Active Record in
-link:files/vendor/rails/activerecord/README.html.
+Unauthenticated users are NOT allowed to:
 
-The controller and view are handled by the Action Pack, which handles both
-layers by its two parts: Action View and Action Controller. These two layers
-are bundled in a single package due to their heavy interdependence. This is
-unlike the relationship between the Active Record and Action Pack that is much
-more separate. Each of these packages can be used independently outside of
-Rails. You can read more about Action Pack in
-link:files/vendor/rails/actionpack/README.html.
+*View another user’s private data (such as current order, etc.)
+*Checkout (until they log in)
+*View the administrator screens or use administrator functionality
+*Make themselves an administrator
 
+==Authenticated Users (Non-Administrators)
 
-== Getting Started
+Allowed To:
 
-1. At the command prompt, create a new Rails application:
-       <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
+do everything Unauthenticated Users can do except "log in"
+log out
+view their past orders with links to display each order
+on that order display page there are:
+items with quantity ordered and line-item subtotals
+links to each item description page
+the current status of the order
+order total price
+date/time order was submitted
+if completed or cancelled, display a timestamp when that action took place
+if any item is retired from the menu:
+they can still access the item page
+they cannot add it to a new cart
+NOT allowed to:
 
-2. Change directory to <tt>myapp</tt> and start the web server:
-       <tt>cd myapp; rails server</tt> (run with --help for options)
+view another user’s private data (such as current order, etc.)
+view the administrator screens or use administrator functionality
+make themselves an administrator
 
-3. Go to http://localhost:3000/ and you'll see:
-       "Welcome aboard: You're riding Ruby on Rails!"
+==Administrators
 
-4. Follow the guidelines to start developing your application. You can find
-the following resources handy:
+As an authenticated Administrator, I can:
 
-* The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
-* Ruby on Rails Tutorial Book: http://www.railstutorial.org/
+Create item listings including a name, description, price, and upload a photo
+Modify existing items’ name, description, price, and photo
+Create named categories for items (eg: "Small Plates")
+Assign items to categories or remove them from categories. Products can belong to more than one category.
+Retire a item from being sold, which hides it from browsing by any non-administrator
+As an Administrator, I can also view an order "dashboard" where I can:
 
+See a listing of all orders with:
+the total number of orders by status
+links for each individual order
+filter orders to display by status type (for statuses "ordered", "paid", "cancelled", "completed")
+link to transition to a different status:
+link to "cancel" individual orders which are currently "ordered" or "paid"
+link to "mark as paid" orders which are "ordered"
+link to "mark as completed" individual orders which are currently "paid"
+Access details of an individual order, including:
+Order date and time
+Purchaser full name and email address
+For each item on the order:
+Name linked to the item page
+Quantity
+Price
+Line item subtotal
+Total for the order
+Status of the order
+NOT allowed to:
 
-== Debugging Rails
+Modify any personal data aside from their own
 
-Sometimes your application goes wrong. Fortunately there are a lot of tools that
-will help you debug it and get it back on the rails.
+==Data Validity
 
-First area to check is the application log files. Have "tail -f" commands
-running on the server.log and development.log. Rails will automatically display
-debugging and runtime information to these files. Debugging info will also be
-shown in the browser on requests from 127.0.0.1.
+There are several types of entities in the system, each with certain required data. Any attempt to create or modify a record with invalid attributes should return the user to the input form with a validation error indicating the problem along with suggestions how to fix it.
 
-You can also log your own messages directly into the log file from your code
-using the Ruby logger class from inside your controllers. Example:
+==Item
 
-  class WeblogController < ActionController::Base
-    def destroy
-      @weblog = Weblog.find(params[:id])
-      @weblog.destroy
-      logger.info("#{Time.now} Destroyed Weblog ID ##{@weblog.id}!")
-    end
-  end
+An item must have a title, description, and price.
+An item must belong to at least one category.
+The title and description cannot be empty strings.
+The title must be unique for all items in the system.
+The price must be a valid decimal numeric value and greater than zero.
+The photo is optional. If not present, a stand-in photo is used.
+User
 
-The result will be a message in your log file along the lines of:
+A user must have a plausibly valid email address that is unique across all users
+A user must have a full name that is not blank
+A user may optionally provide a display name that must be no less than 2 characters long and no more than 32
+Order
 
-  Mon Oct 08 14:22:29 +1000 2007 Destroyed Weblog ID #1!
+An order must belong to a user
+An order must be for one or more items currently being sold
+Example Data
 
-More information on how to use the logger is at http://www.ruby-doc.org/core/
+To support the evaluation process, please make the following available via the rake db:seed task in your application:
 
-Also, Ruby documentation can be found at http://www.ruby-lang.org/. There are
-several books available online as well:
+Items
+At least 20 items of varying prices
+Some of the items should be attached to multiple categories
+Categories
+At least 5 categories with a varying number of member items
+Orders
+At least 10 sample orders, with at least two at each stage of fulfillment (ordered, completed, cancelled)
+Users
+Normal user with full name "Rachel Warbelow", email address "demo+rachel@jumpstartlab.com", password of "password" and no display name
+Normal user with full name "Jeff Casimir", email address "demo+jeff@jumpstartlab.com", password of "password" and display name "j3"
+Normal user with full name "Jorge Tellez", email address "demo+jorge@jumpstartlab.com", password of "password" and display name "novohispano"
+User with admin priviliges with full name "Josh Cheek", email address "demo+josh@jumpstartlab.com", password of "password", and display name "josh"
+Submission Guidelines
 
-* Programming Ruby: http://www.ruby-doc.org/docs/ProgrammingRuby/ (Pickaxe)
-* Learn to Program: http://pine.fm/LearnToProgram/ (a beginners guide)
+Your project must be live on Heroku for your evaluation
+Your README file on GitHub should contain a link to your live site
+Extensions
 
-These two books will bring you up to speed on the Ruby language and also on
-programming in general.
+Is My Order Ready?
 
+Magic 8-ball
 
-== Debugger
+You can’t place a pickup order and expect it ready immediately. Predict the pickup time when an order is submitted:
 
-Debugger support is available through the debugger command when you start your
-Mongrel or WEBrick server with --debugger. This means that you can break out of
-execution at any point in the code, investigate and change the model, and then,
-resume execution! You need to install ruby-debug to run the server in debugging
-mode. With gems, use <tt>sudo gem install ruby-debug</tt>. Example:
+Each item in the store has a preparation time, defaulting to 12 minutes. Items can be edited to take longer.
+If an order has more than six items, add 10 minutes for every additional six items.
+Each already "paid" order in the system which is not "complete" delays the production start of this new order by 4 minutes.
+SAVINGS! SAVINGS! SAVINGS!
 
-  class WeblogController < ActionController::Base
-    def index
-      @posts = Post.all
-      debugger
-    end
-  end
+Administrators may put items or entire categories of items on sale. They can:
 
-So the controller will accept the action, run the first line, then present you
-with a IRB prompt in the server window. Here you can do things like:
+Create a "sale" and connect it with individual items or entire categories
+Sales are created as a percentage off the normal price
+View a list of all active sales
+End a sale
+On the order "dashboard" they can:
 
-  >> @posts.inspect
-  => "[#<Post:0x14a6be8
-          @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>,
-       #<Post:0x14a6620
-          @attributes={"title"=>"Rails", "body"=>"Only ten..", "id"=>"2"}>]"
-  >> @posts.first.title = "hello from a debugger"
-  => "hello from a debugger"
+View details of an individual order, including:
+If purchased on sale, original price, sale percentage and adjusted price
+Subtotal for the order
+Discount for the order
+Total for the order reflecting any discounts from applicable sales
+As an Unauthenticated User:
 
-...and even better, you can examine how your runtime objects actually work:
+Sale prices are displayed in item listings alongside normal price and percentage savings
+What’s Good Here?
 
-  >> f = @posts.first
-  => #<Post:0x13630c4 @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>
-  >> f.
-  Display all 152 possibilities? (y or n)
+On any item I can, as an Unauthenticated User:
 
-Finally, when you're ready to resume execution, you can enter "cont".
+See the posted reviews including:
+title, body, and a star rating 0-5
+the display name of the reviewer
+See an average of the ratings broken down to half-stars
+On items I’ve purchased, as an Authenticated User I can:
 
+Add a rating including:
+Star rating 0-5
+Title
+Body text
+Edit a review I’ve previously submitted until 15 minutes after I first submitted it
+The Machine Knows What You Like
 
-== Console
+Implement simple recommendations including:
 
-The console is a Ruby shell, which allows you to interact with your
-application's domain model. Here you'll have all parts of the application
-configured, just like it is when the application is running. You can inspect
-domain models, change values, and save to the database. Starting the script
-without arguments will launch it in the development environment.
+The ability to easily see your last order and add the same items to the current order
+After an item is added to and order, recommend three items other customers have ordered with this item. If there aren’t three other things that’ve been ordered, fill in with the most popular overall items
+Combinations of several items (ex: an appetizer, main dish, and dessert) with a small discount over ordering them individually
+Where Is It?
 
-To start the console, run <tt>rails console</tt> from the application
-directory.
+Implement full-text search for both the consumer and administrator:
 
-Options:
+Consumer
 
-* Passing the <tt>-s, --sandbox</tt> argument will rollback any modifications
-  made to the database.
-* Passing an environment name as an argument will load the corresponding
-  environment. Example: <tt>rails console production</tt>.
+Search for items in the whole site
+Search through "My Orders" for matches in the item name or description
+Administrator
 
-To reload your controllers and models after launching the console run
-<tt>reload!</tt>
+Search orders using a builder-style interface (like Google’s "Advanced Search") allowing them to specify any of these:
 
-More information about irb can be found at:
-link:http://www.rubycentral.org/pickaxe/irb.html
+Status (drop-down)
+Order total (drop-down for >, <, = and a text field for dollar-with-cents)
+Order date (drop-down for >, <, = and a text field for a date)
+Email address of purchaser
+Transaction Processor
 
+Implement a "checkout" procedure using Stripe, Paypal or another service to handle credit card transactions in a "sandboxed" developer environment.
 
-== dbconsole
+When the card is processed, update the order to "paid" and send a confirmation email to the user. Emails should only be sent when the app is in production mode. Don’t spam people while you’re getting it working.
 
-You can go to the command line of your database directly through <tt>rails
-dbconsole</tt>. You would be connected to the database with the credentials
-defined in database.yml. Starting the script without arguments will connect you
-to the development database. Passing an argument will connect you to a different
-database, like <tt>rails dbconsole production</tt>. Currently works for MySQL,
-PostgreSQL and SQLite 3.
+Phone Confirmation
 
-== Description of Contents
+As a restaurant I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
 
-The default directory structure of a generated Ruby on Rails application:
+"Hi, this is DinnerDash calling with an online order. Press 1 to accept, 3 to reject". They press "1"
+"The customer name is John Schmoe."
+"The customer will pickup the order at 5:45PM"
+"The order includes: shrimp wontons, chicken pad thai large, and green tea ice cream small. There are a total of 3 items."
+"Press 1 to confirm the order, 2 to repeat, or 3 to cancel."
+The result of the call updates the order in the database and sends an email to the customer.
+Evaluation Process
 
-  |-- app
-  |   |-- assets
-  |       |-- images
-  |       |-- javascripts
-  |       `-- stylesheets
-  |   |-- controllers
-  |   |-- helpers
-  |   |-- mailers
-  |   |-- models
-  |   `-- views
-  |       `-- layouts
-  |-- config
-  |   |-- environments
-  |   |-- initializers
-  |   `-- locales
-  |-- db
-  |-- doc
-  |-- lib
-  |   `-- tasks
-  |-- log
-  |-- public
-  |-- script
-  |-- test
-  |   |-- fixtures
-  |   |-- functional
-  |   |-- integration
-  |   |-- performance
-  |   `-- unit
-  |-- tmp
-  |   |-- cache
-  |   |-- pids
-  |   |-- sessions
-  |   `-- sockets
-  `-- vendor
-      |-- assets
-          `-- stylesheets
-      `-- plugins
+For the evaluation we’ll work through the expectations above and look at the following criteria:
 
-app
-  Holds all the code that's specific to this particular application.
+1. Feature Completeness
 
-app/assets
-  Contains subdirectories for images, stylesheets, and JavaScript files.
+4: All features are correctly implemented along with two extensions
+3: All features defined in the assignment are correctly implemented
+2: There are one or two features missing or incorrectly implemented
+1: There are bugs/crashes in the features present
+2. Views
 
-app/controllers
-  Holds controllers that should be named like weblogs_controller.rb for
-  automated URL mapping. All controllers should descend from
-  ApplicationController which itself descends from ActionController::Base.
+4: Views show logical refactoring into layout(s), partials and helpers, with no logic present
+3: Views make use of layout(s), partials and helpers, but some logic leaks through
+2: Views don’t make use of partials or show weak understanding of render
+1: Views are poorly organized
+3. Controllers
 
-app/models
-  Holds models that should be named like post.rb. Models descend from
-  ActiveRecord::Base by default.
+4: Controllers show significant effort to push logic down the stack
+3: Controllers are generally well organized with three or fewer particularly ugly parts
+2: There are four to seven ugly controller methods that should have been refactored
+1: There are more than seven unsatisfactory controller methods
+4. Models
 
-app/views
-  Holds the template files for the view that should be named like
-  weblogs/index.html.erb for the WeblogsController#index action. All views use
-  eRuby syntax by default.
+4: Models show excellent organization, refactoring, and appropriate use of Rails features
+3: Models show an effort to push logic down the stack, but need more internal refactoring
+2: Models are somewhat messy and/or make poor use of Rails features
+1: Models show weak use of Ruby and weak structure
+5. Testing
 
-app/views/layouts
-  Holds the template files for layouts to be used with views. This models the
-  common header/footer method of wrapping views. In your views, define a layout
-  using the <tt>layout :default</tt> and create a file named default.html.erb.
-  Inside default.html.erb, call <% yield %> to render the view using this
-  layout.
+4: Project has a running test suite that exercises the application at multiple levels
+3: Project has a running test suite that tests and multiple levels but fails to cover some features
+2: Project has sporadic use of tests and multiple levels
+1: Project did not really attempt to use TDD
+6. Usability
 
-app/helpers
-  Holds view helpers that should be named like weblogs_helper.rb. These are
-  generated for you automatically when using generators for controllers.
-  Helpers can be used to wrap functionality for your views into methods.
+4: Project is highly usable and ready to deploy to customers
+3: Project is highly usable, but needs more polish before it’d be customer-ready
+2: Project needs significantly more attention to the User Experience, but works
+1: Project is difficult or unpleasant to use
+7. Workflow
 
-config
-  Configuration files for the Rails environment, the routing map, the database,
-  and other dependencies.
-
-db
-  Contains the database schema in schema.rb. db/migrate contains all the
-  sequence of Migrations for your schema.
-
-doc
-  This directory is where your application documentation will be stored when
-  generated using <tt>rake doc:app</tt>
-
-lib
-  Application specific libraries. Basically, any kind of custom code that
-  doesn't belong under controllers, models, or helpers. This directory is in
-  the load path.
-
-public
-  The directory available for the web server. Also contains the dispatchers and the
-  default HTML files. This should be set as the DOCUMENT_ROOT of your web
-  server.
-
-script
-  Helper scripts for automation and generation.
-
-test
-  Unit and functional tests along with fixtures. When using the rails generate
-  command, template test files will be generated for you and placed in this
-  directory.
-
-vendor
-  External libraries that the application depends on. Also includes the plugins
-  subdirectory. If the app has frozen rails, those gems also go here, under
-  vendor/rails/. This directory is in the load path.
+4: Excellent use of branches, pull requests, and a project management tool.
+3: Good use of branches, pull requests, and a project-management tool.
+2: Sporadic use of branches, pull requests, and/or project-management tool.
+1: Little use of branches, pull requests, and/or a project-management tool.

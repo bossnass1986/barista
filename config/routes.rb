@@ -38,8 +38,8 @@ Rails.application.routes.draw do
   root :to => 'suppliers#index'
 
   # for the queue-view
-  match 'queue' => 'orders#queue', :via => [:get, :post]
-  match 'orders/:id/complete' => 'orders#complete', :via => [:get, :post], :as => :complete_order
+  # match 'queue' => 'orders#queue', :via => [:get, :post]
+  # match 'orders/:id/complete' => 'orders#complete', :via => [:get, :post], :as => :complete_order
 
   # match '*path', to: redirect('/'), via: :all
 

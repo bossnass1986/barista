@@ -27,14 +27,13 @@ class ProductsController < ApplicationController
                  .pluck('products.id as prod_id', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
 
     # TODO v1.0 this is probably a better way of doing it
-    # @product_sizes = @sizes.each_with_object({}) do |size, result|
-    #   result[size[0]] = {
-    #       'short_desc' => size[1],
-    #       'price' => size[2]
-    #   }
-    # end
-
-
+    @product_sizes = @sizes.each_with_object({}) do |size, result|
+      result[size[0]] = {
+          # 'product_id' => size[0],
+          'short_desc' => size[1],
+          'price' => size[2]
+      }
+    end
 
     respond_to do |format|
       format.html # index.html.haml
@@ -45,14 +44,15 @@ class ProductsController < ApplicationController
   # GET /Products/1
   # GET /Products/1.json
   def show
-    @product = Product.find(params[:id])
+    @products = Product.all.where('')
     @properties = Product
                   .joins(:product_properties)
                   .joins('INNER JOIN variant_properties on product_properties.property_id = variant_properties.property_id')
                   .joins('INNER JOIN properties ON properties.id = product_properties.property_id AND properties.id = variant_properties.property_id')
                   .joins('INNER JOIN variants on variants.product_id = products.id AND variants.id = variant_properties.variant_id')
                   .where('products.id = ?', params[:id])
-                 .pluck('products.id as prod_id', 'properties.display_name as prop_name', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
+                  .pluck('products.id as prod_id', 'properties.display_name as prop_name', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
+    @property = @properties.group_by { |p| p.prop_name }
     # @product = Product.joins(:properties, :variants).find(params[:id], :variant_id)
     # @product = Product.joins(:variants).group(:variant_id, :property_id).find(params[:id])
     form_info

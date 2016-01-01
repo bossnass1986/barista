@@ -8,6 +8,36 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
+    # products = Product.active
+    products = Product.find(params[:id]).is_available
+
+    product_types = nil
+    if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id])
+      product_types = product_type.self_and_descendants.map(&:id)
+    end
+    if product_types
+      @products = products.where(product_type_id: product_types)
+    else
+      @products = products
+    end
+
+    @sizes = Supplier
+                  .joins(:variant_suppliers)
+                  .joins('INNER JOIN variants on variants.id = variant_suppliers.variant_id')
+                  .joins('INNER JOIN products on products.id = variants.product_id')
+                  .joins('INNER JOIN variant_properties on variant_properties.variant_id = variants.id')
+                  .joins('INNER JOIN properties on properties.id = variant_properties.property_id AND properties.display_name =\'Size\'')
+                  .where('suppliers.id = ?', params[:id])
+                  .pluck('products.id as prod_id', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
+
+    # TODO v1.0 this is probably a better way of doing it
+    @product_sizes = @sizes.each_with_object({}) do |size, result|
+      result[size[0]] = {
+          # 'product_id' => size[0],
+          'short_desc' => size[1],
+          'price' => size[2]
+      }
+    end
   end
 
   # GET /suppliers/new

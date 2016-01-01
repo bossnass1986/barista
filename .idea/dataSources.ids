@@ -169,10 +169,14 @@
     </table>
     <table name="order_items" schema="public" catalog="beanngone_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnb3JkZXJfaXRlbXNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="price" sqlType="numeric" precision="131089" scale="0" nullable="true" jdbcType="2"/>
-      <column name="total" sqlType="numeric" precision="131089" scale="0" nullable="true" jdbcType="2"/>
-      <column name="order_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="variant_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="price" sqlType="numeric" precision="8" scale="2" nullable="true" jdbcType="2"/>
+      <column name="total" sqlType="numeric" precision="8" scale="2" nullable="true" jdbcType="2"/>
+      <column name="order_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="variant_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="state" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tax_rate_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="shipping_rate_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="shipment_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
       <primary-key name="order_items_pkey" columns="id"/>
