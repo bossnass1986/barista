@@ -4,7 +4,7 @@
 As an unauthenticated user, I can:
 
 * Browse all items
-* Browse items by category
+* Browse items by product types
 * Add an item to my cart
 * View my cart
 * Remove an item from my cart
@@ -46,10 +46,10 @@ NOT allowed to:
 
 As an authenticated Administrator, I can:
 
-* Create item listings including a name, description, price, and upload a photo
+* Create product listings including a name, description, price, and upload a photo
 * Modify existing items’ name, description, price, and photo
-* Create named categories for items (eg: "Small Plates")
-* Assign items to categories or remove them from categories. Products can belong to more than one category.
+* Create named product types for items (eg: "Hot Drinks", "Juices")
+* Assign products to product types or remove them from product types. Products can belong to only one product type.
 * Retire a item from being sold, which hides it from browsing by any non-administrator
 
 As an Administrator, I can also view an order "dashboard" where I can:
@@ -57,7 +57,7 @@ As an Administrator, I can also view an order "dashboard" where I can:
 * See a listing of all orders with:
   * the total number of orders by status
   * links for each individual order
-  * filter orders to display by status type (for statuses "ordered", "paid", "cancelled", "completed")
+  * filter orders to display by status type (for statuses "Order Received", "In Progress", "Ready For Collection", "Collected")
   * link to transition to a different status:
     * link to "cancel" individual orders which are currently "ordered" or "paid"
     * link to "mark as paid" orders which are "ordered"
@@ -81,12 +81,11 @@ NOT allowed to:
 
 There are several types of entities in the system, each with certain required data. Any attempt to create or modify a record with invalid attributes should return the user to the input form with a validation error indicating the problem along with suggestions how to fix it.
 
-==Item
+==Product
 
-* An item must have a title, description, and price.
-* An item must belong to at least one category.
+* A product must have a title, description, and price.
+* A product must belong to at least one product type.
 * The title and description cannot be empty strings.
-* The title must be unique for all items in the system.
 * The price must be a valid decimal numeric value and greater than zero.
 * The photo is optional. If not present, a stand-in photo is used.
 
@@ -94,12 +93,11 @@ There are several types of entities in the system, each with certain required da
 
 * A user must have a plausibly valid email address that is unique across all users
 * A user must have a full name that is not blank
-* A user may optionally provide a display name that must be no less than 2 characters long and no more than 32
 
 ==Order
 
 * An order must belong to a user
-* An order must be for one or more items currently being sold
+* An order must be for one or more products currently being sold
 
 =Extensions
 
@@ -109,14 +107,14 @@ There are several types of entities in the system, each with certain required da
 
 You can’t place a pickup order and expect it ready immediately. Predict the pickup time when an order is submitted:
 
-* Each item in the store has a preparation time, defaulting to 12 minutes. Items can be edited to take longer.
-* If an order has more than six items, add 10 minutes for every additional six items.
+* Each item in the store has a preparation time, defaulting to 4 minutes. Products can be edited to take longer.
+* If an order has more than 4 items, add 6 minutes for every additional 4 items.
 * Each already "paid" order in the system which is not "complete" delays the production start of this new order by 4 minutes.
 
 ===SAVINGS! SAVINGS! SAVINGS!
 
-Administrators may put items or entire categories of items on sale. They can:
-* Create a "sale" and connect it with individual items or entire categories
+Administrators may put items or entire product types of products on sale. They can:
+* Create a "sale" and connect it with individual products or entire product types
 * Sales are created as a percentage off the normal price
 * View a list of all active sales
 * End a sale
@@ -127,7 +125,7 @@ On the order "dashboard" they can:
   * Discount for the order
   * Total for the order reflecting any discounts from applicable sales
 As an Unauthenticated User:
-* Sale prices are displayed in item listings alongside normal price and percentage savings
+* Sale prices are displayed in product listings alongside normal price and percentage savings
 
 ===What’s Good Here?
 
@@ -147,9 +145,9 @@ On items I’ve purchased, as an Authenticated User I can:
 
 Implement simple recommendations including:
 
-* The ability to easily see your last order and add the same items to the current order
-* After an item is added to and order, recommend three items other customers have ordered with this item. If there aren’t three other things that’ve been ordered, fill in with the most popular overall items
-* Combinations of several items (ex: an appetizer, main dish, and dessert) with a small discount over ordering them individually
+* The ability to easily see your last order and add the same products to the current order
+* After a product is added to and order, recommend three products other customers have ordered with this item. If there aren’t three other things that’ve been ordered, fill in with the most popular overall products
+* Combinations of several items (ex: an espresso, latte, and bubble tea) with a small discount over ordering them individually
 
 ===Where Is It?
 
@@ -173,15 +171,15 @@ Search orders using a builder-style interface (like Google’s "Advanced Search"
 
 Implement a "checkout" procedure using Stripe, Paypal or another service to handle credit card transactions in a "sandboxed" developer environment.
 
-When the card is processed, update the order to "paid" and send a confirmation email to the user. Emails should only be sent when the app is in production mode. Don’t spam people while you’re getting it working.
+When the card is processed, update the order to "paid" and send a confirmation email to the user.
 
 ===Phone Confirmation
 
-As a restaurant I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
+As a supplier I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
 
-* "Hi, this is DinnerDash calling with an online order. Press 1 to accept, 3 to reject". They press "1"
-* "The customer name is John Schmoe."
+* "Hi, this is BNG calling with an online order. Press 1 to accept, 3 to reject". They press "1"
+* "The customer name is Jeff Fenton."
 * "The customer will pickup the order at 5:45PM"
-* "The order includes: shrimp wontons, chicken pad thai large, and green tea ice cream small. There are a total of 3 items."
+* "The order includes: an espresso, latte, and bubble tea. There are a total of 3 items."
 * "Press 1 to confirm the order, 2 to repeat, or 3 to cancel."
 * The result of the call updates the order in the database and sends an email to the customer.
