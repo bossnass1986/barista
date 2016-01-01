@@ -83,7 +83,7 @@ There are several types of entities in the system, each with certain required da
 
 ==Product
 
-* ~~A product must have a name and price.~~~
+~~* A product must have a name and price.~~
 * ~~A product must belong to at least one product type.~~
 * ~~The title cannot be empty strings.~~
 * ~~The price must be a valid decimal numeric value and greater than zero.~~
