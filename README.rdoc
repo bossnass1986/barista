@@ -3,13 +3,13 @@
 
 As an unauthenticated user, I can:
 
-  * Browse all items
-  * Browse items by category
-  * Add an item to my cart
-  * View my cart
-  * Remove an item from my cart
-  * Increase the quantity of a item in my cart
-  * Log in, which does not clear the cart
+* Browse all items
+* Browse items by category
+* Add an item to my cart
+* View my cart
+* Remove an item from my cart
+* Increase the quantity of a item in my cart
+* Log in, which does not clear the cart
 
 Unauthenticated users are NOT allowed to:
 

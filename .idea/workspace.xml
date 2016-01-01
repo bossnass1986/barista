@@ -147,8 +147,8 @@
       <file leaf-file-name="README.rdoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42416453">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.19280206">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -672,12 +672,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00013" summary="restyling menu bar, order screen, update details as block list&#10;preparing seeded data for testing">
-      <created>1448375146269</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1448375146269</updated>
-    </task>
     <task id="LOCAL-00014" summary="restyling menu bar, order screen, update details as block list&#10;preparing seeded data for testing">
       <created>1448375450555</created>
       <option name="number" value="00014" />
@@ -966,7 +960,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451651168420</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="readme formatting">
+      <created>1451651197982</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1451651197982</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1711,8 +1711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42416453">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.19280206">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="39" />
           <folding />
         </state>
       </provider>
