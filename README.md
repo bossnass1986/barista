@@ -2,10 +2,10 @@
 
 Individual supplier can be accessed by specifying their supplier name as the path prefix.
 
-* Given a supplier named Billy’s BBQ
-* When I visit http://example.com/billys-bbq
-* Then I expect to see all products defined for Billy’s BBQ
-* And I expect to see branding defined for Billy’s BBQ
+* Given a supplier named Fresch Cafe
+* When I visit http://example.com/fresch-cafe
+* Then I expect to see all products defined for Fresch Cafe
+* And I expect to see branding defined for Fresch Cafe
 
 ## Public Visitor
 
@@ -47,7 +47,7 @@ As an authenticated shopper I can:
 * Maintain a separate shopping cart for each supplier I browse
 * Make purchases on any supplier I am browsing
 * Recieve an email confirmation of my order with basic order details and a link to the order detail page
-* Manage my account information shared by all restaurants centrally on my account page
+* Manage my account information shared by all suppliers centrally on my account page
 * Shipping addresses
 * Billing addresses
 * Credit cards associated with my account
@@ -111,7 +111,7 @@ As an authenticated Platform Administrator, I can:
 * Approve or decline the creation of new suppliers
 * Take a suppliers "offline" temporarily so that attempting to browse it redirects its root and displays a maintenance message
 * Bring an offline supplier back online
-* Override/assist suppliers admins in any functionality available to them via the admin portion of their restaurant pages
+* Override/assist suppliers admins in any functionality available to them via the admin portion of their supplier pages
 
 ## Authenticated Users (Non-Administrators)
 

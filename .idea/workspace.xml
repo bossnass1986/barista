@@ -68,8 +68,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73007715">
-              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.3314917">
+              <caret line="113" column="113" selection-start-line="113" selection-start-column="113" selection-end-line="113" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -134,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="31" />
+              <caret line="131" column="27" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -654,12 +654,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00025" summary="fixing seeds">
-      <created>1448800689344</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1448800689344</updated>
-    </task>
     <task id="LOCAL-00026" summary="adding error reporting gem">
       <created>1448800871308</created>
       <option name="number" value="00026" />
@@ -948,7 +942,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451704317030</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="readme fixes and further clarification on elements">
+      <created>1451704473997</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1451704473997</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1683,14 +1683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1707,10 +1699,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="27" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73007715">
-          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.3314917">
+          <caret line="113" column="113" selection-start-line="113" selection-start-column="113" selection-end-line="113" selection-end-column="113" />
           <folding />
         </state>
       </provider>
