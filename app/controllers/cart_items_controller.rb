@@ -3,58 +3,65 @@ class CartItemsController < ApplicationController
 
   # GET /cart_items
   def index
-    @cart_items       = session_cart.shopping_cart_items
+    @cart_items       = session_cart.cart_items
     @saved_cart_items = session_cart.saved_cart_items
-  end
-
-
-  # GET /cart_items/1
-  def show
-  end
-
-  # GET /cart_items/new
-  def new
-    @cart_item = CartItem.new
-  end
-
-  # GET /cart_items/1/edit
-  def edit
   end
 
   # POST /cart_items
   def create
-    @cart_item = CartItem.new(cart_item_params)
-
-    if @cart_item.save
-      redirect_to @cart_item, notice: 'Cart item was successfully created.'
+    session_cart.save if session_cart.new_record?
+    qty = params[:cart_item][:quantity].to_i
+    if cart_item = session_cart.add_variant(params[:cart_item][:variant_id], most_likely_user, qty)
+      flash[:notice] = [I18n.t('out_of_stock_notice'), I18n.t('item_saved_for_later')].compact.join(' ') unless cart_item.cart_item?
+      session_cart.save_user(most_likely_user)
+      redirect_to(cart_items_url)
     else
-      render :new
+      variant = Variant.includes(:product).find_by_id(params[:cart_item][:variant_id])
+      if variant
+        redirect_to(product_url(variant.product))
+      else
+        flash[:notice] = I18n.t('something_went_wrong')
+        redirect_to(root_url())
+      end
     end
   end
 
-  # PATCH/PUT /cart_items/1
+  # PUT /carts/1
   def update
-    if @cart_item.update(cart_item_params)
-      redirect_to @cart_item, notice: 'Cart item was successfully updated.'
+    if session_cart.update_attributes(allowed_params)
+      if params[:commit] && params[:commit] == "checkout"
+        redirect_to( checkout_order_url('checkout'))
+      else
+        redirect_to(cart_items_url(), :notice => I18n.t('item_passed_update') )
+      end
     else
-      render :edit
+      redirect_to(cart_items_url(), :notice => I18n.t('item_failed_update') )
+    end
+  end
+  ## TODO
+  ## This method moves saved_cart_items to your cart_items or saved_cart_items
+  #   this method is called using AJAX and returns json. with the object moved,
+  #   otherwise false is returned if there is an error
+  #   method => PUT
+  def move_to
+    @cart_item = session_cart.cart_items.find(params[:id])
+    if @cart_item.update_attributes(:item_type_id => params[:item_type_id])
+      redirect_to(cart_items_url() )
+    else
+      redirect_to(cart_items_url(), :notice => I18n.t('item_failed_update') )
     end
   end
 
-  # DELETE /cart_items/1
+  # DELETE /carts/1
+  # DELETE /carts/1.xml
   def destroy
-    @cart_item.destroy
-    redirect_to cart_items_url, notice: 'Cart item was successfully destroyed.'
+    session_cart.remove_variant(params[:variant_id]) if params[:variant_id]
+    redirect_to(cart_items_url)
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart_item
-      @cart_item = CartItem.find(params[:id])
-    end
+  def allowed_params
+    params.require(:cart).permit!
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def cart_item_params
-      params.require(:cart_item).permit(:order_id, :variant_id, :unit_price, :quantity, :total_price, :product)
-    end
 end

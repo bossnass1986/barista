@@ -223,17 +223,17 @@ class Variant < ActiveRecord::Base
   #
   # @param [Integer] number of variants to add
   # @return [none]
-  def add_count_on_hand(num)
-    ### don't lock if we have plenty of stock.
-    if low_stock?
-      inventory.lock!
-      self.inventory.count_on_hand = inventory.count_on_hand + num.to_i
-      inventory.save!
-    else
-      sql = "UPDATE inventories SET count_on_hand = (#{num} + count_on_hand) WHERE id = #{self.inventory.id}"
-      ActiveRecord::Base.connection.execute(sql)
-    end
-  end
+  # def add_count_on_hand(num)
+  #   ### don't lock if we have plenty of stock.
+  #   if low_stock?
+  #     inventory.lock!
+  #     self.inventory.count_on_hand = inventory.count_on_hand + num.to_i
+  #     inventory.save!
+  #   else
+  #     sql = "UPDATE inventories SET count_on_hand = (#{num} + count_on_hand) WHERE id = #{self.inventory.id}"
+  #     ActiveRecord::Base.connection.execute(sql)
+  #   end
+  # end
 
   # with SQL math subtract to count_on_hand attribute
   #
@@ -247,26 +247,26 @@ class Variant < ActiveRecord::Base
   #
   # @param [Integer] number of variants to add
   # @return [none]
-  def add_pending_to_customer(num = 1)
-    ### don't lock if we have plenty of stock.
-    if low_stock?
-      # If the stock is low lock the inventory.  This ensures
-      inventory.lock!
-      self.inventory.count_pending_to_customer = inventory.count_pending_to_customer.to_i + num.to_i
-      inventory.save!
-    else
-      sql = "UPDATE inventories SET count_pending_to_customer = (#{num} + count_pending_to_customer) WHERE id = #{self.inventory.id}"
-      ActiveRecord::Base.connection.execute(sql)
-    end
-  end
+  # def add_pending_to_customer(num = 1)
+  #   ### don't lock if we have plenty of stock.
+  #   if low_stock?
+  #     # If the stock is low lock the inventory.  This ensures
+  #     inventory.lock!
+  #     self.inventory.count_pending_to_customer = inventory.count_pending_to_customer.to_i + num.to_i
+  #     inventory.save!
+  #   else
+  #     sql = "UPDATE inventories SET count_pending_to_customer = (#{num} + count_pending_to_customer) WHERE id = #{self.inventory.id}"
+  #     ActiveRecord::Base.connection.execute(sql)
+  #   end
+  # end
 
   # with SQL math subtract to count_pending_to_customer attribute
   #
   # @param [Integer] number of variants to subtract
   # @return [none]
-  def subtract_pending_to_customer(num)
-    add_pending_to_customer((num.to_i * -1))
-  end
+  # def subtract_pending_to_customer(num)
+  #   add_pending_to_customer((num.to_i * -1))
+  # end
 
   # in the admin form qty_to_add to the count on hand
   #

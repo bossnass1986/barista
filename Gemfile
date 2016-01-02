@@ -1,21 +1,38 @@
 source 'https://rubygems.org'
 
+# Deployment
 gem 'rails', '4.2.4'
+
+# Server
 gem 'puma'
+
+# Template Engine
 gem 'haml'
 gem 'html2haml'
 
+# Database
+gem 'pg'
 
+# User Management
 gem 'devise'
 gem 'rolify'
 gem 'cancancan'
+
+# Payment Gateway
 gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 gem 'aasm'
+
+# Search
+gem 'pg_search'
+
+# Phone Management
+gem 'twilio-ruby'
 
 gem 'rails_12factor', group: :production
 # gem 'seed_dump'
 
-gem 'pg'
+gem 'brakeman', :require => false
+
 gem 'geocoder'
 
 # Gems used only for assets and not required
@@ -32,7 +49,7 @@ end
 
 gem 'jquery-rails'
 
-
+#
 # group :test do
 #   gem 'rspec-rails'
 #   gem 'cucumber-rails'
@@ -47,20 +64,3 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

@@ -2,7 +2,7 @@
 
 Individual supplier can be accessed by specifying their supplier name as the path prefix.
 
-* Given a supplier named Fresch Cafe
+* ~~Given a supplier named Fresch Cafe~~
 * When I visit http://example.com/fresch-cafe
 * Then I expect to see all products defined for Fresch Cafe
 * And I expect to see branding defined for Fresch Cafe
@@ -16,9 +16,7 @@ As a public, unauthenticated visitor to a supplier I can:
 * Add a product to my cart
 * View my cart
 * Remove a product from my cart
-* Increase the quantity of a product in my cart
 * Log in, which does not clear the cart
-* Maintain a separate shopping cart for each supplier I browse
 * Purchase items in a shopping cart when I provide my email, billing address, shipping address, and credit card number.
 * Create an account
 * When I create an account, then I expect to receive a welcome email
@@ -47,7 +45,7 @@ As an authenticated shopper I can:
 * Maintain a separate shopping cart for each supplier I browse
 * Make purchases on any supplier I am browsing
 * Recieve an email confirmation of my order with basic order details and a link to the order detail page
-* Manage my account information shared by all suppliers centrally on my account page
+* ~~Manage my account information shared by all suppliers centrally on my account page~~
 * Shipping addresses
 * Billing addresses
 * Credit cards associated with my account
@@ -118,8 +116,8 @@ As an authenticated Platform Administrator, I can:
 Allowed To:
 
 * do everything Unauthenticated Users can do except "log in"
-* log out
-* view their past orders with links to display each order
+* ~~log out~~
+* ~~view their past orders~~ with links to display each order
 * on that order display page there are:
   * products with quantity ordered and line-item subtotals
   * links to each product description page

@@ -1,11 +1,13 @@
 class User < ActiveRecord::Base
-  enum role: [:shopper, :supplier_staff, :supplier_admin, :plaform_admin]
+  enum role: [:shopper, :supplier_staff, :supplier_admin, :platform_admin]
 
   rolify
 
   validates_presence_of :name, :mobile
   validates_format_of :name, :with => /\A[^0-9`!@#\$%\^&*+_=]+\z/, message: 'It looks like your name might not be your authentic name'
   validates_uniqueness_of :mobile
+  validates_format_of :mobile, :with => /\A(?:\+?61|0)4(?:[01]\d{3}|(?:2[1-9]|3[0-57-9]|4[7-9]|5[0-35-9]|6[679]|7[078]|8[178]|9[7-9])\d{2}|(?:20[2-9]|444|68[3-9]|79[01]|820|901)\d|(?:200[01]|2010|8984))\d{4}\z/, :message => 'It looks like your mobile number isn\t correct', :allow_blank => false
+
 
   has_many :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
   has_one :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
@@ -13,9 +15,11 @@ class User < ActiveRecord::Base
   belongs_to :role
   has_and_belongs_to_many :orders
 
-
   has_many    :finished_orders,           -> { where(order_status_id: [3, 4]) },  class_name: 'Order'
   has_many    :completed_orders,          -> { where(order_status_id: 4) }, class_name: 'Order'
+
+  has_many    :phones,          dependent: :destroy,       as: :phoneable
+  has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
   has_many    :carts,                     dependent: :destroy
 
@@ -26,6 +30,8 @@ class User < ActiveRecord::Base
   has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
   has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
   has_many    :payment_profiles
+
+  accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
   after_initialize :set_default_role, :if => :new_record?
 

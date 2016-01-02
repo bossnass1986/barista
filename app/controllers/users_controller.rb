@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
-  before_filter :set_person, only: [:show, :edit, :update, :destroy]
+  # load_and_authorize_resource
+
+  before_filter :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
 
   respond_to :html
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   private
-    def set_person
-      user = User.find(params[:id])
+    def set_user
+      @user = User.find(params[:id])
     end
 end

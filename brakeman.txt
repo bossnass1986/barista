@@ -1,0 +1,44 @@
+
++BRAKEMAN REPORT+
+
+Application path: /Users/paulmcguane/RoR/barista
+Rails version: 4.2.4
+Brakeman version: 3.1.4
+Started at 2016-01-02 21:07:31 +1100
+Duration: 9.077826 seconds
+Checks run: BasicAuth, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 34    |
+| Models            | 41    |
+| Templates         | 75    |
+| Errors            | 2     |
+| Security Warnings | 1 (0) |
++-------------------+-------+
+
++-----------------+-------+
+| Warning Type    | Total |
++-----------------+-------+
+| Mass Assignment | 1     |
++-----------------+-------+
++Errors+
++---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------>>
+| Error                                                                                                         | Location                                                                     >>
++---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------>>
+| /Users/paulmcguane/RoR/barista/app/views/layouts/application.html.haml:2 :: parse error on value ":" (tCOLON) | Could not parse /Users/paulmcguane/RoR/barista/app/views/layouts/application.>>
+| /Users/paulmcguane/RoR/barista/app/views/payments/new.html.haml:2 :: parse error on value ":" (tCOLON)        | Could not parse /Users/paulmcguane/RoR/barista/app/views/payments/new.html.ha>>
++---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------>>
+
+
++SECURITY WARNINGS+
+
++------------+---------------------+----------------+-----------------+--------------------------------------------------------------------------------------------------+
+| Confidence | Class               | Method         | Warning Type    | Message                                                                                          |
++------------+---------------------+----------------+-----------------+--------------------------------------------------------------------------------------------------+
+| Medium     | CartItemsController | allowed_params | Mass Assignment | Parameters should be whitelisted for mass assignment near line 64: params.require(:cart).permit! |
++------------+---------------------+----------------+-----------------+--------------------------------------------------------------------------------------------------+

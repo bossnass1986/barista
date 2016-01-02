@@ -53,28 +53,3 @@
                       %td.small{:bgcolor => "#eeeecc", :colspan => "2"}
                         %b Price:
                     = render :partial => '/shopping/cart_items/saved_items' unless @saved_cart_items.empty?
-.span-6.last
-  #submit_purchase_cart.gradientbuttons.redtheme.purchase-cart
-    %ul
-      %li
-
-
-
--#.grid-block
-  .small-12.grid-content
-    %section.block-list
-      %header My Order
-      %ul
-        - @cart_items.each do |cart_item|
-          %li.with-chevron
-            = link_to cart_item.product.name, cart_item.product
-    %section.block-list
-      %ul
-        %li
-          Total
-    .grid-block
-      .small-12.grid-content
-        %ul.button-group.expand
-          %li= link_to 'Order More', products_url
-          %li
-            %a{:href => "#"} Confirm Order

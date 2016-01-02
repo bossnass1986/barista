@@ -2,6 +2,8 @@ class VariantRequiredError < StandardError
 end
 
 class Product < ActiveRecord::Base
+  include PgSearch
+  multisearchable :against => [:name, :description]
 
   has_one :product_type
 

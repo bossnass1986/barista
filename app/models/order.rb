@@ -1,4 +1,7 @@
 class Order < ActiveRecord::Base
+  include PgSearch
+  multisearchable :against => [:number]
+
   include Presentation::OrderPresenter
 
   has_many   :order_items, :dependent => :destroy
