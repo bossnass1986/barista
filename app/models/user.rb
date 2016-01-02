@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  enum role: [:user, :owner, :admin]
+  enum role: [:shopper, :supplier_staff, :supplier_admin, :plaform_admin]
 
   rolify
 
@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
 
 
   def set_default_role
-    self.role ||= :user
+    self.role ||= :shopper
   end
 
 

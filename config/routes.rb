@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :phones
+  resources :phone_types
   resources :prototype_properties
   resources :prototypes
   resources :coupons

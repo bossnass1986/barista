@@ -40,7 +40,7 @@ Unauthenticated users are NOT allowed to:
 * My order confirmation email will include a unique, obscure link to view my order details
 * The unique link will be displayed on the confirmation page for the order
 
-## Authenticated Supplier Shopper
+## Authenticated Shopper
 
 As an authenticated shopper I can:
 
@@ -57,9 +57,9 @@ As an authenticated shopper I can:
 * Specify basic supplier info: name, URL identifier, and description
 * Automatically become supplier admin
 
-## Authenticated Supplier Stocker
+## Authenticated Supplier Staff
 
-As an authenticated supplier stocker, I can:
+As an authenticated supplier staff, I can:
 
 * Add products, edit products, and retire products in my supplier only
 

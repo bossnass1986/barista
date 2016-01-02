@@ -3,9 +3,10 @@ puts 'Did you hear that? They shut down the main reactor.'
 puts 'Deleting All Users'
 User.delete_all
 puts 'Creating Control Users'
-User.create!(id:1, name: 'Admin', mobile: '0430091464', email: 'admin@bng.com.au', password: 'paul1234').add_role(:admin)
-User.create!(id:2, name: 'Owner', mobile: '0430091461', email: 'owner@bng.com.au', password: 'paul1234').add_role(:owner)
-User.create!(id:3, name: 'Paul McGuane', mobile: '0430091462', email: 'user@bng.com.au', password: 'paul1234').add_role(:user)
+User.create!(id:1, name: 'Admin', mobile: '0430091464', email: 'admin@bng.com.au', password: 'paul1234').add_role(:platform_admin)
+User.create!(id:2, name: 'Supplier Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: 'paul1234').add_role(:supplier_admin)
+User.create!(id:3, name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au', password: 'paul1234').add_role(:shopper)
+User.create!(id:4, name: 'Supplier Staff', mobile: '0430091464', email: 'supplier_staff@bng.com.au', password: 'paul1234').add_role(:supplier_staff)
 
 puts 'Deleting All Countries'
 Country.delete_all
