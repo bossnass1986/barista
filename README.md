@@ -1,3 +1,105 @@
+# Functional Requirements
+
+Individual supplier can be accessed by specifying their supplier name as the path prefix.
+
+* Given a supplier named Billy’s BBQ
+* When I visit http://example.com/billys-bbq
+* Then I expect to see all products defined for Billy’s BBQ
+* And I expect to see branding defined for Billy’s BBQ
+
+## Public Visitor
+
+As a public, unauthenticated visitor to a restaurant I can:
+
+* Maintain a separate shopping cart for each restaurant I browse
+* Purchase items in a shopping cart when I provide my email, billing address, shipping address, and credit card number.
+* Create an account
+* When I create an account, then I expect to receive a welcome email
+* Login with my account and become an authenticated shopper
+
+### First-time User Experience
+
+* I may proceed through the process of adding an item to my cart and checking out
+* I may then create an account or simply enter my email, billing, shipping, and credit card info
+* If I create an account, I will immediately resume the checkout process
+* If I do not create an account
+* My order confirmation email will include a unique, obscure link to view my order details
+* The unique link will be displayed on the confirmation page for the order
+
+## Authenticated Supplier Shopper
+
+As an authenticated shopper I can:
+
+* Maintain a separate shopping cart for each supplier I browse
+* Make purchases on any supplier I am browsing
+* Recieve an email confirmation of my order with basic order details and a link to the order detail page
+* Manage my account information shared by all restaurants centrally on my account page
+* Shipping addresses
+* Billing addresses
+* Credit cards associated with my account
+* Basic account info like name and password
+* View and manage my purchase history across all suppliers
+* Create a new supplier, pending admin approval, via my account page
+* Specify basic supplier info: name, URL identifier, and description
+* Automatically become supplier admin
+
+## Authenticated Supplier Stocker
+
+As an authenticated restaurant stocker, I can:
+
+* Add items, edit items, and retire items in my restaurant only
+
+## Authenticated Supplier Administrator
+
+As an authenticated supplier admin, by using a dedicated admin area, I can:
+
+* Do everything a stocker for my supplier can do
+* Update the details of my supplier such as the: name, URL identifier, and description
+* Add or remove supplier stocker accounts
+* Adding a stocker account automatically emails the account holder with a link to confirm their account and status
+* Add or remove other admins for the supplier
+* Create product listings including a name, description, price, and upload a photo
+* Modify existing products’ name, description, price, and photo
+* Create named product types for products (eg: "Hot Drinks", "Juices")
+* Assign products to product types or remove them from product types. Products can belong to only one product type.
+* Retire a product from being sold, which hides it from browsing by any non-administrator
+
+As an Administrator, I can also view an order "dashboard" where I can:
+
+* See a listing of all orders with:
+  * the total number of orders by status
+  * links for each individual order
+  * filter orders to display by status type (for statuses "Order Received", "In Progress", "Ready For Collection", "Collected")
+  * link to transition to a different status:
+    * link to "cancel" individual orders which are currently "ordered" or "paid"
+    * link to "mark as paid" orders which are "ordered"
+    * link to "mark as completed" individual orders which are currently "paid"
+* Access details of an individual order, including:
+  * Order date and time
+  * Purchaser full name and email address
+  * For each product on the order:
+    * Name linked to the product page
+    * Quantity
+    * Price
+    * Line product subtotal
+  * Total for the order
+  * Status of the order
+
+NOT allowed to:
+
+* Modify any personal data aside from their own
+* Be fewer than 1 admin for a supplier
+
+## Authenticated Platform Administrator
+
+As an authenticated Platform Administrator, I can:
+
+* Approve or decline the creation of new suppliers
+* Take a suppliers "offline" temporarily so that attempting to browse it redirects its root and displays a maintenance message
+* Bring an offline supplier back online
+* Override/assist suppliers admins in any functionality available to them via the admin portion of their restaurant pages
+
+
 # Users
 ## Unauthenticated Users
 
@@ -42,40 +144,6 @@ NOT allowed to:
 * view the administrator screens or use administrator functionality
 * make themselves an administrator
 
-## Administrators
-
-As an authenticated Administrator, I can:
-
-* Create product listings including a name, description, price, and upload a photo
-* Modify existing products’ name, description, price, and photo
-* Create named product types for products (eg: "Hot Drinks", "Juices")
-* Assign products to product types or remove them from product types. Products can belong to only one product type.
-* Retire a product from being sold, which hides it from browsing by any non-administrator
-
-As an Administrator, I can also view an order "dashboard" where I can:
-
-* See a listing of all orders with:
-  * the total number of orders by status
-  * links for each individual order
-  * filter orders to display by status type (for statuses "Order Received", "In Progress", "Ready For Collection", "Collected")
-  * link to transition to a different status:
-    * link to "cancel" individual orders which are currently "ordered" or "paid"
-    * link to "mark as paid" orders which are "ordered"
-    * link to "mark as completed" individual orders which are currently "paid"
-* Access details of an individual order, including:
-  * Order date and time
-  * Purchaser full name and email address
-  * For each product on the order:
-    * Name linked to the product page
-    * Quantity
-    * Price
-    * Line product subtotal
-  * Total for the order
-  * Status of the order
-
-NOT allowed to:
-
-* Modify any personal data aside from their own
 
 # Data Validity
 
@@ -99,7 +167,7 @@ There are several types of entities in the system, each with certain required da
 * An order must belong to a user
 * An order must be for one or more products currently being sold
 
-# Extensions
+# Enhancements
 
 ## Is My Order Ready?
 
