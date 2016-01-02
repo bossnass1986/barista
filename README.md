@@ -9,13 +9,27 @@ Individual supplier can be accessed by specifying their supplier name as the pat
 
 ## Public Visitor
 
-As a public, unauthenticated visitor to a restaurant I can:
+As a public, unauthenticated visitor to a supplier I can:
 
-* Maintain a separate shopping cart for each restaurant I browse
+* Browse all products
+* Browse products by product types
+* Add a product to my cart
+* View my cart
+* Remove a product from my cart
+* Increase the quantity of a product in my cart
+* Log in, which does not clear the cart
+* Maintain a separate shopping cart for each supplier I browse
 * Purchase items in a shopping cart when I provide my email, billing address, shipping address, and credit card number.
 * Create an account
 * When I create an account, then I expect to receive a welcome email
 * Login with my account and become an authenticated shopper
+
+Unauthenticated users are NOT allowed to:
+
+* View another user’s private data (such as current order, etc.)
+* Checkout (until they log in)
+* View the administrator screens or use administrator functionality
+* Make themselves an administrator
 
 ### First-time User Experience
 
@@ -98,27 +112,6 @@ As an authenticated Platform Administrator, I can:
 * Take a suppliers "offline" temporarily so that attempting to browse it redirects its root and displays a maintenance message
 * Bring an offline supplier back online
 * Override/assist suppliers admins in any functionality available to them via the admin portion of their restaurant pages
-
-
-# Users
-## Unauthenticated Users
-
-As an unauthenticated user, I can:
-
-* Browse all products
-* Browse products by product types
-* Add a product to my cart
-* View my cart
-* Remove a product from my cart
-* Increase the quantity of a product in my cart
-* Log in, which does not clear the cart
-
-Unauthenticated users are NOT allowed to:
-
-* View another user’s private data (such as current order, etc.)
-* Checkout (until they log in)
-* View the administrator screens or use administrator functionality
-* Make themselves an administrator
 
 ## Authenticated Users (Non-Administrators)
 
