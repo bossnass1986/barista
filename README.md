@@ -59,9 +59,9 @@ As an authenticated shopper I can:
 
 ## Authenticated Supplier Stocker
 
-As an authenticated restaurant stocker, I can:
+As an authenticated supplier stocker, I can:
 
-* Add items, edit items, and retire items in my restaurant only
+* Add products, edit products, and retire products in my supplier only
 
 ## Authenticated Supplier Administrator
 
