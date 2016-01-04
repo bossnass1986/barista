@@ -1,5 +1,3 @@
-# TODO COMPLETED MODEL
-
 class Coupon < ActiveRecord::Base
   has_many :orders
 

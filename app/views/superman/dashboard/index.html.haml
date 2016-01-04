@@ -1,0 +1,10 @@
+- title t('supplier.index.title')
+- @suppliers.each_with_index do |supplier, i|
+  .product-list.grid-block
+    .small-8.grid-content.text-center
+      %h4
+        =link_to supplier.name.titlecase, supplier
+        %p= supplier.address
+    .small-4
+      = link_to supplier, title: supplier.name do
+        = supplier.image_available

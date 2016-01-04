@@ -61,9 +61,9 @@ class Product < ActiveRecord::Base
   end
 
   def image_available
-    (Rails.application.assets.find_asset("drinks/#{self.name.downcase.tr(' ', '-')}.jpg").nil?) ?
-        ActionController::Base.helpers.image_tag('drinks/generic.jpg', size: '50', alt: self.name.titlecase, title: self.name.titlecase) :
-        ActionController::Base.helpers.image_tag("drinks/#{self.name.downcase.tr(' ', '-')}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
+    (Rails.application.assets.find_asset("products/#{self.name.downcase.tr(' ', '-')}.jpg").nil?) ?
+        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '50', alt: self.name.titlecase, title: self.name.titlecase) :
+        ActionController::Base.helpers.image_tag("products/#{self.name.downcase.tr(' ', '-')}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
   end
 
   def active(at = Time.zone.now)

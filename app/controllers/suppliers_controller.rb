@@ -8,8 +8,8 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
-    # products = Product.active
-    products = Product.find(params[:id]).is_available
+    products = Product.active
+    # products = Product.active.includes(:variants)
 
     product_types = nil
     if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id])

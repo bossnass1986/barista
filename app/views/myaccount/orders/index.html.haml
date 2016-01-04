@@ -1,0 +1,20 @@
+- title 'My Order History'
+%h3 Orders
+- unless @orders.present?
+  You currently do not have any orders.
+- @orders.each do |order|
+  .order-list-item.ten
+    %ul
+      %li
+        %label Number:
+        = link_to order.number, ''
+      -#%li
+        %label Amount:
+        = number_to_currency( order.first_invoice_amount )
+      %li
+        %label Status:
+        = order.order_status.name
+      %li
+        %label Completed at:
+        = order.display_completed_at
+  %hr/
