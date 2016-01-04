@@ -56,7 +56,6 @@ $card-divider-background: smartscale($card-background, 7%) !default;
 ) {
   background: $background;
   padding: $padding;
-  color: #f7e9cd;
 }
 
 @mixin card-section(
@@ -73,22 +72,22 @@ $card-divider-background: smartscale($card-background, 7%) !default;
       &.#{$color} {
         $color-value: map-get($foundation-colors, $color);
         @include card-container(
-          $background: $color-value,
-          $color: isitlight($color-value),
-          $border: 0
+        $background: $color-value,
+        $color: isitlight($color-value),
+        $border: 0
         );
         .card-divider {
           @include card-divider(
-            $background: smartscale($color-value, 7%)
+          $background: smartscale($color-value, 7%)
           );
         }
       }
     }
   }
-    .card-divider {
-      @include card-divider;
-    }
-    .card-section {
-      @include card-section;
-    }
+  .card-divider {
+    @include card-divider;
+  }
+  .card-section {
+    @include card-section;
+  }
 }

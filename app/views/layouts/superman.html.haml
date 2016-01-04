@@ -12,50 +12,31 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body{'ng-app':  :'app'}
-    .grid-frame.vertical
-      .title-bar
-        .center.title
-          = content_for?(:title) ? yield(:title).upcase : t(:site_name)
+    .title-bar
+      .center.title
+        = content_for?(:title) ? yield(:title).upcase : t(:site_name).upcase
+    .grid-frame
       .grid-block
         #sidebar.medium-2.grid-block
           .grid-content
             %section.block-list
-              %header List title
+              %header= t('superman.index.side_bar_title')
               %ul
                 %li.with-chevron
-                  %a{:href => "#"} List item 1
+                  %a{:href => "#"}= t('superman.side_menu.dashboard')
                 %li.with-chevron
-                  %a{:href => "#"} List item 2
-                %li
-                  %a{:href => "#"} List item 3
+                  %a{:href => "#"}= t('superman.side_menu.orders')
+                %li.with-chevron
+                  %a{href: ''}= t('superman.side_menu.products')
+                %li.with-chevron
+                  %a{href: ''}= t('superman.side_menu.marketing')
+                %li.with-chevron
+                  %a{href: ''}= t('superman.side_menu.staff')
+                %li.with-chevron
+                  %a{href: ''}= t('superman.side_menu.settings')
+              %header= t('superman.index.side_bar_sub_title')
+              %ul
+                %li.with-chevron= link_to t('superman.side_menu.return_to'), root_url
+                %li.with-chevron= link_to t('superman.side_menu.log_out'), destroy_user_session_path, method: :delete
         #main.medium-10.grid-block
-          .grid-content
-            %h3 Dashboard
-            .grid-block
-              .dark.card
-                .card-divider
-                  This is content
-                .card-section
-                  %h4 The Basics: Group and Block
-                  %p The most basic elements in the Foundation for Apps grid are the Group and Block.
-            .grid-block
-              .dark.card
-                .card-divider
-                  This is content
-                .card-section
-                  %h4 The Basics: Group and Block
-                  %p The most basic elements in the Foundation for Apps grid are the Group and Block.
-            .grid-block
-              .dark.card
-                .card-divider
-                  This is content
-                .card-section
-                  %h4 The Basics: Group and Block
-                  %p The most basic elements in the Foundation for Apps grid are the Group and Block.
-            .grid-block
-              .dark.card
-                .card-divider
-                  This is content
-                .card-section
-                  %h4 The Basics: Group and Block
-                  %p The most basic elements in the Foundation for Apps grid are the Group and Block.
+          = yield

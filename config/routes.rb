@@ -8,7 +8,19 @@ Rails.application.routes.draw do
   # resources :user_sessions, only: [:new, :create, :destroy]
   resources :suppliers
 
-  get 'admin'       => 'admin/overviews#index'
+  # namespace :admin do
+  #   resource :dashboard, only: [ :index ]
+  #   resources :restaurants, only: [ :index, :destroy, :rejected, :approve, :reject ]
+  #
+  #   get "/" => "dashboard#index"
+  #   get "/approval" => "restaurants#index", as: "approval"
+  #   get "/inactive" => "restaurants#inactive", as: "inactive"
+  #   get "/rejected" => "restaurants#rejected", as: "rejected"
+  #   post "/restaurants/approve" => "restaurants#approve", as: "approve"
+  #   post "/restaurants/reject" => "restaurants#reject", as: "reject"
+  # end
+
+  get 'admin'       => 'admin/dashboard#index'
   # get 'login'       => 'user_sessions#new'
   # get 'logout'      => 'user_sessions#destroy'
   # delete 'logout'   => 'user_sessions#destroy'
@@ -67,6 +79,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resource :dashboard, only: [ :index ]
     namespace :customer_service do
       resources :users do
         resources :comments
@@ -86,7 +99,7 @@ Rails.application.routes.draw do
         resources :addresses
       end
     end
-    resources :overviews, only: [:index]
+    # resources :overviews, only: [:index]
 
     get "help" => "help#index"
 
@@ -108,7 +121,7 @@ Rails.application.routes.draw do
 
     namespace :history do
       resources  :orders, only: [:index, :show] do
-        resources  :addresses, only: [:index, :show, :edit, :update, :new, :create]
+        # resources  :addresses, only: [:index, :show, :edit, :update, :new, :create]
       end
     end
 
@@ -241,17 +254,7 @@ end
 
 
 
-  # namespace :superman do
-  #   resource :dashboard, only: [ :index ]
-  #   resources :restaurants, only: [ :index, :destroy, :rejected, :approve, :reject ]
-  #
-  #   get "/" => "dashboard#index"
-  #   get "/approval" => "restaurants#index", as: "approval"
-  #   get "/inactive" => "restaurants#inactive", as: "inactive"
-  #   get "/rejected" => "restaurants#rejected", as: "rejected"
-  #   post "/restaurants/approve" => "restaurants#approve", as: "approve"
-  #   post "/restaurants/reject" => "restaurants#reject", as: "reject"
-  # end
+
   #
   # resources :phones
   # resources :phone_types

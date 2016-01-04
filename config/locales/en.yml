@@ -46,6 +46,26 @@ en:
   supplier:
     index:
       title: 'Find my place'
+  superman:
+    index:
+      side_bar_title: 'Admin Menu'
+      side_bar_sub_title: 'Application Menu'
+    side_menu:
+      dashboard: 'Dashboard'
+      products: 'Menu Items'
+      orders: 'Orders'
+      staff: 'Staff'
+      marketing: 'Marketing'
+      settings: 'Settings'
+      return_to: 'Return to App'
+      log_out: 'Log Out'
+    dashboard:
+      title: 'Dashboard'
+      stats_title:
+        sales: 'Sales'
+        orders: 'Orders'
+        users: 'Users'
+        products: 'Products'
 
 
 

@@ -1,0 +1,13 @@
+#sidebar.medium-2.grid-block
+  .grid-content
+    %section.block-list
+      %header= t('superman.index.side_bar_title')
+      %ul
+        %li.with-chevron
+          %a{:href => "#"}= t('superman.index.side_menu.dashboard')
+        %li.with-chevron
+          %a{:href => "#"}= t('superman.index.side_menu.orders')
+        %li.with-chevron
+          %a{href: ''}= t('superman.index.side_menu.products')
+        %li.with-chevron
+          %a{href: ''}= t('superman.index.side_menu.staff')
