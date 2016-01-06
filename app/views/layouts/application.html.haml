@@ -25,16 +25,16 @@
       - if user_signed_in?
         .grid-block.shrink
           .grid.content.small-12
-            -#%ul.menu-bar
+            %ul.menu-bar
               %li
                 %a{href: suppliers_url}
                   %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''}
-              %li
+              -#%li
                 %a{href: users_url}
                   %img{icon: 'star', size: 'medium', 'zf-iconic': :''}
-              %li
+              -#%li
                 %a{href: users_url}
                   %img{icon: 'person', size: 'medium', 'zf-iconic': :''}
-              %li
+              -#%li
                 %a{href: cart_items_url}
                   %img{icon: 'cart', size: 'medium', 'zf-iconic': :''}

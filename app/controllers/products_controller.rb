@@ -44,19 +44,18 @@ class ProductsController < ApplicationController
   # GET /Products/1
   # GET /Products/1.json
   def show
-    @products = Product.all.where('')
-    @properties = Product
-                  .joins(:product_properties)
-                  .joins('INNER JOIN variant_properties on product_properties.property_id = variant_properties.property_id')
-                  .joins('INNER JOIN properties ON properties.id = product_properties.property_id AND properties.id = variant_properties.property_id')
-                  .joins('INNER JOIN variants on variants.product_id = products.id AND variants.id = variant_properties.variant_id')
-                  .where('products.id = ?', params[:id])
-                  .pluck('products.id as prod_id', 'properties.display_name as prop_name', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
-    @property = @properties.group_by { |p| p.prop_name }
+    @products = Product.find(params[:id])
+    # @properties = Product
+    #               .joins(:product_properties)
+    #               .joins('INNER JOIN variant_properties on product_properties.property_id = variant_properties.property_id')
+    #               .joins('INNER JOIN properties ON properties.id = product_properties.property_id AND properties.id = variant_properties.property_id')
+    #               .joins('INNER JOIN variants on variants.product_id = products.id AND variants.id = variant_properties.variant_id')
+    #               .where('products.id = ?', params[:id])
+    #               .pluck('products.id as prod_id', 'properties.display_name as prop_name', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
     # @product = Product.joins(:properties, :variants).find(params[:id], :variant_id)
     # @product = Product.joins(:variants).group(:variant_id, :property_id).find(params[:id])
-    form_info
-    @cart_item.variant_id = @product.active_variants.first.try(:id)
+    # form_info
+    # @cart_item.variant_id = @product.active_variants.first.try(:id)
   end
 
   # GET /Products/new

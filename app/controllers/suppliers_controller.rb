@@ -8,6 +8,7 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
+    @supplier = Supplier.find(params[:id])
     products = Product.active
     # products = Product.active.includes(:variants)
 

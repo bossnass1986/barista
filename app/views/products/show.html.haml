@@ -8,15 +8,12 @@
     - else
       #product_list.grid-block
         .small-12.grid-content.text-center
-          = @property
-          -#- @properties.each do |property|
-            %h4= property[1]
-            -#= link_to size[1], product, class: 'hollow button tiny'
-          -#%small= number_to_currency(size[2])
-          -#%h4= @product.name.titlecase
-          -#%ul.menu-bar
-            - if @product.active_variants.count > 0
-                %li
-                  %label
-                    = v2
+          - @product.properties.each do |prop|
+            .grid-content
+              %h3= prop.display_name
+              .grid-block.small-up-3
+                - @product.variants.each do |var|
+                  .grid-content
+                    %small
+                      = var.price
 

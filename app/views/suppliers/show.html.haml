@@ -8,5 +8,5 @@
           = link_to size[1], product, class: 'hollow button tiny'
           %small= number_to_currency(size[2])
     .small-4
-      = link_to product_path(product), title: product.name do
+      = link_to product_path(product, supplier_id: @supplier), title: product.name do
         = product.image_available
