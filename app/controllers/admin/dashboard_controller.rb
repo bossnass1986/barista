@@ -4,8 +4,11 @@ class Admin::DashboardController < ApplicationController
   # before_action :super_access
 
   def index
-    @suppliers = Supplier.all
-    # @orders =
+    # @suppliers = Supplier.all
+    @orders = OrderItem
+                  .joins(:variants)
+                  .joins(:variant_suppliers)
+                  .joins(:suppliers)
   end
 
 end

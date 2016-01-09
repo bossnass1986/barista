@@ -1,5 +1,70 @@
 - title 'My Order History'
-.grid-block
+%ul.tabs{'data-tabs': :''}
+  - @status.each do |status|
+    %li.tabs-title
+      %a{href: status.id}
+      = status.name
+
+%table
+  %thead
+    %tr
+      %th ID
+      %th Status
+      %th Created At
+      %th Expected At
+      %th Customer
+      %th Total
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td= order.number
+        %td= order.order_status.name
+        %td= order.created_at
+        %td= order.completed_at
+        %td= order.user.name
+
+-#.grid-block
+  .grid-content
+    %div{'zf-tabs': ''}
+      %div{title: 'ALL', 'zf-tab': ''}
+        .grid-block
+          .grid-content ID
+          .grid-content Status
+          .grid-content Created At
+          .grid-content Expected At
+          .grid-content Customer
+          .grid-content Total
+          - @orders.each do |order|
+            .grid-block
+              .grid-content= order.number
+              .grid-content= order.order_status.name
+              .grid-content= order.created_at
+              .grid-content= order.completed_at
+              .grid-content= order.user.name
+              .grid-content
+      - @status.each do |status|
+        %div{title:  status.name.upcase, 'zf-tab': ''}
+          .grid-block
+            .grid-content ID
+            .grid-content Status
+            .grid-content Created At
+            .grid-content Expected At
+            .grid-content Customer
+            .grid-content Total
+          - @orders.each do |order|
+            - if order.order_status_id == status.id
+              .grid-block
+                .grid-content= order.number
+                .grid-content= order.order_status.name
+                .grid-content= order.created_at
+                .grid-content= order.completed_at
+                .grid-content= order.user.name
+                .grid-content
+      %div{title: 'LATE', 'zf-tab': ''}
+        LATE
+      %div{title: 'CANCELLED', 'zf-tab': ''}
+
+-#.grid-block
   .small-12.grid-content
     - if @orders.empty?
       .grid-block{style: 'background:#fff'}
@@ -14,22 +79,3 @@
               - @orders.each do |order|
                 %li.with-chevron
                   = link_to "Order ##{order.number.upcase}", admin_history_order_path(order)
--#%h3 Orders
--#- unless @orders.length > 0
-  You currently do not have any orders.
--#- @orders.each do |order|
-  .order-list-item.ten
-    %ul
-      %li
-        %label Number:
-        = link_to order.number, order
-      -#%li
-        %label Amount:
-        = number_to_currency( order.first_invoice_amount )
-      %li
-        %label Status:
-        = order.order_status.name
-      %li
-        %label Completed at:
-        = order.display_completed_at
-  %hr/

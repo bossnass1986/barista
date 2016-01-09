@@ -8,19 +8,13 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.find(params[:id])
-    products = Product.active
-    # products = Product.active.includes(:variants)
-
-    product_types = nil
-    if params[:product_type_id].present? && product_type = ProductType.find_by_id(params[:product_type_id])
-      product_types = product_type.self_and_descendants.map(&:id)
-    end
-    if product_types
-      @products = products.where(product_type_id: product_types)
-    else
-      @products = products
-    end
+    # @supplier = Supplier.find(params[:id])
+    @products = Supplier
+                        .joins(:variants)
+                        .joins('INNER JOIN products on products.id = variants.product_id')
+                        .where('suppliers.id = ?', params[:id])
+                        .group('suppliers.id','products.id','products.name')
+                        .pluck('suppliers.id as supplier_id','products.id as prod_id','products.name as prod_name')
 
     @sizes = Supplier
                   .joins(:variant_suppliers)

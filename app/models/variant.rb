@@ -7,6 +7,8 @@ class Variant < ActiveRecord::Base
   has_many :variant_properties
   has_many :properties,        through: :variant_properties
 
+  has_many :order_items
+
   # TODO Remove not required
   # has_many   :purchase_order_variants
   # has_many   :purchase_orders, through: :purchase_order_variants

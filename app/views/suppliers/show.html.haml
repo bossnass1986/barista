@@ -2,11 +2,11 @@
 - @products.each_with_index do |product, i|
   .product-list.grid-block
     .small-8.grid-content.text-center
-      %h4= product.name.titlecase
+      %h4= product.prod_name.titlecase
       - @sizes.each do |size|
-        - if size[0] == product.id
-          = link_to size[1], product, class: 'hollow button tiny'
+        - if size[0] == product[0]
+          = link_to size[1], product_path(product[0]), class: 'hollow button tiny'
           %small= number_to_currency(size[2])
     .small-4
-      = link_to product_path(product, supplier_id: @supplier), title: product.name do
-        = product.image_available
+      = link_to product_path(product, supplier_id: @supplier), title: product[1] do
+        = product.image_available[product.prod_name]

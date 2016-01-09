@@ -41,11 +41,11 @@ Rails.application.configure do
   PUBLISHABLE_KEY='pk_test_6pRNASCoBOKtIshFeQd4XMUh'
   SECRET_KEY='sk_test_BQokikJOvBiI2HlWgH4olfQ2'
 
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-    Bullet.bullet_logger = true
-    Bullet.console = true
-  end
+  # config.after_initialize do
+  #   Bullet.enable = true
+  #   Bullet.alert = true
+  #   Bullet.bullet_logger = true
+  #   Bullet.console = true
+  # end
 
 end

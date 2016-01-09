@@ -54,6 +54,7 @@ en:
       dashboard: 'Dashboard'
       products: 'Menu Items'
       orders: 'Orders'
+      customers: 'Customers'
       staff: 'Staff'
       marketing: 'Marketing'
       settings: 'Settings'
@@ -66,6 +67,12 @@ en:
         orders: 'Orders'
         users: 'Users'
         products: 'Products'
+    history:
+      orders:
+        all: 'All'
+        items: 'Items'
+        submitted: 'Submitted'
+        accepted: 'Accepted'
 
 
 

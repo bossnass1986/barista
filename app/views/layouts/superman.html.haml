@@ -1,5 +1,5 @@
 !!!
-%html{lang: :en, 'ng-app': :foundation, 'zf-esc-close': :''}
+%html{lang: :en}
   %head
     %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
     %meta{:charset => 'utf-8'}/
@@ -7,15 +7,65 @@
     %meta{content: t('meta_description'), name: :description}
     %meta{content: t(:meta_keywords), name: :keywords}
     %title= content_for?(:title) ? yield(:title) : t(:site_name)
-    = stylesheet_link_tag    'application'
-    %script{src: :'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'}
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag    'admin'
+    / Compressed JavaScript
+    %script{:src => "https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.js"}
     = csrf_meta_tags
-  %body{'ng-app':  :'app'}
-    .title-bar
+  %body
+    .row.full-width.wrapper
+      .large-12.columns
+      #top-menu
+        .row
+          .large-2.medium-4.small-12.columns.top-part-no-padding
+            .logo-bg
+              %img{:alt => "logo", :src => "img/logo.png"}
+                %i.fi-list.toggles{"data-toggle" => "hide"}
+          .large-10.medium-8.small-12.columns.menu
+            .top-bar
+              .top-bar-left
+                %ul.menu{"data-dropdown-menu" => ""}
+                  %li Site Title
+                  %li
+                    %a{:href => "#"} Two
+                  %li
+                    %a{:href => "#"} Three
+              .top-bar-right
+                %ul.menu
+                  %li
+                    %input{:placeholder => "Search", :type => "search"}/
+                  %li
+                    %button.button{:type => "button"} Search
+        .row
+  .no-padding
+    .large-2.medium-12.small-12.columns
+      %ul.vertical.menu
+        %li
+          %a{:href => "#"}= t('superman.side_menu.dashboard')
+        %li
+          %a{:href => "#"}= t('superman.side_menu.orders')
+        %li
+          %a{href: ''}= t('superman.side_menu.products')
+        %li
+          %a{href: ''}= t('superman.side_menu.marketing')
+        %li
+          %a{href: ''}= t('superman.side_menu.staff')
+        %li
+          %a{href: ''}= t('superman.side_menu.settings')
+  .large-10.medium-12.small-12.columns.light-grey-bg-pattern
+    .row
+      .large-10.columns
+        .page-name
+          %h3.left= content_for?(:title) ? yield(:title).upcase : t(:site_name).upcase
+          .clearfix
+    .row
+      = yield
+    -#.title-bar
       .center.title
         = content_for?(:title) ? yield(:title).upcase : t(:site_name).upcase
-    .grid-frame
+      - if user_signed_in?
+        .right
+          = "Hi #{current_user.name}"
+    -#.grid-frame
       .grid-block
         #sidebar.medium-2.grid-block
           .grid-content
@@ -39,4 +89,6 @@
                 %li.with-chevron= link_to t('superman.side_menu.return_to'), root_url
                 %li.with-chevron= link_to t('superman.side_menu.log_out'), destroy_user_session_path, method: :delete
         #main.medium-10.grid-block
-          = yield
+          .grid-content
+            %h3= content_for?(:title) ? yield(:title).upcase : t(:site_name).upcase
+            = yield
