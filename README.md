@@ -14,8 +14,8 @@ As a public, unauthenticated visitor to a supplier I can:
 * Browse all products
 * Browse products by product types
 * Add a product to my cart
-* View my cart
-* Remove a product from my cart
+* ~~View my cart~~
+* ~~Remove a product from my cart~~
 * Log in, which does not clear the cart
 * Purchase items in a shopping cart when I provide my email, billing address, shipping address, and credit card number.
 * Create an account
@@ -49,7 +49,7 @@ As an authenticated shopper I can:
 * Shipping addresses
 * Billing addresses
 * Credit cards associated with my account
-* Basic account info like name and password
+* ~~Basic account info like name and password~~
 * View and manage my purchase history across all suppliers
 * Create a new supplier, pending admin approval, via my account page
 * Specify basic supplier info: name, URL identifier, and description

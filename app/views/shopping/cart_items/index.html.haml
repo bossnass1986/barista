@@ -22,9 +22,9 @@
               = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
       .grid-block.text-center
         .grid-content
-          = cart_form.submit t('cart.update').upcase, :class => 'button alert'
+          = cart_form.submit t('cart.update').upcase, :class => 'button hollow-square'
         .grid-content
-          = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button success'}
+          = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button alert'}
     -#.twelve.columns
       %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border: 0px solid #FFF;", :width => "100%"}
         %tbody

@@ -97,7 +97,18 @@ $button-tag-selector: false !default;
     border: 3px solid $button-background-hollow;
     background: transparent;
     color: $body-font-color;
-    border-radius: 2.5rem;
+    //border-radius: 2.5rem;
+    margin: 0 !important;
+    &:hover, &:focus {
+      border-color: scale-color($primary-color, $lightness: 25%);
+      background: transparent;
+      color: $primary-color;
+    }
+  }
+  @if $style == hollow-square {
+    border: 3px solid $button-background-hollow;
+    background: transparent;
+    color: $body-font-color;
     margin: 0 !important;
     &:hover, &:focus {
       border-color: scale-color($primary-color, $lightness: 25%);

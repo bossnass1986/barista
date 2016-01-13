@@ -30,14 +30,14 @@ class Supplier < ActiveRecord::Base
   end
 
   def self.find_by_product_types(product_type_id)
-    return [] if product_type_id.nil?
+    # return [] if product_type_id.nil?
 
     product_type = ProductType.find_by_id product_type_id
     product_types = product_type.self_and_descendants.map(&:id) if product_type
 
-    return if product_types.nil?
-    self.active
-  else
+    # return if product_types.nil?
+    # self.active
+  # else
     self.where product_type_id: product_types
   end
 
