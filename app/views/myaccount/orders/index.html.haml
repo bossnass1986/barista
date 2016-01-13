@@ -1,20 +1,16 @@
 - title 'My Order History'
-%h3 Orders
+- content_for :head do
+  = stylesheet_link_tag 'app/products'
 - unless @orders.present?
   You currently do not have any orders.
+%section.block-list
+  %header List title
 - @orders.each do |order|
-  .order-list-item.ten
-    %ul
-      %li
-        %label Number:
-        = link_to order.number, ''
-      -#%li
-        %label Amount:
-        = number_to_currency( order.first_invoice_amount )
-      %li
-        %label Status:
-        = order.order_status.name
-      %li
-        %label Completed at:
-        = order.display_completed_at
-  %hr/
+  .product-list.product-list.header.grid-block
+    .small-9.grid-content.text-left
+      %h4= "Order: #{order.number}"
+      -#%h4.subheader= order.order_status.name
+    .small-2.v-align
+      %img.align-center.iconic-color-success{:icon => "circle-check", :size => "medium", "zf-iconic" => ""}/
+    .small-1.v-align
+      %img.align-center.text-right.iconic-color-secondary{:icon => "chevron", :size => "small", "zf-iconic" => ""}/

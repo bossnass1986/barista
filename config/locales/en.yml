@@ -43,6 +43,8 @@ en:
     nothing_in_cart:       "You don't have anything in your cart."
     only_items_saved_for_later: "You only have items Saved for Later."
     add_items_saved_for_later: "Move items to the cart to checkout."
+    checkout: 'Order Now'
+    update: 'Update'
   supplier:
     index:
       title: 'Find my place'

@@ -1,4 +1,6 @@
 - title t('supplier.index.title')
+- content_for :head do
+  = stylesheet_link_tag 'app/products'
 - @suppliers.each_with_index do |supplier, i|
   .product-list.grid-block
     .small-8.grid-content.text-center

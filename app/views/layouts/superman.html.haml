@@ -7,35 +7,24 @@
     %meta{content: t('meta_description'), name: :description}
     %meta{content: t(:meta_keywords), name: :keywords}
     %title= content_for?(:title) ? yield(:title) : t(:site_name)
+    %link{:href => "https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css", :rel => "stylesheet"}/
     = stylesheet_link_tag    'admin'
     / Compressed JavaScript
+    = javascript_include_tag 'admin'
     %script{:src => "https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.js"}
     = csrf_meta_tags
   %body
-    .row.full-width.wrapper
-      .large-12.columns
-      #top-menu
-        .row
-          .large-2.medium-4.small-12.columns.top-part-no-padding
-            .logo-bg
-              %img{:alt => "logo", :src => "img/logo.png"}
-                %i.fi-list.toggles{"data-toggle" => "hide"}
-          .large-10.medium-8.small-12.columns.menu
-            .top-bar
-              .top-bar-left
-                %ul.menu{"data-dropdown-menu" => ""}
-                  %li Site Title
-                  %li
-                    %a{:href => "#"} Two
-                  %li
-                    %a{:href => "#"} Three
-              .top-bar-right
-                %ul.menu
-                  %li
-                    %input{:placeholder => "Search", :type => "search"}/
-                  %li
-                    %button.button{:type => "button"} Search
-        .row
+    .top-bar
+      .top-bar-left
+        %ul.dropdown.menu{"data-dropdown-menu" => "", "data-dropdownmenu" => "u7w7i8-dropdownmenu", :role => "menubar"}
+          %li{:role => "menuitem", :tabindex => "0"}
+            %a.dark{:href => "#top-bars", :tabindex => "-1"}
+              %i.icon.icon-menu.icon-hc-lg
+          %li.menu-text.text-title{:role => "menuitem", :tabindex => "0"} Site Title
+      .top-bar-right
+        %ul.menu
+          %li{:role => "menuitem", :tabindex => "0"}
+            %a{:href => "#", :tabindex => "-1"}
   .no-padding
     .large-2.medium-12.small-12.columns
       %ul.vertical.menu

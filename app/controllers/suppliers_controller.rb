@@ -15,15 +15,15 @@ class SuppliersController < ApplicationController
                         .where('suppliers.id = ?', params[:id])
                         .group('suppliers.id','products.id','products.name')
                         .pluck('suppliers.id as supplier_id','products.id as prod_id','products.name as prod_name')
-
-    @sizes = Supplier
-                  .joins(:variant_suppliers)
-                  .joins('INNER JOIN variants on variants.id = variant_suppliers.variant_id')
-                  .joins('INNER JOIN products on products.id = variants.product_id')
-                  .joins('INNER JOIN variant_properties on variant_properties.variant_id = variants.id')
-                  .joins('INNER JOIN properties on properties.id = variant_properties.property_id AND properties.display_name =\'Size\'')
-                  .where('suppliers.id = ?', params[:id])
-                  .pluck('products.id as prod_id', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
+    @sizes = Supplier.sizes
+    # @sizes = Supplier
+    #               .joins(:variant_suppliers)
+    #               .joins('INNER JOIN variants on variants.id = variant_suppliers.variant_id')
+    #               .joins('INNER JOIN products on products.id = variants.product_id')
+    #               .joins('INNER JOIN variant_properties on variant_properties.variant_id = variants.id')
+    #               .joins('INNER JOIN properties on properties.id = variant_properties.property_id AND properties.display_name =\'Size\'')
+    #               .where('suppliers.id = ?', params[:id])
+    #               .pluck('products.id as prod_id', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
 
     # TODO v1.0 this is probably a better way of doing it
     @product_sizes = @sizes.each_with_object({}) do |size, result|

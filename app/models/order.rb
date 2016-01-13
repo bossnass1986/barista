@@ -24,7 +24,7 @@ class Order < ActiveRecord::Base
   attr_accessor :total, :sub_total, :deal_amount, :taxed_total, :deal_time
 
   NUMBER_SEED     = 1001001001000
-  CHARACTERS_SEED = 21
+  CHARACTERS_SEED = 15
 
    # Called before validation.  sets the email address of the user to the order's email address
    #
@@ -40,7 +40,7 @@ class Order < ActiveRecord::Base
    # @return [none]
   def set_number
     return set_order_number if self.id
-    self.number = (Time.now.to_i).to_s(CHARACTERS_SEED)## fake number for friendly_id validator
+    self.number = (Time.now.to_i).to_s(CHARACTERS_SEED).upcase ## fake number for friendly_id validator
   end
 
    # sets the order number based off constants and the order id
@@ -48,7 +48,7 @@ class Order < ActiveRecord::Base
    # @param none
    # @return [none]
   def set_order_number
-    self.number = (NUMBER_SEED + id).to_s(CHARACTERS_SEED)
+    self.number = (NUMBER_SEED + id).to_s(CHARACTERS_SEED).upcase
   end
 
    # Called after_create.  sets the order number

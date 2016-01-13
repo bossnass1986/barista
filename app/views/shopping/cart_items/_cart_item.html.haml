@@ -1,0 +1,22 @@
+.grid-block
+  .grid-content.small-3= cart_items_form.number_field :quantity, :size=>'1'
+  .grid-content.small-5= link_to item.variant.product_name, product_path(item.variant.product)
+  .grid-content.small-2= number_to_currency item.price
+  .grid-content.small-1= link_to 'x', shopping_cart_item_path(item, :variant_id => item.variant_id),
+    :method => :delete, :class            => 'button tiny alert'
+-#%tr
+  %td{:align => "right", :style => "padding:2px;", :valign => "top", :width => "18%"}
+    .tiny
+      %b{:name => i}
+        -#Item added on
+        -#%br/
+        -#= item.created_at.strftime(I18n.translate('time.formats.long_date'))
+    -#%div{:id => "remove_#{i}_from_cart"}
+      %ul
+        %li
+          = link_to 'Save for Later',                                             |
+            move_to_shopping_cart_item_path(item, :variant_id => item.variant_id, |
+            :item_type_id     => ItemType::SAVE_FOR_LATER_ID),                    |
+            :method           => 'put',                                           |
+            :class            => 'button tiny secondary'
+
