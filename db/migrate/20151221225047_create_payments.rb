@@ -14,5 +14,8 @@ class CreatePayments < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index "payments", ["invoice_id"], name: "index_payments_on_invoice_id", using: :btree
+
   end
 end

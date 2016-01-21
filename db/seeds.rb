@@ -177,13 +177,13 @@ OrderItem.create!([
 
 puts 'Deleting All Orders'
 Order.delete_all
-puts 'Creating Sample Orders'
-Order.create!([
-  {id: 1, calculated_at: '2013-01-18 17:07:29', completed_at: '2013-01-18 18:55:00', user_id: '1', order_status_id: 1},
-  {id: 2, calculated_at: '2013-01-22 15:56:08', completed_at: '2013-01-22 16:02:00', user_id: '1', order_status_id: 2},
-  {id: 3, calculated_at: '2013-01-31 17:37:58', completed_at: '2013-02-06 22:22:00', user_id: '2', order_status_id: 3},
-  {id: 4, completed_at: '2013-02-06 22:22:00', user_id: '1', order_status_id: 4}
-])
+# puts 'Creating Sample Orders'
+# Order.create!([
+#   {id: 1, calculated_at: '2013-01-18 17:07:29', completed_at: '2013-01-18 18:55:00', user_id: '1', order_status_id: 1},
+#   {id: 2, calculated_at: '2013-01-22 15:56:08', completed_at: '2013-01-22 16:02:00', user_id: '1', order_status_id: 2},
+#   {id: 3, calculated_at: '2013-01-31 17:37:58', completed_at: '2013-02-06 22:22:00', user_id: '2', order_status_id: 3},
+#   {id: 4, completed_at: '2013-02-06 22:22:00', user_id: '1', order_status_id: 4}
+# ])
 
 puts 'She may not look like much, but she\'s got it where it counts, kid!'
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :address_types
+  resources :addresses
   resources :image_groups
   # mount Resque::Server.new, at: "/resque"
 

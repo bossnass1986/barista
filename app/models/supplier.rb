@@ -1,6 +1,8 @@
 class Supplier < ActiveRecord::Base
   has_many :variant_suppliers
   has_many :variants,         through: :variant_suppliers
+  has_many :products, through: :variants
+
   # has_many :phones
 
   validates :name,        presence: true,       length: { maximum: 255 }
@@ -8,6 +10,12 @@ class Supplier < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode
+
+  def product_image_available(product)
+    (Rails.application.assets.find_asset("products/#{product.downcase.tr(' ', '-')}.jpg").nil?) ?
+        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '50', alt: product.titlecase, title: product.titlecase) :
+        ActionController::Base.helpers.image_tag("products/#{product.downcase.tr(' ', '-')}.jpg", size: '50', alt: product.titlecase, title: product.titlecase)
+  end
 
   def image_available
     (Rails.application.assets.find_asset("places/#{self.id}.jpg").nil?) ?

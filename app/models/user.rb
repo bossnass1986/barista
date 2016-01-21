@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_one :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
 
   belongs_to :role
-  has_and_belongs_to_many :orders
+  has_many :orders
 
   has_many    :finished_orders,           -> { where(order_status_id: [3, 4]) },  class_name: 'Order'
   has_many    :completed_orders,          -> { where(order_status_id: 4) }, class_name: 'Order'
@@ -104,7 +104,7 @@ class User < ActiveRecord::Base
   # @param [none]
   # @return [ Address ]
   def billing_address
-    default_billing_address ? default_billing_address : shipping_address
+    # default_billing_address ? default_billing_address : shipping_address
   end
 
   # Returns the default shipping address if it exists.   otherwise returns the first shipping address

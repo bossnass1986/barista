@@ -12,6 +12,7 @@ class Product < ActiveRecord::Base
   has_many :properties,         through: :product_properties
   has_many :variants
 
+
   has_many :active_variants, -> { where(deleted_at: nil) }, class_name: 'Variant'
 
   has_and_belongs_to_many :orders

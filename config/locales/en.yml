@@ -45,6 +45,7 @@ en:
     add_items_saved_for_later: "Move items to the cart to checkout."
     checkout: 'Order Now'
     update: 'Update'
+    item_passed_update: 'Item was successfully updated.'
   supplier:
     index:
       title: 'Find my place'

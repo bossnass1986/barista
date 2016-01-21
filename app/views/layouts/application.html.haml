@@ -20,8 +20,7 @@
           = content_for?(:title) ? yield(:title).upcase : t(:site_name)
       .grid-block
         #main.small-12
-          %zf-notification-set#main-notifications{:position => "top-left"}
-            = notice
+          = notice
           .grid-block
             .grid-content
               = yield
@@ -30,7 +29,7 @@
           .grid.content.small-12
             %ul.menu-bar
               %li
-                %a{href: suppliers_url}
+                = link_to suppliers_url, title: 'Suppliers' do
                   %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''}
               -#%li
                 %a{href: myaccount_overview_url}
@@ -38,6 +37,6 @@
               %li
                 %a{href: myaccount_overview_url}
                   %img{icon: 'person', size: 'medium', 'zf-iconic': :''}
-              -#%li
-                %a{href: cart_items_url}
+              %li
+                = link_to shopping_cart_items_url, title: 'Cart' do
                   %img{icon: 'cart', size: 'medium', 'zf-iconic': :''}

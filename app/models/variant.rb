@@ -182,7 +182,8 @@ class Variant < ActiveRecord::Base
   # @param [none]
   # @return [String]
   def product_name
-    name? ? name : [product.name, sub_name].reject{ |a| a.strip.length == 0 }.join(' - ')
+    product.name
+    # name? ? name : [product.name, sub_name].reject{ |a| a.strip.length == 0 }.join(' - ')
   end
 
   # returns the primary_property's description or a blank string

@@ -1,8 +1,20 @@
-.grid-block
-  .grid-content.small-3= cart_items_form.number_field :quantity, :size=>'1'
-  .grid-content.small-5= link_to item.variant.product_name, product_path(item.variant.product)
-  .grid-content.small-2= number_to_currency item.price
-  .grid-content.small-1= link_to 'x', shopping_cart_item_path(item, :variant_id => item.variant_id),
+.product-list.grid-block
+  .grid-content.small-4
+  .grid-content.small-8
+    .grid-block
+      .grid-content.small-12
+        %h4
+          = link_to item.variant.product_name, product_path(item.variant.product)
+          %p
+            %small= item.variant.display_property_details
+    .grid-block
+      .grid-content.small-6
+        = number_to_currency item.price
+      .grid-content.small-6
+        = cart_items_form.number_field :quantity, :size=>'1'
+  -#.grid-content.small-5= link_to item.variant.product_name, product_path(item.variant.product)
+  -#.grid-content.small-2= number_to_currency item.price
+  -#.grid-content.small-1= link_to 'x', shopping_cart_item_path(item, :variant_id => item.variant_id),
     :method => :delete, :class            => 'button tiny alert'
 -#%tr
   %td{:align => "right", :style => "padding:2px;", :valign => "top", :width => "18%"}

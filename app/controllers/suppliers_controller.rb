@@ -8,14 +8,13 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
-    # @supplier = Supplier.find(params[:id])
-    @products = Supplier
-                        .joins(:variants)
-                        .joins('INNER JOIN products on products.id = variants.product_id')
-                        .where('suppliers.id = ?', params[:id])
-                        .group('suppliers.id','products.id','products.name')
-                        .pluck('suppliers.id as supplier_id','products.id as prod_id','products.name as prod_name')
-    @sizes = Supplier.sizes
+    @supplier = Supplier.joins(:products).where('suppliers.id = ?', params[:id]).group('suppliers.id','products.id','products.name').pluck('products.id','products.name','suppliers.id')
+                        # .joins(:variants)
+                        # .joins(:products)
+                        # .where('suppliers.id = ?', params[:id])
+                        # .group('suppliers.id','products.id','products.name')
+                        # .pluck('suppliers.id as supplier_id','products.id as prod_id','products.name as prod_name')
+    # @sizes = Supplier.sizes
     # @sizes = Supplier
     #               .joins(:variant_suppliers)
     #               .joins('INNER JOIN variants on variants.id = variant_suppliers.variant_id')
@@ -26,13 +25,13 @@ class SuppliersController < ApplicationController
     #               .pluck('products.id as prod_id', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
 
     # TODO v1.0 this is probably a better way of doing it
-    @product_sizes = @sizes.each_with_object({}) do |size, result|
-      result[size[0]] = {
-          # 'product_id' => size[0],
-          'short_desc' => size[1],
-          'price' => size[2]
-      }
-    end
+    # @product_sizes = @sizes.each_with_object({}) do |size, result|
+    #   result[size[0]] = {
+    #       # 'product_id' => size[0],
+    #       'short_desc' => size[1],
+    #       'price' => size[2]
+    #   }
+    # end
   end
 
   # GET /suppliers/new

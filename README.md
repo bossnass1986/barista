@@ -232,7 +232,7 @@ Implement a "checkout" procedure using Stripe, Paypal or another service to hand
 
 When the card is processed, update the order to "paid" and send a confirmation email to the user.
 
-### Phone Confirmation
+### RING RING, RING RING
 
 As a supplier I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
 
