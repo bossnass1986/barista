@@ -30,7 +30,7 @@ en:
       product_not_available: 'Sorry this product is not currently available.'
   user:
     index:
-      title: 'My account'
+      title: 'My Account'
       manage_information: 'Manage Information'
       notification_settings: 'Notification Settings'
       configuration_settings: 'Configuration Settings'
@@ -46,6 +46,9 @@ en:
     checkout: 'Order Now'
     update: 'Update'
     item_passed_update: 'Item was successfully updated.'
+  address:
+    title: 'Addresses'
+    no_addresses_saved: 'Currently no addresses saved.'
   supplier:
     index:
       title: 'Find my place'

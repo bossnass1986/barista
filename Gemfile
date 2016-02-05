@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Deployment
 gem 'rails', '4.2.4'
 
+# Cache
+gem 'dalli'
+
 # Server
 gem 'puma'
 

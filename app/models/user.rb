@@ -9,17 +9,47 @@ class User < ActiveRecord::Base
   validates_format_of :mobile, :with => /\A(?:\+?61|0)4(?:[01]\d{3}|(?:2[1-9]|3[0-57-9]|4[7-9]|5[0-35-9]|6[679]|7[078]|8[178]|9[7-9])\d{2}|(?:20[2-9]|444|68[3-9]|79[01]|820|901)\d|(?:200[01]|2010|8984))\d{4}\z/, :message => 'It looks like your mobile number isn\t correct', :allow_blank => false
 
 
-  has_many :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
-  has_one :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
+  # belongs_to :account
 
-  belongs_to :role
-  has_many :orders
+  # has_many    :users_newsletters
+  # has_many    :newsletters, through: :users_newsletters
 
-  has_many    :finished_orders,           -> { where(order_status_id: [3, 4]) },  class_name: 'Order'
-  has_many    :completed_orders,          -> { where(order_status_id: 4) }, class_name: 'Order'
+  has_many  :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
+  has_one   :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
+
+  # has_one     :store_credit
+  has_many    :orders
+  # has_many    :comments
+  # has_many    :customer_service_comments, as:         :commentable,
+  #             class_name: 'Comment'
+  has_many    :shipments, :through => :orders
+  has_many    :finished_orders,           -> { where(state: ['complete', 'paid']) },  class_name: 'Order'
+  has_many    :completed_orders,          -> { where(state: 'complete') },            class_name: 'Order'
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
+
+  has_many    :addresses,       dependent: :destroy,       as: :addressable
+
+  has_one     :default_billing_address,   -> { where(billing_default: true, active: true) },
+              as:         :addressable,
+              class_name: 'Address'
+
+  has_many    :billing_addresses,         -> { where(active: true) },
+              as:         :addressable,
+              class_name: 'Address'
+
+  has_one     :default_shipping_address,  -> { where(default: true, active: true) },
+              as:         :addressable,
+              class_name: 'Address'
+
+  has_many     :shipping_addresses,       -> { where(active: true) },
+               as:         :addressable,
+               class_name: 'Address'
+
+  belongs_to :role
+  # has_many    :user_roles,                dependent: :destroy
+  # has_many    :roles,                     through: :user_roles
 
   has_many    :carts,                     dependent: :destroy
 
@@ -30,10 +60,11 @@ class User < ActiveRecord::Base
   has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
   has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
   has_many    :payment_profiles
+  has_many    :transaction_ledgers, as: :accountable
 
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
-  after_initialize :set_default_role, :if => :new_record?
+  after_initialize :set_default_role, if: :new_record?
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -164,15 +195,15 @@ class User < ActiveRecord::Base
   private
 
   def self.name_filter(name)
-    name.present? ? where("users.name LIKE ?", "#{name}%") : all
+    name.present? ? where('users.name LIKE ?', "#{name}%") : all
   end
 
   def self.email_filter(email)
-    email.present? ? where("users.email LIKE ?", "#{email}%") : all
+    email.present? ? where('users.email LIKE ?', "#{email}%") : all
   end
 
   def set_referral_registered_at
-    if refer_al = Referral.find_by_email(email)
+    if refer_al == Referral.find_by_email(email)
       refer_al.set_referral_user(id)
     end
   end

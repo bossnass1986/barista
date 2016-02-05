@@ -28,7 +28,7 @@ class Shopping::CartItemsController < Shopping::BaseController
   # PUT /carts/1
   def update
     if session_cart.update_attributes(allowed_params)
-      if params[:commit] && params[:commit] == 'ORDER NOW'
+      if params[:commit] && params[:commit] == "ORDER NOW"
         redirect_to( checkout_shopping_order_url('checkout'))
       else
         redirect_to(shopping_cart_items_url(), :notice => I18n.t('cart.item_passed_update') )

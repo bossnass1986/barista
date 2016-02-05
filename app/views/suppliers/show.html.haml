@@ -4,12 +4,8 @@
 - @supplier.each_with_index do |product, i|
   .product-list.grid-block
     .small-8.grid-content.text-center
-      = link_to product_path(product.id, supplier_id: @supplier), title: product do
+      = link_to product_path(product, supplier_id: @supplier), title: product do
         %h4= product
-      -#- @sizes.each do |size|
-        - if size[0] == product[0]
-          = link_to size[1], product_path(product[0]), class: 'hollow button tiny'
-          %small= number_to_currency(size[2])
     .small-4
       = link_to product_path(product, supplier_id: @supplier), title: product do
         -#= product.product_image_available

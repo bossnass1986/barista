@@ -5,7 +5,7 @@
       %header= t('user.index.manage_information')
       %ul
         %li.with-chevron= link_to t('user.index.change_account_info'), edit_user_registration_path
-        -#%li.with-chevron= link_to 'Add or remove saved addresses', current_user
+        %li.with-chevron= link_to 'Add or remove saved addresses', myaccount_addresses_path
         %li.with-chevron= link_to t('user.index.order_history'), myaccount_orders_url
     %section.block-list
       %header= t('user.index.notification_settings')

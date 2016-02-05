@@ -168,11 +168,11 @@ OrderStatus.create!([
 
 puts 'Deleting All Order Items'
 OrderItem.delete_all
-puts 'Creating Sample Order Items'
-OrderItem.create!([
-  {id: 1, price: 4.95, total: 4.95, order_id: 1, variant_id: 1},
-  {id: 2, price: 5.95, total: 5.95, order_id: 1, variant_id: 2},
-])
+# puts 'Creating Sample Order Items'
+# OrderItem.create!([
+#   {id: 1, price: 4.95, total: 4.95, order_id: 1, variant_id: 1},
+#   {id: 2, price: 5.95, total: 5.95, order_id: 1, variant_id: 2},
+# ])
 
 
 puts 'Deleting All Orders'
