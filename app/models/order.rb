@@ -16,8 +16,8 @@ class Order < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :coupon
-  # belongs_to   :ship_address, class_name: 'Address'
-  # belongs_to   :bill_address, class_name: 'Address'
+  belongs_to :ship_address, class_name: 'Address'
+  belongs_to :bill_address, class_name: 'Address'
 
   before_validation :set_email, :set_number
   after_create      :save_order_number
@@ -222,8 +222,10 @@ class Order < ActiveRecord::Base
     includes([{ship_address: :state},
               {bill_address: :state},
               {order_items:
-                   {variant:
-                        { product: :images }}}])
+                   {variant: :product
+                        # { product: :images }
+                   }
+              }])
   end
 
   # calculates the total price of the order
@@ -234,11 +236,11 @@ class Order < ActiveRecord::Base
   def find_total(force = false)
     calculate_totals if self.calculated_at.nil? || order_items.any? {|item| (item.updated_at > self.calculated_at) }
     self.deal_time ||= Time.zone.now
-    self.deal_amount = Deal.best_qualifing_deal(self)
+    # self.deal_amount = Deal.best_qualifing_deal(self)
     self.find_sub_total
-    taxable_money     = (self.sub_total - deal_amount - coupon_amount) * ((100.0 + order_tax_percentage) / 100.0)
-    self.total        = (self.sub_total + shipping_charges - deal_amount - coupon_amount ).round_at( 2 )
-    self.taxed_total  = (taxable_money + shipping_charges).round_at( 2 )
+    # taxable_money     = (self.sub_total - deal_amount - coupon_amount) * ((100.0 + order_tax_percentage) / 100.0)
+    self.total        = (self.sub_total + shipping_charges - deal_amount - coupon_amount ).round(2)
+    self.taxed_total  = (taxable_money + shipping_charges).round(2)
   end
 
   def find_sub_total

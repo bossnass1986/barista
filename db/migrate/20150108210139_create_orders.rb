@@ -18,12 +18,11 @@ class CreateOrders < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    add_index "orders", ["bill_address_id"], name: "index_orders_on_bill_address_id", using: :btree
-    add_index "orders", ["coupon_id"], name: "index_orders_on_coupon_id", using: :btree
-    add_index "orders", ["email"], name: "index_orders_on_email", using: :btree
-    add_index "orders", ["number"], name: "index_orders_on_number", using: :btree
-    add_index "orders", ["ship_address_id"], name: "index_orders_on_ship_address_id", using: :btree
-    add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
+    add_index :orders, :bill_address_id
+    add_index :orders, :coupon_id
+    add_index :orders, :email
+    add_index :orders, :number
+    add_index :orders, :ship_address_id
+    add_index :orders, :user_id
   end
 end

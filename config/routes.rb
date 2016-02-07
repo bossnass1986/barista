@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :shipping_zones
+  resources :shipping_rates
+  resources :shipping_rate_types
   resources :address_types
   resources :addresses
   resources :image_groups

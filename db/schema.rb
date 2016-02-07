@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121122419) do
+ActiveRecord::Schema.define(version: 20160207100637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -246,18 +246,31 @@ ActiveRecord::Schema.define(version: 20160121122419) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",                 limit: 255,                 null: false
     t.text     "description"
-    t.integer  "product_type_id"
-    t.integer  "venue_id"
+    t.text     "product_keywords"
+    t.integer  "product_type_id",                                  null: false
+    t.integer  "prototype_id"
+    t.integer  "shipping_category_id",                             null: false
+    t.string   "permalink",            limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
+    t.string   "meta_keywords",        limit: 255
+    t.string   "meta_description",     limit: 255
+    t.boolean  "featured",                         default: false
+    t.text     "description_markup"
+    t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree
   add_index "products", ["deleted_at"], name: "index_products_on_deleted_at", using: :btree
+  add_index "products", ["name"], name: "index_products_on_name", using: :btree
+  add_index "products", ["permalink"], name: "index_products_on_permalink", unique: true, using: :btree
   add_index "products", ["product_type_id"], name: "index_products_on_product_type_id", using: :btree
+  add_index "products", ["prototype_id"], name: "index_products_on_prototype_id", using: :btree
+  add_index "products", ["shipping_category_id"], name: "index_products_on_shipping_category_id", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.string   "display_name"
@@ -329,6 +342,30 @@ ActiveRecord::Schema.define(version: 20160121122419) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "shipping_rate_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shipping_rates", force: :cascade do |t|
+    t.integer  "shipping_method_id"
+    t.decimal  "rate"
+    t.integer  "shipping_rate_type_id"
+    t.integer  "shipping_category_id"
+    t.decimal  "minimum_charge"
+    t.integer  "position"
+    t.boolean  "active"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "shipping_zones", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "states", force: :cascade do |t|
     t.string   "name"

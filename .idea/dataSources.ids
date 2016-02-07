@@ -477,17 +477,30 @@
     </table>
     <table name="products" schema="public" catalog="beanngone_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJvZHVjdHNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="name" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="product_type_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="venue_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_keywords" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_type_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="prototype_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="shipping_category_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="permalink" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="meta_keywords" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_description" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="featured" sqlType="bool" precision="1" scale="0" nullable="true" jdbcType="-7" def="ZmFsc2U="/>
+      <column name="description_markup" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="brand_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <primary-key name="products_pkey" columns="id"/>
+      <index name="index_products_on_permalink" unique="true" columns="permalink"/>
+      <index name="index_products_on_brand_id" unique="false" columns="brand_id"/>
       <index name="index_products_on_deleted_at" unique="false" columns="deleted_at"/>
+      <index name="index_products_on_name" unique="false" columns="name"/>
       <index name="index_products_on_product_type_id" unique="false" columns="product_type_id"/>
+      <index name="index_products_on_prototype_id" unique="false" columns="prototype_id"/>
+      <index name="index_products_on_shipping_category_id" unique="false" columns="shipping_category_id"/>
     </table>
     <table name="products_id_seq" schema="public" catalog="beanngone_dev" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

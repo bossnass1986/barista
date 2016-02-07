@@ -23,7 +23,7 @@ class Shopping::BaseController < ApplicationController
       ## If we are insecure
     elsif not_secure?
       session[:return_to] = shopping_orders_url
-      return login_url()
+      # return login_url()
     elsif session_order.ship_address_id.nil?
       return shopping_addresses_url()
     elsif !session_order.all_order_items_have_a_shipping_rate?
