@@ -1,28 +1,29 @@
-- title 'My Cart'
+- title t('cart.title')
 - content_for :head do
   = stylesheet_link_tag 'app/products'
-#cart-items-wrapper.items-wrapper.nine.coloumns.last
-  - if  @cart_items.blank? && @saved_cart_items.empty?
-    %h2.text-center
-      = t('cart.nothing_in_cart')
-  - elsif  @cart_items.blank?
-    %h2.text-center
-      = t(:only_items_saved_for_later)
-    .panel.graceful
-      %h3.text-center
-        = t(:add_items_saved_for_later)
-  = form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'custom'}, :as => :cart do |cart_form|
-    - unless @cart_items.blank?
-      -#.grid-block
-        .grid-content
-          %span{:style => "margin-top:3px;"} Make any changes below?
-      .grid-block
-        .grid-content
-          - @cart_items.each_with_index do |item, i|
-            = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
-              = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
-      .grid-block.text-center
-        .grid-content
-          = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
-        .grid-content
-          = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button alert'}
+- if  @cart_items.blank? && @saved_cart_items.empty?
+  %img.align-center{:src => "http://placehold.it/150"}/
+  %h2.text-center= t('cart.nothing_in_cart')
+  %h3.text-center= t('cart.add_items_cart')
+  %button.text-center.button.alert= t('cart.create_first_order')
+- elsif  @cart_items.blank?
+  %h2.text-center
+    = t(:only_items_saved_for_later)
+  .panel.graceful
+    %h3.text-center
+      = t(:add_items_saved_for_later)
+= form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'custom'}, :as => :cart do |cart_form|
+  - unless @cart_items.blank?
+    -#.grid-block
+      .grid-content
+        %span{:style => "margin-top:3px;"} Make any changes below?
+    .grid-block
+      .grid-content
+        - @cart_items.each_with_index do |item, i|
+          = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
+            = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
+    .grid-block.text-center
+      .grid-content
+        = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
+      .grid-content
+        = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button alert'}

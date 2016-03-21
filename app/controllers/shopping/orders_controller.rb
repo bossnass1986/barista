@@ -34,7 +34,7 @@ class Shopping::OrdersController < Shopping::BaseController
 
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
 
-    address = @order.bill_address.cc_params
+    # address = @order.bill_address.cc_params
 
     if !@order.in_progress?
       session_cart.mark_items_purchased(@order)

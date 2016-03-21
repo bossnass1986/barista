@@ -1,16 +1,17 @@
-- title 'My Order History'
+- title t('order.title')
 - content_for :head do
   = stylesheet_link_tag 'app/products'
 - unless @orders.present?
-  You currently do not have any orders.
-%section.block-list
-  %header List title
+  %h2.text-center= t('order.no_orders')
+  %h3.text-center Create your first order
 - @orders.each do |order|
-  .product-list.product-list.header.grid-block
-    .small-9.grid-content.text-left
-      %h4= "Order: #{order.number}"
-      -#%h4.subheader= order.order_status.name
-    .small-2.v-align
-      %img.align-center.iconic-color-success{:icon => "circle-check", :size => "medium", "zf-iconic" => ""}/
-    .small-1.v-align
-      %img.align-center.text-right.iconic-color-secondary{:icon => "chevron", :size => "small", "zf-iconic" => ""}/
+  %section.block-list
+    %header List title
+    .product-list.product-list.header.grid-block
+      .small-9.grid-content.text-left
+        %h4= "Order: #{order.number}"
+        -#%h4.subheader= order.order_status.name
+      .small-2.v-align
+        %img.align-center.iconic-color-success{:icon => "circle-check", :size => "medium", "zf-iconic" => ""}/
+      .small-1.v-align
+        %img.align-center.text-right.iconic-color-secondary{:icon => "chevron", :size => "small", "zf-iconic" => ""}/

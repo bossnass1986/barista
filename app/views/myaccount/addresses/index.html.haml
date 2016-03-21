@@ -1,16 +1,18 @@
-- title t('address.title')
-.nine.large-9.columns
-  %h3 Addresses
-  - if @addresses.empty?
-    %p
-      = I18n.t('address.no_addresses_saved')
-  - else
-    %ul
-      - for address in @addresses
-        %li
-          %br/
-          = render :partial => '/shared/compact_address', :locals => { :shopping_address => address }
-          = link_to "Edit", edit_myaccount_address_path(address)
-          |
-          \#{link_to "Remove", myaccount_address_path(address), :confirm => 'Are you sure?', :method => :delete}
-  %p= link_to "New Address", new_myaccount_address_path, :class => 'b-link'
+- title t('user.address.title')
+- if @addresses.empty?
+  %h2.text-center= t('order.no_orders')
+  %h3.text-center Create your first order
+- else
+  .grid-block
+    .small-12.grid-content
+      %section.block-list
+        %header
+          = t('user.address.manage_addresses')
+        %ul
+          - for address in @addresses
+            %li= link_to address.full_address_compact_array, edit_myaccount_address_path(address)
+            -#= render :partial => '/shared/compact_address', :locals => { :shopping_address => address }
+            -#= link_to "Edit", edit_myaccount_address_path(address)
+            -#|
+            -#\#{link_to "Remove", myaccount_address_path(address), :confirm => 'Are you sure?', :method => :delete}
+%p= link_to "New Address", new_myaccount_address_path, :class => 'b-link'

@@ -20,7 +20,7 @@
           = content_for?(:title) ? yield(:title).upcase : t(:site_name)
       .grid-block
         #main.small-12
-          = notice
+          -#= notice
           .grid-block
             .grid-content
               = yield

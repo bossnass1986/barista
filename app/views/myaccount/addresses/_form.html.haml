@@ -6,11 +6,19 @@
     %ul
       - @address.errors.full_messages.each do |msg|
         %li= msg
+
+%section.block-list
+  %header Update My Details
+  %ul
+    %li= f.text_field :name, placeholder: 'Name'
+    %li= f.email_field :email, placeholder: 'Email Address'
+    %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
+
 .main-address
   .inline.twelve.large-12
     .field.six.large-6.columns
       = f.label :first_name
-      = f.text_field :first_name, :class => '', value: current_user.name
+      = f.text_field :first_name, :class => '', value: current_user.first_name
     .field.six.large-6.columns
       = f.label :last_name
       = f.text_field :last_name, :class => ''

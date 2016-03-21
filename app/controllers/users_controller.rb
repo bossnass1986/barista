@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     user = User.new(params[:user])
     user.save
     respond_with(user)
+    OrderNotifier.send_signup_email(user).deliver
   end
 
   def update

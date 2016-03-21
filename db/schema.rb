@@ -426,23 +426,32 @@ ActiveRecord::Schema.define(version: 20160207100637) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "mobile"
-    t.boolean  "sms_notification",       default: false, null: false
-    t.boolean  "push_notification",      default: true,  null: false
+    t.integer  "account_id"
+    t.string   "customer_cim_id"
+    t.string   "password_salt"
+    t.string   "crypted_password"
+    t.string   "perishable_token"
+    t.string   "persistence_token"
+    t.string   "access_token"
+    t.integer  "comments_count",         default: 0
+    t.boolean  "sms_notification",       default: true, null: false
+    t.boolean  "push_notification",      default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "encrypted_password",     default: "",   null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,    null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "failed_attempts",        default: 0,     null: false
+    t.integer  "failed_attempts",        default: 0,    null: false
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.float    "latitude"
@@ -450,8 +459,13 @@ ActiveRecord::Schema.define(version: 20160207100637) do
     t.integer  "role"
   end
 
+  add_index "users", ["access_token"], name: "index_users_on_access_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
+  add_index "users", ["last_name"], name: "index_users_on_last_name", using: :btree
   add_index "users", ["mobile"], name: "index_users_on_mobile", unique: true, using: :btree
+  add_index "users", ["perishable_token"], name: "index_users_on_perishable_token", unique: true, using: :btree
+  add_index "users", ["persistence_token"], name: "index_users_on_persistence_token", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "users_roles", id: false, force: :cascade do |t|

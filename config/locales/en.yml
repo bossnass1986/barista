@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: "Bean'n'Gone"
+  site_name: 'Finito'
   meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
   meta_keywords:          'Ruby on Rails, ecommerce'
   product:
@@ -35,20 +35,29 @@ en:
       notification_settings: 'Notification Settings'
       configuration_settings: 'Configuration Settings'
       change_account_info: 'Change your account information'
+      payment_information: 'Change your payment information'
       order_history: 'View your order history'
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
       log_out: 'Log Out'
+    address:
+      title: 'Addresses'
+      manage_addresses: 'Manage Addresses'
+      no_addresses_saved: 'Currently no addresses saved.'
   cart:
+    title: 'My Cart'
     nothing_in_cart:       "You don't have anything in your cart."
+    add_items_cart: 'Add some items to your cart'
+    create_first_order: 'Create Your First Order'
     only_items_saved_for_later: "You only have items Saved for Later."
     add_items_saved_for_later: "Move items to the cart to checkout."
     checkout: 'Order Now'
     update: 'Update'
     item_passed_update: 'Item was successfully updated.'
-  address:
-    title: 'Addresses'
-    no_addresses_saved: 'Currently no addresses saved.'
+  order:
+    title: 'My Order History'
+    no_orders: "You don't have any orders"
+
   supplier:
     index:
       title: 'Find my place'

@@ -3,8 +3,8 @@ class VariantRequiredError < StandardError; end
 class Product < ActiveRecord::Base
   # extend FriendlyId
   # friendly_id :permalink, use: :finders
-  include Presentation::ProductPresenter
-  include ProductFilters
+  # include Presentation::ProductPresenter
+  # include ProductFilters
   #include ProductSolr # If you want to use SOLR search uncomment
 
   serialize :product_keywords, Array
@@ -65,9 +65,9 @@ class Product < ActiveRecord::Base
   # @param [Optional Symbol] the size of the image expected back
   # @return [String] name of the file to show from the public folder
   def featured_image(image_size = :small)
-    Rails.cache.fetch("Product-featured_image-#{id}-#{image_size}", expires_in: 3.hours) do
-      images.first ? images.first.photo.url(image_size) : "no_image_#{image_size.to_s}.jpg"
-    end
+    # Rails.cache.fetch("Product-featured_image-#{id}-#{image_size}", expires_in: 3.hours) do
+    #   images.first ? images.first.photo.url(image_size) : "no_image_#{image_size.to_s}.jpg"
+    # end
   end
 
   def image_urls(image_size = :small)
@@ -220,7 +220,7 @@ class Product < ActiveRecord::Base
   def assign_meta_keywords
     self.meta_keywords =  [name.first(55),
                            description.
-                               remove_non_alpha_numeric.           # remove non-alpha numeric
+                           remove_non_alpha_numeric.           # remove non-alpha numeric
                            remove_hyper_text.                  # remove hyper text
                            remove_words_less_than_x_characters. # remove words less than 2 characters
                            first(197)                       # limit to 197 characters

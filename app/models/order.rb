@@ -239,8 +239,8 @@ class Order < ActiveRecord::Base
     # self.deal_amount = Deal.best_qualifing_deal(self)
     self.find_sub_total
     # taxable_money     = (self.sub_total - deal_amount - coupon_amount) * ((100.0 + order_tax_percentage) / 100.0)
-    self.total        = (self.sub_total + shipping_charges - deal_amount - coupon_amount ).round(2)
-    self.taxed_total  = (taxable_money + shipping_charges).round(2)
+    # self.total        = (self.sub_total + shipping_charges - deal_amount - coupon_amount ).round(2)
+    # self.taxed_total  = (taxable_money + shipping_charges).round(2)
   end
 
   def find_sub_total
@@ -252,7 +252,7 @@ class Order < ActiveRecord::Base
   end
 
   def taxed_amount
-    (get_taxed_total - total).round_at( 2 )
+    (get_taxed_total - total).round(2)
   end
 
   def get_taxed_total
@@ -284,7 +284,7 @@ class Order < ActiveRecord::Base
   # @param [none]
   # @return [Float] amount that the order is charged after store credit is applyed
   def credited_total
-    (find_total - amount_to_credit).round_at( 2 )
+    # (find_total - amount_to_credit).round_at( 2 )
   end
 
   # amount to credit based off the user store credit
@@ -292,7 +292,7 @@ class Order < ActiveRecord::Base
   # @param [none]
   # @return [Float] amount to remove from store credit
   def amount_to_credit
-    [find_total, user.store_credit.amount].min.to_f.round_at( 2 )
+    # [find_total, user.store_credit.amount].min.to_f.round_at( 2 )
   end
 
   def remove_user_store_credits
@@ -316,7 +316,7 @@ class Order < ActiveRecord::Base
   def shipping_rates(items = nil)
     items ||= OrderItem.order_items_in_cart(self.id)
     rates = items.inject([]) do |rates, item|
-      rates << item.shipping_rate if item.shipping_rate.individual? || !rates.include?(item.shipping_rate)
+      # rates << item.shipping_rate if item.shipping_rate.individual? || !rates.include?(item.shipping_rate)
       rates
     end
   end
