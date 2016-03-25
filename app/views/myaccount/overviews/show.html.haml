@@ -1,33 +1,31 @@
 - title t('user.index.title')
-.grid-block
-  .small-12.grid-content
-    %section.block-list
-      %header= t('user.index.manage_information')
-      %ul
-        %li.with-chevron= link_to t('user.index.change_account_info'), edit_user_registration_path
-        %li.with-chevron= link_to 'Add or remove saved addresses', myaccount_addresses_path
-        %li.with-chevron= link_to t('user.index.order_history'), myaccount_orders_url
-        %li.with-chevron= link_to t('user.index.payment_information'), myaccount_credit_cards_path
-    %section.block-list
-      %header= t('user.index.notification_settings')
-      %ul
-        %li
-          %span Push Notifications
-          .switch
-            %input#push_notifications{type: 'checkbox'}
-              %label{for: 'push_notifications'}
-        %li
-          %span SMS Notifications
-          .switch
-            %input#sms_notifications{type: 'checkbox'}
-              %label{for: 'sms_notifications'}
-    - if current_user.has_role? :owner or :admin
-      %section.block-list
-        %header= t('user.index.configuration_settings')
-        %ul
-          %li.with-chevron= link_to t('user.index.owner_settings'), ''
-          - if current_user.has_role? :admin
-            %li.with-chevron= link_to t('user.index.admin_settings'), ''
-    %section.block-list
-      %ul
-        %li.with-chevron=link_to t('user.index.log_out'), destroy_user_session_path, method: :delete
+%section.block-list
+  %header= t('user.index.manage_information')
+  %ul
+    %li.with-chevron= link_to t('user.index.change_account_info'), edit_user_registration_path
+    %li.with-chevron= link_to 'Add or remove saved addresses', myaccount_addresses_path
+    %li.with-chevron= link_to t('user.index.order_history'), myaccount_orders_url
+    %li.with-chevron= link_to t('user.index.payment_information'), myaccount_credit_cards_path
+%section.block-list
+  %header= t('user.index.notification_settings')
+  %ul
+    %li
+      %span Push Notifications
+      .switch
+        %input#push_notifications{type: 'checkbox'}
+          %label{for: 'push_notifications'}
+    %li
+      %span SMS Notifications
+      .switch
+        %input#sms_notifications{type: 'checkbox'}
+          %label{for: 'sms_notifications'}
+- if current_user.has_role? :owner or :admin
+  %section.block-list
+    %header= t('user.index.configuration_settings')
+    %ul
+      %li.with-chevron= link_to t('user.index.owner_settings'), ''
+      - if current_user.has_role? :admin
+        %li.with-chevron= link_to t('user.index.admin_settings'), ''
+%section.block-list
+  %ul
+    %li.with-chevron=link_to t('user.index.log_out'), destroy_user_session_path, method: :delete

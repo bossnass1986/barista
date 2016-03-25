@@ -15,6 +15,7 @@ class Supplier < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode
+  after_create :sanitize_dates
 
   def product_image_available(product)
     (Rails.application.assets.find_asset("products/#{product.downcase.tr(' ', '-')}.jpg").nil?) ?
@@ -60,6 +61,11 @@ class Supplier < ActiveRecord::Base
     sanitize_permalink
     # assign_meta_keywords  if meta_keywords.blank?
     sanitize_meta_description
+    # sanitize_dates
+  end
+
+  def sanitize_dates
+    self.available_at = self.created_at
   end
 
   def sanitize_permalink

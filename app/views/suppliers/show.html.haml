@@ -1,7 +1,7 @@
 - title t('product.index.title')
 - content_for :head do
   = stylesheet_link_tag 'app/products'
-- @supplier.each do |product|
+-#- @supplier.each do |product|
   .product-list.grid-block
     .small-8.grid-content.text-center
       = link_to product_path(product, supplier_id: @supplier), title: product do
@@ -9,3 +9,14 @@
     .small-4
       = link_to product_path(product, supplier_id: @supplier), title: product do
         -#= product.product_image_available
+
+%section.block-list
+  %ul
+    - @supplier.each do |product|
+      %li
+        = link_to product_path(product, supplier_id: @supplier) do
+          = content_tag :div, class: 'grid-block' do
+            = content_tag :div, :class => 'small-8 grid-content' do
+              %h4= product[1]
+            = content_tag :div, :class => 'small-4 grid-content' do
+              -#= product[1].product_image_available

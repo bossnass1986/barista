@@ -1,8 +1,16 @@
 - title t('supplier.index.title')
 - content_for :head do
   = stylesheet_link_tag 'app/products'
-- @suppliers.each_with_index do |supplier, i|
-  .product-list.grid-block
+%section.block-list
+  %ul
+    - @suppliers.each_with_index do |supplier, i|
+      %li
+        = link_to supplier do
+          = content_tag :div, class: 'grid-block' do
+            = content_tag :div, supplier.image_available, :class => 'small-3 grid-content'
+            = content_tag :div, supplier.name.titlecase, :class => 'small-9 grid-content'
+
+  -#.product-list.grid-block
     .small-8.grid-content.text-center
       %h4
         =link_to supplier.name.titlecase, supplier

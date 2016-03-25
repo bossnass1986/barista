@@ -200,7 +200,7 @@ class Product < ActiveRecord::Base
 
   def sanitize_permalink
     self.permalink = name if permalink.blank? && name
-    self.permalink = permalink.squeeze(" ").strip.gsub(' ', '-').downcase if permalink
+    self.permalink = permalink.squeeze(' ').strip.gsub(' ', '-').downcase if permalink
   end
 
   def sanitize_meta_description
