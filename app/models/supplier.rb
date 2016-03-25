@@ -1,9 +1,14 @@
 class Supplier < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :permalink, use: :finders
+
   has_many :variant_suppliers
   has_many :variants,         through: :variant_suppliers
   has_many :products, through: :variants
 
   # has_many :phones
+
+  before_validation :sanitize_data
 
   validates :name,        presence: true,       length: { maximum: 255 }
   # validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
@@ -47,6 +52,25 @@ class Supplier < ActiveRecord::Base
     # self.active
   # else
     self.where product_type_id: product_types
+  end
+
+
+  # if the permalink is not filled in set it equal to the name
+  def sanitize_data
+    sanitize_permalink
+    # assign_meta_keywords  if meta_keywords.blank?
+    sanitize_meta_description
+  end
+
+  def sanitize_permalink
+    self.permalink = name if permalink.blank? && name
+    self.permalink = [permalink.squeeze(' ').strip.gsub(/[^0-9a-z]/i, '-').downcase, self.address.first(25).gsub(/[^0-9a-z]/i, '-').downcase, self.id].join('-') if permalink
+  end
+
+  def sanitize_meta_description
+    if name && meta_description.blank?
+      self.meta_description = [name.first(55)]
+    end
   end
 
 end

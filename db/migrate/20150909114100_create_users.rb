@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name, :length => 40
       t.string :last_name,  :length => 40
       t.string :email, length: 255
+      t.string :state
       t.string :mobile, length: 10
       t.integer :account_id
       t.string :customer_cim_id ## This is the ID returned from AUTH.NET

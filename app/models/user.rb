@@ -1,15 +1,24 @@
 class User < ActiveRecord::Base
-  enum role: [:shopper, :supplier_staff, :supplier_admin, :platform_admin]
+  include AASM
+  include TransactionAccountable
+  include UserCim
+  include Presentation::UserPresenter
+  include UserEmailer
 
   rolify
 
-  validates_presence_of :name, :mobile
-  validates_format_of :name, :with => /\A[^0-9`!@#\$%\^&*+_=]+\z/, message: 'It looks like your name might not be your authentic name'
-  validates_uniqueness_of :mobile
-  validates_format_of :mobile, :with => /\A(?:\+?61|0)4(?:[01]\d{3}|(?:2[1-9]|3[0-57-9]|4[7-9]|5[0-35-9]|6[679]|7[078]|8[178]|9[7-9])\d{2}|(?:20[2-9]|444|68[3-9]|79[01]|820|901)\d|(?:200[01]|2010|8984))\d{4}\z/, :message => 'It looks like your mobile number isn\t correct', :allow_blank => false
+  before_validation :sanitize_data
+  before_validation :before_validation_on_create, :on => :create
+  # before_create :start_store_credits, :subscribe_to_newsletters
+  after_create  :set_referral_registered_at
 
 
-  # belongs_to :account
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  belongs_to :account
 
   # has_many    :users_newsletters
   # has_many    :newsletters, through: :users_newsletters
@@ -47,8 +56,7 @@ class User < ActiveRecord::Base
                as:         :addressable,
                class_name: 'Address'
 
-  belongs_to :role
-  # has_many    :user_roles,                dependent: :destroy
+  has_many    :user_roles,                dependent: :destroy
   # has_many    :roles,                     through: :user_roles
 
   has_many    :carts,                     dependent: :destroy
@@ -62,59 +70,79 @@ class User < ActiveRecord::Base
   has_many    :payment_profiles
   has_many    :transaction_ledgers, as: :accountable
 
+  has_many    :return_authorizations
+  has_many    :authored_return_authorizations, class_name: 'ReturnAuthorization', foreign_key: 'author_id'
+
+  validates :first_name,  presence: true, if: :registered_user?,
+            format:   { with: CustomValidators::Names.name_validator },
+            length:   { maximum: 30 }
+  validates :last_name,   :presence => true, :if => :registered_user?,
+            :format   => { :with => CustomValidators::Names.name_validator },
+            :length => { :maximum => 35 }
+  validates :email,       :presence => true,
+            :uniqueness => true,##  This should be done at the DB this is too expensive in rails
+            :format   => { :with => CustomValidators::Emails.email_validator },
+            :length => { :maximum => 255 }
+
+  accepts_nested_attributes_for :addresses, :user_roles
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
+  # accepts_nested_attributes_for :customer_service_comments, :reject_if => proc { |attributes| attributes['note'].strip.blank? }
 
-  after_initialize :set_default_role, if: :new_record?
+  aasm column: :state do
+    state :inactive
+    state :active, initial: true
+    state :canceled
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
-  # attr_accessible :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :email, :mobile, :name
-
-  geocoded_by :current_sign_in_ip
-  after_validation :geocode, if: :current_sign_in_ip_changed?
-
-
-  def set_default_role
-    self.role ||= :shopper
-  end
-
-
-  def do_deposit_transaction(type, stripe_token)
-    amount = Transaction.amount_for_type(type)
-    coupon = UserCoupon.coupon_for_amount(amount)
-
-    card = save_credit_card(stripe_token)
-    if deposited = deposit(amount, card)
-      subscribe if type == 'subscription'
-      create_coupon(coupon) if coupon
-
-      deposited
+    event :activate do
+      transitions from: [:inactive, :canceled], to: :active, unless: :active?
     end
+
+    event :cancel do
+      transitions from: [:inactive, :active, :canceled], to: :canceled
+    end
+
   end
 
-
-  def deposit(amount, card)
-    customer = stripe_customer
-
-    Stripe::Charge.create(
-        amount: amount,
-        currency: 'usd',
-        customer: customer.id,
-        card: card.id,
-        description: "Charge for #{email}"
-    )
-
-    customer.account_balance += amount
-    customer.save
-  rescue => e
-    false
+  # returns true or false if the user is active or not
+  #
+  # @param [none]
+  # @return [ Boolean ]
+  def active?
+    !['canceled', 'inactive'].any? {|s| self.state == s }
   end
 
+  # returns true or false if the user has a role or not
+  #
+  # @param [String] role name the user should have
+  # @return [ Boolean ]
+  def role?(role_name)
+    roles.any? {|r| r.name == role_name.to_s}
+  end
+
+  # returns true or false if the user is an admin or not
+  #
+  # @param [none]
+  # @return [ Boolean ]
+  def admin?
+    role?(:administrator) || role?(:super_administrator)
+  end
+
+  # returns true or false if the user is a super admin or not
+  # FYI your IT staff might be an admin but your CTO and IT director is a super admin
+  #
+  # @param [none]
+  # @return [ Boolean ]
+  def super_admin?
+    role?(:super_administrator)
+  end
+
+  # returns true or false if the user is a registered user or not
+  #
+  # @param [none]
+  # @return [ Boolean ]
+  def registered_user?
+    active?
+  end
 
   # returns your last cart or nil
   #
@@ -135,7 +163,7 @@ class User < ActiveRecord::Base
   # @param [none]
   # @return [ Address ]
   def billing_address
-    # default_billing_address ? default_billing_address : shipping_address
+    default_billing_address ? default_billing_address : shipping_address
   end
 
   # Returns the default shipping address if it exists.   otherwise returns the first shipping address
@@ -170,9 +198,9 @@ class User < ActiveRecord::Base
     finished_orders.select{|o| o.completed_at < at }.size
   end
 
-  def store_credit_amount
-    store_credit.amount
-  end
+  # def store_credit_amount
+  #   store_credit.amount
+  # end
 
   # Find users that have signed up for the subscription
   #
@@ -194,18 +222,35 @@ class User < ActiveRecord::Base
 
   private
 
-  def self.name_filter(name)
-    name.present? ? where('users.name LIKE ?', "#{name}%") : all
+  def self.first_name_filter(first_name)
+    first_name.present? ? where("users.first_name LIKE ?", "#{first_name}%") : all
+  end
+
+  def self.last_name_filter(last_name)
+    last_name.present? ? where("users.last_name LIKE ?", "#{last_name}%") : all
   end
 
   def self.email_filter(email)
-    email.present? ? where('users.email LIKE ?', "#{email}%") : all
+    email.present? ? where("users.email LIKE ?", "#{email}%") : all
   end
 
   def set_referral_registered_at
-    if refer_al == Referral.find_by_email(email)
+    if refer_al = Referral.find_by_email(email)
       refer_al.set_referral_user(id)
     end
+  end
+
+  # def start_store_credits
+  #   self.store_credit = StoreCredit.new( amount: 0.0, user: self)
+  # end
+
+  def password_required?
+    self.crypted_password.blank?
+  end
+
+  def subscribe_to_newsletters
+    newsletter_ids = Newsletter.where( autosubscribe: true ).pluck(:id)
+    self.newsletter_ids = newsletter_ids
   end
 
   # sanitizes the saving of data.  removes white space and assigns a free account type if one doesn't exist
@@ -213,8 +258,16 @@ class User < ActiveRecord::Base
   # @param  [ none ]
   # @return [ none ]
   def sanitize_data
-    self.email  = self.email.strip.downcase unless email.blank?
-    self.name = self.name.strip.capitalize  unless name.nil?
+    self.email      = self.email.strip.downcase         unless email.blank?
+    self.first_name = self.first_name.strip.capitalize  unless first_name.nil?
+    self.last_name  = self.last_name.strip.capitalize   unless last_name.nil?
+
+    ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
+    # self.account = Account.first unless account_id
+  end
+
+  def before_validation_on_create
+    self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
   end
 
 end

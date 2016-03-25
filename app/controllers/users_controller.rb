@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(params[:user])
+    user = User.new(user_params)
     user.save
     respond_with(user)
     OrderNotifier.send_signup_email(user).deliver
@@ -44,5 +44,9 @@ class UsersController < ApplicationController
   private
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def user_params
+      params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :email, :state, :role_ids => [])
     end
 end

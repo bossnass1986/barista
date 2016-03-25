@@ -4,7 +4,8 @@
     %section.block-list
       %header Update My Details
       %ul
-        %li= f.text_field :name, placeholder: 'Name'
+        %li= f.text_field :first_name, placeholder: :first_name
+        %li= f.text_field :last_name, placeholder: :last_name
         %li= f.email_field :email, placeholder: 'Email Address'
         %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
       %header Security Details

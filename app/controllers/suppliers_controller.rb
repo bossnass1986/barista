@@ -8,7 +8,7 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.joins(:products).where('suppliers.id = ?', params[:id]).group('suppliers.id','products.id','products.name').pluck('products.id','products.name','suppliers.id')
+    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name').pluck('products.id','products.name','suppliers.id')
   end
 
   # GET /suppliers/new
@@ -49,7 +49,7 @@ class SuppliersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_supplier
-      @supplier = Supplier.find(params[:id])
+      @supplier = Supplier.friendly.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

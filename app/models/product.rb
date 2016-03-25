@@ -1,8 +1,8 @@
 class VariantRequiredError < StandardError; end
 
 class Product < ActiveRecord::Base
-  # extend FriendlyId
-  # friendly_id :permalink, use: :finders
+  extend FriendlyId
+  friendly_id :permalink, use: :finders
   # include Presentation::ProductPresenter
   # include ProductFilters
   #include ProductSolr # If you want to use SOLR search uncomment
@@ -200,7 +200,7 @@ class Product < ActiveRecord::Base
 
   def sanitize_permalink
     self.permalink = name if permalink.blank? && name
-    self.permalink = permalink.squeeze(" ").strip.gsub(' ', '-') if permalink
+    self.permalink = permalink.squeeze(" ").strip.gsub(' ', '-').downcase if permalink
   end
 
   def sanitize_meta_description

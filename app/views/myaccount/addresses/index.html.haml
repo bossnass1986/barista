@@ -1,4 +1,4 @@
-- title t('user.address.title')
+- title t('user.address.index.title')
 - if @addresses.empty?
   %h2.text-center= t('order.no_orders')
   %h3.text-center Create your first order
@@ -7,7 +7,7 @@
     .small-12.grid-content
       %section.block-list
         %header
-          = t('user.address.manage_addresses')
+          = t('user.address.index.manage_addresses')
         %ul
           - for address in @addresses
             %li= link_to address.full_address_compact_array, edit_myaccount_address_path(address)

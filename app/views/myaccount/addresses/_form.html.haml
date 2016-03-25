@@ -8,33 +8,24 @@
         %li= msg
 
 %section.block-list
-  %header Update My Details
+  %header= t('user.address.form.header')
   %ul
-    %li= f.text_field :name, placeholder: 'Name'
-    %li= f.email_field :email, placeholder: 'Email Address'
-    %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
-
+    %li= f.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
+    %li= f.text_field :last_name, placeholder: :last_name, value: current_user.last_name
+    %li= f.text_field :address1, placeholder: :address_1
+    %li= f.text_field :address2, placeholder: :address_2
+    %li= f.text_field :city, placeholder: :city
+    %li= f.text_field :zip_code, placeholder: :post_code
+    %li
+      %span Default Address
+      .switch
+        = f.check_box :default, :id => 'default_address'
+          %label{:for => "default_address"}
 .main-address
-  .inline.twelve.large-12
-    .field.six.large-6.columns
-      = f.label :first_name
-      = f.text_field :first_name, :class => '', value: current_user.first_name
-    .field.six.large-6.columns
-      = f.label :last_name
-      = f.text_field :last_name, :class => ''
-  .clear
-  .twelve.large-12.columns
-    .field
-      = f.label :address1
-      = f.text_field :address1
-      %br/
-      = f.label :address2
-      = f.text_field :address2
+
   .clearfix
   .twelve.large-12
     .field.five.columns
-      = f.label :city
-      = f.text_field :city
     -#- if Settings.require_state_in_address
       .field.four.large-4.columns
         = f.label    :state_id, "State/Province"
@@ -46,15 +37,12 @@
         = countries.first.name
         = f.hidden_field   :country_id
     -#- else
-      .field.column
-        = f.label    :country_id, "Country"
-        = f.select   :country_id, select_countries, |
-          :include_blank => true
-    .field.two.large-2.columns
-      = f.label :zip_code
-      = f.text_field :zip_code
-.field.twelve.large-12.column{:style => "margin-bottom:10px;"}
-  %label.ten.large-10{:for => "address_default", :style => "margin-top:3px;display: inline-block;"}
+    -#.field.column
+    -#  = f.label    :country_id, "Country"
+    -#  = f.select   :country_id, select_countries, |
+    -#    :include_blank => true
+-#.field.twelve.large-12.column{:style => "margin-bottom:10px;"}
+-#  %label.ten.large-10{:for => "address_default", :style => "margin-top:3px;display: inline-block;"}
     = f.check_box :default, :class => 'columns'
     Make this my default shipping address
 .actions.twelve.columns

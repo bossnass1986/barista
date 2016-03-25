@@ -41,9 +41,14 @@ en:
       admin_settings: 'Admin Settings'
       log_out: 'Log Out'
     address:
-      title: 'Addresses'
-      manage_addresses: 'Manage Addresses'
-      no_addresses_saved: 'Currently no addresses saved.'
+      index:
+        title: 'Addresses'
+        manage_addresses: 'Manage Addresses'
+        no_addresses_saved: 'Currently no addresses saved.'
+      new:
+        title: 'New Address'
+      form:
+        header: 'My Details'
   cart:
     title: 'My Cart'
     nothing_in_cart:       "You don't have anything in your cart."

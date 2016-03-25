@@ -4,7 +4,8 @@
     %section.block-list
       %header My Details
       %ul
-        %li= f.text_field :name, placeholder: 'Name',  autofocus: true
+        %li= f.text_field :first_name, placeholder: :first_name, autofocus: true
+        %li= f.text_field :last_name, placeholder: :last_name
         %li= f.email_field :email, placeholder: 'Email Address'
         %li= f.telephone_field :mobile, placeholder: 'Mobile Number'
       %header Notification Settings

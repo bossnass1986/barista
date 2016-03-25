@@ -10,5 +10,10 @@
           %label{for: :remember_me} Remeber Me?
     .grid-block
       .small-12.grid-content
-        = f.submit 'Sign In', class: 'button expand large'
+        %ul.button-group.expand
+          %li
+            = link_to 'Join Now', new_registration_path(resource_name), class: 'success button expand large'
+          %li
+            = f.submit 'Sign In', class: 'button expand large'
+
 
