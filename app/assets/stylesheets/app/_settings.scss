@@ -30,7 +30,7 @@
 //  25. Title Bar
 
 @import "helpers/functions";
-@import url(//fonts.googleapis.com/css?family=Quicksand:700,400,300);
+@import url(//fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
 // 1. CSS Exports
 // - - - - - - - - - - - - - - -
@@ -88,7 +88,7 @@
 
 // We use these to define default font weights
  $font-weight-normal: normal;
- $font-weight-bold: 600;
+ $font-weight-bold: 700;
 
 // We use these to control various global styles
 // $body-background: #F9ECD2;
