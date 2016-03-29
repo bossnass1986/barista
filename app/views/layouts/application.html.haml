@@ -16,6 +16,11 @@
     %zf-notification-set#main-notifications
     .grid-frame.vertical
       .title-bar
+        -#.center.title Center
+        .left.title= link_to t(:site_name), root_path
+        .right
+          %a{:href => "#"} Right
+      -#.title-bar
         .center.title
           = content_for?(:title) ? yield(:title).upcase : t(:site_name)
       .grid-block

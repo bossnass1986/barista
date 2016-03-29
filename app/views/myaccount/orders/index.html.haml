@@ -3,7 +3,7 @@
   = stylesheet_link_tag 'app/products'
 - unless @orders.present?
   %h2.text-center= t('order.no_orders')
-  %h3.text-center Create your first order
+  %h3.text-center= t('order.no_orders_cta')
 - @orders.each do |order|
   %section.block-list
     %header List title

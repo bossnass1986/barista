@@ -10,9 +10,10 @@
       <default-schemas>beanngone_test.*</default-schemas>
     </data-source>
     <data-source name="Rails barista: production" uuid="d99f50ea-b9a5-434a-a955-9a9793c8f307">
-      <first-sync>true</first-sync>
-      <user-name>fhcqqpihhlfboe</user-name>
-      <user-password>dfd3df9fdffadf9cdfefdf99dffcdf9cdfe2dfc2dfdddf93dffadf9ddfdddfc0df9bdfdbdf9adfc8dff9dfc7dffddfe6df92dffe</user-password>
+      <secret-storage>master_key</secret-storage>
+      <user-name>cnpddodvfflmmf</user-name>
+      <schema-pattern>dbv8978gh59hs.pg_catalog dbv8978gh59hs.public</schema-pattern>
+      <default-schemas>dbv8978gh59hs.pg_catalog dbv8978gh59hs.public</default-schemas>
     </data-source>
   </component>
 </project>

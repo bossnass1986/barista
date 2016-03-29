@@ -55,11 +55,11 @@ class Variant < ActiveRecord::Base
   # @param [none]
   # @return [Boolean]
   def quantity_purchaseable(admin_purchase = false)
-    admin_purchase ? (quantity_available - ADMIN_OUT_OF_STOCK_QTY) : (quantity_available - OUT_OF_STOCK_QTY)
+    # admin_purchase ? (quantity_available - ADMIN_OUT_OF_STOCK_QTY) : (quantity_available - OUT_OF_STOCK_QTY)
   end
 
   def quantity_purchaseable_if_user_wants(this_number_of_items, admin_purchase = false)
-    (quantity_purchaseable(admin_purchase) < this_number_of_items) ? quantity_purchaseable(admin_purchase) : this_number_of_items
+    # (quantity_purchaseable(admin_purchase) < this_number_of_items) ? quantity_purchaseable(admin_purchase) : this_number_of_items
   end
 
   # returns quantity available in stock
@@ -67,7 +67,7 @@ class Variant < ActiveRecord::Base
   # @param [none]
   # @return [Boolean]
   def quantity_available
-    (count_on_hand - count_pending_to_customer)
+    # (count_on_hand - count_pending_to_customer)
   end
 
   def active?
@@ -96,7 +96,7 @@ class Variant < ActiveRecord::Base
   # @param [none]
   # @return [Boolean]
   def sold_out?
-    (quantity_available) <= OUT_OF_STOCK_QTY
+    # (quantity_available) <= OUT_OF_STOCK_QTY
   end
 
   # returns true if the stock level is above or == the low stock level

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="978202658">
+  <component name="DataSourceManagerImpl" format="xml" hash="2792429269">
     <data-source source="LOCAL" name="Rails barista: development" uuid="4ab14069-0621-4096-811b-6a492b108389">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -33,7 +33,11 @@
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-54-225-192-128.compute-1.amazonaws.com:5432/d6t1l3hbd4mq14</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-54-235-151-252.compute-1.amazonaws.com:5432/dbv8978gh59hs</jdbc-url>
+      <driver-properties>
+        <property name="ssl" value="true" />
+        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
+      </driver-properties>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.4-1201.jdbc4.jar</url>

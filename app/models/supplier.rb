@@ -25,8 +25,8 @@ class Supplier < ActiveRecord::Base
 
   def image_available
     (Rails.application.assets.find_asset("places/#{self.id}.jpg").nil?) ?
-        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '50', alt: self.name.titlecase, title: self.name.titlecase) :
-        ActionController::Base.helpers.image_tag("places/#{self.id}.jpg", size: '50', alt: self.name.titlecase, title: self.name.titlecase)
+        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '72', alt: self.name.titlecase, title: self.name.titlecase) :
+        ActionController::Base.helpers.image_tag("places/#{self.id}.jpg", size: '72', alt: self.name.titlecase, title: self.name.titlecase)
   end
 
   SQL_FIND_SIZES = "SELECT products.id,

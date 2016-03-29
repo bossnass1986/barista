@@ -36,6 +36,7 @@ en:
       configuration_settings: 'Configuration Settings'
       change_account_info: 'Change your account information'
       payment_information: 'Change your payment information'
+      address_information: 'Add or remove saved addresses'
       order_history: 'View your order history'
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
@@ -44,14 +45,15 @@ en:
       index:
         title: 'Addresses'
         manage_addresses: 'Manage Addresses'
-        no_addresses_saved: 'Currently no addresses saved.'
+        no_addresses_saved: "Aww shucks, you don't have any addresses yet!"
+        no_address_cta: ''
       new:
         title: 'New Address'
       form:
         header: 'My Details'
   cart:
     title: 'My Cart'
-    nothing_in_cart:       "You don't have anything in your cart."
+    nothing_in_cart: "Aww shucks, you don't have anything in your cart yet!"
     add_items_cart: 'Add some items to your cart'
     create_first_order: 'Create Your First Order'
     only_items_saved_for_later: "You only have items Saved for Later."
@@ -61,8 +63,8 @@ en:
     item_passed_update: 'Item was successfully updated.'
   order:
     title: 'My Order History'
-    no_orders: "You don't have any orders"
-
+    no_orders: "Aww shucks, you don't have any orders yet!"
+    no_orders_cta: 'Find something tasty to order'
   supplier:
     index:
       title: 'Find my place'

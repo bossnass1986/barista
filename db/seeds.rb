@@ -125,7 +125,6 @@ Property.create!([
 
 puts 'Deleting All Suppliers'
 Supplier.delete_all
-puts 'Creating Sample Suppliers'
 Supplier.create!([
  {id: 1, name: 'Latte Cartelle Drive Thru Coffee', address: '241 - 245 Princes Hwy, Hallam, VIC 3803', email: 'test@test.com'},
  {id: 2, name: 'Wedgewood Cafe', address: 'Unit 1/ 94 Wedgewood Rd, Hallam, VIC 3803', email: 'test@test.com'},

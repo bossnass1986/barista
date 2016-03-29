@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325043015) do
+ActiveRecord::Schema.define(version: 20160326000527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -388,6 +388,13 @@ ActiveRecord::Schema.define(version: 20160325043015) do
     t.integer  "shipping_zone_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "supplier_trading_hours", force: :cascade do |t|
+    t.integer "supplier_id"
+    t.integer "weekday"
+    t.time    "open_time"
+    t.time    "close_time"
   end
 
   create_table "suppliers", force: :cascade do |t|

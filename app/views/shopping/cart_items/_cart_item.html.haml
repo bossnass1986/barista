@@ -1,4 +1,17 @@
-.product-list.grid-block
+
+= link_to '' do
+  = content_tag :div, class: 'grid-block' do
+    = content_tag :div, '', :class => 'small-3 grid-content' do
+      = cart_items_form.number_field :quantity, :size=>'1'
+    = content_tag :div, :class => 'small-9 grid-content' do
+      = content_tag :div, class: 'grid-block' do
+        .small-6.grid-content
+          %h4= item.variant.product_name
+          %small= item.variant.display_property_details
+        .small-5.grid-content.text-right
+          %h4= number_to_currency item.price
+
+-#.product-list.grid-block
   .grid-content.small-4
   .grid-content.small-8
     .grid-block

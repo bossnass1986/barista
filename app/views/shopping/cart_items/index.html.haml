@@ -19,10 +19,16 @@
         %span{:style => "margin-top:3px;"} Make any changes below?
     .grid-block
       .grid-content
-        - @cart_items.each_with_index do |item, i|
-          = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
-            = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
-    .grid-block.text-center
+        %section.block-list
+          %ul
+            - @cart_items.each_with_index do |item, i|
+              %li
+                = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
+                  = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
+    .grid-block
+      .small-12.grid-content
+        = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button large expand'}
+    -#.grid-block.text-center
       .grid-content
         = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
       .grid-content

@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   namespace(:admin){ namespace(:customer_service){ resources :comments } }
 
-  devise_for :users, :controllers => { :registrations => 'registrations' }
+  # devise_for :users, :controllers => { :registrations => 'registrations' }
+  devise_for :users, :path => '', :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'}
+
   # resources :user_sessions, only: [:new, :create, :destroy]
   resources :suppliers
 

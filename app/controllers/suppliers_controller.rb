@@ -3,12 +3,15 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers
   def index
-    @suppliers = Supplier.all
+    # Only pull the fields we require
+    @suppliers = Supplier.select('name','address','permalink')
   end
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name').pluck('products.id','products.name','suppliers.id')
+    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name','products.description','variants.price','variants.id').pluck('products.id','products.name','products.description','variants.price','variants.id','suppliers.id')
+    form_info
+    @cart_item.variant_id = @supplier.first.try(:id)
   end
 
   # GET /suppliers/new
@@ -55,5 +58,9 @@ class SuppliersController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def supplier_params
       params.require(:supplier).permit(:name, :address, :latitude, :longitude, :email, :phone)
+    end
+
+    def form_info
+      @cart_item = CartItem.new
     end
 end

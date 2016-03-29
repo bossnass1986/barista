@@ -8,13 +8,10 @@
         = link_to supplier do
           = content_tag :div, class: 'grid-block' do
             = content_tag :div, supplier.image_available, :class => 'small-3 grid-content'
-            = content_tag :div, supplier.name.titlecase, :class => 'small-9 grid-content'
-
-  -#.product-list.grid-block
-    .small-8.grid-content.text-center
-      %h4
-        =link_to supplier.name.titlecase, supplier
-        %p= supplier.address
-    .small-4
-      = link_to supplier, title: supplier.name do
-        = supplier.image_available
+            = content_tag :div, :class => 'small-9 grid-content' do
+              %h4= supplier.name.truncate(30).titlecase
+              = content_tag :div, class: 'grid-block' do
+                .small-3.grid-content 9/10
+                .small-3.grid-content $$
+                .small-6.grid-content.text-right
+                  %span.success.label Open
