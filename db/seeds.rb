@@ -148,10 +148,10 @@ VariantSupplier.create!([
 
 puts 'Deleting All Cart Items'
 CartItem.delete_all
-puts 'Creating Order Statuses'
-CartItem.create!([
-  {id: 1, user_id: 1, cart_id: 1, variant_id: 3, quantity: 4, item_type_id: 1, active: true}
-])
+# puts 'Creating Order Statuses'
+# CartItem.create!([
+#   {id: 1, user_id: 1, cart_id: 1, variant_id: 3, quantity: 4, item_type_id: 1, active: true}
+# ])
 
 
 puts 'Deleting All Order Statues'
