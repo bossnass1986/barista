@@ -3,8 +3,14 @@ source 'https://rubygems.org'
 # Deployment
 gem 'rails', '4.2.4'
 
-# Cache
+# ==========
+# MemCachier
+# ==========
+# We recommend kgio for better performance.
+gem 'kgio'
+gem 'memcachier'
 gem 'dalli'
+
 
 # Server
 gem 'puma'
