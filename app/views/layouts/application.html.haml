@@ -12,17 +12,11 @@
     %script{src: :'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'}
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body{'ng-app':  :'app'}
+  %body{'ng-app' => 'app'}
     %zf-notification-set#main-notifications
     .grid-frame.vertical
       .title-bar
-        -#.center.title Center
         .left.title= link_to t(:site_name), root_path
-        .right
-          %a{:href => "#"} Right
-      -#.title-bar
-        .center.title
-          = content_for?(:title) ? yield(:title).upcase : t(:site_name)
       .grid-block
         #main.small-12
           -#= notice
@@ -36,12 +30,9 @@
               %li
                 = link_to suppliers_url, title: 'Suppliers' do
                   %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic': :''}
-              -#%li
-                %a{href: myaccount_overview_url}
-                  %img{icon: 'star', size: 'medium', 'zf-iconic': :''}
               %li
                 %a{href: myaccount_overview_url}
-                  %img{icon: 'person', size: 'medium', 'zf-iconic': :''}
+                  %img{icon: 'person', size: 'medium', 'zf-iconic' => ''}
               %li
                 = link_to shopping_cart_items_url, title: 'Cart' do
                   %img{icon: 'cart', size: 'medium', 'zf-iconic': :''}
