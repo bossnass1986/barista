@@ -3,7 +3,7 @@
   %ul
     - @supplier.each do |product|
       %li
-        = link_to '', 'zf-open': product[0]  do
+        = link_to '', 'zf-open' => product[0]  do
           = content_tag :div, class: 'grid-block' do
             = content_tag :div, :class => 'small-4 grid-content' do
               %h4= product[1]
@@ -57,4 +57,3 @@
             .grid-block
               .small-12.grid-content
                 = f.submit class: 'button expand large'
-                -#= link_to 'Add to Cart', '#', :id => 'submit_add_to_cart', :class => 'small button'
