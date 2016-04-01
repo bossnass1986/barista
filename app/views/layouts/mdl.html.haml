@@ -8,10 +8,10 @@
     %meta{content: t(:meta_keywords), name: :keywords}
     %title= content_for?(:title) ? yield(:title) : t(:site_name)
     -#= stylesheet_link_tag 'application'
-    %link{:href => "https://code.getmdl.io/1.1.3/material.indigo-pink.min.css", :rel => "stylesheet"}/
+    %link{:href => "//code.getmdl.io/1.1.3/material.indigo-pink.min.css", :rel => "stylesheet"}/
     = yield :head
     / Material Design icon font
-    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    %link{:href => "//fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
     = javascript_include_tag 'material'
     = csrf_meta_tags
   %body
