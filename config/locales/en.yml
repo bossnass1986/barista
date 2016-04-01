@@ -25,7 +25,7 @@ en:
   meta_keywords:          'Ruby on Rails, ecommerce'
   product:
     index:
-      title: 'Find my drink'
+      title: 'Menu'
     show:
       product_not_available: 'Sorry this product is not currently available.'
   user:
@@ -67,7 +67,7 @@ en:
     no_orders_cta: 'Find something tasty to order'
   supplier:
     index:
-      title: 'Find my place'
+      title: 'Places'
   superman:
     index:
       side_bar_title: 'Admin Menu'
