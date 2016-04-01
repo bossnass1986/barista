@@ -13,13 +13,11 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body{'ng-app' => 'app'}
-    %zf-notification-set#main-notifications
     .grid-frame.vertical
       .title-bar
         .left.title= link_to t(:site_name), root_path
       .grid-block
         #main.small-12
-          -#= notice
           .grid-block
             .grid-content
               = yield
@@ -28,7 +26,7 @@
           .grid.content.small-12
             %ul.menu-bar
               %li
-                = link_to suppliers_url, title: 'Suppliers' do
+                = link_to shopping_suppliers_url, title: 'Suppliers' do
                   %img{icon: 'magnifying-glass', size: 'medium', 'zf-iconic' => ''}
               %li
                 %a{href: myaccount_overview_url}

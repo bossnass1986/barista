@@ -125,8 +125,11 @@ Property.create!([
 
 puts 'Deleting All Suppliers'
 Supplier.delete_all
+# (1..100).each do |i|
+#   Supplier.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
+# end
 Supplier.create!([
- {id: 1, name: 'Latte Cartelle Drive Thru Coffee', address: '241 - 245 Princes Hwy, Hallam, VIC 3803', email: 'test@test.com'},
+ {id: 1, name: 'Latte Cartelle Drive Thru Coffee', address: '241 - 245 Princes Hwy, Hallam, VIC 3803', email: 'test@test.com', featured: true},
  {id: 2, name: 'Wedgewood Cafe', address: 'Unit 1/ 94 Wedgewood Rd, Hallam, VIC 3803', email: 'test@test.com'},
  {id: 3, name: 'Fresch Cafe', address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email: 'test@test.com'},
  {id: 4, name: 'Nar Nar Goon Take-Away Cafe', address: '1 Main St, Nar Nar Goon, VIC 3812', email: 'test@test.com'}

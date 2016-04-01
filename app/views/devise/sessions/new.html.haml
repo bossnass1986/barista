@@ -1,4 +1,26 @@
-.grid-block
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        = f.email_field :email, class: 'mdl-textfield__input'
+        %label.mdl-textfield__label
+          Email...
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        = f.password_field :password, class: 'mdl-textfield__input', autocomplete: 'off'
+        %label.mdl-textfield__label
+          Password...
+  .mdl-grid
+    .mdl-cell.mdl-cell--6-col
+      %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => "switch-1"}
+        %input#switch-1.mdl-switch__input{:checked => "", :type => "checkbox"}
+          %span.mdl-switch__label
+            Remember Me?
+    .mdl-cell.mdl-cell--6-col
+      Forgot Password
+    .mdl-cell.mdl-cell--12-col
+      / Accent-colored raised button with ripple
+      = f.submit 'Sign In', class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+-#.grid-block
   = form_for(resource, as: resource_name, url: session_path(resource_name), :html => { class: 'small-12 grid-content' }) do |f|
     %section.block-list
       %header Sign Into my Account

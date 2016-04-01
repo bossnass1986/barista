@@ -2,11 +2,8 @@ class OrderNotifier < ApplicationMailer
 
   default :from => 'any_from_address@example.com'
 
-  # send a signup email to the user, pass in the user object that   contains the user's email address
-  def send_signup_email(user)
-    @user = user
-    mail( :to => @user.email,
-          :subject => 'Thanks for signing up for our amazing app' )
+  def new_record_notification(record)
+    @record = record
+    mail to: 'paul.mcguane@me.com', subject: "Success! You did it."
   end
-
 end

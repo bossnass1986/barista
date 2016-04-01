@@ -5,6 +5,7 @@ class Supplier < ActiveRecord::Base
   has_many :variant_suppliers
   has_many :variants,         through: :variant_suppliers
   has_many :products, through: :variants
+  has_many :supplier_trading_hours
 
   # has_many :phones
 
@@ -14,19 +15,25 @@ class Supplier < ActiveRecord::Base
   # validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
   geocoded_by :address
-  after_validation :geocode
-  after_create :sanitize_dates
+  # after_validation :geocode
+  # after_create :sanitize_dates
 
   def product_image_available(product)
     (Rails.application.assets.find_asset("products/#{product.downcase.tr(' ', '-')}.jpg").nil?) ?
-        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '50', alt: product.titlecase, title: product.titlecase) :
+        ActionController::Base.helpers.asset_url('products/generic.jpg', size: '50', alt: product.titlecase, title: product.titlecase) :
         ActionController::Base.helpers.image_tag("products/#{product.downcase.tr(' ', '-')}.jpg", size: '50', alt: product.titlecase, title: product.titlecase)
   end
 
   def image_available
     (Rails.application.assets.find_asset("places/#{self.id}.jpg").nil?) ?
-        ActionController::Base.helpers.image_tag('products/generic.jpg', size: '72', alt: self.name.titlecase, title: self.name.titlecase) :
-        ActionController::Base.helpers.image_tag("places/#{self.id}.jpg", size: '72', alt: self.name.titlecase, title: self.name.titlecase)
+        ActionController::Base.helpers.asset_url('products/generic.jpg') :
+        ActionController::Base.helpers.asset_url("places/#{self.id}.jpg")
+  end
+
+  def time
+    SupplierTradingHour.open.includes(:supplier).each do |hour|
+      puts "#{hour.supplier.name} is open! It closes at #{hour.close_time}."
+    end
   end
 
   SQL_FIND_SIZES = "SELECT products.id,
@@ -61,12 +68,8 @@ class Supplier < ActiveRecord::Base
     sanitize_permalink
     # assign_meta_keywords  if meta_keywords.blank?
     sanitize_meta_description
-    # sanitize_dates
   end
 
-  def sanitize_dates
-    self.available_at = self.created_at
-  end
 
   def sanitize_permalink
     self.permalink = name if permalink.blank? && name

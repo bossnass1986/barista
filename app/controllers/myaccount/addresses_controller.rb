@@ -27,6 +27,7 @@ class Myaccount::AddressesController < Myaccount::BaseController
     respond_to do |format|
       if @address.save
         format.html { redirect_to(myaccount_address_url(@address), :notice => 'Address was successfully created.') }
+        ModelMailer.new_record_notification(@address).deliver_now
       else
         @form_address = @address
         form_info

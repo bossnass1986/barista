@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :supplier_trading_hours
   resources :shipping_zones
   resources :shipping_rates
   resources :shipping_rate_types
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   devise_for :users, :path => '', :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'}
 
   # resources :user_sessions, only: [:new, :create, :destroy]
-  resources :suppliers
+
 
   # namespace :admin do
   #   resource :dashboard, only: [ :index ]
@@ -68,6 +69,8 @@ Rails.application.routes.draw do
     #     put :select_address
     #   end
     # end
+
+    resources :suppliers, only: [ :index, :show ]
 
     resources  :cart_items do
       member do
@@ -254,7 +257,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root :to => 'suppliers#index'
+  root :to => 'shopping/suppliers#index'
 
 end
 

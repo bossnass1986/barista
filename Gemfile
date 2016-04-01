@@ -16,9 +16,11 @@ gem 'dalli'
 gem 'puma'
 
 # Template Engine
+# gem 'material_design_lite-rails'
 gem 'haml'
 gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'kaminari'
 
 # Database
 gem 'pg'
@@ -74,3 +76,4 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+

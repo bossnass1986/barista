@@ -1,0 +1,26 @@
+.mdl-cell.mdl-cell--6-col
+  .demo-card-wide.mdl-card.mdl-shadow--2dp
+    .mdl-card__title
+      %h2.mdl-card__title-text= supplier.name.truncate(30).titlecase
+    .mdl-card__supporting-text= supplier.address.titlecase
+    .mdl-card__actions.mdl-card--border
+      = link_to 'Get Started', shopping_supplier_path(supplier), class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
+    .mdl-card__menu
+      %button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
+        %i.material-icons
+          - if supplier.featured
+            favorite
+          - else
+            favorite_border
+
+-#%li
+  = link_to shopping_supplier_path(supplier) do
+    = content_tag :div, class: 'grid-block' do
+      = content_tag :div, supplier.image_available, :class => 'small-3 grid-content'
+      = content_tag :div, :class => 'small-9 grid-content' do
+        %h4= supplier.name.truncate(30).titlecase
+        = content_tag :div, class: 'grid-block' do
+          .small-3.grid-content 9/10
+          .small-3.grid-content $$
+          .small-6.grid-content.text-right
+            -#= supplier.time

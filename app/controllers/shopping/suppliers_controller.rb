@@ -1,10 +1,11 @@
-class SuppliersController < ApplicationController
+class Shopping::SuppliersController < Shopping::BaseController
+# class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
 
   # GET /suppliers
   def index
     # Only pull the fields we require
-    @suppliers = Supplier.select('name','address','permalink')
+    @suppliers = Supplier.select('name','address','permalink','featured').order(id: :asc).page(params[:page])
   end
 
   # GET /suppliers/1
