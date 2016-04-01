@@ -20,7 +20,7 @@
       %header.mdl-layout__header
         .mdl-layout__header-row
           / Title
-          %span.mdl-layout-title
+          -#%span.mdl-layout-title
             = content_for?(:title) ? yield(:title) : t(:site_name)
           / Add spacer, to align navigation to the right
           .mdl-layout-spacer
@@ -30,21 +30,22 @@
             %a.mdl-navigation__link{:href => ""} Link
             %a.mdl-navigation__link{:href => ""} Link
             %a.mdl-navigation__link{:href => ""} Link
-          /
+          %nav.mdl-navigation
+            -#.material-icons account_circle
+            .material-icons.mdl-badge.mdl-badge--overlap{"data-badge" => "1"} shopping_cart
+        .mdl-layout__header-row
+          / Add spacer, to align navigation to the right
+          .mdl-layout-spacer
           .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
             %label.mdl-button.mdl-js-button.mdl-button--icon{:for => "waterfall-exp"}
               %i.material-icons search
             .mdl-textfield__expandable-holder
               %input#waterfall-exp.mdl-textfield__input{:name => "sample", :type => "text"}
-          %nav.mdl-navigation
-            -#.material-icons account_circle
-            .material-icons.mdl-badge.mdl-badge--overlap{"data-badge" => "1"} shopping_cart
-      .mdl-layout__drawer
-        %span.mdl-layout-title
-          = t(:site_name)
-        %nav.mdl-navigation
-          = link_to t('supplier.index.title'),  shopping_suppliers_url, title: 'Suppliers', class: 'mdl-navigation__link'
-          = link_to t('supplier.index.title'),  shopping_suppliers_url, title: 'Suppliers', class: 'mdl-navigation__link'
+      - if user_signed_in?
+        .mdl-layout__drawer
+          %span.mdl-layout-title
+            = t(:site_name)
+          = render 'myaccount/overviews/show'
       %main.mdl-layout__content
         .page-content
           = yield
