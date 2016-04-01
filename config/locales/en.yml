@@ -37,6 +37,8 @@ en:
       change_account_info: 'My Details'
       payment_information: 'Payment Methods'
       address_information: 'Addresses'
+      store_credit_information: 'Store Credit'
+      referrals_information: 'Referrals'
       order_history: 'Order History'
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'

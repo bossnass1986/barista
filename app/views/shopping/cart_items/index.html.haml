@@ -1,6 +1,4 @@
 - title t('cart.title')
-- content_for :head do
-  = stylesheet_link_tag 'app/products'
 - if  @cart_items.blank? && @saved_cart_items.empty?
   %img.align-center{:src => "http://placehold.it/150"}/
   %h2.text-center= t('cart.nothing_in_cart')
@@ -12,7 +10,7 @@
   .panel.graceful
     %h3.text-center
       = t(:add_items_saved_for_later)
-= form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'custom'}, :as => :cart do |cart_form|
+= form_for session_cart, url: shopping_cart_item_path(session_cart), :as => :cart do |cart_form|
   - unless @cart_items.blank?
     -#.grid-block
       .grid-content

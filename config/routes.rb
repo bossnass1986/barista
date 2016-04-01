@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :store_credits
   resources :supplier_trading_hours
   resources :shipping_zones
   resources :shipping_rates
@@ -260,44 +261,3 @@ Rails.application.routes.draw do
   root :to => 'shopping/suppliers#index'
 
 end
-
-
-
-
-
-  #
-  # resources :phones
-  # resources :phone_types
-  # resources :prototype_properties
-  # resources :prototypes
-  # resources :coupons
-  # resources :states
-  # resources :countries
-  # resources :tax_rates
-  # resources :batches
-  # resources :transaction_accounts
-  # resources :transaction_ledgers
-  # resources :transactions
-  # resources :referral_bonus
-  # resources :referral_programs
-  # resources :referral_types
-  # resources :referrals
-  # resources :invoices
-  # resources :payment_profiles
-  # resources :payments
-  # resources :carts
-  # resources :product_properties
-  # resources :variant_properties
-  # resources :variants
-  # resources :product_types
-  # resources :cart_items
-  # devise_for :users, :controllers => { :registrations => 'registrations' }
-  # resources :users
-  # resources :orders
-  # resources :products
-  # resources :payments
-  # resources :variant_suppliers
-  # resources :suppliers
-  # resources :order_items
-  # root :to => 'suppliers#index'
-# end

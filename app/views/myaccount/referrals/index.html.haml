@@ -1,4 +1,3 @@
-- content_for :content_header do
 #referral_content.nine.large-9.columns
   %h3#referral_title Invite a Friend
   %div
@@ -25,5 +24,4 @@
                 %td
                   = referral.email
                 %td
-                  = referral.display_status
-                  (#{referral.display_formatted_status_date})
+                  = "#{referral.display_status} (#{referral.display_formatted_status_date})"

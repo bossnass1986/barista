@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   before_validation :sanitize_data
   before_validation :before_validation_on_create, :on => :create
-  # before_create :start_store_credits, :subscribe_to_newsletters
+  before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at
 
 
@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   has_many  :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
   has_one   :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
 
-  # has_one     :store_credit
+  has_one     :store_credit
   has_many    :orders
   # has_many    :comments
   # has_many    :customer_service_comments, as:         :commentable,
@@ -198,9 +198,9 @@ class User < ActiveRecord::Base
     finished_orders.select{|o| o.completed_at < at }.size
   end
 
-  # def store_credit_amount
-  #   store_credit.amount
-  # end
+  def store_credit_amount
+    store_credit.amount
+  end
 
   # Find users that have signed up for the subscription
   #
@@ -240,9 +240,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  # def start_store_credits
-  #   self.store_credit = StoreCredit.new( amount: 0.0, user: self)
-  # end
+  def start_store_credits
+    self.store_credit = StoreCredit.new( amount: 0.0, user: self)
+  end
 
   def password_required?
     self.crypted_password.blank?

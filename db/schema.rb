@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326000527) do
+ActiveRecord::Schema.define(version: 20160401130909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -389,6 +389,15 @@ ActiveRecord::Schema.define(version: 20160326000527) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "store_credits", force: :cascade do |t|
+    t.decimal  "amount",     precision: 8, scale: 2, default: 0.0
+    t.integer  "user_id",                                          null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+  end
+
+  add_index "store_credits", ["user_id"], name: "index_store_credits_on_user_id", using: :btree
 
   create_table "supplier_trading_hours", force: :cascade do |t|
     t.integer "supplier_id"

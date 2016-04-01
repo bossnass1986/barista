@@ -1,17 +1,24 @@
 - title t('order.title')
-- content_for :head do
-  = stylesheet_link_tag 'app/products'
-- unless @orders.present?
-  %h2.text-center= t('order.no_orders')
-  %h3.text-center= t('order.no_orders_cta')
-- @orders.each do |order|
-  %section.block-list
-    %header List title
-    .product-list.product-list.header.grid-block
-      .small-9.grid-content.text-left
-        %h4= "Order: #{order.number}"
-        -#%h4.subheader= order.order_status.name
-      .small-2.v-align
-        %img.align-center.iconic-color-success{:icon => "circle-check", :size => "medium", "zf-iconic" => ""}/
-      .small-1.v-align
-        %img.align-center.text-right.iconic-color-secondary{:icon => "chevron", :size => "small", "zf-iconic" => ""}/
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab.is-active{:href => "#starks-panel"}
+      %span.mdl-badge{"data-badge" => "4"}
+        Pending
+    %a.mdl-tabs__tab{:href => "#lannisters-panel"}
+      %span.mdl-badge{"data-badge" => "6"}
+        Completed
+  #starks-panel.mdl-tabs__panel.is-active
+    %ul
+      %li Eddard
+      %li Catelyn
+      %li Robb
+      %li Sansa
+      %li Brandon
+      %li Arya
+      %li Rickon
+  #lannisters-panel.mdl-tabs__panel
+    %ul
+      %li Tywin
+      %li Cersei
+      %li Jamie
+      %li Tyrion

@@ -12,6 +12,12 @@
   = link_to myaccount_credit_cards_path, class: 'mdl-navigation__link' do
     %i.material-icons credit_card
     = t('user.index.payment_information')
+  = link_to myaccount_store_credit_path, class: 'mdl-navigation__link' do
+    %i.material-icons monetization_on
+    = t('user.index.store_credit_information')
+  = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
+    %i.material-icons plus_one
+    = t('user.index.referrals_information')
   = link_to destroy_user_session_path, class: 'mdl-navigation__link', method: :delete do
     %i.material-icons exit_to_app
     = t('user.index.log_out')
