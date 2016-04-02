@@ -10,7 +10,13 @@ class Shopping::SuppliersController < Shopping::BaseController
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name','products.description','variants.price','variants.id').pluck('products.id','products.name','products.description','variants.price','variants.id','suppliers.id')
+    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).pluck('products.id','products.name','products.description','variants.price','variants.id','suppliers.id')
+    @product = @supplier.each_with_object({}) do |attr, result|
+      result[attr[0]] = {
+          'short_desc' => attr[1],
+          'price' => attr[2]
+      }
+    end
     form_info
     @cart_item.variant_id = @supplier.first.try(:id)
   end

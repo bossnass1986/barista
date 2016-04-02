@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
-  resources :store_credits
-  resources :supplier_trading_hours
-  resources :shipping_zones
-  resources :shipping_rates
-  resources :shipping_rate_types
-  resources :address_types
-  resources :addresses
-  resources :image_groups
   # mount Resque::Server.new, at: "/resque"
 
   namespace(:admin){ namespace(:customer_service){ resources :comments } }
 
-  # devise_for :users, :controllers => { :registrations => 'registrations' }
-  devise_for :users, :path => '', :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'}
+  devise_for :users, :path => '',
+             :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'},
+             :controllers => { registrations: 'registrations' }
 
   # resources :user_sessions, only: [:new, :create, :destroy]
 
