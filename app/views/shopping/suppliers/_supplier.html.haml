@@ -6,7 +6,7 @@
     .mdl-card__actions.mdl-card--border
       = link_to 'Get Started', shopping_supplier_path(supplier), class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
     .mdl-card__menu
-      %button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
+      -#%button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
         %i.material-icons
           - if supplier.featured
             favorite

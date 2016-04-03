@@ -1,0 +1,5 @@
+- if @order.nil?
+  .material-icons shopping_cart
+- else
+  .material-icons.mdl-badge.mdl-badge--overlap{'data-badge' => @order.order_items.size} shopping_cart
+

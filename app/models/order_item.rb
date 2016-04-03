@@ -9,7 +9,7 @@ class OrderItem < ActiveRecord::Base
 
   # has_many   :return_items
 
-  #after_save :calculate_order
+  after_save :calculate_order
   after_find :set_beginning_values
   after_destroy :set_order_calculated_at_to_nil
 
@@ -22,21 +22,22 @@ class OrderItem < ActiveRecord::Base
     @beginning_total            = self.total            rescue @beginning_total = nil # this stores the initial value of the total
   end
 
-  #state_machine :initial => 'unpaid' do
-  aasm column: :state do
-    state :unpaid, initial: true
-    state :paid
-    state :returned
+  # state_machine :initial => 'unpaid' do
+    aasm column: :state do
+      state :unpaid, initial: true
+      state :paid
+      state :returned
 
-    event :pay do
-      transitions to: :paid, from: :unpaid
-    end
+      event :pay do
+        transitions to: :paid, from: :unpaid
+      end
 
-    event :return do
-      transitions to: :returned, from: :paid
+      event :return do
+        transitions to: :returned, from: :paid
+      end
+      #after_transition :to => 'complete', :do => [:update_inventory]
     end
-    #after_transition :to => 'complete', :do => [:update_inventory]
-  end
+  # end
 
   def product_type
     variant.product.product_type

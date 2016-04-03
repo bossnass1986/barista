@@ -20,5 +20,17 @@
     box-sizing: border-box;
     align-items: center;
   }
-.mdl-grid
-  = render @suppliers
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab.is-active{:href => "#starks-panel"} Delight
+    %a.mdl-tabs__tab{:href => "#lannisters-panel"} Speed
+    %a.mdl-tabs__tab{:href => "#targaryens-panel"} Price
+  #starks-panel.mdl-tabs__panel.is-active
+    .mdl-grid
+      = render @suppliers
+  #lannisters-panel.mdl-tabs__panel
+  #targaryens-panel.mdl-tabs__panel
+    %ul
+      %li Viserys
+      %li Daenerys
+

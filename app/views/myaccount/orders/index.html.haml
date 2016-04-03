@@ -1,5 +1,11 @@
 - title t('order.title')
-.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+- unless @orders.present?
+  .mdl-grid
+    .mdl-cell.mdl-cell--12-col.mdl-cell--middle
+      .material-icons.mdl-typography--display-4 history
+      .mdl-typography--headline= t('order.no_orders')
+
+-#.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab.is-active{:href => "#starks-panel"}
       %span.mdl-badge{"data-badge" => "4"}

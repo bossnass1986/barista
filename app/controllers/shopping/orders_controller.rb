@@ -13,7 +13,7 @@ class Shopping::OrdersController < Shopping::BaseController
     # if f = next_form(@order)
     #   redirect_to f
     # else
-    #   expire_all_browser_cache
+      expire_all_browser_cache
       form_info
     # end
   end

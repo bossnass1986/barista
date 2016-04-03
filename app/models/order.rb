@@ -239,9 +239,10 @@ class Order < ActiveRecord::Base
     # self.deal_amount = Deal.best_qualifing_deal(self)
     self.find_sub_total
     # taxable_money     = (self.sub_total - deal_amount - coupon_amount) * ((100.0 + order_tax_percentage) / 100.0)
+    taxable_money     = (self.sub_total - coupon_amount) * ((100.0 + order_tax_percentage) / 100.0)
     # self.total        = (self.sub_total + shipping_charges - deal_amount - coupon_amount ).round(2)
     self.total        = (self.sub_total + shipping_charges  - coupon_amount ).round(2)
-    # self.taxed_total  = (taxable_money + shipping_charges).round(2)
+    self.taxed_total  = (taxable_money + shipping_charges).round(2)
   end
 
   def find_sub_total
@@ -269,6 +270,7 @@ class Order < ActiveRecord::Base
   # @param none
   # @return [Float] tax rate  10.5% === 10.5
   def order_tax_percentage
+    # 10
     (!order_items.blank? && order_items.first.tax_rate.try(:percentage)) ? order_items.first.tax_rate.try(:percentage) : 0.0
   end
 
@@ -286,7 +288,6 @@ class Order < ActiveRecord::Base
   # @return [Float] amount that the order is charged after store credit is applyed
   def credited_total
     (find_total - amount_to_credit).round(2)
-    # find_total.round(2)
   end
 
   # amount to credit based off the user store credit
@@ -366,7 +367,8 @@ class Order < ActiveRecord::Base
   # @return [none]
   def add_items(variant, quantity, state_id = nil)
     self.save! if self.new_record?
-    tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
+    # tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
+    tax_rate_id = 2
     quantity.times do
       self.order_items.push(OrderItem.create(:order => self,:variant_id => variant.id, :price => variant.price, :tax_rate_id => tax_rate_id))
     end

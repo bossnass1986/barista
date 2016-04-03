@@ -3,8 +3,8 @@
 Individual supplier can be accessed by specifying their supplier name as the path prefix.
 
 * ~~Given a supplier named Fresch Cafe~~
-* When I visit http://example.com/fresch-cafe
-* Then I expect to see all products defined for Fresch Cafe
+* ~~When I visit http://example.com/fresch-cafe~~
+* ~~Then I expect to see all products defined for Fresch Cafe~~
 * And I expect to see branding defined for Fresch Cafe
 
 ## Public Visitor
@@ -18,7 +18,7 @@ As a public, unauthenticated visitor to a supplier I can:
 * ~~Remove a product from my cart~~
 * Log in, which does not clear the cart
 * Purchase items in a shopping cart when I provide my email, billing address, shipping address, and credit card number.
-* Create an account
+* ~~Create an account~~
 * When I create an account, then I expect to receive a welcome email
 * Login with my account and become an authenticated shopper
 
@@ -155,7 +155,7 @@ There are several types of entities in the system, each with certain required da
 
 ## Order
 
-* An order must belong to a user
+* ~~An order must belong to a user~~
 * An order must be for one or more products currently being sold
 
 # Enhancements
