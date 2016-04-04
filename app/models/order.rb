@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
   include AASM
-  # extend FriendlyId
-  # friendly_id :number
+  extend FriendlyId
+  friendly_id :number
   include Presentation::OrderPresenter
 
   has_many   :order_items, :dependent => :destroy
