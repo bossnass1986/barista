@@ -14,6 +14,9 @@
   = link_to '', class: 'mdl-navigation__link' do
     %i.mdl-color-text--blue-grey-400.material-icons settings
     = t('superman.side_menu.settings')
+  = link_to admin_users_path, class: 'mdl-navigation__link' do
+    %i.mdl-color-text--blue-grey-400.material-icons wc
+    Users
   = link_to admin_config_tax_rates_path, class: 'mdl-navigation__link' do
     %i.mdl-color-text--blue-grey-400.material-icons settings_applications
     = t('superman.side_menu.settings')
