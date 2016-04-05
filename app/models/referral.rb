@@ -67,11 +67,11 @@ class Referral < ActiveRecord::Base
   def display_purchase_status
     # purchased? ? 'Made a purchase.' : 'No Purchase'
     if purchased?
-      "Purchased"
+      'Purchased'
     elsif registered?
-      "Registered"
+      'Registered'
     else
-      "Signed up"
+      'Signed up'
     end
   end
 
