@@ -7,21 +7,6 @@ Rails.application.routes.draw do
              :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'},
              :controllers => { registrations: 'registrations' }
 
-  # resources :user_sessions, only: [:new, :create, :destroy]
-
-
-  # namespace :admin do
-  #   resource :dashboard, only: [ :index ]
-  #   resources :restaurants, only: [ :index, :destroy, :rejected, :approve, :reject ]
-  #
-  #   get "/" => "dashboard#index"
-  #   get "/approval" => "restaurants#index", as: "approval"
-  #   get "/inactive" => "restaurants#inactive", as: "inactive"
-  #   get "/rejected" => "restaurants#rejected", as: "rejected"
-  #   post "/restaurants/approve" => "restaurants#approve", as: "approve"
-  #   post "/restaurants/reject" => "restaurants#reject", as: "reject"
-  # end
-
   get 'admin'       => 'admin/dashboard#index'
   # get 'login'       => 'user_sessions#new'
   # get 'logout'      => 'user_sessions#destroy'
