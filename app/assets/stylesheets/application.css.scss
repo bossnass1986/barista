@@ -1,8 +1,32 @@
 /*
  *= require_self
- *= require mdl/template
  */
 
+.demo-card-wide.mdl-card {
+  width: 100%;
 
+}
+a .demo-card-wide {
+  text-decoration: none !important;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 136px;
+  background: transparent;
+  background-image: url('https://deliveroo.com.au/assets/images/restaurant-placeholder.png'); /* fallback */
+  background-image: linear-gradient(transparent, rgb(64,64,65)), url('products/cappuccino.jpg');
+  background-size: 600px 136px;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.mdl-card__title {
+  align-items: flex-start;
+}
+.mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
 
 

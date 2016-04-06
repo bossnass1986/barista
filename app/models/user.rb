@@ -11,7 +11,10 @@ class User < ActiveRecord::Base
   before_validation :before_validation_on_create, :on => :create
   before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at
+  after_validation :geocode
 
+  geocoded_by :ip_address,
+              :latitude => :latitude, :longitude => :longitude
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

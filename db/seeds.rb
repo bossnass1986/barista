@@ -37,9 +37,8 @@ puts 'Deleting Product Types'
 ProductType.delete_all
 puts 'Creating Standard Product Types'
 ProductType.create!([
-  {id: 1, name: 'Coffee / Hot Drinks'},
-  {id: 2, name: 'Cold Drinks'},
-  {id: 3, name: 'Juices'},
+  {id: 1, name: 'Hot'},
+  {id: 2, name: 'Cold '}
 ])
 
 puts 'Deleting All Menu Items'

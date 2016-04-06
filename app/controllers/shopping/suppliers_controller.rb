@@ -5,13 +5,12 @@ class Shopping::SuppliersController < Shopping::BaseController
   # GET /suppliers
   def index
     # Only pull the fields we require
-    @suppliers = Supplier.select('name','address','permalink').order(id: :asc).page(params[:page])
+    @suppliers = Supplier.select('name','address','permalink','featured').order(featured: :desc, id: :asc).page(params[:page])
   end
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name','products.description','variants.price','variants.id','suppliers.name').pluck('products.id','products.name','products.description','variants.price','variants.id','suppliers.id','suppliers.name')
-    @merch = Supplier.find(params[:id])
+    @supplier = Supplier.joins(:products).where('suppliers.permalink = ?', params[:id]).group('suppliers.id','products.id','products.name','products.description','variants.price','variants.id','suppliers.featured').pluck('products.id','products.name','products.description','variants.price','variants.id','suppliers.id','suppliers.featured')
     form_info
     @cart_item.variant_id = @supplier.first.try(:id)
   end
