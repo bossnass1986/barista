@@ -1,25 +1,15 @@
 - title 'Order Summary'
-%table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp
-  %thead
-    %tr
-      %th.mdl-data-table__cell--non-numeric Item
-      %th Quantity
-      %th Unit price
-  %tbody
-    - i = 1
-    - @order.order_items.group_by(&:variant_id).each do |variant_id, items|
-      .panel{:id => "order-item-#{i}"}
-        = render :partial => 'order_item', :locals => {:items => items }
-      - i += 1
-
-#order-wrapper.twelve
-  .seven.large-7.columns
-    #order-items-summary
-      - i = 1
-      - @order.order_items.group_by(&:variant_id).each do |variant_id, items|
-        .panel{:id => "order-item-#{i}"}
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+      %thead
+        %tr
+          %th.mdl-data-table__cell--non-numeric Item
+          %th Total
+      %tbody
+        - @order.order_items.group_by(&:variant_id).each do |variant_id, items|
           = render :partial => 'order_item', :locals => {:items => items }
-        - i += 1
+
   .pretty_table.five.large-5.columns.last
     %table
       %thead

@@ -1,4 +1,6 @@
 %tr
-  %td.mdl-data-table__cell--non-numeric= items.first.variant.product.name
-  %td= items.size
-  -#%td= items.item_total
+  %td.mdl-data-table__cell--non-numeric
+    = items.first.variant.product.name
+    %br
+    = "#{items.size} x #{number_to_currency(items.first.variant.price * items.size)}"
+  %td{'style' => 'vertical-align:top'}= number_to_currency(items.first.variant.price * items.size)

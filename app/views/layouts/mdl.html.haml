@@ -1,46 +1,43 @@
 !!!
 %html{lang: :en}
   %head
-    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
-    %meta{:charset => 'utf-8'}
-    %meta{:content => 'width=device-width, initial-scale=1.0', :name => 'viewport'}
-    / Add to homescreen for Chrome on Android
-    %meta{:content => "yes", :name => "mobile-web-app-capable"}
-    %link{:href => "images/android-desktop.png", :rel => "icon", :sizes => "192x192"}
-    / Add to homescreen for Safari on iOS
-    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}
-    %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}
-    %meta{:content => "Material Design Lite", :name => "apple-mobile-web-app-title"}
-    %link{:href => "images/ios-desktop.png", :rel => "apple-touch-icon-precomposed"}
-    / Tile icon for Win8 (144x144 + tile color)
-    %meta{:content => "images/touch/ms-touch-icon-144x144-precomposed.png", :name => "msapplication-TileImage"}
-    %meta{:content => "#3372DF", :name => "msapplication-TileColor"}
-    %meta{content: t('meta_description'), name: :description}
-    %meta{content: t(:meta_keywords), name: :keywords}
-    %title= content_for?(:title) ? yield(:title) : t(:site_name)
-    -#= stylesheet_link_tag 'application'
-    %link{:href => 'https://code.getmdl.io/1.1.3/material.pink-amber.min.css', :rel => 'stylesheet'}
+    = render 'shared/meta_data'
+    = stylesheet_link_tag 'application'
+    -#%link{:href => 'https://code.getmdl.io/1.1.3/material.pink-amber.min.css', :rel => 'stylesheet'}
+    %link{:href => 'https://code.getmdl.io/1.1.3/material.amber-red.min.css', :rel => 'stylesheet'}
     = yield :head
     / Material Design icon font
     %link{:href => '//fonts.googleapis.com/icon?family=Material+Icons', :rel => 'stylesheet'}/
     %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
     = csrf_meta_tags
+    :css
+      body { background: rgb(250,250,250) }
+      .mdl-layout__header, .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+           your background is light. */
+        color: white;
+      }
+      .mdl-layout__header-row {
+        box-shadow: none !important;
+      }
   %body
     / Always shows a header, even in smaller screens.
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       %header.mdl-layout__header
+        / TODO REMOVE SHADOW
         .mdl-layout__header-row
           / Title
-          -#%span.mdl-layout-title
-            = content_for?(:title) ? yield(:title) : t(:site_name)
+          .mdl-layout-title
+            = content_for?(:title) ? yield(:title).upcase : t(:site_name)
+            / TODO ALIGN TO CENTRE
           / Add spacer, to align navigation to the right
           .mdl-layout-spacer
           / Navigation. We hide it in small screens.
           %nav.mdl-navigation.mdl-layout--large-screen-only
             = link_to 'Link', '', class: 'mdl-navigation__link'
           %nav.mdl-navigation
-            = render 'shopping/orders/top_cart'
-      %header.mdl-layout__header--transparent
+            = render 'shared/top_cart'
+      -#%header.mdl-layout__header--transparent
         .mdl-layout__header-row
           / Add spacer, to align navigation to the right
           .mdl-layout-spacer

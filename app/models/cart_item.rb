@@ -6,6 +6,7 @@ class CartItem < ActiveRecord::Base
 
   validates :item_type_id,  :presence => true
   validates :variant_id,    :presence => true
+  # validates_presence_of :quantity
 
   QUANTITIES = [1,2,3,4]
 

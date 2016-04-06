@@ -69,7 +69,7 @@ en:
     no_orders_cta: 'Find something tasty to order'
   supplier:
     index:
-      title: 'Places'
+      title: 'Venues'
   superman:
     index:
       side_bar_title: 'Admin Menu'

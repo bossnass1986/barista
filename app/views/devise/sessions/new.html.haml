@@ -15,12 +15,12 @@
         = f.check_box :remember_me, :class => 'mdl-switch__input' do
           = content_tag :span, :class => 'mdl-switch__label' do
             Remember Me?
-        -#%input#switch-1.mdl-switch__input{:checked => "", :type => "checkbox"}
-          %span.mdl-switch__label
-            Remember Me?
+      -#%input#switch-1.mdl-switch__input{:checked => "", :type => "checkbox"}
+        %span.mdl-switch__label
+          Remember Me?
     .mdl-cell.mdl-cell--2-col
       Forgot Password
-    .mdl-cell.mdl-cell--12-col
+    .mdl-cell.mdl-cell--12-col.right
       / Primary-colored raised button with ripple
       = f.submit 'Sign In', class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary'
       / Accent-colored flat button with ripple
