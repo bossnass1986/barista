@@ -1,37 +1,25 @@
 - title t('product.index.title')
-:css
-  .demo-card-wide.mdl-card {
-    width: 100%;
-  }
-  .demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('https://deliveroo.com.au/assets/images/restaurant-placeholder.png');
-  }
-  .demo-card-wide > .mdl-card__menu {
-    color: #fff;
-  }
-  .mdl-card__title {
-    align-items: flex-start;
-  }
-  .mdl-card__actions {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-  }
-
-.mdl-grid
-  - @supplier.each do |product|
-    = form_for @cart_item, :url  => shopping_cart_items_path(@cart_item), :html => { :id => 'new_cart_item', :class => 'custom' } do |f|
-      = f.hidden_field :variant_id, value: product[4]
-      -#= f.hidden_field :quantity, value: 1
-      .mdl-cell.mdl-cell--12-col
-        .demo-card-wide.mdl-card.mdl-shadow--2dp
-          .mdl-card__title
-            %h2.mdl-card__title-text= product[1]
-          .mdl-card__supporting-text= product[2]
-          .mdl-card__actions.mdl-card--border
-            = f.submit 'Order Now', class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
-            = f.select :quantity, [1,2,3,4], {:include_blank => false}, {:class => ' '}
-          .mdl-card__menu
-            = number_to_currency(product[3])
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
+    %a.mdl-tabs__tab{:href => '#lannisters-panel'} Cold
+  #hot-panel.mdl-tabs__panel.is-active
+    - @supplier.each do |product|
+      = form_for @cart_item, :url  => shopping_cart_items_path(@cart_item), :html => { :id => 'new_cart_item', :class => 'custom' } do |f|
+        = f.hidden_field :variant_id, value: product[4]
+        .mdl-cell.mdl-cell--12-col
+          .demo-card-wide.mdl-card.mdl-shadow--2dp
+            .mdl-card__title
+              %h2.mdl-card__title-text= product[1]
+            .mdl-card__supporting-text= product[2]
+            .mdl-card__actions.mdl-card--border
+              = f.submit 'Order Now', class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
+              = f.select :quantity, [1,2,3,4], {:include_blank => false}, {:class => ' '}
+            .mdl-card__menu
+              = number_to_currency(product[3])
+  #cold-panel.mdl-tabs__panel
+    %ul
+      %li Tywin
+      %li Cersei
+      %li Jamie
+      %li Tyrion

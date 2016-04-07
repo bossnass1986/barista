@@ -54,7 +54,7 @@ en:
       form:
         header: 'My Details'
   cart:
-    title: 'My Cart'
+    title: 'Customise'
     nothing_in_cart: "Aww shucks, you don't have anything in your cart yet!"
     add_items_cart: 'Add some items to your cart'
     create_first_order: 'Create Your First Order'

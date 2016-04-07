@@ -1,37 +1,26 @@
 - if supplier.featured
   = link_to shopping_supplier_path(supplier) do
-    .mdl-cell.mdl-cell--12-col
-      .demo-card-wide.mdl-card.mdl-shadow--2dp
-        .mdl-card__title
-          %h2.mdl-card__title-text= supplier.name.titlecase
-        .mdl-card__supporting-text= supplier.address.titlecase
-        -#.mdl-card__actions.mdl-card--border
-          = link_to 'Get Started', shopping_supplier_path(supplier), class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
-        .mdl-card__menu
-          %button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
-            %i.material-icons
-              favorite
+    .demo-card-wide.mdl-card
+      .mdl-card__title
+        %h6.mdl-card__title-text
+          = supplier.name.titlecase
+      -#.mdl-card__supporting-text= supplier.address.titlecase
+      -#.mdl-card__actions.mdl-card--border
+        'Get Started'
+        .mdl-layout-spacer
+          stuff
+      .mdl-card__menu
+        %button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
+          %i.material-icons
+            favorite
 - else
-  = link_to shopping_supplier_path(supplier) do
-    %ul.demo-list-three.mdl-list
+  %ul.demo-list-three.mdl-list
+    = link_to shopping_supplier_path(supplier) do
       %li.mdl-list__item.mdl-list__item--three-line
         %span.mdl-list__item-primary-content
-          %i.material-icons.mdl-list__item-avatar person
+          = image_tag 'products/cappuccino.jpg', class: 'mdl-list__item-avatar'
           %span= supplier.name.titlecase
           %span.mdl-list__item-text-body= supplier.address.titlecase
         %span.mdl-list__item-secondary-content
-          %a.mdl-list__item-secondary-action{:href => "#"}
-            %i.material-icons
-              chevron_right
-
--#%li
-  = link_to shopping_supplier_path(supplier) do
-    = content_tag :div, class: 'grid-block' do
-      = content_tag :div, supplier.image_available, :class => 'small-3 grid-content'
-      = content_tag :div, :class => 'small-9 grid-content' do
-        %h4= supplier.name.truncate(30).titlecase
-        = content_tag :div, class: 'grid-block' do
-          .small-3.grid-content 9/10
-          .small-3.grid-content $$
-          .small-6.grid-content.text-right
-            -#= supplier.time
+          %i.material-icons
+            chevron_right
