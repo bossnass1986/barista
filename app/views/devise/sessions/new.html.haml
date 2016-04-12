@@ -24,7 +24,7 @@
       / Primary-colored raised button with ripple
       = f.submit 'Sign In', class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary'
       / Accent-colored flat button with ripple
-      = link_to 'Join Now', new_registration_path(resource_name), class: 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent'
+      = link_to 'Join Now', new_registration_path(resource_name), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
 -#.grid-block
   = form_for(resource, as: resource_name, url: session_path(resource_name), :html => { class: 'small-12 grid-content' }) do |f|
     %section.block-list
