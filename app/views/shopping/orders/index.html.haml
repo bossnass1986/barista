@@ -1,36 +1,26 @@
 - title 'Order Summary'
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col
+  .mdl-cell.mdl-cell--4-col-phone
     %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
       %thead
         %tr
-          %th.mdl-data-table__cell--non-numeric Item
-          %th Total
+          %th.mdl-data-table__cell--non-numeric= t('order.qty')
+          %th.mdl-data-table__cell--non-numeric= t('order.item')
+          %th= t('order.price')
       %tbody
         - @order.order_items.group_by(&:variant_id).each do |variant_id, items|
           = render :partial => 'order_item', :locals => {:items => items }
-
-  .pretty_table.five.large-5.columns.last
+.mdl-grid
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= t('order.sub-total')
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= number_to_currency @order.sub_total
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= t('order.shipping_charges')
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= number_to_currency @order.shipping_charges
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= t('order.tax')
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= number_to_currency @order.taxed_amount
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= t('order.total')
+  .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-phone= number_to_currency @order.credited_total
+  -#.pretty_table.five.large-5.columns.last
     %table
-      %thead
-        %tr.odd
-          %th.column1_header
-            Item
-          %th Price:
-          %th Price + Tax
-      - @order.order_items.each do |item|
-        %tr{:class => "#{cycle("odd", "")} "}
-          %td= item.variant.product.name
-          %td= number_to_currency item.price
-          %td= number_to_currency item.total
-      %tr.odd
-        %td
-        %td Sub-total:
-        %td= number_to_currency @order.sub_total
-      %tr
-        %td
-        %td Shipping Charges:
-        %td= number_to_currency @order.shipping_charges
       - if @order.coupon_amount > 0.0
         %tr
           %td
@@ -42,22 +32,14 @@
           %td Promotion:
           %td= number_to_currency @order.deal_amount
           %td
-      %tr
-        %td
-        %td Tax:
-        %td= number_to_currency @order.taxed_amount
       - if @order.amount_to_credit && @order.amount_to_credit > 0.0
         %tr.odd
           %td
           %td Credits:
           %td
           %td= number_to_currency @order.amount_to_credit
-      %tfoot
-        %tr.even
-          %td
-          %td Total:
-          %td
-            %em= number_to_currency @order.credited_total
+
+= render 'shopping/orders/form'
 
 -#= form_tag( shopping_order_path(@order), method: :put, id:    'purchase_order') do
   .grid-block

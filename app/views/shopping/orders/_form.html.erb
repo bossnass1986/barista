@@ -1,0 +1,17 @@
+<form id="checkout" method="post" action="/checkout">
+  <div id="dropin-page"></div>
+  <input type="submit" value="Pay $10">
+</form>
+
+<script type="text/javascript">
+    function setupBT() {
+        braintree.setup("<%=@client_token%>", 'dropin', {
+            container: 'dropin-page'
+        });
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", setupBT, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", setupBT);
+    else window.onload = setupBT;
+</script>

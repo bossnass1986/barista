@@ -31,6 +31,7 @@ en:
   user:
     index:
       title: 'My Account'
+      merchants: 'Find Venue'
       manage_information: 'Manage Information'
       notification_settings: 'Notification Settings'
       configuration_settings: 'Configuration Settings'
@@ -67,6 +68,13 @@ en:
     title: 'My Order History'
     no_orders: "Aww shucks, you don't have any orders yet!"
     no_orders_cta: 'Find something tasty to order'
+    qty: 'QTY'
+    item: 'ITEM'
+    price: 'PRICE'
+    sub-total: 'Sub-total'
+    shipping_charges: 'Shipping Charges'
+    tax: 'GST'
+    total: 'Total'
   supplier:
     index:
       title: 'Venues'
@@ -75,6 +83,7 @@ en:
       side_bar_title: 'Admin Menu'
       side_bar_sub_title: 'Application Menu'
     side_menu:
+      merchants: 'Venues'
       dashboard: 'Dashboard'
       products: 'Menu Items'
       orders: 'Orders'

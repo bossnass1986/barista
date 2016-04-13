@@ -31,6 +31,8 @@ gem 'rolify'
 gem 'cancancan'
 
 # Payment Gateway
+# gem 'stripe'
+gem 'braintree'
 gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 gem 'aasm'
 

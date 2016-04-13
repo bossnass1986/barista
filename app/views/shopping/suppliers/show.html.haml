@@ -1,22 +1,14 @@
 - title t('product.index.title')
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
+    -#- @supplier.products.each do |product|
+      = product.product_type.name
     %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
-    %a.mdl-tabs__tab{:href => '#lannisters-panel'} Cold
+    %a.mdl-tabs__tab{:href => '#cold-panel'} Cold
   #hot-panel.mdl-tabs__panel.is-active
-    - @supplier.each do |product|
-      = form_for @cart_item, :url  => shopping_cart_items_path(@cart_item), :html => { :id => 'new_cart_item', :class => 'custom' } do |f|
-        = f.hidden_field :variant_id, value: product[4]
-        .mdl-cell.mdl-cell--12-col
-          .demo-card-wide.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h2.mdl-card__title-text= product[1]
-            .mdl-card__supporting-text= product[2]
-            .mdl-card__actions.mdl-card--border
-              = f.submit 'Order Now', class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
-              = f.select :quantity, [1,2,3,4], {:include_blank => false}, {:class => ' '}
-            .mdl-card__menu
-              = number_to_currency(product[3])
+    %ul.product-list-three.mdl-list
+      - @supplier.variants.each do |items|
+        = render :partial => 'product', :locals => {:items => items }
   #cold-panel.mdl-tabs__panel
     %ul
       %li Tywin

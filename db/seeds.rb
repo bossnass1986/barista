@@ -69,14 +69,14 @@ puts 'Deleting All Variants'
 Variant.delete_all
 'Creating Sample Variants'
 Variant.create!([
-  {id: 1, product_id: 1, price: 2.95, name: 'Bubble Tea - Short'},
-  {id: 2, product_id: 1, price: 3.95, name: 'Bubble Tea - Tall'},
-  {id: 3, product_id: 1, price: 4.95, name: 'Bubble Tea - Grande'},
-  {id: 4, product_id: 2, price: 3.95, name: 'Cappuccino - Venti'},
-  {id: 5, product_id: 4, price: 2.95, name: 'Bubble Tea - Short'},
-  {id: 6, product_id: 4, price: 3.95, name: 'Bubble Tea - Tall'},
-  {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-  {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
+  {id: 1, product_id: 2, price: 2.95, master: 1},
+  {id: 2, product_id: 2, price: 3.95},
+  {id: 3, product_id: 2, price: 4.95},
+  # {id: 4, product_id: 2, price: 3.95, name: 'Cappuccino - Venti'},
+  {id: 5, product_id: 4, price: 2.95, master: 1},
+  {id: 6, product_id: 4, price: 3.95},
+  # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
+  # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 ])
 
 
@@ -84,11 +84,11 @@ puts 'Deleting Sample Products with Attributes'
 ProductProperty.delete_all
 puts 'Creating Sample Products with Attributes'
 ProductProperty.create!([
-  {property_id: 1, product_id: 1},
   {property_id: 1, product_id: 2},
-  {property_id: 1, product_id: 3},
-  {property_id: 1, product_id: 4},
-  {property_id: 3, product_id: 1},
+  # {property_id: 1, product_id: 2},
+  # {property_id: 1, product_id: 3},
+  # {property_id: 1, product_id: 4},
+  # {property_id: 3, product_id: 1},
 ])
 
 puts 'Deleting Sample Menu Items with Attributes'
@@ -96,21 +96,21 @@ VariantProperty.delete_all
 puts 'Creating Sample Menu Items with Attributes'
 VariantProperty.create!([
     {property_id: 1, variant_id: 1, description: 'Short', primary: 1},
-    {property_id: 1, variant_id: 2, description: 'Tall', primary: 1},
-    {property_id: 1, variant_id: 3, description: 'Grande', primary: 0},
-    {property_id: 1, variant_id: 4, description: 'Venti', primary: 1},
-    {property_id: 1, variant_id: 5, description: 'Short', primary: 1},
-    {property_id: 1, variant_id: 6, description: 'Tall', primary: 1},
-    {property_id: 1, variant_id: 7, description: 'Grande', primary: 0},
-    {property_id: 1, variant_id: 8, description: 'Venti', primary: 1},
-    {property_id: 2, variant_id: 1, description: 'Full Cream'},
+    {property_id: 1, variant_id: 1, description: 'Tall', primary: 0},
+    {property_id: 1, variant_id: 1, description: 'Grande', primary: 0},
+    {property_id: 1, variant_id: 1, description: 'Venti', primary: 1},
+    # {property_id: 1, variant_id: 5, description: 'Short', primary: 1},
+    # {property_id: 1, variant_id: 6, description: 'Tall', primary: 1},
+    # {property_id: 1, variant_id: 7, description: 'Grande', primary: 0},
+    # {property_id: 1, variant_id: 8, description: 'Venti', primary: 1},
+    {property_id: 2, variant_id: 1, description: 'Full Cream', primary: 1},
     {property_id: 2, variant_id: 1, description: 'Skim'},
     {property_id: 2, variant_id: 1, description: 'Soy'},
 ])
 
 puts 'Deleting All Properties'
 Property.delete_all
-puts 'Creating Standard Properties'
+puts 'Sugar CRUSH!'
 Property.create!([
   {id:1, display_name: 'Size', identifying_name: :Size},
   {id:2, display_name: 'Milk' , identifying_name: :Milk},
@@ -118,7 +118,10 @@ Property.create!([
   {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
   {id:5, display_name: 'Strength' , identifying_name: :Strenth},
   {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
-  {id:7, display_name: 'Syrup', identifying_name: :Syrup}
+  {id:7, display_name: 'Syrup', identifying_name: :Syrup},
+  {id:8, display_name: 'Flavour', identifying_name: :Flavour},
+  {id:9, display_name: 'Topping', identifying_name: :Toppings},
+  {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
 ])
 
 
@@ -145,7 +148,7 @@ VariantSupplier.create!([
     {supplier_id: 2, variant_id: 5},
     {supplier_id: 2, variant_id: 6},
     {supplier_id: 2, variant_id: 7},
-    {supplier_id: 2, variant_id: 8}
+    {supplier_id: 3, variant_id: 8}
 ])
 
 puts 'Deleting All Cart Items'

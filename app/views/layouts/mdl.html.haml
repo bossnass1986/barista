@@ -3,28 +3,16 @@
   %head
     = render 'shared/meta_data'
     = stylesheet_link_tag 'application'
-    -#%link{:href => 'https://code.getmdl.io/1.1.3/material.pink-amber.min.css', :rel => 'stylesheet'}
-    -#%link{:href => 'https://code.getmdl.io/1.1.3/material.amber-red.min.css', :rel => 'stylesheet'}
     = yield :head
     / Material Design icon font
     %link{:href => '//fonts.googleapis.com/icon?family=Material+Icons', :rel => 'stylesheet'}/
     %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
+    %script{:src => '//js.braintreegateway.com/v2/braintree.js'}
     = csrf_meta_tags
-    :css
-      body { background: rgb(250,250,250) }
-      .mdl-layout__header, .mdl-layout__drawer-button {
-        /* This background is dark, so we set text to white. Use 87% black instead if
-           your background is light. */
-        color: white;
-      }
-      .mdl-layout__header-row {
-        box-shadow: none !important;
-      }
   %body
     / Always shows a header, even in smaller screens.
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       %header.mdl-layout__header
-        / TODO REMOVE SHADOW
         .mdl-layout__header-row
           / Title
           .mdl-layout-title
@@ -37,15 +25,6 @@
             = link_to 'Link', '', class: 'mdl-navigation__link'
           %nav.mdl-navigation
             = render 'shared/top_cart'
-      -#%header.mdl-layout__header--transparent
-        .mdl-layout__header-row
-          / Add spacer, to align navigation to the right
-          .mdl-layout-spacer
-          .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
-            %label.mdl-button.mdl-js-button.mdl-button--icon{:for => 'waterfall-exp'}
-              %i.material-icons search
-            .mdl-textfield__expandable-holder
-              %input#waterfall-exp.mdl-textfield__input{:name => 'sample', :type => 'text'}
       - if user_signed_in?
         .mdl-layout__drawer
           %span.mdl-layout-title
