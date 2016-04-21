@@ -1,14 +1,12 @@
 - title t('product.index.title')
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
-    -#- @supplier.products.each do |product|
-      = product.product_type.name
     %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
     %a.mdl-tabs__tab{:href => '#cold-panel'} Cold
   #hot-panel.mdl-tabs__panel.is-active
     %ul.product-list-three.mdl-list
-      - @supplier.variants.each do |items|
-        = render :partial => 'product', :locals => {:items => items }
+      - @supplier.products.select(&:id).flatten.uniq.each do |item|
+        = render :partial => 'product', :locals => {:item => item }
   #cold-panel.mdl-tabs__panel
     %ul
       %li Tywin

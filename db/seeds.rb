@@ -145,18 +145,12 @@ VariantSupplier.create!([
     {supplier_id: 1, variant_id: 2},
     {supplier_id: 1, variant_id: 3},
     {supplier_id: 1, variant_id: 4},
-    {supplier_id: 2, variant_id: 5},
-    {supplier_id: 2, variant_id: 6},
-    {supplier_id: 2, variant_id: 7},
-    {supplier_id: 3, variant_id: 8}
+    {supplier_id: 1, variant_id: 5},
+    {supplier_id: 1, variant_id: 6},
+    {supplier_id: 1, variant_id: 7},
+    {supplier_id: 1, variant_id: 8}
 ])
 
-puts 'Deleting All Cart Items'
-CartItem.delete_all
-# puts 'Creating Order Statuses'
-# CartItem.create!([
-#   {id: 1, user_id: 1, cart_id: 1, variant_id: 3, quantity: 4, item_type_id: 1, active: true}
-# ])
 
 
 puts 'Deleting All Order Statues'
@@ -169,10 +163,11 @@ OrderStatus.create!([
  {id: 4, name: 'Collected', description: 'Order has been collected'}
 ])
 
-puts 'Deleting All Order Items'
+puts 'Why don\'t you purify yourself in the waters of Lake Minnetonka'
 OrderItem.delete_all
-
-puts 'Deleting All Orders'
+# puts 'Deleting All Cart Items'
+CartItem.delete_all
+# puts 'Deleting All Orders'
 Order.delete_all
 
 puts 'She may not look like much, but she\'s got it where it counts, kid!'

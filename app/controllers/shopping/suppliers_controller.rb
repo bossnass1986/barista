@@ -1,5 +1,4 @@
 class Shopping::SuppliersController < Shopping::BaseController
-# class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
 
   # GET /suppliers
@@ -10,10 +9,10 @@ class Shopping::SuppliersController < Shopping::BaseController
 
   # GET /suppliers/1
   def show
-    @supplier = Supplier.joins(:products).find(params[:id])
-    # @supplier = Supplier.joins(:products).where('suppliers.permalink = ? AND variants.master = ?', params[:id], TRUE).group('variants.master','variants.id','products.id','products.name','products.description','variants.price').pluck('variants.master','products.id','products.name','products.description','variants.price','variants.id')
-    form_info
-    @cart_item.variant_id = @supplier.try(:id)
+    # @supplier = Supplier.select('product.name','product.description').joins(products: :variants).find(params[:id])
+    @supplier = Supplier.find(params[:id])
+     # form_info
+    # @cart_item.variant_id = @supplier.try(:id)
   end
 
   # GET /suppliers/new

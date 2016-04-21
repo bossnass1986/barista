@@ -58,7 +58,7 @@ class Variant < ActiveRecord::Base
     admin_purchase ? (ADMIN_OUT_OF_STOCK_QTY - ADMIN_OUT_OF_STOCK_QTY) : (ADMIN_OUT_OF_STOCK_QTY - ADMIN_OUT_OF_STOCK_QTY)
   end
 
-  def quantity_pur_if_user_wants(this_number_of_items, admin_purchase = false)
+  def quantity_put_if_user_wants(this_number_of_items, admin_purchase = false)
     (quantity_purchaseable(admin_purchase) < this_number_of_items) ? quantity_purchaseable(admin_purchase) : this_number_of_items
   end
 

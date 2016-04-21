@@ -46,6 +46,8 @@ class Product < ActiveRecord::Base
 
   validate  :ensure_available
 
+  scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
+
   def hero_variant
     active_variants.detect{|v| v.master } || active_variants.first
   end

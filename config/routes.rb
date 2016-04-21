@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :product_suppliers
   resources :images
   # mount Resque::Server.new, at: "/resque"
 
@@ -193,10 +194,10 @@ Rails.application.routes.draw do
       namespace :images do
         resources :products
       end
-      # resources :image_groups
-      # resources :properties
+      resources :image_groups
+      resources :properties
       resources :prototypes
-      # resources :brands
+      resources :brands
       resources :product_types
       resources :prototype_properties
 
@@ -207,12 +208,12 @@ Rails.application.routes.draw do
       end
 
       namespace :wizards do
-        # resources :brands,              only: [:index, :create, :update]
+        resources :brands,              only: [:index, :create, :update]
         resources :products,            only: [:new, :create]
-        # resources :properties,          only: [:index, :create, :update]
+        resources :properties,          only: [:index, :create, :update]
         resources :prototypes,          only: [:update]
-        # resources :tax_categories,      only: [:index, :create, :update]
-        # resources :shipping_categories, only: [:index, :create, :update]
+        resources :tax_categories,      only: [:index, :create, :update]
+        resources :shipping_categories, only: [:index, :create, :update]
         resources :product_types,       only: [:index, :create, :update]
       end
 
