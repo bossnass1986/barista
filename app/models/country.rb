@@ -1,7 +1,7 @@
 # TODO COMPLETED MODEL
 
 class Country < ActiveRecord::Base
-  has_many :states
+  has_many :states, dependent: :destroy
 
   # belongs_to :shipping_zone
 

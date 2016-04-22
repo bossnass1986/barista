@@ -3,8 +3,8 @@ class Supplier < ActiveRecord::Base
   friendly_id :permalink, use: :finders
 
   has_many :variant_suppliers
-  has_many :variants,         through: :variant_suppliers
-  has_many :products, through: :variants
+  has_many :variants, through: :variant_suppliers, dependent: :destroy
+  has_many :products, through: :variants, dependent: :destroy
   has_many :supplier_trading_hours
 
   # has_many :phones

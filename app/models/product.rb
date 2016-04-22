@@ -19,7 +19,7 @@ class Product < ActiveRecord::Base
   has_many :product_properties
   has_many :properties,         through: :product_properties
 
-  has_many :variants
+  has_many :variants, dependent: :destroy
   has_many :images, -> {order(:position)},
            as:        :imageable,
            dependent: :destroy

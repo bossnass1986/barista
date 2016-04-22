@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Deployment
 gem 'rails', '4.2.4'
+gem 'bullet'
+
 
 # ==========
 # MemCachier
@@ -74,7 +76,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'rspec-rails'
-  # gem 'bullet'
+  gem 'bullet'
   gem 'better_errors'
   gem 'binding_of_caller'
 end

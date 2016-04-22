@@ -1,15 +1,27 @@
 puts 'Did you hear that? They shut down the main reactor.'
 
-puts 'Deleting All Users'
+
+puts 'Execute Order 66!'
 User.delete_all
+Country.destroy_all
+Supplier.delete_all
+ProductType.delete_all
+Product.delete_all
+Variant.delete_all
+ProductProperty.delete_all
+VariantSupplier.delete_all
+VariantProperty.delete_all
+Cart.destroy_all
+Order.destroy_all_all
+Property.delete_all
+
 puts 'Creating Control Users'
 User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@bng.com.au', password: 'paul1234').add_role(:platform_admin)
 # User.create!(id:2, first_name: 'Supplier Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au').add_role(:supplier_admin)
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
 # User.create!(id:4, first_name: 'Supplier Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
 
-puts 'Deleting All Countries'
-Country.delete_all
+
 puts 'They are now conducting an extensive search of the surrounding systems.'
 file_to_load  = Rails.root + 'db/seed/countries.yml'
 countries_list   = YAML::load( File.open( file_to_load ) )
@@ -23,7 +35,7 @@ countries_list.each_pair do |key,country|
 end
 
 puts 'Deleting All States/Provinces/Territories'
-State.delete_all
+
 puts 'The regional governors now have direct control over their territories. '
 file_to_load  = Rails.root + 'db/seed/states.yml'
 states_list   = YAML::load( File.open( file_to_load ) )
@@ -33,16 +45,12 @@ states_list.each_pair do |key,state|
   State.create(state['attributes']) unless s
 end
 
-puts 'Deleting Product Types'
-ProductType.delete_all
 puts 'Creating Standard Product Types'
 ProductType.create!([
   {id: 1, name: 'Hot'},
   {id: 2, name: 'Cold '}
 ])
 
-puts 'Deleting All Menu Items'
-Product.delete_all
 puts 'Creating Standard Menu Items'
 Product.create!([
   {id: 1, product_type_id: 2, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
@@ -65,8 +73,6 @@ Product.create!([
   {id: 18, product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
 ])
 
-puts 'Deleting All Variants'
-Variant.delete_all
 'Creating Sample Variants'
 Variant.create!([
   {id: 1, product_id: 2, price: 2.95, master: 1},
@@ -79,9 +85,6 @@ Variant.create!([
   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 ])
 
-
-puts 'Deleting Sample Products with Attributes'
-ProductProperty.delete_all
 puts 'Creating Sample Products with Attributes'
 ProductProperty.create!([
   {property_id: 1, product_id: 2},
@@ -91,8 +94,6 @@ ProductProperty.create!([
   # {property_id: 3, product_id: 1},
 ])
 
-puts 'Deleting Sample Menu Items with Attributes'
-VariantProperty.delete_all
 puts 'Creating Sample Menu Items with Attributes'
 VariantProperty.create!([
     {property_id: 1, variant_id: 1, description: 'Short', primary: 1},
@@ -108,8 +109,7 @@ VariantProperty.create!([
     {property_id: 2, variant_id: 1, description: 'Soy'},
 ])
 
-puts 'Deleting All Properties'
-Property.delete_all
+
 puts 'Sugar CRUSH!'
 Property.create!([
   {id:1, display_name: 'Size', identifying_name: :Size},
@@ -124,9 +124,6 @@ Property.create!([
   {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
 ])
 
-
-puts 'Deleting All Suppliers'
-Supplier.delete_all
 # (1..100).each do |i|
 #   Supplier.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
 # end
@@ -137,8 +134,6 @@ Supplier.create!([
  {id: 4, name: 'Nar Nar Goon Take-Away Cafe', address: '1 Main St, Nar Nar Goon, VIC 3812', email: 'test@test.com'}
 ])
 
-puts 'Deleting Sample Suppliers with Menu Items'
-VariantSupplier.delete_all
 puts 'Creating Sample Suppliers with Menu Items'
 VariantSupplier.create!([
     {supplier_id: 1, variant_id: 1},
@@ -151,8 +146,6 @@ VariantSupplier.create!([
     {supplier_id: 1, variant_id: 8}
 ])
 
-
-
 puts 'Deleting All Order Statues'
 OrderStatus.delete_all
 puts 'Creating Order Statuses'
@@ -162,13 +155,6 @@ OrderStatus.create!([
  {id: 3, name: 'Ready for Collection', description: 'Order is ready for collection'},
  {id: 4, name: 'Collected', description: 'Order has been collected'}
 ])
-
-puts 'Why don\'t you purify yourself in the waters of Lake Minnetonka'
-OrderItem.delete_all
-# puts 'Deleting All Cart Items'
-CartItem.delete_all
-# puts 'Deleting All Orders'
-Order.delete_all
 
 puts 'She may not look like much, but she\'s got it where it counts, kid!'
 
