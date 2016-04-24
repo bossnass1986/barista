@@ -4,9 +4,9 @@ class CreateTaxRates < ActiveRecord::Migration
       t.decimal :percentage, precision: 8, scale: 2, default: 0.0,  null: false
       t.integer :state_id, limit: 4
       t.integer :country_id, limit: 4
-      t.date :start_date, null: false, default: Date.now
+      t.date :start_date, null: false, default: Time.now
       t.date :end_date
-      t.boolean :active, limit: 1, default: true
+      t.boolean :active, default: true
 
       t.timestamps null: false
     end

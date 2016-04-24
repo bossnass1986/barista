@@ -12,7 +12,7 @@ class CreateSuppliers < ActiveRecord::Migration
       t.datetime :deleted_at
       t.string   :meta_keywords,        limit: 255
       t.string   :meta_description,     limit: 255
-      t.boolean  :featured, limit: 1, default: false
+      t.boolean  :featured, default: false
 
       t.timestamps null: false
     end

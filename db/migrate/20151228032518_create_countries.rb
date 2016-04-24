@@ -4,7 +4,7 @@ class CreateCountries < ActiveRecord::Migration
       t.string :name, limit: 50
       t.string :abbreviation, limit: 3
       t.integer :shipping_zone_id, limit: 4
-      t.boolean :active, limit: 1, default: false
+      t.boolean :active, default: false
 
       t.timestamps null: false
     end

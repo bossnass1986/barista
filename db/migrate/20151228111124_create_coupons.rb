@@ -7,7 +7,7 @@ class CreateCoupons < ActiveRecord::Migration
       t.decimal :minimum_value, precision: 8, scale: 2
       t.integer :percent, limit: 4
       t.text :description
-      t.boolean :combine, limit: 1, default: false
+      t.boolean :combine, default: false
       t.datetime :starts_at
       t.datetime :expires_at
 

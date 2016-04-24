@@ -7,6 +7,6 @@ class CreateProductProperties < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
-  add_index :product_properties, :product_id
-  add_index :product_properties, :property_id
+  # add_index :product_properties, :product_id
+  # add_index :product_properties, :property_id
 end

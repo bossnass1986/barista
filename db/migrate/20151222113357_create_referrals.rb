@@ -1,7 +1,7 @@
 class CreateReferrals < ActiveRecord::Migration
   def change
     create_table :referrals do |t|
-      t.boolean :applied, limit: 1, default: false
+      t.boolean :applied, default: false
       t.datetime :clicked_at
       t.string :email, limit: 255, null: false
       t.string :name, limit: 255
