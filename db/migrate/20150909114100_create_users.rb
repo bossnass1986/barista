@@ -1,8 +1,8 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.string :first_name, :length => 40
-      t.string :last_name,  :length => 40
+      t.string :first_name, length: 40
+      t.string :last_name,  length: 40
       t.string :email, length: 255
       t.string :state
       t.string :mobile, length: 10

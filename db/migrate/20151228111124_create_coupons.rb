@@ -1,13 +1,13 @@
 class CreateCoupons < ActiveRecord::Migration
   def change
     create_table :coupons do |t|
-      t.string :type
-      t.string :code
-      t.decimal :amount
-      t.decimal :minimum_value
-      t.integer :percent
+      t.string :type, limit: 255, null: false
+      t.string :code, limit: 255, null: false
+      t.decimal :amount, precision: 8, scale: 2, default: 0.0
+      t.decimal :minimum_value, precision: 8, scale: 2
+      t.integer :percent, limit: 4
       t.text :description
-      t.boolean :combine
+      t.boolean :combine, limit: 1, default: false
       t.datetime :starts_at
       t.datetime :expires_at
 

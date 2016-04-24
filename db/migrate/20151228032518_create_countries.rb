@@ -1,10 +1,10 @@
 class CreateCountries < ActiveRecord::Migration
   def change
     create_table :countries do |t|
-      t.string :name
-      t.string :abbreviation
-      t.integer :shipping_zone_id
-      t.boolean :active
+      t.string :name, limit: 50
+      t.string :abbreviation, limit: 3
+      t.integer :shipping_zone_id, limit: 4
+      t.boolean :active, limit: 1, default: false
 
       t.timestamps null: false
     end

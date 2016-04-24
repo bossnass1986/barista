@@ -1,10 +1,10 @@
 class CreateCartItems < ActiveRecord::Migration
   def change
     create_table :cart_items do |t|
-      t.integer :user_id
-      t.integer :cart_id
-      t.integer :variant_id, null: false
-      t.integer :quantity, default: 1
+      t.integer :user_id, limit: 4
+      t.integer :cart_id, limit: 4
+      t.integer :variant_id, limit: 4, null: false
+      t.integer :quantity, limit: 4, default: 1
       t.integer :item_type_id, limit: 4, null: false
       t.boolean :active, default: true
 

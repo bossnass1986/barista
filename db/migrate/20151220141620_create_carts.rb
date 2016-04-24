@@ -1,8 +1,8 @@
 class CreateCarts < ActiveRecord::Migration
   def change
     create_table :carts do |t|
-      t.integer :user_id
-      t.integer :customer_id
+      t.integer :user_id, limit: 4
+      t.integer :customer_id, limit: 4
 
       t.timestamps null: false
     end

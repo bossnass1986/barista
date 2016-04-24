@@ -1,9 +1,9 @@
 class CreateBatches < ActiveRecord::Migration
   def change
     create_table :batches do |t|
-      t.string :batchable_type
-      t.integer :batchable_id
-      t.string :name
+      t.string :batchable_type, limit: 255
+      t.integer :batchable_id, limit: 4
+      t.string :name, limit: 255
 
       t.timestamps null: false
     end
