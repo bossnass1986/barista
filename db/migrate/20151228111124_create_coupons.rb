@@ -13,5 +13,9 @@ class CreateCoupons < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :coupons, :code
+    add_index :coupons, :expires_at
+
   end
 end

@@ -46,7 +46,7 @@ class Product < ActiveRecord::Base
 
   validate  :ensure_available
 
-  scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
+  # scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
 
   def hero_variant
     active_variants.detect{|v| v.master } || active_variants.first
@@ -163,7 +163,8 @@ class Product < ActiveRecord::Base
   end
 
   def available?
-    has_shipping_method? && has_active_variants?
+    # has_shipping_method? && has_active_variants?
+    has_active_variants?
   end
 
   # returns the brand's name or a blank string

@@ -12,7 +12,7 @@ ProductProperty.delete_all
 VariantSupplier.delete_all
 VariantProperty.delete_all
 Cart.destroy_all
-Order.destroy_all_all
+Order.destroy_all
 Property.delete_all
 
 puts 'Creating Control Users'
@@ -78,7 +78,7 @@ Variant.create!([
   {id: 1, product_id: 2, price: 2.95, master: 1},
   {id: 2, product_id: 2, price: 3.95},
   {id: 3, product_id: 2, price: 4.95},
-  # {id: 4, product_id: 2, price: 3.95, name: 'Cappuccino - Venti'},
+  {id: 4, product_id: 2, price: 5.95},
   {id: 5, product_id: 4, price: 2.95, master: 1},
   {id: 6, product_id: 4, price: 3.95},
   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},

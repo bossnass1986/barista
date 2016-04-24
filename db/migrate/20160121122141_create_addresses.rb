@@ -22,9 +22,9 @@ class CreateAddresses < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_index "addresses", ["addressable_id"], name: "index_addresses_on_addressable_id", using: :btree
-    add_index "addresses", ["addressable_type"], name: "index_addresses_on_addressable_type", using: :btree
-    add_index "addresses", ["state_id"], name: "index_addresses_on_state_id", using: :btree
+    add_index :addresses, :addressable_id
+    add_index :addresses, :addressable_id
+    add_index :addresses, :state_id
 
   end
 end

@@ -8,5 +8,8 @@ class CreateReferralPrograms < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :referral_programs, :referral_bonus_id
+
   end
 end

@@ -7,5 +7,9 @@ class CreateBatches < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :batches, :batchable_type
+    add_index :batches, :batchable_id
+
   end
 end

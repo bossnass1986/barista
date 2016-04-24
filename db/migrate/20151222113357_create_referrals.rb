@@ -15,5 +15,12 @@ class CreateReferrals < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :referrals, :email
+    add_index :referrals, :referral_program_id
+    add_index :referrals, :referral_type_id
+    add_index :referrals, :referral_user_id
+    add_index :referrals, :referring_user_id
+
   end
 end

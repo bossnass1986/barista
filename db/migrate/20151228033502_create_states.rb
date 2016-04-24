@@ -9,5 +9,10 @@ class CreateStates < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :states, :name
+    add_index :states, :abbreviation
+    add_index :states, :country_id
+
   end
 end

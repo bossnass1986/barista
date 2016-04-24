@@ -1,15 +1,17 @@
-- title t('product.index.title')
-.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
-  .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
-    %a.mdl-tabs__tab{:href => '#cold-panel'} Cold
-  #hot-panel.mdl-tabs__panel.is-active
-    %ul.product-list-three.mdl-list
-      -#- @supplier.products.select(&:id).flatten.uniq.each do |item|
-        = render :partial => 'product', :locals => {:item => item }
-  #cold-panel.mdl-tabs__panel
-    %ul
-      %li Tywin
-      %li Cersei
-      %li Jamie
-      %li Tyrion
+- title t('supplier.index.product.title')
+%button#demo-show-toast.mdl-button.mdl-js-button.mdl-button--raised{:type => "button"} Show Toast
+#demo-toast-example.mdl-js-snackbar.mdl-snackbar
+  .mdl-snackbar__text
+  %button.mdl-snackbar__action{:type => "button"}
+:javascript
+  (function() {
+    'use strict';
+    window['counter'] = 0;
+    var snackbarContainer = document.querySelector('#demo-toast-example');
+    var showToastButton = document.querySelector('#demo-show-toast');
+    showToastButton.addEventListener('click', function() {
+      'use strict';
+      var data = {message: 'Example Message # ' + ++counter};
+      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    });
+  }());

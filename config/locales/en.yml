@@ -78,6 +78,8 @@ en:
   supplier:
     index:
       title: 'Venues'
+      product:
+        title: 'Customise'
   superman:
     index:
       side_bar_title: 'Admin Menu'
@@ -106,7 +108,13 @@ en:
         items: 'Items'
         submitted: 'Submitted'
         accepted: 'Accepted'
-
+    merchandise:
+      products:
+        title: 'Products'
+        new:
+          title: 'New Product'
+        edit:
+          title: 'Edit Product'
 
 
   time:

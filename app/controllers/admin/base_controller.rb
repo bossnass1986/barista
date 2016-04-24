@@ -4,9 +4,9 @@ class Admin::BaseController < ApplicationController
 
   # before_filter :verify_admin
 
-  def current_ability
-    @current_ability ||= AdminAbility.new(current_user)
-  end
+  # def current_ability
+  #   @current_ability ||= AdminAbility.new(current_user)
+  # end
 
 
   private

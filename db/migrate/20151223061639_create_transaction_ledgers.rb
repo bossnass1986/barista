@@ -12,5 +12,10 @@ class CreateTransactionLedgers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :transaction_ledgers, :accountable_id
+    add_index :transaction_ledgers, :transaction_id
+    add_index :transaction_ledgers, :transaction_account_id
+
   end
 end

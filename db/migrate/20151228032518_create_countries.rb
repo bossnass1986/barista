@@ -8,5 +8,10 @@ class CreateCountries < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :countries, :name
+    add_index :countries, :active
+    add_index :countries, :shipping_zone_id
+
   end
 end
