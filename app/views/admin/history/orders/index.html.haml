@@ -1,46 +1,45 @@
-- title 'My Order History'
-.row.column
-  %ul#material-tabs.tabs{"data-tabs" => "8pm9al-tabs"}
-    %li.tabs-title.is-active{:role => "presentation"}
-      %a#panel1-label.ink.color{"aria-controls" => "panel1", "aria-selected" => "true", :href => "#panel1", :role => "tab"} no. 1
-    %li.tabs-title{:role => "presentation"}
-      %a#panel2-label.ink.ink-color{"aria-controls" => "panel2", "aria-selected" => "false", :href => "#panel2", :role => "tab"} item two
-    %li.tabs-title{:role => "presentation"}
-      %a#panel3-label.ink.ink-color{"aria-controls" => "panel3", "aria-selected" => "false", :href => "#panel3", :role => "tab"} item third
-    %li.tabs-title{:role => "presentation"}
-      %a#panel4-label.ink.ink-color{"aria-controls" => "panel4", "aria-selected" => "false", :href => "#panel4", :role => "tab"} item fourth
-  .tabs-content{"data-tabs-content" => "material-tabs"}
-    #panel1.tabs-panel.is-active{"aria-hidden" => "false"}
-      %p This is the first panel of the basic tab example. This is the first panel of the basic tab example.
-    #panel2.tabs-panel{"aria-hidden" => "true"}
-      %p This is the second panel of the basic tab example. This is the second panel of the basic tab example.
-    #panel3.tabs-panel{"aria-hidden" => "true"}
-      %p This is the third panel of the basic tab example. This is the third panel of the basic tab example.
-    #panel4.tabs-panel{"aria-hidden" => "true"}
-      %p This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
-%ul.tabs{'data-tabs': :''}
-  - @status.each do |status|
-    %li.tabs-title
-      %a{href: status.id}
-      = status.name
-
-%table
-  %thead
-    %tr
-      %th ID
-      %th Status
-      %th Created At
-      %th Expected At
-      %th Customer
-      %th Total
-  %tbody
-    - @orders.each do |order|
-      %tr
-        %td= order.number
-        %td= order.order_status.name
-        %td= order.created_at
-        %td= order.completed_at
-        %td= order.user.name
+- title t('superman.history.orders.title')
+.mdl-cell.mdl-cell--12-col
+  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+    .mdl-tabs__tab-bar
+      %a.mdl-tabs__tab.is-active{:href => '#in-progress-panel'} In Progress
+      %a.mdl-tabs__tab{:href => '#complete-panel'} Complete
+      %a.mdl-tabs__tab{:href => '#paid-panel'} Paid
+      %a.mdl-tabs__tab{:href => '#cancelled-panel'} Cancelled
+    #in-progress-panel.mdl-tabs__panel.is-active
+      .mdl-grid
+        .mdl-cell.mdl-cell--12-col
+          %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+            %thead
+              %tr
+                %th ID
+                %th Status
+                %th Created At
+                %th Expected At
+                %th Customer
+                %th Total
+            %tbody
+              - @orders.each do |order|
+                %tr
+                  %td= order.number
+                  %td= order.order_status.name
+                  %td= order.created_at
+                  %td= order.completed_at
+                  %td= order.user.name
+    #complete-panel.mdl-tabs__panel
+      %ul
+        %li Tywin
+        %li Cersei
+        %li Jamie
+        %li Tyrion
+    #paid-panel.mdl-tabs__panel
+      %ul
+        %li Viserys
+        %li Daenerys
+    #cancelled-panel.mdl-tabs__panel
+      %ul
+        %li Viserys
+        %li Daenerys
 
 -#.grid-block
   .grid-content

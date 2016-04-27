@@ -1,0 +1,5 @@
+- title t('superman.generic.discounts.new.title')
+.mdl-cell.mdl-cell--12-col
+  = form_for(@coupon, :as => :coupon, :url => admin_generic_coupons_path(@coupon)) do |f|
+    = render :partial => 'form', :locals => {:f => f}
+  = link_to "Back to List", admin_generic_coupons_path, :class => "button"

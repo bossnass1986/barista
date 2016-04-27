@@ -50,7 +50,7 @@ class TaxRate < ActiveRecord::Base
   end
 
   def tax_per_state?
-    Settings.tax_per_state_id
+    # Settings.tax_per_state_id
   end
 
   def tax_per_country?

@@ -88,13 +88,19 @@ en:
       merchants: 'Venues'
       dashboard: 'Dashboard'
       products: 'Menu Items'
+      discounts: 'Discount Codes'
       orders: 'Orders'
       customers: 'Customers'
       staff: 'Staff'
       marketing: 'Marketing'
+      tax_rates: 'Tax Rates'
       settings: 'Settings'
       return_to: 'Return to App'
       log_out: 'Log Out'
+    config:
+      tax_rates:
+        index:
+          title: 'Tax Rates'
     dashboard:
       title: 'Dashboard'
       stats_title:
@@ -102,8 +108,15 @@ en:
         orders: 'Orders'
         users: 'Users'
         products: 'Products'
+    generic:
+      discounts:
+        index:
+          title: 'Discount Codes'
+        new:
+          title: 'New Discount Code'
     history:
       orders:
+        title: 'Order History'
         all: 'All'
         items: 'Items'
         submitted: 'Submitted'

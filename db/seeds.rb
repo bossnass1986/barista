@@ -75,19 +75,33 @@ Product.create!([
 
 'Creating Sample Variants'
 Variant.create!([
-  {id: 1, product_id: 2, price: 2.95, master: 1},
-  {id: 2, product_id: 2, price: 3.95},
-  {id: 3, product_id: 2, price: 4.95},
-  {id: 4, product_id: 2, price: 5.95},
-  {id: 5, product_id: 4, price: 2.95, master: 1},
-  {id: 6, product_id: 4, price: 3.95},
+  {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95, master: 1},
+  {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
+  {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
+  {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
+  {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95, master: 1},
+  {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 ])
 
+puts 'Sugar CRUSH!'
+Property.create!([
+ {id:1, display_name: 'Size', identifying_name: :Size},
+ {id:2, display_name: 'Milk' , identifying_name: :Milk},
+ {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
+ {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
+ {id:5, display_name: 'Strength' , identifying_name: :Strenth},
+ {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
+ {id:7, display_name: 'Syrup', identifying_name: :Syrup},
+ {id:8, display_name: 'Flavour', identifying_name: :Flavour},
+ {id:9, display_name: 'Topping', identifying_name: :Toppings},
+ {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
+])
+
 puts 'Creating Sample Products with Attributes'
 ProductProperty.create!([
-  {property_id: 1, product_id: 2},
+  {property_id: 1, product_id: 2, description: 'Size'},
   # {property_id: 1, product_id: 2},
   # {property_id: 1, product_id: 3},
   # {property_id: 1, product_id: 4},
@@ -109,20 +123,6 @@ VariantProperty.create!([
     {property_id: 2, variant_id: 1, description: 'Soy'},
 ])
 
-
-puts 'Sugar CRUSH!'
-Property.create!([
-  {id:1, display_name: 'Size', identifying_name: :Size},
-  {id:2, display_name: 'Milk' , identifying_name: :Milk},
-  {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
-  {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
-  {id:5, display_name: 'Strength' , identifying_name: :Strenth},
-  {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
-  {id:7, display_name: 'Syrup', identifying_name: :Syrup},
-  {id:8, display_name: 'Flavour', identifying_name: :Flavour},
-  {id:9, display_name: 'Topping', identifying_name: :Toppings},
-  {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
-])
 
 # (1..100).each do |i|
 #   Supplier.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')

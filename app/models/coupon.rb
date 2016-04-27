@@ -7,6 +7,8 @@ class Coupon < ActiveRecord::Base
   validates :starts_at,     presence: true
   validates :expires_at,    presence: true
 
+  self.inheritance_column = nil
+
   COUPON_TYPES = ['CouponPercent', 'CouponValue','CouponFirstPurchasePercent', 'CouponFirstPurchaseValue']
   # order must respond to item_prices
   attr_accessor :c_type

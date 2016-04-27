@@ -1,47 +1,31 @@
 - title "Product: #{@product.name}"
-- if @product.active?
-  = link_to 'Make Inactive', admin_merchandise_product_path(@product), :method => :delete, :data => {:confirm => 'This will inactivate the product,  Are you sure?'}, :class => 'button green-button'
-- elsif @product.available?
-  = link_to 'Activate', activate_admin_merchandise_product_path(@product), :method => 'PUT', :data => {:confirm => 'This will activate the product,  Are you sure?'}, :class => 'button red-button'
-- else
-  Not Ready for Production
-
-%fieldset
-  %label Name
-  %p= @product.name
-  %label
-    Description (#{link_to 'edit', edit_admin_merchandise_products_description_path(@product)})
-  %p= raw @product.description
-  %label Meta Keywords
-  %p= @product.meta_keywords
-  %label Meta Description
-  %p= @product.meta_description
-  %label Product Type
-  %p= @product.product_type.name
-  -#%label Shipping Category
-  -#%p= @product.shipping_category.name
-  -#%label Shipping Details
-  -#%table
-  -#  - rates = @product.shipping_category.shipping_rates
-  -#  %tr
-  -#    %th= link_to 'Shipping Zone', admin_config_shipping_rates_path
-  -#    %th
-  -#  - @shipping_zones.each do |zone|
-  -#    %tr
-  -#      %td= zone.name
-  -#      %td
-  -#        - product_rates = rates.map { |rate| rate.shipping_method.name if rate.shipping_method.shipping_zone_id == zone.id }.compact
-  -#        - if product_rates.empty?
-  -#          Not Available
-  -#        - else
-  -#          = product_rates.join('</br>').html_safe
-%fieldset
-  %legend Properties
-  - @product.product_properties.each do |product_prop|
+-#- if @product.active?
+-#  = link_to 'Make Inactive', admin_merchandise_product_path(@product), :method => :delete, :data => {:confirm => 'This will inactivate the product,  Are you sure?'}, :class => 'button green-button'
+-#- elsif @product.available?
+-#  = link_to 'Activate', activate_admin_merchandise_product_path(@product), :method => 'PUT', :data => {:confirm => 'This will activate the product,  Are you sure?'}, :class => 'button red-button'
+-#- else
+-#  Not Ready for Production
+.mdl-cell.mdl-cell--8-col
+  %fieldset
+    %label Name
+    %p= @product.name
     %label
-      = product_prop.property.identifying_name
-      \:
-    %p= product_prop.description
+      Description (#{link_to 'edit', edit_admin_merchandise_products_description_path(@product)})
+    %p= raw @product.description
+    %label Meta Keywords
+    %p= @product.meta_keywords
+    %label Meta Description
+    %p= @product.meta_description
+    %label Product Type
+    %p= @product.product_type.name
+.mdl-cell.mdl-cell--4-col
+  %fieldset
+    %legend Properties
+    - @product.product_properties.each do |product_prop|
+      %label
+        = product_prop.property.identifying_name
+        \:
+      %p= product_prop.description
 %fieldset#admin-product-properties.span-12
   %legend Variants
   - if @product.variants.size == 0
@@ -54,14 +38,12 @@
         %th SKU
         %th Price
         %th Cost
-        %th Brand
+        -#%th Brand
         %th
-    - @product.variants.each do |variant|
-      %tr{:style => ""}
-      = 'color:#FFAEB9;' unless variant.active?
-      '>
-      -#%td= variant.sku
-      %td= variant.price
-      %td= variant.cost
-      -#%td= variant.brand.try(:name)
-      %td= link_to '2', admin_merchandise_product_variant_path(@product, variant)
+      - @product.variants.each do |variant|
+        %tr
+          %td= variant.sku
+          %td= variant.price
+          %td= variant.cost
+          -#%td= variant.brand.try(:name)
+          %td= link_to variant, admin_merchandise_product_variant_path(@product, variant)
