@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: 'Finito'
+  site_name: 'Cuptown'
   meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
   meta_keywords:          'Ruby on Rails, ecommerce'
   product:
@@ -64,6 +64,12 @@ en:
     checkout: 'Order Now'
     update: 'Update'
     item_passed_update: 'Item was successfully updated.'
+  devise:
+    registrations:
+      edit:
+
+      new:
+
   order:
     title: 'My Order History'
     no_orders: "Aww shucks, you don't have any orders yet!"

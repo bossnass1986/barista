@@ -26,7 +26,7 @@
       - if user_signed_in?
         .mdl-layout__drawer
           %span.mdl-layout-title
-            = t(:site_name)
+            -#= image_tag 'logo_sidebar.png'
           = render 'shared/compact_menu'
       %main.mdl-layout__content
         .page-content

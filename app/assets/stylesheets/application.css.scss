@@ -93,9 +93,9 @@ $trim-color-classes: false !default;
 
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
-$color-primary: $palette-green-500 !default;
-$color-primary-dark: $palette-green-900 !default;
-$color-accent: $palette-red-500 !default;
+$color-primary: $palette-teal-500 !default;
+$color-primary-dark: $palette-teal-900 !default;
+$color-accent: $palette-green-500 !default;
 
 // Our primary is dark, so use $color-dark-contrast for overlaid text.
 $color-primary-contrast: $color-dark-contrast !default;
@@ -194,7 +194,7 @@ $layout-drawer-navigation-link-active-background: unquote("rgb(#{$color-light-co
 $layout-drawer-navigation-link-active-color: unquote("rgb(#{$palette-grey-300})") !default;
 
 // Header
-$layout-header-bg-color: unquote("rgb(#{$color-primary-dark})") !default;
+$layout-header-bg-color: unquote("rgb(#{$color-primary})") !default;
 $layout-header-text-color: unquote("rgb(#{$color-primary-contrast})") !default;
 $layout-header-nav-hover-color: unquote("rgba(#{$palette-grey-700}, 0.6)") !default;
 $layout-header-tab-text-color: unquote("rgba(#{$color-primary-contrast}, 0.6)") !default;
@@ -601,7 +601,7 @@ a {
 
 .mdl-layout__drawer .mdl-layout-title {
   position: relative;
-  background: $layout-header-bg-color;
+  background: unquote("rgb(#{$palette-teal-100})") url('logo_sidebar.png') no-repeat center;
   height: 160px;
 }
 
