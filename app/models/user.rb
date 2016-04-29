@@ -272,6 +272,18 @@ class User < ActiveRecord::Base
 
   def before_validation_on_create
     self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
+    result = Braintree::Customer.create(
+        :first_name => self.first_name,
+        :last_name => self.last_name,
+        :email => self.email,
+        :phone => self.mobile
+    )
+    if result.success?
+      puts result.customer.id
+      self.customer_cim_id = result.customer.id
+    else
+      p result.errors
+    end
   end
 
 end

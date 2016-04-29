@@ -1,6 +1,5 @@
-.nine.large-9.columns
-  %h3 Edit Address
-  = form_for(@form_address, :url => myaccount_address_path(@form_address), html: {class: 'custom'}) do |f|
-    = render :partial => 'form', :locals => {:f => f}
-  .columns
-    = link_to 'Back to Addresses', myaccount_addresses_path, :class => 'secondary small button  '
+- title t('myaccount.address.edit.title')
+= form_for(@form_address, :url => myaccount_address_path(@form_address), html: {class: 'custom'}) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+.columns
+  = link_to 'Back to Addresses', myaccount_addresses_path, :class => 'secondary small button  '

@@ -12,6 +12,21 @@ class Myaccount::CreditCardsController < Myaccount::BaseController
   end
 
   def create
+    result = Braintree::PaymentMethod.create(
+        :customer_id => '85549430',
+        :payment_method_nonce => nonce_from_the_client,
+        :options => {
+            :verify_card => true,
+            :verification_amount => "2.00",
+        }
+    )
+    if result.success?
+      puts result.customer.id
+      # puts result.customer.payment_methods[0].token
+    else
+      p result.errors
+    end
+
     @credit_card = current_user.payment_profiles.new(allowed_params)
     if @credit_card.save
       flash[:notice] = "Successfully created credit card."
@@ -45,7 +60,7 @@ class Myaccount::CreditCardsController < Myaccount::BaseController
   private
 
   def allowed_params
-    params.require(:credit_card).permit(:address_id, :month, :year, :cc_type, :first_name, :last_name, :card_name)
+    # params.require(:credit_card).permit(:address_id, :month, :year, :cc_type, :first_name, :last_name, :card_name)
   end
 
   def selected_myaccount_tab(tab)

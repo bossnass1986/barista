@@ -27,7 +27,20 @@ class Myaccount::AddressesController < Myaccount::BaseController
     respond_to do |format|
       if @address.save
         format.html { redirect_to(myaccount_address_url(@address), :notice => 'Address was successfully created.') }
-        ModelMailer.new_record_notification(@address).deliver_now
+        result = Braintree::Address.create(
+            :customer_id         => current_user.customer_cim_id,
+            :first_name          => @address.first_name,
+            :last_name           => @address.last_name,
+            :street_address      => @address.address1,
+            :locality            => @address.city,
+            :region              => @address.state_name,
+            :postal_code         => @address.zip_code,
+            :country_code_alpha3 => @address.country_id
+        )
+        if result.success?
+        else
+          p result.errors
+        end
       else
         @form_address = @address
         form_info
