@@ -223,18 +223,18 @@ ActiveRecord::Schema.define(version: 20160405111829) do
   create_table "payment_profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "address_id"
-    t.integer  "payment_cim_id"
+    t.string   "payment_cim_id"
     t.boolean  "default"
     t.boolean  "active"
-    t.string   "last_digits"
-    t.string   "month"
-    t.string   "year"
-    t.string   "cc_type"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "card_name"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "cardholder_name"
+    t.string   "masked_number"
+    t.string   "card_type"
+    t.integer  "month"
+    t.integer  "year"
+    t.string   "country_of_issuance"
+    t.string   "issuing_bank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -480,7 +480,7 @@ ActiveRecord::Schema.define(version: 20160405111829) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-04-24', null: false
+    t.date     "start_date",                         default: '2016-05-02', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

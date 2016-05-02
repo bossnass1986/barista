@@ -1,16 +1,16 @@
 - title t('myaccount.address.index.title')
-.mdl-cell.mdl-cell--12-col
-  - if @addresses.empty?
-    %h2.text-center= t('myaccount.address.index.no_addresses_saved')
-    %h3.text-center= t('myaccount.address.index.no_address_cta')
-  - else
-    .grid-block
-      .small-12.grid-content
-        %ul
-          - for address in @addresses
-            %li= link_to address.full_address_compact_array, edit_myaccount_address_path(address)
-            = render :partial => '/shared/compact_address', :locals => { :shopping_address => address }
-            -#= link_to "Edit", edit_myaccount_address_path(address)
-            -#|
-            -#\#{link_to "Remove", myaccount_address_path(address), :confirm => 'Are you sure?', :method => :delete}
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    - if @addresses.empty?
+      .mdl-typography--display-1-color-contrast= t('myaccount.address.index.no_addresses_saved')
+    - else
+      .grid-block
+        .small-12.grid-content
+          %ul
+            - for address in @addresses
+              %li= link_to address.full_address_compact_array, edit_myaccount_address_path(address)
+              = render :partial => '/shared/compact_address', :locals => { :shopping_address => address }
+              -#= link_to "Edit", edit_myaccount_address_path(address)
+              -#|
+              -#\#{link_to "Remove", myaccount_address_path(address), :confirm => 'Are you sure?', :method => :delete}
   %p= link_to "New Address", new_myaccount_address_path, :class => 'b-link'

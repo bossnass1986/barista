@@ -1,15 +1,23 @@
 - title t('myaccount.credit_card.index.title')
-- if @credit_cards.empty?
-  %p
-    You do not have a Credit Card on File
-- else
-  %table
-    %tr
-      %th Name
-    - for credit_card in @credit_cards
-      %tr
-        %td= credit_card.name
-        %td= link_to "Show", myaccount_credit_card_path(credit_card)
-        %td= link_to "Edit", edit_myaccount_credit_card_path(credit_card)
-        %td= link_to "Remove", myaccount_credit_card_path(credit_card), :confirm => 'Are you sure?', :method => :delete
-%p= link_to "New Credit Card", new_myaccount_credit_card_path, :class => 'button'
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    - if @credit_cards.empty?
+      .mdl-typography--display-1-color-contrast= t('myaccount.credit_card.index.no_cards_saved')
+    - else
+      %ul.demo-list-two.mdl-list
+        - for credit_card in @credit_cards
+          -#= link_to myaccount_credit_card_path(credit_card) do
+          %li.mdl-list__item.mdl-list__item--two-line
+            %span.mdl-list__item-primary-content
+              -#%i.material-icons.mdl-list__item-avatar person
+              %span
+                = credit_card.card_type
+              %span.mdl-list__item-sub-title
+                = credit_card.masked_number
+                = "(Exp #{credit_card.month}/#{credit_card.year})"
+            %span.mdl-list__item-secondary-content
+              = link_to myaccount_credit_card_path(credit_card), :confirm => 'Are you sure?', :method => :delete, :class => 'mdl-list__item-secondary-action' do
+                %i.material-icons remove_circle_outline
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    %p= link_to "New Credit Card", new_myaccount_credit_card_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'

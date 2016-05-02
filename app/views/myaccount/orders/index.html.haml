@@ -1,5 +1,11 @@
-- title t('order.title')
-- unless @orders.present?
+- title t('myaccount.order.index.title')
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    - if @orders.empty?
+      .mdl-typography--display-1-color-contrast= t('myaccount.order.index.no_orders')
+    - else
+      test
+-#- unless @orders.present?
   .mdl-grid
     .mdl-cell.mdl-cell--12-col.mdl-cell--middle
       .material-icons.mdl-typography--display-4 history

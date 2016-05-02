@@ -7,19 +7,19 @@ class PaymentProfile < ActiveRecord::Base
 
   validates :user_id,         presence: true
   validates :payment_cim_id,  presence: true
-  validates :cc_type,         presence: true, length: { maximum: 60 }
-  validates :last_digits,     presence: true, length: { maximum: 10 }
-  validates :month,           presence: true, length: { maximum: 6 }
-  validates :year,            presence: true, length: { maximum: 6 }
+  validates :card_type,       presence: true, length: { maximum: 16 }
+  validates :masked_number,     presence: true, length: { maximum: 16 }
+  validates :month,           presence: true, length: { maximum: 2 }
+  validates :year,            presence: true, length: { maximum: 4 }
 
 
-  validate            :validate_card
-  #validates :address_id,      presence: true
+  # validate            :validate_card
+  # validates :address_id,      presence: true
 
   #attr_accessible # none
 
   def name
-    [cc_type, last_digits].join(' - ')
+    # [cc_type, last_digits].join(' - ')
   end
 
   def inactivate!
