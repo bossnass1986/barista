@@ -3,7 +3,7 @@
 class Image < ActiveRecord::Base
   belongs_to :imageable, :polymorphic => true
 
-  has_attached_file :photo, PAPERCLIP_STORAGE_OPTS ##  this constant is in /config/environments/*.rb
+  # has_attached_file :photo, PAPERCLIP_STORAGE_OPTS ##  this constant is in /config/environments/*.rb
 
   validates_attachment_presence :photo
   validates_attachment_size     :photo, :less_than => 5.megabytes
