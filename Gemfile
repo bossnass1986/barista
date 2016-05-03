@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 # Deployment
 gem 'rails', '4.2.4'
-gem 'bullet'
-
 
 # ==========
 # MemCachier
@@ -28,7 +26,7 @@ gem 'kaminari'
 gem 'pg'
 
 # User Management
-gem 'devise', '~> 3.9'
+gem 'devise', '3.9'
 gem 'rolify'
 gem 'cancancan'
 

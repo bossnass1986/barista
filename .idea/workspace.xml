@@ -4,7 +4,7 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="more payments work">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="heroku come at me">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -124,8 +124,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769231">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.10817308">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -837,12 +837,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00091" summary="user indexes">
-      <created>1458560475353</created>
-      <option name="number" value="00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1458560475353</updated>
-    </task>
     <task id="LOCAL-00092" summary="supplier perma links">
       <created>1458895503039</created>
       <option name="number" value="00092" />
@@ -1131,7 +1125,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462273853044</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="heroku come at me">
+      <created>1462274798691</created>
+      <option name="number" value="00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1462274798692</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1204,7 +1204,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="menu update" />
     <MESSAGE value="side menu changes&#10;adding credits&#10;adding referrals" />
     <MESSAGE value="fixed signups to allow new members" />
     <MESSAGE value="supplier updates&#10;readme update" />
@@ -1229,7 +1228,8 @@
     <MESSAGE value="address fixes" />
     <MESSAGE value="new payment profile model" />
     <MESSAGE value="more payments work" />
-    <option name="LAST_COMMIT_MESSAGE" value="more payments work" />
+    <MESSAGE value="heroku come at me" />
+    <option name="LAST_COMMIT_MESSAGE" value="heroku come at me" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1676,8 +1676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769231">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.10817308">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
