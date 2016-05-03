@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Deployment
 gem 'rails', '4.2.4'
+ruby '2.2.1'
 
 # ==========
 # MemCachier
