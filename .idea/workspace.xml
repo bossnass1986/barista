@@ -124,8 +124,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10817308">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.36057693">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -146,7 +146,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.583333">
               <caret line="32" column="24" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-              <folding />
+              <folding>
+                <marker date="1462273749000" expanded="true" signature="488:1246" placeholder=".mdl-layout.mdl-js-layout.mdl-layout--fixed-header" />
+                <marker date="1462273749000" expanded="true" signature="580:1000" placeholder=".mdl-layout__header-row" />
+                <marker date="1462273749000" expanded="true" signature="632:723" placeholder=".mdl-layout-title" />
+                <marker date="1462273749000" expanded="true" signature="734:752" placeholder=".mdl-layout-spacer" />
+                <marker date="1462273749000" expanded="true" signature="1036:1174" placeholder=".mdl-layout__drawer" />
+                <marker date="1462273749000" expanded="true" signature="1215:1246" placeholder=".page-content" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -837,12 +844,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00092" summary="supplier perma links">
-      <created>1458895503039</created>
-      <option name="number" value="00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1458895503040</updated>
-    </task>
     <task id="LOCAL-00093" summary="supplier page refresh with content blocks">
       <created>1458908402783</created>
       <option name="number" value="00093" />
@@ -1131,7 +1132,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462274798692</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="heroku come at me">
+      <created>1462274952014</created>
+      <option name="number" value="00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1462274952014</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1558,8 +1565,8 @@
         <state vertical-scroll-proportion="0.30612245">
           <caret line="8" column="84" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
-            <element signature="e#8#40#1#ruby" expanded="true" />
-            <element signature="e#153#189#0#ruby" expanded="true" />
+            <element signature="e#8#40#1#ruby" expanded="false" />
+            <element signature="e#153#189#0#ruby" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1658,7 +1665,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.583333">
           <caret line="32" column="24" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding />
+          <folding>
+            <marker date="1462273749000" expanded="true" signature="488:1246" placeholder=".mdl-layout.mdl-js-layout.mdl-layout--fixed-header" />
+            <marker date="1462273749000" expanded="true" signature="580:1000" placeholder=".mdl-layout__header-row" />
+            <marker date="1462273749000" expanded="true" signature="632:723" placeholder=".mdl-layout-title" />
+            <marker date="1462273749000" expanded="true" signature="734:752" placeholder=".mdl-layout-spacer" />
+            <marker date="1462273749000" expanded="true" signature="1036:1174" placeholder=".mdl-layout__drawer" />
+            <marker date="1462273749000" expanded="true" signature="1215:1246" placeholder=".page-content" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1676,8 +1690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10817308">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.36057693">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding />
         </state>
       </provider>

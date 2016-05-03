@@ -26,7 +26,7 @@ gem 'kaminari'
 gem 'pg'
 
 # User Management
-gem 'devise', '3.9'
+gem 'devise'
 gem 'rolify'
 gem 'cancancan'
 
