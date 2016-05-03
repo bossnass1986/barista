@@ -41,7 +41,7 @@ class Image < ActiveRecord::Base
     temporary = photo.queued_for_write[:original]
     filename = temporary.path unless temporary.nil?
     filename = photo.path if filename.blank?
-    geometry = Paperclip::Geometry.from_file(filename)
+    # geometry = Paperclip::Geometry.from_file(filename)
     self.image_width  = geometry.width
     self.image_height = geometry.height
   end
