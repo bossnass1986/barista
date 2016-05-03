@@ -36,6 +36,7 @@ gem 'cancancan'
 gem 'braintree'
 gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 gem 'aasm'
+gem 'paperclip'
 
 # Search
 gem 'pg_search'
