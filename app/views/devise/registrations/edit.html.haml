@@ -1,3 +1,4 @@
+- title t('devise.registrations.edit.title')
 = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { class: 'small-12 grid-content' }) do |f|
   .mdl-grid
     .mdl-cell.mdl-cell--2-col-phone
@@ -31,4 +32,4 @@
         %label.mdl-textfield__label
           Password Again...
     .mdl-cell.mdl-cell--12-col
-      = f.submit 'Update Account', class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+      = f.submit t('devise.registrations.edit.update_button'), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

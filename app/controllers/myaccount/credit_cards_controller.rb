@@ -18,7 +18,7 @@ class Myaccount::CreditCardsController < Myaccount::BaseController
         :cardholder_name => "#{current_user.first_name} #{current_user.last_name}",
         :options => {
             :make_default => true,
-            # :fail_on_duplicate_payment_method_card => true
+            :fail_on_duplicate_payment_method => true
         }
     )
     if result.success?
@@ -44,7 +44,11 @@ class Myaccount::CreditCardsController < Myaccount::BaseController
       puts payment_method.expired?
       params[:payment_profile][:active] = payment_method.expired?
     else
-      p result.errors
+      # p result.errors
+      result.errors.each do |error|
+        # puts error.code
+        puts error.message
+      end
     end
 
     @credit_card = current_user.payment_profiles.new(allowed_params)
