@@ -4,6 +4,7 @@
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
     %a.mdl-tabs__tab{:href => '#addresses-panel'} Addresses
+    %a.mdl-tabs__tab{:href => '#payments-panel'} Payments
   #orders-panel.mdl-tabs__panel.is-active
     - @user.finished_orders.sort_by{|o| o.completed_at}.reverse!.each do |order|
       %ul.vertical-list
@@ -24,3 +25,9 @@
       - @user.addresses.each do |address|
         %li
           = render :partial => '/shared/compact_address', :locals => {:shopping_address => address}
+  #payments-panel.mdl-tabs__panel
+    %ul.vertical-list
+      - @user.payment_profiles.each do |payment|
+        %li
+          = payment.card_type
+          = payment.masked_number

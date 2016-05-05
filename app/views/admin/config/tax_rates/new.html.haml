@@ -1,4 +1,4 @@
-%h3 New Tax Rate
+- title t('admin.config.tax_rates.new.title')
 = form_for(@tax_rate, :url => admin_config_tax_rates_path()) do |f|
   = render :partial =>  'form', :locals => {:f => f}
 = link_to 'Back', admin_config_tax_rates_path, :class => 'button'

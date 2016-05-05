@@ -1,0 +1,5 @@
+- title t('admin.merchandise.properties.edit.title')
+= form_for @property, :url  => admin_merchandise_property_path(@property), :html => {:class => 'prepend-6'}  do |form|
+  = render :partial => '/admin/merchandise/properties/form', :locals => {:form => form }
+  .generic_submit_button
+    = submit_tag "Update", :class => "button", :id => "update_property_button"

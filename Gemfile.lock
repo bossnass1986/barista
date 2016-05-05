@@ -45,6 +45,8 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+    awesome_nested_set (3.0.3)
+      activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -131,11 +133,11 @@ GEM
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.11.3)
+    multi_json (1.12.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
-    paperclip (4.3.4)
+    paperclip (4.3.6)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
@@ -247,6 +249,7 @@ PLATFORMS
 DEPENDENCIES
   aasm
   activemerchant (~> 1.48)
+  awesome_nested_set (~> 3.0.1)
   better_errors
   binding_of_caller
   braintree

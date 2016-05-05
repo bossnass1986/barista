@@ -33,6 +33,7 @@ gem 'cancancan'
 
 # Payment Gateway
 # gem 'stripe'
+gem 'awesome_nested_set', '~> 3.0.1'
 gem 'braintree'
 gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 gem 'aasm'

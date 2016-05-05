@@ -7,6 +7,9 @@
         %th.mdl-data-table__cell--non-numeric Last
         %th.mdl-data-table__cell--non-numeric Email
         %th.mdl-data-table__cell--non-numeric Orders
+        %th.mdl-data-table__cell--non-numeric Credits
+        %th.mdl-data-table__cell--non-numeric Payments
+        -#%th.mdl-data-table__cell--non-numeric Last Logon
         %th Status
     %tbody
       - @users.each do |user|
@@ -15,6 +18,9 @@
           %td.mdl-data-table__cell--non-numeric= user.last_name
           %td.mdl-data-table__cell--non-numeric= user.email
           %td.mdl-data-table__cell--non-numeric= user.orders.count
+          %td.mdl-data-table__cell--non-numeric= number_to_currency(user.store_credit.amount)
+          %td.mdl-data-table__cell--non-numeric= user.payment_profiles.count
+          -#%td.mdl-data-table__cell--non-numeric= user.last_sign_in_at
           %td= user.state
 
 -#.admin_users

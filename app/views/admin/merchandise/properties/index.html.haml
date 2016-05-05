@@ -1,0 +1,22 @@
+- title t('admin.merchandise.properties.index.title')
+.mdl-cell.mdl-cell--12-col
+  %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+    %thead
+      %tr
+        %th.mdl-data-table__cell--non-numeric Identifying Name
+        %th.mdl-data-table__cell--non-numeric Display Name
+        %th.mdl-data-table__cell--non-numeric Status
+    %tbody
+      - @properties.each do |property|
+        %tr
+          %td.mdl-data-table__cell--non-numeric= link_to property.identifying_name, edit_admin_merchandise_property_path(property)
+          %td.mdl-data-table__cell--non-numeric= property.display_name
+          %td.mdl-data-table__cell--non-numeric= property.display_name
+          -#%td.mdl-data-table__cell--non-numeric
+            %button.mdl-button.mdl-js-button.mdl-button--icon{:id => product.id}
+              %i.material-icons more_vert
+            %ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect{:for => product.id}
+              %li.mdl-menu__item= link_to "Edit Variants",  edit_admin_merchandise_multi_product_variant_path(product)
+              %li.mdl-menu__item= link_to "Show",  admin_merchandise_product_path(product)
+  .mdl-cell.mdl-cell--12-col
+    = link_to "New Property", new_admin_merchandise_property_path, :class => "button", :id => "new_property_button"

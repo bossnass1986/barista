@@ -1,4 +1,4 @@
-- title t('superman.history.orders.title')
+- title t('admin.history.orders.title')
 .mdl-cell.mdl-cell--12-col
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar
@@ -21,7 +21,7 @@
             %tbody
               - @orders.each do |order|
                 %tr
-                  %td= order.number
+                  %td= order.number.upcase
                   %td= order.order_status.name
                   %td= order.created_at
                   %td= order.completed_at
@@ -40,60 +40,3 @@
       %ul
         %li Viserys
         %li Daenerys
-
--#.grid-block
-  .grid-content
-    %div{'zf-tabs': ''}
-      %div{title: 'ALL', 'zf-tab': ''}
-        .grid-block
-          .grid-content ID
-          .grid-content Status
-          .grid-content Created At
-          .grid-content Expected At
-          .grid-content Customer
-          .grid-content Total
-          - @orders.each do |order|
-            .grid-block
-              .grid-content= order.number
-              .grid-content= order.order_status.name
-              .grid-content= order.created_at
-              .grid-content= order.completed_at
-              .grid-content= order.user.name
-              .grid-content
-      - @status.each do |status|
-        %div{title:  status.name.upcase, 'zf-tab': ''}
-          .grid-block
-            .grid-content ID
-            .grid-content Status
-            .grid-content Created At
-            .grid-content Expected At
-            .grid-content Customer
-            .grid-content Total
-          - @orders.each do |order|
-            - if order.order_status_id == status.id
-              .grid-block
-                .grid-content= order.number
-                .grid-content= order.order_status.name
-                .grid-content= order.created_at
-                .grid-content= order.completed_at
-                .grid-content= order.user.name
-                .grid-content
-      %div{title: 'LATE', 'zf-tab': ''}
-        LATE
-      %div{title: 'CANCELLED', 'zf-tab': ''}
-
--#.grid-block
-  .small-12.grid-content
-    - if @orders.empty?
-      .grid-block{style: 'background:#fff'}
-        .grid-content
-          %h2.text-center You currently do not have any orders.
-    - else
-      .grid-block
-        .grid-content
-          %section.block-list
-            %header Past Order Details
-            %ul
-              - @orders.each do |order|
-                %li.with-chevron
-                  = link_to "Order ##{order.number.upcase}", admin_history_order_path(order)

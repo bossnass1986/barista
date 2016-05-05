@@ -100,7 +100,7 @@ en:
       title: 'Venues'
       product:
         title: 'Customise'
-  superman:
+  admin:
     index:
       side_bar_title: 'Admin Menu'
       side_bar_sub_title: 'Application Menu'
@@ -121,6 +121,8 @@ en:
       tax_rates:
         index:
           title: 'Tax Rates'
+        new:
+          title: 'New Tax Rate'
     dashboard:
       title: 'Dashboard'
       stats_title:
@@ -144,10 +146,16 @@ en:
     merchandise:
       products:
         title: 'Products'
+        new_button: 'Add New Product'
         new:
           title: 'New Product'
         edit:
           title: 'Edit Product'
+      properties:
+        index:
+          title: 'Properties'
+        edit:
+          title: 'Edit Property'
 
 
   time:

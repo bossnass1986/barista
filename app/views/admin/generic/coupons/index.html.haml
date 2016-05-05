@@ -1,4 +1,4 @@
-- title t('superman.generic.discounts.index.title')
+- title t('admin.generic.discounts.index.title')
 .mdl-cell.mdl-cell--12-col
   %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     %thead
@@ -16,6 +16,5 @@
           %td= coupon.display_start_time
           %td= coupon.display_expires_time
           %td= link_to "Edit", edit_admin_generic_coupon_path(coupon)
-.grid
-  .mdl-cell.mdl-cell--12-col
-    = link_to 'New Coupon', new_admin_generic_coupon_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+.mdl-cell.mdl-cell--12-col
+  = link_to 'New Coupon', new_admin_generic_coupon_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
