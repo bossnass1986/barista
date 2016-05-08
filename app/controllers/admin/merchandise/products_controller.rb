@@ -3,8 +3,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   authorize_resource
 
   def index
-    params[:page] ||= 1
-    @products = Product.all
+    # params[:page] ||= 1
+    @products = Product.order(:name).page params[:page]
   end
 
   def show
@@ -110,7 +110,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def form_info
-    # @prototypes               = Prototype.all.map{|pt| [pt.name, pt.id]}
+    @prototypes               = Prototype.all.map{|pt| [pt.name, pt.id]}
     @all_properties           = Property.all
     # @select_shipping_category = ShippingCategory.all.map {|sc| [sc.name, sc.id]}
     # @brands                   = Brand.order(:name).map {|ts| [ts.name, ts.id]}

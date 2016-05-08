@@ -1,0 +1,39 @@
+- title t('admin.user_datas.referrals.index.title')
+.mdl-cell.mdl-cell--12-col
+  %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
+    %thead
+      %tr
+        %th.mdl-data-table__cell--non-numeric Name
+        -#%th.mdl-data-table__cell--non-numeric Email
+        %th.mdl-data-table__cell--non-numeric Referring User
+        %th.mdl-data-table__cell--non-numeric Referral Program
+        %th.mdl-data-table__cell--non-numeric New User
+        %th.mdl-data-table__cell--non-numeric Referral Type
+        %th.mdl-data-table__cell--non-numeric Sent At
+        %th.mdl-data-table__cell--non-numeric Registered At
+        %th.mdl-data-table__cell--non-numeric Purchased At
+        %th.mdl-data-table__cell--non-numeric Applied
+        %th
+    %tbody
+      - for referral in @referrals
+        %tr
+          %td{id: referral.id}
+            = link_to referral.name, [:admin, :user_datas, referral]
+            .mdl-tooltip.mdl-tooltip--large{:for => referral.id}= referral.email
+          -#%td= referral.email
+          %td= referral.referring_user.name
+          %td= referral.referral_program.name
+          %td= referral.referral_user.try(:name)
+          %td= referral.referral_type.name
+          %td= referral.sent_at
+          %td= referral.registered_at
+          %td= referral.purchased_at
+          %td= referral.applied
+          %td= link_to "", [:admin, :user_datas, referral], :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'ss_sprite ss_cross'
+.mdl-cell.mdl-cell--12-col
+  %p= link_to "Assign Referral", new_admin_user_datas_referral_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+  %p
+    = link_to "Apply Referrals",                       |
+      apply_admin_user_datas_referral_path(0),         |
+      :data => { :confirm => 'Are you sure?' },        |
+      :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored', :method => 'POST'

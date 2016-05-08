@@ -6,6 +6,7 @@ User.delete_all
 Country.destroy_all
 Supplier.delete_all
 ProductType.delete_all
+Prototype.delete_all
 Product.delete_all
 Variant.delete_all
 ProductProperty.delete_all
@@ -51,39 +52,45 @@ ProductType.create!([
   {id: 2, name: 'Cold '}
 ])
 
-puts 'Creating Standard Menu Items'
-Product.create!([
-  {id: 1, product_type_id: 2, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
-  {id: 2, product_type_id: 1, name: 'Cappuccino', description: 'Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.', shipping_category_id: 1},
-  {id: 3, product_type_id: 1, name: 'Chai Latte', description: 'A normal, regular milk latte', shipping_category_id: 1},
-  {id: 4, product_type_id: 1, name: 'Flat White', description: 'Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.', shipping_category_id: 1},
-  {id: 5, product_type_id: 1, name: 'Frappe', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 6, product_type_id: 1, name: 'Hot Chocolate', description: 'Silky steamed milk poured over melted chocolate topped with chocolate powder', shipping_category_id: 1},
-  {id: 7, product_type_id: 2, name: 'Iced Chocolate', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 8, product_type_id: 2, name: 'Iced Coffee', description: 'A normal, regular milk latte', shipping_category_id: 1},
-  {id: 9, product_type_id: 2, name: 'Iced Tea', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 10, product_type_id: 1, name: 'Irish', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 11, product_type_id: 1, name: 'Latte', description: 'A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.', shipping_category_id: 1},
-  {id: 12, product_type_id: 1, name: 'Latte Macchiato', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 13, product_type_id: 1, name: 'Long Black', description: 'A long black is made by pouring a double-shot of espresso or ristretto over hot water.', shipping_category_id: 1},
-  {id: 14, product_type_id: 1, name: 'Macchiato', description: 'A single shot of espresso with a small amount of steamed milk.', shipping_category_id: 1},
-  {id: 15, product_type_id: 1, name: 'Mocha', description: 'Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.', shipping_category_id: 1},
-  {id: 16, product_type_id: 1, name: 'Short Black', description: 'A single shot of espresso.', shipping_category_id: 1},
-  {id: 17, product_type_id: 1, name: 'Tea', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 18, product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
+puts 'Creating Standard Product Types'
+Prototype.create!([
+    {id: 1, name: 'Hot'},
+    {id: 2, name: 'Cold '}
 ])
 
-'Creating Sample Variants'
-Variant.create!([
-  {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95, master: 1},
-  {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
-  {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
-  {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
-  {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95, master: 1},
-  {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
-  # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-  # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
+puts 'Creating Standard Menu Items'
+Product.create!([
+  {id: 1, prototype_id: 2, product_type_id: 2, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
+  {id: 2, prototype_id: 2, product_type_id: 1, name: 'Cappuccino', description: 'Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.', shipping_category_id: 1},
+  {id: 3, prototype_id: 2, product_type_id: 1, name: 'Chai Latte', description: 'A normal, regular milk latte', shipping_category_id: 1},
+  {id: 4, prototype_id: 2, product_type_id: 1, name: 'Flat White', description: 'Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.', shipping_category_id: 1},
+  {id: 5, prototype_id: 2, product_type_id: 1, name: 'Frappe', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+  {id: 6, prototype_id: 2, product_type_id: 1, name: 'Hot Chocolate', description: 'Silky steamed milk poured over melted chocolate topped with chocolate powder', shipping_category_id: 1},
+  {id: 7, prototype_id: 2, product_type_id: 2, name: 'Iced Chocolate', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+  {id: 8, prototype_id: 2, product_type_id: 2, name: 'Iced Coffee', description: 'A normal, regular milk latte', shipping_category_id: 1},
+  {id: 9, prototype_id: 2, product_type_id: 2, name: 'Iced Tea', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+  {id: 10, prototype_id: 1, product_type_id: 1, name: 'Irish', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+  {id: 11, prototype_id: 1, product_type_id: 1, name: 'Latte', description: 'A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.', shipping_category_id: 1},
+  {id: 12, prototype_id: 1, product_type_id: 1, name: 'Latte Macchiato', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+  {id: 13, prototype_id: 1, product_type_id: 1, name: 'Long Black', description: 'A long black is made by pouring a double-shot of espresso or ristretto over hot water.', shipping_category_id: 1},
+  {id: 14, prototype_id: 1, product_type_id: 1, name: 'Macchiato', description: 'A single shot of espresso with a small amount of steamed milk.', shipping_category_id: 1},
+  {id: 15, prototype_id: 1, product_type_id: 1, name: 'Mocha', description: 'Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.', shipping_category_id: 1},
+  {id: 16, prototype_id: 1, product_type_id: 1, name: 'Short Black', description: 'A single shot of espresso.', shipping_category_id: 1},
+  {id: 17, prototype_id: 1, product_type_id: 1, name: 'Tea', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+  {id: 18,  prototype_id: 1,product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
 ])
+
+# 'Creating Sample Variants'
+# Variant.create!([
+#   {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95, master: 1},
+#   {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
+#   {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
+#   {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
+#   {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95, master: 1},
+#   {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
+#   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
+#   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
+# ])
 
 puts 'Sugar CRUSH!'
 Property.create!([
@@ -108,20 +115,20 @@ ProductProperty.create!([
   # {property_id: 3, product_id: 1},
 ])
 
-puts 'Creating Sample Menu Items with Attributes'
-VariantProperty.create!([
-    {property_id: 1, variant_id: 1, description: 'Short', primary: 1},
-    {property_id: 1, variant_id: 1, description: 'Tall', primary: 0},
-    {property_id: 1, variant_id: 1, description: 'Grande', primary: 0},
-    {property_id: 1, variant_id: 1, description: 'Venti', primary: 1},
-    # {property_id: 1, variant_id: 5, description: 'Short', primary: 1},
-    # {property_id: 1, variant_id: 6, description: 'Tall', primary: 1},
-    # {property_id: 1, variant_id: 7, description: 'Grande', primary: 0},
-    # {property_id: 1, variant_id: 8, description: 'Venti', primary: 1},
-    {property_id: 2, variant_id: 1, description: 'Full Cream', primary: 1},
-    {property_id: 2, variant_id: 1, description: 'Skim'},
-    {property_id: 2, variant_id: 1, description: 'Soy'},
-])
+# puts 'Creating Sample Menu Items with Attributes'
+# VariantProperty.create!([
+#     {property_id: 1, variant_id: 1, description: 'Short', primary: 1},
+#     {property_id: 1, variant_id: 1, description: 'Tall', primary: 0},
+#     {property_id: 1, variant_id: 1, description: 'Grande', primary: 0},
+#     {property_id: 1, variant_id: 1, description: 'Venti', primary: 1},
+#     # {property_id: 1, variant_id: 5, description: 'Short', primary: 1},
+#     # {property_id: 1, variant_id: 6, description: 'Tall', primary: 1},
+#     # {property_id: 1, variant_id: 7, description: 'Grande', primary: 0},
+#     # {property_id: 1, variant_id: 8, description: 'Venti', primary: 1},
+#     {property_id: 2, variant_id: 1, description: 'Full Cream', primary: 1},
+#     {property_id: 2, variant_id: 1, description: 'Skim'},
+#     {property_id: 2, variant_id: 1, description: 'Soy'},
+# ])
 
 
 # (1..100).each do |i|
@@ -146,15 +153,38 @@ VariantSupplier.create!([
     {supplier_id: 1, variant_id: 8}
 ])
 
-puts 'Deleting All Order Statues'
-OrderStatus.delete_all
-puts 'Creating Order Statuses'
-OrderStatus.create!([
- {id: 1, name: 'Order Received', description: 'Bean\'n\'Gone has received your order'},
- {id: 2, name: 'In Progress', description: 'The barista has started preparing your order'},
- {id: 3, name: 'Ready for Collection', description: 'Order is ready for collection'},
- {id: 4, name: 'Collected', description: 'Order has been collected'}
-])
+# puts 'Deleting All Order Statues'
+# OrderStatus.delete_all
+# puts 'Creating Order Statuses'
+# OrderStatus.create!([
+#  {id: 1, name: 'Order Received', description: 'Bean\'n\'Gone has received your order'},
+#  {id: 2, name: 'In Progress', description: 'The barista has started preparing your order'},
+#  {id: 3, name: 'Ready for Collection', description: 'Order is ready for collection'},
+#  {id: 4, name: 'Collected', description: 'Order has been collected'}
+# ])
+
+
+
+# puts "Referral Bonuses"
+# ReferralBonus::BONUSES.each do |referral_bonus_attributes|
+#   rb = ReferralBonus.find_by(name: referral_bonus_attributes[:name])
+#   unless rb
+#     ReferralBonus.create(referral_bonus_attributes)
+#   end
+# end
+
+puts "Referral PROGRAMS"
+ReferralProgram::PROGRAMS.each do |referral_program_attributes|
+  rp = ReferralProgram.find_by(name: referral_program_attributes[:name])
+  unless rp
+    ReferralProgram.create(referral_program_attributes)
+  end
+end
+
+puts "ReferralType"
+ReferralType::NAMES.each do |name|
+  ReferralType.find_or_create_by(name: name)
+end
 
 puts 'She may not look like much, but she\'s got it where it counts, kid!'
 

@@ -75,9 +75,10 @@ class Referral < ActiveRecord::Base
     end
   end
 
-  def display_formatted_status_date(format = :us_date)
-    I18n.localize(display_status_date, :format => format)
+  def display_formatted_status_date(format = :aus_date)
+    # I18n.localize(display_status_date, :format => format)
   end
+
   def display_status_date
     if !used?
       created_at
@@ -95,13 +96,13 @@ class Referral < ActiveRecord::Base
   end
 
   def give_credits!
-    if referring_user && purchased? && !applied
+    # if referring_user && !applied # && purchased?
       referral_program.give_credits(referring_user)
       self.applied = true
-      self.skip_validate_has_not_signed_up_yet = true
+      # self.skip_validate_has_not_signed_up_yet = true
       save!
       Notifier.new_referral_credits(referring_user.id, referral_user.id).deliver rescue true
-    end
+    # end
   end
 
   def set_referral_user(user_id)

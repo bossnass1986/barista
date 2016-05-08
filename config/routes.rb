@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  concern :paginatable do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
   resources :images
   # mount Resque::Server.new, at: "/resque"
 
@@ -192,7 +197,7 @@ Rails.application.routes.draw do
 
     namespace :merchandise do
       namespace :images do
-        resources :products
+        resources :products, :concerns => :paginatable
       end
       resources :image_groups
       resources :properties
@@ -207,15 +212,15 @@ Rails.application.routes.draw do
         end
       end
 
-      namespace :wizards do
-        resources :brands,              only: [:index, :create, :update]
-        resources :products,            only: [:new, :create]
-        resources :properties,          only: [:index, :create, :update]
-        resources :prototypes,          only: [:update]
-        resources :tax_categories,      only: [:index, :create, :update]
-        resources :shipping_categories, only: [:index, :create, :update]
-        resources :product_types,       only: [:index, :create, :update]
-      end
+      # namespace :wizards do
+      #   resources :brands,              only: [:index, :create, :update]
+      #   resources :products,            only: [:new, :create]
+      #   resources :properties,          only: [:index, :create, :update]
+      #   resources :prototypes,          only: [:update]
+      #   resources :tax_categories,      only: [:index, :create, :update]
+      #   resources :shipping_categories, only: [:index, :create, :update]
+      #   resources :product_types,       only: [:index, :create, :update]
+      # end
 
       namespace :multi do
         resources :products do

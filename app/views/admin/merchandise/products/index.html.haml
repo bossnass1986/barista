@@ -1,5 +1,7 @@
 - title t('admin.merchandise.products.title')
 .mdl-cell.mdl-cell--12-col
+  = page_entries_info @products
+.mdl-cell.mdl-cell--12-col
   %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     %thead
       %tr
@@ -22,4 +24,6 @@
               %li.mdl-menu__item= link_to "Edit Variants",  edit_admin_merchandise_multi_product_variant_path(product)
               %li.mdl-menu__item= link_to "Show",  admin_merchandise_product_path(product)
 .mdl-cell.mdl-cell--12-col
-  = link_to t('admin.merchandise.products.new_button'), new_admin_merchandise_product_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect', :id => "new_product_button"
+  = link_to t('admin.merchandise.products.new_button'), new_admin_merchandise_product_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+  = link_to 'Prototypes', admin_merchandise_prototypes_path
+  = paginate @products

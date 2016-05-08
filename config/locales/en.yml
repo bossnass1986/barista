@@ -111,7 +111,9 @@ en:
       discounts: 'Discount Codes'
       orders: 'Orders'
       customers: 'Customers'
-      staff: 'Staff'
+      users: 'Users'
+      referrals: 'Referrals'
+      countries: 'Countries'
       marketing: 'Marketing'
       tax_rates: 'Tax Rates'
       settings: 'Settings'
@@ -123,6 +125,9 @@ en:
           title: 'Tax Rates'
         new:
           title: 'New Tax Rate'
+      countries:
+        index:
+          title: 'Countries'
     dashboard:
       title: 'Dashboard'
       stats_title:
@@ -156,6 +161,10 @@ en:
           title: 'Properties'
         edit:
           title: 'Edit Property'
+    user_datas:
+      referrals:
+        index:
+          title: 'Referrals'
 
 
   time:
