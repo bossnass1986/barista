@@ -26,8 +26,9 @@ class Variant < ActiveRecord::Base
   validates :price,       presence: true, :numericality => true, :format => { :with => /\A(\$)?(\d+)(\.|,)?\d{0,2}?\z/ }
   validates :product_id,  presence: true
   # validates :sku,         presence: true,       length: { maximum: 255 }
+  validates_uniqueness_of :master, conditions: -> { where(master: 't') }
 
-  accepts_nested_attributes_for :variant_properties#, :inventory
+  accepts_nested_attributes_for :variant_properties, reject_if: proc { |attributes| attributes['description'].blank? }, allow_destroy: true
 
   # delegate  :count_on_hand,
   #           :count_pending_to_customer,

@@ -1,31 +1,24 @@
 -#= error_messages_for 'product'
+%h5.headline General Information
 .mdl-textfield.mdl-js-textfield
   = form.text_field :name, class: 'mdl-textfield__input'
   = form.label :name, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield
+  = form.text_area :set_keywords, class: 'mdl-textfield__input'
+  = form.label :set_keywords, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield
+  = form.text_area :meta_keywords, class: 'mdl-textfield__input'
+  = form.label :meta_keywords, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield
+  = form.text_area :meta_description, class: 'mdl-textfield__input'
+  = form.label :meta_description, class: 'mdl-textfield__label'
 
-%fieldset#admin-product-general-info.four.column{:style => "margin-right:25px"}
-  .clear
-  .span-3
-    = form.label :set_keywords, 'Search keywords'
-    %br/
-    (separate with a comma)
-  .span-6.last
-    = form.text_field :set_keywords
-  .clear
-  .span-3
-    = form.label :meta_keywords
-  .span-6.last
-    = form.text_field :meta_keywords
-  .clear
-  .span-3
-    = form.label :meta_description
-  .span-6.last
-    = form.text_field :meta_description
+
   -#.clear
   -#.span-3
-    = form.label :product_type
+  -#  = form.label :product_type
   -#.span-6.last
-    -#= form.select :product_type_id, nested_set_options(ProductType, ProductType.new) {|i| "#{'-' * i.level} #{i.name}" }, { include_blank: true }
+    = form.select :product_type_id, nested_set_options(ProductType, ProductType.new) {|i| "#{'-' * i.level} #{i.name}" }, { include_blank: true }
 %fieldset#admin-product-properties.seven.large-7.column.last
   %legend Properties
   #select-product-prototype
@@ -34,9 +27,9 @@
   #product_properties
     - @all_properties.each do |property|
       #property_property.id{:class=>'property_form', :style=>'display:block;'}
-        - if @product.id && !@product.properties.detect {|p| p.id == property.id}
-          = form.fields_for :product_properties, property.product_properties.find_or_initialize_by(product_id: @product.id) do |product_property_form|
-            .six
-              = property.identifying_name
-              = product_property_form.hidden_field  :property_id
-              = product_property_form.text_field    :description
+        -#- if @product.id && !@product.properties.detect {|p| p.id == property.id}
+        = form.fields_for :product_properties, property.product_properties.find_or_initialize_by(product_id: @product.id) do |product_property_form|
+          .six
+            = property.identifying_name
+            = product_property_form.hidden_field  :property_id
+            = product_property_form.text_field    :description

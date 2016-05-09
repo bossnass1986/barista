@@ -1,4 +1,8 @@
 = form.fields_for :variants, Variant.new(product_id: @product.id), child_index: "new_variants" do |ff|
+  %h5.headline General Information
+  .mdl-textfield.mdl-js-textfield
+    = ff.text_field :sku, class: 'mdl-textfield__input'
+    = ff.label :sku, class: 'mdl-textfield__label'
   #variants_fields_template{:style => "display:block;"}
     .span-6.three.large-3.columns.new_variant_container{:style => "float: left;"}
       %table.span-6.ar-sidebar{:style => "width:240px;"}
@@ -47,6 +51,10 @@
 - @product.variants.each do |variant|
   .span-6.three.large-3.column
     = form.fields_for :variants, variant do |ff|
+      %h5.headline General Information
+      .mdl-textfield.mdl-js-textfield
+        = ff.text_field :sku, class: 'mdl-textfield__input'
+        = ff.label :sku, class: 'mdl-textfield__label'
       %table.span-6.ar-sidebar{:style => "width:240px;"}
         %thead
           %tr

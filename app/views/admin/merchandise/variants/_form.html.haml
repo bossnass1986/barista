@@ -1,36 +1,33 @@
 -#= error_messages_for 'variant'
-%fieldset#admin-product-names.span-12
-  .clear
-  .span-3
-    = form.label :sku
-  .span-6.last
-    = form.text_field :sku
-  .clear
-  .span-3
-    = form.label :price
-  .span-6.last
-    = form.text_field :price
-  .clear
-  .span-3
-    = form.label :cost
-  .span-6.last
-    = form.text_field :cost
-  .clear
-  .span-3
-    = form.label :master
-  .span-6.last
-    = form.check_box :master
-%fieldset#admin-product-properties.span-12
-  %legend Properties
-  #variant_properties.span-12.last
-    - @product.properties.each do |property|
-      .variant_form.left.span-12.last{:id => "variant_#{property.id}"}
-        = form.fields_for :variant_properties, property.variant_properties.find_or_initialize_by(variant_id: @variant.id) do |variant_property_form|
-          .span-4.left
-            = property.display_name
-            \:
-          Primary?: #{variant_property_form.check_box  :primary}
-          %br/
+.mdl-textfield.mdl-js-textfield
+  = form.text_field :sku, class: 'mdl-textfield__input'
+  = form.label :sku, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield
+  = form.number_field :price, class: 'mdl-textfield__input'
+  = form.label :price, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield
+  = form.number_field :cost, class: 'mdl-textfield__input'
+  = form.label :cost, class: 'mdl-textfield__label'
+%label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => :master}
+  = form.check_box :master, :class => 'mdl-switch__input', :id => :master
+  %span.mdl-switch__label Master
+.mdl-cell.mdl-cell--12-col
+  %h5.headline Properties
+  - @product.properties.each do |property|
+    .variant_form.left.span-12.last{:id => "variant_#{property.id}"}
+      = form.fields_for :variant_properties, property.variant_properties.find_or_initialize_by(variant_id: @variant.id) do |variant_property_form|
+        .mdl-textfield.mdl-js-textfield
+          = variant_property_form.text_field :description, class: 'mdl-textfield__input'
+          = variant_property_form.label property.display_name, class: 'mdl-textfield__label'
           = variant_property_form.hidden_field  :property_id
-          Description: #{variant_property_form.text_field    :description}
-          %br/
+        -#.span-4.left
+          = property.display_name
+          \:
+        %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => property.id}
+          = variant_property_form.check_box :primary, :class => 'mdl-switch__input', :id => property.id
+          %span.mdl-switch__label Primary?
+        -#Primary?: #{variant_property_form.check_box  :primary}
+        -#%br/
+
+        -#Description: #{variant_property_form.text_field    :description}
+        -#%br/

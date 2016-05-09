@@ -1,22 +1,20 @@
--#= render :partial => '/admin/merchandise/sub_header'
--#- content_for :sidemenu do
-  .admin_filters
-    = form_tag admin_merchandise_prototypes_path, :method => 'get', :id => "products_search" do
-      = hidden_field_tag :direction, params[:direction]
-      = hidden_field_tag :sort, params[:sort]
-      %label Name
-      = text_field_tag :name, params[:name]
-      %div{:style => "text-align:center"}
-        = submit_tag "Search", :name => nil, :class => 'button red-button'
-.admin_title_header
-  %h3 Prototypes
-  = link_to "New Prototype", new_admin_merchandise_prototype_path, :class  => "button"
-.admin_prototypes
-  %table
+- title t('admin.merchandise.prototypes.index.title')
+.mdl-cell.mdl-cell--12-col
+  = link_to t('admin.merchandise.prototypes.index.new_button'), new_admin_merchandise_prototype_path, :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+.mdl-cell.mdl-cell--12-col
+  %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     %thead
-      %tr.odd
-        %th.column1_header "name"
-    - @prototypes.each do |prototype|
-      %tr{:class => cycle("odd", "")}
-        %td= link_to prototype.name, edit_admin_merchandise_prototype_path(prototype)
-  -#= will_paginate @prototypes
+      %tr
+        %th.mdl-data-table__cell--non-numeric Name
+        %th.mdl-data-table__cell--non-numeric Active
+    %tbody
+      - @prototypes.each do |prototype|
+        %tr
+          %td.mdl-data-table__cell--non-numeric= link_to prototype.name, edit_admin_merchandise_prototype_path(prototype)
+          %td.mdl-data-table__cell--non-numeric= prototype.active? ? 'Yes' : 'No'
+          -#%td.mdl-data-table__cell--non-numeric
+            %button.mdl-button.mdl-js-button.mdl-button--icon{:id => prototype.id}
+              %i.material-icons more_vert
+            %ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect{:for => prototype.id}
+              %li.mdl-menu__item= link_to "Edit Variants",  edit_admin_merchandise_multi_product_variant_path(product)
+              %li.mdl-menu__item= link_to "Show",  admin_merchandise_product_path(product)

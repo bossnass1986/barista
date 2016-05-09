@@ -1,6 +1,4 @@
--#= render :partial => '/admin/merchandise/sub_header'
-%h3
-  Editing Prototype #{@prototype.name}
+- title "Editing Prototype #{@prototype.name}"
 = form_for @prototype, :url  => admin_merchandise_prototype_path(@prototype) do |form|
   = render :partial => '/admin/merchandise/prototypes/form', :locals => {:form => form}
-  = submit_tag "Update", :class  => "button"
+  = form.submit :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'

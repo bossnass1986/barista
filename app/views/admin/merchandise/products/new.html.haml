@@ -1,5 +1,5 @@
-- title t('superman.merchandise.products.new.title')
-#article-sidebar.sidebar
+- title t('admin.merchandise.products.new.title')
+.mdl-cell.mdl-cell--12-col
   = form_for @product, :url  => admin_merchandise_products_path, :html => {:class => ''}  do |form|
     = render :partial => 'form', :locals => {:form => form}
     .generic_submit_button

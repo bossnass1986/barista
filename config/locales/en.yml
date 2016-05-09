@@ -161,6 +161,10 @@ en:
           title: 'Properties'
         edit:
           title: 'Edit Property'
+      prototypes:
+        index:
+          title: 'Prototypes'
+          new_button: 'Add New Prototype'
     user_datas:
       referrals:
         index:
