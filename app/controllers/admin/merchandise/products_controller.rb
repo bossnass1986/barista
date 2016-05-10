@@ -3,7 +3,6 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   authorize_resource
 
   def index
-    # params[:page] ||= 1
     @products = Product.order(:name).page params[:page]
   end
 
@@ -18,13 +17,13 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def new
     form_info
-    # if @prototypes.empty?
-    #   flash[:notice] = "You must create a prototype before you create a product."
-    #   redirect_to new_admin_merchandise_prototype_url
-    # else
+    if @prototypes.empty?
+      flash[:notice] = "You must create a prototype before you create a product."
+      redirect_to new_admin_merchandise_prototype_url
+    else
       @product            = Product.new
-      # @product.prototype  = Prototype.new
-    # end
+      @product.prototype  = Prototype.new
+    end
   end
 
   def create

@@ -39,7 +39,7 @@ class Product < ActiveRecord::Base
   validates :shipping_category_id,  presence: true
   validates :product_type_id,       presence: true
   validates :name,                  presence: true,   length: { maximum: 165 }
-  validates :description_markup,    presence: true,   length: { maximum: 2255 },     if: :active
+  # validates :description_markup,    presence: true,   length: { maximum: 2255 },     if: :active
   validates :meta_keywords,         presence: true,        length: { maximum: 255 }, if: :active
   validates :meta_description,      presence: true,        length: { maximum: 255 }, if: :active
   validates :permalink,             uniqueness: true,      length: { maximum: 150 }

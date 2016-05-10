@@ -150,12 +150,19 @@ en:
         accepted: 'Accepted'
     merchandise:
       products:
-        title: 'Products'
-        new_button: 'Add New Product'
+        index:
+          title: 'Products'
+          product: 'Product Name'
+          available: 'Available'
+          product_type: 'Product Type'
+          new_button: 'Add New Product'
         new:
           title: 'New Product'
         edit:
           title: 'Edit Product'
+        form:
+          summary: 'Summary'
+          properties: 'Properties'
       properties:
         index:
           title: 'Properties'
@@ -169,6 +176,9 @@ en:
       referrals:
         index:
           title: 'Referrals'
+    users:
+      index:
+        title: 'Customers'
 
 
   time:

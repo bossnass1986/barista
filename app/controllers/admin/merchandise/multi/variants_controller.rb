@@ -21,8 +21,8 @@ class Admin::Merchandise::Multi::VariantsController < Admin::BaseController
 
 
   def allowed_params
-    params.require(:product).permit!
-    permit({:variant_properties_attributes => [:id, :product_id, :sku, :name, :price, :cost, :deleted_at, :master, :brand_id, :inventory_id]} )
+    params.require(:product).permit({:variant_properties_attributes => [:id, :product_id, :sku, :name, :price, :cost, :deleted_at, :master, :brand_id, :inventory_id]} )
+    # permit({:variant_properties_attributes => [:id, :product_id, :sku, :name, :price, :cost, :deleted_at, :master, :brand_id, :inventory_id]} )
   end
 
   def image_groups

@@ -1,4 +1,4 @@
-- title 'Users'
+- title t('admin.users.index.title')
 .mdl-cell.mdl-cell--12-col
   %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
     %thead
@@ -24,19 +24,3 @@
           -#%td.mdl-data-table__cell--non-numeric= user.last_sign_in_at
           -#%td.mdl-data-table__cell--non-numeric= user.
           %td= user.state
-
--#.admin_users
-  %table
-    %thead
-      %tr.odd
-        %th.column1_header "first_name"
-        %th "last_name"
-        %th "email"
-        %th Status
-    - @users.each do |user|
-      %tr{:class => cycle("odd", "")}
-        %td= link_to user.first_name, admin_user_path(user)
-        %td= user.last_name
-        %td= user.email
-        %td= user.state
-  -#= will_paginate @users
