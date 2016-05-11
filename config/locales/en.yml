@@ -93,6 +93,10 @@ en:
         title: 'Account Details'
         update_button: 'Update Account'
       new:
+        submit_button: 'Join Now'
+    sessions:
+      new:
+        submit_button: 'Login'
 
 
   supplier:

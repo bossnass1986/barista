@@ -17,7 +17,7 @@ Order.destroy_all
 Property.delete_all
 
 puts 'Creating Control Users'
-User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@bng.com.au', password: 'paul1234').add_role(:platform_admin)
+# User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@bng.com.au', password: 'paul1234').add_role(:platform_admin)
 # User.create!(id:2, first_name: 'Supplier Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au').add_role(:supplier_admin)
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
 # User.create!(id:4, first_name: 'Supplier Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)

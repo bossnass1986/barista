@@ -1,0 +1,22 @@
+!!!
+%html{lang: :en}
+  %head
+    = render 'shared/meta_data'
+    = stylesheet_link_tag 'application'
+    = yield :head
+    / Material Design icon font
+    %link{:href => '//fonts.googleapis.com/icon?family=Material+Icons', :rel => 'stylesheet'}/
+    %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
+    %script{:defer => '', :src => '//js.braintreegateway.com/v2/braintree.js'}
+    = csrf_meta_tags
+  %body
+    %main.mdl-layout__content
+      .page-content
+        .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+          .mdl-tabs__tab-bar
+            %a.mdl-tabs__tab.is-active{:href => '#login-panel'} Login
+            %a.mdl-tabs__tab{:href => '#join-now-panel'} Join Now
+          #login-panel.mdl-tabs__panel.is-active
+            = render 'devise/sessions/new'
+          #join-now-panel.mdl-tabs__panel
+            = render 'devise/registrations/new'

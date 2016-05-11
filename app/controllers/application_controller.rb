@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def product_types
-    @product_types ||= ProductType.roots
+    # @product_types ||= ProductType.roots
   end
 
   private
@@ -43,15 +43,6 @@ class ApplicationController < ActionController::Base
     false
   end
 
-  def pagination_page
-    params[:page] ||= 1
-    params[:page].to_i
-  end
-
-  def pagination_rows
-    params[:rows] ||= 25
-    params[:rows].to_i
-  end
 
   def myaccount_tab
     false
@@ -59,19 +50,6 @@ class ApplicationController < ActionController::Base
 
   def require_user
     redirect_to login_url and store_return_location and return if logged_out?
-  end
-
-  def store_return_location
-    # disallow return to login, logout, signup pages
-    disallowed_urls = [ login_url, logout_url ]
-    disallowed_urls.map!{|url| url[/\/\w+$/]}
-    unless disallowed_urls.include?(request.url)
-      session[:return_to] = request.url
-    end
-  end
-
-  def logged_out?
-    !current_user
   end
 
   def search_product
@@ -178,4 +156,5 @@ class ApplicationController < ActionController::Base
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
   end
+
 end
