@@ -1,26 +1,94 @@
-= form.fields_for :variants, Variant.new(product_id: @product.id), child_index: "new_variants", :class => 'mdl-grid' do |ff|
-  .mdl-cell.mdl-cell--4-col
-    .mdl-card.mdl-shadow--4dp
-      .mdl-card__media
-        %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
-      .mdl-card__supporting-text
-        .mdl-textfield.mdl-js-textfield
-          = ff.text_field :sku, class: 'mdl-textfield__input'
-          = ff.label :sku, class: 'mdl-textfield__label'
-        .mdl-textfield.mdl-js-textfield
-          = ff.number_field :price, class: 'mdl-textfield__input'
-          = ff.label :price, class: 'mdl-textfield__label'
-        .mdl-textfield.mdl-js-textfield
-          = ff.number_field :cost, class: 'mdl-textfield__input'
-          = ff.label :cost, class: 'mdl-textfield__label'
-
-      #variants_fields_template{:style => "display:block;"}
-        .span-6.three.large-3.columns.new_variant_container{:style => "float: left;"}
-          %table.span-6.ar-sidebar{:style => "width:240px;"}
-            %tr
-              %td
-              %td{:style => "float:right;"}
-                = link_to 'remove', '#remove', :class => 'remove_variant_child'
+.mdl-grid
+  = form.fields_for :variants, Variant.new(product_id: @product.id), child_index: "new_variants" do |ff|
+    .mdl-cell.mdl-cell--4-col
+      .mdl-card.mdl-shadow--4dp
+        -#.mdl-card__media
+          %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
+        .mdl-card__supporting-text
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            = ff.text_field :sku, class: 'mdl-textfield__input'
+            = ff.label :sku, class: 'mdl-textfield__label'
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            = ff.number_field :price, class: 'mdl-textfield__input'
+            = ff.label :price, class: 'mdl-textfield__label'
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            = ff.number_field :cost, class: 'mdl-textfield__input'
+            = ff.label :cost, class: 'mdl-textfield__label'
+          - @product.properties.each do |property|
+            - variant_id = variant.id rescue nil
+            - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
+            - variant_property ||= VariantProperty.new(:property_id => property.id)
+            = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
+              .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                = variant_property_form.text_field :property_id, class: 'mdl-textfield__input'
+                = variant_property_form.label property.display_name, class: 'mdl-textfield__label'
+              -#%tr
+                -#%td
+                  Primary? #{variant_property_form.check_box  :primary}
+                %td
+                  = variant_property_form.hidden_field  :property_id
+                  = variant_property_form.text_field    :description, class: 'span-3'
+        #variants_fields_template{:style => "display:block;"}
+          .span-6.three.large-3.columns.new_variant_container{:style => "float: left;"}
+            -#%table.span-6.ar-sidebar{:style => "width:240px;"}
+              %tr
+                %td
+                %td{:style => "float:right;"}
+                  = link_to 'remove', '#remove', :class => 'remove_variant_child'
+              -#%tr
+                %td Name
+                %td
+                  = ff.text_field :name,  class: 'span-3'
+              -#%tr
+                %td Images
+                %td
+                  = ff.select :image_group_id, image_groups,{ include_blank: true, prompt: "Defaults to product's images" }
+              %tr
+                %td  
+                %td  
+              %tr
+                - @product.properties.each do |property|
+                  %tr{:style => "background:#ACF;text-align:center;"}
+                    %th{:colspan => "2"}
+                      = property.display_name
+                  - variant_id = variant.id rescue nil
+                  - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
+                  - variant_property ||= VariantProperty.new(:property_id => property.id)
+                  = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
+                    %tr
+                      %td
+                        Primary? #{variant_property_form.check_box  :primary}
+                      %td
+                        = variant_property_form.hidden_field  :property_id
+                        = variant_property_form.text_field    :description, class: 'span-3'
+  - @product.variants.each do |variant|
+    = form.fields_for :variants, variant do |ff|
+      .mdl-cell.mdl-cell--4-col
+        .mdl-card.mdl-shadow--4dp
+          -#.mdl-card__media
+            %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
+          .mdl-card__supporting-text
+            -#.mdl-textfield.mdl-js-textfield
+              = ff.text_field :name, class: 'mdl-textfield__input'
+              = ff.label :name, class: 'mdl-textfield__label'
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              = ff.text_field :sku, class: 'mdl-textfield__input'
+              = ff.label :sku, class: 'mdl-textfield__label'
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              = ff.number_field :price, class: 'mdl-textfield__input'
+              = ff.label :price, class: 'mdl-textfield__label'
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              = ff.number_field :cost, class: 'mdl-textfield__input'
+              = ff.label :cost, class: 'mdl-textfield__label'
+            - @product.properties.each do |property|
+              - variant_id = variant.id rescue nil
+              - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
+              - variant_property ||= VariantProperty.new(:property_id => property.id)
+              = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
+                .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                  = variant_property_form.text_field :property_id, class: 'mdl-textfield__input'
+                  = variant_property_form.label property.display_name, class: 'mdl-textfield__label'
+          -#%table.span-.ar-sidebar{:style => "width:240px;"}
             -#%tr
               %td Name
               %td
@@ -30,70 +98,21 @@
               %td
                 = ff.select :image_group_id, image_groups,{ include_blank: true, prompt: "Defaults to product's images" }
             %tr
-              %td  
-              %td  
-            %tr
-              - @product.properties.each do |property|
-                %tr{:style => "background:#ACF;text-align:center;"}
-                  %th{:colspan => "2"}
-                    = property.display_name
-                - variant_id = variant.id rescue nil
-                - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
-                - variant_property ||= VariantProperty.new(:property_id => property.id)
-                = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
-                  %tr
-                    %td
-                      Primary? #{variant_property_form.check_box  :primary}
-                    %td
-                      = variant_property_form.hidden_field  :property_id
-                      = variant_property_form.text_field    :description, class: 'span-3'
-- @product.variants.each do |variant|
-  = form.fields_for :variants, variant do |ff|
-    .mdl-cell.mdl-cell--4-col
-      .mdl-card.mdl-shadow--4dp
-        .mdl-card__media
-          %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
-        .mdl-card__supporting-text
-          -#.mdl-textfield.mdl-js-textfield
-            = ff.text_field :name, class: 'mdl-textfield__input'
-            = ff.label :name, class: 'mdl-textfield__label'
-          .mdl-textfield.mdl-js-textfield
-            = ff.text_field :sku, class: 'mdl-textfield__input'
-            = ff.label :sku, class: 'mdl-textfield__label'
-          .mdl-textfield.mdl-js-textfield
-            = ff.number_field :price, class: 'mdl-textfield__input'
-            = ff.label :price, class: 'mdl-textfield__label'
-          .mdl-textfield.mdl-js-textfield
-            = ff.number_field :cost, class: 'mdl-textfield__input'
-            = ff.label :cost, class: 'mdl-textfield__label'
-
-        %table.span-6.ar-sidebar{:style => "width:240px;"}
-          -#%tr
-            %td Name
-            %td
-              = ff.text_field :name,  class: 'span-3'
-          -#%tr
-            %td Images
-            %td
-              = ff.select :image_group_id, image_groups,{ include_blank: true, prompt: "Defaults to product's images" }
-          %tr
-            %td Inactivate
-            %td
-              = ff.check_box :inactivate, class: 'span-3'
-          - @product.properties.each do |property|
-            %tr{:style => "background:#ACF;text-align:center;"}
-              %th{:colspan => "2"}
-                = property.display_name
-            - variant_id = variant.id rescue nil
-            - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
-            - variant_property ||= VariantProperty.new( property_id: property.id )
-            - variant_property.errors.add(:description, "can't be blank.") unless variant_id
-            = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
-              %tr
-                %td
-                  Primary? #{variant_property_form.check_box  :primary}
-                %td
-                  = variant_property_form.hidden_field  :property_id
-                  = variant_property_form.text_field    :description,  class: 'span-3'
-
-                  .mdl-accordion
+              %td Inactivate
+              %td
+                = ff.check_box :inactivate, class: 'span-3'
+            - @product.properties.each do |property|
+              %tr{:style => "background:#ACF;text-align:center;"}
+                %th{:colspan => "2"}
+                  = property.display_name
+              - variant_id = variant.id rescue nil
+              - variant_property = property.variant_properties.find_or_initialize_by(variant_id: variant_id) if variant_id
+              - variant_property ||= VariantProperty.new( property_id: property.id )
+              - variant_property.errors.add(:description, "can't be blank.") unless variant_id
+              = ff.fields_for :variant_properties, variant_property  do |variant_property_form|
+                %tr
+                  %td
+                    Primary? #{variant_property_form.check_box  :primary}
+                  %td
+                    = variant_property_form.hidden_field  :property_id
+                    = variant_property_form.text_field    :description,  class: 'span-3'
