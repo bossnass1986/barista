@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   rolify
 
   before_validation :sanitize_data
-  before_validation :before_validation_on_create, :on => :create
+  after_validation :create_braintree_customer
   before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at
    # TODO add back in for production
@@ -19,9 +19,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-        # , :confirmable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :account
 
@@ -88,6 +86,10 @@ class User < ActiveRecord::Base
             :uniqueness => true,##  This should be done at the DB this is too expensive in rails
             :format   => { :with => CustomValidators::Emails.email_validator },
             :length => { :maximum => 255 }
+  validates :mobile,       :presence => true,
+            :uniqueness => true,##  This should be done at the DB this is too expensive in rails
+            :format   => { :with => CustomValidators::Numbers.phone_number_validator },
+            :length => { :maximum => 10 }
 
   accepts_nested_attributes_for :addresses, :user_roles
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
@@ -271,7 +273,7 @@ class User < ActiveRecord::Base
     # self.account = Account.first unless account_id
   end
 
-  def before_validation_on_create
+  def create_braintree_customer
     self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
     result = Braintree::Customer.create(
         :first_name => self.first_name,

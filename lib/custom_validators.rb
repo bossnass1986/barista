@@ -8,21 +8,24 @@ module CustomValidators
   end
 
   class Numbers
+    # validates australian numbers
     def self.phone_number_validator
       #/\A\d?(?:(?:[\+]?(?:[\d]{1,3}(?:[ ]+|[\-.])))?[(]?(?:[\d]{3})[\-)]?(?:[ ]+)?)?(?:[a-zA-Z2-9][a-zA-Z0-9 \-.]{6,})(?:(?:[ ]+|[xX]|(i:ext[\.]?)){1,2}(?:[\d]{1,5}))?\z/
-      /(?:\+?|\b)[0-9]{10}\b/
-    end
-    def self.us_and_canda_zipcode_validator
-      /(\A\d{5}(-\d{4})?\z)|(\A[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}\z)/
+      # /(?:\+?|\b)[0-9]{10}\b/
+      /\A(04[0-9]{8})\z/
     end
 
-    def self.usps_tracking_number_validator
-      /\b(91\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d|91\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d)\b/i
+    def self.postcode_validator
+      /^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$/
     end
-
-    def self.fedex_tracking_number_validator
-      /\A([0-9]{15}|4[0-9]{11})\z/
-    end
+    #
+    # def self.usps_tracking_number_validator
+    #   /\b(91\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d|91\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d ?\d\d\d\d)\b/i
+    # end
+    #
+    # def self.fedex_tracking_number_validator
+    #   /\A([0-9]{15}|4[0-9]{11})\z/
+    # end
 
     def self.ups_tracking_number_validator
       #/\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?[0-9A-Z]{3} ?[0-9A-Z]|[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/i

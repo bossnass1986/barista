@@ -480,7 +480,7 @@ ActiveRecord::Schema.define(version: 20160405111829) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-05-11', null: false
+    t.date     "start_date",                         default: '2016-05-12', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
