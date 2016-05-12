@@ -599,9 +599,15 @@ a {
   font-weight: 700;
 }
 
+.landing-page-logo {
+  position: relative;
+  background: asset-url('brand/logo_144.png') no-repeat center;
+  height: 160px;
+}
+
 .mdl-layout__drawer .mdl-layout-title {
   position: relative;
-  background: unquote("rgb(#{$palette-teal-100})") asset-url('logo_sidebar.png') no-repeat center;
+  background: unquote("rgb(#{$palette-teal-100})") asset-url('brand/logo_sidebar.png') no-repeat center;
   height: 160px;
 }
 

@@ -8,23 +8,24 @@
         %ul
           - @credit_card.errors.full_messages.each do |msg|
             %li= msg
-  .mdl-cell.mdl-cell--6-col
     .mdl-textfield.mdl-js-textfield
-      %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "text"}/
+      %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "number"}/
       %label.mdl-textfield__label{:for => "sample2"} Card Number...
       %span.mdl-textfield__error= t('myaccount.credit_card.form.credit_card_error')
-  .mdl-cell.mdl-cell--2-col
     .mdl-textfield.mdl-js-textfield
-      %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "text"}/
-      %label.mdl-textfield__label{:for => "sample2"} Month...
+      = f.month_field :month, class: 'mdl-textfield__input'
+      = f.label :month, class: 'mdl-textfield__label'
       %span.mdl-textfield__error= t('myaccount.credit_card.form.credit_card_error')
-  .mdl-cell.mdl-cell--2-col
     .mdl-textfield.mdl-js-textfield
-      %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "text"}/
-      %label.mdl-textfield__label{:for => "sample2"} Year...
+      = f.number_field :year, class: 'mdl-textfield__input'
+      = f.label :year, class: 'mdl-textfield__label'
       %span.mdl-textfield__error= t('myaccount.credit_card.form.credit_card_error')
-  .mdl-cell.mdl-cell--2-col
-    .mdl-textfield.mdl-js-textfield
-      %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "text"}/
-      %label.mdl-textfield__label{:for => "sample2"} CCV...
+    = f.submit t('myaccount.credit_card.form.submit_button'), class: 'mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
+    -#.mdl-textfield.mdl-js-textfield
+      = f.number_field :cvv, class: 'mdl-textfield__input'
+      = f.label :cvv, class: 'mdl-textfield__label'
+      %span.mdl-textfield__error= t('myaccount.credit_card.form.credit_card_error')
+    -#.mdl-textfield.mdl-js-textfield
+      = f.number_field :ccv, class: 'mdl-textfield__input'
+      = f.label :ccv, class: 'mdl-textfield__label'
       %span.mdl-textfield__error= t('myaccount.credit_card.form.credit_card_error')

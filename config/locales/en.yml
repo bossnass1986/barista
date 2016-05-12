@@ -65,6 +65,7 @@ en:
         title: 'Add Payment'
       form:
         credit_card_error: 'Your card number is incorrect'
+        submit_button: 'Add New Payment Method'
     order:
       index:
         title: 'Order History'
