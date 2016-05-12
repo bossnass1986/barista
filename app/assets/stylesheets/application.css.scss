@@ -601,7 +601,7 @@ a {
 
 .mdl-layout__drawer .mdl-layout-title {
   position: relative;
-  background: unquote("rgb(#{$palette-teal-100})") url('logo_sidebar.png') no-repeat center;
+  background: unquote("rgb(#{$palette-teal-100})") asset-url('logo_sidebar.png') no-repeat center;
   height: 160px;
 }
 
@@ -618,7 +618,8 @@ a {
     color: #fff;
     height: 136px;
     //background: transparent;
-    background-image: url('products/cappuccino.jpg');
+    background-image: asset-url('products/cappuccino.jpg');
+    //background-image: url('products/cappuccino.jpg');
     //background-image: url('https://deliveroo.com.au/assets/images/restaurant-placeholder.png');
     //background-image: linear-gradient(transparent, rgb(64,64,65)), url('products/cappuccino.jpg');
     background-size: 420px 136px;
