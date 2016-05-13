@@ -7,7 +7,10 @@ class Supplier < ActiveRecord::Base
   has_many :products, through: :variants, dependent: :destroy
   has_many :supplier_trading_hours
 
-  # has_many :phones
+  has_many    :phones,          dependent: :destroy,       as: :phoneable
+  has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
+
+  has_many    :addresses,       dependent: :destroy,       as: :addressable
 
   before_validation :sanitize_data
 

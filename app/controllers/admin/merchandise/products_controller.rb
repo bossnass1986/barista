@@ -1,9 +1,7 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
-  helper_method :sort_column, :sort_direction, :product_types
-  authorize_resource
 
   def index
-    @products = Product.order(:name).page params[:page]
+    @products = Product.order(:name).includes(:active_variants, :prototype).page params[:page]
   end
 
   def show
@@ -42,7 +40,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def edit
-    @product        = Product.includes(:properties,:product_properties, {:prototype => :properties}).find(params[:id])
+    @product        = Product.find(params[:id])
     form_info
   end
 

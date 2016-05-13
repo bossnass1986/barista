@@ -4,24 +4,10 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="form fixes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/suppliers/_form.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/suppliers/edit.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/suppliers/index.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/suppliers/new.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/admin/suppliers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/_side_menu.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/_side_menu.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/address.rb" afterPath="$PROJECT_DIR$/app/models/address.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/address_type.rb" afterPath="$PROJECT_DIR$/app/models/address_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role.rb" afterPath="$PROJECT_DIR$/app/models/role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="addresses for supplier">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/supplier.rb" afterPath="$PROJECT_DIR$/app/models/supplier.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="barista.iws" />
@@ -174,7 +160,37 @@
         <entry file="file://$PROJECT_DIR$/app/models/supplier.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="variants_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1899039">
+              <caret line="33" column="62" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product_types_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/product_types_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -214,7 +230,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="2" selection-start-line="93" selection-start-column="2" selection-end-line="94" selection-end-column="115" />
+              <caret line="43" column="77" selection-start-line="40" selection-start-column="2" selection-end-line="43" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -242,10 +258,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/suppliers/_form.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2257182">
+            <state vertical-scroll-proportion="-6.875">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
@@ -343,7 +359,6 @@
         <option value="$PROJECT_DIR$/app/views/admin/users/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
@@ -367,7 +382,6 @@
         <option value="$PROJECT_DIR$/app/views/admin/_side_menu.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/suppliers/new.html.haml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/suppliers_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/suppliers/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/variants/_form.html.haml" />
@@ -381,6 +395,8 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/suppliers/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/models/supplier.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb" />
       </list>
     </option>
   </component>
@@ -1035,12 +1051,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00113" summary="admin users">
-      <created>1459776228732</created>
-      <option name="number" value="00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1459776228732</updated>
-    </task>
     <task id="LOCAL-00114" summary="admin users">
       <created>1459776693864</created>
       <option name="number" value="00114" />
@@ -1329,7 +1339,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463060045290</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="addresses for supplier">
+      <created>1463149007053</created>
+      <option name="number" value="00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1463149007053</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1343,7 +1359,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1357,7 +1373,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.47997138" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44900662" sideWeight="0.47997138" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1402,7 +1418,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="model fixes" />
     <MESSAGE value="css fixed" />
     <MESSAGE value="remove scss" />
     <MESSAGE value="css to scss" />
@@ -1427,7 +1442,8 @@
     <MESSAGE value="validations" />
     <MESSAGE value="asset pipeline fixes" />
     <MESSAGE value="form fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="form fixes" />
+    <MESSAGE value="addresses for supplier" />
+    <option name="LAST_COMMIT_MESSAGE" value="addresses for supplier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1436,14 +1452,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1629,14 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/suppliers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1801,8 +1801,8 @@
         <state vertical-scroll-proportion="-7.5833335">
           <caret line="20" column="77" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
           <folding>
-            <element signature="e#8#40#1#ruby" expanded="true" />
-            <element signature="e#80#117#0#ruby" expanded="true" />
+            <element signature="e#8#40#1#ruby" expanded="false" />
+            <element signature="e#80#117#0#ruby" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1825,14 +1825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/variant_property.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1849,26 +1841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/supplier.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8807947">
           <caret line="108" column="25" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="2" selection-start-line="93" selection-start-column="2" selection-end-line="94" selection-end-column="115" />
           <folding />
         </state>
       </provider>
@@ -1907,8 +1883,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/suppliers/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2257182">
+        <state vertical-scroll-proportion="-6.875">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="77" selection-start-line="40" selection-start-column="2" selection-end-line="43" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/supplier.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/product_types_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1899039">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding />
         </state>
       </provider>

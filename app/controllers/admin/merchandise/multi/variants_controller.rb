@@ -1,7 +1,7 @@
 class Admin::Merchandise::Multi::VariantsController < Admin::BaseController
   helper_method :image_groups
   def edit
-    @product        = Product.includes(:properties,:product_properties, {:prototype => :properties}).find(params[:product_id])
+    @product        = Product.find(params[:product_id])
     form_info
     # render :layout => 'admin_markup'
   end
