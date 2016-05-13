@@ -2,6 +2,7 @@ puts 'Did you hear that? They shut down the main reactor.'
 
 
 puts 'Execute Order 66!'
+Role.destroy_all
 User.delete_all
 Country.destroy_all
 Supplier.delete_all
@@ -9,6 +10,7 @@ ProductType.delete_all
 Prototype.delete_all
 Product.delete_all
 Variant.delete_all
+PrototypeProperty.delete_all
 ProductProperty.delete_all
 VariantSupplier.delete_all
 VariantProperty.delete_all
@@ -16,8 +18,13 @@ Cart.destroy_all
 Order.destroy_all
 Property.delete_all
 
+
+%w(customer banned merchant staff admin).each do |role|
+  Role.find_or_create_by({name: role})
+end
+
 puts 'Creating Control Users'
-User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:platform_admin)
+User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:admin)
 # User.create!(id:2, first_name: 'Supplier Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au').add_role(:supplier_admin)
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
 # User.create!(id:4, first_name: 'Supplier Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
@@ -54,8 +61,33 @@ ProductType.create!([
 
 puts 'Creating Standard Product Types'
 Prototype.create!([
-    {id: 1, name: 'Hot'},
-    {id: 2, name: 'Cold '}
+    {id: 1, name: 'Hot', active: true},
+    {id: 2, name: 'Cold', active: true}
+])
+
+PrototypeProperty.create!([
+    {property_id: 1, prototype_id: 1},
+    {property_id: 1, prototype_id: 2},
+    {property_id: 2, prototype_id: 1},
+    {property_id: 2, prototype_id: 2},
+    {property_id: 3, prototype_id: 1},
+    {property_id: 4, prototype_id: 1},
+    {property_id: 5, prototype_id: 1},
+    {property_id: 5, prototype_id: 2},
+])
+
+puts 'Sugar CRUSH!'
+Property.create!([
+   {id:1, display_name: 'Size', identifying_name: :Size},
+   {id:2, display_name: 'Milk' , identifying_name: :Milk},
+   {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
+   {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
+   {id:5, display_name: 'Strength' , identifying_name: :Strenth},
+   {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
+   {id:7, display_name: 'Syrup', identifying_name: :Syrup},
+   {id:8, display_name: 'Flavour', identifying_name: :Flavour},
+   {id:9, display_name: 'Topping', identifying_name: :Toppings},
+   {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
 ])
 
 puts 'Creating Standard Menu Items'
@@ -81,29 +113,15 @@ Product.create!([
 ])
 
 # 'Creating Sample Variants'
-# Variant.create!([
-#   {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95, master: 1},
-#   {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
-#   {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
-#   {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
-#   {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95, master: 1},
-#   {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
-#   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-#   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
-# ])
-
-puts 'Sugar CRUSH!'
-Property.create!([
- {id:1, display_name: 'Size', identifying_name: :Size},
- {id:2, display_name: 'Milk' , identifying_name: :Milk},
- {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
- {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
- {id:5, display_name: 'Strength' , identifying_name: :Strenth},
- {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
- {id:7, display_name: 'Syrup', identifying_name: :Syrup},
- {id:8, display_name: 'Flavour', identifying_name: :Flavour},
- {id:9, display_name: 'Topping', identifying_name: :Toppings},
- {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
+Variant.create!([
+  {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95},
+  {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
+  {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
+  {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
+  {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95},
+  {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
+  # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
+  # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 ])
 
 puts 'Creating Sample Products with Attributes'
@@ -173,7 +191,7 @@ VariantSupplier.create!([
 #   end
 # end
 
-puts "Referral PROGRAMS"
+puts 'Referral PROGRAMS'
 ReferralProgram::PROGRAMS.each do |referral_program_attributes|
   rp = ReferralProgram.find_by(name: referral_program_attributes[:name])
   unless rp
@@ -181,9 +199,19 @@ ReferralProgram::PROGRAMS.each do |referral_program_attributes|
   end
 end
 
-puts "ReferralType"
+puts 'ReferralType'
 ReferralType::NAMES.each do |name|
   ReferralType.find_or_create_by(name: name)
+end
+
+puts 'Address Types'
+AddressType::NAMES.each do |address_type|
+  AddressType.find_or_create_by(name: address_type)
+end
+
+puts 'PHONE TYPES'
+PhoneType::NAMES.each do |phone_type|
+  PhoneType.find_or_create_by(name: phone_type)
 end
 
 puts 'She may not look like much, but she\'s got it where it counts, kid!'

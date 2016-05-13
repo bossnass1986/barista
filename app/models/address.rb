@@ -25,7 +25,7 @@ class Address < ActiveRecord::Base
   before_save :replace_address, if: :replace_address_id
   after_save  :invalidate_old_defaults
 
-  #accepts_nested_attributes_for :phones
+  accepts_nested_attributes_for :phones
 
   # First and last name of the person on the address
   #

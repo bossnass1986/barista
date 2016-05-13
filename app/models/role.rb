@@ -2,7 +2,7 @@ class Role < ActiveRecord::Base
 
   # has_many :abilities
 
-  has_and_belongs_to_many :users, :join_table => :roles_users
+  has_and_belongs_to_many :users, :join_table => :users_roles, dependent: :destroy
   belongs_to :resource, :polymorphic => true
 
   validates :resource_type,

@@ -96,7 +96,7 @@ Rails.application.routes.draw do
       end
     end
     # resources :overviews, only: [:index]
-
+    resources :suppliers
     get "help" => "help#index"
 
     namespace :reports do

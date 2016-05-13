@@ -3,13 +3,14 @@ class AddressType < ActiveRecord::Base
 
   BILLING   = 'Billing'
   SHIPPING  = 'Shipping'
-  #ORDER     = 'Order'
-  NAMES     = [BILLING, SHIPPING] #, ORDER
+  ORDER     = 'Order'
+  MERCHANT  = 'Merchant'
+  NAMES     = [BILLING, SHIPPING, ORDER, MERCHANT] #, ORDER
 
   BILLING_ID  = 1
   SHIPPING_ID = 2
-  #ORDER_ID    = 3
-
+  ORDER_ID    = 3
+  MERCHANT_ID = 4
 
   validates :name, :presence => true,       :length => { :maximum => 55 }
 

@@ -140,7 +140,7 @@ class User < ActiveRecord::Base
   # @param [none]
   # @return [ Boolean ]
   def super_admin?
-    role?(:super_administrator)
+    role?(:platform_admin)
   end
 
   # returns true or false if the user is a registered user or not

@@ -18,6 +18,9 @@ class Supplier < ActiveRecord::Base
   # after_validation :geocode
   # after_create :sanitize_dates
 
+  accepts_nested_attributes_for :addresses
+  accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
+
   def product_image_available(product)
     (Rails.application.assets.find_asset("products/#{product.downcase.tr(' ', '-')}.jpg").nil?) ?
         ActionController::Base.helpers.asset_url('products/generic.jpg', size: '50', alt: product.titlecase, title: product.titlecase) :
@@ -36,18 +39,9 @@ class Supplier < ActiveRecord::Base
     end
   end
 
-  SQL_FIND_SIZES = "SELECT products.id,
-                           LEFT(variant_properties.description,1) AS short_desc,
-                           variants.price
-                    FROM products
-                    INNER JOIN product_properties ON product_properties.product_id = products.id
-                    INNER JOIN variant_properties ON product_properties.property_id = variant_properties.property_id
-                    INNER JOIN properties ON     properties.id           = product_properties.property_id
-                                             AND properties.id           = variant_properties.property_id
-                                             AND properties.display_name = 'Size'
-                    INNER JOIN variants ON variants.product_id = products.id AND variants.id = variant_properties.variant_id"
-  def self.sizes
-    self.find_by_sql SQL_FIND_SIZES
+  def number_of_products
+    # self.variants.product.group('products.id').count
+    self.products.count(:id, :distinct => true)
   end
 
   def self.find_by_product_types(product_type_id)

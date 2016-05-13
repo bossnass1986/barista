@@ -110,7 +110,7 @@ en:
       side_bar_title: 'Admin Menu'
       side_bar_sub_title: 'Application Menu'
     side_menu:
-      merchants: 'Venues'
+      merchants: 'Merchants'
       dashboard: 'Dashboard'
       products: 'Menu Items'
       discounts: 'Discount Codes'
@@ -165,6 +165,9 @@ en:
           title: 'New Product'
         edit:
           title: 'Edit Product'
+          add_image_button: 'Add Image'
+          variants_button: 'View Variants'
+          return_button: 'Back to Products'
         form:
           summary: 'Summary'
           properties: 'Properties'
@@ -177,6 +180,10 @@ en:
         index:
           title: 'Prototypes'
           new_button: 'Add New Prototype'
+    suppliers:
+        index:
+          title: 'Merchants'
+          new_button: 'Add New Merchant'
     user_datas:
       referrals:
         index:

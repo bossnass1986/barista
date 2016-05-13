@@ -1,0 +1,4 @@
+-title "Editing Supplier - #{@supplier.name}"
+= form_for @supplier, :url  => admin_supplier_path(@supplier) do |form|
+  = render :partial => '/admin/suppliers/form', :locals => {:form => form}
+  = submit_tag "Update", :class  => "button"

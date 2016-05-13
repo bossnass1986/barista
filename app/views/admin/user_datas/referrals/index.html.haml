@@ -1,5 +1,11 @@
 - title t('admin.user_datas.referrals.index.title')
 .mdl-cell.mdl-cell--12-col
+  = link_to "Assign Referral", new_admin_user_datas_referral_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+  = link_to "Apply Referrals",                       |
+    apply_admin_user_datas_referral_path(0),         |
+    :data => { :confirm => 'Are you sure?' },
+    :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored', :method => 'POST'
+.mdl-cell.mdl-cell--12-col
   %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
     %thead
       %tr
@@ -31,9 +37,3 @@
           %td= referral.applied
           %td= link_to "", [:admin, :user_datas, referral], :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'ss_sprite ss_cross'
 .mdl-cell.mdl-cell--12-col
-  %p= link_to "Assign Referral", new_admin_user_datas_referral_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
-  %p
-    = link_to "Apply Referrals",                       |
-      apply_admin_user_datas_referral_path(0),         |
-      :data => { :confirm => 'Are you sure?' },        |
-      :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored', :method => 'POST'

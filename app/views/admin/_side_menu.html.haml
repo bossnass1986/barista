@@ -5,15 +5,18 @@
 = link_to admin_history_orders_path, class: 'mdl-navigation__link' do
   %i.material-icons move_to_inbox
   = t('admin.side_menu.orders')
-= link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
-  %i.material-icons local_cafe
-  = t('admin.side_menu.products')
-= link_to admin_generic_coupons_path, class: 'mdl-navigation__link' do
-  %i.material-icons content_cut
-  = t('admin.side_menu.discounts')
 = link_to admin_users_path, class: 'mdl-navigation__link' do
   %i.material-icons people
   = t('admin.side_menu.customers')
+= link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
+  %i.material-icons local_cafe
+  = t('admin.side_menu.products')
+= link_to admin_suppliers_path, class: 'mdl-navigation__link' do
+  %i.material-icons store_mall_directory
+  = t('admin.side_menu.merchants')
+= link_to admin_generic_coupons_path, class: 'mdl-navigation__link' do
+  %i.material-icons content_cut
+  = t('admin.side_menu.discounts')
 = link_to admin_user_datas_referrals_path, class: 'mdl-navigation__link' do
   %i.material-icons plus_one
   = t('admin.side_menu.referrals')

@@ -98,11 +98,11 @@ Rails.application.configure do
   config.log_level = :debug # In any environment initializer, or
   # Rails.logger.level = 0 # at any time
 
-  # config.after_initialize do
-  #   Bullet.enable = true
-  #   Bullet.alert = true
-  #   Bullet.bullet_logger = true
-  #   Bullet.console = true
-  # end
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+  end
 
 end
