@@ -900,13 +900,11 @@
     <table name="suppliers" schema="public" catalog="beanngone_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc3VwcGxpZXJzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="address" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="latitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="longitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="email" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="phone" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="permalink" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTEgMjI6NDc6MTMuMTYyMjY1Jw=="/>
+      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTIgMjA6Mjg6NDEuMjc2MTUyJw=="/>
       <column name="deleted_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="meta_keywords" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="meta_description" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -915,7 +913,6 @@
       <column name="updated_at" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
       <primary-key name="suppliers_pkey" columns="id"/>
       <index name="index_suppliers_on_permalink" unique="true" columns="permalink"/>
-      <index name="index_suppliers_on_phone" unique="true" columns="phone"/>
       <index name="index_suppliers_on_name" unique="false" columns="name"/>
     </table>
     <table name="suppliers_id_seq" schema="public" catalog="beanngone_dev" type="SEQUENCE">

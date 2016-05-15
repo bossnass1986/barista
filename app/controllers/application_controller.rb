@@ -15,15 +15,20 @@ class ApplicationController < ActionController::Base
                 :customer_confirmation_page_view,
                 :sort_direction
 
+
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = 'Access denied.'
-    flash[:alert] = 'Sorry you are not allowed to do that.'
-    if current_user && current_user.admin?
-      redirect_to :back
-    else
-      redirect_to root_url
-    end
+    redirect_to root_url, :alert => exception.message
   end
+
+  # rescue_from CanCan::AccessDenied do |exception|
+  #   flash[:error] = 'Access denied.'
+  #   flash[:alert] = 'Sorry you are not allowed to do that.'
+  #   if current_user && current_user.admin?
+  #     redirect_to :back
+  #   else
+  #     redirect_to root_url
+  #   end
+  # end
 
   rescue_from ActiveRecord::DeleteRestrictionError do |exception|
     redirect_to :back, alert: exception.message

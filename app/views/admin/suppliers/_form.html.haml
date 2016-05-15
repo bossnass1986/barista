@@ -8,15 +8,17 @@
   %label Email
   = form.text_field :email
 
+= form.fields_for :phone do |phone_fields|
+  %li= phone_fields.text_field :number
 
-%li= f.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
-  %li= f.text_field :last_name, placeholder: :last_name, value: current_user.last_name
-  %li= f.text_field :address1, placeholder: :address_1
-  %li= f.text_field :address2, placeholder: :address_2
-  %li= f.text_field :city, placeholder: :city
-  %li= f.text_field :zip_code, placeholder: :post_code
-  %li= f.select   :state_id, @states, :include_blank => true
-  - if countries.size == 1
-    = f.hidden_field   :country_id
-  - else
-    %li= f.select   :country_id, select_countries, :include_blank => true
+= form.fields_for :address do |address_fields|
+  %li= address_fields.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
+  %li= address_fields.text_field :last_name, placeholder: :last_name, value: current_user.last_name
+  %li= address_fields.text_field :address1, placeholder: :address_1
+  %li= address_fields.text_field :address2, placeholder: :address_2
+  %li= address_fields.text_field :city, placeholder: :city
+  %li= address_fields.text_field :zip_code, placeholder: :post_code
+  -#- if countries.size == 1
+  -#  = address_fields.hidden_field   :country_id
+  -#- else
+  %li=address_fields.select   :country_id, select_countries, :include_blank => true

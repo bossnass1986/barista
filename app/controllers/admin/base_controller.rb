@@ -1,8 +1,7 @@
 class Admin::BaseController < ApplicationController
-  # helper_method :recent_admin_users
   layout 'superman'
 
-  # before_filter :verify_admin
+  load_and_authorize_resource
 
   # def current_ability
   #   @current_ability ||= AdminAbility.new(current_user)

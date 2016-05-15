@@ -8,9 +8,8 @@ class User < ActiveRecord::Base
   rolify
 
   before_validation :sanitize_data
-  after_validation :create_braintree_customer
   before_create :start_store_credits#, :subscribe_to_newsletters
-  after_create  :set_referral_registered_at
+  after_create  :set_referral_registered_at, :create_braintree_customer, :assign_user_role
    # TODO add back in for production
   # after_validation :geocode
 
@@ -287,6 +286,10 @@ class User < ActiveRecord::Base
     else
       p result.errors
     end
+  end
+
+  def assign_user_role
+    self.add_role(:customer)
   end
 
 end

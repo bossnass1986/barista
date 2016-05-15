@@ -43,7 +43,8 @@ gem 'paperclip'
 gem 'pg_search'
 
 # Phone Management
-gem 'twilio-ruby'
+gem 'sinch_sms'
+# gem 'twilio-ruby'
 
 gem 'rails_12factor', group: :production
 # gem 'seed_dump'

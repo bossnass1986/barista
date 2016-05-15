@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :images
   # mount Resque::Server.new, at: "/resque"
 
-  namespace(:admin){ namespace(:customer_service){ resources :comments } }
+  # namespace(:admin){ namespace(:customer_service){ resources :comments } }
 
   devise_for :users, :path => '',
              :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'},

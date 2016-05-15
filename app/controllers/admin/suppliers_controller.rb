@@ -14,6 +14,7 @@ class Admin::SuppliersController < Admin::BaseController
 
     if @supplier.save
       redirect_to :action => :index
+      SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', 'Supplier Created', '61430091464')
     else
       flash[:error] = "The supplier could not be saved"
       render :action => :new
@@ -44,14 +45,7 @@ class Admin::SuppliersController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:supplier).permit(:name, :email)
+    params.require(:supplier).permit(:name, :email, {:address => [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id], :phone => [:number]})
   end
 
-  def sort_column
-    Supplier.column_names.include?(params[:sort]) ? params[:sort] : "id"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
 end

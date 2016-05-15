@@ -43,6 +43,7 @@ en:
       order_history: 'Order History'
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
+      back_to_app: 'Back to App'
       log_out: 'Log Out'
     address:
       index:

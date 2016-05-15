@@ -4,7 +4,7 @@ class Shopping::SuppliersController < Shopping::BaseController
   # GET /suppliers
   def index
     # Only pull the fields we require
-    @suppliers = Supplier.select('name','address','permalink','featured').order(featured: :desc, id: :asc).page(params[:page])
+    @suppliers = Supplier.select('name','permalink','featured').order(featured: :desc, id: :asc).page(params[:page])
   end
 
   # GET /suppliers/1

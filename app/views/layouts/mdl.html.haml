@@ -8,6 +8,7 @@
     %link{:href => '//fonts.googleapis.com/icon?family=Material+Icons', :rel => 'stylesheet'}/
     %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
     %script{:defer => '', :src => '//js.braintreegateway.com/v2/braintree.js'}
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
     / Always shows a header, even in smaller screens.
@@ -30,4 +31,6 @@
           = render 'shared/compact_menu'
       %main.mdl-layout__content
         .page-content
+          - flash.each do |key, value|
+            %div{:class => "alert alert-#{key}"}= value
           = yield

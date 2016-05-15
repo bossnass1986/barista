@@ -2,30 +2,42 @@
 = link_to admin_path, class: 'mdl-navigation__link' do
   %i.material-icons dashboard
   = t('admin.side_menu.dashboard')
-= link_to admin_history_orders_path, class: 'mdl-navigation__link' do
-  %i.material-icons move_to_inbox
-  = t('admin.side_menu.orders')
-= link_to admin_users_path, class: 'mdl-navigation__link' do
-  %i.material-icons people
-  = t('admin.side_menu.customers')
-= link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
-  %i.material-icons local_cafe
-  = t('admin.side_menu.products')
-= link_to admin_suppliers_path, class: 'mdl-navigation__link' do
-  %i.material-icons store_mall_directory
-  = t('admin.side_menu.merchants')
-= link_to admin_generic_coupons_path, class: 'mdl-navigation__link' do
-  %i.material-icons content_cut
-  = t('admin.side_menu.discounts')
+- if can? :update, @user
+  = link_to admin_history_orders_path, class: 'mdl-navigation__link' do
+    %i.material-icons move_to_inbox
+    = t('admin.side_menu.orders')
+- if can? :update, @order
+  = link_to admin_users_path, class: 'mdl-navigation__link' do
+    %i.material-icons people
+    = t('admin.side_menu.customers')
+- if can? :update, @product
+  = link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
+    %i.material-icons local_cafe
+    = t('admin.side_menu.products')
+- if can? :update, @supplier
+  = link_to admin_suppliers_path, class: 'mdl-navigation__link' do
+    %i.material-icons store_mall_directory
+    = t('admin.side_menu.merchants')
+- if can? :update, @coupon
+  = link_to admin_generic_coupons_path, class: 'mdl-navigation__link' do
+    %i.material-icons content_cut
+    = t('admin.side_menu.discounts')
 = link_to admin_user_datas_referrals_path, class: 'mdl-navigation__link' do
   %i.material-icons plus_one
   = t('admin.side_menu.referrals')
 = link_to admin_config_tax_rates_path, class: 'mdl-navigation__link' do
   %i.material-icons monetization_on
   = t('admin.side_menu.tax_rates')
-= link_to admin_config_countries_path, class: 'mdl-navigation__link' do
-  %i.material-icons language
-  = t('admin.side_menu.countries')
+- if can? :update, @country
+  = link_to admin_config_countries_path, class: 'mdl-navigation__link' do
+    %i.material-icons language
+    = t('admin.side_menu.countries')
 = link_to '', class: 'mdl-navigation__link' do
   %i.material-icons settings
   = t('admin.side_menu.settings')
+= link_to root_path, class: 'mdl-navigation__link' do
+  %i.material-icons launch
+  = t('myaccount.index.back_to_app')
+= link_to root_path, class: 'mdl-navigation__link' do
+  %i.material-icons exit_to_app
+  = t('myaccount.index.back_to_app')

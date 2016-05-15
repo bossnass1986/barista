@@ -14,7 +14,7 @@
         %span.mdl-list__item-primary-content
           = image_tag 'products/cappuccino.jpg', class: 'mdl-list__item-avatar'
           %span= supplier.name.truncate(25).titlecase
-          %span.mdl-list__item-text-body= supplier.address.titlecase
+          -#%span.mdl-list__item-text-body= supplier.address.titlecase
         %span.mdl-list__item-secondary-content
           %i.material-icons
             chevron_right

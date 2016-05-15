@@ -5,11 +5,11 @@ puts 'Execute Order 66!'
 Role.destroy_all
 User.delete_all
 Country.destroy_all
-Supplier.delete_all
+Supplier.destroy_all
 ProductType.delete_all
 Prototype.delete_all
 Product.delete_all
-Variant.delete_all
+Variant.destroy_all
 PrototypeProperty.delete_all
 ProductProperty.delete_all
 VariantSupplier.delete_all
@@ -24,8 +24,8 @@ Property.delete_all
 end
 
 puts 'Creating Control Users'
-User.create!(id:1, first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:admin)
-# User.create!(id:2, first_name: 'Supplier Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au').add_role(:supplier_admin)
+User.create!(first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:admin)
+User.create!(first_name: 'Supplier', last_name: 'Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: '123456')
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
 # User.create!(id:4, first_name: 'Supplier Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
 
@@ -153,10 +153,10 @@ ProductProperty.create!([
 #   Supplier.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
 # end
 Supplier.create!([
- {id: 1, name: 'Latte Cartelle Drive Thru Coffee', address: '241 - 245 Princes Hwy, Hallam, VIC 3803', email: 'test@test.com', featured: true},
- {id: 2, name: 'Wedgewood Cafe', address: 'Unit 1/ 94 Wedgewood Rd, Hallam, VIC 3803', email: 'test@test.com'},
- {id: 3, name: 'Fresch Cafe', address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email: 'test@test.com'},
- {id: 4, name: 'Nar Nar Goon Take-Away Cafe', address: '1 Main St, Nar Nar Goon, VIC 3812', email: 'test@test.com'}
+ {id: 1, name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
+ {id: 2, name: 'Wedgewood Cafe', email: 'test@test.com'},
+ {id: 3, name: 'Fresch Cafe', email: 'test@test.com'},
+ {id: 4, name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
 ])
 
 puts 'Creating Sample Suppliers with Menu Items'
