@@ -20,14 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: 'Cuptown'
-  meta_description:       'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
-  meta_keywords:          'Ruby on Rails, ecommerce'
-  product:
-    index:
-      title: 'Menu'
-    show:
-      product_not_available: 'Sorry this product is not currently available.'
+  layouts:
+    mdl:
+      site_name: 'Cup Town'
   shared:
     compact_menu:
       merchants: 'Find Venue'
@@ -38,6 +33,15 @@ en:
       credits: 'Credits'
       referrals: 'Referrals'
       log_out: 'Log Out'
+    meta_data:
+      site_name: 'Cup Town'
+      meta_description: 'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
+      meta_keywords: 'Ruby on Rails, ecommerce'
+  product:
+    index:
+      title: 'Menu'
+    show:
+      product_not_available: 'Sorry this product is not currently available.'
   myaccount:
     index:
       title: 'My Account'

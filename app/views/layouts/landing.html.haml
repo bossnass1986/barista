@@ -14,11 +14,12 @@
       .page-content
         .mdl-grid
           .mdl-cell.mdl-cell--12-col.landing-page-logo
-        .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
-          .mdl-tabs__tab-bar
-            %a.mdl-tabs__tab.is-active{:href => '#login-panel'} Login
-            %a.mdl-tabs__tab{:href => '#join-now-panel'} Join Now
-          #login-panel.mdl-tabs__panel.is-active
-            = render partial: '/sessions/new'
-          #join-now-panel.mdl-tabs__panel
-            = render partial: '/users/new', object: form
+          .mdl-cell.mdl-cell--12-col
+            .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+              .mdl-tabs__tab-bar
+                %a.mdl-tabs__tab.is-active{:href => '#login-panel'} Login
+                %a.mdl-tabs__tab{:href => '#join-now-panel'} Join Now
+              #login-panel.mdl-tabs__panel.is-active
+                = render partial: '/sessions/form'
+              #join-now-panel.mdl-tabs__panel
+                -#= render partial: '/users/new'

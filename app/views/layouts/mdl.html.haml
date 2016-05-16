@@ -17,17 +17,17 @@
         .mdl-layout__header-row
           / Title
           .mdl-layout-title
-            = content_for?(:title) ? yield(:title).upcase : t(:site_name)
+            = content_for?(:title) ? yield(:title).upcase : t('.site_name')
           .mdl-layout-spacer
           / Navigation. We hide it in small screens.
           %nav.mdl-navigation.mdl-layout--large-screen-only
-            -#= link_to 'Link', '', class: 'mdl-navigation__link'
           %nav.mdl-navigation
-            = render 'shared/top_cart'
+            - if signed_in?
+              = render 'shared/top_cart'
       - if signed_in?
         .mdl-layout__drawer
+          / Display brand logo within drawer header
           %span.mdl-layout-title
-            -#= image_tag 'logo_sidebar.png'
           = render 'shared/compact_menu'
       %main.mdl-layout__content
         .page-content
