@@ -36,8 +36,7 @@ en:
       sign_out: Sign out
   passwords:
     create:
-      description: You will receive an email within the next few minutes. It
-        contains instructions for changing your password.
+      description: We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly.
     edit:
       description: Your password has been reset. Choose a new password below.
       title: Change your password

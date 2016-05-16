@@ -4,11 +4,8 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="added clearance to replace devise&#10;started to simplify translations">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/landing.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/landing.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="clearance language updates">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/clearance.en.yml" afterPath="$PROJECT_DIR$/config/locales/clearance.en.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="barista.iws" />
@@ -138,10 +135,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change_password.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="change_password.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66852367">
+            <state vertical-scroll-proportion="-10.0">
               <caret line="235" column="66" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
               <folding>
                 <marker date="1463407761000" expanded="true" signature="1812:1855" placeholder="{...}" />
@@ -191,11 +188,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clearance.en.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clearance.en.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="100" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5874674">
+              <caret line="38" column="149" selection-start-line="38" selection-start-column="149" selection-end-line="38" selection-end-column="149" />
               <folding />
             </state>
           </provider>
@@ -395,8 +392,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/landing.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" />
         <option value="$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb" />
-        <option value="$PROJECT_DIR$/config/locales/clearance.en.yml" />
         <option value="$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml" />
+        <option value="$PROJECT_DIR$/config/locales/clearance.en.yml" />
       </list>
     </option>
   </component>
@@ -1043,18 +1040,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00117" summary="fix controllers that are missing">
-      <created>1459849828067</created>
-      <option name="number" value="00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1459849828068</updated>
-    </task>
-    <task id="LOCAL-00118" summary="model fixes">
-      <created>1459850030522</created>
-      <option name="number" value="00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1459850030522</updated>
-    </task>
     <task id="LOCAL-00119" summary="css fixed">
       <created>1459851067725</created>
       <option name="number" value="00119" />
@@ -1337,7 +1322,19 @@
       <option name="project" value="LOCAL" />
       <updated>1463397318083</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="added clearance to replace devise&#10;started to simplify translations">
+      <created>1463408362052</created>
+      <option name="number" value="00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1463408362052</updated>
+    </task>
+    <task id="LOCAL-00167" summary="added clearance to replace devise&#10;started to simplify translations">
+      <created>1463408462783</created>
+      <option name="number" value="00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1463408462783</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1351,10 +1348,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1410,7 +1407,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="style changes" />
     <MESSAGE value="user changes&#10;supplier page updates to layout, design and colours" />
     <MESSAGE value="heroku fix" />
     <MESSAGE value="supplier style changes" />
@@ -1435,7 +1431,8 @@
     <MESSAGE value="remove unused queries" />
     <MESSAGE value="authorize me" />
     <MESSAGE value="added clearance to replace devise&#10;started to simplify translations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added clearance to replace devise&#10;started to simplify translations" />
+    <MESSAGE value="clearance language updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="clearance language updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1835,14 +1832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="100" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/brand/logo_sidebar.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1874,7 +1863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66852367">
+        <state vertical-scroll-proportion="-10.0">
           <caret line="235" column="66" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
           <folding>
             <marker date="1463407761000" expanded="true" signature="1812:1855" placeholder="{...}" />
@@ -1910,6 +1899,14 @@
             <marker date="1463407761000" expanded="true" signature="15152:15277" placeholder="{...}" />
             <marker date="1463407761000" expanded="true" signature="15427:15428" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5874674">
+          <caret line="38" column="149" selection-start-line="38" selection-start-column="149" selection-end-line="38" selection-end-column="149" />
+          <folding />
         </state>
       </provider>
     </entry>
