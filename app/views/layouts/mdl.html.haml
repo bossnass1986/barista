@@ -24,7 +24,7 @@
             -#= link_to 'Link', '', class: 'mdl-navigation__link'
           %nav.mdl-navigation
             = render 'shared/top_cart'
-      - if user_signed_in?
+      - if signed_in?
         .mdl-layout__drawer
           %span.mdl-layout-title
             -#= image_tag 'logo_sidebar.png'

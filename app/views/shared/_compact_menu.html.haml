@@ -2,25 +2,25 @@
 %nav.mdl-navigation
   = link_to root_path, class: 'mdl-navigation__link' do
     %i.material-icons local_cafe
-    = t('myaccount.index.merchants')
-  = link_to edit_user_registration_path, class: 'mdl-navigation__link' do
-    %i.material-icons account_circle
-    = t('myaccount.index.change_account_info')
+    = t('.merchants')
+  -#= link_to edit_user_registration_path, class: 'mdl-navigation__link' do
+  -#  %i.material-icons account_circle
+  -#  = t('.change_account_info')
   = link_to myaccount_addresses_path, class: 'mdl-navigation__link' do
     %i.material-icons location_on
-    = t('myaccount.index.address_information')
+    = t('.address_information')
   = link_to myaccount_orders_url, class: 'mdl-navigation__link' do
     %i.material-icons history
-    = t('myaccount.index.order_history')
+    = t('.order_history')
   = link_to myaccount_credit_cards_path, class: 'mdl-navigation__link' do
     %i.material-icons credit_card
-    = t('myaccount.index.payment_information')
+    = t('.payment_methds')
   = link_to myaccount_store_credit_path, class: 'mdl-navigation__link' do
     %i.material-icons monetization_on
-    = t('myaccount.index.store_credit_information')
+    = t('.credits')
   = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
     %i.material-icons plus_one
-    = t('myaccount.index.referrals_information')
-  = link_to destroy_user_session_path, class: 'mdl-navigation__link' do
+    = t('.referrals')
+  = link_to sign_out_path, method: :delete, class: 'mdl-navigation__link' do
     %i.material-icons exit_to_app
-    = t('myaccount.index.log_out')
+    = t('.log_out')

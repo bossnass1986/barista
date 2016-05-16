@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 # Deployment
 gem 'rails', '4.2.4'
-ruby '2.2.1'
-
+ruby '2.3.1'
 # ==========
 # MemCachier
 # ==========
@@ -27,7 +26,8 @@ gem 'kaminari'
 gem 'pg'
 
 # User Management
-gem 'devise'
+gem 'clearance'
+# gem 'devise'
 gem 'rolify'
 gem 'cancancan'
 
@@ -45,8 +45,10 @@ gem 'pg_search'
 # Phone Management
 gem 'sinch_sms'
 # gem 'twilio-ruby'
-
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  # ruby '2.2.1'
+end
 # gem 'seed_dump'
 
 gem 'brakeman', :require => false

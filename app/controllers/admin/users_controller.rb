@@ -11,6 +11,7 @@ class Admin::UsersController < Admin::BaseController
     # @user = User.includes([:shipments, :finished_orders, :return_authorizations]).find(params[:id])
     @user = User.includes([:finished_orders]).find(params[:id])
     add_to_recent_user(@user)
+    form_info
   end
 
   def new

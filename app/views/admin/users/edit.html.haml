@@ -1,6 +1,4 @@
-%h3
-  Edit #{@user.name}
-= link_to "Show #{@user.name}", admin_user_path(@user), class: 'tiny success button'
+- title "Edit #{@user.name}"
 = form_for @user, :url => admin_user_path(@user)  do |form|
   = render :partial => '/admin/users/form', :locals => {:form => form}
   = form.submit "Update", :class => 'button'

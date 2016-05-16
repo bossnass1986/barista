@@ -28,23 +28,32 @@ en:
       title: 'Menu'
     show:
       product_not_available: 'Sorry this product is not currently available.'
+  shared:
+    compact_menu:
+      merchants: 'Find Venue'
+      change_account_info: 'My Details'
+      address_information: 'Addresses'
+      order_history: 'Order History'
+      payment_methds: 'Payment Methods'
+      credits: 'Credits'
+      referrals: 'Referrals'
+      log_out: 'Log Out'
   myaccount:
     index:
       title: 'My Account'
-      merchants: 'Find Venue'
       manage_information: 'Manage Information'
       notification_settings: 'Notification Settings'
       configuration_settings: 'Configuration Settings'
       change_account_info: 'My Details'
-      payment_information: 'Payment Methods'
-      address_information: 'Addresses'
-      store_credit_information: 'Credits'
-      referrals_information: 'Referrals'
-      order_history: 'Order History'
+
+
+
+
+
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
       back_to_app: 'Back to App'
-      log_out: 'Log Out'
+
     address:
       index:
         title: 'Addresses'
@@ -110,21 +119,22 @@ en:
     index:
       side_bar_title: 'Admin Menu'
       side_bar_sub_title: 'Application Menu'
-    side_menu:
-      merchants: 'Merchants'
-      dashboard: 'Dashboard'
-      products: 'Menu Items'
-      discounts: 'Discount Codes'
-      orders: 'Orders'
-      customers: 'Customers'
-      users: 'Users'
-      referrals: 'Referrals'
-      countries: 'Countries'
-      marketing: 'Marketing'
-      tax_rates: 'Tax Rates'
-      settings: 'Settings'
-      return_to: 'Return to App'
-      log_out: 'Log Out'
+    shared:
+      side_menu:
+        merchants: 'Merchants'
+        dashboard: 'Dashboard'
+        products: 'Menu Items'
+        discounts: 'Discount Codes'
+        orders: 'Orders'
+        customers: 'Customers'
+        users: 'Users'
+        referrals: 'Referrals'
+        countries: 'Countries'
+        marketing: 'Marketing'
+        tax_rates: 'Tax Rates'
+        settings: 'Settings'
+        back_to_app: 'Return to App'
+        log_out: 'Log Out'
     config:
       tax_rates:
         index:

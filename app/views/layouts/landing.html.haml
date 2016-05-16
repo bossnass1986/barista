@@ -19,6 +19,6 @@
             %a.mdl-tabs__tab.is-active{:href => '#login-panel'} Login
             %a.mdl-tabs__tab{:href => '#join-now-panel'} Join Now
           #login-panel.mdl-tabs__panel.is-active
-            = render 'devise/sessions/new'
+            = render partial: '/sessions/new'
           #join-now-panel.mdl-tabs__panel
-            = render 'devise/registrations/new'
+            = render partial: '/users/new', object: form

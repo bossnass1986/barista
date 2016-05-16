@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Clearance::User
+
   include AASM
   include TransactionAccountable
   include UserCim
@@ -15,10 +17,6 @@ class User < ActiveRecord::Base
 
   geocoded_by :ip_address,
               :latitude => :latitude, :longitude => :longitude
-
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :account
 
@@ -72,23 +70,23 @@ class User < ActiveRecord::Base
   has_many    :payment_profiles
   has_many    :transaction_ledgers, as: :accountable
 
-  has_many    :return_authorizations
-  has_many    :authored_return_authorizations, class_name: 'ReturnAuthorization', foreign_key: 'author_id'
+  # has_many    :return_authorizations
+  # has_many    :authored_return_authorizations, class_name: 'ReturnAuthorization', foreign_key: 'author_id'
 
-  validates :first_name,  presence: true, if: :registered_user?,
-            format:   { with: CustomValidators::Names.name_validator },
-            length:   { maximum: 30 }
-  validates :last_name,   :presence => true, :if => :registered_user?,
-            :format   => { :with => CustomValidators::Names.name_validator },
-            :length => { :maximum => 35 }
-  validates :email,       :presence => true,
-            :uniqueness => true,##  This should be done at the DB this is too expensive in rails
-            :format   => { :with => CustomValidators::Emails.email_validator },
-            :length => { :maximum => 255 }
-  validates :mobile,       :presence => true,
-            :uniqueness => true,##  This should be done at the DB this is too expensive in rails
-            :format   => { :with => CustomValidators::Numbers.phone_number_validator },
-            :length => { :maximum => 10 }
+  # validates :first_name,  presence: true, if: :registered_user?,
+  #           format:   { with: CustomValidators::Names.name_validator },
+  #           length:   { maximum: 30 }
+  # validates :last_name,   :presence => true, :if => :registered_user?,
+  #           :format   => { :with => CustomValidators::Names.name_validator },
+  #           :length => { :maximum => 35 }
+  # validates :email,       :presence => true,
+  #           :uniqueness => true,##  This should be done at the DB this is too expensive in rails
+  #           :format   => { :with => CustomValidators::Emails.email_validator },
+  #           :length => { :maximum => 255 }
+  # validates :mobile,       :presence => true,
+  #           :uniqueness => true,##  This should be done at the DB this is too expensive in rails
+  #           :format   => { :with => CustomValidators::Numbers.phone_number_validator },
+  #           :length => { :maximum => 10 }
 
   accepts_nested_attributes_for :addresses, :user_roles
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
@@ -129,8 +127,8 @@ class User < ActiveRecord::Base
   #
   # @param [none]
   # @return [ Boolean ]
-  def admin?
-    role?(:administrator) || role?(:super_administrator)
+  def staff?
+    role?(:staff) || role?(:admin)
   end
 
   # returns true or false if the user is a super admin or not
@@ -138,8 +136,8 @@ class User < ActiveRecord::Base
   #
   # @param [none]
   # @return [ Boolean ]
-  def super_admin?
-    role?(:platform_admin)
+  def admin?
+    role?(:admin)
   end
 
   # returns true or false if the user is a registered user or not
@@ -273,7 +271,7 @@ class User < ActiveRecord::Base
   end
 
   def create_braintree_customer
-    self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
+    # self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
     result = Braintree::Customer.create(
         :first_name => self.first_name,
         :last_name => self.last_name,

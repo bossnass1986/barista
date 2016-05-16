@@ -1,4 +1,13 @@
-%fieldset
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = form.text_field :first_name, class: 'mdl-textfield__input'
+  = form.label :first_name, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = form.text_field :last_name, class: 'mdl-textfield__input'
+  = form.label :last_name, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = form.email_field :email, class: 'mdl-textfield__input'
+  = form.label :email, class: 'mdl-textfield__label'
+-#%fieldset
   %legend New User
   .row
     .six.large-6.columns
@@ -11,7 +20,7 @@
       = form.text_field :last_name
       %label State
       = form.select :state, @states
-- if current_user.super_admin?
+- if current_user.admin?
   %fieldset#admin-password.span-12
     %p Leave blank if you don't want to change the password.
     %ul
@@ -21,10 +30,9 @@
       %li
         = form.label :password_confirmation
         = form.password_field :password_confirmation
-  %fieldset
-    %legend User Roles
-    - @all_roles.each do |role|
-      .property_form.left.span-9.last
-        - checked = @user.id && @user.roles.include?(role)
-        = check_box_tag "user[role_ids][]", role.id, checked
-        = role.name
+  %legend User Roles
+  - @all_roles.each do |role|
+    %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => role.id}
+      - checked = @user.id && @user.roles.include?(role)
+      = check_box_tag 'user[role_ids][]', role.id, checked, :class => 'mdl-checkbox__input', :id => role.id
+      %span.mdl-checkbox__label= role.name

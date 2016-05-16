@@ -900,11 +900,13 @@
     <table name="suppliers" schema="public" catalog="beanngone_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc3VwcGxpZXJzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="latitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="longitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="email" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="permalink" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTIgMjA6Mjg6NDEuMjc2MTUyJw=="/>
+      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTYgMTk6NDU6MzUuMTMzNzAyJw=="/>
       <column name="deleted_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="meta_keywords" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="meta_description" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -913,6 +915,7 @@
       <column name="updated_at" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
       <primary-key name="suppliers_pkey" columns="id"/>
       <index name="index_suppliers_on_permalink" unique="true" columns="permalink"/>
+      <index name="index_suppliers_on_phone" unique="true" columns="phone"/>
       <index name="index_suppliers_on_name" unique="false" columns="name"/>
     </table>
     <table name="suppliers_id_seq" schema="public" catalog="beanngone_dev" type="SEQUENCE">
@@ -932,7 +935,7 @@
       <column name="percentage" sqlType="numeric" precision="8" scale="2" nullable="false" jdbcType="2" def="MC4w"/>
       <column name="state_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="country_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="start_date" sqlType="date" precision="13" scale="0" nullable="false" jdbcType="91" def="JzIwMTYtMDUtMTEn"/>
+      <column name="start_date" sqlType="date" precision="13" scale="0" nullable="false" jdbcType="91" def="JzIwMTYtMDUtMTYn"/>
       <column name="end_date" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
       <column name="active" sqlType="bool" precision="1" scale="0" nullable="true" jdbcType="-7" def="dHJ1ZQ=="/>
       <column name="created_at" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
@@ -1031,44 +1034,25 @@
       <column name="mobile" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="account_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="customer_cim_id" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="password_salt" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="crypted_password" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="perishable_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="persistence_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="encrypted_password" sqlType="varchar" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="confirmation_token" sqlType="varchar" precision="128" scale="0" nullable="true" jdbcType="12"/>
       <column name="access_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="comments_count" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="sms_notification" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="dHJ1ZQ=="/>
       <column name="push_notification" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="dHJ1ZQ=="/>
       <column name="created_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="encrypted_password" sqlType="varchar" precision="2147483647" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="reset_password_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="reset_password_sent_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="remember_created_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="sign_in_count" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="current_sign_in_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="last_sign_in_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="current_sign_in_ip" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_ip" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="confirmation_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="confirmed_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="confirmation_sent_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="unconfirmed_email" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="failed_attempts" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="unlock_token" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="locked_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="latitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="longitude" sqlType="float8" precision="17" scale="17" nullable="true" jdbcType="8"/>
       <column name="role" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="remember_token" sqlType="varchar" precision="128" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="users_pkey" columns="id"/>
       <index name="index_users_on_access_token" unique="true" columns="access_token"/>
       <index name="index_users_on_email" unique="true" columns="email"/>
       <index name="index_users_on_mobile" unique="true" columns="mobile"/>
-      <index name="index_users_on_perishable_token" unique="true" columns="perishable_token"/>
-      <index name="index_users_on_persistence_token" unique="true" columns="persistence_token"/>
-      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
       <index name="index_users_on_first_name" unique="false" columns="first_name"/>
       <index name="index_users_on_last_name" unique="false" columns="last_name"/>
+      <index name="index_users_on_remember_token" unique="false" columns="remember_token"/>
     </table>
     <table name="users_id_seq" schema="public" catalog="beanngone_dev" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -22454,7 +22438,7 @@
       <column name="email" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="varchar" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="permalink" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTIgMDg6MjA6MjcuMjI4ODQzJw=="/>
+      <column name="available_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="JzIwMTYtMDUtMTIgMTA6MzI6MzMuOTAyMTA2Jw=="/>
       <column name="deleted_at" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="meta_keywords" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="meta_description" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
