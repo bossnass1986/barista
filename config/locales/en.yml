@@ -26,7 +26,8 @@ en:
   shared:
     compact_menu:
       merchants: 'Find Venue'
-      change_account_info: 'My Details'
+      my_details: 'My Details'
+      password: 'Change Password'
       address_information: 'Addresses'
       order_history: 'Order History'
       payment_methds: 'Payment Methods'
@@ -49,15 +50,9 @@ en:
       notification_settings: 'Notification Settings'
       configuration_settings: 'Configuration Settings'
       change_account_info: 'My Details'
-
-
-
-
-
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
       back_to_app: 'Back to App'
-
     address:
       index:
         title: 'Addresses'
@@ -84,6 +79,11 @@ en:
       index:
         title: 'Order History'
         no_orders: 'Oh no! There are no recent orders :-('
+    overviews:
+      edit:
+        title: 'Edit My Details'
+      form:
+        submit_button: 'Save Changes'
     referral:
       index:
         title: 'Referrals'

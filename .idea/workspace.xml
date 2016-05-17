@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="clearance language updates">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/clearance.en.yml" afterPath="$PROJECT_DIR$/config/locales/clearance.en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/clearance.rb" afterPath="$PROJECT_DIR$/config/initializers/clearance.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/custom_validators.rb" afterPath="$PROJECT_DIR$/lib/custom_validators.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="barista.iws" />
@@ -27,7 +37,7 @@
     <SUITE FILE_PATH="coverage/barista@IRB_console__barista.coverage" NAME="IRB console: barista Coverage Results" MODIFIED="1442492645928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@Rails_console__barista.coverage" NAME="Rails console: barista Coverage Results" MODIFIED="1448168066758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_create__barista.coverage" NAME="db:create: barista Coverage Results" MODIFIED="1441028197722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1463403319705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1463467243663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_drop__barista.coverage" NAME="db:drop: barista Coverage Results" MODIFIED="1454669749013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_rollback__barista.coverage" NAME="db:rollback: barista Coverage Results" MODIFIED="1441542297183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1449834784289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
@@ -46,22 +56,6 @@
     <option name="GROUP_BY_TYPE" value="true" />
     <option name="SORT_CHILDREN" value="false" />
     <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Rails barista: development" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -69,115 +63,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="beanngone_dev.public.users" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-              <column-attributes>
-                <column name="ctid" enabled="false" />
-              </column-attributes>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_compact_menu.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-              <folding>
-                <element signature="e#147#162#0#ruby" expanded="true" />
-                <element signature="e#423#448#0#ruby" expanded="true" />
-                <element signature="e#552#571#0#ruby" expanded="true" />
-                <element signature="e#686#706#0#ruby" expanded="true" />
-                <element signature="e#825#838#0#ruby" expanded="true" />
-                <element signature="e#947#962#0#ruby" expanded="true" />
-                <element signature="e#1080#1093#0#ruby" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="77" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mdl.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_meta_data.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_password.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="235" column="66" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
-              <folding>
-                <marker date="1463407761000" expanded="true" signature="1812:1855" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="2098:2149" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="2286:2333" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="2552:3043" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="3223:3714" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="3893:4386" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="4613:5106" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="5376:5419" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="5629:5847" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="6166:6335" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="6535:6702" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="6903:7372" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="7676:7845" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="7871:7930" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="8153:8323" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="8544:8880" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="9180:9349" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="9379:9464" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="9719:9838" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="10061:10397" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="10724:10893" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="11019:15428" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="11904:12010" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="12222:12347" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="12560:12685" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="12897:13022" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="13235:13360" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="13883:14041" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="14309:14434" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="14749:14874" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="15152:15277" placeholder="{...}" />
-                <marker date="1463407761000" expanded="true" signature="15427:15428" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="change_password.text.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -188,98 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clearance.en.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5874674">
-              <caret line="38" column="149" selection-start-line="38" selection-start-column="149" selection-end-line="38" selection-end-column="149" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="en.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="53" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sessions/_form.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#588#601#0#ruby" expanded="true" />
-                <element signature="e#630#651#0#ruby" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clearance.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/clearance.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="65" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#8#50#1#ruby" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/edit.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="8" column="90" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="89" />
-              <folding>
-                <marker date="1462960513000" expanded="true" signature="22:694" placeholder=".mdl-cell.mdl-cell--12-col" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="25" selection-end-column="56" />
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -295,18 +93,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="landing.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/landing.html.haml">
+      <file leaf-file-name="clearance.en.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.583333">
-              <caret line="24" column="54" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="149" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <file leaf-file-name="brakeman.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brakeman.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -315,11 +113,136 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supplier.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/supplier.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="115" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
+              <caret line="21" column="63" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beanngone_dev.public.users" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_compact_menu.html.haml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16415869">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="e#281#297#0#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#1382#1401#0#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/passwords/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="11" column="16" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overviews_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mdl.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/edit.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#8#41#1#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/new.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#8#40#1#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="84" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+              <folding>
+                <element signature="e#8#19#1#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/landing.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.583333">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -343,11 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/suppliers/edit.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/variants/_form.html.haml" />
-        <option value="$PROJECT_DIR$/app/models/address_type.rb" />
         <option value="$PROJECT_DIR$/app/models/role.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/suppliers/index.html.haml" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
@@ -372,21 +290,14 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/_form.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20151220140300_create_suppliers.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160516083238_add_clearance_to_users.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4ab14069-0621-4096-811b-6a492b108389/console.sql" />
-        <option value="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/superman.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/shared/_side_menu.html.haml" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" />
-        <option value="$PROJECT_DIR$/config/initializers/clearance.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/landing.html.haml" />
@@ -394,6 +305,18 @@
         <option value="$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb" />
         <option value="$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml" />
         <option value="$PROJECT_DIR$/config/locales/clearance.en.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/clearance.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
+        <option value="$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.haml" />
+        <option value="$PROJECT_DIR$/lib/custom_validators.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml" />
+        <option value="$PROJECT_DIR$/config/locales/en.yml" />
+        <option value="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
       </list>
     </option>
   </component>
@@ -471,6 +394,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -510,28 +465,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -551,7 +484,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
+              <option name="myItemId" value="passwords" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,11 +516,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -591,47 +534,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clearance_mailer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="myaccount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -650,54 +557,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="barista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="brand" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1040,12 +899,6 @@
       <option name="number" value="Default" />
       <updated>1440855469257</updated>
     </task>
-    <task id="LOCAL-00119" summary="css fixed">
-      <created>1459851067725</created>
-      <option name="number" value="00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1459851067725</updated>
-    </task>
     <task id="LOCAL-00120" summary="remove scss">
       <created>1459851590459</created>
       <option name="number" value="00120" />
@@ -1334,7 +1187,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463408462783</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="clearance language updates">
+      <created>1463408571211</created>
+      <option name="number" value="00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1463408571211</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1351,19 +1210,19 @@
     <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.52288985" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.52575105" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.47711015" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.47424892" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1371,28 +1230,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49271524" sideWeight="0.47997138" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.52288985" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44900662" sideWeight="0.47711015" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1441,102 +1278,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/shopping/suppliers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119205296">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shopping/suppliers/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shopping/suppliers/_supplier.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41039672">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/credit_cards_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/address_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01986755">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/address.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/base_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users_roles">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.roles">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/suppliers/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08163265">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/users/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/users/edit.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1566,14 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1586,14 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66579634">
           <caret line="17" column="82" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1652,62 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#147#162#0#ruby" expanded="true" />
-            <element signature="e#423#448#0#ruby" expanded="true" />
-            <element signature="e#552#571#0#ruby" expanded="true" />
-            <element signature="e#686#706#0#ruby" expanded="true" />
-            <element signature="e#825#838#0#ruby" expanded="true" />
-            <element signature="e#947#962#0#ruby" expanded="true" />
-            <element signature="e#1080#1093#0#ruby" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="53" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/credit_cards/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4ab14069-0621-4096-811b-6a492b108389/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31034482">
@@ -1745,20 +1414,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="77" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#8#50#1#ruby" expanded="true" />
+            <element signature="e#8#50#1#ruby" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1768,7 +1429,7 @@
         <state vertical-scroll-proportion="-5.0">
           <caret line="8" column="90" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="89" />
           <folding>
-            <marker date="1462960513000" expanded="true" signature="22:694" placeholder=".mdl-cell.mdl-cell--12-col" />
+            <marker date="1462960513000" expanded="true" signature="-1:-1" placeholder=".mdl-cell.mdl-cell--12-col" />
           </folding>
         </state>
       </provider>
@@ -1781,14 +1442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5">
@@ -1797,10 +1450,212 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/landing.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.583333">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/brand/logo_sidebar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="149" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brakeman.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/product_types_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66852367">
+          <caret line="235" column="66" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
+          <folding>
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1463407761000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20891365">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concerns/presentation/user_presenter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/clearance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2781457">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/edit.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#8#41#1#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/new.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#8#40#1#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.49247605">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/custom_validators.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43269232">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/credit_cards/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1816,97 +1671,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/landing.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.583333">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/brand/logo_sidebar.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/clearance.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="235" column="66" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/passwords/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="16" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="84" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
           <folding>
-            <marker date="1463407761000" expanded="true" signature="1812:1855" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="2098:2149" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="2286:2333" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="2552:3043" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="3223:3714" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="3893:4386" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="4613:5106" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="5376:5419" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="5629:5847" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="6166:6335" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="6535:6702" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="6903:7372" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="7676:7845" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="7871:7930" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="8153:8323" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="8544:8880" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="9180:9349" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="9379:9464" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="9719:9838" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="10061:10397" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="10724:10893" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="11019:15428" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="11904:12010" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="12222:12347" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="12560:12685" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="12897:13022" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="13235:13360" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="13883:14041" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="14309:14434" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="14749:14874" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="15152:15277" placeholder="{...}" />
-            <marker date="1463407761000" expanded="true" signature="15427:15428" placeholder="{...}" />
+            <element signature="e#8#19#1#ruby" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/clearance.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5874674">
-          <caret line="38" column="149" selection-start-line="38" selection-start-column="149" selection-end-line="38" selection-end-column="149" />
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#1382#1401#0#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16415869">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#281#297#0#ruby" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

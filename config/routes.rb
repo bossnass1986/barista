@@ -4,14 +4,13 @@ Rails.application.routes.draw do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
 
+  resources :users, controller: :users, only: :create
+
   resources :images
   # mount Resque::Server.new, at: "/resque"
 
   # namespace(:admin){ namespace(:customer_service){ resources :comments } }
 
-  # devise_for :users, :path => '',
-  #            :path_names => {sign_in: :'myaccount/login', sign_out: :'myaccount/logout', edit: :'myaccount/edit'},
-  #            :controllers => { registrations: 'registrations' }
 
   get 'admin'       => 'admin/dashboard#index'
   # get 'login'       => 'user_sessions#new'

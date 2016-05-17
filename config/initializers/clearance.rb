@@ -14,6 +14,5 @@ Clearance.configure do |config|
   config.sign_in_guards = []
   config.user_model = User
 
-
   Clearance::SessionsController.layout 'landing'
 end
