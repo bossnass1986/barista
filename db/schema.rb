@@ -457,11 +457,7 @@ ActiveRecord::Schema.define(version: 20160516083238) do
 
   create_table "suppliers", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
     t.string   "email"
-    t.string   "phone"
     t.string   "permalink",        limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
@@ -474,13 +470,12 @@ ActiveRecord::Schema.define(version: 20160516083238) do
 
   add_index "suppliers", ["name"], name: "index_suppliers_on_name", using: :btree
   add_index "suppliers", ["permalink"], name: "index_suppliers_on_permalink", unique: true, using: :btree
-  add_index "suppliers", ["phone"], name: "index_suppliers_on_phone", unique: true, using: :btree
 
   create_table "tax_rates", force: :cascade do |t|
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-05-16', null: false
+    t.date     "start_date",                         default: '2016-05-18', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

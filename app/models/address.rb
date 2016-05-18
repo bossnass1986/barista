@@ -4,8 +4,10 @@ class Address < ActiveRecord::Base
   belongs_to  :country
   belongs_to  :address_type
   belongs_to  :addressable, :polymorphic => true
+  belongs_to  :supplier
   has_many     :phones, :as => :phoneable
   has_many     :shipments
+
 
   validates :first_name,  :presence => true,
             :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }

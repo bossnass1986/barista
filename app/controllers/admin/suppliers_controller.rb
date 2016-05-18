@@ -14,7 +14,7 @@ class Admin::SuppliersController < Admin::BaseController
 
     if @supplier.save
       redirect_to :action => :index
-      SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', 'Supplier Created', '61430091464')
+      # SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', 'Supplier Created', '61430091464')
     else
       flash[:error] = "The supplier could not be saved"
       render :action => :new
@@ -28,6 +28,7 @@ class Admin::SuppliersController < Admin::BaseController
   def update
     @supplier = Supplier.find(params[:id])
     if @supplier.update_attributes(allowed_params)
+      # SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{@supplier.name} has been updated", '61430091464')
       redirect_to :action => :index
     else
       render :action => :edit
@@ -45,7 +46,7 @@ class Admin::SuppliersController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:supplier).permit(:name, :email, {:address => [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id], :phone => [:number]})
+    params.require(:supplier).permit(:name, :email, {address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id]})
   end
 
 end

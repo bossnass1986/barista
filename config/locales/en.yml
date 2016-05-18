@@ -23,6 +23,8 @@ en:
   layouts:
     mdl:
       site_name: 'Cup Town'
+    superman:
+      site_name: 'Cup Town'
   shared:
     compact_menu:
       merchants: 'Find Venue'
