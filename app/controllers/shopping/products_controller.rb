@@ -26,7 +26,7 @@ class Shopping::ProductsController < Shopping::BaseController
   # GET /Products/1
   # GET /Products/1.json
   def show
-    @products = Product.find(params[:id])
+    # @products = Product.find(params[:id])
     # @properties = Product
     #               .joins(:product_properties)
     #               .joins('INNER JOIN variant_properties on product_properties.property_id = variant_properties.property_id')
