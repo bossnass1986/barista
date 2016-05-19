@@ -200,6 +200,7 @@ ActiveRecord::Schema.define(version: 20160516083238) do
     t.string   "email",           limit: 255
     t.string   "state"
     t.integer  "user_id"
+    t.integer  "supplier_id"
     t.integer  "bill_address_id"
     t.integer  "ship_address_id"
     t.integer  "order_status_id", limit: 2
@@ -218,6 +219,7 @@ ActiveRecord::Schema.define(version: 20160516083238) do
   add_index "orders", ["email"], name: "index_orders_on_email", using: :btree
   add_index "orders", ["number"], name: "index_orders_on_number", using: :btree
   add_index "orders", ["ship_address_id"], name: "index_orders_on_ship_address_id", using: :btree
+  add_index "orders", ["supplier_id"], name: "index_orders_on_supplier_id", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
   create_table "payment_profiles", force: :cascade do |t|
@@ -475,7 +477,7 @@ ActiveRecord::Schema.define(version: 20160516083238) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-05-18', null: false
+    t.date     "start_date",                         default: '2016-05-19', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

@@ -6,12 +6,13 @@ class CreateOrders < ActiveRecord::Migration
       t.string :email, limit: 255
       t.string :state, limti: 255
       t.integer :user_id, limit: 4
+      t.integer :supplier_id, limit: 4
       t.integer :bill_address_id, limit: 4
       t.integer :ship_address_id, limit: 4
       t.integer :order_status_id, limit: 1
-      t.integer  :coupon_id, limit: 4
+      t.integer :coupon_id, limit: 4
       t.integer :shipments_count, limit: 4, default: 0
-      t.boolean  :active, default: true,  null: false
+      t.boolean :active, default: true,  null: false
       t.boolean :shipped, default: false, null: false
       t.datetime :calculated_at
       t.datetime :completed_at
@@ -24,5 +25,6 @@ class CreateOrders < ActiveRecord::Migration
     add_index :orders, :number
     add_index :orders, :ship_address_id
     add_index :orders, :user_id
+    add_index :orders, :supplier_id
   end
 end

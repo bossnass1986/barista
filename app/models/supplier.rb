@@ -59,7 +59,7 @@ class Supplier < ActiveRecord::Base
 
   def sanitize_permalink
     self.permalink = name if permalink.blank? && name
-    # self.permalink = [permalink.squeeze(' ').strip.gsub(/[^0-9a-z]/i, '-').downcase, self.address.first(25).gsub(/[^0-9a-z]/i, '-').downcase, self.id].join('-') if permalink
+    self.permalink = [permalink.squeeze(' ').strip.gsub(/[^0-9a-z]/i, '-').downcase, self.id].join('-') if permalink
   end
 
   def sanitize_meta_description
