@@ -47,7 +47,7 @@ gem 'sinch_sms'
 # gem 'twilio-ruby'
 group :production do
   gem 'rails_12factor'
-  # ruby '2.2.1'
+  gem 'rack-wwwhisper', '~> 1.0'
 end
 # gem 'seed_dump'
 

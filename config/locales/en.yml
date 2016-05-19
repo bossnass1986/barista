@@ -35,6 +35,7 @@ en:
       payment_methds: 'Payment Methods'
       credits: 'Credits'
       referrals: 'Referrals'
+      admin: 'Admin Panel'
       log_out: 'Log Out'
     meta_data:
       site_name: 'Cup Town'

@@ -42,6 +42,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.6.1)
       execjs
@@ -122,6 +123,7 @@ GEM
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.9.0)
+    net-http-persistent (2.9.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     paperclip (4.3.6)
@@ -139,6 +141,10 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-wwwhisper (1.1.9)
+      addressable (~> 2.0)
+      net-http-persistent
+      rack (~> 1.0)
     rails (4.2.4)
       actionmailer (= 4.2.4)
       actionpack (= 4.2.4)
@@ -243,6 +249,7 @@ DEPENDENCIES
   pg
   pg_search
   puma
+  rack-wwwhisper (~> 1.0)
   rails (= 4.2.4)
   rails_12factor
   rolify
@@ -255,4 +262,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.3
+   1.12.4

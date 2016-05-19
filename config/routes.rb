@@ -41,18 +41,6 @@ Rails.application.routes.draw do
   end
 
   namespace :shopping do
-    # resources  :addresses do
-    #   member do
-    #     put :select_address
-    #   end
-    # end
-    #
-    # resources  :billing_addresses do
-    #   member do
-    #     put :select_address
-    #   end
-    # end
-
     resources :suppliers, only: [ :index, :show ] do
       resources :products,    only: [:index, :show, :create]
     end
@@ -72,6 +60,18 @@ Rails.application.routes.draw do
     end
     resources  :shipping_methods
   end
+
+  # resources  :addresses do
+  #   member do
+  #     put :select_address
+  #   end
+  # end
+  #
+  # resources  :billing_addresses do
+  #   member do
+  #     put :select_address
+  #   end
+  # end
 
   namespace :admin do
     resource :dashboard, only: [ :index ]

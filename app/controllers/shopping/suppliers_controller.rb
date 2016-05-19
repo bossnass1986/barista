@@ -10,7 +10,7 @@ class Shopping::SuppliersController < Shopping::BaseController
   # GET /suppliers/1
   def show
     # @supplier = Supplier.select('product.name','product.description').joins(products: :variants).find(params[:id])
-    @supplier = Supplier.select('id').find(params[:id])
+    @supplier = Supplier.select('id','permalink').find(params[:id])
      # form_info
     # @cart_item.variant_id = @supplier.try(:id)
   end

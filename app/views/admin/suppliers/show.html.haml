@@ -1,0 +1,16 @@
+- title @supplier.name
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab{:href => '#information-panel'} Information
+    %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
+    %a.mdl-tabs__tab{:href => '#customers-panel'} Customers
+    %a.mdl-tabs__tab{:href => '#products-panel'} Products
+  #information-panel.mdl-tabs__panel
+    = form_for @supplier, :url => admin_supplier_path(@supplier)  do |form|
+      = render :partial => '/admin/suppliers/form', :locals => {:form => form}
+      = form.submit "Update", :class => 'button'
+  #orders-panel.mdl-tabs__panel.is-active
+
+  #customers-panel.mdl-tabs__panel
+
+  #products-panel.mdl-tabs__panel
