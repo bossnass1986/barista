@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'mdl'
 
-  before_action :require_login
+  before_action :require_login, :set_locale
 
   helper_method :most_likely_user,
                 :random_user,
@@ -35,6 +35,16 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def set_locale
+    I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+    session[:locale] = I18n.locale
+  end
+
+  def default_url_options(options={})
+    logger.debug "default_url_options is passed options: #{options.inspect}\n"
+    { locale: I18n.locale }
+  end
 
   def customer_confirmation_page_view
     false

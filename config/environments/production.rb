@@ -88,17 +88,18 @@ Rails.application.configure do
       }
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'cup.town' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :authentication => :plain,
       :address => 'smtp.mailgun.org',
       :port => 587,
-      :domain => 'sandboxff279fb40e4443efa2b0de7bc2098056.mailgun.org',
-      :user_name => 'postmaster@sandboxff279fb40e4443efa2b0de7bc2098056.mailgun.org',
-      :password => 'b275c75d2bb7d20e2d56330c293f02ab'
+      :domain => 'mg.cup.town',
+      :user_name => 'postmaster@mg.cup.town',
+      :password => '7308baf132d8e79342e3ae80ef21528a  '
   }
+
 
 
 end
