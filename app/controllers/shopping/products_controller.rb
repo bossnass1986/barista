@@ -34,7 +34,7 @@ class Shopping::ProductsController < Shopping::BaseController
     #               .joins('INNER JOIN variants on variants.product_id = products.id AND variants.id = variant_properties.variant_id')
     #               .where('products.id = ?', params[:id])
     #               .pluck('products.id as prod_id', 'properties.display_name as prop_name', 'LEFT(variant_properties.description,1) as short_desc', 'variants.price as price')
-    # @product = Product.joins(:properties, :variants).find(params[:id], :variant_id)
+    @product = Product.joins(:properties, :variants).find(params[:id], :variant_id)
     # @product = Product.joins(:variants).group(:variant_id, :property_id).find(params[:id])
     # form_info
     # @cart_item.variant_id = @product.active_variants.first.try(:id)

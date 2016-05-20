@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe "variant_suppliers/index", type: :view do
   before(:each) do
     assign(:variant_suppliers, [
-      VariantSupplier.create!(
+        VariantMerchant.create!(
         :variant_id => 1,
-        :supplier_id => 2,
+        :merchant_id => 2,
         :cost => "9.99",
         :active => false
       ),
-      VariantSupplier.create!(
+        VariantMerchant.create!(
         :variant_id => 1,
-        :supplier_id => 2,
+        :merchant_id => 2,
         :cost => "9.99",
         :active => false
       )

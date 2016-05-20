@@ -21,7 +21,7 @@ require 'rails_helper'
 RSpec.describe VariantSuppliersController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # VariantSupplier. As you add validations to VariantSupplier, be sure to
+  # VariantMerchant. As you add validations to VariantMerchant, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -38,7 +38,7 @@ RSpec.describe VariantSuppliersController, type: :controller do
 
   describe "GET #index" do
     it "assigns all variant_suppliers as @variant_suppliers" do
-      variant_supplier = VariantSupplier.create! valid_attributes
+      variant_supplier = VariantMerchant.create! valid_attributes
       get :index, {}, valid_session
       expect(assigns(:variant_suppliers)).to eq([variant_supplier])
     end
@@ -46,7 +46,7 @@ RSpec.describe VariantSuppliersController, type: :controller do
 
   describe "GET #show" do
     it "assigns the requested variant_supplier as @variant_supplier" do
-      variant_supplier = VariantSupplier.create! valid_attributes
+      variant_supplier = VariantMerchant.create! valid_attributes
       get :show, {:id => variant_supplier.to_param}, valid_session
       expect(assigns(:variant_supplier)).to eq(variant_supplier)
     end
@@ -55,13 +55,13 @@ RSpec.describe VariantSuppliersController, type: :controller do
   describe "GET #new" do
     it "assigns a new variant_supplier as @variant_supplier" do
       get :new, {}, valid_session
-      expect(assigns(:variant_supplier)).to be_a_new(VariantSupplier)
+      expect(assigns(:variant_supplier)).to be_a_new(VariantMerchant)
     end
   end
 
   describe "GET #edit" do
     it "assigns the requested variant_supplier as @variant_supplier" do
-      variant_supplier = VariantSupplier.create! valid_attributes
+      variant_supplier = VariantMerchant.create! valid_attributes
       get :edit, {:id => variant_supplier.to_param}, valid_session
       expect(assigns(:variant_supplier)).to eq(variant_supplier)
     end
@@ -69,28 +69,28 @@ RSpec.describe VariantSuppliersController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new VariantSupplier" do
+      it "creates a new VariantMerchant" do
         expect {
           post :create, {:variant_supplier => valid_attributes}, valid_session
-        }.to change(VariantSupplier, :count).by(1)
+        }.to change(VariantMerchant, :count).by(1)
       end
 
       it "assigns a newly created variant_supplier as @variant_supplier" do
         post :create, {:variant_supplier => valid_attributes}, valid_session
-        expect(assigns(:variant_supplier)).to be_a(VariantSupplier)
+        expect(assigns(:variant_supplier)).to be_a(VariantMerchant)
         expect(assigns(:variant_supplier)).to be_persisted
       end
 
       it "redirects to the created variant_supplier" do
         post :create, {:variant_supplier => valid_attributes}, valid_session
-        expect(response).to redirect_to(VariantSupplier.last)
+        expect(response).to redirect_to(VariantMerchant.last)
       end
     end
 
     context "with invalid params" do
       it "assigns a newly created but unsaved variant_supplier as @variant_supplier" do
         post :create, {:variant_supplier => invalid_attributes}, valid_session
-        expect(assigns(:variant_supplier)).to be_a_new(VariantSupplier)
+        expect(assigns(:variant_supplier)).to be_a_new(VariantMerchant)
       end
 
       it "re-renders the 'new' template" do
@@ -107,20 +107,20 @@ RSpec.describe VariantSuppliersController, type: :controller do
       }
 
       it "updates the requested variant_supplier" do
-        variant_supplier = VariantSupplier.create! valid_attributes
+        variant_supplier = VariantMerchant.create! valid_attributes
         put :update, {:id => variant_supplier.to_param, :variant_supplier => new_attributes}, valid_session
         variant_supplier.reload
         skip("Add assertions for updated state")
       end
 
       it "assigns the requested variant_supplier as @variant_supplier" do
-        variant_supplier = VariantSupplier.create! valid_attributes
+        variant_supplier = VariantMerchant.create! valid_attributes
         put :update, {:id => variant_supplier.to_param, :variant_supplier => valid_attributes}, valid_session
         expect(assigns(:variant_supplier)).to eq(variant_supplier)
       end
 
       it "redirects to the variant_supplier" do
-        variant_supplier = VariantSupplier.create! valid_attributes
+        variant_supplier = VariantMerchant.create! valid_attributes
         put :update, {:id => variant_supplier.to_param, :variant_supplier => valid_attributes}, valid_session
         expect(response).to redirect_to(variant_supplier)
       end
@@ -128,13 +128,13 @@ RSpec.describe VariantSuppliersController, type: :controller do
 
     context "with invalid params" do
       it "assigns the variant_supplier as @variant_supplier" do
-        variant_supplier = VariantSupplier.create! valid_attributes
+        variant_supplier = VariantMerchant.create! valid_attributes
         put :update, {:id => variant_supplier.to_param, :variant_supplier => invalid_attributes}, valid_session
         expect(assigns(:variant_supplier)).to eq(variant_supplier)
       end
 
       it "re-renders the 'edit' template" do
-        variant_supplier = VariantSupplier.create! valid_attributes
+        variant_supplier = VariantMerchant.create! valid_attributes
         put :update, {:id => variant_supplier.to_param, :variant_supplier => invalid_attributes}, valid_session
         expect(response).to render_template("edit")
       end
@@ -143,14 +143,14 @@ RSpec.describe VariantSuppliersController, type: :controller do
 
   describe "DELETE #destroy" do
     it "destroys the requested variant_supplier" do
-      variant_supplier = VariantSupplier.create! valid_attributes
+      variant_supplier = VariantMerchant.create! valid_attributes
       expect {
         delete :destroy, {:id => variant_supplier.to_param}, valid_session
-      }.to change(VariantSupplier, :count).by(-1)
+      }.to change(VariantMerchant, :count).by(-1)
     end
 
     it "redirects to the variant_suppliers list" do
-      variant_supplier = VariantSupplier.create! valid_attributes
+      variant_supplier = VariantMerchant.create! valid_attributes
       delete :destroy, {:id => variant_supplier.to_param}, valid_session
       expect(response).to redirect_to(variant_suppliers_url)
     end

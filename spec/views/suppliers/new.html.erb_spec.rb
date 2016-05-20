@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "suppliers/new", type: :view do
+RSpec.describe "merchants/new", type: :view do
   before(:each) do
-    assign(:supplier, Supplier.new(
+    assign(:supplier, Merchant.new(
       :name => "MyString",
       :address => "MyString",
       :latitude => 1.5,

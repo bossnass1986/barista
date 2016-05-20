@@ -90,16 +90,14 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { host: 'cup.town' }
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
+      :port           => ENV['MAILGUN_SMTP_PORT'],
+      :address        => ENV['MAILGUN_SMTP_SERVER'],
+      :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+      :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+      :domain         => '*.cup.town',
       :authentication => :plain,
-      :address => 'smtp.mailgun.org',
-      :port => 587,
-      :domain => 'mg.cup.town',
-      :user_name => 'postmaster@mg.cup.town',
-      :password => '7308baf132d8e79342e3ae80ef21528a  '
   }
-
-
+  ActionMailer::Base.delivery_method = :smtp
 
 end

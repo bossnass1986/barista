@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "suppliers/edit", type: :view do
+RSpec.describe "merchants/edit", type: :view do
   before(:each) do
-    @supplier = assign(:supplier, Supplier.create!(
+    @supplier = assign(:supplier, Merchant.create!(
       :name => "MyString",
       :address => "MyString",
       :latitude => 1.5,

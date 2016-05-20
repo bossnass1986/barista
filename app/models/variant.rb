@@ -1,8 +1,8 @@
 class Variant < ActiveRecord::Base
 
 
-  has_many :variant_suppliers, dependent: :destroy
-  has_many :suppliers,         through: :variant_suppliers
+  has_many :variant_merchants, dependent: :destroy
+  has_many :merchants, through: :variant_suppliers
 
   has_many :variant_properties
   has_many :properties,        through: :variant_properties

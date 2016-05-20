@@ -14,8 +14,8 @@
   = link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
     %i.material-icons local_cafe
     = t('.products')
-- if can? :update, @supplier
-  = link_to admin_suppliers_path, class: 'mdl-navigation__link' do
+- if can? :update, @merchant
+  = link_to admin_merchants_path, class: 'mdl-navigation__link' do
     %i.material-icons store_mall_directory
     = t('.merchants')
 - if can? :update, @coupon

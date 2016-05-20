@@ -18,7 +18,7 @@ class SupplierTradingHoursControllerTest < ActionController::TestCase
 
   test "should create supplier_trading_hour" do
     assert_difference('SupplierTradingHour.count') do
-      post :create, supplier_trading_hour: { close_time: @supplier_trading_hour.close_time, open_time: @supplier_trading_hour.open_time, supplier_id: @supplier_trading_hour.supplier_id, weekday: @supplier_trading_hour.weekday }
+      post :create, supplier_trading_hour: {close_time: @supplier_trading_hour.close_time, open_time: @supplier_trading_hour.open_time, merchant_id: @supplier_trading_hour.supplier_id, weekday: @supplier_trading_hour.weekday }
     end
 
     assert_redirected_to supplier_trading_hour_path(assigns(:supplier_trading_hour))
@@ -35,7 +35,7 @@ class SupplierTradingHoursControllerTest < ActionController::TestCase
   end
 
   test "should update supplier_trading_hour" do
-    patch :update, id: @supplier_trading_hour, supplier_trading_hour: { close_time: @supplier_trading_hour.close_time, open_time: @supplier_trading_hour.open_time, supplier_id: @supplier_trading_hour.supplier_id, weekday: @supplier_trading_hour.weekday }
+    patch :update, id: @supplier_trading_hour, supplier_trading_hour: {close_time: @supplier_trading_hour.close_time, open_time: @supplier_trading_hour.open_time, merchant_id: @supplier_trading_hour.supplier_id, weekday: @supplier_trading_hour.weekday }
     assert_redirected_to supplier_trading_hour_path(assigns(:supplier_trading_hour))
   end
 

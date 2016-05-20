@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516083238) do
+ActiveRecord::Schema.define(version: 20160520092207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -167,6 +167,22 @@ ActiveRecord::Schema.define(version: 20160516083238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "merchants", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "permalink",        limit: 255
+    t.datetime "available_at"
+    t.datetime "deleted_at"
+    t.string   "meta_keywords",    limit: 255
+    t.string   "meta_description", limit: 255
+    t.boolean  "featured",                     default: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+  end
+
+  add_index "merchants", ["name"], name: "index_merchants_on_name", using: :btree
+  add_index "merchants", ["permalink"], name: "index_merchants_on_permalink", unique: true, using: :btree
 
   create_table "order_items", force: :cascade do |t|
     t.decimal  "price",                        precision: 8, scale: 2
@@ -457,27 +473,11 @@ ActiveRecord::Schema.define(version: 20160516083238) do
     t.time    "close_time"
   end
 
-  create_table "suppliers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "permalink",        limit: 255
-    t.datetime "available_at"
-    t.datetime "deleted_at"
-    t.string   "meta_keywords",    limit: 255
-    t.string   "meta_description", limit: 255
-    t.boolean  "featured",                     default: false
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
-  end
-
-  add_index "suppliers", ["name"], name: "index_suppliers_on_name", using: :btree
-  add_index "suppliers", ["permalink"], name: "index_suppliers_on_permalink", unique: true, using: :btree
-
   create_table "tax_rates", force: :cascade do |t|
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-05-19', null: false
+    t.date     "start_date",                         default: '2016-05-20', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -567,13 +567,12 @@ ActiveRecord::Schema.define(version: 20160516083238) do
   add_index "variant_properties", ["property_id"], name: "index_variant_properties_on_property_id", using: :btree
   add_index "variant_properties", ["variant_id"], name: "index_variant_properties_on_variant_id", using: :btree
 
-  create_table "variant_suppliers", force: :cascade do |t|
+  create_table "variant_merchants", force: :cascade do |t|
     t.integer  "variant_id"
-    t.integer  "supplier_id"
-    t.decimal  "cost",        precision: 8, scale: 2, default: 0.0,  null: false
-    t.boolean  "active",                              default: true
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
+    t.integer  "merchant_id"
+    t.boolean  "active",      default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "variants", force: :cascade do |t|

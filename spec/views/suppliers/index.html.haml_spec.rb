@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "suppliers/index", type: :view do
+RSpec.describe "merchants/index", type: :view do
   before(:each) do
-    assign(:suppliers, [
-      Supplier.create!(
+    assign(:merchants, [
+        Merchant.create!(
         :name => "Name",
         :address => "Address",
         :latitude => 1.5,
@@ -11,7 +11,7 @@ RSpec.describe "suppliers/index", type: :view do
         :email => "Email",
         :phone => "Phone"
       ),
-      Supplier.create!(
+        Merchant.create!(
         :name => "Name",
         :address => "Address",
         :latitude => 1.5,
@@ -22,7 +22,7 @@ RSpec.describe "suppliers/index", type: :view do
     ])
   end
 
-  it "renders a list of suppliers" do
+  it "renders a list of merchants" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Address".to_s, :count => 2

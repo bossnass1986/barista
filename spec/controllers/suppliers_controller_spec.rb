@@ -18,10 +18,10 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe SuppliersController, type: :controller do
+RSpec.describe MerchantsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Supplier. As you add validations to Supplier, be sure to
+  # Merchant. As you add validations to Merchant, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -33,20 +33,20 @@ RSpec.describe SuppliersController, type: :controller do
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # SuppliersController. Be sure to keep this updated too.
+  # MerchantsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "assigns all suppliers as @suppliers" do
-      supplier = Supplier.create! valid_attributes
+    it "assigns all merchants as @merchants" do
+      supplier = Merchant.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:suppliers)).to eq([supplier])
+      expect(assigns(:merchants)).to eq([supplier])
     end
   end
 
   describe "GET #show" do
     it "assigns the requested supplier as @supplier" do
-      supplier = Supplier.create! valid_attributes
+      supplier = Merchant.create! valid_attributes
       get :show, {:id => supplier.to_param}, valid_session
       expect(assigns(:supplier)).to eq(supplier)
     end
@@ -55,13 +55,13 @@ RSpec.describe SuppliersController, type: :controller do
   describe "GET #new" do
     it "assigns a new supplier as @supplier" do
       get :new, {}, valid_session
-      expect(assigns(:supplier)).to be_a_new(Supplier)
+      expect(assigns(:supplier)).to be_a_new(Merchant)
     end
   end
 
   describe "GET #edit" do
     it "assigns the requested supplier as @supplier" do
-      supplier = Supplier.create! valid_attributes
+      supplier = Merchant.create! valid_attributes
       get :edit, {:id => supplier.to_param}, valid_session
       expect(assigns(:supplier)).to eq(supplier)
     end
@@ -69,28 +69,28 @@ RSpec.describe SuppliersController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Supplier" do
+      it "creates a new Merchant" do
         expect {
           post :create, {:supplier => valid_attributes}, valid_session
-        }.to change(Supplier, :count).by(1)
+        }.to change(Merchant, :count).by(1)
       end
 
       it "assigns a newly created supplier as @supplier" do
         post :create, {:supplier => valid_attributes}, valid_session
-        expect(assigns(:supplier)).to be_a(Supplier)
+        expect(assigns(:supplier)).to be_a(Merchant)
         expect(assigns(:supplier)).to be_persisted
       end
 
       it "redirects to the created supplier" do
         post :create, {:supplier => valid_attributes}, valid_session
-        expect(response).to redirect_to(Supplier.last)
+        expect(response).to redirect_to(Merchant.last)
       end
     end
 
     context "with invalid params" do
       it "assigns a newly created but unsaved supplier as @supplier" do
         post :create, {:supplier => invalid_attributes}, valid_session
-        expect(assigns(:supplier)).to be_a_new(Supplier)
+        expect(assigns(:supplier)).to be_a_new(Merchant)
       end
 
       it "re-renders the 'new' template" do
@@ -107,20 +107,20 @@ RSpec.describe SuppliersController, type: :controller do
       }
 
       it "updates the requested supplier" do
-        supplier = Supplier.create! valid_attributes
+        supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => new_attributes}, valid_session
         supplier.reload
         skip("Add assertions for updated state")
       end
 
       it "assigns the requested supplier as @supplier" do
-        supplier = Supplier.create! valid_attributes
+        supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => valid_attributes}, valid_session
         expect(assigns(:supplier)).to eq(supplier)
       end
 
       it "redirects to the supplier" do
-        supplier = Supplier.create! valid_attributes
+        supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => valid_attributes}, valid_session
         expect(response).to redirect_to(supplier)
       end
@@ -128,13 +128,13 @@ RSpec.describe SuppliersController, type: :controller do
 
     context "with invalid params" do
       it "assigns the supplier as @supplier" do
-        supplier = Supplier.create! valid_attributes
+        supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => invalid_attributes}, valid_session
         expect(assigns(:supplier)).to eq(supplier)
       end
 
       it "re-renders the 'edit' template" do
-        supplier = Supplier.create! valid_attributes
+        supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => invalid_attributes}, valid_session
         expect(response).to render_template("edit")
       end
@@ -143,14 +143,14 @@ RSpec.describe SuppliersController, type: :controller do
 
   describe "DELETE #destroy" do
     it "destroys the requested supplier" do
-      supplier = Supplier.create! valid_attributes
+      supplier = Merchant.create! valid_attributes
       expect {
         delete :destroy, {:id => supplier.to_param}, valid_session
-      }.to change(Supplier, :count).by(-1)
+      }.to change(Merchant, :count).by(-1)
     end
 
-    it "redirects to the suppliers list" do
-      supplier = Supplier.create! valid_attributes
+    it "redirects to the merchants list" do
+      supplier = Merchant.create! valid_attributes
       delete :destroy, {:id => supplier.to_param}, valid_session
       expect(response).to redirect_to(suppliers_url)
     end

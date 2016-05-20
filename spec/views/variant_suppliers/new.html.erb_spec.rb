@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "variant_suppliers/new", type: :view do
   before(:each) do
-    assign(:variant_supplier, VariantSupplier.new(
+    assign(:variant_supplier, VariantMerchant.new(
       :variant_id => 1,
-      :supplier_id => 1,
+      :merchant_id => 1,
       :cost => "9.99",
       :active => false
     ))

@@ -5,14 +5,14 @@ puts 'Execute Order 66!'
 Role.destroy_all
 User.delete_all
 Country.destroy_all
-Supplier.destroy_all
+Merchant.destroy_all
 ProductType.delete_all
 Prototype.delete_all
 Product.delete_all
 Variant.destroy_all
 PrototypeProperty.delete_all
 ProductProperty.delete_all
-VariantSupplier.delete_all
+VariantMerchant.delete_all
 VariantProperty.delete_all
 Cart.destroy_all
 Order.destroy_all
@@ -25,9 +25,9 @@ end
 
 puts 'Creating Control Users'
 User.create!(first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:admin)
-User.create!(first_name: 'Supplier', last_name: 'Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: '123456')
+User.create!(first_name: 'Merchant', last_name: 'Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: '123456')
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
-# User.create!(id:4, first_name: 'Supplier Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
+# User.create!(id:4, first_name: 'Merchant Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
 
 
 puts 'They are now conducting an extensive search of the surrounding systems.'
@@ -150,25 +150,25 @@ ProductProperty.create!([
 
 
 # (1..100).each do |i|
-#   Supplier.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
+#   Merchant.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
 # end
-Supplier.create!([
+Merchant.create!([
  {id: 1, name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
  {id: 2, name: 'Wedgewood Cafe', email: 'test@test.com'},
  {id: 3, name: 'Fresch Cafe', email: 'test@test.com'},
  {id: 4, name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
 ])
 
-puts 'Creating Sample Suppliers with Menu Items'
-VariantSupplier.create!([
-    {supplier_id: 1, variant_id: 1},
-    {supplier_id: 1, variant_id: 2},
-    {supplier_id: 1, variant_id: 3},
-    {supplier_id: 1, variant_id: 4},
-    {supplier_id: 1, variant_id: 5},
-    {supplier_id: 1, variant_id: 6},
-    {supplier_id: 1, variant_id: 7},
-    {supplier_id: 1, variant_id: 8}
+puts 'Creating Sample Merchants with Menu Items'
+VariantMerchant.create!([
+    {merchant_id: 1, variant_id: 1},
+    {merchant_id: 1, variant_id: 2},
+    {merchant_id: 1, variant_id: 3},
+    {merchant_id: 1, variant_id: 4},
+    {merchant_id: 1, variant_id: 5},
+    {merchant_id: 1, variant_id: 6},
+    {merchant_id: 1, variant_id: 7},
+    {merchant_id: 1, variant_id: 8}
 ])
 
 # puts 'Deleting All Order Statues'

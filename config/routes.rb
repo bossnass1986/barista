@@ -35,7 +35,7 @@ Rails.application.routes.draw do
     end
 
     namespace :shopping do
-      resources :suppliers, only: [ :index, :show ] do
+      resources :merchants, only: [ :index, :show ] do
         resources :products,    only: [:index, :show, :create]
       end
 
@@ -88,25 +88,24 @@ Rails.application.routes.draw do
           resources :addresses
         end
       end
-      # resources :overviews, only: [:index]
-      resources :suppliers
+      resources :merchants
       get "help" => "help#index"
 
-      namespace :reports do
-        resource :overview, only: [:show]
-        resources :graphs
-        resources :weekly_charts, only: [:index]
-      end
-      namespace :rma do
-        resources  :orders do
-          resources  :return_authorizations do
-            member do
-              put :complete
-            end
-          end
-        end
-        #resources  :shipments
-      end
+      # namespace :reports do
+      #   resource :overview, only: [:show]
+      #   resources :graphs
+      #   resources :weekly_charts, only: [:index]
+      # end
+      # namespace :rma do
+      #   resources  :orders do
+      #     resources  :return_authorizations do
+      #       member do
+      #         put :complete
+      #       end
+      #     end
+      #   end
+      #   #resources  :shipments
+      # end
 
       namespace :history do
         resources  :orders, only: [:index, :show] do
@@ -181,7 +180,7 @@ Rails.application.routes.draw do
         # resources :sales
       end
       namespace :inventory do
-        resources :suppliers
+        resources :merchants
         # resources :overviews
         # resources :purchase_orders
         # resources :receivings
@@ -236,6 +235,6 @@ Rails.application.routes.draw do
       end
     end
 
-    root :to => 'shopping/suppliers#index'
+    root :to => 'shopping/merchants#index'
   end
 end

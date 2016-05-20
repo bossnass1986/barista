@@ -24,7 +24,7 @@ class SupplierTradingHoursController < ApplicationController
     @supplier_trading_hour = SupplierTradingHour.new(supplier_trading_hour_params)
 
     if @supplier_trading_hour.save
-      redirect_to @supplier_trading_hour, notice: 'Supplier trading hour was successfully created.'
+      redirect_to @supplier_trading_hour, notice: 'Merchant trading hour was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class SupplierTradingHoursController < ApplicationController
   # PATCH/PUT /supplier_trading_hours/1
   def update
     if @supplier_trading_hour.update(supplier_trading_hour_params)
-      redirect_to @supplier_trading_hour, notice: 'Supplier trading hour was successfully updated.'
+      redirect_to @supplier_trading_hour, notice: 'Merchant trading hour was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class SupplierTradingHoursController < ApplicationController
   # DELETE /supplier_trading_hours/1
   def destroy
     @supplier_trading_hour.destroy
-    redirect_to supplier_trading_hours_url, notice: 'Supplier trading hour was successfully destroyed.'
+    redirect_to supplier_trading_hours_url, notice: 'Merchant trading hour was successfully destroyed.'
   end
 
   private
@@ -53,6 +53,6 @@ class SupplierTradingHoursController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def supplier_trading_hour_params
-      params.require(:supplier_trading_hour).permit(:supplier_id, :weekday, :open_time, :close_time)
+      params.require(:supplier_trading_hour).permit(:merchant_id, :weekday, :open_time, :close_time)
     end
 end

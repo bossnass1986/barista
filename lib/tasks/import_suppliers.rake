@@ -8,7 +8,7 @@ namespace :csv do
     csv_file_path = 'db/seed/suppliers_new.csv'
 
     CSV.foreach(csv_file_path) do |row|
-      Supplier.create!({
+      Merchant.create!({
                         :name => row[1],
                         :address => row[2],
                     })
