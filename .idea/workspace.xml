@@ -4,12 +4,8 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="refactor supplier to merchant">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="gmail for emails">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/variant.rb" afterPath="$PROJECT_DIR$/app/models/variant.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="barista.iws" />
@@ -124,8 +120,8 @@
       <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+            <state relative-caret-position="132">
+              <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -677,14 +673,7 @@
       <workItem from="1463489858334" duration="28509000" />
       <workItem from="1463737706744" duration="11954000" />
       <workItem from="1463817640660" duration="1483000" />
-      <workItem from="1463819331424" duration="5874000" />
-    </task>
-    <task id="LOCAL-00130" summary="show only 1 product for multiple variants on supplier page">
-      <created>1461235824615</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1461235824615</updated>
+      <workItem from="1463819331424" duration="5971000" />
     </task>
     <task id="LOCAL-00131" summary="execute order 66">
       <created>1461314659832</created>
@@ -1022,11 +1011,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463822652400</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="gmail for emails">
+      <created>1463837141761</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1463837141761</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48324000" />
+    <option name="totallyTimeSpent" value="48421000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1098,7 +1094,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="admin panel creation&#10;indexes on migrations makes for faster searches" />
     <MESSAGE value="more database tweaks for performance" />
     <MESSAGE value="superman panel works" />
     <MESSAGE value="color changes" />
@@ -1123,7 +1118,8 @@
     <MESSAGE value="mailgun for production" />
     <MESSAGE value="product page fixes" />
     <MESSAGE value="refactor supplier to merchant" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor supplier to merchant" />
+    <MESSAGE value="gmail for emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="gmail for emails" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1539,8 +1535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+        <state relative-caret-position="132">
+          <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
           <folding />
         </state>
       </provider>
