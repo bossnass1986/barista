@@ -46,7 +46,7 @@ class Admin::MerchantsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:supplier).permit(:name, :email, {address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id]})
+    params.require(:merchant).permit(:name, :email, {address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id]})
   end
 
 end

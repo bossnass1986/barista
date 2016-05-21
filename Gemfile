@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Deployment
 gem 'rails', '4.2.4'
 ruby '2.3.1'
+gem 'skylight'
 # ==========
 # MemCachier
 # ==========
@@ -41,6 +42,7 @@ gem 'paperclip'
 
 # Search
 gem 'pg_search'
+# gem 'algoliasearch-rails'
 
 # Phone Management
 gem 'sinch_sms'
@@ -78,10 +80,32 @@ gem 'jquery-rails'
 #   gem 'test-unit', '~> 3.0'
 # end
 
+# group :development do
+#   gem 'rspec-rails'
+#   gem 'bullet'
+#   gem 'better_errors'
+#   gem 'binding_of_caller'
+# end
+
 group :development do
-  gem 'rspec-rails'
-  gem 'bullet'
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'refills'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'web-console'
 end
 
+group :development, :test do
+  gem 'awesome_print'
+  gem 'bullet'
+  gem 'bundler-audit', '>= 0.5.0', require: false
+  gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.4.0'
+end
+
+group :development, :staging do
+  gem 'rack-mini-profiler', require: false
+end

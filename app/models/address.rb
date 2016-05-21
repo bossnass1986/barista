@@ -4,7 +4,6 @@ class Address < ActiveRecord::Base
   belongs_to  :country
   belongs_to  :address_type
   belongs_to  :addressable, :polymorphic => true
-  belongs_to  :merchant
   has_many     :phones, :as => :phoneable
   has_many     :shipments
 
@@ -19,7 +18,7 @@ class Address < ActiveRecord::Base
   # validates :state_id,      :presence => true,  :if => Proc.new { |address| Settings.require_state_in_address}
   # validates :country_id,    :presence => true,  :if => Proc.new { |address| !Settings.require_state_in_address}
   #validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
-  validates :zip_code,    :presence => true,       :length => { :minimum => 4, :maximum => 12 }
+  # validates :zip_code,    :presence => true,       :length => { :minimum => 4, :maximum => 12 }
   before_validation :sanitize_data
 
   attr_accessor :replace_address_id # if you are updating an address set this field.

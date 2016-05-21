@@ -15,8 +15,7 @@ class User < ActiveRecord::Base
    # TODO add back in for production
   # after_validation :geocode
 
-  geocoded_by :ip_address,
-              :latitude => :latitude, :longitude => :longitude
+  # geocoded_by :ip_address
 
   belongs_to :account
 
@@ -36,7 +35,7 @@ class User < ActiveRecord::Base
   has_many    :completed_orders,          -> { where(state: 'complete') },            class_name: 'Order'
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
-  has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
+  # has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
   has_many    :addresses,       dependent: :destroy,       as: :addressable
 
@@ -88,7 +87,7 @@ class User < ActiveRecord::Base
   #           :format   => { :with => CustomValidators::Numbers.phone_number_validator },
   #           :length => { :maximum => 10 }
 
-  accepts_nested_attributes_for :addresses, :user_roles
+  accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
   # accepts_nested_attributes_for :customer_service_comments, :reject_if => proc { |attributes| attributes['note'].strip.blank? }
 
@@ -112,7 +111,9 @@ class User < ActiveRecord::Base
   # @param [none]
   # @return [ Boolean ]
   def active?
-    !['canceled', 'inactive'].any? {|s| self.state == s }
+    !%w(canceled inactive).any? do |s|
+      self.state == s
+    end
   end
 
   # returns true or false if the user has a role or not

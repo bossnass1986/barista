@@ -6,7 +6,7 @@
   = form.email_field :email, class: 'mdl-textfield__input'
   = form.label :email, class: 'mdl-textfield__label'
 
-= form.fields_for :addresses do |address_fields|
+= form.fields_for :address do |address_fields|
   %li= address_fields.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
   %li= address_fields.text_field :last_name, placeholder: :last_name, value: current_user.last_name
   %li= address_fields.text_field :address1, placeholder: :address_1

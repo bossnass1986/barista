@@ -13,7 +13,7 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   def update
     @user = current_user
     if @user.update_attributes(user_params)
-      redirect_to shopping_suppliers_url(), :notice  => "Successfully updated user."
+      redirect_to shopping_merchants_url(), :notice  => "Successfully updated user."
     else
       render :edit
     end
