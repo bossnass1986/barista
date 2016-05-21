@@ -90,9 +90,9 @@ en:
     referral:
       index:
         title: 'Referrals'
-    store_credit:
+    store_credits:
       show:
-        title: ''
+        title: 'Cup Town Dollars'
 
 
   cart:
