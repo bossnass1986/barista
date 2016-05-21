@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="refactor supplier to merchant">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/variant.rb" afterPath="$PROJECT_DIR$/app/models/variant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,7 +59,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -62,6 +67,86 @@
               <folding>
                 <element signature="e#8#32#1#ruby" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="variant.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/variant.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_product.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_meta_data.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="development.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="19" column="41" selection-start-line="15" selection-start-column="2" selection-end-line="19" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="61" selection-start-line="5" selection-start-column="2" selection-end-line="7" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,9 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
-        <option value="$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.haml" />
         <option value="$PROJECT_DIR$/lib/custom_validators.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/superman.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/admin/suppliers_controller.rb" />
@@ -182,7 +264,6 @@
         <option value="$PROJECT_DIR$/app/models/supplier.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shopping/suppliers/_product.html.haml" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/models/variant_supplier.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb" />
@@ -209,12 +290,16 @@
         <option value="$PROJECT_DIR$/app/models/phone.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/myaccount/addresses/_form.html.haml" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/models/address.rb" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4ab14069-0621-4096-811b-6a492b108389/console.sql" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/show.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/models/product.rb" />
+        <option value="$PROJECT_DIR$/app/models/variant.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_meta_data.html.haml" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -292,11 +377,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,14 +677,7 @@
       <workItem from="1463489858334" duration="28509000" />
       <workItem from="1463737706744" duration="11954000" />
       <workItem from="1463817640660" duration="1483000" />
-      <workItem from="1463819331424" duration="2123000" />
-    </task>
-    <task id="LOCAL-00129" summary="suppluer show rewrite">
-      <created>1460551156710</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1460551156710</updated>
+      <workItem from="1463819331424" duration="5874000" />
     </task>
     <task id="LOCAL-00130" summary="show only 1 product for multiple variants on supplier page">
       <created>1461235824615</created>
@@ -923,11 +1015,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463822301745</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="refactor supplier to merchant">
+      <created>1463822652399</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1463822652400</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44573000" />
+    <option name="totallyTimeSpent" value="48324000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -940,9 +1039,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20314735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20314735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44819278" sideWeight="0.52847224" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1033,45 +1132,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/multi/variants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.suppliers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.properties">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/variant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160520092207_rename_variant_supplier_to_variant_merchant.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20160520090313_rename_supplier_to_merchant.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -1221,13 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/shopping/merchants_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -1310,13 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/phone_type.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1328,13 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1438,6 +1477,70 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="61" selection-start-line="5" selection-start-column="2" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="41" selection-start-line="15" selection-start-column="2" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/variant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_meta_data.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
           <folding />
         </state>
       </provider>

@@ -14,8 +14,6 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   belongs_to :product_type
   belongs_to :prototype
-  belongs_to :shipping_category
-
   has_many :product_properties
   has_many :properties,         through: :product_properties
 

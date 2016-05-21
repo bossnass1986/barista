@@ -2,27 +2,19 @@ class Variant < ActiveRecord::Base
 
 
   has_many :variant_merchants, dependent: :destroy
-  has_many :merchants, through: :variant_suppliers
+  has_many :merchants, through: :variant_merchants
 
   has_many :variant_properties
   has_many :properties,        through: :variant_properties
 
   has_many :order_items
 
-  # TODO Remove not required
-  # has_many   :purchase_order_variants
-  # has_many   :purchase_orders, through: :purchase_order_variants
-
   belongs_to :product
-
-  # TODO Remove not required
-  # belongs_to :inventory
   # belongs_to :image_group
 
   # before_validation :create_inventory#, :on => :create
   #after_save :expire_cache
 
-  # validates :inventory_id, presence: true
   validates :price,       presence: true, :numericality => true, :format => { :with => /\A(\$)?(\d+)(\.|,)?\d{0,2}?\z/ }
   validates :product_id,  presence: true
   # validates :sku,         presence: true,       length: { maximum: 255 }
