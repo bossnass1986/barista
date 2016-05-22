@@ -56,32 +56,32 @@ en:
       owner_settings: 'Owner Settings'
       admin_settings: 'Admin Settings'
       back_to_app: 'Back to App'
-    address:
+    addresses:
       index:
         title: 'Addresses'
         manage_addresses: 'Manage Addresses'
-        no_addresses_saved: 'Oh no! There are no saved addresses :-('
-        no_address_cta: ''
+        no_records: 'Oh no! There are no saved addresses :-('
+        submit_button: ''
       new:
         title: 'New Address'
       edit:
         title: 'Edit Address'
       form:
         header: 'My Details'
-    credit_card:
+    credit_cards:
       index:
         title: 'Payment Methods'
-        no_cards_saved: 'Oh no! There are no saved cards :-('
-        new_button: 'New Payment'
+        no_records: 'Oh no! There are no saved cards :-('
+        submit_button: 'New Payment'
       new:
         title: 'Add Payment'
       form:
         credit_card_error: 'Your card number is incorrect'
         submit_button: 'Add New Payment Method'
-    order:
+    orders:
       index:
         title: 'Order History'
-        no_orders: 'Oh no! There are no recent orders :-('
+        no_records: 'Oh no! There are no recent orders :-('
     overviews:
       edit:
         title: 'Edit My Details'
@@ -105,18 +105,6 @@ en:
     checkout: 'Order Now'
     update: 'Update'
     item_passed_update: 'Item was successfully updated.'
-  devise:
-    registrations:
-      edit:
-        title: 'Account Details'
-        update_button: 'Update Account'
-      new:
-        submit_button: 'Join Now'
-    sessions:
-      new:
-        submit_button: 'Login'
-
-
   supplier:
     index:
       title: 'Venues'

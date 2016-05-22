@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 # Deployment
 gem 'rails'
 ruby '2.3.1'
+
+# Analytics
 gem 'skylight'
+
 # ==========
 # MemCachier
 # ==========
@@ -16,7 +19,7 @@ gem 'dalli'
 # Server
 gem 'puma'
 
-# Template Engine
+# Template
 gem 'material_design_lite-sass'
 gem 'haml'
 gem 'html2haml'
@@ -28,33 +31,22 @@ gem 'pg'
 
 # User Management
 gem 'clearance'
-# gem 'devise'
 gem 'rolify'
 gem 'cancancan'
 
 # Payment Gateway
-# gem 'stripe'
 gem 'awesome_nested_set', '~> 3.0.1'
 gem 'braintree'
-gem 'activemerchant', '~> 1.48'#, :lib => 'active_merchant'
 gem 'aasm'
 gem 'paperclip'
 
 # Search
 gem 'pg_search'
-# gem 'algoliasearch-rails'
 
 # Phone Management
 gem 'sinch_sms'
-# gem 'twilio-ruby'
-group :production do
-  gem 'rails_12factor'
-  gem 'rack-wwwhisper', '~> 1.0'
-end
-# gem 'seed_dump'
 
-gem 'brakeman', :require => false
-
+# Geocoding
 gem 'geocoder'
 
 # Gems used only for assets and not required
@@ -71,28 +63,13 @@ end
 
 gem 'jquery-rails'
 
-#
-# group :test do
-#   gem 'rspec-rails'
-#   gem 'cucumber-rails'
-#   gem 'capybara'
-#   gem 'database_cleaner'
-#   gem 'test-unit', '~> 3.0'
-# end
-
-# group :development do
-#   gem 'rspec-rails'
-#   gem 'bullet'
-#   gem 'better_errors'
-#   gem 'binding_of_caller'
-# end
-
 group :development do
   gem 'quiet_assets'
   gem 'refills'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'web-console'
+  gem 'brakeman', :require => false
 end
 
 group :development, :test do
@@ -108,4 +85,9 @@ end
 
 group :development, :staging do
   gem 'rack-mini-profiler', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'rack-wwwhisper', '~> 1.0'
 end

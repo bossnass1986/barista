@@ -1,8 +1,8 @@
-- title t('myaccount.order.index.title')
+- title t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     - if @orders.empty?
-      .mdl-typography--display-1-color-contrast= t('myaccount.order.index.no_orders')
+      = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else
       test
 -#- unless @orders.present?

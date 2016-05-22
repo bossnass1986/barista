@@ -1,8 +1,8 @@
-- title t('myaccount.credit_card.index.title')
+- title t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     - if @credit_cards.empty?
-      .mdl-typography--display-1-color-contrast= t('myaccount.credit_card.index.no_cards_saved')
+      = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else
       %ul.demo-list-two.mdl-list
         - for credit_card in @credit_cards

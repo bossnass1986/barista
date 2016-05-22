@@ -1,8 +1,8 @@
-- title t('myaccount.address.index.title')
+- title t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     - if @addresses.empty?
-      .mdl-typography--display-1-color-contrast= t('myaccount.address.index.no_addresses_saved')
+      = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else
       .grid-block
         .small-12.grid-content
