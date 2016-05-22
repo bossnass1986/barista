@@ -6,7 +6,7 @@ ruby '2.3.1'
 
 # Analytics
 # gem 'skylight'
-gem 'active_merchant'
+gem 'activemerchant', '~> 1.48'
 # ==========
 # MemCachier
 # ==========
