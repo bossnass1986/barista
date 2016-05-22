@@ -5,7 +5,7 @@ gem 'rails'
 ruby '2.3.1'
 
 # Analytics
-gem 'skylight'
+# gem 'skylight'
 
 # ==========
 # MemCachier
