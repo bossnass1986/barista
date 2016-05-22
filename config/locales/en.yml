@@ -41,11 +41,6 @@ en:
       site_name: 'Cup Town'
       meta_description: 'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
       meta_keywords: 'Ruby on Rails, ecommerce'
-  product:
-    index:
-      title: 'Menu'
-    show:
-      product_not_available: 'Sorry this product is not currently available.'
   myaccount:
     index:
       title: 'My Account'
@@ -93,6 +88,14 @@ en:
     store_credits:
       show:
         title: 'Cup Town Dollars'
+  shopping:
+    merchants:
+      index:
+        title: 'Merchants'
+      show:
+        title: 'Menu'
+        no_records: 'Oh no! There are no menu items  :-('
+
 
 
   cart:
