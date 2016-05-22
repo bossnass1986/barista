@@ -19,3 +19,4 @@
 /config/environments/staging.rb
 /config/initializers/secret_token.rb
 /brakeman.txt
+/brakeman.html

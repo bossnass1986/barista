@@ -2,8 +2,7 @@ class Admin::Merchandise::ProductTypesController < Admin::BaseController
   helper_method :sort_column, :sort_direction
 
   def index
-    @product_types = ProductType.admin_grid(params).order(sort_column + " " + sort_direction).
-        paginate(:page => pagination_page, :per_page => pagination_rows)
+    @product_types = ProductType.all
   end
 
   def show

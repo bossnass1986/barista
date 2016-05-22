@@ -446,7 +446,7 @@ class Order < ActiveRecord::Base
     grid = grid.where("orders.shipments_count = ?", 0)               if params[:shipped].present? && params[:shipped] == 'false'
     grid = grid.where("orders.number LIKE ?", "#{params[:number]}%")  if params[:number].present?
     grid = grid.where("orders.email LIKE ?", "#{params[:email]}%")    if params[:email].present?
-    grid = grid.order("#{params[:sidx]} #{params[:sord]}")
+    # grid = grid.order("#{params[:sidx]} #{params[:sord]}")
   end
 
   # paginated results from the admin order fulfillment grid

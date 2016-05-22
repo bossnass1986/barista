@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Deployment
-gem 'rails', '4.2.4'
+gem 'rails'
 ruby '2.3.1'
 gem 'skylight'
 # ==========

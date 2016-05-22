@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include Clearance::Controller
-  protect_from_forgery
+  protect_from_forgery with: :exception
   layout 'mdl'
 
   before_action :require_login, :set_locale

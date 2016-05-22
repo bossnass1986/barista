@@ -12,13 +12,13 @@ class StoreCredit < ActiveRecord::Base
   # @param [Float] amount to remove
   # @return [none]
   def remove_credit(amount_to_remove)
-    sql = "UPDATE store_credits SET amount = (amount - #{amount_to_remove.to_f.round_at(2)}) WHERE id = #{self.id}"
-    ActiveRecord::Base.connection.execute(sql)
+    credit_amount = "#{self.amount} - #{amount_to_remove.to_f.round_at(2)}"
+    update(amount: credit_amount)
   end
 
   def add_credit(amount_to_add)
-    sql = "UPDATE store_credits SET amount = (amount + #{amount_to_add}) WHERE id = #{self.id}"
-    ActiveRecord::Base.connection.execute(sql)
+    credit_amount = "#{self.amount} + #{amount_to_add.to_f.round_at(2)}"
+    update(amount: credit_amount)
   end
 
   private

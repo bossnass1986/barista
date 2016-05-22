@@ -27,7 +27,7 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
             where(['order_items.order_id = ? AND
                                   products.shipping_category_id = ?', session_order_id, category_id]).references(:products)
 
-        OrderItem.where(id: items.map{|i| i.id}).update_all("shipping_rate_id = #{rate_id}")
+        OrderItem.where(id: items.map{|i| i.id}).update_all('shipping_rate_id =  ?', rate_id)
       else
         all_selected = false
       end
