@@ -1,16 +1,33 @@
 -#= form.error_messages 'supplier'
-.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-  = form.text_field :name, class: 'mdl-textfield__input'
-  = form.label :name, class: 'mdl-textfield__label'
-.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-  = form.email_field :email, class: 'mdl-textfield__input'
-  = form.label :email, class: 'mdl-textfield__label'
-
-= form.fields_for :address do |address_fields|
-  %li= address_fields.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
-  %li= address_fields.text_field :last_name, placeholder: :last_name, value: current_user.last_name
-  %li= address_fields.text_field :address1, placeholder: :address_1
-  %li= address_fields.text_field :address2, placeholder: :address_2
-  %li= address_fields.text_field :city, placeholder: :city
-  %li= address_fields.text_field :zip_code, placeholder: :post_code
-  %li=address_fields.select   :country_id, select_countries, :include_blank => true
+.mdl-grid.mdl-cell.mdl-cell--6-col.mdl-cell--4-offset
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.text_field :name, class: 'mdl-textfield__input'
+    = form.label :name, class: 'mdl-textfield__label'
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.email_field :email, class: 'mdl-textfield__input'
+    = form.label :email, class: 'mdl-textfield__label'
+  = form.fields_for :address do |address_fields|
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :first_name, class: 'mdl-textfield__input'
+      = address_fields.label :first_name, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :last_name, class: 'mdl-textfield__input'
+      = address_fields.label :last_name, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :address1, class: 'mdl-textfield__input'
+      = address_fields.label :address1, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :address2, class: 'mdl-textfield__input'
+      = address_fields.label :address2, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :city, class: 'mdl-textfield__input'
+      = address_fields.label :city, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
+      = address_fields.label :zip_code, class: 'mdl-textfield__label'
+        -#%li= address_fields.text_field :last_name, placeholder: :last_name, value: current_user.last_name
+        -#%li= address_fields.text_field :address1, placeholder: :address_1
+        -#%li= address_fields.text_field :address2, placeholder: :address_2
+        -#%li= address_fields.text_field :city, placeholder: :city
+        -#%li= address_fields.text_field :zip_code, placeholder: :post_code
+        -#%li=address_fields.select   :country_id, select_countries, :include_blank => true

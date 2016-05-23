@@ -2,6 +2,7 @@
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab{:href => '#information-panel'} Information
+    %a.mdl-tabs__tab{:href => '#finance-panel'} Finance
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
     %a.mdl-tabs__tab{:href => '#customers-panel'} Customers
     %a.mdl-tabs__tab{:href => '#products-panel'} Products
@@ -9,6 +10,8 @@
     = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
       = render :partial => '/admin/merchants/form', :locals => {:form => form}
       = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+  #finance-panel.mdl-tabs__panel
+
   #orders-panel.mdl-tabs__panel.is-active
 
   #customers-panel.mdl-tabs__panel

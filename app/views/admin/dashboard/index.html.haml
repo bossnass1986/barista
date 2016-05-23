@@ -1,46 +1,128 @@
 - title t('admin.dashboard.title')
-.mdl-cell.mdl-cell--4-col
-  .mdl-card.mdl-shadow--2dp
-    .mdl-card__title
-      %h2.mdl-card__title-text
-        Auckland Sky Tower
-        %br>/
-        Auckland, New Zealand
-    .mdl-card__media
-      %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
-    .mdl-card__supporting-text
-      The Sky Tower is an observation and telecommunications tower located in Auckland,
-      New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
-      in the Southern Hemisphere.
-    .mdl-card__actions
-      %a{:href => "http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29"} Wikipedia entry
-.mdl-cell.mdl-cell--4-col
-  .mdl-card.mdl-shadow--2dp
-    .mdl-card__title
-      %h2.mdl-card__title-text
-        Auckland Sky Tower
-        %br>/
-        Auckland, New Zealand
-    .mdl-card__media
-      %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
-    .mdl-card__supporting-text
-      The Sky Tower is an observation and telecommunications tower located in Auckland,
-      New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
-      in the Southern Hemisphere.
-    .mdl-card__actions
-      %a{:href => "http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29"} Wikipedia entry
-.mdl-cell.mdl-cell--4-col
-  .mdl-card.mdl-shadow--2dp
-    .mdl-card__title
-      %h2.mdl-card__title-text
-        Auckland Sky Tower
-        %br>/
-        Auckland, New Zealand
-    .mdl-card__media
-      %img{:alt => "", :border => "0", :height => "157", :src => "skytower.jpg", :style => "padding:10px;", :width => "173"}/
-    .mdl-card__supporting-text
-      The Sky Tower is an observation and telecommunications tower located in Auckland,
-      New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
-      in the Southern Hemisphere.
-    .mdl-card__actions
-      %a{:href => "http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29"} Wikipedia entry
+.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+  .mdl-cell.mdl-cell--2-col
+    .mdl-typography--display-1-color-contrast
+      $130
+      .mdl-typography--title-color-contrast
+        Sales
+  .mdl-cell.mdl-cell--2-col
+    .mdl-typography--display-1-color-contrast
+      $130
+      .mdl-typography--title-color-contrast
+        Customers
+  .mdl-cell.mdl-cell--2-col
+    .mdl-typography--display-1-color-contrast
+      $130
+      .mdl-typography--title-color-contrast
+        Merchants
+  .mdl-cell.mdl-cell--3-col
+    .mdl-typography--display-1-color-contrast
+      $130
+      .mdl-typography--title-color-contrast
+        Turnover
+  .mdl-cell.mdl-cell--3-col
+    .mdl-typography--display-1-color-contrast
+      $130
+      .mdl-typography--title-color-contrast
+        Commissions
+.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+    .mdl-tabs__tab-bar
+      %a.mdl-tabs__tab.is-active{:href => "#today-panel"} Today
+      %a.mdl-tabs__tab{:href => "#week-panel"} Week
+      %a.mdl-tabs__tab{:href => "#month-panel"} Month
+      %a.mdl-tabs__tab{:href => "#year-panel"} Year
+      %a.mdl-tabs__tab{:href => "#all-time-panel"} All Time
+    #today-panel.mdl-tabs__panel.is-active
+      .mdl-list
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Orders
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Sales
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Pending
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Processing
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Completed
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Failed
+          %span.mdl-list__item-secondary-content
+            0
+    #week-panel.mdl-tabs__panel
+      %ul
+        %li Tywin
+        %li Cersei
+        %li Jamie
+        %li Tyrion
+    #month-panel.mdl-tabs__panel
+      %ul
+        %li Viserys
+        %li Daenerys
+    #year-panel.mdl-tabs__panel
+      %ul
+        %li Viserys
+        %li Daenerys
+    #all-time-panel.mdl-tabs__panel
+      %ul
+        %li Viserys
+        %li Daenerys
+.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+    .mdl-tabs__tab-bar
+      %a.mdl-tabs__tab.is-active{:href => "#customers-panel"} Customers
+      %a.mdl-tabs__tab{:href => "#merchants-panel"} Merchants
+    #customers-panel.mdl-tabs__panel.is-active
+      .mdl-list
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Total
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Active
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Inactive
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Week
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Month
+          %span.mdl-list__item-secondary-content
+            0
+        .mdl-list__item
+          %span.mdl-list__item-primary-content
+            %span Year
+          %span.mdl-list__item-secondary-content
+            0
+    #merchants-panel.mdl-tabs__panel
+      %ul
+        %li Tywin
+        %li Cersei
+        %li Jamie
+        %li Tyrion
