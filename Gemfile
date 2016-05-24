@@ -32,7 +32,7 @@ gem 'pg'
 # User Management
 gem 'clearance'
 gem 'rolify'
-gem 'cancancan'
+# gem 'cancancan'
 
 # Payment Gateway
 gem 'awesome_nested_set', '~> 3.0.1'

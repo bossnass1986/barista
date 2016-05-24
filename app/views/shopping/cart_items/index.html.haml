@@ -12,9 +12,6 @@
           = t(:add_items_saved_for_later)
     = form_for session_cart, url: shopping_cart_item_path(session_cart), :as => :cart do |cart_form|
       - unless @cart_items.blank?
-        -#.grid-block
-          .grid-content
-            %span{:style => "margin-top:3px;"} Make any changes below?
         .grid-block
           .grid-content
             %section.block-list
@@ -26,7 +23,6 @@
         .grid-block
           .small-12.grid-content
             = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button large expand'}
-              -#.grid-block.text-center
           .grid-content
             = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
           .grid-content

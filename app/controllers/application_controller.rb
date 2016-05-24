@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :require_login, :set_locale
 
+
   helper_method :most_likely_user,
                 :random_user,
                 :session_cart,
@@ -16,18 +17,8 @@ class ApplicationController < ActionController::Base
                 :customer_confirmation_page_view,
                 :sort_direction
 
-
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
-  end
-
-
   rescue_from ActiveRecord::DeleteRestrictionError do |exception|
     redirect_to :back, alert: exception.message
-  end
-
-  def current_ability
-    @current_ability ||= Ability.new(current_user)
   end
 
   def product_types

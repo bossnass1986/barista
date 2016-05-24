@@ -11,7 +11,8 @@ class Shopping::MerchantsController < Shopping::BaseController
   def show
     # @merchant = Merchant.select('product.name','product.description').joins(products: :variants).find(params[:id])
     @merchant = Merchant.select('id', 'permalink').find(params[:id])
-     # form_info
+    @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
+    # form_info
     # @cart_item.variant_id = @merchant.try(:id)
   end
 

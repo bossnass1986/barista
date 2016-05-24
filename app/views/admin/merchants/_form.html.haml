@@ -1,4 +1,3 @@
--#= form.error_messages 'supplier'
 .mdl-grid.mdl-cell.mdl-cell--6-col.mdl-cell--4-offset
   .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
     = form.text_field :name, class: 'mdl-textfield__input'
@@ -25,9 +24,3 @@
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
       = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
       = address_fields.label :zip_code, class: 'mdl-textfield__label'
-        -#%li= address_fields.text_field :last_name, placeholder: :last_name, value: current_user.last_name
-        -#%li= address_fields.text_field :address1, placeholder: :address_1
-        -#%li= address_fields.text_field :address2, placeholder: :address_2
-        -#%li= address_fields.text_field :city, placeholder: :city
-        -#%li= address_fields.text_field :zip_code, placeholder: :post_code
-        -#%li=address_fields.select   :country_id, select_countries, :include_blank => true

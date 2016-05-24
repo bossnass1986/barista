@@ -153,10 +153,10 @@ ProductProperty.create!([
 #   Merchant.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
 # end
 Merchant.create!([
- {id: 1, name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
- {id: 2, name: 'Wedgewood Cafe', email: 'test@test.com'},
- {id: 3, name: 'Fresch Cafe', email: 'test@test.com'},
- {id: 4, name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
+                     {name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
+                     {name: 'Wedgewood Cafe', email: 'test@test.com'},
+                     {name: 'Fresch Cafe', email: 'test@test.com'},
+                     {name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
 ])
 
 puts 'Creating Sample Merchants with Menu Items'

@@ -1,5 +1,4 @@
 class Admin::MerchantsController < Admin::BaseController
-  helper_method :sort_column, :sort_direction
 
   def index
     @merchants = Merchant.order(:name).page params[:page]
@@ -14,7 +13,6 @@ class Admin::MerchantsController < Admin::BaseController
 
     if @merchant.save
       redirect_to :action => :index
-      # SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', 'Merchant Created', '61430091464')
     else
       flash[:error] = "The supplier could not be saved"
       render :action => :new
@@ -46,7 +44,7 @@ class Admin::MerchantsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:merchant).permit(:name, :email, {address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id]})
+    params.require(:merchant).permit(:name, :email, address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id])
   end
 
 end

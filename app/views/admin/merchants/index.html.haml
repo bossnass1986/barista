@@ -7,10 +7,12 @@
       %tr
         %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product')
         %th.mdl-data-table__cell--non-numeric # Variants
+        %th.mdl-data-table__cell--non-numeric # Variants
     %tbody
       - @merchants.each do |merchant|
         %tr
           %td.mdl-data-table__cell--non-numeric= link_to merchant.name, admin_merchant_path(merchant)
+          %td.mdl-data-table__cell--non-numeric= merchant.address
           %td.mdl-data-table__cell--non-numeric= merchant.variants.count
 .mdl-cell.mdl-cell--12-col
   = link_to_previous_page @merchants, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'

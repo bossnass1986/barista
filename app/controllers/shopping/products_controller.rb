@@ -26,6 +26,7 @@ class Shopping::ProductsController < Shopping::BaseController
   # GET /Products/1
   # GET /Products/1.json
   def show
+    @product = Product.find(params[:id])
   end
 
   # GET /Products/new

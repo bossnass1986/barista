@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   before_validation :sanitize_data
   before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at, :create_braintree_customer, :assign_user_role
-   # TODO add back in for production
+  # TODO add back in for production
   # after_validation :geocode
 
   # geocoded_by :ip_address
@@ -73,18 +73,18 @@ class User < ActiveRecord::Base
   # has_many    :authored_return_authorizations, class_name: 'ReturnAuthorization', foreign_key: 'author_id'
 
   # validates :first_name,  presence: true, if: :registered_user?,
-  #           format:   { with: CustomValidators::Names.name_validator },
+  #           format:   { with: ::CustomValidators::Names.name_validator },
   #           length:   { maximum: 30 }
   # validates :last_name,   :presence => true, :if => :registered_user?,
-  #           :format   => { :with => CustomValidators::Names.name_validator },
+  #           :format   => { :with => ::CustomValidators::Names.name_validator },
   #           :length => { :maximum => 35 }
   # validates :email,       :presence => true,
   #           :uniqueness => true,##  This should be done at the DB this is too expensive in rails
-  #           :format   => { :with => CustomValidators::Emails.email_validator },
+  #           :format   => { :with => ::CustomValidators::Emails.email_validator },
   #           :length => { :maximum => 255 }
   # validates :mobile,       :presence => true,
   #           :uniqueness => true,##  This should be done at the DB this is too expensive in rails
-  #           :format   => { :with => CustomValidators::Numbers.phone_number_validator },
+  #           :format   => { :with => ::CustomValidators::Numbers.phone_number_validator },
   #           :length => { :maximum => 10 }
 
   accepts_nested_attributes_for :addresses

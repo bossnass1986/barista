@@ -2,6 +2,7 @@ class Phone < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
 
   belongs_to :user
+  belongs_to :address
   belongs_to :phone_type
   #belongs_to :phone_priority
   belongs_to :phoneable, polymorphic: true

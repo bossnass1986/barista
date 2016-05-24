@@ -6,12 +6,11 @@ class Merchant < ActiveRecord::Base
   has_many :variant_merchants
   has_many :variants, through: :variant_merchants, dependent: :destroy
   has_many :products, through: :variants, dependent: :destroy
-  has_many :supplier_trading_hours
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
-  has_many    :addresses,       dependent: :destroy,       as: :addressable
+  has_one :address, dependent: :destroy, as: :addressable
 
   before_validation :sanitize_data
 
@@ -22,7 +21,7 @@ class Merchant < ActiveRecord::Base
   # after_validation :geocode
   # after_create :sanitize_dates
 
-  accepts_nested_attributes_for :addresses
+  accepts_nested_attributes_for :address
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
   def time

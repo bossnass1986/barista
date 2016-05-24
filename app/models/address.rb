@@ -4,7 +4,7 @@ class Address < ActiveRecord::Base
   belongs_to  :country
   belongs_to  :address_type
   belongs_to  :addressable, :polymorphic => true
-  has_many     :phones, :as => :phoneable
+  has_one :phone, :as => :phoneable
   has_many     :shipments
 
 
@@ -26,7 +26,7 @@ class Address < ActiveRecord::Base
   before_save :replace_address, if: :replace_address_id
   after_save  :invalidate_old_defaults
 
-  accepts_nested_attributes_for :phones
+  accepts_nested_attributes_for :phone
 
   # First and last name of the person on the address
   #

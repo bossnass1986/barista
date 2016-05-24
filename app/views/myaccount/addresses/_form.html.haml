@@ -7,7 +7,7 @@
       - @address.errors.full_messages.each do |msg|
         %li= msg
 %section.block-list
-  %header= t('myaccount.address.form.header')
+  -#%header= t('myaccount.address.form.header')
   %ul
     %li= f.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
     %li= f.text_field :last_name, placeholder: :last_name, value: current_user.last_name

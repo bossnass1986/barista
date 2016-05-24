@@ -1,13 +1,6 @@
 class Admin::BaseController < ApplicationController
   layout 'superman'
 
-  load_and_authorize_resource
-
-  # def current_ability
-  #   @current_ability ||= AdminAbility.new(current_user)
-  # end
-
-
   private
 
   def recent_admin_users
