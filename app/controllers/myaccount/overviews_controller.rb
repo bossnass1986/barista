@@ -8,6 +8,7 @@ class Myaccount::OverviewsController < Myaccount::BaseController
 
   def edit
     @user = current_user
+    @states = State.form_selector
   end
 
   def update

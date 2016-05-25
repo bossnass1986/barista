@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520092207) do
+ActiveRecord::Schema.define(version: 20160525102303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -179,6 +179,8 @@ ActiveRecord::Schema.define(version: 20160520092207) do
     t.boolean  "featured",                     default: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   add_index "merchants", ["name"], name: "index_merchants_on_name", using: :btree
@@ -555,6 +557,14 @@ ActiveRecord::Schema.define(version: 20160520092207) do
 
   add_index "users_roles", ["role_id", "user_id"], name: "index_users_roles_on_role_id_and_user_id", using: :btree
 
+  create_table "variant_merchants", force: :cascade do |t|
+    t.integer "variant_id"
+    t.integer "merchant_id"
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "variant_properties", force: :cascade do |t|
     t.integer  "property_id"
     t.integer  "variant_id"
@@ -566,14 +576,6 @@ ActiveRecord::Schema.define(version: 20160520092207) do
 
   add_index "variant_properties", ["property_id"], name: "index_variant_properties_on_property_id", using: :btree
   add_index "variant_properties", ["variant_id"], name: "index_variant_properties_on_variant_id", using: :btree
-
-  create_table "variant_merchants", force: :cascade do |t|
-    t.integer  "variant_id"
-    t.integer  "merchant_id"
-    t.boolean  "active",      default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
 
   create_table "variants", force: :cascade do |t|
     t.integer  "product_id",                                                     null: false

@@ -6,7 +6,39 @@
     %ul
       - @address.errors.full_messages.each do |msg|
         %li= msg
-%section.block-list
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :first_name, class: 'mdl-textfield__input'
+  = f.label :first_name, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :last_name, class: 'mdl-textfield__input'
+  = f.label :last_name, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :address1, class: 'mdl-textfield__input'
+  = f.label :address1, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :address2, class: 'mdl-textfield__input'
+  = f.label :address2, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :city, class: 'mdl-textfield__input'
+  = f.label :city, class: 'mdl-textfield__label'
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  = f.text_field :zip_code, class: 'mdl-textfield__input'
+  = f.label :zip_code, class: 'mdl-textfield__label'
+  .mdl-selectfield
+    %label Standard Select
+    %select.browser-default
+      %option{:disabled => "disabled", :selected => "selected", :value => ""} Choose your option
+      %option{:value => "1"} Option 1
+      %option{:value => "2"} Option 2
+      %option{:value => "3"} Option 3
+  -#.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.select   :state_id, @states, :include_blank => true
+      = address_fields.label :state_id, class: 'mdl-textfield__label'
+  - if countries.size == 1
+    = address_fields.hidden_field   :country_id
+  - else
+    %li= address_fields.select   :country_id, select_countries, :include_blank => true
+-#%section.block-list
   -#%header= t('myaccount.address.form.header')
   %ul
     %li= f.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name

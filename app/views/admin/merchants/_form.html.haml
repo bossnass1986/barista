@@ -24,3 +24,17 @@
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
       = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
       = address_fields.label :zip_code, class: 'mdl-textfield__label'
+    .mdl-selectfield
+      %label Standard Select
+      %select.browser-default
+        %option{:disabled => "disabled", :selected => "selected", :value => ""} Choose your option
+        %option{:value => "1"} Option 1
+        %option{:value => "2"} Option 2
+        %option{:value => "3"} Option 3
+    -#.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = address_fields.select   :state_id, @states, :include_blank => true
+      = address_fields.label :state_id, class: 'mdl-textfield__label'
+    - if countries.size == 1
+      = address_fields.hidden_field   :country_id
+    - else
+      %li= address_fields.select   :country_id, select_countries, :include_blank => true

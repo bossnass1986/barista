@@ -22,7 +22,7 @@
     %i.material-icons plus_one
     = t('.referrals')
   - if current_user.admin?
-    = link_to '' , class: 'mdl-navigation__link' do
+    = link_to admin_path , class: 'mdl-navigation__link' do
       %i.material-icons https
       = t('.admin')
   = link_to sign_out_path, method: :delete, class: 'mdl-navigation__link' do
