@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier_id: 1
+  weekday: 1
+  open_time: 2016-03-30 21:43:09
+  close_time: 2016-03-30 21:43:09
+
+two:
+  supplier_id: 1
+  weekday: 1
+  open_time: 2016-03-30 21:43:09
+  close_time: 2016-03-30 21:43:09

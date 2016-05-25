@@ -1,2 +1,0 @@
-module SupplierTradingHoursHelper
-end

@@ -6,6 +6,7 @@ class Merchant < ActiveRecord::Base
   has_many :variant_merchants
   has_many :variants, through: :variant_merchants, dependent: :destroy
   has_many :products, through: :variants, dependent: :destroy
+  has_many :trading_hours
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
@@ -13,6 +14,7 @@ class Merchant < ActiveRecord::Base
   has_one :address, dependent: :destroy, as: :addressable
 
   before_validation :sanitize_data
+  after_create :add_trading_hours
 
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
@@ -25,7 +27,7 @@ class Merchant < ActiveRecord::Base
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
   def time
-    SupplierTradingHour.open.includes(:supplier).each do |hour|
+    TradingHour.open.includes(:supplier).each do |hour|
       puts "#{hour.supplier.name} is open! It closes at #{hour.close_time}."
     end
   end
@@ -47,6 +49,12 @@ class Merchant < ActiveRecord::Base
     self.where product_type_id: product_types
   end
 
+
+  def add_trading_hours
+    (0..6).each do |i|
+      TradingHour.create!(merchant_id: self.id, weekday: i, trades: true)
+    end
+  end
 
   # if the permalink is not filled in set it equal to the name
   def sanitize_data

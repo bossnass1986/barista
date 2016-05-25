@@ -92,24 +92,26 @@ Property.create!([
 
 puts 'Creating Standard Menu Items'
 Product.create!([
-  {id: 1, prototype_id: 2, product_type_id: 2, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
-  {id: 2, prototype_id: 2, product_type_id: 1, name: 'Cappuccino', description: 'Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.', shipping_category_id: 1},
-  {id: 3, prototype_id: 2, product_type_id: 1, name: 'Chai Latte', description: 'A normal, regular milk latte', shipping_category_id: 1},
-  {id: 4, prototype_id: 2, product_type_id: 1, name: 'Flat White', description: 'Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.', shipping_category_id: 1},
-  {id: 5, prototype_id: 2, product_type_id: 1, name: 'Frappe', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 6, prototype_id: 2, product_type_id: 1, name: 'Hot Chocolate', description: 'Silky steamed milk poured over melted chocolate topped with chocolate powder', shipping_category_id: 1},
-  {id: 7, prototype_id: 2, product_type_id: 2, name: 'Iced Chocolate', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 8, prototype_id: 2, product_type_id: 2, name: 'Iced Coffee', description: 'A normal, regular milk latte', shipping_category_id: 1},
-  {id: 9, prototype_id: 2, product_type_id: 2, name: 'Iced Tea', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 10, prototype_id: 1, product_type_id: 1, name: 'Irish', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
-  {id: 11, prototype_id: 1, product_type_id: 1, name: 'Latte', description: 'A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.', shipping_category_id: 1},
-  {id: 12, prototype_id: 1, product_type_id: 1, name: 'Latte Macchiato', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 13, prototype_id: 1, product_type_id: 1, name: 'Long Black', description: 'A long black is made by pouring a double-shot of espresso or ristretto over hot water.', shipping_category_id: 1},
-  {id: 14, prototype_id: 1, product_type_id: 1, name: 'Macchiato', description: 'A single shot of espresso with a small amount of steamed milk.', shipping_category_id: 1},
-  {id: 15, prototype_id: 1, product_type_id: 1, name: 'Mocha', description: 'Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.', shipping_category_id: 1},
-  {id: 16, prototype_id: 1, product_type_id: 1, name: 'Short Black', description: 'A single shot of espresso.', shipping_category_id: 1},
-  {id: 17, prototype_id: 1, product_type_id: 1, name: 'Tea', description: 'A normal, regular milk coffee', shipping_category_id: 1},
-  {id: 18,  prototype_id: 1,product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
+                    # Hot Drinks
+                    {prototype_id: 1, product_type_id: 1, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Cappuccino', description: 'Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Chai Latte', description: 'A normal, regular milk latte', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Flat White', description: 'Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Hot Chocolate', description: 'Silky steamed milk poured over melted chocolate topped with chocolate powder', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Latte', description: 'A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Latte Macchiato', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Long Black', description: 'A long black is made by pouring a double-shot of espresso or ristretto over hot water.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Macchiato', description: 'A single shot of espresso with a small amount of steamed milk.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Mocha', description: 'Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Short Black', description: 'A single shot of espresso.', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Tea', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+                    {prototype_id: 1, product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
+                    # Cold Drinks
+                    {prototype_id: 2, product_type_id: 2, name: 'Frappe', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+                    {prototype_id: 2, product_type_id: 2, name: 'Iced Chocolate', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+                    {prototype_id: 2, product_type_id: 2, name: 'Iced Coffee', description: 'A normal, regular milk latte', shipping_category_id: 1},
+                    {prototype_id: 2, product_type_id: 2, name: 'Iced Tea', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+                    {prototype_id: 2, product_type_id: 2, name: 'Irish', description: 'A normal, regular milk macchiato', shipping_category_id: 1}
 ])
 
 # 'Creating Sample Variants'

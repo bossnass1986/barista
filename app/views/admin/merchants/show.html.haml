@@ -11,7 +11,10 @@
       = render :partial => '/admin/merchants/form', :locals => {:form => form}
       = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   #finance-panel.mdl-tabs__panel
-
+    - @merchant.trading_hours.each do |th|
+      = Date::DAYNAMES[th.weekday]
+      = th.open_time
+      = th.close_time
   #orders-panel.mdl-tabs__panel.is-active
 
   #customers-panel.mdl-tabs__panel
