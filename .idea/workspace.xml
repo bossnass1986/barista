@@ -4,25 +4,17 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="merchant addresses&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/trading_hours_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/trading_hours_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/supplier_trading_hours_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/supplier_trading_hours_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20160326000527_create_supplier_trading_hours.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/supplier_trading_hours.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/trading_hours.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/supplier_trading_hour.rb" afterPath="$PROJECT_DIR$/app/models/trading_hour.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/supplier_trading_hours.yml" afterPath="$PROJECT_DIR$/test/fixtures/trading_hours.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/barista.iml" afterPath="$PROJECT_DIR$/.idea/barista.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="trading hours">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_hours.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_information.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant.rb" afterPath="$PROJECT_DIR$/app/models/merchant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/new.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/new.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/show.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/supplier_trading_hours_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/supplier_trading_hours_controller_test.rb" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,9 +32,9 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/barista@db_setup__barista.coverage" NAME="db:setup: barista Coverage Results" MODIFIED="1441031157635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1464171020445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1464258890766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@doc_app__barista.coverage" NAME="doc:app: barista Coverage Results" MODIFIED="1441031348815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1464183659056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1464265522875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@Rails_console__barista.coverage" NAME="Rails console: barista Coverage Results" MODIFIED="1448168066758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_seed__barista.coverage" NAME="db:seed: barista Coverage Results" MODIFIED="1464183742479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_migrate__barista.coverage" NAME="db:migrate: barista Coverage Results" MODIFIED="1464182330834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
@@ -71,8 +63,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="beanngone_dev.public.products" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
+      <file leaf-file-name="20160326000527_create_trading_hours.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="6" selection-end-line="63" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beanngone_dev.public.variant_merchants" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variant_merchants">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -86,88 +98,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <file leaf-file-name="_information.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_information.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2770">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20150108210139_create_orders.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README_FOR_APP" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20160326000527_create_trading_hours.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_product.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="641">
+              <caret line="52" column="98" selection-start-line="52" selection-start-column="98" selection-end-line="52" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_form.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="69" selection-start-line="34" selection-start-column="6" selection-end-line="35" selection-end-column="69" />
+            <state relative-caret-position="300">
+              <caret line="20" column="115" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="115" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="merchants_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="330">
+              <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-649">
+              <caret line="41" column="13" selection-start-line="36" selection-start-column="6" selection-end-line="41" selection-end-column="13" />
+              <folding>
+                <element signature="e#8#34#1#ruby" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#8#40#1#ruby" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="beanngone_dev.public.trading_hours" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.trading_hours">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beanngone_dev.public.variants" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -219,8 +230,8 @@
       <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="155" selection-end-column="5" />
+            <state relative-caret-position="-557">
+              <caret line="161" column="2" selection-start-line="161" selection-start-column="2" selection-end-line="161" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -246,10 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/shopping/shipping_methods_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/store_credit.rb" />
-        <option value="$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/test.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/myaccount/orders/index.html.haml" />
@@ -284,19 +291,23 @@
         <option value="$PROJECT_DIR$/app/helpers/merchants_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/myaccount/addresses/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160326000527_create_merchant_trading_hours.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb" />
-        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/_hours.html.haml" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/_information.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
       </list>
     </option>
   </component>
@@ -379,7 +390,7 @@
       <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:seed: barista">
+  <component name="RunManager" selected="Rake.db:reset: barista">
     <configuration default="false" name="db:schema:dump: barista" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="barista" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -643,14 +654,7 @@
       <workItem from="1463737706744" duration="11954000" />
       <workItem from="1463817640660" duration="1483000" />
       <workItem from="1463819331424" duration="20767000" />
-      <workItem from="1463992690273" duration="33341000" />
-    </task>
-    <task id="LOCAL-00147" summary="heroku come at me">
-      <created>1462280345312</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1462280345312</updated>
+      <workItem from="1463992690273" duration="42303000" />
     </task>
     <task id="LOCAL-00148" summary="heroku come at me">
       <created>1462349055873</created>
@@ -988,11 +992,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464174700018</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="trading hours">
+      <created>1464184569119</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1464184569119</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96558000" />
+    <option name="totallyTimeSpent" value="105520000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1038,7 +1049,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4463576" sideWeight="0.47152779" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4463576" sideWeight="0.47152779" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48741722" sideWeight="0.47430557" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28826895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1065,7 +1076,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="heroku come at me" />
     <MESSAGE value="admin updates" />
     <MESSAGE value="devise updates" />
     <MESSAGE value="production email settings" />
@@ -1090,7 +1100,8 @@
     <MESSAGE value="gemfile updates" />
     <MESSAGE value="admin dashboard" />
     <MESSAGE value="merchant addresses&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="merchant addresses&#10;" />
+    <MESSAGE value="trading hours" />
+    <option name="LAST_COMMIT_MESSAGE" value="trading hours" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1101,7 +1112,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.merchants">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1114,7 +1125,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.merchants">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1127,7 +1138,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.merchants">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1140,7 +1151,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.merchants">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1153,23 +1164,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#8#19#1#ruby" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users_roles">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
         </state>
       </provider>
       <provider editor-type-id="text-editor">
@@ -1179,41 +1177,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160121122141_create_addresses.rb">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="61" />
-          <folding>
-            <element signature="e#8#19#1#ruby" expanded="false" />
-          </folding>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150915120455_add_latitude_longitude_to_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="33" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160525102303_add_latitude_longitude_to_merchants.rb">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160525132036_rename_supplier_trading_hour_to_trading_hour.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
@@ -1221,73 +1245,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/merchants_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/edit.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#8#19#1#ruby" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/addresses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/addresses/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.addresses">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1300,47 +1258,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="720" column="1" selection-start-line="720" selection-start-column="1" selection-end-line="720" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/address.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/phone.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1353,52 +1271,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/models/trading_hour.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -1439,6 +1329,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1447,41 +1345,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/multi/variants/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/properties/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="115" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="115" />
+          <folding />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_information.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="52" column="98" selection-start-line="52" selection-start-column="98" selection-end-line="52" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -1494,26 +1401,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
-          <folding />
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150108210139_create_orders.rb">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160525132036_rename_supplier_trading_hour_to_trading_hour.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1531,7 +1427,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.users">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.pg_search_documents">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_hours.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-649">
+          <caret line="41" column="13" selection-start-line="36" selection-start-column="6" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#8#34#1#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#8#40#1#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1546,16 +1577,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="155" selection-end-column="5" />
+        <state relative-caret-position="-557">
+          <caret line="161" column="2" selection-start-line="161" selection-start-column="2" selection-end-line="161" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160326000527_create_trading_hours.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1573,8 +1622,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/trading_hour.rb">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variant_merchants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variant_merchants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.variant_merchants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -1583,32 +1663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="69" selection-start-line="34" selection-start-column="6" selection-end-line="35" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="290">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="6" selection-end-line="63" selection-end-column="9" />
           <folding />
         </state>
       </provider>

@@ -6,15 +6,15 @@ class Merchant < ActiveRecord::Base
   has_many :variant_merchants
   has_many :variants, through: :variant_merchants, dependent: :destroy
   has_many :products, through: :variants, dependent: :destroy
-  has_many :trading_hours
+  has_many :trading_hours, dependent: :destroy
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
-  has_one :address, dependent: :destroy, as: :addressable
+  has_one :address, as: :addressable, dependent: :destroy
 
   before_validation :sanitize_data
-  after_create :add_trading_hours
+  after_create :add_trading_hours, :add_variants
 
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
@@ -24,6 +24,7 @@ class Merchant < ActiveRecord::Base
   # after_create :sanitize_dates
 
   accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
   def time
@@ -54,6 +55,13 @@ class Merchant < ActiveRecord::Base
     (0..6).each do |i|
       TradingHour.create!(merchant_id: self.id, weekday: i, trades: true)
     end
+  end
+
+  def add_variants
+    @product = Product.all
+      # @product.each do |product|
+      #   @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
+      # end
   end
 
   # if the permalink is not filled in set it equal to the name

@@ -115,16 +115,16 @@ Product.create!([
 ])
 
 # 'Creating Sample Variants'
-Variant.create!([
-  {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95},
-  {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
-  {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
-  {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
-  {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95},
-  {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
-  # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-  # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
-])
+# Variant.create!([
+#   {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95},
+#   {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
+#   {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
+#   {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
+#   {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95},
+#   {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
+#   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
+#   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
+# ])
 
 puts 'Creating Sample Products with Attributes'
 ProductProperty.create!([
@@ -161,17 +161,17 @@ Merchant.create!([
                      {name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
 ])
 
-puts 'Creating Sample Merchants with Menu Items'
-VariantMerchant.create!([
-    {merchant_id: 1, variant_id: 1},
-    {merchant_id: 1, variant_id: 2},
-    {merchant_id: 1, variant_id: 3},
-    {merchant_id: 1, variant_id: 4},
-    {merchant_id: 1, variant_id: 5},
-    {merchant_id: 1, variant_id: 6},
-    {merchant_id: 1, variant_id: 7},
-    {merchant_id: 1, variant_id: 8}
-])
+# puts 'Creating Sample Merchants with Menu Items'
+# VariantMerchant.create!([
+#     {merchant_id: 1, variant_id: 1},
+#     {merchant_id: 1, variant_id: 2},
+#     {merchant_id: 1, variant_id: 3},
+#     {merchant_id: 1, variant_id: 4},
+#     {merchant_id: 1, variant_id: 5},
+#     {merchant_id: 1, variant_id: 6},
+#     {merchant_id: 1, variant_id: 7},
+#     {merchant_id: 1, variant_id: 8}
+# ])
 
 # puts 'Deleting All Order Statues'
 # OrderStatus.delete_all

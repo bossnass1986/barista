@@ -2,19 +2,18 @@
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab{:href => '#information-panel'} Information
-    %a.mdl-tabs__tab{:href => '#finance-panel'} Finance
+    %a.mdl-tabs__tab{:href => '#hours-panel'} Hours
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
     %a.mdl-tabs__tab{:href => '#customers-panel'} Customers
     %a.mdl-tabs__tab{:href => '#products-panel'} Products
   #information-panel.mdl-tabs__panel
     = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
-      = render :partial => '/admin/merchants/form', :locals => {:form => form}
+      = render :partial => '/admin/merchants/information', :locals => {:form => form}
       = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-  #finance-panel.mdl-tabs__panel
-    - @merchant.trading_hours.each do |th|
-      = Date::DAYNAMES[th.weekday]
-      = th.open_time
-      = th.close_time
+  #hours-panel.mdl-tabs__panel
+    = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
+      = render :partial => '/admin/merchants/hours', :locals => {:form => form, :merchant => @merchant}
+      = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   #orders-panel.mdl-tabs__panel.is-active
 
   #customers-panel.mdl-tabs__panel

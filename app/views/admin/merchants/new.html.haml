@@ -1,4 +1,4 @@
 - title 'New Merchant'
 = form_for @merchant, :url  => admin_merchants_path do |form|
-  = render :partial => '/admin/merchants/form', :locals => {:form => form}
+  = render :partial => '/admin/merchants/information', :locals => {:form => form}
   = submit_tag "Create", :class  => "button"

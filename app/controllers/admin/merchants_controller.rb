@@ -7,6 +7,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def new
     @merchant = Merchant.new
+    @merchant.build_address if @merchant.address.nil?
   end
 
   def create
@@ -23,6 +24,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def edit
     @merchant = Merchant.find(params[:id])
+    @merchant.build_address if @merchant.address.nil?
     @states = State.form_selector
   end
 
@@ -49,7 +51,10 @@ class Admin::MerchantsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:merchant).permit(:name, :email, address_attributes: [:first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id])
+    params.require(:merchant).permit(:name, :email,
+                                     address_attributes: [:id, :first_name, :last_name, :address1, :address2, :city, :zip_code, :country_id],
+                                     trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :trades]
+    )
   end
 
   def countries
