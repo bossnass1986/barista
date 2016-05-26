@@ -28,12 +28,12 @@
 .mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar
-      %a.mdl-tabs__tab.is-active{:href => "#today-panel"} Today
-      %a.mdl-tabs__tab{:href => "#week-panel"} Week
-      %a.mdl-tabs__tab{:href => "#month-panel"} Month
-      %a.mdl-tabs__tab{:href => "#year-panel"} Year
-      %a.mdl-tabs__tab{:href => "#all-time-panel"} All Time
-    #today-panel.mdl-tabs__panel.is-active
+      %a.mdl-tabs__tab.is-active{ :href => "#today-panel" } Today
+      %a.mdl-tabs__tab{ :href => "#week-panel" } Week
+      %a.mdl-tabs__tab{ :href => "#month-panel" } Month
+      %a.mdl-tabs__tab{ :href => "#year-panel" } Year
+      %a.mdl-tabs__tab{ :href => "#all-time-panel" } All Time
+    .mdl-tabs__panel.is-active#today-panel
       .mdl-list
         .mdl-list__item
           %span.mdl-list__item-primary-content
@@ -65,30 +65,30 @@
             %span Failed
           %span.mdl-list__item-secondary-content
             0
-    #week-panel.mdl-tabs__panel
+    .mdl-tabs__panel#week-panel
       %ul
         %li Tywin
         %li Cersei
         %li Jamie
         %li Tyrion
-    #month-panel.mdl-tabs__panel
+    .mdl-tabs__panel#month-panel
       %ul
         %li Viserys
         %li Daenerys
-    #year-panel.mdl-tabs__panel
+    .mdl-tabs__panel#year-panel
       %ul
         %li Viserys
         %li Daenerys
-    #all-time-panel.mdl-tabs__panel
+    .mdl-tabs__panel#all-time-panel
       %ul
         %li Viserys
         %li Daenerys
 .mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar
-      %a.mdl-tabs__tab.is-active{:href => "#customers-panel"} Customers
-      %a.mdl-tabs__tab{:href => "#merchants-panel"} Merchants
-    #customers-panel.mdl-tabs__panel.is-active
+      %a.mdl-tabs__tab.is-active{ :href => "#customers-panel"  } Customers
+      %a.mdl-tabs__tab{ :href => "#merchants-panel" } Merchants
+    .mdl-tabs__panel.is-active#customers-panel
       .mdl-list
         .mdl-list__item
           %span.mdl-list__item-primary-content
@@ -120,7 +120,7 @@
             %span Year
           %span.mdl-list__item-secondary-content
             0
-    #merchants-panel.mdl-tabs__panel
+    .mdl-tabs__panel#merchants-panel
       %ul
         %li Tywin
         %li Cersei

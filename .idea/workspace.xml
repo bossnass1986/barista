@@ -4,17 +4,11 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="trading hours">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_hours.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_information.haml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="send in the hounds">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant.rb" afterPath="$PROJECT_DIR$/app/models/merchant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/new.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/new.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/show.html.haml" afterPath="$PROJECT_DIR$/app/views/admin/merchants/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml" afterPath="$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,12 +67,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="61" column="4" selection-start-line="61" selection-start-column="6" selection-end-line="63" selection-end-column="9" />
+              <caret line="61" column="6" selection-start-line="61" selection-start-column="8" selection-end-line="63" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change_password.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="468" column="26" selection-start-line="468" selection-start-column="26" selection-end-line="468" selection-end-column="26" />
+              <folding>
+                <marker date="1464269863000" expanded="true" signature="1812:1855" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="2098:2149" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="2286:2333" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="2552:3043" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="3223:3714" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="3893:4386" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="4613:5106" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="5376:5419" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="5629:5847" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="6166:6335" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="6535:6702" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="6903:7372" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="7676:7845" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="7871:7930" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="8153:8323" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="8544:8880" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="9180:9349" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="9379:9464" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="9719:9838" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="10061:10397" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="10724:10893" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="11019:15428" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="11904:12010" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="12222:12347" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="12560:12685" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="12897:13022" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="13235:13360" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="13883:14041" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="14309:14434" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="14749:14874" ph="{...}" />
+                <marker date="1464269863000" expanded="true" signature="15152:15277" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change_password.text.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="76" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="76" />
+              <folding>
+                <element signature="n#t(&quot;.opening&quot;)#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,11 +196,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-649">
-              <caret line="41" column="13" selection-start-line="36" selection-start-column="6" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="581">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="e#8#34#1#ruby" expanded="true" />
               </folding>
@@ -257,7 +315,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/test.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/myaccount/orders/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/myaccount/addresses/index.html.haml" />
@@ -272,7 +329,6 @@
         <option value="$PROJECT_DIR$/config/initializers/clearance.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/landing.html.haml" />
         <option value="$PROJECT_DIR$/app/views/sessions/_form.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/shopping/merchants_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/show.html.haml" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml" />
@@ -289,7 +345,6 @@
         <option value="$PROJECT_DIR$/app/models/phone.rb" />
         <option value="$PROJECT_DIR$/app/models/address.rb" />
         <option value="$PROJECT_DIR$/app/helpers/merchants_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_form.html.haml" />
@@ -308,6 +363,9 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/merchant.rb" />
+        <option value="$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml" />
       </list>
     </option>
   </component>
@@ -654,14 +712,7 @@
       <workItem from="1463737706744" duration="11954000" />
       <workItem from="1463817640660" duration="1483000" />
       <workItem from="1463819331424" duration="20767000" />
-      <workItem from="1463992690273" duration="42303000" />
-    </task>
-    <task id="LOCAL-00148" summary="heroku come at me">
-      <created>1462349055873</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1462349055873</updated>
+      <workItem from="1463992690273" duration="43025000" />
     </task>
     <task id="LOCAL-00149" summary="heroku come at me">
       <created>1462349062475</created>
@@ -999,11 +1050,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464184569119</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="trading hours">
+      <created>1464269778037</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1464269778038</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105520000" />
+    <option name="totallyTimeSpent" value="106242000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1076,7 +1134,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="admin updates" />
     <MESSAGE value="devise updates" />
     <MESSAGE value="production email settings" />
     <MESSAGE value="validations" />
@@ -1101,7 +1158,8 @@
     <MESSAGE value="admin dashboard" />
     <MESSAGE value="merchant addresses&#10;" />
     <MESSAGE value="trading hours" />
-    <option name="LAST_COMMIT_MESSAGE" value="trading hours" />
+    <MESSAGE value="send in the hounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="send in the hounds" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1112,45 +1170,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1529,16 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-649">
-          <caret line="41" column="13" selection-start-line="36" selection-start-column="6" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#8#34#1#ruby" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1664,8 +1673,76 @@
     <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="6" selection-end-line="63" selection-end-column="9" />
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="8" selection-end-line="63" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.text.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="76" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="76" />
+          <folding>
+            <element signature="n#t(&quot;.opening&quot;)#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clearance_mailer/change_password.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="468" column="26" selection-start-line="468" selection-start-column="26" selection-end-line="468" selection-end-column="26" />
+          <folding>
+            <marker date="1464269863000" expanded="true" signature="1812:1855" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="2098:2149" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="2286:2333" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="2552:3043" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="3223:3714" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="3893:4386" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="4613:5106" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="5376:5419" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="5629:5847" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="6166:6335" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="6535:6702" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="6903:7372" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="7676:7845" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="7871:7930" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="8153:8323" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="8544:8880" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="9180:9349" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="9379:9464" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="9719:9838" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="10061:10397" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="10724:10893" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="11019:15428" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="11904:12010" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="12222:12347" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="12560:12685" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="12897:13022" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="13235:13360" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="13883:14041" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="14309:14434" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="14749:14874" ph="{...}" />
+            <marker date="1464269863000" expanded="true" signature="15152:15277" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/edit.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#8#34#1#ruby" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
