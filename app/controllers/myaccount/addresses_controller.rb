@@ -1,4 +1,4 @@
-class Myaccount::AddressesController < Myaccount::BaseController
+class Myaccount::AddressesController < ApplicationController
   helper_method :countries
 
   def index

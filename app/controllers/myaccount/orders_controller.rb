@@ -1,4 +1,4 @@
-class Myaccount::OrdersController < Myaccount::BaseController
+class Myaccount::OrdersController < ApplicationController
   # GET /myaccount/orders
   # GET /myaccount/orders.xml
   def index

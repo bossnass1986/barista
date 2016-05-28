@@ -1,0 +1,622 @@
+{
+  "files": {
+    "material-design-lite/README-e7e6d6ae1c33da22c8b53bc7eb954eee7c010cde4c27404fa998cb230487760e.md": {
+      "logical_path": "material-design-lite/README.md",
+      "mtime": "2016-03-18T03:08:51+11:00",
+      "size": 7326,
+      "digest": "e7e6d6ae1c33da22c8b53bc7eb954eee7c010cde4c27404fa998cb230487760e",
+      "integrity": "sha256-5+bWrhwz2iLItTvH65VO7nwBDN5MJ0BPqZjLIwSHdg4="
+    },
+    "material-design-lite/bower-703840e3659135b225bc53dab5f7603a76d5e13a80cdf6d7464e887b1bd93143.json": {
+      "logical_path": "material-design-lite/bower.json",
+      "mtime": "2016-03-18T03:08:51+11:00",
+      "size": 555,
+      "digest": "703840e3659135b225bc53dab5f7603a76d5e13a80cdf6d7464e887b1bd93143",
+      "integrity": "sha256-cDhA42WRNbIlvFPatfdgOnbV4TqAzfbXRk6IexvZMUM="
+    },
+    "material-design-lite/material.min.css-711ab6a457da72b79f8214e6a3af947f5f2a0570530b3fb7e4ac15ae3a582310.map": {
+      "logical_path": "material-design-lite/material.min.css.map",
+      "mtime": "2016-03-18T03:08:51+11:00",
+      "size": 922880,
+      "digest": "711ab6a457da72b79f8214e6a3af947f5f2a0570530b3fb7e4ac15ae3a582310",
+      "integrity": "sha256-cRq2pFfacrefghTmo6+Uf18qBXBTCz+35KwVrjpYIxA="
+    },
+    "material-design-lite/material.min.js-ae7d19f9d57cef8aba9a7436fc613b889189f351de12c803ed22a11da0619c0b.map": {
+      "logical_path": "material-design-lite/material.min.js.map",
+      "mtime": "2016-03-18T03:08:51+11:00",
+      "size": 356047,
+      "digest": "ae7d19f9d57cef8aba9a7436fc613b889189f351de12c803ed22a11da0619c0b",
+      "integrity": "sha256-rn0Z+dV874q6mnQ2/GE7iJGJ81HeEsgD7SKhHaBhnAs="
+    },
+    "material-design-lite/package-6a0546d531e19f3320f411f7c16c12906791d026eb8c9aa95c73caaff05767e4.json": {
+      "logical_path": "material-design-lite/package.json",
+      "mtime": "2016-03-18T03:08:51+11:00",
+      "size": 2015,
+      "digest": "6a0546d531e19f3320f411f7c16c12906791d026eb8c9aa95c73caaff05767e4",
+      "integrity": "sha256-agVG1THhnzMg9BH3wWwSkGeR0CbrjJqpXHPKr/BXZ+Q="
+    },
+    "account-9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64.png": {
+      "logical_path": "account.png",
+      "mtime": "2015-12-29T16:56:34+11:00",
+      "size": 36533,
+      "digest": "9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64",
+      "integrity": "sha256-m+G/y3OBgkD6oPMNvbZ3UbAj2wsN/SXxlssAi5orvmQ="
+    },
+    "brand/logo_144-2773c7e4cbd912bcf06bb68dbb51dc126b29acc99517c71cda3069b6fea9e8ab.png": {
+      "logical_path": "brand/logo_144.png",
+      "mtime": "2016-05-12T21:02:17+10:00",
+      "size": 7812,
+      "digest": "2773c7e4cbd912bcf06bb68dbb51dc126b29acc99517c71cda3069b6fea9e8ab",
+      "integrity": "sha256-J3PH5MvZErzwa7aNu1HcEmsprMmVF8cc2jBptv6p6Ks="
+    },
+    "brand/logo_192-1eab1a2d71ddc3464b75a0ccc3d5eb4fce88ba4f6b5a537ff600fe9021346647.png": {
+      "logical_path": "brand/logo_192.png",
+      "mtime": "2016-05-12T21:02:25+10:00",
+      "size": 10578,
+      "digest": "1eab1a2d71ddc3464b75a0ccc3d5eb4fce88ba4f6b5a537ff600fe9021346647",
+      "integrity": "sha256-HqsaLXHdw0ZLdaDMw9XrT86Iuk9rWlN/9gD+kCE0Zkc="
+    },
+    "brand/logo_sidebar-8457e8f7ddcf989a6d764a59fcb562c6864d3cc61fe2bfb13d0ca7a620ba4e5b.png": {
+      "logical_path": "brand/logo_sidebar.png",
+      "mtime": "2016-04-28T22:08:19+10:00",
+      "size": 6315,
+      "digest": "8457e8f7ddcf989a6d764a59fcb562c6864d3cc61fe2bfb13d0ca7a620ba4e5b",
+      "integrity": "sha256-hFfo993PmJptdkpZ/LVixoZNPMYf4r+xPQynpiC6Tls="
+    },
+    "cart-9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64.png": {
+      "logical_path": "cart.png",
+      "mtime": "2015-12-29T16:56:34+11:00",
+      "size": 36533,
+      "digest": "9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64",
+      "integrity": "sha256-m+G/y3OBgkD6oPMNvbZ3UbAj2wsN/SXxlssAi5orvmQ="
+    },
+    "favourites-0ea019504afb8c62235f853d03729dc17187d11fa93e744ca85c77662731ac49.png": {
+      "logical_path": "favourites.png",
+      "mtime": "2015-12-29T16:56:34+11:00",
+      "size": 35939,
+      "digest": "0ea019504afb8c62235f853d03729dc17187d11fa93e744ca85c77662731ac49",
+      "integrity": "sha256-DqAZUEr7jGIjX4U9A3KdwXGH0R+pPnRMqFx3ZicxrEk="
+    },
+    "places/1-eb0ff11486cc940b8eb6cce466fc27954ec333abd8649ffd14cb8a17c49d516f.jpg": {
+      "logical_path": "places/1.jpg",
+      "mtime": "2016-01-01T11:38:12+11:00",
+      "size": 45773,
+      "digest": "eb0ff11486cc940b8eb6cce466fc27954ec333abd8649ffd14cb8a17c49d516f",
+      "integrity": "sha256-6w/xFIbMlAuOtszkZvwnlU7DM6vYZJ/9FMuKF8SdUW8="
+    },
+    "places/2-98c10173cd9c78fb27e26a689a75bffbafcd0790f03bfc9f3190e343c8b65684.jpg": {
+      "logical_path": "places/2.jpg",
+      "mtime": "2016-01-01T11:38:42+11:00",
+      "size": 5586,
+      "digest": "98c10173cd9c78fb27e26a689a75bffbafcd0790f03bfc9f3190e343c8b65684",
+      "integrity": "sha256-mMEBc82cePsn4mpomnW/+6/NB5DwO/yfMZDjQ8i2VoQ="
+    },
+    "places/3-267472fc1631f72b475566613ddcb0036e27f4ba1a6ee1d536cbe593bef3530c.jpg": {
+      "logical_path": "places/3.jpg",
+      "mtime": "2016-01-01T11:38:32+11:00",
+      "size": 16987,
+      "digest": "267472fc1631f72b475566613ddcb0036e27f4ba1a6ee1d536cbe593bef3530c",
+      "integrity": "sha256-JnRy/BYx9ytHVWZhPdywA24n9LoabuHVNsvlk77zUww="
+    },
+    "products/Bubble-Tea-79c9d9b0201b2604d1c75acab46169dd9081f36c8df075bcf4ee615467f08033.png": {
+      "logical_path": "products/Bubble-Tea.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 68925,
+      "digest": "79c9d9b0201b2604d1c75acab46169dd9081f36c8df075bcf4ee615467f08033",
+      "integrity": "sha256-ecnZsCAbJgTRx1rKtGFp3ZCB82yN8HW89O5hVGfwgDM="
+    },
+    "products/Cappuccino-1a7f9091166fbc2504e8b2ceecea0e7d6377df2ec0f1525c8edcd974b6c4969c.png": {
+      "logical_path": "products/Cappuccino.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 98160,
+      "digest": "1a7f9091166fbc2504e8b2ceecea0e7d6377df2ec0f1525c8edcd974b6c4969c",
+      "integrity": "sha256-Gn+QkRZvvCUE6LLO7OoOfWN33y7A8VJcjtzZdLbElpw="
+    },
+    "products/Chai-Latte-52b231f6329dad65c31c05615437d1e514293efb94a91b39c3c396be461d6d95.png": {
+      "logical_path": "products/Chai-Latte.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 412860,
+      "digest": "52b231f6329dad65c31c05615437d1e514293efb94a91b39c3c396be461d6d95",
+      "integrity": "sha256-UrIx9jKdrWXDHAVhVDfR5RQpPvuUqRs5w8OWvkYdbZU="
+    },
+    "products/Flat-White-ebc937e691bdf507efc2e9dd27e691d6220dfb7d5259e03f10b81dfcf72236d9.png": {
+      "logical_path": "products/Flat-White.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 75446,
+      "digest": "ebc937e691bdf507efc2e9dd27e691d6220dfb7d5259e03f10b81dfcf72236d9",
+      "integrity": "sha256-68k35pG99QfvwundJ+aR1iIN+31SWeA/ELgd/PciNtk="
+    },
+    "products/Frappe-e6f3468660560b8f086f16ba71c23ab1303c8b9663f118ca59b7bf27553f2355.png": {
+      "logical_path": "products/Frappe.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 64515,
+      "digest": "e6f3468660560b8f086f16ba71c23ab1303c8b9663f118ca59b7bf27553f2355",
+      "integrity": "sha256-5vNGhmBWC48Ibxa6ccI6sTA8i5Zj8RjKWbe/J1U/I1U="
+    },
+    "products/Hot-Chocolate-f2495958776dfb1f3ab00241f00c9740d31537be6f123a53f7db46bc40480dbf.png": {
+      "logical_path": "products/Hot-Chocolate.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 272830,
+      "digest": "f2495958776dfb1f3ab00241f00c9740d31537be6f123a53f7db46bc40480dbf",
+      "integrity": "sha256-8klZWHdt+x86sAJB8AyXQNMVN75vEjpT99tGvEBIDb8="
+    },
+    "products/Iced-Chocolate-d414fa13f86aeb2b411132ce9870bb518eda5073c885b85d6cedf8ff4bfbd47a.png": {
+      "logical_path": "products/Iced-Chocolate.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 265786,
+      "digest": "d414fa13f86aeb2b411132ce9870bb518eda5073c885b85d6cedf8ff4bfbd47a",
+      "integrity": "sha256-1BT6E/hq6ytBETLOmHC7UY7aUHPIhbhdbO34/0v71Ho="
+    },
+    "products/Iced-Coffee-010c3c770eb1ad3b4f8f07df958aebb1e3b692da5a64fc668afb7e916b212581.png": {
+      "logical_path": "products/Iced-Coffee.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 285532,
+      "digest": "010c3c770eb1ad3b4f8f07df958aebb1e3b692da5a64fc668afb7e916b212581",
+      "integrity": "sha256-AQw8dw6xrTtPjwfflYrrseO2ktpaZPxmivt+kWshJYE="
+    },
+    "products/Iced-Tea-c85f745919b979b4423e04bcf32e22e75cc81abf3bcac158b80bb0e703ee27cb.png": {
+      "logical_path": "products/Iced-Tea.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 299286,
+      "digest": "c85f745919b979b4423e04bcf32e22e75cc81abf3bcac158b80bb0e703ee27cb",
+      "integrity": "sha256-yF90WRm5ebRCPgS88y4i51zIGr87ysFYuAuw5wPuJ8s="
+    },
+    "products/Irish-b04a0441d6416f2b8554415793e74d15f5dcbe504db3c767efe387881ccd4075.png": {
+      "logical_path": "products/Irish.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 92821,
+      "digest": "b04a0441d6416f2b8554415793e74d15f5dcbe504db3c767efe387881ccd4075",
+      "integrity": "sha256-sEoEQdZBbyuFVEFXk+dNFfXcvlBNs8dn7+OHiBzNQHU="
+    },
+    "products/Latte-Macchiato-06bf79393698202a3f1f50bc2d9c945aac4326d58435cbf6b8f8b9e07e12b7dc.png": {
+      "logical_path": "products/Latte-Macchiato.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 92382,
+      "digest": "06bf79393698202a3f1f50bc2d9c945aac4326d58435cbf6b8f8b9e07e12b7dc",
+      "integrity": "sha256-Br95OTaYICo/H1C8LZyUWqxDJtWENcv2uPi54H4St9w="
+    },
+    "products/Latte-24fee04f714aa6bff33dd6f50b37d2f8fd4e926c897d8b4a7fef8bf88f68abcf.png": {
+      "logical_path": "products/Latte.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 98787,
+      "digest": "24fee04f714aa6bff33dd6f50b37d2f8fd4e926c897d8b4a7fef8bf88f68abcf",
+      "integrity": "sha256-JP7gT3FKpr/zPdb1CzfS+P1OkmyJfYtKf++L+I9oq88="
+    },
+    "products/Long-Black-1983a04615893c16fd675a2084b4e210f96b99372c427b51a952b15f53196d4a.png": {
+      "logical_path": "products/Long-Black.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 77487,
+      "digest": "1983a04615893c16fd675a2084b4e210f96b99372c427b51a952b15f53196d4a",
+      "integrity": "sha256-GYOgRhWJPBb9Z1oghLTiEPlrmTcsQntRqVKxX1MZbUo="
+    },
+    "products/Macchiato-e8629085996fc53205d05524fb16e6b79ac17d5efd8a121598c8ccde0ba78d7e.png": {
+      "logical_path": "products/Macchiato.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 91471,
+      "digest": "e8629085996fc53205d05524fb16e6b79ac17d5efd8a121598c8ccde0ba78d7e",
+      "integrity": "sha256-6GKQhZlvxTIF0FUk+xbmt5rBfV79ihIVmMjM3gunjX4="
+    },
+    "products/Mocha-a0427d55f54a99da7c67cd44297b2340017e4f008078c665333a1ad7014f5781.png": {
+      "logical_path": "products/Mocha.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 82675,
+      "digest": "a0427d55f54a99da7c67cd44297b2340017e4f008078c665333a1ad7014f5781",
+      "integrity": "sha256-oEJ9VfVKmdp8Z81EKXsjQAF+TwCAeMZlMzoa1wFPV4E="
+    },
+    "products/Short-Black-cd2a327ea085c5faf130da4a6d6cb940e142bad55c615de11532672c6c937533.png": {
+      "logical_path": "products/Short-Black.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 85642,
+      "digest": "cd2a327ea085c5faf130da4a6d6cb940e142bad55c615de11532672c6c937533",
+      "integrity": "sha256-zSoyfqCFxfrxMNpKbWy5QOFCutVcYV3hFTJnLGyTdTM="
+    },
+    "products/Tea-b3bb5d58706b36690d44e8ef50a0fa41e15dd03b12d9432a1cf6fa3f1715908c.png": {
+      "logical_path": "products/Tea.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 316197,
+      "digest": "b3bb5d58706b36690d44e8ef50a0fa41e15dd03b12d9432a1cf6fa3f1715908c",
+      "integrity": "sha256-s7tdWHBrNmkNROjvUKD6QeFd0DsS2UMqHPb6PxcVkIw="
+    },
+    "products/cappuccino-96d5e4725098bbefc0699bad5d6401250005e9c08aa1ed3cf4977d6f8833a449.jpg": {
+      "logical_path": "products/cappuccino.jpg",
+      "mtime": "2015-12-29T16:50:21+11:00",
+      "size": 1712015,
+      "digest": "96d5e4725098bbefc0699bad5d6401250005e9c08aa1ed3cf4977d6f8833a449",
+      "integrity": "sha256-ltXkclCYu+/AaZutXWQBJQAF6cCKoe089Jd9b4gzpEk="
+    },
+    "products/generic-a6ef9658f7d462f32f54852cdeb063d19ac08439bbe3b3bc14dd26604c98f89b.jpg": {
+      "logical_path": "products/generic.jpg",
+      "mtime": "2015-12-29T16:56:36+11:00",
+      "size": 1848246,
+      "digest": "a6ef9658f7d462f32f54852cdeb063d19ac08439bbe3b3bc14dd26604c98f89b",
+      "integrity": "sha256-pu+WWPfUYvMvVIUs3rBj0ZrAhDm747O8FN0mYEyY+Js="
+    },
+    "products/latte-80bac30833af4bd46ea2baac15b0ee2bc9411d566cb27b0698b446f224b5d977.jpg": {
+      "logical_path": "products/latte.jpg",
+      "mtime": "2015-12-29T16:50:21+11:00",
+      "size": 1822484,
+      "digest": "80bac30833af4bd46ea2baac15b0ee2bc9411d566cb27b0698b446f224b5d977",
+      "integrity": "sha256-gLrDCDOvS9RuorqsFbDuK8lBHVZssnsGmLRG8iS12Xc="
+    },
+    "products/options/1-shot-e835ab991ab0d2e4cf2b8014b5bfb050d8a4917f42a4b4a659d3292f18a0b546.png": {
+      "logical_path": "products/options/1-shot.png",
+      "mtime": "2016-01-02T20:36:10+11:00",
+      "size": 22588,
+      "digest": "e835ab991ab0d2e4cf2b8014b5bfb050d8a4917f42a4b4a659d3292f18a0b546",
+      "integrity": "sha256-6DWrmRqw0uTPK4AUtb+wUNikkX9CpLSmWdMpLxigtUY="
+    },
+    "products/options/1-sugar-75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae.png": {
+      "logical_path": "products/options/1-sugar.png",
+      "mtime": "2016-01-02T20:36:48+11:00",
+      "size": 24140,
+      "digest": "75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae",
+      "integrity": "sha256-dcmFLCtRRA8oocq9Jn8tlAwIfew2/gFzb5yu63eWla4="
+    },
+    "products/options/2-shot-0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929.png": {
+      "logical_path": "products/options/2-shot.png",
+      "mtime": "2016-01-02T20:36:16+11:00",
+      "size": 24276,
+      "digest": "0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929",
+      "integrity": "sha256-DgIUJrQKOiRQYFgpkezYiIIixpioLvEl33P3F/MgGSk="
+    },
+    "products/options/2-sugar-75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae.png": {
+      "logical_path": "products/options/2-sugar.png",
+      "mtime": "2016-01-02T20:36:54+11:00",
+      "size": 24140,
+      "digest": "75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae",
+      "integrity": "sha256-dcmFLCtRRA8oocq9Jn8tlAwIfew2/gFzb5yu63eWla4="
+    },
+    "products/options/3-shot-0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929.png": {
+      "logical_path": "products/options/3-shot.png",
+      "mtime": "2016-01-02T20:36:23+11:00",
+      "size": 24276,
+      "digest": "0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929",
+      "integrity": "sha256-DgIUJrQKOiRQYFgpkezYiIIixpioLvEl33P3F/MgGSk="
+    },
+    "products/options/3-sugar-1087222d321c3e85283c9544492233b8edc5dd8249d92cdb45fd52fedc32179d.png": {
+      "logical_path": "products/options/3-sugar.png",
+      "mtime": "2016-01-02T20:37:03+11:00",
+      "size": 25422,
+      "digest": "1087222d321c3e85283c9544492233b8edc5dd8249d92cdb45fd52fedc32179d",
+      "integrity": "sha256-EIciLTIcPoUoPJVESSIzuO3F3YJJ2SzbRf1S/twyF50="
+    },
+    "products/options/4-shot-ce084b4df65c63cbc2e2230f50426a88e8385c8acc39755301eb01ce04e7aabf.png": {
+      "logical_path": "products/options/4-shot.png",
+      "mtime": "2016-01-02T20:36:30+11:00",
+      "size": 24922,
+      "digest": "ce084b4df65c63cbc2e2230f50426a88e8385c8acc39755301eb01ce04e7aabf",
+      "integrity": "sha256-zghLTfZcY8vC4iMPUEJqiOg4XIrMOXVTAesBzgTnqr8="
+    },
+    "products/options/almond-5e938322ce307ad1c22b4cffb91bdb5f3f5eea687de0451d92dd9ff918cf993c.png": {
+      "logical_path": "products/options/almond.png",
+      "mtime": "2016-01-02T20:35:26+11:00",
+      "size": 79398,
+      "digest": "5e938322ce307ad1c22b4cffb91bdb5f3f5eea687de0451d92dd9ff918cf993c",
+      "integrity": "sha256-XpODIs4wetHCK0z/uRvbXz9e6mh94EUdkt2f+RjPmTw="
+    },
+    "products/options/fullcream-b5d0c673e767a1caa4f3a754a3256033513e80088b8a24c50256d3c3294000b6.png": {
+      "logical_path": "products/options/fullcream.png",
+      "mtime": "2016-01-02T20:35:10+11:00",
+      "size": 43286,
+      "digest": "b5d0c673e767a1caa4f3a754a3256033513e80088b8a24c50256d3c3294000b6",
+      "integrity": "sha256-tdDGc+dnocqk86dUoyVgM1E+gAiLiiTFAlbTwylAALY="
+    },
+    "products/options/large-7225024ea6426979da4fb81148e041ecdeb57f909ece8e3818f9173c4a2e94ac.png": {
+      "logical_path": "products/options/large.png",
+      "mtime": "2016-01-02T20:36:02+11:00",
+      "size": 50778,
+      "digest": "7225024ea6426979da4fb81148e041ecdeb57f909ece8e3818f9173c4a2e94ac",
+      "integrity": "sha256-ciUCTqZCaXnaT7gRSOBB7N61f5Cezo44GPkXPEoulKw="
+    },
+    "products/options/no-sugar-bda6248a0755fe9d01a22a1f9a628f30a0c640a7dbe35f7c5ffdf533a7bbc0c2.png": {
+      "logical_path": "products/options/no-sugar.png",
+      "mtime": "2016-01-02T20:36:36+11:00",
+      "size": 25629,
+      "digest": "bda6248a0755fe9d01a22a1f9a628f30a0c640a7dbe35f7c5ffdf533a7bbc0c2",
+      "integrity": "sha256-vaYkigdV/p0BoiofmmKPMKDGQKfb4198X/31M6e7wMI="
+    },
+    "products/options/regular-113854cc85e0cf675f4d35d01fe47184acc33979de218cdea5084d6b3651f35e.png": {
+      "logical_path": "products/options/regular.png",
+      "mtime": "2016-01-02T20:35:57+11:00",
+      "size": 44668,
+      "digest": "113854cc85e0cf675f4d35d01fe47184acc33979de218cdea5084d6b3651f35e",
+      "integrity": "sha256-EThUzIXgz2dfTTXQH+RxhKzDOXneIYzepQhNazZR814="
+    },
+    "products/options/skim-ab82029d2d1ebb068c348aa17ec6155cd3d83b40ed25a8405304aa78246ccc6c.png": {
+      "logical_path": "products/options/skim.png",
+      "mtime": "2016-01-02T20:35:17+11:00",
+      "size": 53824,
+      "digest": "ab82029d2d1ebb068c348aa17ec6155cd3d83b40ed25a8405304aa78246ccc6c",
+      "integrity": "sha256-q4ICnS0euwaMNIqhfsYVXNPYO0DtJahAUwSqeCRszGw="
+    },
+    "products/options/small-24c5c2adb9092fb89e31a55af1aba9763525adf4e8d9c6a2691bbf22e06f06a8.png": {
+      "logical_path": "products/options/small.png",
+      "mtime": "2016-01-02T20:35:49+11:00",
+      "size": 40170,
+      "digest": "24c5c2adb9092fb89e31a55af1aba9763525adf4e8d9c6a2691bbf22e06f06a8",
+      "integrity": "sha256-JMXCrbkJL7ieMaVa8aupdjUlrfTo2caiaRu/IuBvBqg="
+    },
+    "products/options/soy-0cbf25890130cfc650101f16c597d7f17bcfdf2c3a2d88c059c7d13b65a96fa1.png": {
+      "logical_path": "products/options/soy.png",
+      "mtime": "2016-01-02T20:35:34+11:00",
+      "size": 57178,
+      "digest": "0cbf25890130cfc650101f16c597d7f17bcfdf2c3a2d88c059c7d13b65a96fa1",
+      "integrity": "sha256-DL8liQEwz8ZQEB8WxZfX8XvP3yw6LYjAWcfRO2Wpb6E="
+    },
+    "products/options/xsmall-7d27757189105ec8016339e86c0305c64f29c108ede48b177a30166679d5c0e6.png": {
+      "logical_path": "products/options/xsmall.png",
+      "mtime": "2016-01-02T20:35:43+11:00",
+      "size": 36536,
+      "digest": "7d27757189105ec8016339e86c0305c64f29c108ede48b177a30166679d5c0e6",
+      "integrity": "sha256-fSd1cYkQXsgBYznobAMFxk8pwQjt5IsXejAWZnnVwOY="
+    },
+    "products/short-black-dec66f2e91e525d5f284ae4430a02a6f8ade5480156cf806d5ad59bcbd00790e.jpg": {
+      "logical_path": "products/short-black.jpg",
+      "mtime": "2015-12-29T16:50:21+11:00",
+      "size": 1253659,
+      "digest": "dec66f2e91e525d5f284ae4430a02a6f8ade5480156cf806d5ad59bcbd00790e",
+      "integrity": "sha256-3sZvLpHlJdXyhK5EMKAqb4reVIAVbPgG1a1ZvL0AeQ4="
+    },
+    "rails-322506f9917889126e81df2833a6eecdf2e394658d53dad347e9882dd4dbf28e.png": {
+      "logical_path": "rails.png",
+      "mtime": "2015-09-15T21:13:21+10:00",
+      "size": 6646,
+      "digest": "322506f9917889126e81df2833a6eecdf2e394658d53dad347e9882dd4dbf28e",
+      "integrity": "sha256-MiUG+ZF4iRJugd8oM6buzfLjlGWNU9rTR+mILdTb8o4="
+    },
+    "search-d13df4a857b6fc5079b377006cf3895e7dc653b8165104d85a1e2551a4a5e344.png": {
+      "logical_path": "search.png",
+      "mtime": "2015-12-29T16:56:34+11:00",
+      "size": 42082,
+      "digest": "d13df4a857b6fc5079b377006cf3895e7dc653b8165104d85a1e2551a4a5e344",
+      "integrity": "sha256-0T30qFe2/FB5s3cAbPOJXn3GU7gWUQTYWh4lUaSl40Q="
+    },
+    "application-8105cf47b2193480ccbea56165e32aefe754b87e95379ec34e7e0e6ade97d2ee.js": {
+      "logical_path": "application.js",
+      "mtime": "2016-05-20T19:23:55+10:00",
+      "size": 315850,
+      "digest": "8105cf47b2193480ccbea56165e32aefe754b87e95379ec34e7e0e6ade97d2ee",
+      "integrity": "sha256-gQXPR7IZNIDMvqVhZeMq7+dUuH6VN57DTn4Oat6X0u4="
+    },
+    "application-afb26e5a874590b90eca0f9e4d22acb6a18b1da995635394fcc5c1b3b25694a9.css": {
+      "logical_path": "application.css",
+      "mtime": "2016-05-25T20:05:32+10:00",
+      "size": 357414,
+      "digest": "afb26e5a874590b90eca0f9e4d22acb6a18b1da995635394fcc5c1b3b25694a9",
+      "integrity": "sha256-r7JuWodFkLkOyg+eTSKstqGLHamVY1OU/MXBs7JWlKk="
+    },
+    "tick-mask-2b4fbdc82f135a08fab5643804fc02fcedfe59da66d27949525c9f3c09f7fca8.svg": {
+      "logical_path": "tick-mask.svg",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 1249,
+      "digest": "2b4fbdc82f135a08fab5643804fc02fcedfe59da66d27949525c9f3c09f7fca8",
+      "integrity": "sha256-K0+9yC8TWgj6tWQ4BPwC/O3+Wdpm0nlJUlyfPAn3/Kg="
+    },
+    "tick-2e81295d9c8687cdb7f70218379bcae2a57b5bff5f28824f7bfbf408ba47491e.svg": {
+      "logical_path": "tick.svg",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 648,
+      "digest": "2e81295d9c8687cdb7f70218379bcae2a57b5bff5f28824f7bfbf408ba47491e",
+      "integrity": "sha256-LoEpXZyGh8239wIYN5vK4qV7W/9fKIJPe/v0CLpHSR4="
+    },
+    "buffer-e6c1c75c1ad278bb37fe3e06f0b1bf775cb94bcc58ae46651d9a29b5218f34f2.svg": {
+      "logical_path": "buffer.svg",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 425,
+      "digest": "e6c1c75c1ad278bb37fe3e06f0b1bf775cb94bcc58ae46651d9a29b5218f34f2",
+      "integrity": "sha256-5sHHXBrSeLs3/j4G8LG/d1y5S8xYrkZlHZoptSGPNPI="
+    },
+    "material-icons/MaterialIcons-Regular-8c998b4a9c0acbb9fe5dd572c206a5a33fdd5ca2b58db87fc3b893beac85068d.eot": {
+      "logical_path": "material-icons/MaterialIcons-Regular.eot",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 143258,
+      "digest": "8c998b4a9c0acbb9fe5dd572c206a5a33fdd5ca2b58db87fc3b893beac85068d",
+      "integrity": "sha256-jJmLSpwKy7n+XdVywgaloz/dXKK1jbh/w7iTvqyFBo0="
+    },
+    "material-icons/MaterialIcons-Regular-a87d66c91b2e7dc5530aef76c03bd6a3d25ea5826110bf4803b561b811cc8726.woff2": {
+      "logical_path": "material-icons/MaterialIcons-Regular.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 44300,
+      "digest": "a87d66c91b2e7dc5530aef76c03bd6a3d25ea5826110bf4803b561b811cc8726",
+      "integrity": "sha256-qH1myRsufcVTCu92wDvWo9JepYJhEL9IA7VhuBHMhyY="
+    },
+    "material-icons/MaterialIcons-Regular-3a8ee1c4301cd970dfe83fb28f04c09eeb1736018b27b9dedd951b93f2d15d4e.woff": {
+      "logical_path": "material-icons/MaterialIcons-Regular.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 78776,
+      "digest": "3a8ee1c4301cd970dfe83fb28f04c09eeb1736018b27b9dedd951b93f2d15d4e",
+      "integrity": "sha256-Oo7hxDAc2XDf6D+yjwTAnusXNgGLJ7ne3ZUbk/LRXU4="
+    },
+    "material-icons/MaterialIcons-Regular-b7f4a3ab562048f28dd1fa691601bc43363a61d0f876d16d8316c52e4f32d696.ttf": {
+      "logical_path": "material-icons/MaterialIcons-Regular.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 128180,
+      "digest": "b7f4a3ab562048f28dd1fa691601bc43363a61d0f876d16d8316c52e4f32d696",
+      "integrity": "sha256-t/Sjq1YgSPKN0fppFgG8QzY6YdD4dtFtgxbFLk8y1pY="
+    },
+    "roboto/Roboto-Thin-cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330.woff2": {
+      "logical_path": "roboto/Roboto-Thin.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 61644,
+      "digest": "cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330",
+      "integrity": "sha256-y25NTrfYjoES5d2gp1abIhXbYVPTMozO82mGY35xczA="
+    },
+    "roboto/Roboto-Thin-382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a.woff": {
+      "logical_path": "roboto/Roboto-Thin.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 87884,
+      "digest": "382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a",
+      "integrity": "sha256-OCFD2P+YPQg2g3zQ5STKaMYkkiHmsIskBVGQ/U0Dm3o="
+    },
+    "roboto/Roboto-Thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf": {
+      "logical_path": "roboto/Roboto-Thin.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 163132,
+      "digest": "3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e",
+      "integrity": "sha256-O3pmkdl46BrfySkTzfrliXMVGYWwct8qGxGeqTe6kX4="
+    },
+    "roboto/Roboto-Light-d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db.woff2": {
+      "logical_path": "roboto/Roboto-Light.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 62832,
+      "digest": "d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db",
+      "integrity": "sha256-2RJ+rAJm73GWW6Pk+udRZk/rPatPaoVVOi5eberSA9s="
+    },
+    "roboto/Roboto-Light-af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0.woff": {
+      "logical_path": "roboto/Roboto-Light.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 89300,
+      "digest": "af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0",
+      "integrity": "sha256-r1qb6jfyql9sRC2O+GE14voR4PA3HpyhdJS7C/k6aPA="
+    },
+    "roboto/Roboto-Light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf": {
+      "logical_path": "roboto/Roboto-Light.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 162420,
+      "digest": "e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4",
+      "integrity": "sha256-5+plPd7C0qdNDcv/CZwAnMdGnsMjpQyJopFc5EykwLQ="
+    },
+    "roboto/Roboto-Regular-cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e.woff2": {
+      "logical_path": "roboto/Roboto-Regular.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 63412,
+      "digest": "cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e",
+      "integrity": "sha256-zHsmrFNwD3j4pFK+bRTxSUPojc6xTt9kzdzrpuZvP14="
+    },
+    "roboto/Roboto-Regular-ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d.woff": {
+      "logical_path": "roboto/Roboto-Regular.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 89732,
+      "digest": "ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d",
+      "integrity": "sha256-ujYnl4vX2YtClIdtc6UvLnTMQgHNva8EPLZHBC+6aZ0="
+    },
+    "roboto/Roboto-Regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf": {
+      "logical_path": "roboto/Roboto-Regular.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 162876,
+      "digest": "f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54",
+      "integrity": "sha256-8OWiG/XJXkwbzivpijZW68xtQqIfQcTj6/ad2BVwLlQ="
+    },
+    "roboto/Roboto-Medium-5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91.woff2": {
+      "logical_path": "roboto/Roboto-Medium.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 63788,
+      "digest": "5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91",
+      "integrity": "sha256-Xvr9JthfnWwzQKp7ga/wpNn+J9j57JiFVlr7n6IJfZE="
+    },
+    "roboto/Roboto-Medium-a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9.woff": {
+      "logical_path": "roboto/Roboto-Medium.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 89812,
+      "digest": "a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9",
+      "integrity": "sha256-qJaL41wF1UHM1OscSvQcs7J/RwmGyFyyMGKs6JOIKKk="
+    },
+    "roboto/Roboto-Medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf": {
+      "logical_path": "roboto/Roboto-Medium.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 162588,
+      "digest": "8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8",
+      "integrity": "sha256-hVkTLImtUdiiulsXGIekSnupN3biBfVTVz3iKOZLRfg="
+    },
+    "roboto/Roboto-Bold-761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d.woff2": {
+      "logical_path": "roboto/Roboto-Bold.woff2",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 63320,
+      "digest": "761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d",
+      "integrity": "sha256-dhyV3RkqgXM9Ak2fZE2bUxw1jw8OqD6f1iEba9Qkhz0="
+    },
+    "roboto/Roboto-Bold-da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180.woff": {
+      "logical_path": "roboto/Roboto-Bold.woff",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 89584,
+      "digest": "da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180",
+      "integrity": "sha256-2kkp8UOtA+VGVFW7HPEzO/BgrnZB8PzxFeploweT4YA="
+    },
+    "roboto/Roboto-Bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf": {
+      "logical_path": "roboto/Roboto-Bold.ttf",
+      "mtime": "2016-05-16T01:12:26+10:00",
+      "size": 162464,
+      "digest": "ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1",
+      "integrity": "sha256-7yqw5ALVy53ok+JjosROV/V/7Dl0sNmBv+hN7D2ug6E="
+    }
+  },
+  "assets": {
+    "material-design-lite/README.md": "material-design-lite/README-e7e6d6ae1c33da22c8b53bc7eb954eee7c010cde4c27404fa998cb230487760e.md",
+    "material-design-lite/bower.json": "material-design-lite/bower-703840e3659135b225bc53dab5f7603a76d5e13a80cdf6d7464e887b1bd93143.json",
+    "material-design-lite/material.min.css.map": "material-design-lite/material.min.css-711ab6a457da72b79f8214e6a3af947f5f2a0570530b3fb7e4ac15ae3a582310.map",
+    "material-design-lite/material.min.js.map": "material-design-lite/material.min.js-ae7d19f9d57cef8aba9a7436fc613b889189f351de12c803ed22a11da0619c0b.map",
+    "material-design-lite/package.json": "material-design-lite/package-6a0546d531e19f3320f411f7c16c12906791d026eb8c9aa95c73caaff05767e4.json",
+    "account.png": "account-9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64.png",
+    "brand/logo_144.png": "brand/logo_144-2773c7e4cbd912bcf06bb68dbb51dc126b29acc99517c71cda3069b6fea9e8ab.png",
+    "brand/logo_192.png": "brand/logo_192-1eab1a2d71ddc3464b75a0ccc3d5eb4fce88ba4f6b5a537ff600fe9021346647.png",
+    "brand/logo_sidebar.png": "brand/logo_sidebar-8457e8f7ddcf989a6d764a59fcb562c6864d3cc61fe2bfb13d0ca7a620ba4e5b.png",
+    "cart.png": "cart-9be1bfcb73818240faa0f30dbdb67751b023db0b0dfd25f196cb008b9a2bbe64.png",
+    "favourites.png": "favourites-0ea019504afb8c62235f853d03729dc17187d11fa93e744ca85c77662731ac49.png",
+    "places/1.jpg": "places/1-eb0ff11486cc940b8eb6cce466fc27954ec333abd8649ffd14cb8a17c49d516f.jpg",
+    "places/2.jpg": "places/2-98c10173cd9c78fb27e26a689a75bffbafcd0790f03bfc9f3190e343c8b65684.jpg",
+    "places/3.jpg": "places/3-267472fc1631f72b475566613ddcb0036e27f4ba1a6ee1d536cbe593bef3530c.jpg",
+    "products/Bubble-Tea.png": "products/Bubble-Tea-79c9d9b0201b2604d1c75acab46169dd9081f36c8df075bcf4ee615467f08033.png",
+    "products/Cappuccino.png": "products/Cappuccino-1a7f9091166fbc2504e8b2ceecea0e7d6377df2ec0f1525c8edcd974b6c4969c.png",
+    "products/Chai-Latte.png": "products/Chai-Latte-52b231f6329dad65c31c05615437d1e514293efb94a91b39c3c396be461d6d95.png",
+    "products/Flat-White.png": "products/Flat-White-ebc937e691bdf507efc2e9dd27e691d6220dfb7d5259e03f10b81dfcf72236d9.png",
+    "products/Frappe.png": "products/Frappe-e6f3468660560b8f086f16ba71c23ab1303c8b9663f118ca59b7bf27553f2355.png",
+    "products/Hot-Chocolate.png": "products/Hot-Chocolate-f2495958776dfb1f3ab00241f00c9740d31537be6f123a53f7db46bc40480dbf.png",
+    "products/Iced-Chocolate.png": "products/Iced-Chocolate-d414fa13f86aeb2b411132ce9870bb518eda5073c885b85d6cedf8ff4bfbd47a.png",
+    "products/Iced-Coffee.png": "products/Iced-Coffee-010c3c770eb1ad3b4f8f07df958aebb1e3b692da5a64fc668afb7e916b212581.png",
+    "products/Iced-Tea.png": "products/Iced-Tea-c85f745919b979b4423e04bcf32e22e75cc81abf3bcac158b80bb0e703ee27cb.png",
+    "products/Irish.png": "products/Irish-b04a0441d6416f2b8554415793e74d15f5dcbe504db3c767efe387881ccd4075.png",
+    "products/Latte-Macchiato.png": "products/Latte-Macchiato-06bf79393698202a3f1f50bc2d9c945aac4326d58435cbf6b8f8b9e07e12b7dc.png",
+    "products/Latte.png": "products/Latte-24fee04f714aa6bff33dd6f50b37d2f8fd4e926c897d8b4a7fef8bf88f68abcf.png",
+    "products/Long-Black.png": "products/Long-Black-1983a04615893c16fd675a2084b4e210f96b99372c427b51a952b15f53196d4a.png",
+    "products/Macchiato.png": "products/Macchiato-e8629085996fc53205d05524fb16e6b79ac17d5efd8a121598c8ccde0ba78d7e.png",
+    "products/Mocha.png": "products/Mocha-a0427d55f54a99da7c67cd44297b2340017e4f008078c665333a1ad7014f5781.png",
+    "products/Short-Black.png": "products/Short-Black-cd2a327ea085c5faf130da4a6d6cb940e142bad55c615de11532672c6c937533.png",
+    "products/Tea.png": "products/Tea-b3bb5d58706b36690d44e8ef50a0fa41e15dd03b12d9432a1cf6fa3f1715908c.png",
+    "products/cappuccino.jpg": "products/cappuccino-96d5e4725098bbefc0699bad5d6401250005e9c08aa1ed3cf4977d6f8833a449.jpg",
+    "products/generic.jpg": "products/generic-a6ef9658f7d462f32f54852cdeb063d19ac08439bbe3b3bc14dd26604c98f89b.jpg",
+    "products/latte.jpg": "products/latte-80bac30833af4bd46ea2baac15b0ee2bc9411d566cb27b0698b446f224b5d977.jpg",
+    "products/options/1-shot.png": "products/options/1-shot-e835ab991ab0d2e4cf2b8014b5bfb050d8a4917f42a4b4a659d3292f18a0b546.png",
+    "products/options/1-sugar.png": "products/options/1-sugar-75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae.png",
+    "products/options/2-shot.png": "products/options/2-shot-0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929.png",
+    "products/options/2-sugar.png": "products/options/2-sugar-75c9852c2b51440f28a1cabd267f2d940c087dec36fe01736f9caeeb779695ae.png",
+    "products/options/3-shot.png": "products/options/3-shot-0e021426b40a3a245060582991ecd8888222c698a82ef125df73f717f3201929.png",
+    "products/options/3-sugar.png": "products/options/3-sugar-1087222d321c3e85283c9544492233b8edc5dd8249d92cdb45fd52fedc32179d.png",
+    "products/options/4-shot.png": "products/options/4-shot-ce084b4df65c63cbc2e2230f50426a88e8385c8acc39755301eb01ce04e7aabf.png",
+    "products/options/almond.png": "products/options/almond-5e938322ce307ad1c22b4cffb91bdb5f3f5eea687de0451d92dd9ff918cf993c.png",
+    "products/options/fullcream.png": "products/options/fullcream-b5d0c673e767a1caa4f3a754a3256033513e80088b8a24c50256d3c3294000b6.png",
+    "products/options/large.png": "products/options/large-7225024ea6426979da4fb81148e041ecdeb57f909ece8e3818f9173c4a2e94ac.png",
+    "products/options/no-sugar.png": "products/options/no-sugar-bda6248a0755fe9d01a22a1f9a628f30a0c640a7dbe35f7c5ffdf533a7bbc0c2.png",
+    "products/options/regular.png": "products/options/regular-113854cc85e0cf675f4d35d01fe47184acc33979de218cdea5084d6b3651f35e.png",
+    "products/options/skim.png": "products/options/skim-ab82029d2d1ebb068c348aa17ec6155cd3d83b40ed25a8405304aa78246ccc6c.png",
+    "products/options/small.png": "products/options/small-24c5c2adb9092fb89e31a55af1aba9763525adf4e8d9c6a2691bbf22e06f06a8.png",
+    "products/options/soy.png": "products/options/soy-0cbf25890130cfc650101f16c597d7f17bcfdf2c3a2d88c059c7d13b65a96fa1.png",
+    "products/options/xsmall.png": "products/options/xsmall-7d27757189105ec8016339e86c0305c64f29c108ede48b177a30166679d5c0e6.png",
+    "products/short-black.jpg": "products/short-black-dec66f2e91e525d5f284ae4430a02a6f8ade5480156cf806d5ad59bcbd00790e.jpg",
+    "rails.png": "rails-322506f9917889126e81df2833a6eecdf2e394658d53dad347e9882dd4dbf28e.png",
+    "search.png": "search-d13df4a857b6fc5079b377006cf3895e7dc653b8165104d85a1e2551a4a5e344.png",
+    "application.js": "application-8105cf47b2193480ccbea56165e32aefe754b87e95379ec34e7e0e6ade97d2ee.js",
+    "application.css": "application-afb26e5a874590b90eca0f9e4d22acb6a18b1da995635394fcc5c1b3b25694a9.css",
+    "tick-mask.svg": "tick-mask-2b4fbdc82f135a08fab5643804fc02fcedfe59da66d27949525c9f3c09f7fca8.svg",
+    "tick.svg": "tick-2e81295d9c8687cdb7f70218379bcae2a57b5bff5f28824f7bfbf408ba47491e.svg",
+    "buffer.svg": "buffer-e6c1c75c1ad278bb37fe3e06f0b1bf775cb94bcc58ae46651d9a29b5218f34f2.svg",
+    "material-icons/MaterialIcons-Regular.eot": "material-icons/MaterialIcons-Regular-8c998b4a9c0acbb9fe5dd572c206a5a33fdd5ca2b58db87fc3b893beac85068d.eot",
+    "material-icons/MaterialIcons-Regular.woff2": "material-icons/MaterialIcons-Regular-a87d66c91b2e7dc5530aef76c03bd6a3d25ea5826110bf4803b561b811cc8726.woff2",
+    "material-icons/MaterialIcons-Regular.woff": "material-icons/MaterialIcons-Regular-3a8ee1c4301cd970dfe83fb28f04c09eeb1736018b27b9dedd951b93f2d15d4e.woff",
+    "material-icons/MaterialIcons-Regular.ttf": "material-icons/MaterialIcons-Regular-b7f4a3ab562048f28dd1fa691601bc43363a61d0f876d16d8316c52e4f32d696.ttf",
+    "roboto/Roboto-Thin.woff2": "roboto/Roboto-Thin-cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330.woff2",
+    "roboto/Roboto-Thin.woff": "roboto/Roboto-Thin-382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a.woff",
+    "roboto/Roboto-Thin.ttf": "roboto/Roboto-Thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf",
+    "roboto/Roboto-Light.woff2": "roboto/Roboto-Light-d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db.woff2",
+    "roboto/Roboto-Light.woff": "roboto/Roboto-Light-af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0.woff",
+    "roboto/Roboto-Light.ttf": "roboto/Roboto-Light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf",
+    "roboto/Roboto-Regular.woff2": "roboto/Roboto-Regular-cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e.woff2",
+    "roboto/Roboto-Regular.woff": "roboto/Roboto-Regular-ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d.woff",
+    "roboto/Roboto-Regular.ttf": "roboto/Roboto-Regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf",
+    "roboto/Roboto-Medium.woff2": "roboto/Roboto-Medium-5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91.woff2",
+    "roboto/Roboto-Medium.woff": "roboto/Roboto-Medium-a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9.woff",
+    "roboto/Roboto-Medium.ttf": "roboto/Roboto-Medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf",
+    "roboto/Roboto-Bold.woff2": "roboto/Roboto-Bold-761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d.woff2",
+    "roboto/Roboto-Bold.woff": "roboto/Roboto-Bold-da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180.woff",
+    "roboto/Roboto-Bold.ttf": "roboto/Roboto-Bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf"
+  }
+}
