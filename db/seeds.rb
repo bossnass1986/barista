@@ -125,15 +125,15 @@ Product.create!([
 #   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
 #   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
 # ])
-
-puts 'Creating Sample Products with Attributes'
-ProductProperty.create!([
-  {property_id: 1, product_id: 2, description: 'Size'},
-  # {property_id: 1, product_id: 2},
-  # {property_id: 1, product_id: 3},
-  # {property_id: 1, product_id: 4},
-  # {property_id: 3, product_id: 1},
-])
+#
+# puts 'Creating Sample Products with Attributes'
+# ProductProperty.create!([
+#   {property_id: 1, product_id: 2, description: 'Size'},
+#   # {property_id: 1, product_id: 2},
+#   # {property_id: 1, product_id: 3},
+#   # {property_id: 1, product_id: 4},
+#   # {property_id: 3, product_id: 1},
+# ])
 
 # puts 'Creating Sample Menu Items with Attributes'
 # VariantProperty.create!([
@@ -172,17 +172,6 @@ Merchant.create!([
 #     {merchant_id: 1, variant_id: 7},
 #     {merchant_id: 1, variant_id: 8}
 # ])
-
-# puts 'Deleting All Order Statues'
-# OrderStatus.delete_all
-# puts 'Creating Order Statuses'
-# OrderStatus.create!([
-#  {id: 1, name: 'Order Received', description: 'Bean\'n\'Gone has received your order'},
-#  {id: 2, name: 'In Progress', description: 'The barista has started preparing your order'},
-#  {id: 3, name: 'Ready for Collection', description: 'Order is ready for collection'},
-#  {id: 4, name: 'Collected', description: 'Order has been collected'}
-# ])
-
 
 
 # puts "Referral Bonuses"

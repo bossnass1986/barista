@@ -19,8 +19,6 @@ class Merchant < ActiveRecord::Base
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
-  # geocoded_by :address
-  # after_validation :geocode
   # after_create :sanitize_dates
 
   accepts_nested_attributes_for :address

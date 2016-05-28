@@ -12,10 +12,6 @@ class User < ActiveRecord::Base
   before_validation :sanitize_data
   before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at, :create_braintree_customer, :assign_user_role
-  # TODO add back in for production
-  # after_validation :geocode
-
-  # geocoded_by :ip_address
 
   belongs_to :account
 

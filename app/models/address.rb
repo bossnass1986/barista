@@ -18,13 +18,16 @@ class Address < ActiveRecord::Base
   # validates :state_id,      :presence => true,  :if => Proc.new { |address| Settings.require_state_in_address}
   # validates :country_id,    :presence => true,  :if => Proc.new { |address| !Settings.require_state_in_address}
   #validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
-  # validates :zip_code,    :presence => true,       :length => { :minimum => 4, :maximum => 12 }
+  validates :zip_code, :presence => true, :length => {:minimum => 4, :maximum => 4}
   before_validation :sanitize_data
 
   attr_accessor :replace_address_id # if you are updating an address set this field.
   before_create :default_to_active
   before_save :replace_address, if: :replace_address_id
   after_save  :invalidate_old_defaults
+
+  geocoded_by :full_address_compact_array
+  after_validation :geocode
 
   accepts_nested_attributes_for :phone
 

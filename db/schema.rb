@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525102303) do
+ActiveRecord::Schema.define(version: 20160527131146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20160525102303) do
     t.integer  "country_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   add_index "addresses", ["addressable_id"], name: "index_addresses_on_addressable_id", using: :btree
@@ -468,12 +470,73 @@ ActiveRecord::Schema.define(version: 20160525102303) do
 
   add_index "store_credits", ["user_id"], name: "index_store_credits_on_user_id", using: :btree
 
-  create_table "trading_hours", force: :cascade do |t|
-    t.integer "supplier_id"
-    t.integer "weekday"
-    t.time    "open_time"
-    t.time    "close_time"
+  create_table "strongbolt_capabilities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "model"
+    t.string "action"
+    t.string "attr"
+    t.boolean "require_ownership", default: false, null: false
+    t.boolean "require_tenant_access", default: true, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  create_table "strongbolt_capabilities_roles", force: :cascade do |t|
+    t.integer "role_id"
+    t.integer "capability_id"
+  end
+
+  add_index "strongbolt_capabilities_roles", ["capability_id"], name: "index_strongbolt_capabilities_roles_on_capability_id", using: :btree
+  add_index "strongbolt_capabilities_roles", ["role_id"], name: "index_strongbolt_capabilities_roles_on_role_id", using: :btree
+
+  create_table "strongbolt_roles", force: :cascade do |t|
+    t.string "name"
+    t.integer "parent_id"
+    t.integer "lft"
+    t.integer "rgt"
+    t.string "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "strongbolt_roles", ["lft"], name: "index_strongbolt_roles_on_lft", using: :btree
+  add_index "strongbolt_roles", ["parent_id"], name: "index_strongbolt_roles_on_parent_id", using: :btree
+  add_index "strongbolt_roles", ["rgt"], name: "index_strongbolt_roles_on_rgt", using: :btree
+
+  create_table "strongbolt_roles_user_groups", force: :cascade do |t|
+    t.integer "user_group_id"
+    t.integer "role_id"
+  end
+
+  add_index "strongbolt_roles_user_groups", ["role_id"], name: "index_strongbolt_roles_user_groups_on_role_id", using: :btree
+  add_index "strongbolt_roles_user_groups", ["user_group_id"], name: "index_strongbolt_roles_user_groups_on_user_group_id", using: :btree
+
+  create_table "strongbolt_user_groups", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "strongbolt_user_groups_users", force: :cascade do |t|
+    t.integer "user_group_id"
+    t.integer "user_id"
+  end
+
+  add_index "strongbolt_user_groups_users", ["user_group_id"], name: "index_strongbolt_user_groups_users_on_user_group_id", using: :btree
+  add_index "strongbolt_user_groups_users", ["user_id"], name: "index_strongbolt_user_groups_users_on_user_id", using: :btree
+
+  create_table "strongbolt_users_tenants", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "tenant_id"
+    t.string "type"
+  end
+
+  add_index "strongbolt_users_tenants", ["tenant_id", "type"], name: "index_strongbolt_users_tenants_on_tenant_id_and_type", using: :btree
+  add_index "strongbolt_users_tenants", ["tenant_id"], name: "index_strongbolt_users_tenants_on_tenant_id", using: :btree
+  add_index "strongbolt_users_tenants", ["type"], name: "index_strongbolt_users_tenants_on_type", using: :btree
+  add_index "strongbolt_users_tenants", ["user_id"], name: "index_strongbolt_users_tenants_on_user_id", using: :btree
 
   create_table "tax_rates", force: :cascade do |t|
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
