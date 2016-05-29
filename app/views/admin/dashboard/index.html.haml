@@ -2,29 +2,29 @@
 .mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
   .mdl-cell.mdl-cell--2-col
     .mdl-typography--display-1-color-contrast
-      $130
+      = number_to_currency(@sales, precision: 0)
       .mdl-typography--title-color-contrast
-        Sales
+        = "Sale".pluralize(@sales)
   .mdl-cell.mdl-cell--2-col
     .mdl-typography--display-1-color-contrast
-      $130
+      = @users
       .mdl-typography--title-color-contrast
-        Customers
+        = "Customer".pluralize(@users)
   .mdl-cell.mdl-cell--2-col
     .mdl-typography--display-1-color-contrast
-      $130
+      = @merchants
       .mdl-typography--title-color-contrast
-        Merchants
+        = "Merchant".pluralize(@merchants)
   .mdl-cell.mdl-cell--3-col
     .mdl-typography--display-1-color-contrast
-      $130
+      = number_to_currency(@turnover, precision: 0)
       .mdl-typography--title-color-contrast
         Turnover
   .mdl-cell.mdl-cell--3-col
     .mdl-typography--display-1-color-contrast
-      $130
+      = number_to_currency(@commissions, precision: 0)
       .mdl-typography--title-color-contrast
-        Commissions
+        = "Commission".pluralize(@commissions)
 .mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar

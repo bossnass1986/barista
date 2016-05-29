@@ -17,7 +17,7 @@ Strongbolt.setup do |config|
   #
   # Specify here the list of tenants used by your application
   #
-  # config.tenants = "Client", "Region"
+  # config.tenants = 'Merchant'
 
   #
   # You can specify here some controllers where you don't want to perform any controller authorization check up

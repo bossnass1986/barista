@@ -284,7 +284,7 @@ class User < ActiveRecord::Base
   end
 
   def assign_user_role
-    self.add_role(:customer)
+    # self.add_role(:customer)
   end
 
 end

@@ -24,7 +24,7 @@ Property.delete_all
 end
 
 puts 'Creating Control Users'
-User.create!(first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn').add_role(:admin)
+User.create!(first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn')
 User.create!(first_name: 'Merchant', last_name: 'Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: '123456')
 # User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
 # User.create!(id:4, first_name: 'Merchant Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)

@@ -1,0 +1,8 @@
+.btn-group{ "data-model" => key[:model], "data-require-ownership" => key[:require_ownership], "data-require-tenant-access" => key[:require_tenant_access] }
+  - Strongbolt::Capability::Actions.each do |action|
+    - if inherited_capability[action.to_sym]
+      %button.mdl-button.mdl-js-button{:disabled => 'disabled', :title => 'Inherited', :type => 'button'}
+        = action.capitalize
+    - else
+      %button{:class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect #{capability[action.to_sym] ? 'mdl-button--accent' : ''}", "data-action" => action, "data-granted" => capability[action.to_sym], :type => "button"}
+        = action.capitalize

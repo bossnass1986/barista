@@ -1,0 +1,36 @@
+- title 'Security: Roles'
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    = link_to 'New Role', new_role_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+  .mdl-cell.mdl-cell--12-col
+    %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
+      %thead
+        %tr
+          %th.mdl-data-table__cell--non-numeric Name
+          %th.mdl-data-table__cell--non-numeric Inherits from
+          %th.mdl-data-table__cell--non-numeric Description
+          %th.mdl-data-table__cell--non-numeric Permissions
+          %th.mdl-data-table__cell--non-numeric User Groups
+          %th
+      %tbody
+        - @roles.each do |role|
+          %tr
+            %td.mdl-data-table__cell--non-numeric= link_to role.name, role_path(role)
+            %td.mdl-data-table__cell--non-numeric
+              - if role.parent.present?
+                = link_to role.parent.name, role_path(role.parent)
+            %td.mdl-data-table__cell--non-numeric= role.description
+            %td.mdl-data-table__cell--non-numeric= role.capabilities.size
+            %td.mdl-data-table__cell--non-numeric= role.user_groups.size
+            %td.mdl-data-table__cell--non-numeric{:align => "right"}
+              = link_to edit_role_path(role) do
+                %i.fa.fa-pencil
+              = link_to role_path(role), method: :delete, data: {confirm: "Do you confirm deleting #{role.name}?"}, class: "text-danger" do
+                %i.fa.fa-trash-o
+
+                -#            <%= render 'strongbolt/menu', current: 'roles' %>
+                -#
+                -#<div class="pull-right">
+                -#  <%= link_to "New Role", new_role_path, class: 'btn btn-default' %>
+                -#</div>
+                -#<div class="clearfix"></div>

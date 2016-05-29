@@ -1,0 +1,27 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    = simple_form_for(Strongbolt::Capability.new, url: role_capabilities_path(@role), as: :capability) do |f|
+      %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp{"data-url" => role_capabilities_path(@role)}
+        %thead
+          %tr
+            %th.mdl-data-table__cell--non-numeric Model
+            %th.mdl-data-table__cell--non-numeric Require Ownership?
+            %th.mdl-data-table__cell--non-numeric Require Tenant Access?
+            %th.mdl-data-table__cell--non-numeric Actions
+        %tbody
+          - @keys.each do |key|
+            %tr
+              %td.mdl-data-table__cell--non-numeric= key[:model]
+              %td.mdl-data-table__cell--non-numeric
+                = key[:require_ownership] ? "Yes" : "No"
+              %td.mdl-data-table__cell--non-numeric
+                = key[:require_tenant_access] ? "Yes" : "No"
+              %td.mdl-data-table__cell--non-numeric
+                = render 'capability', key: key, capability: @capabilities[key] || {}, inherited_capability: @inherited_capabilities[key] || {}, path: role_capabilities_path(@role)
+          %tr
+            %td.mdl-data-table__cell--non-numeric= f.input_field :model, collection: Strongbolt::Capability.models, include_blank: false
+            %td.mdl-data-table__cell--non-numeric= f.input_field :require_ownership, as: :select, include_blank: false
+            %td.mdl-data-table__cell--non-numeric= f.input_field :require_tenant_access, as: :select, include_blank: false
+            %td.mdl-data-table__cell--non-numeric{:colspan => "4"}
+              = f.hidden_field :action, value: "find"
+              = f.button :submit, "Add Permission", class: "btn btn-primary btn-block"
