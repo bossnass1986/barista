@@ -7,7 +7,6 @@
     <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="heroku goes angular">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-6ee2a69b62d862dc24f330bf9dd41ecc.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-6ee2a69b62d862dc24f330bf9dd41ecc.json" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -618,14 +617,7 @@
       <workItem from="1463819331424" duration="20767000" />
       <workItem from="1463992690273" duration="43876000" />
       <workItem from="1464346829619" duration="11111000" />
-      <workItem from="1464425996141" duration="27094000" />
-    </task>
-    <task id="LOCAL-00160" summary="asset pipeline fixes">
-      <created>1463050348184</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1463050348184</updated>
+      <workItem from="1464425996141" duration="27508000" />
     </task>
     <task id="LOCAL-00161" summary="form fixes">
       <created>1463060045290</created>
@@ -963,11 +955,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464611317716</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="heroku goes angular">
+      <created>1464612462554</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1464612462555</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145298000" />
+    <option name="totallyTimeSpent" value="145712000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1561,7 +1560,7 @@
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
         </state>
       </provider>
