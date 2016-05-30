@@ -90,11 +90,11 @@ Property.create!([
    {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
 ])
 
-puts 'Creating Standard Menu Items'
+# puts 'Creating Standard Menu Items'
 
-product_seed = Rails.root.join('db', 'seed', 'products.yml')
-product = YAML::load_file(product_seed)
-Product.create!(product)
+# product_seed = Rails.root.join('db', 'seed', 'products.yml')
+# product = YAML::load_file(product_seed)
+# Product.create!(product)
 
 
 # 'Creating Sample Variants'
