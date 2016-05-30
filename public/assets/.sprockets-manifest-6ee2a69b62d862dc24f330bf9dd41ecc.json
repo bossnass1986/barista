@@ -538,6 +538,20 @@
       "size": 162464,
       "digest": "ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1",
       "integrity": "sha256-7yqw5ALVy53ok+JjosROV/V/7Dl0sNmBv+hN7D2ug6E="
+    },
+    "application-340bdae614e2dc867a632dd03b22f8cf743e5e1fe011aa09fda6eee3bf0a08c3.js": {
+      "logical_path": "application.js",
+      "mtime": "2016-05-30T21:37:05+10:00",
+      "size": 1534401,
+      "digest": "340bdae614e2dc867a632dd03b22f8cf743e5e1fe011aa09fda6eee3bf0a08c3",
+      "integrity": "sha256-NAva5hTi3IZ6Yy3QOyL4z3Q+Xh/gEaoJ/abu478KCMM="
+    },
+    "application-87a844102970ce69bbbb0cf8c8f317fff08d7eaef62cb138dfa73db2c07a7302.css": {
+      "logical_path": "application.css",
+      "mtime": "2016-05-30T21:37:05+10:00",
+      "size": 357417,
+      "digest": "87a844102970ce69bbbb0cf8c8f317fff08d7eaef62cb138dfa73db2c07a7302",
+      "integrity": "sha256-h6hEEClwzmm7uwz4yPMX//CNfq72LLE436c9ssB6cwI="
     }
   },
   "assets": {
@@ -594,8 +608,8 @@
     "products/short-black.jpg": "products/short-black-dec66f2e91e525d5f284ae4430a02a6f8ade5480156cf806d5ad59bcbd00790e.jpg",
     "rails.png": "rails-322506f9917889126e81df2833a6eecdf2e394658d53dad347e9882dd4dbf28e.png",
     "search.png": "search-d13df4a857b6fc5079b377006cf3895e7dc653b8165104d85a1e2551a4a5e344.png",
-    "application.js": "application-8105cf47b2193480ccbea56165e32aefe754b87e95379ec34e7e0e6ade97d2ee.js",
-    "application.css": "application-afb26e5a874590b90eca0f9e4d22acb6a18b1da995635394fcc5c1b3b25694a9.css",
+    "application.js": "application-340bdae614e2dc867a632dd03b22f8cf743e5e1fe011aa09fda6eee3bf0a08c3.js",
+    "application.css": "application-87a844102970ce69bbbb0cf8c8f317fff08d7eaef62cb138dfa73db2c07a7302.css",
     "tick-mask.svg": "tick-mask-2b4fbdc82f135a08fab5643804fc02fcedfe59da66d27949525c9f3c09f7fca8.svg",
     "tick.svg": "tick-2e81295d9c8687cdb7f70218379bcae2a57b5bff5f28824f7bfbf408ba47491e.svg",
     "buffer.svg": "buffer-e6c1c75c1ad278bb37fe3e06f0b1bf775cb94bcc58ae46651d9a29b5218f34f2.svg",
