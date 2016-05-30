@@ -21,13 +21,27 @@ class Merchant < ActiveRecord::Base
 
   # after_create :sanitize_dates
 
-  accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['sku'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
-  def time
-    TradingHour.open.includes(:supplier).each do |hour|
-      puts "#{hour.supplier.name} is open! It closes at #{hour.close_time}."
+  # @param [Object] day
+  # @param [Object] hour
+  def opening_status(day, hour)
+    today_trading_hours = trading_hours.open_now(day, hour)
+    if today_trading_hours.size > 0
+      "Opened until #{today_trading_hours.first.close_time}"
+    else
+      "Closed"
+    end
+  end
+
+  def open(day, hour, merchant)
+    today_trading_hours = TradingHour.where("weekday = ? AND open_time > ? AND close_time < ? and merchant_id = ?", day, hour, hour, merchant)
+    if today_trading_hours.size > 0
+      "Opened until #{today_trading_hours.first.close_time}"
+    else
+      "Closed"
     end
   end
 
@@ -57,9 +71,9 @@ class Merchant < ActiveRecord::Base
 
   def add_variants
     @product = Product.all
-      # @product.each do |product|
-      #   @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
-      # end
+    @product.each do |product|
+      @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
+    end
   end
 
   # if the permalink is not filled in set it equal to the name

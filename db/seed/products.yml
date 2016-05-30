@@ -1,71 +1,72 @@
-vic:
-  attributes:
-    name: Victoria
-    abbreviation: VIC
-    country_id: 12
-    shipping_zone_id: 2
-    described_as: State
-    id: 1
+#Product.create!([
+#  # Hot Drinks
+#  { prototype_id: 1, product_type_id: 1, name: 'Bubble Tea', description: 'A normal, regular milk cappuccino', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Cappuccino', description: 'Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Chai Latte', description: 'A normal, regular milk latte', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Flat White', description: 'Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Hot Chocolate', description: 'Silky steamed milk poured over melted chocolate topped with chocolate powder', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Latte', description: 'A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Latte Macchiato', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Long Black', description: 'A long black is made by pouring a double-shot of espresso or ristretto over hot water.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Macchiato', description: 'A single shot of espresso with a small amount of steamed milk.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Mocha', description: 'Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Short Black', description: 'A single shot of espresso.', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Tea', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+#  { prototype_id: 1, product_type_id: 1, name: 'Piccolo', description: 'A baby latte as the Italian pronunciation suggests.', shipping_category_id: 1},
+#  #  Cold Drinks
+#  { prototype_id: 2, product_type_id: 2, name: 'Frappe', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+#  { prototype_id: 2, product_type_id: 2, name: 'Iced Chocolate', description: 'A normal, regular milk coffee', shipping_category_id: 1},
+#  { prototype_id: 2, product_type_id: 2, name: 'Iced Coffee', description: 'A normal, regular milk latte', shipping_category_id: 1},
+#  { prototype_id: 2, product_type_id: 2, name: 'Iced Tea', description: 'A normal, regular milk macchiato', shipping_category_id: 1},
+#  { prototype_id: 2, product_type_id: 2, name: 'Irish', description: 'A normal, regular milk macchiato', shipping_category_id: 1}
+#])
 
-nsw:
-  attributes:
-    name: New South Wales
-    abbreviation: NSW
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: State
-    id: 2
-qld:
-  attributes:
-    name: Queensland
-    abbreviation: QLD
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: State
-    id: 3
+- name: Bubble Tea
+  description: A refreshing flavoured fruit tea or milk teas served ice cold or piping hot with chewy natural tapioca balls.
+  product_type_id: 1
 
-tas:
-  attributes:
-    name: Tasmania
-    abbreviation: TAS
-    country_id: 12
-    shipping_zone_id: 4
-    described_as: State
-    id: 4
+- name: Cappuccino
+  description: Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.
+  product_type_id: 1
 
-sa:
-  attributes:
-    name: South Australia
-    abbreviation: SA
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: State
-    id: 5
+- name: Chai Latte
+  description:
+  product_type_id: 1
 
-wa:
-  attributes:
-    name: Western Australia
-    abbreviation: WA
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: State
-    id: 6
+- name: Flat White
+  description: Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.
+  product_type_id: 1
 
-nt:
-  attributes:
-    name: Northern Territory
-    abbreviation: NT
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: Territory
-    id: 7
+- name: Hot Chocolate
+  description: Silky steamed milk poured over melted chocolate topped with chocolate powder.
+  product_type_id: 1
 
-act:
-  attributes:
-    name: Australia Capital Territory
-    abbreviation: ACT
-    country_id: 12
-    shipping_zone_id: 1
-    described_as: Territory
-    id: 8
+- name: Latte
+  description: A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.
+  product_type_id: 1
+
+- name: Long Black
+  description: A long black is made by pouring a double-shot of espresso or ristretto over hot water.
+  product_type_id: 1
+
+- name: Long Macchiato
+  description: A double shot of espresso with a small amount of steamed milk.
+  product_type_id: 1
+
+- name: Macchiato
+  description: A single shot of espresso with a small amount of steamed milk.
+  product_type_id: 1
+
+- name: Mocha
+  description: Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.
+  product_type_id: 1
+
+- name: Short Black
+  description: A short black is made by pouring a single-shot of espresso or ristretto over hot water.
+  product_type_id: 1
+
+- name: Tea
+  description:
+  product_type_id: 1
+
 

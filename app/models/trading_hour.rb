@@ -1,6 +1,8 @@
 class TradingHour < ActiveRecord::Base
   belongs_to :merchant
 
-  # scope :open, -> { where ("self.weekday = ? AND self.open_time >= ? AND self.close_time < ?", Date.today.wday, DateTime.now, DateTime.now) }
+  scope :open_now, -> (day, time) do
+    where('weekday = ? AND open_time <= ? AND close_time > ?', day, time, time)
+  end
 end
 

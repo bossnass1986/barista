@@ -7,9 +7,11 @@ class Variant < ActiveRecord::Base
   has_many :variant_properties
   has_many :properties,        through: :variant_properties
 
+  belongs_to :product
+
   has_many :order_items
 
-  belongs_to :product
+
   # belongs_to :image_group
 
   # before_validation :create_inventory#, :on => :create
