@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 gem 'rails'
 ruby '2.3.1'
 
-# Analytics
-# gem 'skylight'
 gem 'activemerchant', '~> 1.48'
 # ==========
 # MemCachier
@@ -21,6 +19,7 @@ gem 'puma'
 
 # Template
 gem 'material_design_lite-sass'
+gem 'angularjs-rails'
 gem 'haml'
 gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+

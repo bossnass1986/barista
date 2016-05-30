@@ -1,5 +1,5 @@
 !!!
-%html{lang: :en}
+%html{lang: :en, "ng-app" => "CupTown"}
   %head
     = render 'shared/meta_data'
     = stylesheet_link_tag 'application'
@@ -29,7 +29,22 @@
           %span.mdl-layout-title
           = render 'shared/compact_menu'
       %main.mdl-layout__content
-        .page-content
+        .page-content{"ng-controller" => "myCtrl"}
+          %div
+            First Name:
+            %input{"ng-model" => "firstName", :type => "text"}/
+            %br/
+            Last Name:
+            %input{"ng-model" => "lastName", :type => "text"}/
+            %br/
+            %br/
+            Full Name: {{firstName + " " + lastName}}
+          :javascript
+            var app = angular.module('CupTown', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.firstName= "John";
+                $scope.lastName= "Doe";
+            });
           - flash.each do |key, value|
             %div{:class => "alert alert-#{key}"}= value
           = yield
