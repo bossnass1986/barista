@@ -318,18 +318,17 @@ ActiveRecord::Schema.define(version: 20160527131146) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",                 limit: 255,                 null: false
+    t.string "name", limit: 255, null: false
     t.text     "description"
     t.text     "product_keywords"
-    t.integer  "product_type_id",                                  null: false
+    t.integer "product_type_id", null: false
     t.integer  "prototype_id"
-    t.integer  "shipping_category_id",                             null: false
-    t.string   "permalink",            limit: 255
+    t.string "permalink", limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
-    t.string   "meta_keywords",        limit: 255
-    t.string   "meta_description",     limit: 255
-    t.boolean  "featured",                         default: false
+    t.string "meta_keywords", limit: 255
+    t.string "meta_description", limit: 255
+    t.boolean "featured", default: false
     t.text     "description_markup"
     t.integer  "brand_id"
     t.datetime "created_at"
@@ -342,7 +341,6 @@ ActiveRecord::Schema.define(version: 20160527131146) do
   add_index "products", ["permalink"], name: "index_products_on_permalink", unique: true, using: :btree
   add_index "products", ["product_type_id"], name: "index_products_on_product_type_id", using: :btree
   add_index "products", ["prototype_id"], name: "index_products_on_prototype_id", using: :btree
-  add_index "products", ["shipping_category_id"], name: "index_products_on_shipping_category_id", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.string   "display_name",     limit: 255,                null: false

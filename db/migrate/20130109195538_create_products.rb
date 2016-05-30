@@ -6,7 +6,6 @@ class CreateProducts < ActiveRecord::Migration
       t.text     :product_keywords,     limit: 65535
       t.integer  :product_type_id,      limit: 4,                     null: false
       t.integer  :prototype_id,         limit: 4
-      t.integer  :shipping_category_id, limit: 4,                     null: false
       t.string   :permalink,            limit: 255
       t.datetime :available_at
       t.datetime :deleted_at
@@ -24,6 +23,5 @@ class CreateProducts < ActiveRecord::Migration
     add_index :products, :name
     add_index :products, :permalink, unique: :true
     add_index :products, :prototype_id
-    add_index :products, :shipping_category_id
   end
 end
