@@ -1,6 +1,5 @@
 Rails.application.routes.draw {
   scope('(:locale)', locale: /#{I18n.available_locales.join('|')}/) {
-    scope(:strongbolt) { strongbolt }
     concern(:paginatable) { get '(page/:page)', :action => :index, :on => :collection, :as => '' }
 
     resources :users, controller: :users, only: :create
