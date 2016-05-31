@@ -93,7 +93,7 @@ RSpec.describe UsersController, :type => :controller do
         expect(assigns(:user)).to be_a_new(User)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         post :create, {:user => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
@@ -133,7 +133,7 @@ RSpec.describe UsersController, :type => :controller do
         expect(assigns(:user)).to eq(person)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         person = User.create! valid_attributes
         put :update, {:id => person.to_param, :user => invalid_attributes}, valid_session
         expect(response).to render_template("edit")

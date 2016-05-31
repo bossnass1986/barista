@@ -1,3 +1,16 @@
 - title t('.title')
-= render @merchants
+.mdl-cell.mdl-cell--12-col{'ng-controller'=>'MerchantCtrl'}
+  %h3{'ng-hide' => 'merchants.length'}
+    No merchants
+  %ul.merchant-list-three.mdl-list{'ng-show' => 'merchants.length', 'ng-repeat' => 'merchant in merchants'}
+    %a{:href => "#/merchant/{{merchant.permalink}}"}
+      %li.mdl-list__item.mdl-list__item--three-line
+        %span.mdl-list__item-primary-content
+          = image_tag 'products/cappuccino.jpg', class: 'mdl-list__item-avatar'
+          %span {{merchant.name}}
+          %a{:href => "", "ng-click" => "deleteMerchant(merchant.id)"} Remove
+        -#%span.mdl-list__item-text-body= merchant.address.titlecase
+        %span.mdl-list__item-secondary-content
+          %i.material-icons
+            chevron_right
 

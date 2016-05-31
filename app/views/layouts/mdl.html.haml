@@ -1,16 +1,13 @@
 !!!
-%html{lang: :en, "ng-app" => "CupTown"}
+%html{lang: :en, 'ng-app' => 'CupTown'}
   %head
     = render 'shared/meta_data'
     = stylesheet_link_tag 'application'
     = yield :head
     / Material Design icon font
     %link{:href => '//fonts.googleapis.com/icon?family=Material+Icons', :rel => 'stylesheet'}/
-    %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
-    %script{:defer => '', :src => '//js.braintreegateway.com/v2/braintree.js'}
-    = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
+  %body{'ng-view' => ''}
     / Always shows a header, even in smaller screens.
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       %header.mdl-layout__header
@@ -29,23 +26,12 @@
           %span.mdl-layout-title
           = render 'shared/compact_menu'
       %main.mdl-layout__content
-        .page-content{"ng-controller" => "myCtrl"}
-          %div
-            First Name:
-            %input{"ng-model" => "firstName", :type => "text"}/
-            %br/
-            Last Name:
-            %input{"ng-model" => "lastName", :type => "text"}/
-            %br/
-            %br/
-            Full Name: {{firstName + " " + lastName}}
-          :javascript
-            var app = angular.module('CupTown', []);
-            app.controller('myCtrl', function($scope) {
-                $scope.firstName= "John";
-                $scope.lastName= "Doe";
-            });
-          - flash.each do |key, value|
-            %div{:class => "alert alert-#{key}"}= value
-          = yield
+        .page-content
+          .mdl-grid
+            - flash.each do |key, value|
+              %div{:class => "alert alert-#{key}"}= value
+            = yield
       = render 'shared/footer'
+    %script{:defer => '', :src => '//code.getmdl.io/1.1.3/material.min.js'}
+    %script{:defer => '', :src => '//js.braintreegateway.com/v2/braintree.js'}
+    = javascript_include_tag 'application'

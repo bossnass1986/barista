@@ -102,7 +102,7 @@ $color-primary-contrast: $color-dark-contrast !default;
 // Our accent is dark, so use $color-dark-contrast for overlaid text.
 $color-accent-contrast: $color-dark-contrast !default;
 
-// Replace all colors with placeholders if we're generating a template.
+// Replace all colors with placeholders if we're generating a templates.
 @if $styleguide-generate-template == true {
   $color-primary: '$color-primary';
   $color-primary-dark: '$color-primary-dark';

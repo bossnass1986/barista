@@ -93,7 +93,7 @@ RSpec.describe MerchantsController, type: :controller do
         expect(assigns(:supplier)).to be_a_new(Merchant)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         post :create, {:supplier => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
@@ -133,7 +133,7 @@ RSpec.describe MerchantsController, type: :controller do
         expect(assigns(:supplier)).to eq(supplier)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         supplier = Merchant.create! valid_attributes
         put :update, {:id => supplier.to_param, :supplier => invalid_attributes}, valid_session
         expect(response).to render_template("edit")

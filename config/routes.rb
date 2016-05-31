@@ -1,5 +1,5 @@
 Rails.application.routes.draw {
-  scope('(:locale)', locale: /#{I18n.available_locales.join('|')}/) {
+  # scope('(:locale)', locale: /#{I18n.available_locales.join('|')}/) {
     concern(:paginatable) { get '(page/:page)', :action => :index, :on => :collection, :as => '' }
 
     resources :users, controller: :users, only: :create
@@ -31,7 +31,7 @@ Rails.application.routes.draw {
     }
 
     namespace(:shopping) {
-      resources(:merchants, only: [:index, :show]) { resources :products, only: [:index, :show, :create] }
+      resources(:merchants, only: [:index, :show, :destroy]) { resources :products, only: [:index, :show, :create] }
 
       resources(:cart_items) { member { put :move_to } }
       resource :coupons, only: [:show, :create]
@@ -136,5 +136,5 @@ Rails.application.routes.draw {
       }
     }
     root :to => 'shopping/merchants#index'
-  }
+  # }
 }

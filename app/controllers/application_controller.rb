@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :require_login, :set_locale
 
+  after_action :set_csrf_cookie_for_ng
 
   helper_method :most_likely_user,
                 :random_user,
@@ -21,6 +22,10 @@ class ApplicationController < ActionController::Base
     redirect_to :back, alert: exception.message
   end
 
+  def set_csrf_cookie_for_ng
+    cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
+  end
+
   def product_types
     @product_types ||= ProductType.roots
   end
@@ -33,7 +38,7 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options(options={})
-    logger.debug "default_url_options is passed options: #{options.inspect}\n"
+    # logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
   end
 
@@ -41,10 +46,6 @@ class ApplicationController < ActionController::Base
     false
   end
 
-
-  def myaccount_tab
-    false
-  end
 
   def require_user
     redirect_to login_url and store_return_location and return if logged_out?
@@ -153,6 +154,12 @@ class ApplicationController < ActionController::Base
     response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0, must-revalidate'
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
+  end
+
+  protected
+
+  def verified_request?
+    super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
   end
 
 end

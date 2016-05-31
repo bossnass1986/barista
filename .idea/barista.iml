@@ -238,6 +238,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bullet (v5.1.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.12.4, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler-audit (v0.5.0, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="byebug (v9.0.5, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="clearance (v1.14.1, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="climate_control (v0.0.3, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cocaine (v0.5.8, rbenv: 2.3.1) [gem]" level="application" />
@@ -257,12 +258,13 @@
     <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.7.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.7.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="friendly_id (v5.1.0, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.3.5, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.7, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="html2haml (v2.0.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.1.1, rbenv: 2.3.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.16.3, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.17.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kgio (v2.10.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.4, rbenv: 2.3.1) [gem]" level="application" />
@@ -289,6 +291,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-wwwhisper (v1.1.9, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.2.6, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-angular-material (v1.0.5, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-deprecated_sanitizer (v1.0.3, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.7, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, rbenv: 2.3.1) [gem]" level="application" />
@@ -298,6 +301,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.6, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v11.1.2, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="refills (v0.1.0, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v2.2.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rolify (v5.1.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.4.4, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.4.0, rbenv: 2.3.1) [gem]" level="application" />

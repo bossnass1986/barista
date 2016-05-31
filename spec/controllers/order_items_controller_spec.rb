@@ -93,7 +93,7 @@ RSpec.describe OrderItemsController, type: :controller do
         expect(assigns(:order_item)).to be_a_new(OrderItem)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         post :create, {:order_item => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
@@ -133,7 +133,7 @@ RSpec.describe OrderItemsController, type: :controller do
         expect(assigns(:order_item)).to eq(order_item)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         order_item = OrderItem.create! valid_attributes
         put :update, {:id => order_item.to_param, :order_item => invalid_attributes}, valid_session
         expect(response).to render_template("edit")

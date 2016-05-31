@@ -1,0 +1,19 @@
+<div class='mdl-cell mdl-cell--12-col' ng-controller='MerchantCtrl'>
+    <h3 ng-hide='merchants.length'>
+        No merchants
+    </h3>
+    <ul class='merchant-list-three mdl-list' ng-repeat='merchant in merchants' ng-show='merchants.length'>
+        <a href='#/merchant/{{merchant.permalink}}'>
+            <li class='mdl-list__item mdl-list__item--three-line'>
+        <span class='mdl-list__item-primary-content'>
+          <span>{{merchant.name}}</span>
+        </span>
+        <span class='mdl-list__item-secondary-content'>
+          <i class='material-icons'>
+            chevron_right
+          </i>
+        </span>
+            </li>
+        </a>
+    </ul>
+</div>

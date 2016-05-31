@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Deployment
 gem 'rails'
 ruby '2.3.1'
+gem 'responders'
 
 gem 'activemerchant', '~> 1.48'
 # ==========
@@ -20,6 +21,7 @@ gem 'puma'
 # Template
 gem 'material_design_lite-sass'
 gem 'angularjs-rails'
+gem 'rails-angular-material'
 gem 'haml'
 gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+

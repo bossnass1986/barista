@@ -16,4 +16,5 @@
 / SEO Information
 %meta{content: t('.meta_description'), name: :description}
 %meta{content: t('.meta_keywords'), name: :keywords}
+%base{:href => '/'}
 %title= content_for?(:title) ? yield(:title) : t('.site_name')

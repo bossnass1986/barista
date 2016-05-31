@@ -93,7 +93,7 @@ RSpec.describe VariantsController, type: :controller do
         expect(assigns(:variant)).to be_a_new(Variant)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         post :create, {:variant => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
@@ -133,7 +133,7 @@ RSpec.describe VariantsController, type: :controller do
         expect(assigns(:variant)).to eq(variant)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         variant = Variant.create! valid_attributes
         put :update, {:id => variant.to_param, :variant => invalid_attributes}, valid_session
         expect(response).to render_template("edit")

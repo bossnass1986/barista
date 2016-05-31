@@ -113,7 +113,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    kaminari (0.16.3)
+    kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.10.0)
@@ -178,6 +178,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.6)
       sprockets-rails
+    rails-angular-material (1.0.5)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -198,6 +199,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.1.2)
     refills (0.1.0)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     rolify (5.1.0)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
@@ -288,8 +291,10 @@ DEPENDENCIES
   rack-mini-profiler
   rack-wwwhisper (~> 1.0)
   rails
+  rails-angular-material
   rails_12factor
   refills
+  responders
   rolify
   rspec-rails (~> 3.4.0)
   sass-rails
