@@ -26,13 +26,11 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  # config.assets.js_compressor = :uglifier
-  # config.assets.js_compressor = Uglifier.new(mangle: false)
+  config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.serve_static_assets = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -91,6 +89,9 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { host: 'cup.town' }
+
+  onfig.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = {host: 'localhost', port: 3000}
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => 'utf-8'
