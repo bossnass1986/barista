@@ -89,5 +89,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'rack-wwwhisper', '~> 1.0'
 end
