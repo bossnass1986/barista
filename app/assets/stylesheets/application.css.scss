@@ -301,7 +301,7 @@ $tooltip-background-color: unquote("rgba(#{$palette-grey-700}, 0.9)") !default;
 
 /* ==========  Footer  ========== */
 
-$footer-bg-color: unquote("rgb(#{$color-white})") !default;
+$footer-bg-color: unquote("rgb(#{$palette-grey-100})") !default;
 $footer-color: unquote("rgb(#{$palette-grey-400})") !default;
 $footer-heading-color: unquote("rgb(#{$palette-grey-300})") !default;
 $footer-button-fill-color: $footer-color !default;
@@ -584,7 +584,7 @@ $snackbar-action-color: unquote("rgb(#{$color-accent})") !default;
 $tooltip-font-size: 10px !default;
 $tooltip-font-size-large: 14px !default;
 
-$body: unquote("rgb(#{$palette-grey-100})") !default;
+$body: $footer-bg-color;
 
 @import 'material';
 
@@ -630,17 +630,25 @@ a {
   margin-top: 10px;
 }
 
+
 .demo-card-wide.mdl-card {
   width: 100%;
 }
 
-.mdl-card__title {
-  color: #fff;
-  height: 136px;
-  min-width: 300px;
-  //background: transparent;
-  background-image: asset-url('products/cappuccino.jpg');
-  background-size: 100%;
+.demo-card-wide {
+  > .mdl-card__title {
+    color: #fff;
+    height: 136px;
+    //background: transparent;
+    background-image: asset-url('products/cappuccino.jpg');
+    //background-image: url('products/cappuccino.jpg');
+    //background-image: url('https://deliveroo.com.au/assets/images/restaurant-placeholder.png');
+    //background-image: linear-gradient(transparent, rgb(64,64,65)), url('products/cappuccino.jpg');
+    background-size: 420px 136px;
+  }
+  > .mdl-card__menu {
+    color: #fff;
+  }
 }
 .mdl-card__title {
   align-items: flex-start;
@@ -726,4 +734,10 @@ select:focus {
     border-top: .375em solid $select-border-color;
     pointer-events: none;
   }
+}
+
+.mdl-mini-footer, .mdl-mini-footer ul {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
 }
