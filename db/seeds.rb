@@ -134,15 +134,19 @@ Property.create!([
 # ])
 
 
-# (1..100).each do |i|
-#   Merchant.create!(id: i, name: SecureRandom.hex(6), address: '20/ 94 Abbott Rd, Hallam, VIC 3803', email:'test@test.com')
-# end
-Merchant.create!([
-                     {name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
-                     {name: 'Wedgewood Cafe', email: 'test@test.com'},
-                     {name: 'Fresch Cafe', email: 'test@test.com'},
-                     {name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'}
-])
+(1..100).each do |i|
+  Merchant.create!(name: SecureRandom.hex(6), email: 'test@test.com')
+end
+# Merchant.create!([
+#   {name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
+#   {name: 'Wedgewood Cafe', email: 'test@test.com'},
+#   {name: 'Fresch Cafe', email: 'test@test.com'},
+#   {name: 'Nar Nar Goon Take-Away Cafe', email: 'test@test.com'},
+#   {name: 'Latte Cartelle Drive Thru Coffee1', email: 'test@test.com', featured: true},
+#   {name: 'Wedgewood Cafe1', email: 'test@test.com'},
+#   {name: 'Fresch Cafe1', email: 'test@test.com'},
+#   {name: 'Nar Nar Goon Take-Away Cafe1', email: 'test@test.com'}
+# ])
 
 # puts 'Creating Sample Merchants with Menu Items'
 # VariantMerchant.create!([

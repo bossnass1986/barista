@@ -1,5 +1,5 @@
 class Shopping::MerchantsController < Shopping::BaseController
-  respond_to :json, :html
+  respond_to :json, :html, :xml
   before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 
   # GET /merchants
@@ -9,6 +9,7 @@ class Shopping::MerchantsController < Shopping::BaseController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @merchants.as_json }
+      format.xml { render :json => @merchants }
     end
   end
 

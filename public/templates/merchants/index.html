@@ -1,19 +1,21 @@
-<div class='mdl-cell mdl-cell--12-col' ng-controller='MerchantCtrl'>
-    <h3 ng-hide='merchants.length'>
-        No merchants
-    </h3>
-    <ul class='merchant-list-three mdl-list' ng-repeat='merchant in merchants' ng-show='merchants.length'>
-        <a href='#/merchant/{{merchant.permalink}}'>
-            <li class='mdl-list__item mdl-list__item--three-line'>
-        <span class='mdl-list__item-primary-content'>
-          <span>{{merchant.name}}</span>
-        </span>
-        <span class='mdl-list__item-secondary-content'>
-          <i class='material-icons'>
-            chevron_right
-          </i>
-        </span>
-            </li>
-        </a>
-    </ul>
+<div ng-controller="MerchantListCtrl" ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout-gt-xs="row" layout-wrap flex>
+        <div flex-xs="100" layout-padding flex-md='33' layout="column"
+             ng-repeat="merchant in merchants |  filter: { featured: 'false' }" ng-show='merchants.length'>
+            <md-card flex='100' layout-fill>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{merchant.name | limitTo:27}}<span
+                                ng-if="merchant.name.length > 27">&hellip;</span></span>
+                        <span class="md-subhead">Large</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media">
+                            img
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+            </md-card>
+        </div>
+    </md-content>
 </div>
