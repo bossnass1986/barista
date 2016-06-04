@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="phonegap prep">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -886,14 +881,7 @@
       <workItem from="1464346829619" duration="11111000" />
       <workItem from="1464425996141" duration="39187000" />
       <workItem from="1464698626988" duration="35048000" />
-      <workItem from="1465027348519" duration="2524000" />
-    </task>
-    <task id="LOCAL-00171" summary="wwhisper">
-      <created>1463653223590</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1463653223591</updated>
+      <workItem from="1465027348519" duration="2538000" />
     </task>
     <task id="LOCAL-00172" summary="wwhisper">
       <created>1463653490036</created>
@@ -1231,11 +1219,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465029155958</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="phonegap prep">
+      <created>1465034992729</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1465034992729</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194963000" />
+    <option name="totallyTimeSpent" value="194977000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
