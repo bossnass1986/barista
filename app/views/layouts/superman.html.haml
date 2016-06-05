@@ -22,7 +22,7 @@
             .mdl-textfield__expandable-holder
               %input#fixed-header-drawer-exp.mdl-textfield__input{:name => "sample", :type => "text"}/
       .mdl-layout__drawer
-        %span.mdl-layout-title= t('.site_name')
+        %span.mdl-layout-title
         %nav.mdl-navigation
           = render 'admin/shared/side_menu'
       = yield :fab
