@@ -1,0 +1,36 @@
+.mdl-cell.mdl-cell--10-col.mdl-cell--1-offset
+  %h3.mdl-typography--display-1= t('.location_title')
+  = form.fields_for :address do |address_fields|
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = address_fields.text_field :address1, class: 'mdl-textfield__input'
+      = address_fields.label :address1, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = address_fields.text_field :address2, class: 'mdl-textfield__input'
+      = address_fields.label :address2, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
+      = address_fields.text_field :city, class: 'mdl-textfield__input'
+      = address_fields.label :city, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--2-col
+      = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
+      = address_fields.label :zip_code, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--3-col
+      = address_fields.select   :state_id, @states, :include_blank => true
+      = address_fields.label :state_id, class: 'mdl-textfield__label'
+    - if countries.size == 1
+      = address_fields.hidden_field :country_id
+    - else
+      %li= address_fields.select :country_id, select_countries, :include_blank => true
+  -#.mdl-cell.mdl-cell-4-col
+= form.fields_for :trading_hours do |hours_fields|
+  .mdl-grid
+    .mdl-cell.mdl-cell--2-col
+      %label
+        = hours_fields.index
+        = Date::DAYNAMES[hours_fields.index]
+    .mdl-cell.mdl-cell--4-col
+      = hours_fields.time_select :open_time, {:default => {:hour => '9', :minute => '00'}, :minute_step => 15, :ampm => true}
+    .mdl-cell.mdl-cell--4-col
+      = hours_fields.time_select :close_time, {:default => {:hour => '17', :minute => '00'}, :minute_step => 15, :ampm => true}
+    .mdl-cell.mdl-cell--2-col
+      %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => hours_fields}
+        = hours_fields.check_box :trades, :class => 'mdl-checkbox__input', :id => hours_fields

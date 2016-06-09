@@ -64,7 +64,7 @@
 */
 @import url('//fonts.googleapis.com/css?family=Quicksand:300,400,700');
 $preferred_font: 'Quicksand', 'Helvetica', 'Arial', sans-serif !default;
-$performance_font: 'Helvetica', 'Arial', sans-serif !default;
+$performance_font: 'Quicksand', 'Helvetica', 'Arial', sans-serif !default;
 
 /* ==========  COLORS  ========== */
 
@@ -630,40 +630,70 @@ a {
   margin-top: 10px;
 }
 
+// New Product Cards
 
-.demo-card-wide.mdl-card {
-  width: 100%;
-}
-
-.demo-card-wide {
-  > .mdl-card__title {
+.coffee-pic {
+  .mdl-card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 360px;
+  }
+  .mdl-card__title {
+    padding: 0 16px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     color: #fff;
+  }
+  .mdl-card__media {
+    box-sizing: border-box;
+    background-image: asset-url("products/cappuccino.jpg");
+    background-size: cover;
+    padding: 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    cursor: pointer;
     height: 136px;
-    //background: transparent;
-    background-image: asset-url('products/cappuccino.jpg');
-    //background-image: url('products/cappuccino.jpg');
-    //background-image: url('https://deliveroo.com.au/assets/images/restaurant-placeholder.png');
-    //background-image: linear-gradient(transparent, rgb(64,64,65)), url('products/cappuccino.jpg');
-    background-size: 420px 136px;
   }
-  > .mdl-card__menu {
-    color: #fff;
+  .mdl-card__supporting-text {
+    width: 100%;
+    padding: 0 16px;
+    min-height: 64px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    h3 {
+      margin: 0;
+      font-weight: 900;
+    }
   }
-}
-.mdl-card__title {
-  align-items: flex-start;
-  padding: 0px;
-}
-.mdl-card__title-text {
-  background: rgba(64,64,64,.6);
-  width: 100%;
-  padding: 10px;
-  font-weight: 700;
-}
-.mdl-card__actions {
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
+  .mdl-card__media ~ .mdl-card__supporting-text {
+    min-height: 64px;
+  }
+  .mdl-card__supporting-text:not(:last-child) {
+    box-sizing: border-box;
+    min-height: 76px;
+  }
 }
 
 // Custom CSS

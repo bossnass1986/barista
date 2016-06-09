@@ -68,7 +68,10 @@ en:
         title: 'Referrals'
     store_credits:
       show:
-        title: 'Cup Town Dollars'
+        title: 'Cup Town Balance'
+      form:
+        title: 'Select Top Up Amount'
+        submit_button: 'Top Up Now'
   shopping:
     cart_items:
       index:
@@ -142,6 +145,18 @@ en:
         items: 'Items'
         submitted: 'Submitted'
         accepted: 'Accepted'
+    merchants:
+        index:
+          title: 'Merchants'
+          name: 'Merchant'
+          address: 'Address'
+        new:
+          title: 'New Merchant'
+        account:
+          account_title: 'Account'
+        venue:
+          location_title: 'Location'
+          trading_hours_title: 'Trading Hours'
     merchandise:
       products:
         index:

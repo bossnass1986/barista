@@ -5,7 +5,6 @@ class Product < ActiveRecord::Base
   friendly_id :permalink, use: :finders
   # include Presentation::ProductPresenter
   # include ProductFilters
-  #include ProductSolr # If you want to use SOLR search uncomment
 
   serialize :product_keywords, Array
 
@@ -35,7 +34,7 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
 
   # validates :shipping_category_id,  presence: true
-  validates :product_type_id,       presence: true
+  # validates :product_type_id,       presence: true
   validates :name,                  presence: true,   length: { maximum: 165 }
   # validates :description_markup,    presence: true,   length: { maximum: 2255 },     if: :active
   validates :meta_keywords,         presence: true,        length: { maximum: 255 }, if: :active
@@ -125,11 +124,11 @@ class Product < ActiveRecord::Base
   # @param [args]
   # @param [params]  :rows, :page
   # @return [ Product ]
-  def self.standard_search(args, params = {page: 1, per_page: 15})
-    Product.includes( [:properties, :images]).active.
-        where(['products.name LIKE ? OR products.meta_keywords LIKE ?', "%#{args}%", "%#{args}%"]).
-        paginate(params)
-  end
+  # def self.standard_search(args, params = {page: 1, per_page: 15})
+  #   Product.includes( [:properties, :images]).active.
+  #       where(['products.name LIKE ? OR products.meta_keywords LIKE ?', "%#{args}%", "%#{args}%"]).
+  #       paginate(params)
+  # end
 
   # This returns the first featured product in the database,
   # if there isn't a featured product the first product will be returned

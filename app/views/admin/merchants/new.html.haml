@@ -1,4 +1,28 @@
-- title 'New Merchant'
-= form_for @merchant, :url  => admin_merchants_path do |form|
-  = render :partial => '/admin/merchants/information', :locals => {:form => form}
-  = submit_tag "Create", :class  => "button"
+- title t('.title')
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab{:href => '#account-panel'} Account
+    %a.mdl-tabs__tab.is-active{:href => '#venue-panel'} Venue
+    %a.mdl-tabs__tab{:href => '#menu-panel'} Menu
+  - if @merchant.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@merchant.errors.count, "error")
+        prohibited this merchant from being saved:
+      %ul
+        - @merchant.errors.full_messages.each do |msg|
+          %li= msg
+  .mdl-grid
+    .mdl-cell.mdl-cell--10-col.mdl-cell--1-offset.merchant-settings.mdl-shadow--2dp
+      = form_for @merchant, :url => admin_merchants_path do |form|
+        #account-panel.mdl-tabs__panel
+          = render :partial => 'account', :locals => {:form => form}
+          = render :partial => 'venue', :locals => {:form => form}
+        #venue-panel.mdl-tabs__panel.is-active
+
+        #menu-panel.mdl-tabs__panel
+          - @merchant.products.select(&:id).flatten.uniq.each do |item|
+            = render :partial => 'product', :locals => {:item => item }
+        .mdl-grid
+          .mdl-cell.mdl-cell--10.mdl-cell--1-offset
+            = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'

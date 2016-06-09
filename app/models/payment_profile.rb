@@ -6,8 +6,8 @@ class PaymentProfile < ActiveRecord::Base
   attr_accessor       :request_ip, :credit_card
 
   validates :user_id,         presence: true
-  validates :payment_cim_id,  presence: true
-  validates :card_type,       presence: true, length: { maximum: 16 }
+  # validates :payment_cim_id,  presence: true
+  # validates :card_type,       presence: true, length: { maximum: 16 }
   # validates :masked_number,   presence: true, length: { maximum: 16 }
   validates :month,           presence: true, length: { maximum: 2 }
   validates :year,            presence: true, length: { maximum: 4 }

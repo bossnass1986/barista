@@ -1,0 +1,6 @@
+%h3.mdl-typography--title-color-contrast= t('.title')
+- (1..5).each do |i|
+  %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{:for => i}
+    %input.mdl-radio__button{:name => i, :type => "radio", :value => i, :id => i}/
+    %span.mdl-radio__label = i
+= button_tag t('.submit_button'), class: 'mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'

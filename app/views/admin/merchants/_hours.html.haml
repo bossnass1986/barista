@@ -1,8 +1,6 @@
 - @merchant.trading_hours.each do |th|
   %li.mdl-list__item.mdl-list__item--two-line
     %span.mdl-list__item-primary-content
+      = th.weekday
       = Date::DAYNAMES[th.weekday]
-      %span.mdl-list__item-sub-title 9:00am - 5:40pm
-    %span.mdl-list__item-secondary-action
-      %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => "list-switch-1"}
-        %input#list-switch-1.mdl-switch__input{:checked => "checked", :type => "checkbox"}/
+      %span.mdl-list__item-sub-title= "#{th.open_time} - #{th.close_time}"

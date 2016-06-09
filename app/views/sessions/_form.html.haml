@@ -7,6 +7,3 @@
     = form.label :password, class: 'mdl-textfield__label'
   = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
   = link_to t(".forgot_password"), new_password_path, class: 'mdl-button mdl-js-button mdl-js-ripple-effect'
-    -#.other-links
-    - if Clearance.configuration.allow_sign_up?
-      = link_to t(".sign_up"), sign_up_path

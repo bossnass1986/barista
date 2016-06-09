@@ -12,6 +12,7 @@ class Merchant < ActiveRecord::Base
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
   has_one :address, as: :addressable, dependent: :destroy
+  has_one :account
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants
@@ -21,7 +22,7 @@ class Merchant < ActiveRecord::Base
 
   # after_create :sanitize_dates
 
-  accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['sku'].blank? }
+  accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
@@ -61,7 +62,6 @@ class Merchant < ActiveRecord::Base
   # else
     self.where product_type_id: product_types
   end
-
 
   def add_trading_hours
     (0..6).each do |i|

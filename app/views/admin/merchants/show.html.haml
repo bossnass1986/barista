@@ -1,23 +1,21 @@
 - title @merchant.name
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab{:href => '#information-panel'} Information
-    %a.mdl-tabs__tab{:href => '#hours-panel'} Hours
+    %a.mdl-tabs__tab{:href => '#account-panel'} Account
+    %a.mdl-tabs__tab{:href => '#menu-panel'} Menu
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
     %a.mdl-tabs__tab{:href => '#customers-panel'} Customers
-    %a.mdl-tabs__tab{:href => '#products-panel'} Products
-  #information-panel.mdl-tabs__panel
-    = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
-      = render :partial => '/admin/merchants/information', :locals => {:form => form}
-      = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-  #hours-panel.mdl-tabs__panel
-    = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
-      = render :partial => '/admin/merchants/hours', :locals => {:form => form, :merchant => @merchant}
-      = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-  #orders-panel.mdl-tabs__panel.is-active
+  .mdl-grid
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset.merchant-settings.mdl-shadow--2dp
+      = form_for @merchant, :url => admin_merchant_path(@merchant)  do |form|
+        #account-panel.mdl-tabs__panel
+          = render :partial => 'account', :locals => {:form => form}
+          = render :partial => 'venue', :locals => {:form => form}
+          = render :partial => 'hours', :locals => {:form => form}
+          = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+        #menu-panel.mdl-tabs__panel
+          - @merchant.products.select(&:id).flatten.uniq.each do |item|
+            = render :partial => 'product', :locals => {:item => item }
+        #orders-panel.mdl-tabs__panel.is-active
 
-  #customers-panel.mdl-tabs__panel
-
-  #products-panel.mdl-tabs__panel
-    - @merchant.products.select(&:id).flatten.uniq.each do |item|
-      = render :partial => 'product', :locals => {:item => item }
+        #customers-panel.mdl-tabs__panel

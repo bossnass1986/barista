@@ -1,7 +1,4 @@
 - title t('.title')
-.nine.large-9.columns
-  %h3
-    = current_user.name
-    Store Credits
-  %p#users-credits
-    You currently have #{number_to_currency @store_credit.amount} worth of credits.
+.mdl-cell.mdl-cell--12-col
+  %h2.mdl-typography--display-3= number_to_currency @store_credit.amount
+  = render 'form'

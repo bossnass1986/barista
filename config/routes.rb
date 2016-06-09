@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accounts
   # resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   # resource :session, controller: "clearance/sessions", only: [:create]
   #

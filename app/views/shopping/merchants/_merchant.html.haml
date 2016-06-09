@@ -1,23 +1,4 @@
--#= merchant.open(Date.today.wday,Time.now,1)
--#- if merchant.featured
-.mdl-cell.mdl-cell--4-col.mdl-cell--4-col-phone.mdl-cell--4-col-tablet
-  = link_to shopping_merchant_path(merchant) do
-    .demo-card-wide.mdl-card
-      .mdl-card__title
-        %h6.mdl-card__title-text= merchant.name.truncate(35).titlecase
-      .mdl-card__menu
-        %button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
-          %i.material-icons
-            favorite
-            -#- else
-            -#  %ul.merchant-list-three.mdl-list
-            -#    = link_to shopping_merchant_path(merchant) do
-            -#      %li.mdl-list__item.mdl-list__item--three-line
-            -#        %span.mdl-list__item-primary-content
-            -#          = image_tag 'products/cappuccino.jpg', class: 'mdl-list__item-avatar'
-            -#          %span= merchant.name.truncate(25).titlecase
-            -#        -#%span.mdl-list__item-text-body= merchant.address.titlecase
-            -#        %span.mdl-list__item-secondary-content
-            -#          %i.material-icons
-            -#            chevron_right
-            -#  %hr
+= link_to shopping_merchant_path(merchant), class: 'mdl-card coffee-pic mdl-cell'  do
+  .mdl-card__media
+  .mdl-card__supporting-text.meta.mdl-color-text--grey-600
+    %h3.mdl-typography--title= merchant.name

@@ -1,4 +1,4 @@
-- title t('myaccount.credit_card.new.title')
+- title t('.title')
 = form_for(@credit_card, :url => myaccount_credit_cards_path(@credit_card)) do |f|
   = render :partial => 'form', :locals => {:f => f}
 = link_to 'Back to List', myaccount_credit_cards_path, :class => 'button'

@@ -18,5 +18,4 @@
 %meta{content: t('.meta_keywords'), name: :keywords}
 %base{:href => '/'}
 %title= content_for?(:title) ? yield(:title) : t('.site_name')
-= stylesheet_link_tag 'application'
 = yield :head
