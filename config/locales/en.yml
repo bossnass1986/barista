@@ -153,9 +153,10 @@ en:
         new:
           title: 'New Merchant'
         account:
-          account_title: 'Account'
+          account_title: 'Account Details'
+          bank_title: 'Bank Details'
         venue:
-          location_title: 'Location'
+          location_title: 'Business Details'
           trading_hours_title: 'Trading Hours'
     merchandise:
       products:

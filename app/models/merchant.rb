@@ -1,5 +1,4 @@
 class Merchant < ActiveRecord::Base
-
   extend FriendlyId
   friendly_id :permalink, use: :finders
 
@@ -17,6 +16,7 @@ class Merchant < ActiveRecord::Base
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants
 
+  validates :terms_of_service, acceptance: true
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
@@ -25,6 +25,7 @@ class Merchant < ActiveRecord::Base
   accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
+  accepts_nested_attributes_for :account
 
   # @param [Object] day
   # @param [Object] hour

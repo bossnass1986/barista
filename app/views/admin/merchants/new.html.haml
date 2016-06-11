@@ -16,8 +16,9 @@
     .mdl-cell.mdl-cell--10-col.mdl-cell--1-offset.merchant-settings.mdl-shadow--2dp
       = form_for @merchant, :url => admin_merchants_path do |form|
         #account-panel.mdl-tabs__panel
-          = render :partial => 'account', :locals => {:form => form}
           = render :partial => 'venue', :locals => {:form => form}
+          = render :partial => 'account', :locals => {:form => form}
+
         #venue-panel.mdl-tabs__panel.is-active
 
         #menu-panel.mdl-tabs__panel
@@ -25,4 +26,9 @@
             = render :partial => 'product', :locals => {:item => item }
         .mdl-grid
           .mdl-cell.mdl-cell--10.mdl-cell--1-offset
-            = form.submit "Update", :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+            %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => :terms_of_service}
+              = form.check_box :terms_of_service, :class => 'mdl-checkbox__input', :id => :terms_of_service
+              %span.mdl-checkbox__label I agree to the terms and conditions. Make our lawyers happy by reading their T&Cs
+        .mdl-grid
+          .mdl-cell.mdl-cell--10.mdl-cell--1-offset
+            = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'

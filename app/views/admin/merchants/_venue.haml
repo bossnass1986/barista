@@ -1,5 +1,8 @@
 .mdl-cell.mdl-cell--10-col.mdl-cell--1-offset
   %h3.mdl-typography--display-1= t('.location_title')
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
+    = form.text_field :name, class: 'mdl-textfield__input'
+    = form.label :name, class: 'mdl-textfield__label'
   = form.fields_for :address do |address_fields|
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = address_fields.text_field :address1, class: 'mdl-textfield__input'
@@ -21,7 +24,7 @@
     - else
       %li= address_fields.select :country_id, select_countries, :include_blank => true
   -#.mdl-cell.mdl-cell-4-col
-= form.fields_for :trading_hours do |hours_fields|
+      -#= form.fields_for :trading_hours do |hours_fields|
   .mdl-grid
     .mdl-cell.mdl-cell--2-col
       %label
