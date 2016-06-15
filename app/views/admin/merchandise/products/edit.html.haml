@@ -1,5 +1,5 @@
 - title t('admin.merchandise.products.edit.title')
-.mdl-cell.mdl-cell--12-col
+.mdl-cell.mdl-cell--12-col.product-settings
   = link_to t('admin.merchandise.products.edit.add_image_button'), edit_admin_merchandise_images_product_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   = link_to t('admin.merchandise.products.edit.variants_button'), admin_merchandise_product_variants_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   = link_to t('admin.merchandise.products.edit.return_button'), admin_merchandise_product_path(@product), :class => 'mdl-button mdl-js-button mdl-js-ripple-effect'

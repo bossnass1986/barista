@@ -14,8 +14,9 @@
       = address_fields.text_field :city, class: 'mdl-textfield__input'
       = address_fields.label :city, class: 'mdl-textfield__label'
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--2-col
-      = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
+      = address_fields.text_field :zip_code, class: 'mdl-textfield__input', :pattern => '^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$'
       = address_fields.label :zip_code, class: 'mdl-textfield__label'
+      %span.mdl-textfield__error= t('.postcode_error')
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--3-col
       = address_fields.select   :state_id, @states, :include_blank => true
       = address_fields.label :state_id, class: 'mdl-textfield__label'
@@ -23,8 +24,7 @@
       = address_fields.hidden_field :country_id
     - else
       %li= address_fields.select :country_id, select_countries, :include_blank => true
-  -#.mdl-cell.mdl-cell-4-col
-      -#= form.fields_for :trading_hours do |hours_fields|
+= form.fields_for :trading_hours do |hours_fields|
   .mdl-grid
     .mdl-cell.mdl-cell--2-col
       %label

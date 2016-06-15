@@ -155,9 +155,12 @@ en:
         account:
           account_title: 'Account Details'
           bank_title: 'Bank Details'
+          bsb_error: "Oops BSB number isn't correct"
+          account_number_error: "Oops account number isn't correct"
         venue:
           location_title: 'Business Details'
           trading_hours_title: 'Trading Hours'
+          postcode_error: "Oops post code isn't correct"
     merchandise:
       products:
         index:
@@ -175,7 +178,7 @@ en:
           return_button: 'Back to Products'
         form:
           summary: 'Summary'
-          properties: 'Properties'
+          cafe_add_ons: 'Cafe Add Ons'
       properties:
         index:
           title: 'Properties'

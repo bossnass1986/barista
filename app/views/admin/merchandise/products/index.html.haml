@@ -8,7 +8,7 @@
       %tr
         %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product')
         %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.available')
-        %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product_type')
+        -#%th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product_type')
         -#%th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.available')
         %th # Variants
         %th.mdl-data-table__cell--non-numeric Options
@@ -17,7 +17,7 @@
         %tr
           %td.mdl-data-table__cell--non-numeric= link_to product.name, edit_admin_merchandise_product_path(product)
           %td.mdl-data-table__cell--non-numeric= product.available? ? 'Yes' : 'No'
-          %td.mdl-data-table__cell--non-numeric= product.prototype.name
+          -#%td.mdl-data-table__cell--non-numeric= product.prototype.name
           -#%td.mdl-data-table__cell--non-numeric= product.product_type.name
           %td= product.variants.count
           %td.mdl-data-table__cell--non-numeric

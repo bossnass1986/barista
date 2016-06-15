@@ -2,8 +2,7 @@
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab{:href => '#account-panel'} Account
-    %a.mdl-tabs__tab.is-active{:href => '#venue-panel'} Venue
-    %a.mdl-tabs__tab{:href => '#menu-panel'} Menu
+    %a.mdl-tabs__tab.is-active{:href => '#menu-panel'} Menu
   - if @merchant.errors.any?
     #error_explanation
       %h2
@@ -18,17 +17,16 @@
         #account-panel.mdl-tabs__panel
           = render :partial => 'venue', :locals => {:form => form}
           = render :partial => 'account', :locals => {:form => form}
-
-        #venue-panel.mdl-tabs__panel.is-active
-
-        #menu-panel.mdl-tabs__panel
+          .mdl-grid
+            .mdl-cell.mdl-cell--10.mdl-cell--1-offset
+              %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => :terms_of_service}
+                = form.check_box :terms_of_service, :class => 'mdl-checkbox__input', :id => :terms_of_service
+                %span.mdl-checkbox__label I agree to the terms and conditions. Make our lawyers happy by reading their T&Cs
+          .mdl-grid
+            .mdl-cell.mdl-cell--10.mdl-cell--1-offset
+              = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
+        #menu-panel.mdl-tabs__panel.is-active
           - @merchant.products.select(&:id).flatten.uniq.each do |item|
             = render :partial => 'product', :locals => {:item => item }
-        .mdl-grid
-          .mdl-cell.mdl-cell--10.mdl-cell--1-offset
-            %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => :terms_of_service}
-              = form.check_box :terms_of_service, :class => 'mdl-checkbox__input', :id => :terms_of_service
-              %span.mdl-checkbox__label I agree to the terms and conditions. Make our lawyers happy by reading their T&Cs
-        .mdl-grid
-          .mdl-cell.mdl-cell--10.mdl-cell--1-offset
-            = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
+
+

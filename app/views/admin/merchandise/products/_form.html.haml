@@ -4,6 +4,7 @@
       %li= msg
 %h5.headline= t('admin.merchandise.products.form.summary')
 .mdl-textfield.mdl-js-textfield
+  = form.hidden_field :product_type_id, :value => '1'
   = form.text_field :name, class: 'mdl-textfield__input'
   = form.label :name, class: 'mdl-textfield__label'
 .mdl-textfield.mdl-js-textfield
@@ -15,7 +16,7 @@
 .mdl-textfield.mdl-js-textfield
   = form.text_area :meta_description, class: 'mdl-textfield__input'
   = form.label :meta_description, class: 'mdl-textfield__label'
-%h5.headline= t('admin.merchandise.products.form.properties')
+%h3.mdl-typography--display-1= t('.cafe_add_ons')
 - @all_properties.each do |property|
   -#- if @product.id && !@product.properties.detect {|p| p.id == property.id}
   = form.fields_for :product_properties, property.product_properties.find_or_initialize_by(product_id: @product.id) do |product_property_form|

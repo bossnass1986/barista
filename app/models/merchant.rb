@@ -11,7 +11,7 @@ class Merchant < ActiveRecord::Base
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
   has_one :address, as: :addressable, dependent: :destroy
-  has_one :account
+  has_one :account, dependent: :destroy
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants
@@ -25,7 +25,7 @@ class Merchant < ActiveRecord::Base
   accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
-  accepts_nested_attributes_for :account
+  accepts_nested_attributes_for :account, reject_if: proc { |attributes| attributes['account_name'].blank? }
 
   # @param [Object] day
   # @param [Object] hour
@@ -73,7 +73,7 @@ class Merchant < ActiveRecord::Base
   def add_variants
     @product = Product.all
     @product.each do |product|
-      @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
+      # @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
     end
   end
 

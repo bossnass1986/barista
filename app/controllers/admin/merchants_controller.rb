@@ -9,7 +9,8 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant = Merchant.new
     @states = State.form_selector
     @merchant.build_address if @merchant.address.nil?
-      # @merchant.build_primary_phone if @merchant.primary_phone.nil?
+    @merchant.build_account
+    @merchant.build_primary_phone if @merchant.primary_phone.nil?
   end
 
   def create
@@ -27,6 +28,8 @@ class Admin::MerchantsController < Admin::BaseController
   def edit
     @merchant = Merchant.find(params[:id])
     @merchant.build_address if @merchant.address.nil?
+    @merchant.build_account if @merchant.bsb.nil?
+    @merchant.build_primary_phone if @merchant.primary_phone.nil?
     @states = State.form_selector
   end
 

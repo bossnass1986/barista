@@ -18,11 +18,13 @@
   = form.fields_for :account do |account_fields|
     .mdl-grid
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
-        = account_fields.text_field :bsb, class: 'mdl-textfield__input'
+        = account_fields.number_field :bsb, class: 'mdl-textfield__input', :pattern => '^[0-9]{6}$'
         = account_fields.label :bsb, class: 'mdl-textfield__label'
+        %span.mdl-textfield__error= t('.bsb_error')
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
-        = account_fields.text_field :account_number, class: 'mdl-textfield__input'
+        = account_fields.number_field :account_number, class: 'mdl-textfield__input', :pattern => '^[0-9]{6,10}$'
         = account_fields.label :account_number, class: 'mdl-textfield__label'
+        %span.mdl-textfield__error= t('.account_number_error')
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
         = account_fields.text_field :account_name, class: 'mdl-textfield__input'
         = account_fields.label :account_name, class: 'mdl-textfield__label'

@@ -10,16 +10,15 @@ class Product < ActiveRecord::Base
 
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
 
-  belongs_to :brand
   belongs_to :product_type
   belongs_to :prototype
   has_many :product_properties
   has_many :properties,         through: :product_properties
 
   has_many :variants, dependent: :destroy
-  has_many :images, -> {order(:position)},
-           as:        :imageable,
-           dependent: :destroy
+  # has_many :images, -> {order(:position)},
+  #          as:        :imageable,
+  #          dependent: :destroy
 
   has_many :active_variants, -> { where(deleted_at: nil) },
            class_name: 'Variant'
@@ -31,17 +30,15 @@ class Product < ActiveRecord::Base
 
   accepts_nested_attributes_for :variants,           reject_if: proc { |attributes| attributes['sku'].blank? }
   accepts_nested_attributes_for :product_properties, reject_if: proc { |attributes| attributes['description'].blank? }, allow_destroy: true
-  accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
+  # accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
 
   # validates :shipping_category_id,  presence: true
   # validates :product_type_id,       presence: true
   validates :name,                  presence: true,   length: { maximum: 165 }
   # validates :description_markup,    presence: true,   length: { maximum: 2255 },     if: :active
-  validates :meta_keywords,         presence: true,        length: { maximum: 255 }, if: :active
-  validates :meta_description,      presence: true,        length: { maximum: 255 }, if: :active
-  validates :permalink,             uniqueness: true,      length: { maximum: 150 }
-
-  validate  :ensure_available
+  # validates :meta_keywords,         presence: true,        length: { maximum: 255 }, if: :active
+  # validates :meta_description,      presence: true,        length: { maximum: 255 }, if: :active
+  # validates :permalink,             uniqueness: true,      length: { maximum: 150 }
 
   # scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
 
@@ -119,16 +116,6 @@ class Product < ActiveRecord::Base
     !(price_range.first == price_range.last)
   end
 
-  # Solr searching for products
-  #
-  # @param [args]
-  # @param [params]  :rows, :page
-  # @return [ Product ]
-  # def self.standard_search(args, params = {page: 1, per_page: 15})
-  #   Product.includes( [:properties, :images]).active.
-  #       where(['products.name LIKE ? OR products.meta_keywords LIKE ?', "%#{args}%", "%#{args}%"]).
-  #       paginate(params)
-  # end
 
   # This returns the first featured product in the database,
   # if there isn't a featured product the first product will be returned
@@ -162,15 +149,6 @@ class Product < ActiveRecord::Base
   def available?
     # has_shipping_method? && has_active_variants?
     has_active_variants?
-  end
-
-  # returns the brand's name or a blank string
-  #  ex: obj.brand_name => 'Nike'
-  #
-  # @param [none]
-  # @return [String]
-  def brand_name
-    brand_id ? brand.name : ''
   end
 
   def has_shipping_method?

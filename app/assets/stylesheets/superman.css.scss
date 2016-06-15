@@ -618,7 +618,7 @@ a {
   margin-top: 10px;
 }
 
-.merchant-settings {
+.merchant-settings, .product-settings {
   background: unquote("rgb(#{$color-white})");
   border-radius: 16px;
   h3 {
