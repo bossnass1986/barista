@@ -11,7 +11,6 @@ class Variant < ActiveRecord::Base
 
   has_many :order_items
 
-
   # belongs_to :image_group
 
   # before_validation :create_inventory#, :on => :create
