@@ -1,4 +1,17 @@
 - title t('.title')
-.mdl-cell.mdl-cell--12-col
-  %h2.mdl-typography--display-3= number_to_currency @store_credit.amount
-  = render 'form'
+.mdl-cell.mdl-cell--3-col-phone
+  Current Balance
+.mdl-cell.mdl-cell--1-col-phone
+  = number_to_currency(@store_credit.amount)
+- (20..50).step(10) do |n|
+  .mdl-cell.mdl-cell--3-col-phone
+    Top up
+    = number_to_currency(n)
+  .mdl-cell.mdl-cell--1-col-phone
+    = submit_tag number_to_currency(n), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+  -#%h2.mdl-typography--display-3= number_to_currency @store_credit.amount
+  -#= render 'form'
+.mdl-cell.mdl-cell--4-col-phone
+  %h6.mdl-typography--title= t('.fine_print')
+  %p= t('.summary')
+  = submit_tag t('.confirm'), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

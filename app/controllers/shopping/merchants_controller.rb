@@ -5,7 +5,7 @@ class Shopping::MerchantsController < Shopping::BaseController
   # GET /merchants
   def index
     # Only pull the fields we require
-    @merchants = Merchant.select('id', 'name', 'permalink', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @merchants.as_json }
@@ -16,7 +16,7 @@ class Shopping::MerchantsController < Shopping::BaseController
   # GET /merchants/1
   def show
     # @merchant = Merchant.select('product.name','product.description').joins(products: :variants).find(params[:id])
-    @merchant = Merchant.select('id', 'permalink').find(params[:id])
+    @merchant = Merchant.select('id').find(params[:id])
     @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
     respond_to do |format|
       format.html # index.html.erb
@@ -68,7 +68,7 @@ class Shopping::MerchantsController < Shopping::BaseController
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_merchant
-      @merchant = Merchant.friendly.find(params[:id])
+    @merchant = Merchant.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

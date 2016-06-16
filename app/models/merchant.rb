@@ -1,6 +1,6 @@
 class Merchant < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :permalink, use: :finders
+  # extend FriendlyId
+  # friendly_id :permalink, use: :finders
 
   has_many :variant_merchants
   has_many :variants, through: :variant_merchants, dependent: :destroy

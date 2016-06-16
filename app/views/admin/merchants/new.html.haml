@@ -1,8 +1,8 @@
 - title t('.title')
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab{:href => '#account-panel'} Account
-    %a.mdl-tabs__tab.is-active{:href => '#menu-panel'} Menu
+    %a.mdl-tabs__tab{:href => '#account-panel'}= t('.account')
+    %a.mdl-tabs__tab.is-active{:href => '#menu-panel'}= t('.menu')
   - if @merchant.errors.any?
     #error_explanation
       %h2
