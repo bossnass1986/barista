@@ -1,18 +1,15 @@
 class Order < ActiveRecord::Base
   include AASM
-  extend FriendlyId
-  friendly_id :number
+  # extend FriendlyId
+  # friendly_id :number
   include Presentation::OrderPresenter
 
   has_many   :order_items, :dependent => :destroy
-  # has_many   :shipments
   has_many   :invoices
-  has_many   :completed_invoices,   -> { where(state: ['authorized', 'paid']) },  class_name: 'Invoice'
+  has_many :completed_invoices, -> { where(state: %w(authorized paid)) }, class_name: 'Invoice'
   has_many   :authorized_invoices,  -> { where(state: 'authorized') },      class_name: 'Invoice'
   has_many   :paid_invoices      ,  -> { where(state: 'paid') },            class_name: 'Invoice'
   has_many   :canceled_invoices   , ->  { where(state: 'canceled') }  ,     class_name: 'Invoice'
-  # has_many   :return_authorizations
-  # has_many   :comments, as: :commentable
 
   belongs_to :user
   belongs_to :coupon
@@ -92,7 +89,7 @@ class Order < ActiveRecord::Base
   end
 
   def self.between(start_time, end_time)
-    where("orders.completed_at >= ? AND orders.completed_at <= ?", start_time, end_time)
+    where('orders.completed_at >= ? AND orders.completed_at <= ?', start_time, end_time)
   end
 
   def self.order_by_completion
@@ -100,7 +97,7 @@ class Order < ActiveRecord::Base
   end
 
   def self.finished
-    where({:orders => { :state => ['complete', 'paid']}})
+    where({:orders => {:state => %w(complete paid)}})
   end
 
   def self.find_myaccount_details

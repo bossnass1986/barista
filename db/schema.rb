@@ -188,7 +188,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "name"
     t.string   "email"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-09 12:04:47'
+    t.datetime "available_at", default: '2016-06-16 10:27:32'
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
@@ -289,16 +289,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   end
 
   add_index "payments", ["invoice_id"], name: "index_payments_on_invoice_id", using: :btree
-
-  create_table "pg_search_documents", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "searchable_id"
-    t.string   "searchable_type"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_index "pg_search_documents", ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
 
   create_table "phone_types", force: :cascade do |t|
     t.string   "name"
@@ -435,30 +425,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
-  create_table "shipping_rate_types", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "shipping_rates", force: :cascade do |t|
-    t.integer  "shipping_method_id"
-    t.decimal  "rate"
-    t.integer  "shipping_rate_type_id"
-    t.integer  "shipping_category_id"
-    t.decimal  "minimum_charge"
-    t.integer  "position"
-    t.boolean  "active"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  create_table "shipping_zones", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "states", force: :cascade do |t|
     t.string   "name"
     t.string   "abbreviation"
@@ -475,9 +441,10 @@ ActiveRecord::Schema.define(version: 20160607081035) do
 
   create_table "store_credits", force: :cascade do |t|
     t.decimal  "amount",     precision: 8, scale: 2, default: 0.0
-    t.integer  "user_id",                                          null: false
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
+    t.integer "user_id", null: false
+    t.datetime "expire_at", default: '2016-12-16 00:00:00'
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "store_credits", ["user_id"], name: "index_store_credits_on_user_id", using: :btree
@@ -486,7 +453,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-09', null: false
+    t.date "start_date", default: '2016-06-16', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

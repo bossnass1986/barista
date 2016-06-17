@@ -6,7 +6,7 @@
   = link_to edit_myaccount_overview_path, class: 'mdl-navigation__link' do
     %i.material-icons account_circle
     = t('.my_details')
-  = link_to myaccount_addresses_path, class: 'mdl-navigation__link' do
+  -#= link_to myaccount_addresses_path, class: 'mdl-navigation__link' do
     %i.material-icons location_on
     = t('.address_information')
   = link_to myaccount_orders_url, class: 'mdl-navigation__link' do
@@ -18,7 +18,7 @@
   = link_to myaccount_store_credit_path, class: 'mdl-navigation__link' do
     %i.material-icons account_balance_wallet
     = t('.credits')
-  = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
+  -#= link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
     %i.material-icons plus_one
     = t('.referrals')
   - if current_user.admin?

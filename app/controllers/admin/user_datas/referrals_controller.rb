@@ -73,7 +73,7 @@ class Admin::UserDatas::ReferralsController < Admin::UserDatas::BaseController
   private
 
   def allowed_params
-    params.require(:referral).permit(:email, :name, :referral_program_id)
+    params.require(:referral).permit(:email, :name, :referral_program_id, :referral_type_id)
   end
 
   def form_info
