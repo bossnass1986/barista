@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, length: 255
       t.string :state
       t.string :mobile, length: 10
-      t.integer :account_id
+      # t.integer :account_id
       t.string :customer_cim_id ## This is the ID returned from AUTH.NET
       t.string :encrypted_password, limit: 128, null: false
       t.string :confirmation_token, limit: 128

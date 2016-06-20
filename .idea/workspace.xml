@@ -4,36 +4,21 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="payment plans">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/shipping_rate_types_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/shipping_rates_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/shipping_zones_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/order_status.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/shipping_rate.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/shipping_rate_type.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/shipping_zone.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20151122045614_create_order_statuses.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20160102060637_create_pg_search_documents.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20160207094909_create_shipping_rate_types.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20160207095325_create_shipping_rates.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20160207100637_create_shipping_zones.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/shipping_rate_types_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/shipping_rates_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/shipping_zones_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/shipping_rate_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/shipping_rate_type_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/shipping_zone_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/barista.iml" afterPath="$PROJECT_DIR$/.idea/barista.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="accounts for merchants">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/accounts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/accounts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffold.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/accounts_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/account.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160607081035_create_accounts.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/accounts_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/factories/accounts.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/account_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/user_datas/referrals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/user_datas/referrals_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/store_credit.rb" afterPath="$PROJECT_DIR$/app/models/store_credit.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160401130909_create_store_credits.rb" afterPath="$PROJECT_DIR$/db/migrate/20160401130909_create_store_credits.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant.rb" afterPath="$PROJECT_DIR$/app/models/merchant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb" afterPath="$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="barista.iws" />
@@ -54,10 +39,10 @@
     <SUITE FILE_PATH="coverage/barista@db_setup__barista.coverage" NAME="db:setup: barista Coverage Results" MODIFIED="1441031157635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1466080663324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@doc_app__barista.coverage" NAME="doc:app: barista Coverage Results" MODIFIED="1441031348815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1465473916067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1466413293212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@Rails_console__barista.coverage" NAME="Rails console: barista Coverage Results" MODIFIED="1448168066758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_seed__barista.coverage" NAME="db:seed: barista Coverage Results" MODIFIED="1466072939450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@db_migrate__barista.coverage" NAME="db:migrate: barista Coverage Results" MODIFIED="1466072825437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@db_migrate__barista.coverage" NAME="db:migrate: barista Coverage Results" MODIFIED="1466413262230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_drop__barista.coverage" NAME="db:drop: barista Coverage Results" MODIFIED="1454669749013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_rollback__barista.coverage" NAME="db:rollback: barista Coverage Results" MODIFIED="1441542297183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@assets_precompile__barista.coverage" NAME="assets:precompile: barista Coverage Results" MODIFIED="1452680376521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
@@ -82,30 +67,6 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Rails barista: development" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Rails barista: development" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -113,36 +74,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="en.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_footer.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_footer.html.haml">
           <provider selected="true" editor-type-id="text-editor">
@@ -252,368 +183,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RailsDependency/#barista" pinned="false" current-in-tab="true">
-        <entry file="uml://RailsDependency/#barista">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>RailsDependency</ID>
-              <OriginalElement>#barista</OriginalElement>
-              <nodes>
-                <node x="1676.0" y="253.98281250000002">Variant</node>
-                <node x="901.5" y="98.73281250000002">Cart</node>
-                <node x="2036.0" y="94.67447916666663">Property</node>
-                <node x="1391.5" y="465.5703125">ReferralType</node>
-                <node x="1380.0" y="1330.3609007569066">Invoice</node>
-                <node x="1728.0" y="162.98281250000002">ItemType</node>
-                <node x="2828.0" y="1509.0275674235736">TransactionAccount</node>
-                <node x="2896.0" y="393.89682447824794">ProductType</node>
-                <node x="2452.0" y="216.80166184766824">Product</node>
-                <node x="3206.0" y="77.8828125">PrototypeProperty</node>
-                <node x="856.0" y="1182.0241942663815">Order</node>
-                <node x="3234.0" y="916.1540316358019">Country</node>
-                <node x="3467.0" y="928.8234007569068">State</node>
-                <node x="2122.0" y="863.1540316358019">OrderItem</node>
-                <node x="2512.5" y="530.8016618476682">TradingHour</node>
-                <node x="0.0" y="1627.0275674235736">VariantRequiredError</node>
-                <node x="1773.5" y="1417.9859007569066">Payment</node>
-                <node x="2502.5" y="417.80166184766824">VariantMerchant</node>
-                <node x="1725.0" y="1304.9859007569066">Batch</node>
-                <node x="2131.5" y="1304.9859007569066">Transaction</node>
-                <node x="198.0" y="539.0453125">User</node>
-                <node x="925.5" y="616.9453125">ReferralBonus</node>
-                <node x="0.0" y="770.0453125">Role</node>
-                <node x="1343.0" y="571.6575275997149">ReferralProgram</node>
-                <node x="2889.5" y="230.8828125">ProductProperty</node>
-                <node x="1004.0" y="1091.0241942663815">StoreCredit</node>
-                <node x="2826.0" y="985.7609007569068">Address</node>
-                <node x="997.0" y="1019.0241942663814">PaymentProfile</node>
-                <node x="2876.0" y="95.8828125">Prototype</node>
-                <node x="2889.0" y="863.9445189905255">TaxRate</node>
-                <node x="2491.0" y="767.1359007569068">Phone</node>
-                <node x="1404.0" y="1239.3609007569066">Coupon</node>
-                <node x="3211.5" y="1050.885900756907">AddressType</node>
-                <node x="331.0" y="1627.0275674235736">Image</node>
-                <node x="1386.5" y="142.73281250000002">CartItem</node>
-                <node x="2055.0" y="486.44451899052535">Merchant</node>
-                <node x="2499.0" y="1487.0275674235736">TransactionLedger</node>
-                <node x="206.0" y="1627.0275674235736">Notifier</node>
-                <node x="2906.0" y="752.9445189905255">PhoneType</node>
-                <node x="2508.5" y="1.8828125">VariantProperty</node>
-                <node x="2557.0" y="698.1359007569068">Account</node>
-                <node x="899.0" y="459.9453125">Referral</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="CartItem" target="ItemType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="Phone">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Phone" target="Address">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Batch" target="Invoice">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="ReferralType" target="Referral">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Transaction" target="TransactionLedger">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Phone" target="PhoneType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="CartItem" target="Variant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Referral">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Variant" target="VariantProperty">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Prototype" target="Product">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Cart" target="CartItem">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Address" target="Country">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="AddressType" target="Address">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Property" target="Variant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="State" target="Country">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Product" target="Property">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Order" target="OrderItem">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="PrototypeProperty" target="Property">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Product" target="Variant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Cart" target="User">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="TaxRate" target="Country">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Property" target="VariantProperty">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Invoice" target="Batch">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Order" target="Coupon">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Address" target="Phone">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="ProductType" target="Product">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Referral" target="User">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Cart">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Variant" target="Property">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="PaymentProfile">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Phone">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Variant" target="Merchant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="PhoneType" target="Phone">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Prototype" target="Property">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="State" target="TaxRate">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Product" target="ProductType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="TradingHour">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Variant" target="VariantMerchant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Phone" target="User">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="TransactionLedger">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="ReferralBonus" target="ReferralProgram">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Role" target="User">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Order" target="Invoice">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Referral" target="ReferralProgram">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="OrderItem" target="TaxRate">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Country" target="State">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="TransactionAccount" target="TransactionLedger">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Order">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Address" target="AddressType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Batch" target="Transaction">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Product" target="Prototype">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="VariantMerchant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Invoice" target="Payment">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Referral" target="ReferralType">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Property" target="Product">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="ReferralProgram" target="Referral">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="Variant">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Address" target="State">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="Product">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Variant" target="OrderItem">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="StoreCredit">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Account">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Property" target="ProductProperty">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="Account">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Prototype" target="PrototypeProperty">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Order" target="Address">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Product" target="ProductProperty">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="CartItem">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Merchant" target="Address">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="ItemType" target="CartItem">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="TransactionLedger" target="TransactionAccount">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Coupon" target="Order">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="User" target="Address">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.19257033597377765" x="1820.5" y="828.5" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Association fields</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="order.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3304">
+            <state relative-caret-position="4860">
               <caret line="324" column="29" selection-start-line="324" selection-start-column="29" selection-end-line="324" selection-end-column="29" />
               <folding />
             </state>
@@ -643,18 +216,480 @@
       <file leaf-file-name="development.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
+            <state relative-caret-position="388">
               <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="88" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20160607081035_create_accounts.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20160607081035_create_accounts.rb">
+      <file leaf-file-name="RailsDependency/#barista" pinned="false" current-in-tab="true">
+        <entry file="uml://RailsDependency/#barista">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>RailsDependency</ID>
+              <OriginalElement>#barista</OriginalElement>
+              <nodes>
+                <node x="1668.0" y="1088.275">Variant</node>
+                <node x="893.5" y="1221.525">Cart</node>
+                <node x="2028.0" y="1253.1483020683017">Property</node>
+                <node x="1383.5" y="658.46875">ReferralType</node>
+                <node x="1372.0" y="50.25">Invoice</node>
+                <node x="1720.0" y="1289.275">ItemType</node>
+                <node x="2824.0" y="24.54927048260356">TransactionAccount</node>
+                <node x="2892.0" y="1066.485194604778">ProductType</node>
+                <node x="2447.0" y="1111.0639824835655">Product</node>
+                <node x="3200.0" y="1352.375">PrototypeProperty</node>
+                <node x="848.0" y="64.02427048260358">Order</node>
+                <node x="2909.5" y="238.87499999999994">Country</node>
+                <node x="3203.5" y="283.2881830206828">State</node>
+                <node x="2114.0" y="192.5">OrderItem</node>
+                <node x="2507.5" y="907.0639824835655">TradingHour</node>
+                <node x="0.0" y="1546.375">VariantRequiredError</node>
+                <node x="1765.5" y="10.5">Payment</node>
+                <node x="2497.5" y="998.0639824835655">VariantMerchant</node>
+                <node x="1717.0" y="79.5">Batch</node>
+                <node x="2123.5" y="79.5">Transaction</node>
+                <node x="198.0" y="502.09374999999994">User</node>
+                <node x="917.5" y="507.09374999999994">ReferralBonus</node>
+                <node x="0.0" y="722.09375">Role</node>
+                <node x="1335.0" y="520.4270833333333">ReferralProgram</node>
+                <node x="2885.5" y="1199.375">ProductProperty</node>
+                <node x="996.0" y="416.09374999999994">StoreCredit</node>
+                <node x="2444.0" y="488.5659371492702">Address</node>
+                <node x="989.0" y="1447.525">PaymentProfile</node>
+                <node x="2872.0" y="1312.375">Prototype</node>
+                <node x="2507.0" y="203.5">TaxRate</node>
+                <node x="2864.0" y="754.4340163540162">Phone</node>
+                <node x="1396.0" y="322.09374999999994">Coupon</node>
+                <node x="2887.0" y="532.6492704826035">AddressType</node>
+                <node x="331.0" y="1546.375">Image</node>
+                <node x="1378.5" y="1243.525">CartItem</node>
+                <node x="2047.0" y="797.4211253407084">Merchant</node>
+                <node x="2494.0" y="2.5492704826035606">TransactionLedger</node>
+                <node x="206.0" y="1546.375">Notifier</node>
+                <node x="3220.5" y="783.5763538159368">PhoneType</node>
+                <node x="2503.5" y="1428.375">VariantProperty</node>
+                <node x="2552.0" y="841.9101946047778">Account</node>
+                <node x="891.0" y="598.09375">Referral</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="CartItem" target="ItemType">
+                  <point x="83.0" y="39.0" />
+                  <point x="1588.0" y="1341.025" />
+                  <point x="1668.0" y="1327.525" />
+                  <point x="-88.0" y="12.75" />
+                </edge>
+                <edge source="Phone" target="Address">
+                  <point x="-108.0" y="-48.75" />
+                  <point x="2824.0" y="764.1840163540162" />
+                  <point x="150.0" y="34.75" />
+                </edge>
+                <edge source="Merchant" target="Phone">
+                  <point x="149.0" y="-0.0" />
+                  <point x="2444.0" y="896.5639824835655" />
+                  <point x="2744.0" y="896.5639824835655" />
+                  <point x="2824.0" y="861.6840163540162" />
+                  <point x="-108.0" y="48.75" />
+                </edge>
+                <edge source="Batch" target="Invoice">
+                  <point x="-91.0" y="-18.25" />
+                  <point x="89.5" y="-0.0" />
+                </edge>
+                <edge source="ReferralType" target="Referral">
+                  <point x="-78.0" y="-12.75" />
+                  <point x="160.5" y="14.625" />
+                </edge>
+                <edge source="Transaction" target="TransactionLedger">
+                  <point x="72.5" y="-0.0" />
+                  <point x="2364.0" y="116.0" />
+                  <point x="2444.0" y="73.79927048260356" />
+                  <point x="-100.0" y="23.75" />
+                </edge>
+                <edge source="Phone" target="PhoneType">
+                  <point x="108.0" y="29.25" />
+                  <point x="3120.0" y="842.1840163540162" />
+                  <point x="3200.0" y="821.8263538159368" />
+                  <point x="-70.0" y="12.75" />
+                </edge>
+                <edge source="CartItem" target="Variant">
+                  <point x="83.0" y="-39.0" />
+                  <point x="1588.0" y="1263.025" />
+                  <point x="-140.0" y="-0.0" />
+                </edge>
+                <edge source="User" target="Referral">
+                  <point x="285.0" y="-58.92000000000007" />
+                  <point x="848.0" y="695.59375" />
+                  <point x="-160.5" y="39.0" />
+                </edge>
+                <edge source="Variant" target="VariantProperty">
+                  <point x="140.0" y="71.55555555555566" />
+                  <point x="2028.0" y="1483.125" />
+                  <point x="-90.5" y="18.25" />
+                </edge>
+                <edge source="Prototype" target="Product">
+                  <point x="-100.0" y="-31.666666666666515" />
+                  <point x="2824.0" y="1328.2083333333335" />
+                  <point x="147.0" y="32.19999999999982" />
+                </edge>
+                <edge source="Cart" target="CartItem">
+                  <point x="158.0" y="51.25" />
+                  <point x="1255.0" y="1375.275" />
+                  <point x="1335.0" y="1336.15" />
+                  <point x="-83.0" y="34.125" />
+                </edge>
+                <edge source="Address" target="Country">
+                  <point x="150.0" y="-57.91666666666674" />
+                  <point x="2824.0" y="277.12499999999994" />
+                  <point x="-62.5" y="12.75" />
+                </edge>
+                <edge source="Property" target="Variant">
+                  <point x="-168.0" y="-29.25" />
+                  <point x="140.0" y="35.77777777777783" />
+                </edge>
+                <edge source="AddressType" target="Address">
+                  <point x="-85.0" y="-12.75" />
+                  <point x="150.0" y="-11.583333333333258" />
+                </edge>
+                <edge source="State" target="Country">
+                  <point x="-87.0" y="-9.125" />
+                  <point x="3120.0" y="251.62499999999994" />
+                  <point x="62.5" y="-12.75" />
+                </edge>
+                <edge source="Product" target="Property">
+                  <point x="-147.0" y="32.19999999999982" />
+                  <point x="168.0" y="-48.75" />
+                </edge>
+                <edge source="Order" target="OrderItem">
+                  <point x="203.5" y="12.450000000000045" />
+                  <point x="1335.0" y="216.24999999999994" />
+                  <point x="-82.0" y="-23.75" />
+                </edge>
+                <edge source="PrototypeProperty" target="Property">
+                  <point x="-90.5" y="18.25" />
+                  <point x="3120.0" y="1417.875" />
+                  <point x="2444.0" y="1417.875" />
+                  <point x="168.0" y="29.25" />
+                </edge>
+                <edge source="Cart" target="User">
+                  <point x="-158.0" y="-0.0" />
+                  <point x="848.0" y="1324.025" />
+                  <point x="285.0" y="176.75999999999976" />
+                </edge>
+                <edge source="Product" target="Variant">
+                  <point x="-147.0" y="-0.0" />
+                  <point x="2364.0" y="1187.4101946047776" />
+                  <point x="140.0" y="17.888888888888687" />
+                </edge>
+                <edge source="TaxRate" target="Country">
+                  <point x="87.0" y="18.25" />
+                  <point x="2744.0" y="258.24999999999994" />
+                  <point x="2824.0" y="251.62499999999994" />
+                  <point x="-62.5" y="-12.75" />
+                </edge>
+                <edge source="Property" target="VariantProperty">
+                  <point x="168.0" y="48.75" />
+                  <point x="2444.0" y="1446.625" />
+                  <point x="-90.5" y="-18.25" />
+                </edge>
+                <edge source="Invoice" target="Batch">
+                  <point x="89.5" y="31.666666666666686" />
+                  <point x="1588.0" y="129.41666666666674" />
+                  <point x="1668.0" y="134.25" />
+                  <point x="-91.0" y="18.25" />
+                </edge>
+                <edge source="Address" target="Phone">
+                  <point x="150.0" y="57.91666666666674" />
+                  <point x="2824.0" y="783.6840163540162" />
+                  <point x="-108.0" y="-29.25" />
+                </edge>
+                <edge source="ProductType" target="Product">
+                  <point x="-80.0" y="-12.75" />
+                  <point x="2824.0" y="1079.235194604778" />
+                  <point x="147.0" y="-64.40000000000009" />
+                </edge>
+                <edge source="Order" target="Coupon">
+                  <point x="203.5" y="87.15000000000009" />
+                  <point x="1335.0" y="360.34374999999994" />
+                  <point x="-65.5" y="12.75" />
+                </edge>
+                <edge source="Referral" target="User">
+                  <point x="-160.5" y="-39.0" />
+                  <point x="848.0" y="617.59375" />
+                  <point x="285.0" y="-98.20000000000005" />
+                </edge>
+                <edge source="User" target="Cart">
+                  <point x="285.0" y="196.39999999999986" />
+                  <point x="848.0" y="1392.3583333333336" />
+                  <point x="-158.0" y="68.33333333333348" />
+                </edge>
+                <edge source="Variant" target="Property">
+                  <point x="140.0" y="53.666666666666515" />
+                  <point x="-168.0" y="29.25" />
+                </edge>
+                <edge source="User" target="PaymentProfile">
+                  <point x="285.0" y="235.67999999999984" />
+                  <point x="848.0" y="1473.025" />
+                  <point x="-62.5" y="-0.0" />
+                </edge>
+                <edge source="Variant" target="Merchant">
+                  <point x="140.0" y="-35.77777777777783" />
+                  <point x="2028.0" y="951.1711253407084" />
+                  <point x="-149.0" y="51.25" />
+                </edge>
+                <edge source="User" target="Phone">
+                  <point x="285.0" y="39.27999999999997" />
+                  <point x="2744.0" y="786.9211253407084" />
+                  <point x="2824.0" y="822.6840163540162" />
+                  <point x="-108.0" y="9.75" />
+                </edge>
+                <edge source="Prototype" target="Property">
+                  <point x="-100.0" y="31.666666666666515" />
+                  <point x="2824.0" y="1391.5416666666665" />
+                  <point x="2744.0" y="1348.856635401635" />
+                  <point x="2444.0" y="1348.856635401635" />
+                  <point x="168.0" y="9.75" />
+                </edge>
+                <edge source="PhoneType" target="Phone">
+                  <point x="-70.0" y="-12.75" />
+                  <point x="3200.0" y="796.3263538159368" />
+                  <point x="3120.0" y="783.6840163540162" />
+                  <point x="108.0" y="-29.25" />
+                </edge>
+                <edge source="State" target="TaxRate">
+                  <point x="-87.0" y="-27.375" />
+                  <point x="3120.0" y="228.37499999999994" />
+                  <point x="2824.0" y="228.37499999999994" />
+                  <point x="2744.0" y="221.74999999999994" />
+                  <point x="87.0" y="-18.25" />
+                </edge>
+                <edge source="Product" target="ProductType">
+                  <point x="147.0" y="-32.19999999999982" />
+                  <point x="2824.0" y="1104.735194604778" />
+                  <point x="-80.0" y="12.75" />
+                </edge>
+                <edge source="Merchant" target="TradingHour">
+                  <point x="149.0" y="29.28571428571422" />
+                  <point x="2444.0" y="932.5639824835655" />
+                  <point x="-86.5" y="-0.0" />
+                </edge>
+                <edge source="Variant" target="VariantMerchant">
+                  <point x="140.0" y="-17.888888888888687" />
+                  <point x="2028.0" y="1052.8139824835655" />
+                  <point x="-96.5" y="18.25" />
+                </edge>
+                <edge source="Phone" target="User">
+                  <point x="-108.0" y="-9.75" />
+                  <point x="2824.0" y="803.1840163540162" />
+                  <point x="2744.0" y="775.9211253407084" />
+                  <point x="848.0" y="775.9211253407084" />
+                  <point x="285.0" y="19.639999999999873" />
+                </edge>
+                <edge source="User" target="TransactionLedger">
+                  <point x="285.0" y="-235.68000000000006" />
+                  <point x="848.0" y="0.0" />
+                  <point x="2364.0" y="0.0" />
+                  <point x="2444.0" y="26.29927048260356" />
+                  <point x="-100.0" y="-23.75" />
+                </edge>
+                <edge source="ReferralBonus" target="ReferralProgram">
+                  <point x="134.0" y="-0.0" />
+                  <point x="-126.5" y="-24.333333333333258" />
+                </edge>
+                <edge source="Role" target="User">
+                  <point x="59.0" y="-0.0" />
+                  <point x="-285.0" y="-0.0" />
+                </edge>
+                <edge source="Order" target="Invoice">
+                  <point x="203.5" y="-62.25" />
+                  <point x="1335.0" y="97.75" />
+                  <point x="-89.5" y="-0.0" />
+                </edge>
+                <edge source="Referral" target="ReferralProgram">
+                  <point x="160.5" y="-14.625" />
+                  <point x="1255.0" y="641.96875" />
+                  <point x="-126.5" y="24.333333333333258" />
+                </edge>
+                <edge source="Country" target="State">
+                  <point x="62.5" y="12.75" />
+                  <point x="3120.0" y="277.12499999999994" />
+                  <point x="-87.0" y="9.125" />
+                </edge>
+                <edge source="OrderItem" target="TaxRate">
+                  <point x="82.0" y="-0.0" />
+                  <point x="-87.0" y="-0.0" />
+                </edge>
+                <edge source="TransactionAccount" target="TransactionLedger">
+                  <point x="-148.0" y="-12.75" />
+                  <point x="2744.0" y="26.29927048260356" />
+                  <point x="100.0" y="-23.75" />
+                </edge>
+                <edge source="User" target="Order">
+                  <point x="285.0" y="-216.03999999999996" />
+                  <point x="-203.5" y="-83.0" />
+                </edge>
+                <edge source="Address" target="AddressType">
+                  <point x="150.0" y="11.583333333333258" />
+                  <point x="-85.0" y="12.75" />
+                </edge>
+                <edge source="Batch" target="Transaction">
+                  <point x="91.0" y="-0.0" />
+                  <point x="-72.5" y="-0.0" />
+                </edge>
+                <edge source="Product" target="Prototype">
+                  <point x="147.0" y="64.40000000000009" />
+                  <point x="2824.0" y="1359.875" />
+                  <point x="-100.0" y="-0.0" />
+                </edge>
+                <edge source="Merchant" target="VariantMerchant">
+                  <point x="149.0" y="58.57142857142867" />
+                  <point x="2364.0" y="958.492553912137" />
+                  <point x="2444.0" y="1016.3139824835655" />
+                  <point x="-96.5" y="-18.25" />
+                </edge>
+                <edge source="Invoice" target="Payment">
+                  <point x="89.5" y="-31.666666666666686" />
+                  <point x="1588.0" y="66.08333333333326" />
+                  <point x="1668.0" y="25.0" />
+                  <point x="-42.5" y="-0.0" />
+                </edge>
+                <edge source="Referral" target="ReferralType">
+                  <point x="160.5" y="43.875" />
+                  <point x="1255.0" y="700.46875" />
+                  <point x="1335.0" y="696.71875" />
+                  <point x="-78.0" y="12.75" />
+                </edge>
+                <edge source="Property" target="Product">
+                  <point x="168.0" y="-29.25" />
+                  <point x="-147.0" y="64.40000000000009" />
+                </edge>
+                <edge source="ReferralProgram" target="Referral">
+                  <point x="-126.5" y="-0.0" />
+                  <point x="1255.0" y="612.71875" />
+                  <point x="160.5" y="-43.875" />
+                </edge>
+                <edge source="Merchant" target="Variant">
+                  <point x="-149.0" y="-51.25" />
+                  <point x="2028.0" y="848.6711253407084" />
+                  <point x="140.0" y="-53.666666666666515" />
+                </edge>
+                <edge source="Address" target="State">
+                  <point x="150.0" y="-34.75" />
+                  <point x="3120.0" y="522.1492704826035" />
+                  <point x="-87.0" y="27.375" />
+                </edge>
+                <edge source="Merchant" target="Product">
+                  <point x="149.0" y="87.85714285714289" />
+                  <point x="2364.0" y="987.7782681978513" />
+                  <point x="-147.0" y="-64.40000000000009" />
+                </edge>
+                <edge source="Variant" target="OrderItem">
+                  <point x="140.0" y="-71.55555555555566" />
+                  <point x="2028.0" y="263.74999999999994" />
+                  <point x="-82.0" y="23.75" />
+                </edge>
+                <edge source="User" target="StoreCredit">
+                  <point x="285.0" y="-117.83999999999992" />
+                  <point x="848.0" y="441.59374999999994" />
+                  <point x="-55.5" y="-0.0" />
+                </edge>
+                <edge source="Property" target="ProductProperty">
+                  <point x="168.0" y="-9.75" />
+                  <point x="2444.0" y="1287.2639824835655" />
+                  <point x="2744.0" y="1287.2639824835655" />
+                  <point x="2824.0" y="1254.125" />
+                  <point x="-86.5" y="18.25" />
+                </edge>
+                <edge source="Merchant" target="Account">
+                  <point x="149.0" y="-58.57142857142867" />
+                  <point x="2364.0" y="841.3496967692797" />
+                  <point x="2444.0" y="856.4101946047778" />
+                  <point x="-42.0" y="-0.0" />
+                </edge>
+                <edge source="Prototype" target="PrototypeProperty">
+                  <point x="100.0" y="-0.0" />
+                  <point x="3120.0" y="1359.875" />
+                  <point x="-90.5" y="-18.25" />
+                </edge>
+                <edge source="Order" target="Address">
+                  <point x="203.5" y="37.35000000000002" />
+                  <point x="1335.0" y="311.59374999999994" />
+                  <point x="2364.0" y="311.59374999999994" />
+                  <point x="-150.0" y="-60.8125" />
+                </edge>
+                <edge source="Product" target="ProductProperty">
+                  <point x="147.0" y="-0.0" />
+                  <point x="2824.0" y="1217.625" />
+                  <point x="-86.5" y="-18.25" />
+                </edge>
+                <edge source="User" target="CartItem">
+                  <point x="285.0" y="98.19999999999982" />
+                  <point x="848.0" y="1189.025" />
+                  <point x="1255.0" y="1189.025" />
+                  <point x="1335.0" y="1267.9" />
+                  <point x="-83.0" y="-34.125" />
+                </edge>
+                <edge source="Merchant" target="Address">
+                  <point x="149.0" y="-87.85714285714289" />
+                  <point x="2364.0" y="812.0639824835655" />
+                  <point x="-150.0" y="60.8125" />
+                </edge>
+                <edge source="ItemType" target="CartItem">
+                  <point x="-88.0" y="-12.75" />
+                  <point x="83.0" y="-0.0" />
+                </edge>
+                <edge source="Coupon" target="Order">
+                  <point x="-65.5" y="-12.75" />
+                  <point x="1335.0" y="334.84374999999994" />
+                  <point x="203.5" y="62.25" />
+                </edge>
+                <edge source="TransactionLedger" target="TransactionAccount">
+                  <point x="100.0" y="23.75" />
+                  <point x="2744.0" y="73.79927048260356" />
+                  <point x="-148.0" y="12.75" />
+                </edge>
+                <edge source="User" target="Address">
+                  <point x="285.0" y="-137.48000000000002" />
+                  <point x="848.0" y="405.59374999999994" />
+                  <point x="2364.0" y="405.59374999999994" />
+                  <point x="-150.0" y="-8.6875" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.20199941193766538" x="1690.5" y="788.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Association fields</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/account.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merchant.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -689,9 +724,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Cup Town/www/index.html" />
-        <option value="$PROJECT_DIR$/Gemfile.lock" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
@@ -712,9 +744,7 @@
         <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.haml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4ab14069-0621-4096-811b-6a492b108389/console.sql" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_hours.html.haml" />
-        <option value="$PROJECT_DIR$/db/migrate/20160607081035_create_accounts.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/models/account.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
@@ -724,7 +754,6 @@
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/variants/new.html.haml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_account.haml" />
-        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
         <option value="$PROJECT_DIR$/app/controllers/shopping/merchants_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_venue.haml" />
         <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
@@ -740,6 +769,12 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/user_datas/referrals_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/store_credit.rb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/account.rb" />
+        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20160607081035_create_accounts.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb" />
       </list>
     </option>
   </component>
@@ -1012,7 +1047,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1027,10 +1080,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1116,7 @@
       <recent name="$PROJECT_DIR$/app/views/admin/merchandise/multi/variants" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:seed: barista">
+  <component name="RunManager" selected="Rake.db:reset: barista">
     <configuration default="false" name="db:schema:dump: barista" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="barista" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1338,14 +1387,11 @@
       <workItem from="1465027348519" duration="4838000" />
       <workItem from="1465048713704" duration="59962000" />
       <workItem from="1466155591985" duration="904000" />
-      <workItem from="1466157514831" duration="1157000" />
-    </task>
-    <task id="LOCAL-00182" summary="security!">
-      <created>1463876944398</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1463876944399</updated>
+      <workItem from="1466157514831" duration="2772000" />
+      <workItem from="1466239921413" duration="30000" />
+      <workItem from="1466240042559" duration="200000" />
+      <workItem from="1466242513071" duration="740000" />
+      <workItem from="1466412479419" duration="1080000" />
     </task>
     <task id="LOCAL-00183" summary="security!">
       <created>1463876994248</created>
@@ -1683,11 +1729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466071742363</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="accounts for merchants">
+      <created>1466164965391</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1466164965395</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259300000" />
+    <option name="totallyTimeSpent" value="262965000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1700,28 +1753,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29685265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30972818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4463576" sideWeight="0.5314735" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4463576" sideWeight="0.46852645" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48874173" sideWeight="0.47430557" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48741722" sideWeight="0.47430557" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4463576" sideWeight="0.46852645" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1760,7 +1813,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="slugs for suppliers" />
     <MESSAGE value="mailgun for production" />
     <MESSAGE value="product page fixes" />
     <MESSAGE value="refactor supplier to merchant" />
@@ -1785,7 +1837,8 @@
     <MESSAGE value="landing page" />
     <MESSAGE value="merchant updates" />
     <MESSAGE value="payment plans" />
-    <option name="LAST_COMMIT_MESSAGE" value="payment plans" />
+    <MESSAGE value="accounts for merchants" />
+    <option name="LAST_COMMIT_MESSAGE" value="accounts for merchants" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1796,20 +1849,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1832,21 +1871,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1854,34 +1886,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="202" column="31" selection-start-line="202" selection-start-column="6" selection-end-line="202" selection-end-column="31" />
-          <folding>
-            <element signature="e#2467#2549#0" expanded="false" />
-            <element signature="e#2601#2853#0" expanded="false" />
-            <element signature="e#2985#3114#0" expanded="false" />
-            <element signature="e#3136#3346#0" expanded="false" />
-            <element signature="e#3373#3537#0" expanded="false" />
-            <element signature="e#3568#4070#0" expanded="false" />
-            <element signature="e#4097#4871#0" expanded="false" />
-            <element signature="e#4896#5329#0" expanded="false" />
-            <element signature="e#5356#5449#0" expanded="false" />
-            <element signature="e#5477#5651#0" expanded="false" />
-            <element signature="e#5711#5782#0" expanded="false" />
-            <element signature="e#6002#6129#0" expanded="false" />
-            <element signature="e#6156#6271#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/friendly_id.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-992">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1894,14 +1904,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.addresses">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1941,14 +1951,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.accounts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1994,13 +2004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_merchant.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2022,10 +2025,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160207095325_create_shipping_rates.rb" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160207100637_create_shipping_zones.rb" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151122045614_create_order_statuses.rb" />
+    <entry file="file://$PROJECT_DIR$/app/models/order_status.rb" />
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
+        <state relative-caret-position="725">
           <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2038,10 +2061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2080,18 +2103,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160207095325_create_shipping_rates.rb" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160207100637_create_shipping_zones.rb" />
     <entry file="dbDummy://dbtable:/dba0f3b7/4ab14069-0621-4096-811b-6a492b108389/beanngone_dev.public.store_credits">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2104,22 +2124,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_suppliers.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2143,6 +2147,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4860">
+          <caret line="324" column="29" selection-start-line="324" selection-start-column="29" selection-end-line="324" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/referral.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1905">
@@ -2159,35 +2171,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20160607081035_create_accounts.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20151122045614_create_order_statuses.rb" />
-    <entry file="file://$PROJECT_DIR$/app/models/order_status.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150909114100_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151220140300_create_merchants.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3304">
-          <caret line="324" column="29" selection-start-line="324" selection-start-column="29" selection-end-line="324" selection-end-column="29" />
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="88" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -2198,349 +2233,433 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#barista</OriginalElement>
           <nodes>
-            <node x="1676.0" y="253.98281250000002">Variant</node>
-            <node x="901.5" y="98.73281250000002">Cart</node>
-            <node x="2036.0" y="94.67447916666663">Property</node>
-            <node x="1391.5" y="465.5703125">ReferralType</node>
-            <node x="1380.0" y="1330.3609007569066">Invoice</node>
-            <node x="1728.0" y="162.98281250000002">ItemType</node>
-            <node x="2828.0" y="1509.0275674235736">TransactionAccount</node>
-            <node x="2896.0" y="393.89682447824794">ProductType</node>
-            <node x="2452.0" y="216.80166184766824">Product</node>
-            <node x="3206.0" y="77.8828125">PrototypeProperty</node>
-            <node x="856.0" y="1182.0241942663815">Order</node>
-            <node x="3234.0" y="916.1540316358019">Country</node>
-            <node x="3467.0" y="928.8234007569068">State</node>
-            <node x="2122.0" y="863.1540316358019">OrderItem</node>
-            <node x="2512.5" y="530.8016618476682">TradingHour</node>
-            <node x="0.0" y="1627.0275674235736">VariantRequiredError</node>
-            <node x="1773.5" y="1417.9859007569066">Payment</node>
-            <node x="2502.5" y="417.80166184766824">VariantMerchant</node>
-            <node x="1725.0" y="1304.9859007569066">Batch</node>
-            <node x="2131.5" y="1304.9859007569066">Transaction</node>
-            <node x="198.0" y="539.0453125">User</node>
-            <node x="925.5" y="616.9453125">ReferralBonus</node>
-            <node x="0.0" y="770.0453125">Role</node>
-            <node x="1343.0" y="571.6575275997149">ReferralProgram</node>
-            <node x="2889.5" y="230.8828125">ProductProperty</node>
-            <node x="1004.0" y="1091.0241942663815">StoreCredit</node>
-            <node x="2826.0" y="985.7609007569068">Address</node>
-            <node x="997.0" y="1019.0241942663814">PaymentProfile</node>
-            <node x="2876.0" y="95.8828125">Prototype</node>
-            <node x="2889.0" y="863.9445189905255">TaxRate</node>
-            <node x="2491.0" y="767.1359007569068">Phone</node>
-            <node x="1404.0" y="1239.3609007569066">Coupon</node>
-            <node x="3211.5" y="1050.885900756907">AddressType</node>
-            <node x="331.0" y="1627.0275674235736">Image</node>
-            <node x="1386.5" y="142.73281250000002">CartItem</node>
-            <node x="2055.0" y="486.44451899052535">Merchant</node>
-            <node x="2499.0" y="1487.0275674235736">TransactionLedger</node>
-            <node x="206.0" y="1627.0275674235736">Notifier</node>
-            <node x="2906.0" y="752.9445189905255">PhoneType</node>
-            <node x="2508.5" y="1.8828125">VariantProperty</node>
-            <node x="2557.0" y="698.1359007569068">Account</node>
-            <node x="899.0" y="459.9453125">Referral</node>
+            <node x="1668.0" y="1088.275">Variant</node>
+            <node x="893.5" y="1221.525">Cart</node>
+            <node x="2028.0" y="1253.1483020683017">Property</node>
+            <node x="1383.5" y="658.46875">ReferralType</node>
+            <node x="1372.0" y="50.25">Invoice</node>
+            <node x="1720.0" y="1289.275">ItemType</node>
+            <node x="2824.0" y="24.54927048260356">TransactionAccount</node>
+            <node x="2892.0" y="1066.485194604778">ProductType</node>
+            <node x="2447.0" y="1111.0639824835655">Product</node>
+            <node x="3200.0" y="1352.375">PrototypeProperty</node>
+            <node x="848.0" y="64.02427048260358">Order</node>
+            <node x="2909.5" y="238.87499999999994">Country</node>
+            <node x="3203.5" y="283.2881830206828">State</node>
+            <node x="2114.0" y="192.5">OrderItem</node>
+            <node x="2507.5" y="907.0639824835655">TradingHour</node>
+            <node x="0.0" y="1546.375">VariantRequiredError</node>
+            <node x="1765.5" y="10.5">Payment</node>
+            <node x="2497.5" y="998.0639824835655">VariantMerchant</node>
+            <node x="1717.0" y="79.5">Batch</node>
+            <node x="2123.5" y="79.5">Transaction</node>
+            <node x="198.0" y="502.09374999999994">User</node>
+            <node x="917.5" y="507.09374999999994">ReferralBonus</node>
+            <node x="0.0" y="722.09375">Role</node>
+            <node x="1335.0" y="520.4270833333333">ReferralProgram</node>
+            <node x="2885.5" y="1199.375">ProductProperty</node>
+            <node x="996.0" y="416.09374999999994">StoreCredit</node>
+            <node x="2444.0" y="488.5659371492702">Address</node>
+            <node x="989.0" y="1447.525">PaymentProfile</node>
+            <node x="2872.0" y="1312.375">Prototype</node>
+            <node x="2507.0" y="203.5">TaxRate</node>
+            <node x="2864.0" y="754.4340163540162">Phone</node>
+            <node x="1396.0" y="322.09374999999994">Coupon</node>
+            <node x="2887.0" y="532.6492704826035">AddressType</node>
+            <node x="331.0" y="1546.375">Image</node>
+            <node x="1378.5" y="1243.525">CartItem</node>
+            <node x="2047.0" y="797.4211253407084">Merchant</node>
+            <node x="2494.0" y="2.5492704826035606">TransactionLedger</node>
+            <node x="206.0" y="1546.375">Notifier</node>
+            <node x="3220.5" y="783.5763538159368">PhoneType</node>
+            <node x="2503.5" y="1428.375">VariantProperty</node>
+            <node x="2552.0" y="841.9101946047778">Account</node>
+            <node x="891.0" y="598.09375">Referral</node>
           </nodes>
           <notes />
           <edges>
             <edge source="CartItem" target="ItemType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Merchant" target="Phone">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="83.0" y="39.0" />
+              <point x="1588.0" y="1341.025" />
+              <point x="1668.0" y="1327.525" />
+              <point x="-88.0" y="12.75" />
             </edge>
             <edge source="Phone" target="Address">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-108.0" y="-48.75" />
+              <point x="2824.0" y="764.1840163540162" />
+              <point x="150.0" y="34.75" />
+            </edge>
+            <edge source="Merchant" target="Phone">
+              <point x="149.0" y="-0.0" />
+              <point x="2444.0" y="896.5639824835655" />
+              <point x="2744.0" y="896.5639824835655" />
+              <point x="2824.0" y="861.6840163540162" />
+              <point x="-108.0" y="48.75" />
             </edge>
             <edge source="Batch" target="Invoice">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-91.0" y="-18.25" />
+              <point x="89.5" y="-0.0" />
             </edge>
             <edge source="ReferralType" target="Referral">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-78.0" y="-12.75" />
+              <point x="160.5" y="14.625" />
             </edge>
             <edge source="Transaction" target="TransactionLedger">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="72.5" y="-0.0" />
+              <point x="2364.0" y="116.0" />
+              <point x="2444.0" y="73.79927048260356" />
+              <point x="-100.0" y="23.75" />
             </edge>
             <edge source="Phone" target="PhoneType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="108.0" y="29.25" />
+              <point x="3120.0" y="842.1840163540162" />
+              <point x="3200.0" y="821.8263538159368" />
+              <point x="-70.0" y="12.75" />
             </edge>
             <edge source="CartItem" target="Variant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="83.0" y="-39.0" />
+              <point x="1588.0" y="1263.025" />
+              <point x="-140.0" y="-0.0" />
             </edge>
             <edge source="User" target="Referral">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="-58.92000000000007" />
+              <point x="848.0" y="695.59375" />
+              <point x="-160.5" y="39.0" />
             </edge>
             <edge source="Variant" target="VariantProperty">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="140.0" y="71.55555555555566" />
+              <point x="2028.0" y="1483.125" />
+              <point x="-90.5" y="18.25" />
             </edge>
             <edge source="Prototype" target="Product">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-100.0" y="-31.666666666666515" />
+              <point x="2824.0" y="1328.2083333333335" />
+              <point x="147.0" y="32.19999999999982" />
             </edge>
             <edge source="Cart" target="CartItem">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="158.0" y="51.25" />
+              <point x="1255.0" y="1375.275" />
+              <point x="1335.0" y="1336.15" />
+              <point x="-83.0" y="34.125" />
             </edge>
             <edge source="Address" target="Country">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="AddressType" target="Address">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="150.0" y="-57.91666666666674" />
+              <point x="2824.0" y="277.12499999999994" />
+              <point x="-62.5" y="12.75" />
             </edge>
             <edge source="Property" target="Variant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-168.0" y="-29.25" />
+              <point x="140.0" y="35.77777777777783" />
+            </edge>
+            <edge source="AddressType" target="Address">
+              <point x="-85.0" y="-12.75" />
+              <point x="150.0" y="-11.583333333333258" />
             </edge>
             <edge source="State" target="Country">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-87.0" y="-9.125" />
+              <point x="3120.0" y="251.62499999999994" />
+              <point x="62.5" y="-12.75" />
             </edge>
             <edge source="Product" target="Property">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-147.0" y="32.19999999999982" />
+              <point x="168.0" y="-48.75" />
             </edge>
             <edge source="Order" target="OrderItem">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="203.5" y="12.450000000000045" />
+              <point x="1335.0" y="216.24999999999994" />
+              <point x="-82.0" y="-23.75" />
             </edge>
             <edge source="PrototypeProperty" target="Property">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Product" target="Variant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-90.5" y="18.25" />
+              <point x="3120.0" y="1417.875" />
+              <point x="2444.0" y="1417.875" />
+              <point x="168.0" y="29.25" />
             </edge>
             <edge source="Cart" target="User">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-158.0" y="-0.0" />
+              <point x="848.0" y="1324.025" />
+              <point x="285.0" y="176.75999999999976" />
+            </edge>
+            <edge source="Product" target="Variant">
+              <point x="-147.0" y="-0.0" />
+              <point x="2364.0" y="1187.4101946047776" />
+              <point x="140.0" y="17.888888888888687" />
             </edge>
             <edge source="TaxRate" target="Country">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="87.0" y="18.25" />
+              <point x="2744.0" y="258.24999999999994" />
+              <point x="2824.0" y="251.62499999999994" />
+              <point x="-62.5" y="-12.75" />
             </edge>
             <edge source="Property" target="VariantProperty">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="168.0" y="48.75" />
+              <point x="2444.0" y="1446.625" />
+              <point x="-90.5" y="-18.25" />
             </edge>
             <edge source="Invoice" target="Batch">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Order" target="Coupon">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="89.5" y="31.666666666666686" />
+              <point x="1588.0" y="129.41666666666674" />
+              <point x="1668.0" y="134.25" />
+              <point x="-91.0" y="18.25" />
             </edge>
             <edge source="Address" target="Phone">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="150.0" y="57.91666666666674" />
+              <point x="2824.0" y="783.6840163540162" />
+              <point x="-108.0" y="-29.25" />
             </edge>
             <edge source="ProductType" target="Product">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-80.0" y="-12.75" />
+              <point x="2824.0" y="1079.235194604778" />
+              <point x="147.0" y="-64.40000000000009" />
+            </edge>
+            <edge source="Order" target="Coupon">
+              <point x="203.5" y="87.15000000000009" />
+              <point x="1335.0" y="360.34374999999994" />
+              <point x="-65.5" y="12.75" />
             </edge>
             <edge source="Referral" target="User">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-160.5" y="-39.0" />
+              <point x="848.0" y="617.59375" />
+              <point x="285.0" y="-98.20000000000005" />
             </edge>
             <edge source="User" target="Cart">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="196.39999999999986" />
+              <point x="848.0" y="1392.3583333333336" />
+              <point x="-158.0" y="68.33333333333348" />
             </edge>
             <edge source="Variant" target="Property">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="140.0" y="53.666666666666515" />
+              <point x="-168.0" y="29.25" />
             </edge>
             <edge source="User" target="PaymentProfile">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="User" target="Phone">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="235.67999999999984" />
+              <point x="848.0" y="1473.025" />
+              <point x="-62.5" y="-0.0" />
             </edge>
             <edge source="Variant" target="Merchant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="140.0" y="-35.77777777777783" />
+              <point x="2028.0" y="951.1711253407084" />
+              <point x="-149.0" y="51.25" />
             </edge>
-            <edge source="PhoneType" target="Phone">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+            <edge source="User" target="Phone">
+              <point x="285.0" y="39.27999999999997" />
+              <point x="2744.0" y="786.9211253407084" />
+              <point x="2824.0" y="822.6840163540162" />
+              <point x="-108.0" y="9.75" />
             </edge>
             <edge source="Prototype" target="Property">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-100.0" y="31.666666666666515" />
+              <point x="2824.0" y="1391.5416666666665" />
+              <point x="2744.0" y="1348.856635401635" />
+              <point x="2444.0" y="1348.856635401635" />
+              <point x="168.0" y="9.75" />
+            </edge>
+            <edge source="PhoneType" target="Phone">
+              <point x="-70.0" y="-12.75" />
+              <point x="3200.0" y="796.3263538159368" />
+              <point x="3120.0" y="783.6840163540162" />
+              <point x="108.0" y="-29.25" />
             </edge>
             <edge source="State" target="TaxRate">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-87.0" y="-27.375" />
+              <point x="3120.0" y="228.37499999999994" />
+              <point x="2824.0" y="228.37499999999994" />
+              <point x="2744.0" y="221.74999999999994" />
+              <point x="87.0" y="-18.25" />
             </edge>
             <edge source="Product" target="ProductType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="147.0" y="-32.19999999999982" />
+              <point x="2824.0" y="1104.735194604778" />
+              <point x="-80.0" y="12.75" />
             </edge>
             <edge source="Merchant" target="TradingHour">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="149.0" y="29.28571428571422" />
+              <point x="2444.0" y="932.5639824835655" />
+              <point x="-86.5" y="-0.0" />
             </edge>
             <edge source="Variant" target="VariantMerchant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="140.0" y="-17.888888888888687" />
+              <point x="2028.0" y="1052.8139824835655" />
+              <point x="-96.5" y="18.25" />
             </edge>
             <edge source="Phone" target="User">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-108.0" y="-9.75" />
+              <point x="2824.0" y="803.1840163540162" />
+              <point x="2744.0" y="775.9211253407084" />
+              <point x="848.0" y="775.9211253407084" />
+              <point x="285.0" y="19.639999999999873" />
             </edge>
             <edge source="User" target="TransactionLedger">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="-235.68000000000006" />
+              <point x="848.0" y="0.0" />
+              <point x="2364.0" y="0.0" />
+              <point x="2444.0" y="26.29927048260356" />
+              <point x="-100.0" y="-23.75" />
             </edge>
             <edge source="ReferralBonus" target="ReferralProgram">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="134.0" y="-0.0" />
+              <point x="-126.5" y="-24.333333333333258" />
             </edge>
             <edge source="Role" target="User">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="59.0" y="-0.0" />
+              <point x="-285.0" y="-0.0" />
             </edge>
             <edge source="Order" target="Invoice">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="203.5" y="-62.25" />
+              <point x="1335.0" y="97.75" />
+              <point x="-89.5" y="-0.0" />
             </edge>
             <edge source="Referral" target="ReferralProgram">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="OrderItem" target="TaxRate">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="160.5" y="-14.625" />
+              <point x="1255.0" y="641.96875" />
+              <point x="-126.5" y="24.333333333333258" />
             </edge>
             <edge source="Country" target="State">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="62.5" y="12.75" />
+              <point x="3120.0" y="277.12499999999994" />
+              <point x="-87.0" y="9.125" />
+            </edge>
+            <edge source="OrderItem" target="TaxRate">
+              <point x="82.0" y="-0.0" />
+              <point x="-87.0" y="-0.0" />
             </edge>
             <edge source="TransactionAccount" target="TransactionLedger">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-148.0" y="-12.75" />
+              <point x="2744.0" y="26.29927048260356" />
+              <point x="100.0" y="-23.75" />
             </edge>
             <edge source="User" target="Order">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="-216.03999999999996" />
+              <point x="-203.5" y="-83.0" />
             </edge>
             <edge source="Address" target="AddressType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="150.0" y="11.583333333333258" />
+              <point x="-85.0" y="12.75" />
             </edge>
             <edge source="Batch" target="Transaction">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="91.0" y="-0.0" />
+              <point x="-72.5" y="-0.0" />
             </edge>
             <edge source="Product" target="Prototype">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="147.0" y="64.40000000000009" />
+              <point x="2824.0" y="1359.875" />
+              <point x="-100.0" y="-0.0" />
             </edge>
             <edge source="Merchant" target="VariantMerchant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="149.0" y="58.57142857142867" />
+              <point x="2364.0" y="958.492553912137" />
+              <point x="2444.0" y="1016.3139824835655" />
+              <point x="-96.5" y="-18.25" />
             </edge>
             <edge source="Invoice" target="Payment">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="89.5" y="-31.666666666666686" />
+              <point x="1588.0" y="66.08333333333326" />
+              <point x="1668.0" y="25.0" />
+              <point x="-42.5" y="-0.0" />
             </edge>
             <edge source="Referral" target="ReferralType">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="160.5" y="43.875" />
+              <point x="1255.0" y="700.46875" />
+              <point x="1335.0" y="696.71875" />
+              <point x="-78.0" y="12.75" />
             </edge>
             <edge source="Property" target="Product">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="168.0" y="-29.25" />
+              <point x="-147.0" y="64.40000000000009" />
             </edge>
             <edge source="ReferralProgram" target="Referral">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-126.5" y="-0.0" />
+              <point x="1255.0" y="612.71875" />
+              <point x="160.5" y="-43.875" />
             </edge>
             <edge source="Merchant" target="Variant">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-149.0" y="-51.25" />
+              <point x="2028.0" y="848.6711253407084" />
+              <point x="140.0" y="-53.666666666666515" />
             </edge>
             <edge source="Address" target="State">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="150.0" y="-34.75" />
+              <point x="3120.0" y="522.1492704826035" />
+              <point x="-87.0" y="27.375" />
             </edge>
             <edge source="Merchant" target="Product">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="149.0" y="87.85714285714289" />
+              <point x="2364.0" y="987.7782681978513" />
+              <point x="-147.0" y="-64.40000000000009" />
             </edge>
             <edge source="Variant" target="OrderItem">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="140.0" y="-71.55555555555566" />
+              <point x="2028.0" y="263.74999999999994" />
+              <point x="-82.0" y="23.75" />
             </edge>
             <edge source="User" target="StoreCredit">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="User" target="Account">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="-117.83999999999992" />
+              <point x="848.0" y="441.59374999999994" />
+              <point x="-55.5" y="-0.0" />
             </edge>
             <edge source="Property" target="ProductProperty">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="168.0" y="-9.75" />
+              <point x="2444.0" y="1287.2639824835655" />
+              <point x="2744.0" y="1287.2639824835655" />
+              <point x="2824.0" y="1254.125" />
+              <point x="-86.5" y="18.25" />
             </edge>
             <edge source="Merchant" target="Account">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="149.0" y="-58.57142857142867" />
+              <point x="2364.0" y="841.3496967692797" />
+              <point x="2444.0" y="856.4101946047778" />
+              <point x="-42.0" y="-0.0" />
             </edge>
             <edge source="Prototype" target="PrototypeProperty">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="100.0" y="-0.0" />
+              <point x="3120.0" y="1359.875" />
+              <point x="-90.5" y="-18.25" />
             </edge>
             <edge source="Order" target="Address">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="203.5" y="37.35000000000002" />
+              <point x="1335.0" y="311.59374999999994" />
+              <point x="2364.0" y="311.59374999999994" />
+              <point x="-150.0" y="-60.8125" />
             </edge>
             <edge source="Product" target="ProductProperty">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="147.0" y="-0.0" />
+              <point x="2824.0" y="1217.625" />
+              <point x="-86.5" y="-18.25" />
             </edge>
             <edge source="User" target="CartItem">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="98.19999999999982" />
+              <point x="848.0" y="1189.025" />
+              <point x="1255.0" y="1189.025" />
+              <point x="1335.0" y="1267.9" />
+              <point x="-83.0" y="-34.125" />
             </edge>
             <edge source="Merchant" target="Address">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="149.0" y="-87.85714285714289" />
+              <point x="2364.0" y="812.0639824835655" />
+              <point x="-150.0" y="60.8125" />
             </edge>
             <edge source="ItemType" target="CartItem">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="TransactionLedger" target="TransactionAccount">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-88.0" y="-12.75" />
+              <point x="83.0" y="-0.0" />
             </edge>
             <edge source="Coupon" target="Order">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="-65.5" y="-12.75" />
+              <point x="1335.0" y="334.84374999999994" />
+              <point x="203.5" y="62.25" />
+            </edge>
+            <edge source="TransactionLedger" target="TransactionAccount">
+              <point x="100.0" y="23.75" />
+              <point x="2744.0" y="73.79927048260356" />
+              <point x="-148.0" y="12.75" />
             </edge>
             <edge source="User" target="Address">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+              <point x="285.0" y="-137.48000000000002" />
+              <point x="848.0" y="405.59374999999994" />
+              <point x="2364.0" y="405.59374999999994" />
+              <point x="-150.0" y="-8.6875" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.19257033597377765" x="1820.5" y="828.5" />
+          <settings layout="Hierarchic Group" zoom="0.20199941193766538" x="1690.5" y="788.0" />
           <SelectedNodes />
           <Categories>
             <Category>Association fields</Category>

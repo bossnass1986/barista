@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   before_create :start_store_credits#, :subscribe_to_newsletters
   after_create  :set_referral_registered_at, :create_braintree_customer, :assign_user_role
 
-  belongs_to :account
+  # belongs_to :account
 
   # has_many    :users_newsletters
   # has_many    :newsletters, through: :users_newsletters

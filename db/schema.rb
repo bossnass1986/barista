@@ -187,8 +187,9 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   create_table "merchants", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.integer "account_id"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-16 10:27:32'
+    t.datetime "available_at", default: '2016-06-20 09:01:25'
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
@@ -442,7 +443,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   create_table "store_credits", force: :cascade do |t|
     t.decimal  "amount",     precision: 8, scale: 2, default: 0.0
     t.integer "user_id", null: false
-    t.datetime "expire_at", default: '2016-12-16 00:00:00'
+    t.datetime "expire_at", default: '2016-12-20 00:00:00'
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -453,7 +454,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-16', null: false
+    t.date "start_date", default: '2016-06-20', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -511,7 +512,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "email"
     t.string   "state"
     t.string   "mobile"
-    t.integer  "account_id"
     t.string   "customer_cim_id"
     t.string   "encrypted_password", limit: 128,                null: false
     t.string   "confirmation_token", limit: 128

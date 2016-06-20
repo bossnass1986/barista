@@ -11,7 +11,7 @@ class Merchant < ActiveRecord::Base
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
   has_one :address, as: :addressable, dependent: :destroy
-  has_one :account, dependent: :destroy
+  belongs_to :account, dependent: :destroy
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants
