@@ -1,9 +1,13 @@
 = form_for :session, url: session_path do |form|
-  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-    = form.email_field :email, class: 'mdl-textfield__input'
-    = form.label :email, class: 'mdl-textfield__label'
-  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-    = form.password_field :password, class: 'mdl-textfield__input'
-    = form.label :password, class: 'mdl-textfield__label'
-  = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
-  = link_to t(".forgot_password"), new_password_path, class: 'mdl-button mdl-js-button mdl-js-ripple-effect'
+  .mdl-grid
+    .mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        = form.email_field :email, class: 'mdl-textfield__input'
+        = form.label :email, class: 'mdl-textfield__label'
+      .mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          = form.password_field :password, class: 'mdl-textfield__input'
+          = form.label :password, class: 'mdl-textfield__label'
+      .mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+        = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
+        = link_to t(".forgot_password"), new_password_path, class: 'mdl-button mdl-js-button mdl-js-ripple-effect'
