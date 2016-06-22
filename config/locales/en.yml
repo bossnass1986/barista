@@ -44,7 +44,7 @@ en:
         title: 'Edit Address'
       form:
         header: 'My Details'
-    credit_cards:
+    payment_profiles:
       index:
         title: 'Payment Methods'
         no_records: 'Oh no! There are no saved cards!'

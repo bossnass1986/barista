@@ -105,17 +105,15 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "carts", ["user_id"], name: "index_carts_on_user_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
-    t.string   "name",             limit: 50
-    t.string   "abbreviation",     limit: 3
-    t.integer  "shipping_zone_id"
-    t.boolean  "active",                      default: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.string "name", limit: 50
+    t.string "abbreviation", limit: 3
+    t.boolean "active", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "countries", ["active"], name: "index_countries_on_active", using: :btree
   add_index "countries", ["name"], name: "index_countries_on_name", using: :btree
-  add_index "countries", ["shipping_zone_id"], name: "index_countries_on_shipping_zone_id", using: :btree
 
   create_table "coupons", force: :cascade do |t|
     t.string   "type",          limit: 255,                                         null: false
@@ -189,7 +187,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "email"
     t.integer "account_id"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-20 09:01:25'
+    t.datetime "available_at", default: '2016-06-22 11:50:26'
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
@@ -204,21 +202,17 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "merchants", ["permalink"], name: "index_merchants_on_permalink", unique: true, using: :btree
 
   create_table "order_items", force: :cascade do |t|
-    t.decimal  "price",                        precision: 8, scale: 2
-    t.decimal  "total",                        precision: 8, scale: 2
-    t.integer  "order_id",                                             null: false
-    t.integer  "variant_id",                                           null: false
-    t.string   "state",            limit: 255,                         null: false
+    t.decimal "price", precision: 8, scale: 2
+    t.decimal "total", precision: 8, scale: 2
+    t.integer "order_id", null: false
+    t.integer "variant_id", null: false
+    t.string "state", limit: 255, null: false
     t.integer  "tax_rate_id"
-    t.integer  "shipping_rate_id"
-    t.integer  "shipment_id"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id", using: :btree
-  add_index "order_items", ["shipment_id"], name: "index_order_items_on_shipment_id", using: :btree
-  add_index "order_items", ["shipping_rate_id"], name: "index_order_items_on_shipping_rate_id", using: :btree
   add_index "order_items", ["tax_rate_id"], name: "index_order_items_on_tax_rate_id", using: :btree
   add_index "order_items", ["variant_id"], name: "index_order_items_on_variant_id", using: :btree
 
@@ -237,10 +231,8 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.integer  "user_id"
     t.integer "merchant_id"
     t.integer  "bill_address_id"
-    t.integer  "ship_address_id"
     t.integer  "order_status_id", limit: 2
     t.integer  "coupon_id"
-    t.integer  "shipments_count",             default: 0
     t.boolean  "active",                      default: true,  null: false
     t.boolean  "shipped",                     default: false, null: false
     t.datetime "calculated_at"
@@ -254,7 +246,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "orders", ["email"], name: "index_orders_on_email", using: :btree
   add_index "orders", ["merchant_id"], name: "index_orders_on_merchant_id", using: :btree
   add_index "orders", ["number"], name: "index_orders_on_number", using: :btree
-  add_index "orders", ["ship_address_id"], name: "index_orders_on_ship_address_id", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
   create_table "payment_profiles", force: :cascade do |t|
@@ -443,7 +434,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   create_table "store_credits", force: :cascade do |t|
     t.decimal  "amount",     precision: 8, scale: 2, default: 0.0
     t.integer "user_id", null: false
-    t.datetime "expire_at", default: '2016-12-20 00:00:00'
+    t.datetime "expire_at", default: '2016-12-22 00:00:00'
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -454,7 +445,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-20', null: false
+    t.date "start_date", default: '2016-06-22', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

@@ -1,17 +1,21 @@
 - title t('.title')
-.mdl-cell.mdl-cell--3-col-phone
+.mdl-cell.mdl-cell--3-col-phone.mdl-cell--8-col-desktop
   Current Balance
-.mdl-cell.mdl-cell--1-col-phone
+.mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
   = number_to_currency(@store_credit.amount)
 - (20..50).step(10) do |n|
-  .mdl-cell.mdl-cell--3-col-phone
+  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--8-col-desktop
+    -#%label{:for => "option-#{n}"}
     Top up
     = number_to_currency(n)
-  .mdl-cell.mdl-cell--1-col-phone
-    = submit_tag number_to_currency(n), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
+    %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{:for => "option-#{n}"}
+      %input.mdl-radio__button{:id => "option-#{n}", :checked => "checked", :name => "options", :type => "radio", :value => n}/
+      %span.mdl-radio__label First
+  -#= submit_tag number_to_currency(n), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
   -#%h2.mdl-typography--display-3= number_to_currency @store_credit.amount
   -#= render 'form'
-.mdl-cell.mdl-cell--4-col-phone
+.mdl-cell.mdl-cell--4-col-phone.mdl-cell--12-col-desktop
   %h6.mdl-typography--title= t('.fine_print')
   %p= t('.summary')
   = submit_tag t('.confirm'), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

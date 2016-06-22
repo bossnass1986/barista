@@ -23,9 +23,7 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email)
-  end
-  def selected_myaccount_tab(tab)
-    tab == 'profile'
+    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email,
+                                 addresses_attributes: [:id, :first_name, :last_name, :address1, :address2, :city, :zip_code, :state_id])
   end
 end
