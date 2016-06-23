@@ -4,17 +4,17 @@ class Myaccount::PaymentProfilesController < Myaccount::BaseController
   end
 
   def show
-    @paypment_profile = current_user.payment_profiles.find(params[:id])
+    @payment_profile = current_user.payment_profiles.find(params[:id])
   end
 
   def new
-    @paypment_profile = current_user.payment_profiles.new
+    @payment_profile = current_user.payment_profiles.new
   end
 
   def create
     result = Braintree::PaymentMethod.create(
         :customer_id => current_user.customer_cim_id,
-        :payment_method_nonce => 'fake-valid-amex-nonce',
+        :payment_method_nonce => 'fake-valid-visa-nonce',
         :cardholder_name => "#{current_user.first_name} #{current_user.last_name}",
         :options => {
             :make_default => true,
@@ -51,22 +51,22 @@ class Myaccount::PaymentProfilesController < Myaccount::BaseController
       end
     end
 
-    @paypment_profile = current_user.payment_profiles.new(allowed_params)
-    if @paypment_profile.save
+    @payment_profile = current_user.payment_profiles.new(allowed_params)
+    if @payment_profile.save
       flash[:notice] = 'Successfully created credit card.'
-      redirect_to myaccount_credit_cards_url
+      redirect_to myaccount_payment_profiles_url
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @paypment_profile = current_user.payment_profiles.find(params[:id])
+    @payment_profile = current_user.payment_profiles.find(params[:id])
   end
 
   def update
-    @paypment_profile = current_user.payment_profiles.find(params[:id])
-    if @paypment_profile.update_attributes(allowed_params)
+    @payment_profile = current_user.payment_profiles.find(params[:id])
+    if @payment_profile.update_attributes(allowed_params)
       flash[:notice] = "Successfully updated credit card."
       redirect_to myaccount_credit_card_url(@credit_card)
     else
@@ -75,8 +75,8 @@ class Myaccount::PaymentProfilesController < Myaccount::BaseController
   end
 
   def destroy
-    @paypment_profile = current_user.payment_profiles.find(params[:id])
-    @paypment_profile.inactivate!
+    @payment_profile = current_user.payment_profiles.find(params[:id])
+    @payment_profile.inactivate!
     flash[:notice] = "Successfully destroyed credit card."
     redirect_to myaccount_credit_cards_url
   end

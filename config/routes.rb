@@ -42,7 +42,7 @@ Rails.application.routes.draw do
       resources :addresses
       resources :payment_profiles
       resources :referrals, only: [:index, :create, :update]
-      resource :store_credit, only: [:show]
+      resource :store_credit, only: [:show, :update]
       resource :overview, only: [:index, :show, :edit, :update]
     end
 

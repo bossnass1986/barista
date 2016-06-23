@@ -277,7 +277,8 @@ class User < ActiveRecord::Base
     )
     if result.success?
       puts result.customer.id
-      self.customer_cim_id = result.customer.id
+      # self.customer_cim_id = result.customer.id
+      update_column(:customer_cim_id, result.customer.id)
     else
       p result.errors
     end

@@ -1,12 +1,12 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    - if @credit_card.errors.any?
+    - if @payment_profile.errors.any?
       #error_explanation
         %h2
-          = pluralize(@credit_card.errors.count, "error")
+          = pluralize(@payment_profile.errors.count, "error")
           prohibited this credit_card from being saved:
         %ul
-          - @credit_card.errors.full_messages.each do |msg|
+          - @payment_profile.errors.full_messages.each do |msg|
             %li= msg
     .mdl-textfield.mdl-js-textfield
       %input#sample2.mdl-textfield__input{:pattern => "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$", :type => "number"}/

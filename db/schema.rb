@@ -187,7 +187,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "email"
     t.integer "account_id"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-22 11:50:26'
+    t.datetime "available_at", default: '2016-06-22 13:11:43'
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255

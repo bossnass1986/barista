@@ -12,7 +12,7 @@ en:
       address_information: 'Addresses'
       order_history: 'Order History'
       payment_methds: 'Payment Methods'
-      credits: 'Cup Town Balance'
+      credits: 'Credit Balance'
       referrals: 'Referrals'
       admin: 'Admin Panel'
       log_out: 'Log Out'
@@ -68,7 +68,7 @@ en:
         title: 'Referrals'
     store_credits:
       show:
-        title: 'Cup Town Balance'
+        title: 'Credit Balance'
         fine_print: 'No more coins'
         summary: "Cash only sign? No ATM in sight? Order straight from your smartphone and you’ll never have to worry about carrying cash around again."
         confirm: 'Confirm'

@@ -1,4 +1,4 @@
 - title t('.title')
-= form_for(@credit_card, :url => myaccount_credit_cards_path(@credit_card)) do |f|
+= form_for(@payment_profile, :url => myaccount_payment_profiles_path(@payment_profile)) do |f|
   = render :partial => 'form', :locals => {:f => f}
-= link_to 'Back to List', myaccount_credit_cards_path, :class => 'button'
+= link_to 'Back to List', myaccount_payment_profiles_path, :class => 'button'
