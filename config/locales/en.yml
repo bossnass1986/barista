@@ -69,12 +69,17 @@ en:
     store_credits:
       show:
         title: 'Credit Balance'
+        current_balance: 'Current Balance'
         fine_print: 'No more coins'
         summary: "Cash only sign? No ATM in sight? Order straight from your smartphone and you’ll never have to worry about carrying cash around again."
         confirm: 'Confirm'
       form:
         title: 'Select Top Up Amount'
+        top_up: 'TOP UP:'
         submit_button: 'Top Up Now'
+        fine_print: 'No more coins'
+        summary: "Cash only sign? No ATM in sight? Order straight from your smartphone and you’ll never have to worry about carrying cash around again."
+        confirm: 'Confirm'
   shopping:
     cart_items:
       index:
@@ -206,6 +211,11 @@ en:
       referrals:
         index:
           title: 'Referrals'
+      store_credits:
+        show:
+          title: 'Credit Balance'
+        edit:
+          title: 'Adjust Credit Balance'
     users:
       index:
         title: 'Customers'

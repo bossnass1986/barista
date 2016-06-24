@@ -8,9 +8,9 @@ class Admin::MerchantsController < Admin::BaseController
   def new
     @merchant = Merchant.new
     @states = State.form_selector
-    @merchant.build_address if @merchant.address1.nil?
+    @merchant.build_address
     @merchant.build_account
-    @merchant.build_primary_phone if @merchant.primary_phone.nil?
+    @merchant.build_primary_phone
   end
 
   def create

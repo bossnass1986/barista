@@ -25,15 +25,15 @@
     - else
       %li= address_fields.select :country_id, select_countries, :include_blank => true
       -#= form.fields_for :trading_hours do |hours_fields|
-  .mdl-grid
-    .mdl-cell.mdl-cell--2-col
-      %label
-        = hours_fields.index
-        = Date::DAYNAMES[hours_fields.index]
-    .mdl-cell.mdl-cell--4-col
-      = hours_fields.time_select :open_time, {:default => {:hour => '9', :minute => '00'}, :minute_step => 15, :ampm => true}
-    .mdl-cell.mdl-cell--4-col
-      = hours_fields.time_select :close_time, {:default => {:hour => '17', :minute => '00'}, :minute_step => 15, :ampm => true}
-    .mdl-cell.mdl-cell--2-col
-      %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => hours_fields}
-        = hours_fields.check_box :trades, :class => 'mdl-checkbox__input', :id => hours_fields
+        -#.mdl-grid
+        -#  .mdl-cell.mdl-cell--2-col
+        -#    %label
+        -#      = hours_fields.index
+        -#      = Date::DAYNAMES[hours_fields.index]
+        -#  .mdl-cell.mdl-cell--4-col
+        -#    = hours_fields.time_select :open_time, {:default => {:hour => '9', :minute => '00'}, :minute_step => 15, :ampm => true}
+        -#  .mdl-cell.mdl-cell--4-col
+        -#    = hours_fields.time_select :close_time, {:default => {:hour => '17', :minute => '00'}, :minute_step => 15, :ampm => true}
+        -#  .mdl-cell.mdl-cell--2-col
+        -#    %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => hours_fields}
+        -#      = hours_fields.check_box :trades, :class => 'mdl-checkbox__input', :id => hours_fields

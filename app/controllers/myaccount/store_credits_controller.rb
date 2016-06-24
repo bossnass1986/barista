@@ -42,7 +42,7 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
   end
 
   def customer
-    @customer ||= User.includes(:store_credit).find(params[:user_id])
+    @customer ||= User.includes(:store_credit).find(params[:current_user])
   end
 
   def amount_to_add_is_valid?

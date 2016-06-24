@@ -28,8 +28,8 @@ Rails.application.routes.draw do
     resource :about, only: [:show]
     resources :states, only: [:index]
     resources :terms, only: [:index]
-    resource :unsubscribe, only: :show
-    resources :wish_items, only: [:index, :destroy]
+    # resource :unsubscribe, only: :show
+    # resources :wish_items, only: [:index, :destroy]
 
     namespace :customer do
       resources :registrations, only: [:index, :new, :create]
@@ -104,21 +104,21 @@ Rails.application.routes.draw do
       resources :merchants
       get "help" => "help#index"
 
-      namespace :reports do
-        resource :overview, only: [:show]
-        resources :graphs
-        resources :weekly_charts, only: [:index]
-      end
-      namespace :rma do
-        resources :orders do
-          resources :return_authorizations do
-            member do
-              put :complete
-            end
-          end
-        end
-        #resources  :shipments
-      end
+      # namespace :reports do
+      #   resource :overview, only: [:show]
+      #   resources :graphs
+      #   resources :weekly_charts, only: [:index]
+      # end
+      # namespace :rma do
+      #   resources :orders do
+      #     resources :return_authorizations do
+      #       member do
+      #         put :complete
+      #       end
+      #     end
+      #   end
+      #   resources  :shipments
+      # end
 
       namespace :history do
         resources :orders, only: [:index, :show] do
@@ -128,24 +128,24 @@ Rails.application.routes.draw do
 
       namespace :fulfillment do
         resources :orders do
-          member do
-            put :create_shipment
-          end
+          # member do
+          #   put :create_shipment
+          # end
           resources :comments
         end
 
-        namespace :partial do
-          resources :orders do
-            resources :shipments, only: [:create, :new, :update]
-          end
-        end
-
-        resources :shipments do
-          member do
-            put :ship
-          end
-          resources :addresses, only: [:edit, :update] # This is for editing the shipment address
-        end
+        # namespace :partial do
+        #   resources :orders do
+        #     resources :shipments, only: [:create, :new, :update]
+        #   end
+        # end
+        #
+        # resources :shipments do
+        #   member do
+        #     put :ship
+        #   end
+        #   resources :addresses, only: [:edit, :update] # This is for editing the shipment address
+        # end
       end
       namespace :shopping do
         resources :carts
@@ -163,12 +163,12 @@ Rails.application.routes.draw do
               post :start_checkout_process
             end
           end
-          resources :shipping_addresses, only: [:index, :update, :new, :create, :select_address] do
-            member do
-              put :select_address
-            end
-          end
-          resources :shipping_methods, only: [:index, :update]
+          # resources :shipping_addresses, only: [:index, :update, :new, :create, :select_address] do
+          #   member do
+          #     put :select_address
+          #   end
+          # end
+          # resources :shipping_methods, only: [:index, :update]
         end
       end
       namespace :config do
@@ -233,9 +233,9 @@ Rails.application.routes.draw do
           resources :descriptions, only: [:edit, :update]
         end
       end
-      namespace :document do
-        resources :invoices
-      end
+      # namespace :document do
+      #   resources :invoices
+      # end
     end
 
     root :to => 'shopping/merchants#index'

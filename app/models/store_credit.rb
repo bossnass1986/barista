@@ -6,6 +6,8 @@ class StoreCredit < ActiveRecord::Base
   validates :user_id, presence: true
   validates :amount , presence: true
 
+  validates :amount, :format => {:with => /\A\d+(?:\.\d{0,2})?\z/}, :numericality => {:greater_than => 20, :less_than => 100}
+
   after_find :ensure_sql_math_rounding_issues
 
   before_save :set_expiration_date
@@ -14,13 +16,13 @@ class StoreCredit < ActiveRecord::Base
   # @param [Float] amount to remove
   # @return [none]
   def remove_credit(amount_to_remove)
-    credit_amount = "#{self.amount} - #{amount_to_remove.to_f.round_at(2)}"
-    update(amount: credit_amount)
+    credit_amount = "#{self.amount} - #{amount_to_remove.to_f.round(2)}"
+    self.update(amount: credit_amount)
   end
 
   def add_credit(amount_to_add)
-    credit_amount = "#{self.amount} + #{amount_to_add.to_f.round_at(2)}"
-    update(amount: credit_amount)
+    credit_amount = "#{self.amount} + #{amount_to_add.to_f.round(2)}"
+    self.update(amount: credit_amount)
   end
 
   def set_expiration_date

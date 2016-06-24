@@ -1,11 +1,7 @@
 - title t('.title')
 .mdl-cell.mdl-cell--3-col-phone.mdl-cell--8-col-desktop
-  Current Balance
+  =t('.current_balance')
 .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
-  = number_to_currency(@store_credit.amount)
-  = form_for(@store_credit, :url => myaccount_store_credit_path(@store_credit)) do |f|
-    = render :partial => 'form', :locals => {:f => f}
-.mdl-cell.mdl-cell--4-col-phone.mdl-cell--12-col-desktop
-  %h6.mdl-typography--title= t('.fine_print')
-  %p= t('.summary')
-  = submit_tag t('.confirm'), :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+  .mdl-textfield--align-right.add_credit= number_to_currency(@store_credit.amount)
+= form_for(@store_credit, :url => myaccount_store_credit_path( @store_credit ), :html => {:class => 'mdl-grid--no-spacing'}) do |f|
+  = render :partial => 'form', :locals => {:f => f}

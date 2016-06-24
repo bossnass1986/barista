@@ -737,6 +737,17 @@ select:focus {
   outline: none
 }
 
+// Store Credits
+
+.list-control li {
+  border-bottom: 1px solid lightgray;
+  margin-right: 16px
+}
+
+.demo-list-radio {
+  display: inline;
+}
+
 /* Hide label */
 .mdl-selectfield label {
   display: none;
