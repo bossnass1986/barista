@@ -1007,7 +1007,7 @@ main {
 /* Animations */
 /* Dialog */
 html, body {
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Quicksand", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -8478,13 +8478,13 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
     margin: 10px 12px;
     top: 0;
     left: 0;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
     z-index: 4;
 }
 
 .mdl-layout__header .mdl-layout__drawer-button {
     position: absolute;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
     background-color: inherit;
 }
 
@@ -8538,8 +8538,8 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
     min-height: 64px;
     max-height: 1000px;
     z-index: 3;
-    background-color: rgb(0, 150, 136);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
     box-shadow: 0 2px 2px 0 transparent, 0 3px 1px -2px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
@@ -8723,7 +8723,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
 
 .mdl-layout__header-row .mdl-navigation__link {
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
     line-height: 64px;
     padding: 0 24px;
 }
@@ -8813,7 +8813,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: rgb(0, 150, 136);
+    background-color: rgb(255, 255, 255);
     overflow-y: hidden;
     overflow-x: scroll;
 }
@@ -8881,7 +8881,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
     width: 56px;
     z-index: 4;
     text-align: center;
-    background-color: rgb(0, 150, 136);
+    background-color: rgb(255, 255, 255);
     color: transparent;
     cursor: pointer;
     -webkit-user-select: none;
@@ -8915,7 +8915,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
 }
 
 .mdl-layout__tab-bar-button.is-active {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
 }
 
 .mdl-layout__tab-bar-left-button {
@@ -8964,7 +8964,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 150, 136);
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
@@ -8994,7 +8994,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .m
 }
 
 .mdl-layout__tab .mdl-layout__tab-ripple-container .mdl-ripple {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 150, 136);
 }
 
 .mdl-layout__tab-panel {
@@ -11572,7 +11572,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple, .mdl-s
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     display: block;
     font-size: 16px;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Quicksand", "Helvetica", "Arial", sans-serif;
     margin: 0;
     padding: 4px 0;
     width: 100%;
@@ -13404,44 +13404,86 @@ a {
     margin-top: 10px;
 }
 
-.demo-card-wide.mdl-card {
-    width: 100%;
+.merchant-settings, .product-settings {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
 }
 
-.demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 136px;
-    background-image: url(/assets/products/cappuccino-96d5e4725098bbefc0699bad5d6401250005e9c08aa1ed3cf4977d6f8833a449.jpg);
-    background-size: 420px 136px;
+.merchant-settings h3, .product-settings h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(0, 150, 136);
+    margin: 24px 0 0;
 }
 
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
-}
-
-.mdl-card__title {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start;
-    padding: 0px;
-}
-
-.mdl-card__title-text {
-    background: rgba(64, 64, 64, 0.6);
-    width: 100%;
-    padding: 10px;
-    font-weight: 700;
-}
-
-.mdl-card__actions {
-    display: -webkit-box;
+.coffee-pic .mdl-card {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    min-height: 360px;
+}
+
+.coffee-pic .mdl-card__title {
+    padding: 0 16px;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    color: #fff;
+}
+
+.coffee-pic .mdl-card__media {
     box-sizing: border-box;
-    -webkit-box-align: center;
+    background-image: url(/assets/products/cappuccino-96d5e4725098bbefc0699bad5d6401250005e9c08aa1ed3cf4977d6f8833a449.jpg);
+    background-size: cover;
+    padding: 24px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    cursor: pointer;
+    height: 136px;
+}
+
+.coffee-pic .mdl-card__supporting-text {
+    width: 100%;
+    padding: 0 16px;
+    min-height: 64px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
+}
+
+.coffee-pic .mdl-card__supporting-text h3 {
+    margin: 0;
+    font-weight: 900;
+}
+
+.coffee-pic .mdl-card__media ~ .mdl-card__supporting-text {
+    min-height: 64px;
+}
+
+.coffee-pic .mdl-card__supporting-text:not(:last-child) {
+    box-sizing: border-box;
+    min-height: 76px;
 }
 
 .merchant-list-three {
