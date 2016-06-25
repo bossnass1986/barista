@@ -3,5 +3,5 @@
   =t('.current_balance')
 .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
   .mdl-textfield--align-right.add_credit= number_to_currency(@store_credit.amount)
-= form_for(@store_credit, :url => myaccount_store_credit_path( @store_credit ), :html => {:class => 'mdl-grid--no-spacing'}) do |f|
+= form_for(@store_credit, :url => myaccount_store_credit_path, :html => {:class => 'mdl-grid--no-spacing'}) do |f|
   = render :partial => 'form', :locals => {:f => f}

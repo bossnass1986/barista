@@ -3,12 +3,9 @@ class StoreCredit < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :user_id, presence: true
-  validates :amount , presence: true
+  validates :amount, presence: true
 
-  validates :amount, :format => {:with => /\A\d+(?:\.\d{0,2})?\z/}, :numericality => {:greater_than => 20, :less_than => 100}
-
-  after_find :ensure_sql_math_rounding_issues
+  # after_find :ensure_sql_math_rounding_issues
 
   before_save :set_expiration_date
   # removes amount from object using SQL math
@@ -16,12 +13,12 @@ class StoreCredit < ActiveRecord::Base
   # @param [Float] amount to remove
   # @return [none]
   def remove_credit(amount_to_remove)
-    credit_amount = "#{self.amount} - #{amount_to_remove.to_f.round(2)}"
+    credit_amount = self.amount - amount_to_remove.to_f.round(2)
     self.update(amount: credit_amount)
   end
 
   def add_credit(amount_to_add)
-    credit_amount = "#{self.amount} + #{amount_to_add.to_f.round(2)}"
+    credit_amount = self.amount + amount_to_add.to_f.round(2)
     self.update(amount: credit_amount)
   end
 

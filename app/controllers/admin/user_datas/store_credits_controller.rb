@@ -11,15 +11,15 @@ class Admin::UserDatas::StoreCreditsController < Admin::UserDatas::BaseControlle
 
   def update
     result = Braintree::Transaction.sale(
-        :amount => :amount_added,
+        :amount => params[:amount_to_add].to_f,
         :customer_id => customer.customer_cim_id,
         :options => {
             :submit_for_settlement => true
         }
     )
     if result.success?
-      p 'Transaction Successful'
-      customer.store_credit.add_credit(:amount_added)
+      logger.info "Added to #{params[:amount_to_add].to_f} to #{customer.first_name} #{customer.last_name} (#{customer.customer_cim_id})"
+      customer.store_credit.add_credit(params[:amount_to_add].to_f)
       redirect_to admin_user_datas_user_store_credits_url(customer), :notice => "Successfully updated store credit."
     else
       result.errors.each do |error|
@@ -38,10 +38,6 @@ class Admin::UserDatas::StoreCreditsController < Admin::UserDatas::BaseControlle
 
   def customer
     @customer ||= User.includes(:store_credit).find(params[:user_id])
-  end
-
-  def amount_added
-    params[:amount_to_add].to_f
   end
 
 end
