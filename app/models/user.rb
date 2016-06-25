@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   rolify
 
   before_validation :sanitize_data
-  before_create :start_store_credits#, :subscribe_to_newsletters
+  after_create :start_store_credits #, :subscribe_to_newsletters
   after_create  :set_referral_registered_at, :create_braintree_customer, :assign_user_role
 
   # belongs_to :account
@@ -242,7 +242,7 @@ class User < ActiveRecord::Base
   end
 
   def start_store_credits
-    self.store_credit = StoreCredit.new( amount: 0.0, user: self)
+    self.store_credit = StoreCredit.new(amount: 0.0, user: self)
   end
 
   def password_required?
