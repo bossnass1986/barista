@@ -5,9 +5,9 @@ class StoreCredit < ActiveRecord::Base
 
   validates :amount, presence: true
 
-  # after_find :ensure_sql_math_rounding_issues
+  after_find :ensure_sql_math_rounding_issues
 
-  before_save :set_expiration_date
+  # after_save :set_expiration_date
   # removes amount from object using SQL math
   #
   # @param [Float] amount to remove
@@ -22,19 +22,21 @@ class StoreCredit < ActiveRecord::Base
     self.update(amount: credit_amount)
   end
 
-  def set_expiration_date
-    self.expire_at = Date.today + 6.months
-  end
-
   def remaining_days
-    expired? ? 0 : (Date.today - Subscription.expiry_date).to_i
+    time_ago_in_words(self.expire_at)
+    # distance_of_time_in_words(self.expire_at,Date.today)
+    # expired? ? 0 : (self.expire_at - Date.today).to_i
   end
 
   def expired?
-    (Date.today - Subscription.expiry_date).to_i <= 0
+    (self.expire_at - Date.today).to_i <= 0
   end
 
   private
+
+  def set_expiration_date
+    self.update_column(:expire_at, Date.today + 6.months)
+  end
 
   def ensure_sql_math_rounding_issues
     self.amount = amount.to_f.round(2)
@@ -42,7 +44,6 @@ class StoreCredit < ActiveRecord::Base
 
   def expire_credits
     self.find_by_statement_cache
-
   end
 
 end

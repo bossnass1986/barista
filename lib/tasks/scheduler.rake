@@ -1,7 +1,7 @@
 desc 'These tasks are called by the Heroku scheduler add-on'
-task :update_feed => :environment do
-  puts "Updating feed..."
-  NewsFeed.update
+task :expire_credits => :environment do
+  puts "Expiring unused credits..."
+  StoreCredit.expire_credits
   puts "done."
 end
 
