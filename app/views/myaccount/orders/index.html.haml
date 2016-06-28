@@ -1,36 +1,32 @@
 - title t('.title')
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col
-    - if @orders.empty?
-      = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
-    - else
-      test
--#- unless @orders.present?
-  .mdl-grid
-    .mdl-cell.mdl-cell--12-col.mdl-cell--middle
-      .material-icons.mdl-typography--display-4 history
-      .mdl-typography--headline= t('order.no_orders')
-
--#.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
-  .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab.is-active{:href => "#starks-panel"}
-      %span.mdl-badge{"data-badge" => "4"}
-        Pending
-    %a.mdl-tabs__tab{:href => "#lannisters-panel"}
-      %span.mdl-badge{"data-badge" => "6"}
-        Completed
-  #starks-panel.mdl-tabs__panel.is-active
-    %ul
-      %li Eddard
-      %li Catelyn
-      %li Robb
-      %li Sansa
-      %li Brandon
-      %li Arya
-      %li Rickon
-  #lannisters-panel.mdl-tabs__panel
-    %ul
-      %li Tywin
-      %li Cersei
-      %li Jamie
-      %li Tyrion
+  -#.mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+    -#- if @orders.empty?
+    -#  = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
+    -#- else
+  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--1-offset-tablet.mdl-cell--2-col-tablet
+    Activty
+  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
+    Order
+  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
+    Status
+  .mdl-cell.mdl-cell--hide-phone.mdl-cell--1-col-tablet
+    %i.material-icons credit_card
+  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--2-col-tablet
+    %p Date
+    %p Activty/Venue
+  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
+    Order #
+  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
+    %p Pending
+    %p $20
+  .mdl-cell.mdl-cell--hide-phone.mdl-cell--1-col-tablet
+    %i.material-icons local_cafe
+  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--2-col-tablet
+    %p Date
+    %p Activty/Venue
+  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
+    Order #
+  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
+    %p Pending
+    %p $20

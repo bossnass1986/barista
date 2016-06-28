@@ -29,8 +29,8 @@ class Myaccount::AddressesController < ApplicationController
         format.html { redirect_to(myaccount_address_url(@address), :notice => 'Address was successfully created.') }
         result = Braintree::Address.create(
             :customer_id         => current_user.customer_cim_id,
-            :first_name          => @address.first_name,
-            :last_name           => @address.last_name,
+            :first_name => current_user.first_name,
+            :last_name => current_user.last_name,
             :street_address      => @address.address1,
             :locality            => @address.city,
             :region              => @address.state_name,

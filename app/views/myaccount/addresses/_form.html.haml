@@ -24,38 +24,11 @@
 .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
   = f.text_field :zip_code, class: 'mdl-textfield__input'
   = f.label :zip_code, class: 'mdl-textfield__label'
-  .mdl-selectfield
-    %label Standard Select
-    %select.browser-default
-      %option{:disabled => "disabled", :selected => "selected", :value => ""} Choose your option
-      %option{:value => "1"} Option 1
-      %option{:value => "2"} Option 2
-      %option{:value => "3"} Option 3
   -#.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
       = address_fields.select   :state_id, @states, :include_blank => true
       = address_fields.label :state_id, class: 'mdl-textfield__label'
-  - if countries.size == 1
-    = address_fields.hidden_field   :country_id
-  - else
+  -#- if countries.size == 1
+  -#  = address_fields.hidden_field   :country_id
+  -#- else
     %li= address_fields.select   :country_id, select_countries, :include_blank => true
--#%section.block-list
-  -#%header= t('myaccount.address.form.header')
-  %ul
-    %li= f.text_field :first_name, placeholder: :first_name.upcase, value: current_user.first_name
-    %li= f.text_field :last_name, placeholder: :last_name, value: current_user.last_name
-    %li= f.text_field :address1, placeholder: :address_1
-    %li= f.text_field :address2, placeholder: :address_2
-    %li= f.text_field :city, placeholder: :city
-    %li= f.text_field :zip_code, placeholder: :post_code
-    %li= f.select   :state_id, @states, :include_blank => true
-    - if countries.size == 1
-      = f.hidden_field   :country_id
-    - else
-      %li= f.select   :country_id, select_countries, :include_blank => true
--#-#.field.twelve.large-12.column{:style => "margin-bottom:10px;"}
-    -#%li
-      %span Default Address
-      .switch
-        = f.check_box :default, :id => 'default_address'
-          %label{:for => "default_address"}
 = f.submit 'Submit', :class => 'small button'

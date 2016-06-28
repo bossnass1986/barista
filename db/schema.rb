@@ -187,7 +187,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "email"
     t.integer "account_id"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-22 13:11:43'
+    t.datetime "available_at", default: '2016-06-28 09:30:33'
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
@@ -215,13 +215,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id", using: :btree
   add_index "order_items", ["tax_rate_id"], name: "index_order_items_on_tax_rate_id", using: :btree
   add_index "order_items", ["variant_id"], name: "index_order_items_on_variant_id", using: :btree
-
-  create_table "order_statuses", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
 
   create_table "orders", force: :cascade do |t|
     t.string   "number",          limit: 255
@@ -432,9 +425,10 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "states", ["name"], name: "index_states_on_name", using: :btree
 
   create_table "store_credits", force: :cascade do |t|
-    t.decimal  "amount",     precision: 8, scale: 2, default: 0.0
+    t.decimal "amount", precision: 8, scale: 2, default: 0.0
     t.integer "user_id", null: false
-    t.datetime "expire_at", default: '2016-12-22 00:00:00'
+    t.datetime "expire_at", default: '2016-12-28 00:00:00'
+    t.datetime "last_expired_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -445,7 +439,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-22', null: false
+    t.date "start_date", default: '2016-06-28', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

@@ -24,7 +24,6 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
       result.errors.each do |error|
         puts error.message
         customer.errors.add(:base, error.message)
-        form_info
         render :show, :notice => error.message
       end
     end

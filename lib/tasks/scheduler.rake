@@ -1,8 +1,8 @@
 desc 'These tasks are called by the Heroku scheduler add-on'
 task :expire_credits => :environment do
-  puts "Expiring unused credits..."
-  StoreCredit.expire_credits
-  puts "done."
+  puts 'Expiring unused credits...'
+  StoreCredit.expire_credits!
+  puts 'Expired unused credits... '
 end
 
 task :send_reminders => :environment do

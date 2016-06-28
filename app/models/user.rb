@@ -15,9 +15,6 @@ class User < ActiveRecord::Base
 
   # belongs_to :account
 
-  # has_many    :users_newsletters
-  # has_many    :newsletters, through: :users_newsletters
-
   has_many  :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
   has_one   :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
 
@@ -239,7 +236,7 @@ class User < ActiveRecord::Base
     if refer_al = Referral.find_by_email(email)
       refer_al.set_referral_user(id)
     end
-  end
+    end
 
   def start_store_credits
     self.store_credit = StoreCredit.new(amount: 0.0, user: self)
@@ -250,7 +247,7 @@ class User < ActiveRecord::Base
   end
 
   def subscribe_to_newsletters
-    newsletter_ids = Newsletter.where( autosubscribe: true ).pluck(:id)
+    newsletter_ids = Newsletter.where(autosubscribe: true).pluck(:id)
     self.newsletter_ids = newsletter_ids
   end
 
@@ -259,9 +256,9 @@ class User < ActiveRecord::Base
   # @param  [ none ]
   # @return [ none ]
   def sanitize_data
-    self.email      = self.email.strip.downcase         unless email.blank?
-    self.first_name = self.first_name.strip.capitalize  unless first_name.nil?
-    self.last_name  = self.last_name.strip.capitalize   unless last_name.nil?
+    self.email = self.email.strip.downcase unless email.blank?
+    self.first_name = self.first_name.strip.capitalize unless first_name.nil?
+    self.last_name = self.last_name.strip.capitalize unless last_name.nil?
 
     ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
     # self.account = Account.first unless account_id
@@ -277,12 +274,11 @@ class User < ActiveRecord::Base
     )
     if result.success?
       puts result.customer.id
-      # self.customer_cim_id = result.customer.id
       update_column(:customer_cim_id, result.customer.id)
     else
       p result.errors
     end
-  end
+    end
 
   def assign_user_role
     # self.add_role(:customer)

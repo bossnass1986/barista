@@ -9,6 +9,7 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   def edit
     @user = current_user
     @states = State.form_selector
+    @user.build_address if @user.address1.nil?
   end
 
   def update

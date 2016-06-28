@@ -27,7 +27,7 @@
           = render 'shared/compact_menu'
       %main.mdl-layout__content
         .page-content
-          .mdl-grid{'ng-view' => ''}
+          .mdl-grid--no-spacing{'ng-view' => ''}
             - flash.each do |key, value|
               %div{:class => "alert alert-#{key}"}= value
             = yield

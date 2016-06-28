@@ -1,18 +1,24 @@
 - title t('.title')
-- if @merchant.products.empty?
+-#- if @merchant.products.empty?
   .mdl-grid
     .mdl-cell.mdl-cell--12-col
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
-- else
-  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
-    .mdl-tabs__tab-bar
-      %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
-      %a.mdl-tabs__tab{:href => '#cold-panel'} Cold
-    #hot-panel.mdl-tabs__panel.is-active
-      %ul.product-list-three.mdl-list
-        - @merchant.products.where('products.prototype_id = 1').select(&:id).flatten.uniq.each do |item|
-          = render :partial => 'product', :locals => {:item => item }
-    #cold-panel.mdl-tabs__panel
-      %ul.product-list-three.mdl-list
-        - @merchant.products.where('products.prototype_id = 2').select(&:id).flatten.uniq.each do |item|
-          = render :partial => 'product', :locals => {:item => item }
+-#- else
+.mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+  .cover-photo
+    cover photo
+    .profile-photo
+
+
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab.is-active{:href => '#hot-panel'} Hot
+    %a.mdl-tabs__tab{:href => '#cold-panel'} Cold
+  #hot-panel.mdl-tabs__panel.is-active
+    %ul.product-list-three.mdl-list
+      - @merchant.products.where('products.prototype_id = 1').select(&:id).flatten.uniq.each do |item|
+        = render :partial => 'product', :locals => {:item => item }
+  #cold-panel.mdl-tabs__panel
+    %ul.product-list-three.mdl-list
+      - @merchant.products.where('products.prototype_id = 2').select(&:id).flatten.uniq.each do |item|
+        = render :partial => 'product', :locals => {:item => item }
