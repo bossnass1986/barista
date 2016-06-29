@@ -220,6 +220,12 @@ class User < ActiveRecord::Base
 
   private
 
+  class << self
+    def one_month_reminder!
+      StoreCredit.where("expire_at <= ?", Date.today.end_of_day + 3.months)
+    end
+  end
+
   def self.first_name_filter(first_name)
     first_name.present? ? where("users.first_name LIKE ?", "#{first_name}%") : all
   end

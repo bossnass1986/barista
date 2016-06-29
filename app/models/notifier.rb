@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
   layout 'email'
-  default :from => "system@example.com"
+  default :from => "support@cup.town"
 
   # Simple Welcome mailer
   # => CUSTOMIZE FOR YOUR OWN APP
@@ -19,6 +19,12 @@ class Notifier < ActionMailer::Base
       format.html { render :text => "<h1>Welcome</h1> #{@recipient.name} <a href='#{customer_activation_url(:a => @recipient.perishable_token )}'>Click to Activate</a>" }
     end
 
+  end
+
+  def referral_invite(user_id)
+    @user = User.find(user_id)
+    mail(:to => @user.email,
+         :subject => "1 month reminder")
   end
 
   def password_reset_instructions(user_id)
@@ -52,7 +58,7 @@ class Notifier < ActionMailer::Base
          :subject => "Order Confirmation")
   end
 
-  def referral_invite(referral_id, inviter_id)
+  def referral_inviter(referral_id, inviter_id)
     @user     = User.find(inviter_id)
     @referral = Referral.find(referral_id)
     @url      = root_url

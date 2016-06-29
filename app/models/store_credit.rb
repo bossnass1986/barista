@@ -23,11 +23,11 @@ class StoreCredit < ActiveRecord::Base
   end
 
   def remaining_days
-    expired? ? 0 : (Date.parse(self.expire_at) - Date.today).to_i
+    expired? ? 0 : (self.expire_at.to_datetime - Date.today).to_i
   end
 
   def expired?
-    (Date.parse(self.expire_at) - Date.today).to_i <= 0
+    (self.expire_at.to_datetime - Date.today).to_i <= 0
   end
 
   private
