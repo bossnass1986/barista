@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   include Clearance::User
 
   include AASM
-  include TransactionAccountable
   include UserCim
   include Presentation::UserPresenter
   include UserEmailer
@@ -60,10 +59,7 @@ class User < ActiveRecord::Base
   has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
   has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
   has_many    :payment_profiles
-  has_many    :transaction_ledgers, as: :accountable
 
-  # has_many    :return_authorizations
-  # has_many    :authored_return_authorizations, class_name: 'ReturnAuthorization', foreign_key: 'author_id'
 
   # validates :first_name,  presence: true, if: :registered_user?,
   #           format:   { with: ::CustomValidators::Names.name_validator },
@@ -200,62 +196,33 @@ class User < ActiveRecord::Base
     store_credit.amount
   end
 
-  # Find users that have signed up for the subscription
-  #
-  # @params [ none ]
-  # @return [ Arel ]
-  def self.find_subscription_users
-    where('users.account_id NOT IN (?)', Account::FREE_ACCOUNT_IDS )
-  end
-
-  # paginated results from the admin User grid
-  #
-  # @param [Optional params]
-  # @return [ Array[User] ]
-  def self.admin_grid(params = {})
-    includes(:roles).first_name_filter(params[:first_name]).
-        last_name_filter(params[:last_name]).
-        email_filter(params[:email])
-  end
-
   private
 
   class << self
     def one_month_reminder!
       StoreCredit.where("expire_at <= ?", Date.today.end_of_day + 3.months)
     end
-  end
+    end
 
-  def self.first_name_filter(first_name)
-    first_name.present? ? where("users.first_name LIKE ?", "#{first_name}%") : all
-  end
-
-  def self.last_name_filter(last_name)
-    last_name.present? ? where("users.last_name LIKE ?", "#{last_name}%") : all
-  end
-
-  def self.email_filter(email)
-    email.present? ? where("users.email LIKE ?", "#{email}%") : all
-  end
 
   def set_referral_registered_at
     if refer_al = Referral.find_by_email(email)
       refer_al.set_referral_user(id)
     end
-    end
+  end
 
   def start_store_credits
     self.store_credit = StoreCredit.new(amount: 0.0, user: self)
-  end
+    end
 
   def password_required?
     self.crypted_password.blank?
-  end
+    end
 
   def subscribe_to_newsletters
     newsletter_ids = Newsletter.where(autosubscribe: true).pluck(:id)
     self.newsletter_ids = newsletter_ids
-  end
+    end
 
   # sanitizes the saving of data.  removes white space and assigns a free account type if one doesn't exist
   #
@@ -268,7 +235,7 @@ class User < ActiveRecord::Base
 
     ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
     # self.account = Account.first unless account_id
-  end
+    end
 
   def create_braintree_customer
     # self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
@@ -276,15 +243,17 @@ class User < ActiveRecord::Base
         :first_name => self.first_name,
         :last_name => self.last_name,
         :email => self.email,
-        :phone => self.mobile
+        :phone => self.mobile,
+        :payment_method_nonce => 'fake-valid-nonce'
     )
     if result.success?
       puts result.customer.id
+      puts result.customer.payment_methods[0].token
       update_column(:customer_cim_id, result.customer.id)
     else
       p result.errors
     end
-    end
+  end
 
   def assign_user_role
     # self.add_role(:customer)

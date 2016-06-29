@@ -22,7 +22,6 @@ Rails.application.routes.draw do
 
     resources :users, controller: :users, only: :create
 
-    resources :images
 
     get 'admin' => 'admin/dashboard#index'
     get 'admin/merchandise' => 'admin/merchandise/summary#index'
@@ -236,8 +235,7 @@ Rails.application.routes.draw do
         end
       end
       # namespace :document do
-      #   resources :invoices
-      # end
+      #       # end
     end
 
     root :to => 'shopping/merchants#index'

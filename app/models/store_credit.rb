@@ -32,9 +32,28 @@ class StoreCredit < ActiveRecord::Base
 
   private
 
+  def process_braintree_payment(amount)
+    result = Braintree::Transaction.sale(
+        :amount => amount.to_f,
+        # :order_id => "order id",
+        :customer_id => customer_cim_id,
+        :tax_amount => (amount.to_f / 11).round(2),
+        :options => {
+            :submit_for_settlement => true
+        }
+    )
+    add_braintree_errors(result.error) unless result.success?
+  end
+
+  def add_braintree_errors(error_object)
+    error_object.each do |error|
+      errors.add(:braintree, error.message)
+    end
+  end
+
   def set_expiration_date
     self.update_column(:expire_at, Date.today.end_of_day + 6.months)
-  end
+    end
 
   def ensure_sql_math_rounding_issues
     self.amount = amount.to_f.round(2)

@@ -67,17 +67,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "addresses", ["addressable_type"], name: "index_addresses_on_addressable_type", using: :btree
   add_index "addresses", ["state_id"], name: "index_addresses_on_state_id", using: :btree
 
-  create_table "batches", force: :cascade do |t|
-    t.string   "batchable_type", limit: 255
-    t.integer  "batchable_id"
-    t.string   "name",           limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
-  add_index "batches", ["batchable_id"], name: "index_batches_on_batchable_id", using: :btree
-  add_index "batches", ["batchable_type"], name: "index_batches_on_batchable_type", using: :btree
-
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "cart_id"
@@ -145,24 +134,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "images", force: :cascade do |t|
-    t.integer  "imageable_id"
-    t.string   "imageable_type"
-    t.integer  "image_height"
-    t.integer  "image_width"
-    t.integer  "position"
-    t.string   "caption"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
-  add_index "images", ["imageable_id"], name: "index_images_on_imageable_id", using: :btree
-  add_index "images", ["imageable_type"], name: "index_images_on_imageable_type", using: :btree
-  add_index "images", ["position"], name: "index_images_on_position", using: :btree
-
   create_table "invoices", force: :cascade do |t|
     t.integer  "order_id"
     t.decimal  "amount",                      precision: 8, scale: 2,                      null: false
@@ -187,7 +158,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.string   "email"
     t.integer "account_id"
     t.string   "permalink",        limit: 255
-    t.datetime "available_at", default: '2016-06-28 09:30:33'
+    t.datetime "available_at"
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
@@ -427,7 +398,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   create_table "store_credits", force: :cascade do |t|
     t.decimal "amount", precision: 8, scale: 2, default: 0.0
     t.integer "user_id", null: false
-    t.datetime "expire_at", default: '2016-12-28 00:00:00'
+    t.datetime "expire_at"
     t.datetime "last_expired_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -439,7 +410,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-28', null: false
+    t.date "start_date", default: '2016-06-29', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -458,38 +429,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   end
 
   add_index "trading_hours", ["merchant_id"], name: "index_trading_hours_on_merchant_id", using: :btree
-
-  create_table "transaction_accounts", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "transaction_ledgers", force: :cascade do |t|
-    t.string   "accountable_type"
-    t.integer  "accountable_id"
-    t.integer  "transaction_id"
-    t.integer  "transaction_account_id"
-    t.decimal  "tax_amount"
-    t.decimal  "debit"
-    t.decimal  "credit"
-    t.string   "period"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  add_index "transaction_ledgers", ["accountable_id"], name: "index_transaction_ledgers_on_accountable_id", using: :btree
-  add_index "transaction_ledgers", ["transaction_account_id"], name: "index_transaction_ledgers_on_transaction_account_id", using: :btree
-  add_index "transaction_ledgers", ["transaction_id"], name: "index_transaction_ledgers_on_transaction_id", using: :btree
-
-  create_table "transactions", force: :cascade do |t|
-    t.string   "type",       limit: 255
-    t.integer  "batch_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  add_index "transactions", ["batch_id"], name: "index_transactions_on_batch_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
