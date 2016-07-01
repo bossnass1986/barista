@@ -1,7 +1,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-      = f.text_field :first_name, class: 'mdl-textfield__input'
+      = f.text_field :first_name, class: 'mdl-textfield__input', pattern: '/[:alpha:]+/'
       = f.label :first_name, class: 'mdl-textfield__label'
       %span.mdl-textfield__error Input is not a number!
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
@@ -12,22 +12,4 @@
       = f.text_field :email, class: 'mdl-textfield__input'
       = f.label :email, class: 'mdl-textfield__label'
       %span.mdl-textfield__error Input is not a number!
-    = f.fields_for :address do |address_fields|
-      = address_fields.hidden_field :first_name, value: current_user.first_name
-      = address_fields.hidden_field :last_name,  value: current_user.last_name
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-        = address_fields.text_field :address1, class: 'mdl-textfield__input'
-        = address_fields.label :address1, class: 'mdl-textfield__label'
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-        = address_fields.text_field :address2, class: 'mdl-textfield__input'
-        = address_fields.label :address2, class: 'mdl-textfield__label'
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-        = address_fields.text_field :city, class: 'mdl-textfield__input'
-        = address_fields.label :city, class: 'mdl-textfield__label'
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-        = address_fields.text_field :zip_code, class: 'mdl-textfield__input'
-        = address_fields.label :zip_code, class: 'mdl-textfield__label'
-      .mdl-selectfield.mdl-js-textfield
-        = address_fields.select :state_id, @states, :include_blank => true,  class: 'browser-default'
-        = address_fields.label :state_id, class: 'mdl-textfield__label'
-    = f.submit t('.submit_button'), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+    = f.submit t('.submit_button'), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
   has_many    :saved_cart_items,    -> { where(active: true, item_type_id: ItemType::SAVE_FOR_LATER) },   class_name: 'CartItem'
   has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
   has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
-  has_many    :payment_profiles
+  has_many :payment_methods
 
 
   # validates :first_name,  presence: true, if: :registered_user?,

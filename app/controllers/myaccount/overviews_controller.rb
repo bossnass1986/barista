@@ -8,8 +8,6 @@ class Myaccount::OverviewsController < Myaccount::BaseController
 
   def edit
     @user = current_user
-    @states = State.form_selector
-    @user.build_address if @user.address1.nil?
   end
 
   def update
@@ -24,7 +22,6 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email,
-                                 addresses_attributes: [:id, :first_name, :last_name, :address1, :address2, :city, :zip_code, :state_id])
+    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email)
   end
 end

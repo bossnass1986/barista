@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607081035) do
+ActiveRecord::Schema.define(version: 20160630113707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -134,19 +134,6 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "invoices", force: :cascade do |t|
-    t.integer  "order_id"
-    t.decimal  "amount",                      precision: 8, scale: 2,                      null: false
-    t.string   "invoice_type",    limit: 255,                         default: "Purchase", null: false
-    t.string   "state"
-    t.boolean  "active",                                              default: true,       null: false
-    t.decimal  "credited_amount",             precision: 8, scale: 2, default: 0.0
-    t.datetime "created_at",                                                               null: false
-    t.datetime "updated_at",                                                               null: false
-  end
-
-  add_index "invoices", ["order_id"], name: "index_invoices_on_order_id", using: :btree
-
   create_table "item_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -212,39 +199,18 @@ ActiveRecord::Schema.define(version: 20160607081035) do
   add_index "orders", ["number"], name: "index_orders_on_number", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
-  create_table "payment_profiles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "address_id"
-    t.string   "payment_cim_id"
-    t.boolean  "default"
-    t.boolean  "active"
-    t.string   "cardholder_name"
-    t.string   "masked_number"
-    t.string   "card_type"
-    t.integer  "month"
-    t.integer  "year"
-    t.string   "country_of_issuance"
-    t.string   "issuing_bank"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "payment_methods", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "customer_cim_id"
+    t.string "token"
+    t.integer "address_id"
+    t.string "address_cim_id"
+    t.boolean "default"
   end
 
-  create_table "payments", force: :cascade do |t|
-    t.integer  "invoice_id"
-    t.integer  "confirmation_id"
-    t.integer  "amount"
-    t.string   "error"
-    t.string   "error_code"
-    t.string   "message"
-    t.string   "action"
-    t.text     "params"
-    t.boolean  "success"
-    t.boolean  "test"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_index "payments", ["invoice_id"], name: "index_payments_on_invoice_id", using: :btree
+  add_index "payment_methods", ["address_id"], name: "index_payment_methods_on_address_id", using: :btree
+  add_index "payment_methods", ["customer_cim_id"], name: "index_payment_methods_on_customer_cim_id", using: :btree
+  add_index "payment_methods", ["user_id"], name: "index_payment_methods_on_user_id", using: :btree
 
   create_table "phone_types", force: :cascade do |t|
     t.string   "name"
@@ -410,7 +376,7 @@ ActiveRecord::Schema.define(version: 20160607081035) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-29', null: false
+    t.date "start_date", default: '2016-06-30', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

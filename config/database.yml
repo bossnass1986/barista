@@ -25,7 +25,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: beanngone_dev
+  database: dev_cuptown
   pool: 5
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -52,7 +52,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: beanngone_test
+  database: test_cuptown
   pool: 5
 
 production:

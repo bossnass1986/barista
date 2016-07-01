@@ -41,8 +41,8 @@ Rails.application.routes.draw do
     namespace :myaccount do
       resources :orders, only: [:index, :show]
       resources :addresses
-      resources :payment_profiles
       resources :referrals, only: [:index, :create, :update]
+      resources :payment_methods
       resource :store_credit, only: [:show, :update]
       resource :overview, only: [:index, :show, :edit, :update]
     end
