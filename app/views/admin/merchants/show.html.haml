@@ -5,19 +5,19 @@
     %a.mdl-tabs__tab{:href => '#menu-panel'}= t('.menu')
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'}= t('.orders')
     %a.mdl-tabs__tab{:href => '#customers-panel'}= t('.customers')
-  .mdl-grid
-    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset.merchant-settings.mdl-shadow--2dp
-      = form_for @merchant, :url => admin_merchant_path(@merchant) do |form|
-        #account-panel.mdl-tabs__panel
-          = render :partial => 'venue', :locals => {:form => form}
-          = render :partial => 'account', :locals => {:form => form}
-          .mdl-grid
-            .mdl-cell.mdl-cell--10.mdl-cell--1-offset
-              = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-        #menu-panel.mdl-tabs__panel
-          - @merchant.products.select(&:id).flatten.uniq.each do |item|
-            = render :partial => 'product', :locals => {:item => item }
-        #orders-panel.mdl-tabs__panel.is-active
-        -#- @merchant.variants.order_item.order.each do |order|
-        -#  = order.number
-        #customers-panel.mdl-tabs__panel
+  .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
+    = form_for @merchant, :url => admin_merchant_path(@merchant) do |form|
+      #account-panel.mdl-tabs__panel
+        = render :partial => 'venue', :locals => {:form => form}
+        = render :partial => 'account', :locals => {:form => form}
+        .mdl-grid
+          .mdl-cell.mdl-cell--12-col
+            = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+      #menu-panel.mdl-tabs__panel
+        = render :partial => 'product'
+      -#- @merchant.products.select(&:id).flatten.uniq.each do |item|
+          = render :partial => 'product', :locals => {:item => item }
+      #orders-panel.mdl-tabs__panel.is-active
+      -#- @merchant.variants.order_item.order.each do |order|
+      -#  = order.number
+      #customers-panel.mdl-tabs__panel

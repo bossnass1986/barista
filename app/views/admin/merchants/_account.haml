@@ -1,5 +1,6 @@
-.mdl-cell.mdl-cell--10-col.mdl-cell--1-offset
-  %h3.mdl-typography--display-1= t('.account_title')
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    %h3.mdl-typography--display-1.teal-heading= t('.account_title')
   = form.fields_for :address do |address_fields|
     .mdl-grid
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
@@ -14,7 +15,9 @@
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
         = form.email_field :email, class: 'mdl-textfield__input'
         = form.label :email, class: 'mdl-textfield__label'
-  %h3.mdl-typography--display-1= t('.bank_title')
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    %h3.mdl-typography--display-1.teal-heading= t('.bank_title')
   = form.fields_for :account do |account_fields|
     .mdl-grid
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col

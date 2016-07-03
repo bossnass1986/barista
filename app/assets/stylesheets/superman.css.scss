@@ -629,6 +629,13 @@ a {
   }
 }
 
+.teal-heading {
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  color: unquote("rgb(#{$color-primary})");
+  //margin: 24px 0 0;
+}
+
 // New Product Cards
 
 .coffee-pic {

@@ -1,5 +1,5 @@
 - title t('admin.dashboard.title')
-.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+.mdl-cell.mdl-cell--12-col.mdl-shadow--2dp.mdl-color--white.mdl-grid
   .mdl-cell.mdl-cell--2-col
     .mdl-typography--display-1-color-contrast
       = number_to_currency(@sales, precision: 0)
@@ -25,7 +25,7 @@
       = number_to_currency(@commissions, precision: 0)
       .mdl-typography--title-color-contrast
         = "Commission".pluralize(@commissions)
-.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp.mdl-color--white
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar
       %a.mdl-tabs__tab.is-active{ :href => "#today-panel" } Today
@@ -83,7 +83,7 @@
       %ul
         %li Viserys
         %li Daenerys
-.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp
+.mdl-cell.mdl-cell--6-col.mdl-shadow--2dp.mdl-color--white
   .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
     .mdl-tabs__tab-bar
       %a.mdl-tabs__tab.is-active{ :href => "#customers-panel"  } Customers

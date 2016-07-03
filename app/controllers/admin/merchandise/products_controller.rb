@@ -29,7 +29,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
 
     if @product.save
       flash[:notice] = "Success, You should create a variant for the product."
-      redirect_to edit_admin_merchandise_products_url(@product)
+      redirect_to admin_merchandise_products_path
     else
       form_info
       flash[:error] = "The product could not be saved"

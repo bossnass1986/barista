@@ -3,7 +3,7 @@ class Admin::History::OrdersController < Admin::BaseController
   def index
     # @orders = Order.find_finished_order_grid(params).paginate(:page => pagination_page, :per_page => pagination_rows)
     @orders = Order.all
-    @status = OrderStatus.all
+      # @status = OrderStatus.all
   end
 
   # GET /admin/history/orders/1
