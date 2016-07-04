@@ -13,7 +13,7 @@ en:
       order_history: 'Order History'
       payment_methds: 'Payment Methods'
       credits: 'Credit Balance'
-      referrals: 'Referrals'
+      referrals: 'Mates Rates'
       admin: 'Admin Panel'
       log_out: 'Log Out'
     footer:
@@ -63,9 +63,10 @@ en:
         title: 'Edit My Details'
       form:
         submit_button: 'Save Changes'
-    referral:
+    referrals:
       index:
-        title: 'Referrals'
+        title: 'Mates Rates'
+        summary: "Each friend who signs up and receives a coffee will get $5 credit. Once they've tried Cuptown you'll get $10 which is applied to your account. Happy days!"
     store_credits:
       show:
         title: 'Credit Balance'

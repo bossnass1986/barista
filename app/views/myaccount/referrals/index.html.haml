@@ -1,25 +1,6 @@
-- title t('myaccount.referral.index.title')
-.mdl-cell.mdl-cell--12-col
-  Ready to get your friends aboard?  Enter their information below:
-  = form_for @referral, :url => myaccount_referrals_path(@referral) do |f|
-    = render :partial => 'form', :locals => {:f => f}
-    .right-actions
-      = f.submit 'Invite', :class => 'button dark-orange-button'
-  - if @referrals.empty?
-  - else
-    #admin_referral_grid_wrapper.referral_table
-      %table
-        %thead
-          %tr
-            %th Name
-            %th Email
-            %th Status
-        %tbody
-          - for referral in @referrals
-            %tr
-              %td
-                = referral.name
-              %td
-                = referral.email
-              %td
-                = "#{referral.display_status} (#{referral.display_formatted_status_date})"
+- title t('.title')
+.mdl-grid
+  .mdl-cell.mdl-cell--4-col-phone= t('.summary')
+  .mdl-cell.mdl-cell--4-col-phone
+    = form_for @referral, :url => myaccount_referrals_path(@referral) do |f|
+      = render :partial => 'form', :locals => {:f => f}
