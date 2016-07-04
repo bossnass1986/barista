@@ -1,9 +1,9 @@
 en:
   layouts:
     mdl:
-      site_name: 'Cup Town'
+      site_name: 'Cuptown'
     superman:
-      site_name: 'Cup Town'
+      site_name: 'Cuptown'
   shared:
     compact_menu:
       merchants: 'Find Venue'
@@ -172,6 +172,9 @@ en:
           bank_title: 'Bank Details'
           bsb_error: "Oops BSB number isn't correct"
           account_number_error: "Oops account number isn't correct"
+        product:
+          title: 'Products'
+          sub_title: 'Add-ons'
         venue:
           location_title: 'Business Details'
           trading_hours_title: 'Trading Hours'
@@ -192,8 +195,8 @@ en:
           variants_button: 'View Variants'
           return_button: 'Back to Products'
         form:
-          summary: 'Summary'
-          cafe_add_ons: 'Cafe Add Ons'
+          title: 'Summary'
+          sub_title: 'Cafe Add Ons'
       properties:
         index:
           title: 'Properties'

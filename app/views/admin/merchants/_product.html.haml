@@ -1,6 +1,6 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    %h3.mdl-typography--display-1.teal-heading PRODUCTS
+    %h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
   - @products.each do |product|
     .mdl-cell.mdl-cell--4-col.mdl-shadow--2dp
@@ -10,18 +10,18 @@
           %span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col
         %h4.teal-heading= product.name
-      - for j in 0..2
+      - for _ in 0..2
         .mdl-cell.mdl-cell--12-col
           .mdl-textfield.mdl-js-textfield
-            %input#sample1.mdl-textfield__input{:type => "text"}/
+            %input#sample1.mdl-textfield__input{:type => "text"}
             %label.mdl-textfield__label{:for => "sample1"} Text...
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    %h3.mdl-typography--display-1.teal-heading ADD-ONS
+    %h3.mdl-typography--display-1.teal-heading= t('.sub_title')
 
     -#= link_to shopping_supplier_product_path(@supplier) do
     -#%li.mdl-list__item.mdl-list__item--three-line
-  %span.mdl-list__item-primary-content
-    %span= item.name
-    %span.mdl-list__item-text-body
-      = item.description
+      -#%span.mdl-list__item-primary-content
+      -#  %span= item.name
+      -#  %span.mdl-list__item-text-body
+      -#    = item.description

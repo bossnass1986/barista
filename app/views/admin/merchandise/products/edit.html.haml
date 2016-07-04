@@ -1,10 +1,8 @@
-- title t('admin.merchandise.products.edit.title')
-.mdl-cell.mdl-cell--12-col.product-settings
+- title t('.title')
+.mdl-cell.mdl-cell--12-col
   = link_to t('admin.merchandise.products.edit.add_image_button'), edit_admin_merchandise_images_product_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   = link_to t('admin.merchandise.products.edit.variants_button'), admin_merchandise_product_variants_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
   = link_to t('admin.merchandise.products.edit.return_button'), admin_merchandise_product_path(@product), :class => 'mdl-button mdl-js-button mdl-js-ripple-effect'
-  = form_for @product, :url  => admin_merchandise_product_path(@product), :html => {:class => ''}  do |form|
-    = render :partial => 'form', :locals => {:form => form }
-    .generic_submit_button
-      = submit_tag "Update", :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored',  :id     => "create_product_button"
-
+  = form_for @product, :url  => admin_merchandise_product_path(@product), :html => {:class => 'mdl-grid'}  do |form|
+    .mdl-cell.mdl-cell--12-col-desktop.mdl-color--white.mdl-shadow--2dp= render :partial => 'form', :locals => { :form => form }
+    = form.submit

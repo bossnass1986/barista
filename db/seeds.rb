@@ -1,6 +1,4 @@
 puts 'Did you hear that? They shut down the main reactor.'
-
-
 puts 'Execute Order 66!'
 Role.destroy_all
 User.delete_all
@@ -17,7 +15,6 @@ VariantProperty.delete_all
 Cart.destroy_all
 Order.destroy_all
 Property.delete_all
-
 
 %w(customer banned merchant staff admin).each do |role|
   Role.find_or_create_by({name: role})
@@ -90,11 +87,11 @@ Property.create!([
    {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
 ])
 
-# puts 'Creating Standard Menu Items'
+puts 'Creating Standard Menu Items'
 
-# product_seed = Rails.root.join('db', 'seed', 'products.yml')
-# product = YAML::load_file(product_seed)
-# Product.create!(product)
+product_seed = Rails.root.join('db', 'seed', 'products.yml')
+product = YAML::load_file(product_seed)
+Product.create!(product)
 
 
 # 'Creating Sample Variants'
