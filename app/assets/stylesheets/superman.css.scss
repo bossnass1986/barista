@@ -496,7 +496,7 @@ $bar-height: 4px !default;
 $badge-font-size: 12px !default;
 $badge-color: unquote("rgb(#{$color-accent-contrast})") !default;
 $badge-color-inverse: unquote("rgb(#{$color-accent})") !default;
-$badge-background: unquote("rgb(#{$color-accent})") !default;
+$badge-background: unquote("rgb(#{$palette-red-500})") !default;
 $badge-background-inverse: unquote("rgba(#{$color-accent-contrast},0.2)") !default;
 $badge-size: 22px !default;
 $badge-padding: 2px !default;
@@ -614,7 +614,7 @@ a {
 }
 
 .mdl-navigation a {
-  color: #fff;
+  //color: #fff;
   margin-top: 10px;
 }
 
