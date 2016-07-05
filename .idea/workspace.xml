@@ -4,7 +4,7 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="mates rates">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="credit alignment">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml" afterPath="$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml" />
     </list>
@@ -61,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -809,14 +809,7 @@
       <workItem from="1467195490856" duration="7361000" />
       <workItem from="1467209983993" duration="16000" />
       <workItem from="1467210563181" duration="18664000" />
-      <workItem from="1467551403908" duration="18553000" />
-    </task>
-    <task id="LOCAL-00203" summary="heroku goes angular">
-      <created>1464608665511</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1464608665512</updated>
+      <workItem from="1467551403908" duration="19555000" />
     </task>
     <task id="LOCAL-00204" summary="heroku goes angular">
       <created>1464609299567</created>
@@ -1154,11 +1147,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467702303890</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="credit alignment">
+      <created>1467702537587</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1467702537587</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381041000" />
+    <option name="totallyTimeSpent" value="382043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1231,7 +1231,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="heroku goes angular" />
     <MESSAGE value="revert angular" />
     <MESSAGE value="merchant cards" />
     <MESSAGE value="phonegap prep" />
@@ -1256,7 +1255,8 @@
     <MESSAGE value="mates get great rates" />
     <MESSAGE value="updated styling" />
     <MESSAGE value="mates rates" />
-    <option name="LAST_COMMIT_MESSAGE" value="mates rates" />
+    <MESSAGE value="credit alignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="credit alignment" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2018,7 +2018,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding />
         </state>
       </provider>
