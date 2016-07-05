@@ -1,6 +1,8 @@
 - title t('.title')
-.mdl-grid
-  .mdl-cell.mdl-cell--12-col
+.mdl-cell.mdl-cell--4-col-phone
+  %span= t('.warning_html')
+.mdl-grid.mdl-color--white.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--4-col-phone
     - if @payment_methods.empty?
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else
@@ -18,5 +20,5 @@
             %span.mdl-list__item-secondary-content
               = link_to myaccount_payment_profile_path(payment), :confirm => 'Are you sure?', :method => :delete, :class => 'mdl-list__item-secondary-action' do
                 %i.material-icons remove_circle_outline
-  .mdl-cell.mdl-cell--12-col
-    = link_to t('.submit_button'), new_myaccount_payment_method_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'
+  .mdl-cell.mdl-cell--4-col-phone
+    = link_to t('.submit_button'), new_myaccount_payment_method_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'

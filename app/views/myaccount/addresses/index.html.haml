@@ -1,6 +1,6 @@
 - title t('.title')
-.mdl-grid
-  .mdl-cell.mdl-cell--12-col
+.mdl-grid.mdl-color--white.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--4-col-phone
     - if @addresses.empty?
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else
