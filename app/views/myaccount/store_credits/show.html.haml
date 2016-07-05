@@ -7,4 +7,4 @@
     = number_to_currency(@store_credit.amount)
     -#= @store_credit.remaining_days
   = form_for(@store_credit, :url => myaccount_store_credit_path) do |f|
-    = render :partial => 'form', :locals => {:f => f}
+  = render :partial => 'form', :locals => {:f => f}
