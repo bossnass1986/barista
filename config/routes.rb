@@ -179,7 +179,7 @@ Rails.application.routes.draw do
             put :activate
           end
         end
-        # resources :overviews
+        resources :overview, only: [:index]
         # resources :shipping_categories
         # resources :shipping_rates
         # resources :shipping_methods

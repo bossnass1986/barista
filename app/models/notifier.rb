@@ -21,10 +21,12 @@ class Notifier < ActionMailer::Base
 
   end
 
-  def referral_invite(user_id)
-    @user = User.find(user_id)
-    mail(:to => @user.email,
-         :subject => "1 month reminder")
+  def mail_alert(subject, message)
+    mail(:to => 'support@cup.town',
+         :subject => "Scheduler: #{subject}") do |format|
+      # format.text { render :text => "Welcome!  #{@recipient.name} go to #{customer_activation_url(:a => @recipient.perishable_token )}" }
+      format.html { render :text => message }
+    end
   end
 
   def password_reset_instructions(user_id)
@@ -58,7 +60,7 @@ class Notifier < ActionMailer::Base
          :subject => "Order Confirmation")
   end
 
-  def referral_inviter(referral_id, inviter_id)
+  def referral_invite(referral_id, inviter_id)
     @user     = User.find(inviter_id)
     @referral = Referral.find(referral_id)
     @url      = root_url
@@ -69,10 +71,11 @@ class Notifier < ActionMailer::Base
 
   private
   def phone_number
-    @phone_number   = I18n.t(:company_phone)
+    @phone_number = I18n.t(:company_phone)
   end
+
   def company_name
-    @company_name   = I18n.t(:company)
+    @company_name = I18n.t(:company)
   end
 
 end

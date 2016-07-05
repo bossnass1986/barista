@@ -1,4 +1,4 @@
-- if @country.errors.any?
+-#- if @country.errors.any?
   #error_explanation
     %h2
       = pluralize(@country.errors.count, "error")
@@ -10,4 +10,4 @@
   %li.field.large-4
     %label Shipping Zone
     = f.select :shipping_zone_id, shipping_zones, include_blank: true
-= f.submit "Update", class: "button"
+-#= f.submit "Update", class: "button"

@@ -1,0 +1,35 @@
+- title "#{@referral.name} (#{@referral.email})"
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col-desktop
+%h1 Referral
+%ul
+  %l
+    %label Name:
+    = @referral.name
+  %li
+    %label Email:
+    = @referral.email
+  %li
+    %label Referring User:
+    = @referral.referring_user_id
+  %li
+    %label Referral Program:
+    = @referral.referral_program.name
+  %li
+    %label Referral User:
+    = @referral.referral_user_id
+  %li
+    %label Referral Type:
+    = @referral.referral_type_id
+  %li
+    %label Sent At:
+    = @referral.sent_at
+  %li
+    %label Registered At:
+    = @referral.registered_at
+  %li
+    %label Purchased At:
+    = @referral.purchased_at
+  %li
+    %label Applied:
+    = @referral.applied

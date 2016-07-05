@@ -96,13 +96,13 @@ class Referral < ActiveRecord::Base
   end
 
   def give_credits!
-    # if referring_user && !applied # && purchased?
-      referral_program.give_credits(referring_user)
+    if referring_user && !applied # && purchased?
+      self.give_credits(referring_user)
       self.applied = true
-      # self.skip_validate_has_not_signed_up_yet = true
+      self.skip_validate_has_not_signed_up_yet = true
       save!
       Notifier.new_referral_credits(referring_user.id, referral_user.id).deliver rescue true
-    # end
+    end
   end
 
   def set_referral_user(user_id)
@@ -126,6 +126,10 @@ class Referral < ActiveRecord::Base
   private
   def invite_referral
     Notifier.referral_invite(self.id, referring_user_id).deliver_later
+    end
+
+  def give_credits(user)
+    user.store_credit.add_credit(decimal_amount)
   end
 
   def validate_has_not_signed_up_yet
@@ -134,6 +138,7 @@ class Referral < ActiveRecord::Base
     end
     true
   end
+
   def has_signed_up
     (User.where(:email => email).limit(1).count != 0)
   end
@@ -141,4 +146,12 @@ class Referral < ActiveRecord::Base
   def assign_referral_program
     self.referral_program_id ||= ReferralProgram.current_program.id
   end
+
+  class << self
+    def assign_referral
+      # find all the expired credits on particular date, and update all together
+      self.expire_on(date).update_all(amount: 0, last_expired_at: DateTime.current)
+    end
+  end
+
 end

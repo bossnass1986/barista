@@ -129,14 +129,20 @@ en:
         back_to_app: 'Return to App'
         log_out: 'Log Out'
     config:
+      countries:
+        index:
+          title: 'Countries'
+      overview:
+        index:
+          title: 'Application Configurations'
+          countries: 'Countries'
+          tax_rates: 'Tax Rates'
       tax_rates:
         index:
           title: 'Tax Rates'
         new:
           title: 'New Tax Rate'
-      countries:
-        index:
-          title: 'Countries'
+
     dashboard:
       title: 'Dashboard'
       stats_title:

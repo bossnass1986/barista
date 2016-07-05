@@ -27,7 +27,6 @@ class Admin::UserDatas::ReferralsController < Admin::UserDatas::BaseController
         if @new_user.number_of_finished_orders > 0
           @referral.purchased_at  = @new_user.finished_orders.first.completed_at
           @referral.registered_at = @new_user.created_at
-
         end
       end
       if @referral.save
@@ -82,12 +81,12 @@ class Admin::UserDatas::ReferralsController < Admin::UserDatas::BaseController
 
   def referral_programs
     return @referral_programs if @referral_programs
-    @referral_programs = ReferralProgram.all.map{|u| [u.name, u.id]}
+    @referral_programs = ReferralProgram.all.map { |u| [u.name, u.id] }
   end
 
   def referral_types
     return @referral_types if @referral_types
-    @referral_types = ReferralType.all.map{|u| [u.name, u.id]}
+    @referral_types = ReferralType.all.map { |u| [u.name, u.id] }
   end
 
   def sort_column
