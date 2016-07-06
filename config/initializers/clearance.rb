@@ -15,5 +15,5 @@ Clearance.configure do |config|
   config.user_model = User
 
   Clearance::SessionsController.layout 'landing'
-  # Clearance::UsersController.layout 'landing'
+  Clearance::UsersController.layout 'landing'
 end
