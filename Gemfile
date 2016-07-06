@@ -45,6 +45,7 @@ gem 'pg_search'
 
 # Phone Management
 gem 'sinch_sms'
+gem 'postmark-rails'
 
 # Geocoding
 gem 'geocoder'

@@ -7,7 +7,7 @@ Clearance.configure do |config|
   config.cookie_path = "/"
   config.routes = true
   config.httponly = false
-  config.mailer_sender = 'Cup Town <info@cup.town>'
+  config.mailer_sender = 'support@cup.town'
   config.password_strategy = Clearance::PasswordStrategies::BCrypt
   config.redirect_url = '/'
   config.secure_cookie = false
@@ -15,5 +15,5 @@ Clearance.configure do |config|
   config.user_model = User
 
   Clearance::SessionsController.layout 'landing'
-  Clearance::UsersController.layout 'landing'
+  # Clearance::UsersController.layout 'landing'
 end

@@ -1,0 +1,9 @@
+.mdl.grid
+  -#%h2= t(".title")
+  = form_for @user do |form|
+    = render partial: '/users/form', locals: { form: form }
+    .mdl-cell.mdl-cell--4-col-phone
+      = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
+    .mdl-cell.mdl-cell--4-col-phone
+      Already have an account?
+      = link_to 'Log in here.', sign_in_path

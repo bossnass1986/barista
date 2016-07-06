@@ -1,0 +1,35 @@
+.mdl-cell.mdl-cell--4-col-phone
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.text_field :first_name, class: 'mdl-textfield__input'
+    = form.label :first_name, class: 'mdl-textfield__label'
+.mdl-cell.mdl-cell--4-col-phone
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.text_field :last_name, class: 'mdl-textfield__input'
+    = form.label :last_name, class: 'mdl-textfield__label'
+.mdl-cell.mdl-cell--4-col-phone
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.email_field :email, class: 'mdl-textfield__input'
+    = form.label :email, class: 'mdl-textfield__label'
+.mdl-cell.mdl-cell--4-col-phone
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.phone_field :mobile, class: 'mdl-textfield__input'
+    = form.label :mobile, class: 'mdl-textfield__label'
+.mdl-cell.mdl-cell--4-col-phone
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = form.password_field :password, class: 'mdl-textfield__input'
+    = form.label :password, class: 'mdl-textfield__label'
+    -#.text-field
+    -#  = form.label :first_name
+    -#  = form.text_field :first_name
+    -#.text-field
+    -#  = form.label :last_name
+    -#  = form.text_field :last_name
+    -#.text-field
+    -#  = form.label :email
+    -#  = form.email_field :email
+    -#.text-field
+    -#  = form.label :mobile
+    -#  = form.text_field :mobile
+    -#.password-field
+    -#  = form.label :password
+    -#  = form.password_field :password
