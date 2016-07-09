@@ -630,6 +630,35 @@ a {
   margin-top: 10px;
 }
 
+// Merchant
+.cover-photo {
+  background-image: asset-url("products/cappuccino.jpg");
+  background-size: cover;
+  min-height: 200px;
+  //-webkit-filter: blur(5px);
+  //-moz-filter: blur(5px);
+  //-o-filter: blur(5px);
+  //-ms-filter: blur(5px);
+  //filter: blur(5px);
+}
+
+.top {
+  background: cyan;
+  height: 50%;
+}
+
+.bottom {
+  background: grey;
+  height: 50%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: auto 0 0 auto;
+}
+
 // New Product Cards
 
 .coffee-pic {

@@ -5,6 +5,8 @@ gem 'rails'
 ruby '2.3.1'
 gem 'responders'
 
+gem 'intercom-rails'
+
 gem 'activemerchant', '~> 1.48'
 # ==========
 # MemCachier
