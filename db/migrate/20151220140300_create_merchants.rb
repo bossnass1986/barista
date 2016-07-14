@@ -4,6 +4,7 @@ class CreateMerchants < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.integer :account_id, limit: 4
+      t.integer :merchant_type_id, limit: 4
       t.string   :permalink,            limit: 255
       t.datetime :available_at, default: Time.now
       t.datetime :deleted_at

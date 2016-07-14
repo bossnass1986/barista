@@ -14,14 +14,16 @@ class User < ActiveRecord::Base
 
   # belongs_to :account
 
-  has_many  :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
-  has_one   :referree,  class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
-
+  has_one :referree, class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
   has_one     :store_credit
+  has_one :default_billing_address, -> { where(billing_default: true, active: true) },
+          as: :addressable,
+          class_name: 'Address'
+
+
+  has_many :referrals, class_name: 'Referral', foreign_key: 'referring_user_id' # people you have tried to referred
+
   has_many    :orders
-  # has_many    :comments
-  # has_many    :customer_service_comments, as:         :commentable,
-  #             class_name: 'Comment'
   has_many    :shipments, :through => :orders
   has_many    :finished_orders,           -> { where(state: ['complete', 'paid']) },  class_name: 'Order'
   has_many    :completed_orders,          -> { where(state: 'complete') },            class_name: 'Order'
@@ -31,9 +33,6 @@ class User < ActiveRecord::Base
 
   has_many    :addresses,       dependent: :destroy,       as: :addressable
 
-  has_one     :default_billing_address,   -> { where(billing_default: true, active: true) },
-              as:         :addressable,
-              class_name: 'Address'
 
   has_many    :billing_addresses,         -> { where(active: true) },
               as:         :addressable,

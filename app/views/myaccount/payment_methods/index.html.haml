@@ -1,8 +1,9 @@
 - title t('.title')
-.mdl-cell.mdl-cell--4-col-phone
-  %span= t('.warning_html')
-.mdl-grid.mdl-color--white.mdl-shadow--2dp
+.mdl-grid
   .mdl-cell.mdl-cell--4-col-phone
+    %span= t('.warning_html')
+.mdl-grid.mdl-color--white.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
     - if @payment_methods.empty?
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
     - else

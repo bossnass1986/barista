@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :merchant_types
   resources :accounts
   resources :checkouts, only: [:new, :create, :show]
 

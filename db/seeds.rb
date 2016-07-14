@@ -39,7 +39,7 @@ countries_list.each_pair do |key,country|
   end
 end
 
-puts 'Deleting All States/Provinces/Territories'
+# puts 'Deleting All States/Provinces/Territories'
 
 puts 'The regional governors now have direct control over their territories. '
 file_to_load  = Rails.root + 'db/seed/states.yml'
@@ -51,16 +51,33 @@ states_list.each_pair do |key,state|
 end
 
 puts 'Creating Standard Product Types'
-ProductType.create!([
-  {id: 1, name: 'Hot'},
-  {id: 2, name: 'Cold '}
-])
+MerchantType.create!([
+                         {id: 1, name: 'Cafe'},
+                         {id: 2, name: 'Smoothie/Juice Bar'},
+                         {id: 3, name: 'Bubble Tea'},
+                         {id: 4, name: 'Bar/Pub'}
+                     ])
 
 puts 'Creating Standard Product Types'
-Prototype.create!([
-    {id: 1, name: 'Hot', active: true},
-    {id: 2, name: 'Cold', active: true}
+ProductType.create!([
+                        {id: 1, name: 'Coffee'},
+                        {id: 2, name: 'Hot Drinks'},
+                        {id: 3, name: 'Iced Drinks'},
+                        {id: 4, name: 'Cold Drinks'},
+                        {id: 5, name: 'Smoothie'},
+                        {id: 6, name: 'Frappe'},
+                        {id: 7, name: 'Food'},
+                        {id: 8, name: 'Vodka'},
+                        {id: 9, name: 'Bourbon'},
+                        {id: 10, name: 'Scotch'}
+                    # {id: }
 ])
+
+# puts 'Creating Standard Product Types'
+# Prototype.create!([
+#     {id: 1, name: 'Hot', active: true},
+#     {id: 2, name: 'Cold', active: true}
+# ])
 
 PrototypeProperty.create!([
     {property_id: 1, prototype_id: 1},

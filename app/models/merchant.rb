@@ -2,9 +2,10 @@ class Merchant < ActiveRecord::Base
   # extend FriendlyId
   # friendly_id :permalink, use: :finders
 
-  has_many :variant_merchants
-  has_many :variants, through: :variant_merchants, dependent: :destroy
-  has_many :products, through: :variants, dependent: :destroy
+  # has_many :variant_merchants
+  # has_many :variants, through: :variant_merchants, dependent: :destroy
+  # has_many :products, through: :variants, dependent: :destroy
+  has_many :products, through: :product_types
   has_many :trading_hours, dependent: :destroy
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
@@ -12,6 +13,7 @@ class Merchant < ActiveRecord::Base
 
   has_one :address, as: :addressable, dependent: :destroy
   belongs_to :account, dependent: :destroy
+  belongs_to :merchant_type
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630113707) do
+ActiveRecord::Schema.define(version: 20160714075034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,10 +140,26 @@ ActiveRecord::Schema.define(version: 20160630113707) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "merchant_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "merchant_id"
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merchant_types", force: :cascade do |t|
+    t.string "name"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "merchants", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.integer "account_id"
+    t.integer "merchant_type_id"
     t.string   "permalink",        limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
@@ -237,10 +253,11 @@ ActiveRecord::Schema.define(version: 20160630113707) do
   end
 
   create_table "product_types", force: :cascade do |t|
-    t.string   "name",       limit: 255,                null: false
-    t.boolean  "active",                 default: true
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.integer "merchant_type_id"
+    t.string "name", limit: 255, null: false
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -376,7 +393,7 @@ ActiveRecord::Schema.define(version: 20160630113707) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-06-30', null: false
+    t.date "start_date", default: '2016-07-14', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
