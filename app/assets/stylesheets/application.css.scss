@@ -615,7 +615,8 @@ a {
 
 .landing-page-logo {
   position: relative;
-  background: asset-url('brand/logo_144.png') no-repeat center;
+  background: asset-url('brand/logo.svg') no-repeat center;
+  background-size: 160px auto;
   height: 160px;
 }
 
