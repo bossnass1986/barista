@@ -5,8 +5,8 @@ class VariantMerchant < ActiveRecord::Base
 
   validates :variant_id,  :presence => true
   validates :merchant_id, :presence => true
-  # validates :cost,        :presence => true
+    # validates :cost,        :presence => true
 
-  accepts_nested_attributes_for :variant
+    # accepts_nested_attributes_for :variant
 
 end
