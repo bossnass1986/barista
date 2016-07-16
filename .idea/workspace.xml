@@ -4,11 +4,11 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="heroku fixes">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="svg logos">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/superman.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/superman.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/sessions/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,21 +59,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="722" column="28" selection-start-line="722" selection-start-column="24" selection-end-line="722" selection-end-column="28" />
+            <state relative-caret-position="483">
+              <caret line="630" column="21" selection-start-line="630" selection-start-column="21" selection-end-line="630" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="superman.css.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="superman.css.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="609" column="6" selection-start-line="609" selection-start-column="6" selection-end-line="609" selection-end-column="6" />
+            <state relative-caret-position="72">
+              <caret line="603" column="0" selection-start-line="603" selection-start-column="0" selection-end-line="613" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -584,11 +584,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product_type.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/product_type.rb">
+      <file leaf-file-name="mdl.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -678,7 +678,6 @@
         <option value="$PROJECT_DIR$/app/views/users/new.html.haml" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.haml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/show.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/intercom.rb" />
@@ -696,7 +695,6 @@
         <option value="$PROJECT_DIR$/app/models/variant.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/models/variant_merchant.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
@@ -704,6 +702,8 @@
         <option value="$PROJECT_DIR$/app/views/sessions/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/superman.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/mdl.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       </list>
     </option>
   </component>
@@ -1466,14 +1466,7 @@
       <workItem from="1467209983993" duration="16000" />
       <workItem from="1467210563181" duration="18664000" />
       <workItem from="1467551403908" duration="44516000" />
-      <workItem from="1468048008309" duration="22817000" />
-    </task>
-    <task id="LOCAL-00217" summary="phonegap prep">
-      <created>1464873190444</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1464873190445</updated>
+      <workItem from="1468048008309" duration="24011000" />
     </task>
     <task id="LOCAL-00218" summary="phonegap prep">
       <created>1464874358891</created>
@@ -1811,11 +1804,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468590084162</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="svg logos">
+      <created>1468637135615</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1468637135622</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429821000" />
+    <option name="totallyTimeSpent" value="431015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1888,7 +1888,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="accounts for merchants" />
     <MESSAGE value="schema updates" />
     <MESSAGE value="migration updates" />
     <MESSAGE value="fixing login screen" />
@@ -1913,7 +1912,8 @@
     <MESSAGE value="addition of merchant types and product restructure" />
     <MESSAGE value="svg logo" />
     <MESSAGE value="heroku fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="heroku fixes" />
+    <MESSAGE value="svg logos" />
+    <option name="LAST_COMMIT_MESSAGE" value="svg logos" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1992,14 +1992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -2682,14 +2674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="722" column="28" selection-start-line="722" selection-start-column="24" selection-end-line="722" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/brand/logo_sidebar.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2715,8 +2699,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="609" column="6" selection-start-line="609" selection-start-column="6" selection-end-line="609" selection-end-column="6" />
+        <state relative-caret-position="72">
+          <caret line="603" column="0" selection-start-line="603" selection-start-column="0" selection-end-line="613" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/mdl.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="630" column="21" selection-start-line="630" selection-start-column="21" selection-end-line="630" selection-end-column="21" />
           <folding />
         </state>
       </provider>
