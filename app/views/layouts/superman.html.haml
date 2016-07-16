@@ -20,6 +20,7 @@
           %nav.mdl-navigation= render 'admin/shared/top_order'
       .mdl-layout__drawer
         %span.mdl-layout-title
+          %h3= t('layouts.superman.site_name')
         %nav.mdl-navigation
           = render 'admin/shared/side_menu'
       = yield :fab

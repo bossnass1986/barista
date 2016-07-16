@@ -8,9 +8,8 @@
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         = form.password_field :password, class: 'mdl-textfield__input'
         = form.label :password, class: 'mdl-textfield__label'
-    .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-tablet.mdl-cell--6-col-desktop
+    .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
       = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
-    .mdl-cell.mdl-cell--3-col-phone.mdl-cell--4-col-tablet.mdl-cell--6-col-desktop
       = link_to t(".forgot_password"), new_password_path, class: 'mdl-button mdl-js-button mdl-js-ripple-effect'
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
       Don't have an account?
