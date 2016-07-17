@@ -19,12 +19,18 @@
     %i.material-icons account_balance_wallet
     = t('.credits')
   = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
+    %i.material-icons loyalty
+    My Rewards
+  = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
     %i.material-icons plus_one
     = t('.referrals')
   - if current_user.admin?
-    = link_to admin_path , class: 'mdl-navigation__link' do
+    = link_to admin_path, class: 'mdl-navigation__link' do
       %i.material-icons https
       = t('.admin')
+  = link_to passwords_path, class: 'mdl-navigation__link' do
+    %i.material-icons lock_open
+    Change Password
   = link_to sign_out_path, method: :delete, class: 'mdl-navigation__link' do
     %i.material-icons exit_to_app
     = t('.log_out')

@@ -1,12 +1,11 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def index
-    @products = Product.order(:name).includes(:active_variants, :prototype).page params[:page]
+    @products = Product.order(:name).includes(:active_variants, :product_type).page params[:page]
   end
 
   def show
     @product        = Product.find(params[:id])
-    # @shipping_zones =  ShippingZone.all
     respond_to do |format|
       format.html
       format.json { render json: @product }
@@ -51,7 +50,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       redirect_to admin_merchandise_product_url(@product)
     else
       form_info
-      render action: :edit#, :layout => 'admin_markup'
+      render action: :index
     end
   end
 

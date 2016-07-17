@@ -1,3 +1,5 @@
 - title t('.title')
-= form_for current_user, :url => myaccount_overview_path, :method => 'PUT' do |f|
-  = render :partial => 'form', :locals => {:f => f}
+.mdl-grid.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+    = form_for current_user, :url => myaccount_overview_path, :method => 'PUT' do |f|
+      = render :partial => 'form', :locals => {:f => f}

@@ -7,8 +7,9 @@
     %h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
+    = form.select :product_type_id, options_for_select(ProductType.all.map{ |pt| [pt.name, pt.id] })
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-      = form.hidden_field :product_type_id, :value => '1'
+      -#= form.collection_select(:product_type_id, ProductType.all, :id, :name)
       = form.text_field :name, class: 'mdl-textfield__input'
       = form.label :name, class: 'mdl-textfield__label'
   .mdl-cell.mdl-cell--12-col
@@ -23,7 +24,7 @@
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
       = form.text_area :meta_description, class: 'mdl-textfield__input'
       = form.label :meta_description, class: 'mdl-textfield__label'
-.mdl-grid-
+      -#.mdl-grid-
   .mdl-cell.mdl-cell--12-col
     %h3.mdl-typography--display-1.teal-heading= t('.sub_title')
     - @all_properties.each do |property|

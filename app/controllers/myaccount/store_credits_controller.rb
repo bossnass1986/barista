@@ -4,9 +4,6 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
     @store_credit = customer.store_credit
   end
 
-  def edit
-  end
-
   # def update
   #   result = Braintree::Transaction.sale(
   #       :amount => params[:amount_to_add].to_f,

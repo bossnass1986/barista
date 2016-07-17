@@ -30,8 +30,6 @@ class StoreCredit < ActiveRecord::Base
     (self.expire_at.to_datetime - Date.today).to_i <= 0
   end
 
-  private
-
   def process_braintree_payment(amount)
     result = Braintree::Transaction.sale(
         :amount => amount.to_f,
@@ -51,9 +49,11 @@ class StoreCredit < ActiveRecord::Base
     end
   end
 
+  private
+
   def set_expiration_date
     self.update_column(:expire_at, Date.today.end_of_day + 6.months)
-    end
+  end
 
   def ensure_sql_math_rounding_issues
     self.amount = amount.to_f.round(2)
@@ -66,6 +66,6 @@ class StoreCredit < ActiveRecord::Base
       # find all the expired credits on particular date, and update all together
       self.expire_on(date).update_all(amount: 0, last_expired_at: DateTime.current)
     end
-  end
+    end
 
 end

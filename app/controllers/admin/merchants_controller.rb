@@ -10,7 +10,7 @@ class Admin::MerchantsController < Admin::BaseController
     @states = State.form_selector
     @merchant.build_address
     @merchant.build_account
-    @products = Product.all
+    @product = @merchant.products.create!
     # @merchant.build_primary_phone
   end
 
@@ -38,6 +38,7 @@ class Admin::MerchantsController < Admin::BaseController
   def update
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
+    @products = @merchant.products.create!
     if @merchant.update_attributes(allowed_params)
       # SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{@merchant.name} has been updated", '61430091464')
       redirect_to :action => :index

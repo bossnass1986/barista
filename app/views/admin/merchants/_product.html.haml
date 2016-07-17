@@ -5,16 +5,18 @@
   - @products.each do |product|
     .mdl-cell.mdl-cell--4-col.mdl-shadow--2dp
       .mdl-cell.mdl-cell--12-col
-        %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => product}
-          %input.mdl-switch__input{:checked => "checked", :type => "checkbox", :id => product}/
+        %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => product.id}
+          = form.check_box product.id
+          %input.mdl-switch__input{:checked => "checked", :type => "checkbox", :id => product.id}/
           %span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col
         %h4.teal-heading= product.name
-      - for _ in 0..2
+      -#- for _ in 0..2
         .mdl-cell.mdl-cell--12-col
           .mdl-textfield.mdl-js-textfield
             %input#sample1.mdl-textfield__input{:type => "text"}
             %label.mdl-textfield__label{:for => "sample1"} Text...
+
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     %h3.mdl-typography--display-1.teal-heading= t('.sub_title')

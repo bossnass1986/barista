@@ -6,6 +6,7 @@
   %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     %thead
       %tr
+        %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product_type')
         %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product')
         %th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.available')
         -#%th.mdl-data-table__cell--non-numeric= t('admin.merchandise.products.index.product_type')
@@ -15,10 +16,11 @@
     %tbody
       - @products.each do |product|
         %tr
+          %td.mdl-data-table__cell--non-numeric= product.product_type.name
           %td.mdl-data-table__cell--non-numeric= link_to product.name, edit_admin_merchandise_product_path(product)
           %td.mdl-data-table__cell--non-numeric= product.available? ? 'Yes' : 'No'
           -#%td.mdl-data-table__cell--non-numeric= product.prototype.name
-          -#%td.mdl-data-table__cell--non-numeric= product.product_type.name
+
           %td= product.variants.count
           %td.mdl-data-table__cell--non-numeric
             %button.mdl-button.mdl-js-button.mdl-button--icon{:id => product.id}

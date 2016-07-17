@@ -14,7 +14,8 @@
           .mdl-cell.mdl-cell--12-col
             = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
       #menu-panel.mdl-tabs__panel
-        = render :partial => 'product'
+        = render :partial => 'product', :locals => {:form => form}
+
       -#- @merchant.products.select(&:id).flatten.uniq.each do |item|
           = render :partial => 'product', :locals => {:item => item }
       #orders-panel.mdl-tabs__panel.is-active
