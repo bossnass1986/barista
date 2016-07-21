@@ -38,6 +38,7 @@ gem 'rolify'
 
 # Payment Gateway
 gem 'awesome_nested_set', '~> 3.0.1'
+# gem 'stripe'
 gem 'braintree'
 gem 'aasm'
 gem 'paperclip'

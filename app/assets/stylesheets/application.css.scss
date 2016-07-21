@@ -628,7 +628,7 @@ a {
 
 .mdl-layout__drawer .mdl-layout-title {
   position: relative;
-  background: unquote("rgb(#{$palette-teal-100})") asset-url('brand/logo.svg') no-repeat center;
+  background: unquote("rgb(#{$palette-teal-100})") asset-url('brand/logo-stacked.svg') no-repeat center;
   background-size: auto 75px;
   height: 160px;
   h3 {

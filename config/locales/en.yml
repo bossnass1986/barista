@@ -6,7 +6,7 @@ en:
       site_name: 'Cuptown'
   shared:
     compact_menu:
-      merchants: 'Find Venue'
+      merchants: 'Grab a Drink'
       my_details: 'My Details'
       password: 'Change Password'
       address_information: 'Addresses'
@@ -91,7 +91,7 @@ en:
         no_records: 'Oh no! There are no items to customise!'
     merchants:
       index:
-        title: 'Merchants'
+        title: 'Grab a Drink'
       show:
         title: 'Menu'
         no_records: 'Oh no! There are no menu items!'

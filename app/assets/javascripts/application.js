@@ -120,7 +120,10 @@ braintree.client.create({
                 }
 
                 // This is where you would submit payload.nonce to your server
-                alert('Submit your nonce to your server here!');
+                alert('Got a nonce: ' + payload.nonce);
+                // If this was a real integration, this is where you would
+                // send the nonce to your server.
+                console.log('Got a nonce: ' + payload.nonce);
             });
         }, false);
     });
