@@ -95,6 +95,10 @@ en:
       show:
         title: 'Menu'
         no_records: 'Oh no! There are no menu items!'
+  users:
+    form:
+      title: 'GET STARTED WITH CUPTOWN!'
+      subtitle: 'Create a Cuptown account to pre-order beverages at your favourite venues.'
 
 
 

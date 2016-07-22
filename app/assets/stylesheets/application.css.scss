@@ -615,9 +615,9 @@ a {
 
 .landing-page-logo {
   position: relative;
-  background: asset-url('brand/logo.svg') no-repeat center;
-  background-size: 160px auto;
-  height: 220px;
+  background: asset-url('brand/logo-hori.svg') no-repeat center;
+  background-size: auto 6em;
+  height: 10em;
   h2 {
     margin-top: 175px;
     font-weight: 900;
