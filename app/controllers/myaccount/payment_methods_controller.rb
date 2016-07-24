@@ -1,9 +1,9 @@
 class Myaccount::PaymentMethodsController < Myaccount::BaseController
   def index
-    @payment_methods = PaymentMethod.where('user_id = ?', current_user)
-    customer = Braintree::Customer.find(current_user.customer_cim_id)
-    customer.payment_methods # array of PaymentMethod instances
-    puts customer.payment_methods.count
+    # @payment_methods = PaymentMethod.where('user_id = ?', current_user)
+    @customer = Braintree::Customer.find(current_user.customer_cim_id)
+      # customer.payment_methods # array of PaymentMethod instances
+      # puts customer.payment_methods.count
   end
 
   def show

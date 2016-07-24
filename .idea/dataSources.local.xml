@@ -2,18 +2,18 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails barista: development" uuid="4ab14069-0621-4096-811b-6a492b108389">
-      <schema-pattern>beanngone_dev.public</schema-pattern>
-      <default-schemas>beanngone_dev.*</default-schemas>
+      <introspection-scope>beanngone_dev:public</introspection-scope>
+      <resolve-scope>beanngone_dev:*</resolve-scope>
     </data-source>
     <data-source name="Rails barista: test" uuid="6a1990b7-8cab-42b3-a60f-381d83b83b37">
-      <schema-pattern>beanngone_test.*</schema-pattern>
-      <default-schemas>beanngone_test.*</default-schemas>
+      <introspection-scope>beanngone_test:*</introspection-scope>
+      <resolve-scope>beanngone_test:*</resolve-scope>
     </data-source>
     <data-source name="Rails barista: production" uuid="d99f50ea-b9a5-434a-a955-9a9793c8f307">
       <secret-storage>master_key</secret-storage>
       <user-name>cnpddodvfflmmf</user-name>
-      <schema-pattern>dbv8978gh59hs.pg_catalog dbv8978gh59hs.public</schema-pattern>
-      <default-schemas>dbv8978gh59hs.pg_catalog dbv8978gh59hs.public</default-schemas>
+      <introspection-scope>dbv8978gh59hs:pg_catalog,public</introspection-scope>
+      <resolve-scope>dbv8978gh59hs:pg_catalog,public</resolve-scope>
     </data-source>
   </component>
 </project>

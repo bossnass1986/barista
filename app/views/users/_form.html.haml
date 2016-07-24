@@ -13,16 +13,20 @@
         = form.label :last_name, class: 'mdl-textfield__label'
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-        = form.email_field :email, class: 'mdl-textfield__input'
-        = form.label :email, class: 'mdl-textfield__label'
-    .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         = form.phone_field :mobile, class: 'mdl-textfield__input'
         = form.label :mobile, class: 'mdl-textfield__label'
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        = form.email_field :email, class: 'mdl-textfield__input'
+        = form.label :email, class: 'mdl-textfield__label'
+    .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         = form.password_field :password, class: 'mdl-textfield__input'
         = form.label :password, class: 'mdl-textfield__label'
+    .mdl-cell.mdl-cel--4-col-phone
+      %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+        %input#checkbox-1.mdl-checkbox__input{:checked => "checked", :type => "checkbox"}/
+        %span.mdl-checkbox__label Checkbox
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
       = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
