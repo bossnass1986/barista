@@ -11,13 +11,13 @@ class Myaccount::PaymentMethodsController < Myaccount::BaseController
   end
 
   def new
-    # @payment_method = current_user.payment_methods.new
+    @payment_method = current_user.payment_methods.new
   end
 
   def create
     result = Braintree::PaymentMethod.create(
         :customer_id => current_user.customer_cim_id,
-        :payment_method_nonce => 'fake-valid-visa-nonce',
+        :payment_method_nonce => nonce_from_the_client,
         :cardholder_name => "#{current_user.first_name} #{current_user.last_name}",
         :options => {
             :make_default => true,

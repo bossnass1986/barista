@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require angular
 
-var form = document.querySelector('#my-sample-form');
+var form = document.querySelector('#cardForm');
 var submit = document.querySelector('input[type="submit"]');
 
 braintree.client.create({
