@@ -7,7 +7,6 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
   def update
     result = Braintree::Transaction.sale(
         :amount => params[:amount_to_add].to_f,
-        # :order_id => "order id",
         :customer_id => customer.customer_cim_id,
         :tax_amount => (params[:amount_to_add].to_f / 11).round(2),
         :options => {

@@ -1,4 +1,3 @@
--#- title t('user.index.title')
 %nav.mdl-navigation
   = link_to root_path, class: 'mdl-navigation__link' do
     %i.material-icons local_cafe
@@ -24,7 +23,7 @@
   = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
     %i.material-icons plus_one
     = t('.referrals')
-  - if current_user.admin?
+  -#- if current_user.admin?
     = link_to admin_path, class: 'mdl-navigation__link' do
       %i.material-icons https
       = t('.admin')

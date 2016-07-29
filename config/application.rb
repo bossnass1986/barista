@@ -32,5 +32,8 @@ module Barista
       g.template_engine :haml
       g.test_framework  :test_unit, fixture: true
     end
+
+      # config.autoload_paths += %W(#{config.root}/app/policies #{config.root}/app/roles)
+
   end
 end

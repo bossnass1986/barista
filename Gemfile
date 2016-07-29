@@ -35,6 +35,7 @@ gem 'pg'
 # User Management
 gem 'clearance'
 gem 'rolify'
+# gem 'access-granted', '~> 1.1.0'
 
 # Payment Gateway
 gem 'awesome_nested_set', '~> 3.0.1'

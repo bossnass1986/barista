@@ -17,7 +17,7 @@ class Myaccount::PaymentMethodsController < Myaccount::BaseController
   def create
     result = Braintree::PaymentMethod.create(
         :customer_id => current_user.customer_cim_id,
-        :payment_method_nonce => nonce_from_the_client,
+        :payment_method_nonce => params[:payment_method_nonce],
         :cardholder_name => "#{current_user.first_name} #{current_user.last_name}",
         :options => {
             :make_default => true,
@@ -28,24 +28,25 @@ class Myaccount::PaymentMethodsController < Myaccount::BaseController
       customer = Braintree::Customer.find(current_user.customer_cim_id)
       puts customer.id
       puts customer.payment_methods[0].token
-      params[:payment_methods][:payment_cim_id] = customer.payment_methods[0].token
-      payment_method = Braintree::PaymentMethod.find(customer.payment_methods[0].token)
-      puts payment_method.cardholder_name
-      params[:payment_methods][:cardholder_name] = payment_method.cardholder_name
-      puts payment_method.card_type
-      params[:payment_methods][:card_type] = payment_method.card_type
-      puts payment_method.issuing_bank
-      params[:payment_methods][:issuing_bank] = payment_method.issuing_bank
-      puts payment_method.masked_number
-      params[:payment_methods][:masked_number] = payment_method.masked_number
-      puts payment_method.country_of_issuance
-      params[:payment_methods][:country_of_issuance] = payment_method.country_of_issuance
-      puts payment_method.expiration_month
-      params[:payment_methods][:month] = payment_method.expiration_month
-      puts payment_method.expiration_year
-      params[:payment_methods][:year] = payment_method.expiration_year
-      puts payment_method.expired?
-      params[:payment_methods][:active] = payment_method.expired?
+      params[:payment_methods][:payment_cim_id] = customer.id
+      params[:payment_methods][:token] = customer.payment_methods[0].token
+      # payment_method = Braintree::PaymentMethod.find(customer.payment_methods[0].token)
+      # puts payment_method.cardholder_name
+      # params[:payment_methods][:cardholder_name] = payment_method.cardholder_name
+      # puts payment_method.card_type
+      # params[:payment_methods][:card_type] = payment_method.card_type
+      # puts payment_method.issuing_bank
+      # params[:payment_methods][:issuing_bank] = payment_method.issuing_bank
+      # puts payment_method.masked_number
+      # params[:payment_methods][:masked_number] = payment_method.masked_number
+      # puts payment_method.country_of_issuance
+      # params[:payment_methods][:country_of_issuance] = payment_method.country_of_issuance
+      # puts payment_method.expiration_month
+      # params[:payment_methods][:month] = payment_method.expiration_month
+      # puts payment_method.expiration_year
+      # params[:payment_methods][:year] = payment_method.expiration_year
+      # puts payment_method.expired?
+      # params[:payment_methods][:active] = payment_method.expired?
     else
       # p result.errors
       result.errors.each do |error|
@@ -87,7 +88,7 @@ class Myaccount::PaymentMethodsController < Myaccount::BaseController
   private
 
   def allowed_params
-    params.require(:payment_methods).permit(:user_id, :address_id, :payment_cim_id, :default, :active, :masked_number, :month, :year, :card_type, :cardholder_name, :country_of_issuance, :issuing_bank)
+    params.require(:payment_methods).permit(:user_id, :payment_method_nonce, :address_id, :payment_cim_id, :token)
   end
 
 end
