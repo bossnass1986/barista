@@ -6,7 +6,7 @@
     .mdl-cell.mdl-cell--4-col.mdl-shadow--2dp
       .mdl-cell.mdl-cell--12-col
         %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => product.id}
-          = form.check_box product.id
+          -#= form.check_box product.id
           %input.mdl-switch__input{:checked => "checked", :type => "checkbox", :id => product.id}/
           %span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col

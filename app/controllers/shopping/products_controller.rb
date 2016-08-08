@@ -35,7 +35,7 @@ class Shopping::ProductsController < Shopping::BaseController
     @product = Product.new
 
     respond_to do |format|
-      format.html # new.html.haml
+      format.html # new.html.slim
       format.json { render json: @product }
     end
   end

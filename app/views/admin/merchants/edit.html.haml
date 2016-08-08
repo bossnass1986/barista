@@ -1,4 +1,4 @@
 -title @merchant.name
-= form_for setup_merchant(@merchant), :url  => admin_supplier_path(@merchant) do |form|
+= form_for setup_merchant(@merchant), :url  => admin_merchant_path(@merchant) do |form|
   = render :partial => '/admin/merchants/venue', :locals => {:form => form}
   = submit_tag "Update", :class  => "button"

@@ -120,7 +120,7 @@ braintree.client.create({
                 }
 
                 // This is where you would submit payload.nonce to your server
-                alert('Got a nonce: ' + payload.nonce);
+                // alert('Got a nonce: ' + payload.nonce);
                 //
                 $.ajax({
                     type: "POST",
@@ -129,7 +129,7 @@ braintree.client.create({
                 });
                 // // If this was a real integration, this is where you would
                 // // send the nonce to your server.
-                console.log('Got a nonce: ' + payload.nonce);
+                // console.log('Got a nonce: ' + payload.nonce);
             });
         }, false);
     });

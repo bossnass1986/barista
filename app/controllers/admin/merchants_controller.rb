@@ -38,7 +38,7 @@ class Admin::MerchantsController < Admin::BaseController
   def update
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
-    @products = @merchant.products.create!
+    # @products = @merchant.products.create!
     if @merchant.update_attributes(allowed_params)
       # SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{@merchant.name} has been updated", '61430091464')
       redirect_to :action => :index
@@ -63,6 +63,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def allowed_params
     params.require(:merchant).permit(:name, :email, :terms_of_service,
+                                     account_attributes: [:id, :merchant_id, :account_name, :bsb, :account_number, :account_type, :charge, :active],
                                      address_attributes: [:id, :first_name, :last_name, :address1, :address2, :city, :zip_code, :state_id, :country_id],
                                      trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :trades]
     )

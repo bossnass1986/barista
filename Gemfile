@@ -25,6 +25,8 @@ gem 'material_design_lite-sass'
 gem 'angularjs-rails'
 gem 'rails-angular-material'
 gem 'haml'
+gem 'slim'
+gem 'slim-rails'
 gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'kaminari'
