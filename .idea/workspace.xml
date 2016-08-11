@@ -128,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/passwords/new.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -1011,14 +1011,7 @@
       <workItem from="1470395992641" duration="1306000" />
       <workItem from="1470471037927" duration="6694000" />
       <workItem from="1470561918232" duration="4106000" />
-      <workItem from="1470908800097" duration="6228000" />
-    </task>
-    <task id="LOCAL-00227" summary="merchant updates">
-      <created>1465650314537</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1465650314537</updated>
+      <workItem from="1470908800097" duration="6570000" />
     </task>
     <task id="LOCAL-00228" summary="merchant updates">
       <created>1465992150365</created>
@@ -1356,11 +1349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470917905180</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="passwords slim up">
+      <created>1470918352745</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1470918352749</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503787000" />
+    <option name="totallyTimeSpent" value="504129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1854,7 +1854,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/passwords/new.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
