@@ -1,7 +1,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
-    h1.mdl-typography--display-1.mdl-typography--text-center= t('.title')
-    h2.mdl-typography--title.mdl-typography--text-center= t('.description')
+    %h1.mdl-typography--display-1.mdl-typography--text-center= t('.title')
+    %h2.mdl-typography--title.mdl-typography--text-center= t('.description')
   = form_for :password, url: passwords_path do |form|
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
