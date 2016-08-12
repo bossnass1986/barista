@@ -88,8 +88,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state relative-caret-position="622">
+              <caret line="99" column="23" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -872,14 +872,7 @@
       <workItem from="1470561918232" duration="4106000" />
       <workItem from="1470908800097" duration="6768000" />
       <workItem from="1470918939934" duration="261000" />
-      <workItem from="1470989296505" duration="5988000" />
-    </task>
-    <task id="LOCAL-00236" summary="store credits">
-      <created>1466769502168</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1466769502168</updated>
+      <workItem from="1470989296505" duration="6881000" />
     </task>
     <task id="LOCAL-00237" summary="heroku come at me">
       <created>1466769726654</created>
@@ -1217,11 +1210,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470996661389</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="fix production caching">
+      <created>1470996812530</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1470996812531</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510576000" />
+    <option name="totallyTimeSpent" value="511469000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1698,8 +1698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+        <state relative-caret-position="622">
+          <caret line="99" column="23" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
           <folding />
         </state>
       </provider>

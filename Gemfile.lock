@@ -101,6 +101,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -289,6 +291,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   geocoder
   haml
+  heroku-deflater
   html2haml
   intercom-rails
   jquery-rails
