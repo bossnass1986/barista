@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  constraints Clearance::Constraints::SignedIn.new do
+    root :to => 'shopping/merchants#index', as: :signed_in_root
+  end
+
+  constraints Clearance::Constraints::SignedOut.new do
+    root to: 'clearance/sessions#new'
+  end
+
   resources :merchant_types
   resources :accounts
   resources :checkouts, only: [:new, :create, :show]
@@ -239,6 +248,6 @@ Rails.application.routes.draw do
       #       # end
     end
 
-    root :to => 'shopping/merchants#index'
+
   end
 end
