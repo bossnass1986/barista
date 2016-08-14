@@ -1,32 +1,6 @@
 - title t('.title')
 .mdl-grid
-  -#.mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
-    -#- if @orders.empty?
-    -#  = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
-    -#- else
-  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--1-offset-tablet.mdl-cell--2-col-tablet
-    Activty
-  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
-    Order
-  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
-    Status
-  .mdl-cell.mdl-cell--hide-phone.mdl-cell--1-col-tablet
-    %i.material-icons credit_card
-  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--2-col-tablet
-    %p Date
-    %p Activty/Venue
-  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
-    Order #
-  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
-    %p Pending
-    %p $20
-  .mdl-cell.mdl-cell--hide-phone.mdl-cell--1-col-tablet
-    %i.material-icons local_cafe
-  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--2-col-tablet
-    %p Date
-    %p Activty/Venue
-  .mdl-cell.mdl-cell--hide-phone.mdl-cell--3-col-tablet
-    Order #
-  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--2-col-tablet
-    %p Pending
-    %p $20
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
+    - if @orders.empty?
+      -#.mdl-typography--display-1-color-contrast.material-icons history
+      = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }

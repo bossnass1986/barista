@@ -628,14 +628,22 @@ a {
 
 .mdl-layout__drawer .mdl-layout-title {
   position: relative;
-  background: unquote("rgb(#{$palette-teal-100})") asset-url('brand/logo-stacked.svg') no-repeat center;
-  background-size: auto 75px;
-  height: 160px;
-  h3 {
-    margin-top: 110px;
+  background: unquote("rgb(#{$palette-teal-100})");
+  //asset-url('brand/logo-stacked.svg') no-repeat center;
+  //background-size: auto 75px;
+  height: 180px;
+  padding-left: 0px !important;
+  h4 {
+    margin-top: -24px;
     font-weight: 900;
     text-align: center;
     color: unquote("rgb(#{$color-white})");
+  }
+  img {
+    border-radius: 96px;
+    display: block;
+    margin: 30px auto;
+    border: 3px solid white;
   }
 }
 

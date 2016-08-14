@@ -22,6 +22,13 @@ html lang='en' ng-app='Cuptown'
       .mdl-layout__drawer
         /! Display brand logo within drawer header
         span.mdl-layout-title
+          img src='http://placehold.it/96x96'
+          h4= current_user.first_name
+        /.mdl-grid
+            .mdl-cell.mdl-cell--1-col-phone 1
+            .mdl-cell.mdl-cell--1-col-phone 2
+            .mdl-cell.mdl-cell--1-col-phone 3
+            .mdl-cell.mdl-cell--1-col-phone 4
         = render 'shared/compact_menu'
       main.mdl-layout__content
         .page-content
