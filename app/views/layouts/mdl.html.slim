@@ -1,0 +1,35 @@
+doctype html
+html lang='en' ng-app='Cuptown'
+  head
+    = render 'shared/meta_data'
+    = stylesheet_link_tag 'application'
+    /! Material Design icon font
+    link href='//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc4/angular-material.min.css' rel='stylesheet'
+    link href='//fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' /
+    = csrf_meta_tags
+  body
+    /! Always shows a header, even in smaller screens.
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      header.mdl-layout__header
+        .mdl-layout__header-row
+          /! Title
+          .mdl-layout-title= content_for?(:title) ? yield(:title).upcase : t('.site_name')
+          .mdl-layout-spacer
+          /! Navigation. We hide it in small screens.
+          nav.mdl-navigation.mdl-layout--large-screen-only
+          nav.mdl-navigation
+            = render 'shared/top_cart'
+      .mdl-layout__drawer
+        /! Display brand logo within drawer header
+        span.mdl-layout-title
+        = render 'shared/compact_menu'
+      main.mdl-layout__content
+        .page-content
+          - flash.each do |key, value|
+            div class=("alert alert-#{key}") = value
+          = yield
+        = render 'shared/footer'
+  script defer='' src='//code.getmdl.io/1.1.3/material.min.js'
+  /! Load the required client component.
+  script src='//js.braintreegateway.com/web/3.0.0-beta.10/js/client.min.js'
+    = javascript_include_tag 'application'

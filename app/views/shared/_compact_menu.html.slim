@@ -1,35 +1,35 @@
-%nav.mdl-navigation
+nav.mdl-navigation
   = link_to root_path, class: 'mdl-navigation__link' do
-    %i.material-icons local_cafe
+    i.material-icons> local_cafe
     = t('.merchants')
   = link_to edit_myaccount_overview_path, class: 'mdl-navigation__link' do
-    %i.material-icons account_circle
+      i.material-icons> account_circle
     = t('.my_details')
   = link_to myaccount_addresses_path, class: 'mdl-navigation__link' do
-    %i.material-icons location_on
+        i.material-icons> location_on
     = t('.address_information')
   = link_to myaccount_orders_url, class: 'mdl-navigation__link' do
-    %i.material-icons history
+          i.material-icons> history
     = t('.order_history')
   = link_to myaccount_payment_methods_path, class: 'mdl-navigation__link' do
-    %i.material-icons credit_card
+            i.material-icons> credit_card
     = t('.payment_methds')
   = link_to myaccount_store_credit_path, class: 'mdl-navigation__link' do
-    %i.material-icons account_balance_wallet
+              i.material-icons> account_balance_wallet
     = t('.credits')
   = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
-    %i.material-icons loyalty
-    My Rewards
+                i.material-icons> loyalty
+                | My Rewards
   = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
-    %i.material-icons plus_one
+                  i.material-icons> plus_one
     = t('.referrals')
-  -#- if current_user.admin?
+  /- if current_user.admin?
     = link_to admin_path, class: 'mdl-navigation__link' do
-      %i.material-icons https
+      i.material-icons https
       = t('.admin')
   = link_to new_password_path, class: 'mdl-navigation__link' do
-    %i.material-icons lock_open
-    Change Password
+    i.material-icons> lock_open
+    | Change Password
   = link_to sign_out_path, method: :delete, class: 'mdl-navigation__link' do
-    %i.material-icons exit_to_app
+      i.material-icons> exit_to_app
     = t('.log_out')

@@ -1,0 +1,17 @@
+.mdl-grid.mdl-color--white.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell--12-col-desktop
+    .mdl-typography--headline.mdl-typography--font-bold.mdl-color-text--primary= t('.top_up')
+    ul.list-control.mdl-list
+      - (20..40).step(5) do |n|
+        li.mdl-list__item.mdl-list__item
+          span.mdl-list__item-primary-content
+            span.mdl-typography--font-bold
+              = number_to_currency(n)
+              | Top Up
+          span.mdl-list__item-secondary-action
+            label.demo-list-radio.mdl-radio.mdl-js-radio.mdl-js-ripple-effect for="option-#{n}"
+              input.mdl-radio__button id="option-#{n}" name='amount_to_add' type='radio' value=n /
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell--12-col-desktop
+    h6.mdl-typography--title= t('.fine_print')
+    p= t('.summary')
+    = f.submit t('.submit_button'), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

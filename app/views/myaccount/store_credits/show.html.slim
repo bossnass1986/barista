@@ -1,8 +1,8 @@
 - title t('.title')
-/ Display Current Balance & Expiry
+/! Display Current Balance & Expiry
 .mdl-grid
   .mdl-cell.mdl-cell--3-col-phone.mdl-cell--8-col-desktop
-    =t('.current_balance')
+    = t('.current_balance')
   .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
     .mdl-textfield--align-right.add_credit
       .mdl-typography--title= number_to_currency(@store_credit.amount)

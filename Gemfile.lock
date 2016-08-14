@@ -318,7 +318,6 @@ DEPENDENCIES
   rspec-rails (~> 3.4.0)
   sass-rails
   sinch_sms
-  slim
   slim-rails
   spring
   spring-commands-rspec
