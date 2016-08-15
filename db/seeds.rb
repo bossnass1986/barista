@@ -3,7 +3,7 @@ puts 'Execute Order 66!'
 Role.destroy_all
 User.delete_all
 Country.destroy_all
-Merchant.destroy_all
+MerchantType.delete_all
 ProductType.delete_all
 Prototype.delete_all
 Product.delete_all
@@ -20,11 +20,8 @@ Property.delete_all
   Role.find_or_create_by({name: role})
 end
 
-puts 'Creating Control Users'
+puts 'The Force is strong with this one.'
 User.create!(first_name: 'Paul', last_name: 'McGuane', mobile: '0430091465', email: 'admin@cup.town', password: 'cuptwn')
-User.create!(first_name: 'Merchant', last_name: 'Admin', mobile: '0430091461', email: 'supplier_admin@bng.com.au', password: '123456')
-# User.create!(id:3, first_name: 'Shopper', mobile: '0430091462', email: 'shopper@bng.com.au').add_role(:shopper)
-# User.create!(id:4, first_name: 'Merchant Staff', mobile: '0430091460', email: 'supplier_staff@bng.com.au').add_role(:supplier_staff)
 
 
 puts 'They are now conducting an extensive search of the surrounding systems.'
@@ -39,8 +36,6 @@ countries_list.each_pair do |key,country|
   end
 end
 
-# puts 'Deleting All States/Provinces/Territories'
-
 puts 'The regional governors now have direct control over their territories. '
 file_to_load  = Rails.root + 'db/seed/states.yml'
 states_list   = YAML::load( File.open( file_to_load ) )
@@ -50,12 +45,12 @@ states_list.each_pair do |key,state|
   State.create(state['attributes']) unless s
 end
 
-puts 'Creating Standard Product Types'
+puts 'Creating Standard Merchant Types'
 MerchantType.create!([
-                         {id: 1, name: 'Cafe'},
-                         {id: 2, name: 'Smoothie/Juice Bar'},
-                         {id: 3, name: 'Bubble Tea'},
-                         {id: 4, name: 'Bar/Pub'}
+                         {id: 1, name: 'Cafe', active: true},
+                         {id: 2, name: 'Smoothie/Juice Bar', active: true},
+                         {id: 3, name: 'Bubble Tea', active: true},
+                         {id: 4, name: 'Bar/Pub', active: true}
                      ])
 
 puts 'Creating Standard Product Types'
@@ -70,7 +65,6 @@ ProductType.create!([
                         {id: 8, name: 'Vodka'},
                         {id: 9, name: 'Bourbon'},
                         {id: 10, name: 'Scotch'}
-                    # {id: }
 ])
 
 # puts 'Creating Standard Product Types'
@@ -80,29 +74,29 @@ ProductType.create!([
 # ])
 
 PrototypeProperty.create!([
-    {property_id: 1, prototype_id: 1},
-    {property_id: 1, prototype_id: 2},
-    {property_id: 2, prototype_id: 1},
-    {property_id: 2, prototype_id: 2},
-    {property_id: 3, prototype_id: 1},
-    {property_id: 4, prototype_id: 1},
-    {property_id: 5, prototype_id: 1},
-    {property_id: 5, prototype_id: 2},
-])
+                            {property_id: 1, prototype_id: 1},
+                            {property_id: 1, prototype_id: 2},
+                            {property_id: 2, prototype_id: 1},
+                            {property_id: 2, prototype_id: 2},
+                            {property_id: 3, prototype_id: 1},
+                            {property_id: 4, prototype_id: 1},
+                            {property_id: 5, prototype_id: 1},
+                            {property_id: 5, prototype_id: 2},
+                          ])
 
 puts 'Sugar CRUSH!'
 Property.create!([
-   {id:1, display_name: 'Size', identifying_name: :Size},
-   {id:2, display_name: 'Milk' , identifying_name: :Milk},
-   {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
-   {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
-   {id:5, display_name: 'Strength' , identifying_name: :Strenth},
-   {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
-   {id:7, display_name: 'Syrup', identifying_name: :Syrup},
-   {id:8, display_name: 'Flavour', identifying_name: :Flavour},
-   {id:9, display_name: 'Topping', identifying_name: :Toppings},
-   {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
-])
+                   {id:1, display_name: 'Size', identifying_name: :Size},
+                   {id:2, display_name: 'Milk' , identifying_name: :Milk},
+                   {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
+                   {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
+                   {id:5, display_name: 'Strength' , identifying_name: :Strenth},
+                   {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
+                   {id:7, display_name: 'Syrup', identifying_name: :Syrup},
+                   {id:8, display_name: 'Flavour', identifying_name: :Flavour},
+                   {id:9, display_name: 'Topping', identifying_name: :Toppings},
+                   {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
+                ])
 
 puts 'Creating Standard Menu Items'
 
@@ -110,18 +104,6 @@ product_seed = Rails.root.join('db', 'seed', 'products.yml')
 product = YAML::load_file(product_seed)
 Product.create!(product)
 
-
-# 'Creating Sample Variants'
-# Variant.create!([
-#   {id: 1, sku: SecureRandom.hex(6), product_id: 2, price: 2.95},
-#   {id: 2, sku: SecureRandom.hex(6), product_id: 2, price: 3.95},
-#   {id: 3, sku: SecureRandom.hex(6), product_id: 2, price: 4.95},
-#   {id: 4, sku: SecureRandom.hex(6), product_id: 2, price: 5.95},
-#   {id: 5, sku: SecureRandom.hex(6), product_id: 4, price: 2.95},
-#   {id: 6, sku: SecureRandom.hex(6), product_id: 4, price: 3.95},
-#   # {id: 7, product_id: 2, price: 4.95, name: 'Bubble Tea - Grande'},
-#   # {id: 8, product_id: 3, price: 3.95, name: 'Cappuccino - Venti'}
-# ])
 #
 # puts 'Creating Sample Products with Attributes'
 # ProductProperty.create!([
@@ -148,9 +130,9 @@ Product.create!(product)
 # ])
 
 
-(1..100).each do |i|
-  Merchant.create!(name: SecureRandom.hex(6), email: 'test@test.com')
-end
+# (1..100).each do |i|
+#   Merchant.create!(name: SecureRandom.hex(6), email: 'test@test.com')
+# end
 # Merchant.create!([
 #   {name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
 #   {name: 'Wedgewood Cafe', email: 'test@test.com'},

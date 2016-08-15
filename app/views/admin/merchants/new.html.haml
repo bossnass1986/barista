@@ -26,7 +26,7 @@
             .mdl-cell.mdl-cell--10.mdl-cell--1-offset
               = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
         #menu-panel.mdl-tabs__panel.is-active
-          - @merchant.products.select(&:id).flatten.uniq.each do |item|
+          -#- @merchant.products.select(&:id).flatten.uniq.each do |item|
             = render :partial => 'product', :locals => {:item => item }
 
 

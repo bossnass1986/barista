@@ -8,10 +8,10 @@ class Address < ActiveRecord::Base
   has_many     :shipments
 
 
-  validates :first_name,  :presence => true,
-            :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }
-  validates :last_name,   :presence => true,
-            :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }
+  # validates :first_name,  :presence => true,
+  #           :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }
+  # validates :last_name,   :presence => true,
+  #           :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }
   validates :address1,    :presence => true,       :length => { :maximum => 255 }
   validates :city,        :presence => true,
             :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 75 }

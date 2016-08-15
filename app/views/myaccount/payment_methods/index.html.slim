@@ -5,7 +5,7 @@
   - if @customer.nil?
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
-      - if @customer
+- if @customer
   .mdl-grid.mdl-color--white.mdl-shadow--2dp
     .mdl-cell.mdl-cell--1-col-phone
       img src=@customer.payment_methods[0].image_url

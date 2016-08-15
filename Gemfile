@@ -15,7 +15,7 @@ gem 'activemerchant', '~> 1.48'
 gem 'kgio'
 gem 'memcachier'
 gem 'dalli'
-
+gem 'pry'
 
 # Server
 gem 'puma'
