@@ -1,6 +1,6 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h3.mdl-typography--display-1.teal-heading= t('.location_title')
+    h3.mdl-typography--display-1.teal-heading= t('.account_details')
   .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
     = form.text_field :name, class: 'mdl-textfield__input'
     = form.label :name, class: 'mdl-textfield__label'
@@ -27,3 +27,8 @@
       = address_fields.hidden_field :country_id
     - else
       = address_fields.select :country_id, select_countries, :include_blank => true
+  .mdl-cell.mdl-cell--12-col
+    h3.mdl-typography--display-1.teal-heading= t('.business_name')
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
+      = form.text_field :name, class: 'mdl-textfield__input'
+      = form.label :name, class: 'mdl-textfield__label'

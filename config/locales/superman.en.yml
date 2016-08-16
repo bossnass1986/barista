@@ -1,0 +1,129 @@
+en:
+  admin:
+    index:
+      side_bar_title: 'Admin Menu'
+      side_bar_sub_title: 'Application Menu'
+    shared:
+      side_menu:
+        merchants: 'Merchants'
+        dashboard: 'Dashboard'
+        products: 'Menu Items'
+        discounts: 'Discount Codes'
+        orders: 'Orders'
+        customers: 'Customers'
+        users: 'Users'
+        referrals: 'Referrals'
+        countries: 'Countries'
+        marketing: 'Marketing'
+        tax_rates: 'Tax Rates'
+        settings: 'Settings'
+        back_to_app: 'Return to App'
+        log_out: 'Log Out'
+    config:
+      countries:
+        index:
+          title: 'Countries'
+      overview:
+        index:
+          title: 'Application Configurations'
+          countries: 'Countries'
+          tax_rates: 'Tax Rates'
+      tax_rates:
+        index:
+          title: 'Tax Rates'
+        new:
+          title: 'New Tax Rate'
+
+    dashboard:
+      title: 'Dashboard'
+      stats_title:
+        sales: 'Sales'
+        orders: 'Orders'
+        users: 'Users'
+        products: 'Products'
+    generic:
+      discounts:
+        index:
+          title: 'Discount Codes'
+        new:
+          title: 'New Discount Code'
+    history:
+      orders:
+        title: 'Order History'
+        all: 'All'
+        items: 'Items'
+        submitted: 'Submitted'
+        accepted: 'Accepted'
+    merchants:
+        index:
+          title: 'Merchants'
+          name: 'Merchant'
+          address: 'Address'
+        new:
+          title: 'New Merchant'
+          account: 'Account'
+          venue: 'Venue'
+          menu: 'Menu'
+        show:
+          account: 'Account'
+          menu: 'Menu'
+          orders: 'Orders'
+          customers: 'Customers'
+        account:
+          account_title: 'Account Details'
+          business_title: 'Business Name'
+          bank_title: 'Bank Details'
+          bsb_error: "Oops BSB number isn't correct"
+          account_number_error: "Oops account number isn't correct"
+        product:
+          title: 'Products'
+          sub_title: 'Add-ons'
+        venue:
+          account_details: 'Account Details'
+          business_name: 'Business Name'
+          trading_hours_title: 'Trading Hours'
+          postcode_error: "Oops post code isn't correct"
+    merchandise:
+      products:
+        index:
+          title: 'Products'
+          product: 'Product Name'
+          available: 'Available'
+          product_type: 'Product Type'
+          new_button: 'Add New Product'
+        new:
+          title: 'New Product'
+        edit:
+          title: 'Edit Product'
+          add_image_button: 'Add Image'
+          variants_button: 'View Variants'
+          return_button: 'Back to Products'
+        form:
+          title: 'Summary'
+          sub_title: 'Cafe Add Ons'
+      properties:
+        index:
+          title: 'Properties'
+        edit:
+          title: 'Edit Property'
+      prototypes:
+        index:
+          title: 'Prototypes'
+          new_button: 'Add New Prototype'
+    suppliers:
+        index:
+          title: 'Merchants'
+          new_button: 'Add New Merchant'
+    user_datas:
+      referrals:
+        index:
+          title: 'Referrals'
+      store_credits:
+        show:
+          title: 'Credit Balance'
+        edit:
+          title: 'Adjust Credit Balance'
+    users:
+      index:
+        title: 'Customers'
+

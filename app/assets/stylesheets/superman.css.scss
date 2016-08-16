@@ -618,6 +618,10 @@ a {
   margin-top: 10px;
 }
 
+.mdl-layout__tab {
+  color: unquote("rgb(#{$palette-teal-300})");
+}
+
 .merchant-settings, .product-settings {
   background: unquote("rgb(#{$color-white})");
   border-radius: 16px;
