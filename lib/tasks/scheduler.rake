@@ -1,4 +1,7 @@
 desc 'These tasks are called by the Heroku scheduler add-on'
+
+# Runs Daily
+
 task :expire_credits => :environment do
   puts "#{DateTime.now} INFO - commence credit expire".upcase
   result = StoreCredit.expire_credits!

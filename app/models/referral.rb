@@ -124,34 +124,35 @@ class Referral < ActiveRecord::Base
     where(:purchased_at => nil)
   end
   private
-  def invite_referral
-    Notifier.referral_invite(self.id, referring_user_id).deliver_later
+
+    def invite_referral
+      Notifier.referral_invite(self.id, referring_user_id).deliver_later
     end
 
-  def give_credits(user)
-    user.store_credit.add_credit(decimal_amount)
-  end
-
-  def validate_has_not_signed_up_yet
-    unless skip_validate_has_not_signed_up_yet == true
-      self.errors.add(:base, 'This user has already signed up.') if has_signed_up
+    def give_credits(user)
+      user.store_credit.add_credit(decimal_amount)
     end
-    true
-  end
 
-  def has_signed_up
-    (User.where(:email => email).limit(1).count != 0)
-  end
-
-  def assign_referral_program
-    self.referral_program_id ||= ReferralProgram.current_program.id
-  end
-
-  class << self
-    def assign_referral
-      # find all the expired credits on particular date, and update all together
-      self.expire_on(date).update_all(amount: 0, last_expired_at: DateTime.current)
+    def validate_has_not_signed_up_yet
+      unless skip_validate_has_not_signed_up_yet == true
+        self.errors.add(:base, 'This user has already signed up.') if has_signed_up
+      end
+      true
     end
-  end
+
+    def has_signed_up
+      (User.where(:email => email).limit(1).count != 0)
+    end
+
+    def assign_referral_program
+      self.referral_program_id ||= ReferralProgram.current_program.id
+    end
+
+    class << self
+      def assign_referral
+        # find all the expired credits on particular date, and update all together
+        self.expire_on(date).update_all(amount: 0, last_expired_at: DateTime.current)
+      end
+    end
 
 end

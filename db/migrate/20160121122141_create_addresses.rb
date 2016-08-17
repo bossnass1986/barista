@@ -8,10 +8,10 @@ class CreateAddresses < ActiveRecord::Migration
       t.integer :addressable_id
       t.string :address1
       t.string :address2
-      t.string :city
+      t.string :suburb
       t.integer :state_id
       t.string :state_name
-      t.string :zip_code
+      t.string :postcode
       t.integer :phone_id
       t.string :alternative_phone
       t.boolean :default

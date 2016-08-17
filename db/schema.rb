@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.integer "merchant_id"
-    t.string "account_name"
-    t.integer "bsb"
-    t.integer "account_number"
-    t.string "account_type"
-    t.decimal "charge", precision: 8, scale: 2, default: 4.4, null: false
-    t.boolean "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "merchant_id"
+    t.string   "account_name"
+    t.integer  "bsb"
+    t.integer  "account_number"
+    t.string   "account_type"
+    t.decimal  "charge",         precision: 8, scale: 2, default: 4.4, null: false
+    t.boolean  "active"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
   end
 
   add_index "accounts", ["merchant_id"], name: "index_accounts_on_merchant_id", using: :btree
@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 20160714075034) do
     t.integer  "addressable_id"
     t.string   "address1"
     t.string   "address2"
-    t.string   "city"
+    t.string   "suburb"
     t.integer  "state_id"
     t.string   "state_name"
-    t.string   "zip_code"
+    t.string   "postcode"
     t.integer  "phone_id"
     t.string   "alternative_phone"
     t.boolean  "default"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20160714075034) do
     t.integer  "country_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.float "latitude"
-    t.float "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "addresses", ["addressable_id"], name: "index_addresses_on_addressable_id", using: :btree
@@ -94,11 +94,11 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   add_index "carts", ["user_id"], name: "index_carts_on_user_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
-    t.string "name", limit: 50
-    t.string "abbreviation", limit: 3
-    t.boolean "active", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",         limit: 50
+    t.string   "abbreviation", limit: 3
+    t.boolean  "active",                  default: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   add_index "countries", ["active"], name: "index_countries_on_active", using: :btree
@@ -141,16 +141,16 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   end
 
   create_table "merchant_products", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "merchant_id"
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.integer  "merchant_id"
+    t.boolean  "active",      default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "merchant_types", force: :cascade do |t|
-    t.string "name"
-    t.boolean "active"
+    t.string   "name"
+    t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -158,32 +158,32 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   create_table "merchants", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.integer "account_id"
-    t.integer "merchant_type_id"
+    t.integer  "account_id"
+    t.integer  "merchant_type_id"
     t.string   "permalink",        limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
     t.string   "meta_keywords",    limit: 255
     t.string   "meta_description", limit: 255
     t.boolean  "featured",                     default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "merchants", ["name"], name: "index_merchants_on_name", using: :btree
   add_index "merchants", ["permalink"], name: "index_merchants_on_permalink", unique: true, using: :btree
 
   create_table "order_items", force: :cascade do |t|
-    t.decimal "price", precision: 8, scale: 2
-    t.decimal "total", precision: 8, scale: 2
-    t.integer "order_id", null: false
-    t.integer "variant_id", null: false
-    t.string "state", limit: 255, null: false
+    t.decimal  "price",                   precision: 8, scale: 2
+    t.decimal  "total",                   precision: 8, scale: 2
+    t.integer  "order_id",                                        null: false
+    t.integer  "variant_id",                                      null: false
+    t.string   "state",       limit: 255,                         null: false
     t.integer  "tax_rate_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id", using: :btree
@@ -196,7 +196,7 @@ ActiveRecord::Schema.define(version: 20160714075034) do
     t.string   "email",           limit: 255
     t.string   "state"
     t.integer  "user_id"
-    t.integer "merchant_id"
+    t.integer  "merchant_id"
     t.integer  "bill_address_id"
     t.integer  "order_status_id", limit: 2
     t.integer  "coupon_id"
@@ -218,9 +218,9 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   create_table "payment_methods", force: :cascade do |t|
     t.integer "user_id"
     t.integer "customer_cim_id"
-    t.string "token"
+    t.string  "token"
     t.integer "address_id"
-    t.string "address_cim_id"
+    t.string  "address_cim_id"
     t.boolean "default"
   end
 
@@ -253,25 +253,25 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   end
 
   create_table "product_types", force: :cascade do |t|
-    t.integer "merchant_type_id"
-    t.string "name", limit: 255, null: false
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "merchant_type_id"
+    t.string   "name",             limit: 255,                null: false
+    t.boolean  "active",                       default: true
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
+    t.string   "name",               limit: 255,                 null: false
     t.text     "description"
     t.text     "product_keywords"
-    t.integer "product_type_id", null: false
+    t.integer  "product_type_id",                                null: false
     t.integer  "prototype_id"
-    t.string "permalink", limit: 255
+    t.string   "permalink",          limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
-    t.string "meta_keywords", limit: 255
-    t.string "meta_description", limit: 255
-    t.boolean "featured", default: false
+    t.string   "meta_keywords",      limit: 255
+    t.string   "meta_description",   limit: 255
+    t.boolean  "featured",                       default: false
     t.text     "description_markup"
     t.integer  "brand_id"
     t.datetime "created_at"
@@ -379,12 +379,12 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   add_index "states", ["name"], name: "index_states_on_name", using: :btree
 
   create_table "store_credits", force: :cascade do |t|
-    t.decimal "amount", precision: 8, scale: 2, default: 0.0
-    t.integer "user_id", null: false
+    t.decimal  "amount",          precision: 8, scale: 2, default: 0.0
+    t.integer  "user_id",                                               null: false
     t.datetime "expire_at"
     t.datetime "last_expired_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
   end
 
   add_index "store_credits", ["user_id"], name: "index_store_credits_on_user_id", using: :btree
@@ -393,7 +393,7 @@ ActiveRecord::Schema.define(version: 20160714075034) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date "start_date", default: '2016-07-14', null: false
+    t.date     "start_date",                         default: '2016-08-17', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -406,8 +406,8 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   create_table "trading_hours", force: :cascade do |t|
     t.integer "merchant_id"
     t.integer "weekday"
-    t.time "open_time"
-    t.time "close_time"
+    t.time    "open_time"
+    t.time    "close_time"
     t.boolean "trades"
   end
 
@@ -449,11 +449,11 @@ ActiveRecord::Schema.define(version: 20160714075034) do
   add_index "users_roles", ["role_id", "user_id"], name: "index_users_roles_on_role_id_and_user_id", using: :btree
 
   create_table "variant_merchants", force: :cascade do |t|
-    t.integer "variant_id"
-    t.integer "merchant_id"
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "variant_id"
+    t.integer  "merchant_id"
+    t.boolean  "active",      default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "variant_properties", force: :cascade do |t|

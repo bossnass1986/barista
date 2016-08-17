@@ -66,6 +66,6 @@ class StoreCredit < ActiveRecord::Base
       # find all the expired credits on particular date, and update all together
       self.expire_on(date).update_all(amount: 0, last_expired_at: DateTime.current)
     end
-    end
+  end
 
 end

@@ -13,12 +13,12 @@ class Address < ActiveRecord::Base
   # validates :last_name,   :presence => true,
   #           :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 25 }
   validates :address1,    :presence => true,       :length => { :maximum => 255 }
-  validates :city,        :presence => true,
+  validates :suburb,        :presence => true,
             :format   => { :with => CustomValidators::Names.name_validator },       :length => { :maximum => 75 }
   # validates :state_id,      :presence => true,  :if => Proc.new { |address| Settings.require_state_in_address}
   # validates :country_id,    :presence => true,  :if => Proc.new { |address| !Settings.require_state_in_address}
   #validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
-  validates :zip_code, :presence => true, :length => {:minimum => 4, :maximum => 4}
+  validates :postcode, :presence => true, :length => {:minimum => 4, :maximum => 4}
   before_validation :sanitize_data
 
   attr_accessor :replace_address_id # if you are updating an address set this field.
@@ -66,10 +66,10 @@ class Address < ActiveRecord::Base
     { :name     => name,
       :address1 => address1,
       :address2 => address2,
-      :city     => city,
+      :suburb     => suburb,
       :state    => state.abbreviation,
       :country  => state.country_id == Country::USA_ID ? 'US' : 'CAN',
-      :zip      => zip_code#,
+      :postcode      => postcode#,
       #:phone    => phone
     }
   end
@@ -98,7 +98,7 @@ class Address < ActiveRecord::Base
   # @param [none]
   # @return [Array] Array has ("name", "address1", "address2"(unless nil), "city state zip")
   def full_address_array
-    [name, address1, address2, city_state_zip].compact
+    [name, address1, address2, suburb_state_postcode].compact
   end
 
   # Use this method to represent the full address as an array compacted
@@ -106,7 +106,7 @@ class Address < ActiveRecord::Base
   # @param [none]
   # @return [Array] Array has ("name", "address1", "address2"(unless nil), "city state zip")
   def full_address_compact_array
-    [address1, city_state_zip].join(', ')
+    [address1, suburb_state_postcode].join(', ')
   end
 
   # Use this method to represent the full address as an array compacted
@@ -136,8 +136,8 @@ class Address < ActiveRecord::Base
   #
   # @param [none]
   # @return [String] "city, state.abbreviation"
-  def city_state_name
-    [city, state_abbr_name].join(', ')
+  def suburb_state_name
+    [suburb, state_abbr_name].join(', ')
   end
 
   # Use this method to represent the "city, state.abbreviation"
@@ -152,16 +152,16 @@ class Address < ActiveRecord::Base
   #
   # @param [none]
   # @return [String] "city, state.abbreviation zip_code"
-  def city_state_zip
-    [city_state_name, zip_code].join(' ')
+  def suburb_state_postcode
+    [suburb_state_name, postcode].join(' ')
   end
 
   private
   # This method is called to ensure data is formated without extra white space before_validation
   def sanitize_data
     sanitize_name
-    sanitize_city
-    sanitize_zip_code
+    sanitize_suburb
+    sanitize_postcode
     sanitize_address
   end
 
@@ -169,12 +169,12 @@ class Address < ActiveRecord::Base
     self.active ||= true
   end
 
-  def sanitize_zip_code
-    self.zip_code    = self.zip_code.strip    unless self.zip_code.blank?
+  def sanitize_postcode
+    self.postcode    = self.postcode.strip    unless self.postcode.blank?
   end
 
-  def sanitize_city
-    self.city        = self.city.strip        unless self.city.blank?
+  def sanitize_suburb
+    self.suburb        = self.suburb.strip        unless self.suburb.blank?
   end
 
   def sanitize_name

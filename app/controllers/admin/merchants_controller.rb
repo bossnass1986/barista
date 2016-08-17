@@ -64,7 +64,7 @@ class Admin::MerchantsController < Admin::BaseController
   def allowed_params
     params.require(:merchant).permit(:name, :email, :terms_of_service,
                                      account_attributes: [:id, :merchant_id, :account_name, :bsb, :account_number, :account_type, :charge, :active],
-                                     address_attributes: [:id, :address_type_id, :first_name, :last_name, :address1, :address2, :city, :zip_code, :state_id, :country_id, :default],
+                                     address_attributes: [:id, :address_type_id, :first_name, :last_name, :address1, :address2, :suburb, :postcode, :state_id, :country_id, :default],
                                      trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :trades]
     )
   end

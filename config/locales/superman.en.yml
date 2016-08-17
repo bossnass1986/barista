@@ -79,7 +79,7 @@ en:
           title: 'Products'
           sub_title: 'Add-ons'
         venue:
-          account_details: 'Account Details'
+          location_title: 'Location Details'
           business_name: 'Business Name'
           trading_hours_title: 'Trading Hours'
           postcode_error: "Oops post code isn't correct"

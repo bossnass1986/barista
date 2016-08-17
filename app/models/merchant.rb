@@ -3,6 +3,8 @@ class Merchant < ActiveRecord::Base
   # has_many :variant_merchants
   # has_many :variants, through: :variant_merchants, dependent: :destroy
   # has_many :products, through: :variants, dependent: :destroy
+
+  has_many :products
   has_many :products, through: :product_types
   has_many :trading_hours, dependent: :destroy
 

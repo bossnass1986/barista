@@ -5,7 +5,7 @@
     a.mdl-layout__tab href='#venue-panel' = t('.venue')
     a.mdl-layout__tab href='#menu-panel' = t('.menu')
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col.merchant-settings.mdl-shadow--2dp
+  .mdl-cell.mdl-cell--12-col-tablet.mdl-cell--10-col-desktop.mdl-cell--1-offset-desktop.superman-settings.mdl-shadow--2dp
     = form_for @merchant, :url => admin_merchants_path do |form|
       section#account-panel.mdl-layout__tab-panel.is-active
         .page-content
@@ -20,26 +20,7 @@
         .page-content
           /! Venue Details
           = render :partial => 'venue', :locals => {:form => form}
-      section#mrnu-panel.mdl-layout__tab-panel
+      section#menu-panel.mdl-layout__tab-panel
         .page-content
-          /! Venue Details
-          /= render :partial => 'venue', :locals => {:form => form}
-        /! Your content goes here
-          /- @merchant.products.select(&:id).flatten.uniq.each do |item|
-                      = render :partial => 'product', :locals => {:item => item }
-
-
-/.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
-  .mdl-tabs__tab-bar
-    a.mdl-tabs__tab href='#account-panel' = t('.account')
-    a.mdl-tabs__tab.is-active href='#menu-panel' = t('.menu')
-  - if @merchant.errors.any?
-    #error_explanation
-      h2
-        = pluralize(@merchant.errors.count, "error")
-        | prohibited this merchant from being saved:
-      ul
-        - @merchant.errors.full_messages.each do |msg|
-          li= msg
-
-        #menu-panel.mdl-tabs__panel.is-active
+          /! Menu Details
+          = render :partial => 'product'

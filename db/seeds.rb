@@ -55,13 +55,13 @@ MerchantType.create!([
 
 puts 'Creating Standard Product Types'
 ProductType.create!([
-                        {id: 1, name: 'Coffee'},
-                        {id: 2, name: 'Hot Drinks'},
-                        {id: 3, name: 'Iced Drinks'},
-                        {id: 4, name: 'Cold Drinks'},
-                        {id: 5, name: 'Smoothie'},
-                        {id: 6, name: 'Frappe'},
-                        {id: 7, name: 'Food'},
+                        {id: 1, name: 'Coffee', merchant_type_id: 1},
+                        {id: 2, name: 'Hot Drinks', merchant_type_id: 1},
+                        {id: 3, name: 'Iced Drinks', merchant_type_id: 1},
+                        {id: 4, name: 'Cold Drinks', merchant_type_id: 1},
+                        {id: 5, name: 'Smoothie', merchant_type_id: 1},
+                        {id: 6, name: 'Frappe', merchant_type_id: 1},
+                        {id: 7, name: 'Food', merchant_type_id: 1},
                         {id: 8, name: 'Vodka'},
                         {id: 9, name: 'Bourbon'},
                         {id: 10, name: 'Scotch'}

@@ -1,6 +1,0 @@
-- @merchant.trading_hours.each do |th|
-  %li.mdl-list__item.mdl-list__item--two-line
-    %span.mdl-list__item-primary-content
-      = th.weekday
-      = Date::DAYNAMES[th.weekday]
-      %span.mdl-list__item-sub-title= "#{th.open_time} - #{th.close_time}"
