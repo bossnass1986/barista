@@ -1,12 +1,13 @@
 class User < ActiveRecord::Base
+  include Merit
   include Clearance::User
-
   include AASM
   include UserCim
   include Presentation::UserPresenter
   include UserEmailer
 
   rolify
+  has_merit
 
   before_validation :sanitize_data
   after_create :start_store_credits #, :subscribe_to_newsletters

@@ -24,6 +24,9 @@ html lang='en' ng-app='Cuptown'
         span.mdl-layout-title
           img src='http://placehold.it/96x96'
           h4= current_user.first_name
+          ul
+            - current_user.badges.each do |badge|
+              li= badge.name
         /.mdl-grid
             .mdl-cell.mdl-cell--1-col-phone 1
             .mdl-cell.mdl-cell--1-col-phone 2

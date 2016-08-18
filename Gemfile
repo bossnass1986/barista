@@ -29,6 +29,7 @@ gem 'slim-rails'
 gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'kaminari'
+gem 'gmaps4rails'
 
 # Database
 gem 'pg'
@@ -36,6 +37,7 @@ gem 'pg'
 # User Management
 gem 'clearance'
 gem 'rolify'
+gem 'merit'
 # gem 'access-granted', '~> 1.1.0'
 
 # Payment Gateway
