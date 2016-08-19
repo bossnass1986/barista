@@ -187,7 +187,7 @@ $layout-nav-color: unquote("rgb(#{$palette-grey-300})") !default;
 
 // Drawer
 $layout-drawer-bg-color: unquote("rgb(#{$palette-grey-50})") !default;
-$layout-drawer-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+$layout-drawer-border-color: unquote("rgb(#{$color-primary})") !default;
 $layout-text-color: unquote("rgb(#{$palette-grey-800})") !default;
 $layout-drawer-navigation-color: #757575 !default;
 $layout-drawer-navigation-link-active-background: unquote("rgb(#{$color-light-contrast})") !default;
@@ -631,7 +631,7 @@ a {
   background: unquote("rgb(#{$palette-teal-100})");
   //asset-url('brand/logo-stacked.svg') no-repeat center;
   //background-size: auto 75px;
-  height: 180px;
+  height: 210px;
   padding-left: 0px !important;
   h4 {
     margin-top: -24px;
@@ -644,6 +644,9 @@ a {
     display: block;
     margin: 30px auto;
     border: 3px solid white;
+  }
+  #badges {
+    font-size: 14px;
   }
 }
 
