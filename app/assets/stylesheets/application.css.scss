@@ -252,7 +252,7 @@ $input-text-error-color: unquote("rgb(#{$palette-red-A700})") !default;
 
 $card-background-color: unquote("rgb(#{$color-white})") !default;
 $card-text-color: unquote("rgb(#{$color-black})") !default;
-$card-image-placeholder-color: unquote("rgb(#{$color-accent})") !default;
+$card-image-placeholder-color: unquote("rgb(#{$palette-teal-100})") !default;
 $card-supporting-text-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
 $card-border-color: rgba(0,0,0,0.1) !default;
 $card-subtitle-color: unquote("rgba(#{$color-black}, 0.54)") !default;
@@ -708,8 +708,9 @@ a {
   }
   .mdl-card__media {
     box-sizing: border-box;
-    background-image: asset-url("products/cappuccino.jpg");
-    background-size: cover;
+    background-image: asset-url("brand/pattern.svg");
+    background-size: 10em;
+    background-repeat: repeat;
     padding: 24px;
     display: -webkit-flex;
     display: -ms-flexbox;

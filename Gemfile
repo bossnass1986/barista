@@ -5,6 +5,9 @@ gem 'rails'
 ruby '2.3.1'
 gem 'responders'
 
+# Server
+gem 'puma'
+
 gem 'intercom-rails'
 
 gem 'activemerchant', '~> 1.48'
@@ -17,8 +20,7 @@ gem 'memcachier'
 gem 'dalli'
 gem 'pry'
 
-# Server
-gem 'puma'
+
 
 # Template
 gem 'material_design_lite-sass'
@@ -30,6 +32,7 @@ gem 'html2haml'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'kaminari'
 gem 'gmaps4rails'
+gem 'wicked'
 
 # Database
 gem 'pg'
@@ -49,24 +52,20 @@ gem 'paperclip'
 # Search
 gem 'pg_search'
 
-# Phone Management
+# Communications Management
 gem 'sinch_sms'
 gem 'postmark-rails'
 
 # Geocoding
 gem 'geocoder'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+# Assets
+gem 'sass-rails'
+gem 'coffee-rails'
+# gem 'compass-rails'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails'
 

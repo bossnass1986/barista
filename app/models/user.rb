@@ -76,6 +76,8 @@ class User < ActiveRecord::Base
   #           :format   => { :with => ::CustomValidators::Numbers.phone_number_validator },
   #           :length => { :maximum => 10 }
 
+  validates :terms_of_service, acceptance: true
+
   accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
   # accepts_nested_attributes_for :customer_service_comments, :reject_if => proc { |attributes| attributes['note'].strip.blank? }

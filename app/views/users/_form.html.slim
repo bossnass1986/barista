@@ -23,12 +23,12 @@
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         = form.password_field :password, class: 'mdl-textfield__input'
         = form.label :password, class: 'mdl-textfield__label'
-    .mdl-cell.mdl-cel--4-col-phone
-      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for="checkbox-1"
-        input#checkbox-1.mdl-checkbox__input checked="checked" type="checkbox" /
-        span.mdl-checkbox__label Checkbox
+    .mdl-cell.mdl-cel--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
+      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=:terms_of_service
+        = form.check_box :terms_of_service, :class => 'mdl-checkbox__input', :id => :terms_of_service
+        span.mdl-checkbox__label I agree to the terms and conditions. Make our lawyers happy by reading their T&Cs
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
       = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
     .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
-      | Already have an account?
+      span> Already have an account?
       = link_to 'Log in here.', sign_in_path

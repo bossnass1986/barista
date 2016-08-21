@@ -130,9 +130,9 @@ Product.create!(product)
 # ])
 
 
-# (1..100).each do |i|
-#   Merchant.create!(name: SecureRandom.hex(6), email: 'test@test.com')
-# end
+(1..100).each do |i|
+  Merchant.create!(name: SecureRandom.hex(6), email: 'test@test.com')
+end
 # Merchant.create!([
 #   {name: 'Latte Cartelle Drive Thru Coffee', email: 'test@test.com', featured: true},
 #   {name: 'Wedgewood Cafe', email: 'test@test.com'},
