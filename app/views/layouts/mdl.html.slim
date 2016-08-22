@@ -23,8 +23,8 @@ html lang='en' ng-app='Cuptown'
         /! Display brand logo within drawer header
         span.mdl-layout-title
           = link_to edit_myaccount_overview_path do
-            img src='http://placehold.it/96x96'
-            h4= current_user.first_name
+            = image_tag current_user.avatar.url(:square), size: '100'
+            h4= current_user.greeting
         = render 'shared/compact_menu'
       main.mdl-layout__content
         .page-content

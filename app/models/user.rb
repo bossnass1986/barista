@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   # belongs_to :account
 
   has_one :referree, class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
-  has_one     :store_credit
+  has_one  :store_credit
   has_one :default_billing_address, -> { where(billing_default: true, active: true) },
           as: :addressable,
           class_name: 'Address'
@@ -58,7 +58,17 @@ class User < ActiveRecord::Base
   has_many    :saved_cart_items,    -> { where(active: true, item_type_id: ItemType::SAVE_FOR_LATER) },   class_name: 'CartItem'
   has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
   has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
-  has_many :payment_methods
+  has_many    :payment_methods
+
+
+  # This method associates the attribute ":avatar" with a file attachment
+  has_attached_file :avatar,
+  {
+      styles: { square: '200x200#' },
+      # path: ":rails_root/public:url",
+      # url: "/system/:class/:attachment/:id_partition/:style/:hash.:extension",
+      # hash_secret: 'abfa04a42c94f58d17a509bccb2276d2f2e1718e23de5f0ff4bc93b4c922c2dbd23f81b31a7932fbf4424c95f14e055639d2376f8b3cb40ebf91ea4682197645'
+  }
 
 
   # validates :first_name,  presence: true, if: :registered_user?,
@@ -77,6 +87,11 @@ class User < ActiveRecord::Base
   #           :length => { :maximum => 10 }
 
   validates :terms_of_service, acceptance: true
+
+  # Validate the attached image is image/jpg, image/png, etc
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  # Validate filename
+  validates_attachment_file_name :avatar, matches: [/png\z/, /jpe?g\z/]
 
   accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
@@ -206,13 +221,13 @@ class User < ActiveRecord::Base
     eight_pm = Time.now.change(:hour => 20).to_i
     case
       when midnight.upto(noon).include?(current_time)
-        puts "Good Morning"
+         "Morning #{self.first_name}"
       when noon.upto(five_pm).include?(current_time)
-        puts "Good Afternoon"
+         "Afternoon #{self.first_name}"
       when five_pm.upto(eight_pm).include?(current_time)
-        puts "Good Evening"
+         "Evening #{self.first_name}"
       when eight_pm.upto(midnight + 1.day).include?(current_time)
-        puts "Good Night"
+         "Night #{self.first_name}"
     end
 
   end
@@ -234,16 +249,16 @@ class User < ActiveRecord::Base
 
   def start_store_credits
     self.store_credit = StoreCredit.new(amount: 0.0, user: self)
-    end
+  end
 
   def password_required?
     self.crypted_password.blank?
-    end
+  end
 
   def subscribe_to_newsletters
     newsletter_ids = Newsletter.where(autosubscribe: true).pluck(:id)
     self.newsletter_ids = newsletter_ids
-    end
+  end
 
   # sanitizes the saving of data.  removes white space and assigns a free account type if one doesn't exist
   #
@@ -256,7 +271,7 @@ class User < ActiveRecord::Base
 
     ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
     # self.account = Account.first unless account_id
-    end
+  end
 
   def create_braintree_customer
     # self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?

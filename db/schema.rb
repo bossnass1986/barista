@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818114307) do
+ActiveRecord::Schema.define(version: 20160821142943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -469,20 +469,24 @@ ActiveRecord::Schema.define(version: 20160818114307) do
     t.string   "state"
     t.string   "mobile"
     t.string   "customer_cim_id"
-    t.string   "encrypted_password", limit: 128,                null: false
-    t.string   "confirmation_token", limit: 128
+    t.string   "encrypted_password",  limit: 128,                null: false
+    t.string   "confirmation_token",  limit: 128
     t.string   "access_token"
-    t.integer  "comments_count",                 default: 0
-    t.boolean  "sms_notification",               default: true, null: false
-    t.boolean  "push_notification",              default: true, null: false
+    t.integer  "comments_count",                  default: 0
+    t.boolean  "sms_notification",                default: true, null: false
+    t.boolean  "push_notification",               default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "role"
-    t.string   "remember_token",     limit: 128
+    t.string   "remember_token",      limit: 128
     t.integer  "sash_id"
-    t.integer  "level",                          default: 0
+    t.integer  "level",                           default: 0
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["access_token"], name: "index_users_on_access_token", unique: true, using: :btree

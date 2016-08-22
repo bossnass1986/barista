@@ -47,7 +47,10 @@ gem 'merit'
 gem 'awesome_nested_set', '~> 3.0.1'
 gem 'braintree'
 gem 'aasm'
+
+# Image Uploads
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 # Search
 gem 'pg_search'

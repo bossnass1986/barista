@@ -22,6 +22,6 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email)
+    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email, :avatar)
   end
 end
