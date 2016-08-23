@@ -56,7 +56,7 @@ IntercomRails.config do |config|
     :orders => Proc.new { |current_user| current_user.orders.count },
     :level => Proc.new { |current_user| current_user.level },
     :credit_expiration => Proc.new { |current_user| current_user.store_credit.expire_at },
-    :credit_amount => Proc.new { |current_user| current_user.store.amount }
+    :credit_amount => Proc.new { |current_user| current_user.store_credit.amount }
   }
 
   # == Current company method/variable
