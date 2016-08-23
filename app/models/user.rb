@@ -221,13 +221,15 @@ class User < ActiveRecord::Base
     eight_pm = Time.now.change(:hour => 20).to_i
     case
       when midnight.upto(noon).include?(current_time)
-         "Morning #{self.first_name}"
+        'Good Morning'
       when noon.upto(five_pm).include?(current_time)
-         "Afternoon #{self.first_name}"
+        'Good Afternoon'
       when five_pm.upto(eight_pm).include?(current_time)
-         "Evening #{self.first_name}"
+        'Good Evening'
       when eight_pm.upto(midnight + 1.day).include?(current_time)
-         "Night #{self.first_name}"
+        'Good Night'
+      else
+        'Welcome Back'
     end
 
   end
