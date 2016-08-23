@@ -32,7 +32,7 @@ IntercomRails.config do |config|
   # == User model class
   # The class which defines your user model
   #
-  # config.user.model = Proc.new { User }
+  config.user.model = Proc.new { User }
 
   # == Lead/custom attributes for non-signed up users
   # Pass additional attributes to for potential leads or
@@ -52,10 +52,12 @@ IntercomRails.config do |config|
   # You can provide either a method name which will be sent to the current
   # user object, or a Proc which will be passed the current user.
   #
-  # config.user.custom_data = {
-  #   :plan => Proc.new { |current_user| current_user.plan.name },
-  #   :favorite_color => :favorite_color
-  # }
+  config.user.custom_data = {
+    :orders => Proc.new { |current_user| current_user.orders.count },
+    :level => Proc.new { |current_user| current_user.level },
+    :credit_expiration => Proc.new { |current_user| current_user.store_credit.expire_at },
+    :credit_amount => Proc.new { |current_user| current_user.store.amount }
+  }
 
   # == Current company method/variable
   # The method/variable that contains the current company for the current user,
