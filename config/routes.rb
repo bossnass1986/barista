@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :passwords, controller: "clearance/passwords", only: [:create, :new]
+  resource :session, controller: "clearance/sessions", only: [:create]
+
+  resources :users, controller: "clearance/users", only: [:create] do
+    resource :password,
+      controller: "clearance/passwords",
+      only: [:create, :edit, :update]
+  end
+
+  get "/sign_in" => "clearance/sessions#new", as: "sign_in"
+  delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
+  get "/sign_up" => "clearance/users#new", as: "sign_up"
   constraints Clearance::Constraints::SignedIn.new do
     root :to => 'shopping/merchants#index', as: :signed_in_root
   end
@@ -8,22 +20,6 @@ Rails.application.routes.draw do
     root to: 'clearance/sessions#new'
   end
 
-  resources :merchant_types
-  resources :accounts
-  resources :checkouts, only: [:new, :create, :show]
-
-  # resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  # resource :session, controller: "clearance/sessions", only: [:create]
-  #
-  # resources :users, controller: "clearance/users", only: [:create] do
-  #   resource :password,
-  #     controller: "clearance/passwords",
-  #     only: [:create, :edit, :update]
-  # end
-  #
-  # get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-  # delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
-  # get "/sign_up" => "clearance/users#new", as: "sign_up"
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
     concern :paginatable do
@@ -32,15 +28,16 @@ Rails.application.routes.draw do
 
     resources :users, controller: :users, only: :create
 
-
+    resources :merchant_types
+    resources :accounts
+    resources :checkouts, only: [:new, :create, :show]
     get 'admin' => 'admin/dashboard#index'
     get 'admin/merchandise' => 'admin/merchandise/summary#index'
 
     resource :about, only: [:show]
     resources :states, only: [:index]
     resources :terms, only: [:index]
-    # resource :unsubscribe, only: :show
-    # resources :wish_items, only: [:index, :destroy]
+
 
     namespace :customer do
       resources :registrations, only: [:index, :new, :create]
@@ -77,18 +74,6 @@ Rails.application.routes.draw do
       end
       resources :shipping_methods
     end
-
-    # resources  :addresses do
-    #   member do
-    #     put :select_address
-    #   end
-    # end
-    #
-    # resources  :billing_addresses do
-    #   member do
-    #     put :select_address
-    #   end
-    # end
 
     namespace :admin do
       resource :dashboard, only: [:index]
@@ -145,18 +130,6 @@ Rails.application.routes.draw do
           resources :comments
         end
 
-        # namespace :partial do
-        #   resources :orders do
-        #     resources :shipments, only: [:create, :new, :update]
-        #   end
-        # end
-        #
-        # resources :shipments do
-        #   member do
-        #     put :ship
-        #   end
-        #   resources :addresses, only: [:edit, :update] # This is for editing the shipment address
-        # end
       end
       namespace :shopping do
         resources :carts
@@ -174,12 +147,6 @@ Rails.application.routes.draw do
               post :start_checkout_process
             end
           end
-          # resources :shipping_addresses, only: [:index, :update, :new, :create, :select_address] do
-          #   member do
-          #     put :select_address
-          #   end
-          # end
-          # resources :shipping_methods, only: [:index, :update]
         end
       end
       namespace :config do
@@ -190,10 +157,6 @@ Rails.application.routes.draw do
           end
         end
         resources :overview, only: [:index]
-        # resources :shipping_categories
-        # resources :shipping_rates
-        # resources :shipping_methods
-        # resources :shipping_zones
         resources :tax_rates
         # resources :tax_categories
       end
@@ -205,10 +168,6 @@ Rails.application.routes.draw do
       end
       namespace :inventory do
         resources :merchants
-        # resources :overviews
-        # resources :purchase_orders
-        # resources :receivings
-        # resources :adjustments
       end
 
       namespace :merchandise do
@@ -244,8 +203,6 @@ Rails.application.routes.draw do
           resources :descriptions, only: [:edit, :update]
         end
       end
-      # namespace :document do
-      #       # end
     end
 
 
