@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   # belongs_to :account
 
   has_one :referree, class_name: 'Referral', foreign_key: 'referral_user_id' # person who referred you
-  has_one  :store_credit
+  has_one :store_credit
   has_one :default_billing_address, -> { where(billing_default: true, active: true) },
           as: :addressable,
           class_name: 'Address'
@@ -65,9 +65,9 @@ class User < ActiveRecord::Base
   has_attached_file :avatar,
   {
       styles: { square: '200x200#' },
-      # path: ":rails_root/public:url",
-      # url: "/system/:class/:attachment/:id_partition/:style/:hash.:extension",
-      # hash_secret: 'abfa04a42c94f58d17a509bccb2276d2f2e1718e23de5f0ff4bc93b4c922c2dbd23f81b31a7932fbf4424c95f14e055639d2376f8b3cb40ebf91ea4682197645'
+      path: ":rails_root/public:url",
+      url: "/system/:class/:attachment/:id_partition/:style/:hash.:extension",
+      hash_secret: 'abfa04a42c94f58d17a509bccb2276d2f2e1718e23de5f0ff4bc93b4c922c2dbd23f81b31a7932fbf4424c95f14e055639d2376f8b3cb40ebf91ea4682197645'
   }
 
 
@@ -95,7 +95,6 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
-  # accepts_nested_attributes_for :customer_service_comments, :reject_if => proc { |attributes| attributes['note'].strip.blank? }
 
   aasm column: :state do
     state :inactive

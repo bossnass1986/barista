@@ -42,22 +42,11 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
-  def customer_confirmation_page_view
-    false
-  end
-
 
   def require_user
     redirect_to login_url and store_return_location and return if logged_out?
   end
 
-  def search_product
-    @search_product || Product.new
-  end
-
-  def is_production_simulation
-    false
-  end
 
   def session_cart
     return @session_cart if defined?(@session_cart)
@@ -87,12 +76,6 @@ class ApplicationController < ActionController::Base
     current_user ? current_user : random_user
   end
 
-  ## TODO cookie[:hadean_user_id] value needs to be encrypted ### Authlogic persistence_token might work here
-  def random_user
-    return @random_user if defined?(@random_user)
-    @random_user = cookies[:hadean_uid] ? User.find_by_persistence_token(cookies[:hadean_uid]) : nil
-  end
-
   def merge_carts
     if !!current_user
       session_cart.merge_with_previous_cart!
@@ -108,21 +91,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  ###  Authlogic helper methods
-  # def current_user_session
-  #   return @current_user_session if defined?(@current_user_session)
-  #   @current_user_session = UserSession.find
-  # end
-
-  # def current_user
-  #   return @current_user if defined?(@current_user)
-  #   @current_user = current_user_session && current_user_session.record
-  # end
-  #
-  # def current_user_id
-  #   return @current_user_id if defined?(@current_user_id)
-  #   @current_user_id = current_user_session && current_user_session.record && current_user_session.record.id
-  # end
 
   def redirect_back_or_default(default)
     default = root_url if current_user && (default == login_url)
@@ -132,22 +100,6 @@ class ApplicationController < ActionController::Base
 
   def select_countries
     @select_countries ||= Country.form_selector
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : :asc
-  end
-
-  def cc_params
-    {
-        :brand              => params[:type],
-        :number             => params[:number],
-        :verification_value => params[:verification_value],
-        :month              => params[:month],
-        :year               => params[:year],
-        :first_name         => params[:first_name],
-        :last_name          => params[:last_name]
-    }
   end
 
   def expire_all_browser_cache

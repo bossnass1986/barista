@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
+
   constraints Clearance::Constraints::SignedIn.new do
     root :to => 'shopping/merchants#index', as: :signed_in_root
   end
@@ -38,12 +39,6 @@ Rails.application.routes.draw do
     resources :states, only: [:index]
     resources :terms, only: [:index]
 
-
-    namespace :customer do
-      resources :registrations, only: [:index, :new, :create]
-      resource :password_reset, only: [:new, :create, :edit, :update]
-      resource :activation, only: [:show]
-    end
 
     namespace :myaccount do
       resources :orders, only: [:index, :show]
