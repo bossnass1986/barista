@@ -178,10 +178,6 @@ ReferralType::NAMES.each do |name|
   ReferralType.find_or_create_by(name: name)
 end
 
-puts 'Address Types'
-AddressType::NAMES.each do |address_type|
-  AddressType.find_or_create_by(name: address_type)
-end
 
 puts 'PHONE TYPES'
 PhoneType::NAMES.each do |phone_type|

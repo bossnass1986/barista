@@ -88,8 +88,7 @@ Rails.application.routes.draw do
 
         resources :users do
           resource :store_credits, only: [:show, :edit, :update]
-          resources :addresses
-        end
+                end
       end
       # resources :overviews, only: [:index]
       resources :merchants

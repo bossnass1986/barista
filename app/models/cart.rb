@@ -1,16 +1,14 @@
-# TODO COMPLETED MODEL
-
 class Cart < ActiveRecord::Base
   belongs_to  :user
   belongs_to  :customer, class_name: 'User'
   has_many    :cart_items, dependent: :destroy
-  has_many    :shopping_cart_items, -> { where(active: true, item_type_id: ItemType::SHOPPING_CART_ID) },   class_name: 'CartItem'
-  has_many    :saved_cart_items,    -> { where( active: true, item_type_id: ItemType::SAVE_FOR_LATER_ID) }, class_name: 'CartItem'
-  has_many    :wish_list_items,     -> { where( active: true, item_type_id: ItemType::WISH_LIST_ID) },      class_name: 'CartItem'
-  has_many    :purchased_items,     -> { where( active: true, item_type_id: ItemType::PURCHASED_ID) },      class_name: 'CartItem'
-  has_many    :deleted_cart_items,  -> { where(active: false) }, class_name: 'CartItem'
+  has_many    :shopping_cart_items, -> { where(active: true) },   class_name: 'CartItem'
+  # has_many    :saved_cart_items,    -> { where( active: true, item_type_id: ItemType::SAVE_FOR_LATER_ID) }, class_name: 'CartItem'
+  # has_many    :wish_list_items,     -> { where( active: true, item_type_id: ItemType::WISH_LIST_ID) },      class_name: 'CartItem'
+  # has_many    :purchased_items,     -> { where( active: true, item_type_id: ItemType::PURCHASED_ID) },      class_name: 'CartItem'
+  # has_many    :deleted_cart_items,  -> { where(active: false) }, class_name: 'CartItem'
 
-  accepts_nested_attributes_for :shopping_cart_items
+  # accepts_nested_attributes_for :shopping_cart_items
 
   # Adds all the item prices (not including taxes) that are currently in the shopping cart
   #
@@ -49,20 +47,20 @@ class Cart < ActiveRecord::Base
   # @param [User, #read] user that is adding something to the cart
   # @param [Integer, #optional] ItemType id that is being added to the cart
   # @return [CartItem] return the cart item that is added to the cart
-  def add_variant(variant_id, customer, qty = 1, cart_item_type_id = ItemType::SHOPPING_CART_ID, admin_purchase = false)
+  def add_variant(variant_id, customer, qty = 1, admin_purchase = false)
     items = shopping_cart_items.where(variant_id: variant_id).to_a
     variant = Variant.where(id: variant_id).first
     quantity_to_purchase = variant.quantity_purchaseable_if_user_wants(qty.to_i, admin_purchase)
     if admin_purchase && (quantity_to_purchase > 0)
-      cart_item = add_cart_items(items, quantity_to_purchase, customer, cart_item_type_id, variant_id)
+      cart_item = add_cart_items(items, quantity_to_purchase, customer, variant_id)
     elsif variant.sold_out?
       cart_item = saved_cart_items.create(variant_id:   variant_id,
                                           user:         customer,
-                                          item_type_id: ItemType::SAVE_FOR_LATER_ID,
+                                          # item_type_id: ItemType::SAVE_FOR_LATER_ID,
                                           quantity:     qty
       ) if items.size < 1
     else
-      cart_item = add_cart_items(items, quantity_to_purchase, customer, cart_item_type_id, variant_id)
+      cart_item = add_cart_items(items, quantity_to_purchase, customer, variant_id)
     end
     cart_item
   end
@@ -125,11 +123,11 @@ class Cart < ActiveRecord::Base
     end
   end
 
-  def add_cart_items(items, qty, customer, cart_item_type_id, variant_id)
+  def add_cart_items(items, qty, customer, variant_id)
     if items.size < 1
       cart_item = shopping_cart_items.create(variant_id:   variant_id,
                                              user:         customer,
-                                             item_type_id: cart_item_type_id,
+                                             # item_type_id: cart_item_type_id,
                                              quantity:     qty
       )
     else

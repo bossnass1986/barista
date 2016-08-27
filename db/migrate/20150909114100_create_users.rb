@@ -11,7 +11,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :encrypted_password, limit: 128, null: false
       t.string :confirmation_token, limit: 128
       t.string :access_token
-      t.integer :comments_count, :default => 0
+      t.float :latitude
+      t.float :longitude
 
       t.boolean :sms_notification, :default => true, :null => false
       t.boolean :push_notification, :default => true, :null => false

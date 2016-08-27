@@ -59,8 +59,6 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.integer  "country_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.float    "latitude"
-    t.float    "longitude"
   end
 
   add_index "addresses", ["addressable_id"], name: "index_addresses_on_addressable_id", using: :btree
@@ -144,12 +142,6 @@ ActiveRecord::Schema.define(version: 20160821142943) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-
-  create_table "item_types", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "merchant_products", force: :cascade do |t|
     t.integer  "product_id"
@@ -442,7 +434,7 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-08-17', null: false
+    t.date     "start_date",                         default: '2016-08-27', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -472,13 +464,12 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.string   "encrypted_password",  limit: 128,                null: false
     t.string   "confirmation_token",  limit: 128
     t.string   "access_token"
-    t.integer  "comments_count",                  default: 0
+    t.float    "latitude"
+    t.float    "longitude"
     t.boolean  "sms_notification",                default: true, null: false
     t.boolean  "push_notification",               default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
     t.integer  "role"
     t.string   "remember_token",      limit: 128
     t.integer  "sash_id"

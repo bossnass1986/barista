@@ -1,5 +1,0 @@
-- title t('.title')
-= form_for(@form_address, :url => myaccount_address_path(@form_address), html: {class: 'custom'}) do |f|
-  = render :partial => 'form', :locals => {:f => f}
-.columns
-  = link_to 'Back to Addresses', myaccount_addresses_path, :class => 'secondary small button  '

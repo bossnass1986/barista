@@ -21,6 +21,6 @@ nav.mdl-navigation
     = link_to admin_path, class: 'mdl-navigation__link' do
       i.material-icons https
       = t('.admin')
-  = link_to sign_out_path, method: :delete, class: 'mdl-navigation__link' do
+  = link_to sign_out_path, :method => :delete, class: 'mdl-navigation__link' do
     i.material-icons> exit_to_app
     = t('.log_out')

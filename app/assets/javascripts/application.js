@@ -127,6 +127,16 @@ braintree.client.create({
                     url: "/myaccount/payment_methods",
                     data: {"payment_method_nonce": payload.nonce}
                 });
+                (function () {
+                    'use strict';
+                    var snackbarContainer = document.querySelector('#demo-toast-example');
+                    var showToastButton = document.querySelector('#add_payment');
+                    showToastButton.addEventListener('click', function () {
+                        'use strict';
+                        var data = {message: 'Thankyou for your payment'};
+                        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                    });
+                }());
                 // // If this was a real integration, this is where you would
                 // // send the nonce to your server.
                 // console.log('Got a nonce: ' + payload.nonce);
