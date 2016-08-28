@@ -5,8 +5,8 @@ class MerchantTypesControllerTest < ActionController::TestCase
     @merchant_type = merchant_types(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:merchant_types)
   end

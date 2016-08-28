@@ -36,10 +36,10 @@ RSpec.describe ProductPropertiesController, type: :controller do
   # ProductPropertiesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all product_properties as @product_properties" do
       product_property = ProductProperty.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:product_properties)).to eq([product_property])
     end
   end

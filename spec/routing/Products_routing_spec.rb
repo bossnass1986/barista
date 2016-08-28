@@ -3,8 +3,8 @@ require "spec_helper"
 describe ProductsController do
   describe "routing" do
 
-    it "routes to #index" do
-      get("/Products").should route_to("menu_items#index")
+    it "routes to #show" do
+      get("/Products").should route_to("menu_items#show")
     end
 
     it "routes to #new" do

@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe VariantPropertiesController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
-      expect(:get => "/variant_properties").to route_to("variant_properties#index")
+    it "routes to #show" do
+      expect(:get => "/variant_properties").to route_to("variant_properties#show")
     end
 
     it "routes to #new" do

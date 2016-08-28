@@ -5,8 +5,8 @@ class PrototypePropertiesControllerTest < ActionController::TestCase
     @prototype_property = prototype_properties(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:prototype_properties)
   end

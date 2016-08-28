@@ -36,10 +36,10 @@ RSpec.describe CartsController, type: :controller do
   # CartsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all carts as @carts" do
       cart = Cart.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:carts)).to eq([cart])
     end
   end

@@ -23,9 +23,9 @@ html lang='en' ng-app='Cuptown'
         /! Display brand logo within drawer header
         span.mdl-layout-title
           = link_to edit_myaccount_overview_path do
-            = image_tag current_user.avatar.url(:square), size: '100'
+            /= image_tag current_user.avatar.url(:square), size: '100'
             h4= current_user.greeting
-            h4= "#{current_user.first_name} #{current_user.last_name.chars.first}"
+            h4= current_user.full_name
         = render 'shared/compact_menu'
       main.mdl-layout__content
         .page-content

@@ -5,8 +5,8 @@ class TaxRatesControllerTest < ActionController::TestCase
     @tax_rate = tax_rates(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:tax_rates)
   end

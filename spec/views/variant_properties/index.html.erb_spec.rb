@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "variant_properties/index", type: :view do
+RSpec.describe "variant_properties/show", type: :view do
   before(:each) do
     assign(:variant_properties, [
       VariantProperty.create!(

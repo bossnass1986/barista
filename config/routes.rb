@@ -1,43 +1,46 @@
 Rails.application.routes.draw do
 
-  resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resource :session, controller: "clearance/sessions", only: [:create]
-
-  resources :users, controller: "clearance/users", only: [:create] do
-    resource :password,
-      controller: "clearance/passwords",
-      only: [:create, :edit, :update]
-  end
-
-  get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-  delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
-  get "/sign_up" => "clearance/users#new", as: "sign_up"
-
-  constraints Clearance::Constraints::SignedIn.new do
-    root :to => 'shopping/merchants#index', as: :signed_in_root
-  end
-
-  constraints Clearance::Constraints::SignedOut.new do
-    root to: 'clearance/sessions#new'
-  end
-
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
 
     concern :paginatable do
-      get '(page/:page)', :action => :index, :on => :collection, :as => ''
+      get '(page/:page)', :action => :show, :on => :collection, :as => ''
     end
+
+    resources :passwords, controller: 'clearance/passwords', only: [:create, :new]
+    resource :session, controller: 'clearance/sessions', only: [:create]
+
+    resources :users, controller: 'clearance/users', only: [:create] do
+      resource :password,
+               controller: 'clearance/passwords',
+               only: [:create, :edit, :update]
+    end
+
+    get '/sign_in' => 'clearance/sessions#new', as: 'sign_in'
+    # match '/sign_out' => 'clearance/sessions#destroy', :via => :delete
+    delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
+    get '/sign_up' =>'clearance/users#new', as: 'sign_up'
+
+    constraints Clearance::Constraints::SignedIn.new do
+      root to: 'shopping/merchants#show', as: :signed_in_root
+    end
+
+    constraints Clearance::Constraints::SignedOut.new do
+      root to: 'clearance/sessions#new'
+    end
+
+    resources :after_signup, only: [:show, :update]
 
     resources :users, controller: :users, only: :create
 
     resources :merchant_types
     resources :accounts
     resources :checkouts, only: [:new, :create, :show]
-    get 'admin' => 'admin/dashboard#index'
-    get 'admin/merchandise' => 'admin/merchandise/summary#index'
+    get 'admin' => 'admin/dashboard#show'
+    get 'admin/merchandise' => 'admin/merchandise/summary#show'
 
     resource :about, only: [:show]
     resources :states, only: [:index]
-    resources :terms, only: [:index]
+    resource :terms, only: [:show]
 
 
     namespace :myaccount do
@@ -90,29 +93,13 @@ Rails.application.routes.draw do
           resource :store_credits, only: [:show, :edit, :update]
                 end
       end
-      # resources :overviews, only: [:index]
+      # resources :overviews, only: [:show]
       resources :merchants
-      get "help" => "help#index"
+      get "help" => "help#show"
 
-      # namespace :reports do
-      #   resource :overview, only: [:show]
-      #   resources :graphs
-      #   resources :weekly_charts, only: [:index]
-      # end
-      # namespace :rma do
-      #   resources :orders do
-      #     resources :return_authorizations do
-      #       member do
-      #         put :complete
-      #       end
-      #     end
-      #   end
-      #   resources  :shipments
-      # end
 
       namespace :history do
         resources :orders, only: [:index, :show] do
-          # resources  :addresses, only: [:index, :show, :edit, :update, :new, :create]
         end
       end
 
@@ -130,11 +117,6 @@ Rails.application.routes.draw do
         resources :products
         resources :users
         namespace :checkout do
-          resources :billing_addresses, only: [:index, :update, :new, :create, :select_address] do
-            member do
-              put :select_address
-            end
-          end
           resources :credit_cards
           resource :order, only: [:show, :update, :start_checkout_process] do
             member do
@@ -168,10 +150,8 @@ Rails.application.routes.draw do
         namespace :images do
           resources :products, :concerns => :paginatable
         end
-        resources :image_groups
         resources :properties
         resources :prototypes
-        resources :brands
         resources :product_types
         resources :prototype_properties
 
@@ -198,7 +178,6 @@ Rails.application.routes.draw do
         end
       end
     end
-
 
   end
 end

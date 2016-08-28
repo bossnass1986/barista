@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe VariantSuppliersController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
-      expect(:get => "/variant_suppliers").to route_to("variant_suppliers#index")
+    it "routes to #show" do
+      expect(:get => "/variant_suppliers").to route_to("variant_suppliers#show")
     end
 
     it "routes to #new" do

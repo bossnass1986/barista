@@ -1,6 +1,6 @@
 class TermsController < ApplicationController
-  #caches_page :index
-  def index
+  #caches_page :show
+  def show
 
   end
 end

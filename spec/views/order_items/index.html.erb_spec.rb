@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "order_items/index", type: :view do
+RSpec.describe "order_items/show", type: :view do
   before(:each) do
     assign(:order_items, [
       OrderItem.create!(

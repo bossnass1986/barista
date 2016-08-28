@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "carts/index", type: :view do
+RSpec.describe "carts/show", type: :view do
   before(:each) do
     assign(:carts, [
       Cart.create!(

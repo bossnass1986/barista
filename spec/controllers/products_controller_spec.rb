@@ -34,10 +34,10 @@ describe ProductsController do
     {}
   end
 
-  describe "GET index" do
+  describe "GET show" do
     it "assigns all Products as @Products" do
       menu_item = Product.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       assigns(:products).should eq([menu_item])
     end
   end

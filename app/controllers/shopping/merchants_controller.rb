@@ -7,7 +7,7 @@ class Shopping::MerchantsController < Shopping::BaseController
     # Only pull the fields we require
     @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render :json => @merchants.as_json }
       format.xml { render :json => @merchants }
     end
@@ -19,7 +19,7 @@ class Shopping::MerchantsController < Shopping::BaseController
     @merchant = Merchant.select('id').find(params[:id])
     @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render :json => @merchant }
     end
     # form_info
@@ -59,7 +59,7 @@ class Shopping::MerchantsController < Shopping::BaseController
   def destroy
     @merchant.destroy
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render :json => @merchant.as_json }
     end
     # redirect_to merchants_url, notice: 'Merchant was successfully destroyed.'

@@ -64,7 +64,7 @@ merchant.config [
   '$locationProvider'
   ($routeProvider, $locationProvider) ->
     $routeProvider.when '/merchants',
-      templateUrl: '/templates/merchants/index.html'
+      templateUrl: '/templates/merchants/show.html'
       controller: 'MerchantListCtrl'
     $routeProvider.when '/merchant/:id',
       templateUrl: '/templates/merchants/show.html'

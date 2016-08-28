@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe MerchantsController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
-      expect(:get => "/merchants").to route_to("merchants#index")
+    it "routes to #show" do
+      expect(:get => "/merchants").to route_to("merchants#show")
     end
 
     it "routes to #new" do

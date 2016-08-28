@@ -20,8 +20,6 @@ gem 'memcachier'
 gem 'dalli'
 gem 'pry'
 
-
-
 # Template
 gem 'material_design_lite-sass'
 gem 'angularjs-rails'
@@ -49,7 +47,7 @@ gem 'braintree'
 gem 'aasm'
 
 # Image Uploads
-gem 'paperclip'
+# gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 
 # Search

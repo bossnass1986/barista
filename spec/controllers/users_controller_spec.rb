@@ -36,10 +36,10 @@ RSpec.describe UsersController, :type => :controller do
   # PeopleController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all people as @people" do
       person = User.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:users)).to eq([person])
     end
   end

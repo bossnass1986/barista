@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe CartItemsController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
-      expect(:get => "/cart_items").to route_to("cart_items#index")
+    it "routes to #show" do
+      expect(:get => "/cart_items").to route_to("cart_items#show")
     end
 
     it "routes to #new" do

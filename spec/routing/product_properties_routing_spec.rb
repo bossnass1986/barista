@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe ProductPropertiesController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
+    it "routes to #show" do
       expect(:get => "/product_properties").to route_to("product_properties#index")
     end
 

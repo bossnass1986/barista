@@ -30,23 +30,6 @@ class User < ActiveRecord::Base
   has_many    :completed_orders,          -> { where(state: 'complete') },            class_name: 'Order'
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
-  # has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
-
-  has_many    :addresses,       dependent: :destroy,       as: :addressable
-
-
-  has_many    :billing_addresses,         -> { where(active: true) },
-              as:         :addressable,
-              class_name: 'Address'
-
-  has_one     :default_shipping_address,  -> { where(default: true, active: true) },
-              as:         :addressable,
-              class_name: 'Address'
-
-  has_many     :shipping_addresses,       -> { where(active: true) },
-               as:         :addressable,
-               class_name: 'Address'
-
   has_many    :user_roles,                dependent: :destroy
   # has_many    :roles,                     through: :user_roles
 
@@ -54,21 +37,11 @@ class User < ActiveRecord::Base
 
   has_many    :cart_items
   has_many    :shopping_cart_items, -> { where(active: true, item_type_id: ItemType::SHOPPING_CART_ID) }, class_name: 'CartItem'
-  has_many    :wish_list_items,     -> { where(active: true, item_type_id: ItemType::WISH_LIST_ID) },     class_name: 'CartItem'
-  has_many    :saved_cart_items,    -> { where(active: true, item_type_id: ItemType::SAVE_FOR_LATER) },   class_name: 'CartItem'
-  has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
-  has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
+  # has_many    :wish_list_items,     -> { where(active: true, item_type_id: ItemType::WISH_LIST_ID) },     class_name: 'CartItem'
+  # has_many    :saved_cart_items,    -> { where(active: true, item_type_id: ItemType::SAVE_FOR_LATER) },   class_name: 'CartItem'
+  # has_many    :purchased_items,     -> { where(active: true, item_type_id: ItemType::PURCHASED_ID) },     class_name: 'CartItem'
+  # has_many    :deleted_cart_items,  -> { where( active: false) }, class_name: 'CartItem'
   has_many    :payment_methods
-
-
-  # This method associates the attribute ":avatar" with a file attachment
-  has_attached_file :avatar,
-  {
-      styles: { square: '200x200#' },
-      path: ":rails_root/public:url",
-      url: "/system/:class/:attachment/:id_partition/:style/:hash.:extension",
-      hash_secret: 'abfa04a42c94f58d17a509bccb2276d2f2e1718e23de5f0ff4bc93b4c922c2dbd23f81b31a7932fbf4424c95f14e055639d2376f8b3cb40ebf91ea4682197645'
-  }
 
 
   # validates :first_name,  presence: true, if: :registered_user?,
@@ -88,12 +61,6 @@ class User < ActiveRecord::Base
 
   validates :terms_of_service, acceptance: true
 
-  # Validate the attached image is image/jpg, image/png, etc
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-  # Validate filename
-  validates_attachment_file_name :avatar, matches: [/png\z/, /jpe?g\z/]
-
-  accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
 
   aasm column: :state do
@@ -168,36 +135,12 @@ class User < ActiveRecord::Base
     Product.limit(4)
   end
 
-  # Returns the default billing address if it exists.   otherwise returns the shipping address
-  #
-  # @param [none]
-  # @return [ Address ]
-  def billing_address
-    default_billing_address ? default_billing_address : shipping_address
-  end
-
-  # Returns the default shipping address if it exists.   otherwise returns the first shipping address
-  #
-  # @param [none]
-  # @return [ Address ]
-  def shipping_address
-    default_shipping_address ? default_shipping_address : shipping_addresses.first
-  end
-
   # name and first line of address (used by credit card gateway to descript the merchant)
   #
   # @param  [ none ]
   # @return [ String ] name and first line of address
   def merchant_description
     [name, default_shipping_address.try(:address_lines)].compact.join(', ')
-  end
-
-  # include addresses in Find
-  #
-  # @params [ none ]
-  # @return [ Arel ]
-  def include_default_addresses
-    includes([:default_billing_address, :default_shipping_address, :account])
   end
 
   def number_of_finished_orders
@@ -230,9 +173,11 @@ class User < ActiveRecord::Base
       else
         'Welcome Back'
     end
-
   end
 
+  def full_name
+    [self.first_name, self.last_name].reject(&:blank?).join(' ')
+  end
   private
 
   class << self
@@ -252,14 +197,6 @@ class User < ActiveRecord::Base
     self.store_credit = StoreCredit.new(amount: 0.0, user: self)
   end
 
-  def password_required?
-    self.crypted_password.blank?
-  end
-
-  def subscribe_to_newsletters
-    newsletter_ids = Newsletter.where(autosubscribe: true).pluck(:id)
-    self.newsletter_ids = newsletter_ids
-  end
 
   # sanitizes the saving of data.  removes white space and assigns a free account type if one doesn't exist
   #

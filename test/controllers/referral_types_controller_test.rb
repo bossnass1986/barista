@@ -5,8 +5,8 @@ class ReferralTypesControllerTest < ActionController::TestCase
     @referral_type = referral_types(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:referral_types)
   end

@@ -36,10 +36,10 @@ RSpec.describe MerchantsController, type: :controller do
   # MerchantsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all merchants as @merchants" do
       supplier = Merchant.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:merchants)).to eq([supplier])
     end
   end

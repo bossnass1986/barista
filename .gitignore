@@ -18,6 +18,7 @@
 /config/environments/test.rb
 /config/environments/staging.rb
 /config/initializers/secret_token.rb
+/config/database.yml
 /public/assets/*
 /brakeman.txt
 /brakeman.html

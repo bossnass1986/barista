@@ -5,8 +5,8 @@ class ReferralsControllerTest < ActionController::TestCase
     @referral = referrals(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:referrals)
   end

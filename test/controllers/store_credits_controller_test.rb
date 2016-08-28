@@ -5,8 +5,8 @@ class StoreCreditsControllerTest < ActionController::TestCase
     @store_credit = store_credits(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:store_credits)
   end

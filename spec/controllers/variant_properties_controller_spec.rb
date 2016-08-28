@@ -36,10 +36,10 @@ RSpec.describe VariantPropertiesController, type: :controller do
   # VariantPropertiesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all variant_properties as @variant_properties" do
       variant_property = VariantProperty.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:variant_properties)).to eq([variant_property])
     end
   end

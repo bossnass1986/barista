@@ -70,9 +70,9 @@ Searcher.prototype = new function() {
     });
   }
 
-  // function longMatchRegexp(index, longIndex, regexps) {
+  // function longMatchRegexp(show, longIndex, regexps) {
   //     for (var i = regexps.length - 1; i >= 0; i--){
-  //         if (!index.match(regexps[i]) && !longIndex.match(regexps[i])) return false;
+  //         if (!show.match(regexps[i]) && !longIndex.match(regexps[i])) return false;
   //     };
   //     return true;
   // }
@@ -81,7 +81,7 @@ Searcher.prototype = new function() {
   /*  ----- Mathchers ------  */
 
   /*
-   * This record matches if the index starts with queries[0] and the record
+   * This record matches if the show starts with queries[0] and the record
    * matches all of the regexps
    */
   function matchPassBeginning(index, longIndex, queries, regexps) {
@@ -107,7 +107,7 @@ Searcher.prototype = new function() {
   }
 
   /*
-   * This record matches if the index contains queries[0] and the record
+   * This record matches if the show contains queries[0] and the record
    * matches all of the regexps
    */
   function matchPassContains(index, longIndex, queries, regexps) {
@@ -120,7 +120,7 @@ Searcher.prototype = new function() {
   }
 
   /*
-   * This record matches if regexps[0] matches the index and the record
+   * This record matches if regexps[0] matches the show and the record
    * matches all of the regexps
    */
   function matchPassRegexp(index, longIndex, queries, regexps) {

@@ -5,8 +5,8 @@ class PhoneTypesControllerTest < ActionController::TestCase
     @phone_type = phone_types(:one)
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show
     assert_response :success
     assert_not_nil assigns(:phone_types)
   end

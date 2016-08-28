@@ -36,10 +36,10 @@ RSpec.describe OrderItemsController, type: :controller do
   # OrderItemsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
+  describe "GET #show" do
     it "assigns all order_items as @order_items" do
       order_item = OrderItem.create! valid_attributes
-      get :index, {}, valid_session
+      get :show, {}, valid_session
       expect(assigns(:order_items)).to eq([order_item])
     end
   end
