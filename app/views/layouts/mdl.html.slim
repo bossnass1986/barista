@@ -22,7 +22,7 @@ html lang='en' ng-app='Cuptown'
       .mdl-layout__drawer
         /! Display brand logo within drawer header
         span.mdl-layout-title
-          = link_to edit_myaccount_overview_path do
+          = link_to edit_profile_overview_path do
             /= image_tag current_user.avatar.url(:square), size: '100'
             h4= current_user.greeting
             h4= current_user.full_name

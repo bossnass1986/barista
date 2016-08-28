@@ -59,7 +59,7 @@ class Product < ActiveRecord::Base
   # Image that is featured for your product
   #
   # @param [Optional Symbol] the size of the image expected back
-  # @return [String] name of the file to show from the public folder
+  # @return [String] name of the file to terms from the public folder
   def featured_image(image_size = :small)
     # Rails.cache.fetch("Product-featured_image-#{id}-#{image_size}", expires_in: 3.hours) do
     #   images.first ? images.first.photo.url(image_size) : "no_image_#{image_size.to_s}.jpg"

@@ -23,7 +23,7 @@ en:
       site_name: 'Cuptown'
       meta_description: 'Order food online from a curated choice of local restaurants ✔ 30 minutes delivery ✔ Large variety of cuisines, diverse dishes ✔ Safe &amp; easy payment options'
       meta_keywords: 'Ruby on Rails, ecommerce'
-  myaccount:
+  profile:
     index:
       title: 'My Account'
       manage_information: 'Manage Information'

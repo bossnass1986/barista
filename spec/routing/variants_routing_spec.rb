@@ -3,16 +3,16 @@ require "rails_helper"
 RSpec.describe VariantsController, type: :routing do
   describe "routing" do
 
-    it "routes to #show" do
-      expect(:get => "/variants").to route_to("variants#show")
+    it "routes to #terms" do
+      expect(:get => "/variants").to route_to("variants#terms")
     end
 
     it "routes to #new" do
       expect(:get => "/variants/new").to route_to("variants#new")
     end
 
-    it "routes to #show" do
-      expect(:get => "/variants/1").to route_to("variants#show", :id => "1")
+    it "routes to #terms" do
+      expect(:get => "/variants/1").to route_to("variants#terms", :id => "1")
     end
 
     it "routes to #edit" do

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
 
     concern :paginatable do
-      get '(page/:page)', :action => :show, :on => :collection, :as => ''
+      get '(page/:page)', :action => :index, :on => :collection, :as => ''
+    end
+
+    namespace :legal do
+      resource :terms, only: [:show]
     end
 
     resources :passwords, controller: 'clearance/passwords', only: [:create, :new]
@@ -21,7 +25,7 @@ Rails.application.routes.draw do
     get '/sign_up' =>'clearance/users#new', as: 'sign_up'
 
     constraints Clearance::Constraints::SignedIn.new do
-      root to: 'shopping/merchants#show', as: :signed_in_root
+      root to: 'shopping/merchants#index', as: :signed_in_root
     end
 
     constraints Clearance::Constraints::SignedOut.new do
@@ -35,15 +39,15 @@ Rails.application.routes.draw do
     resources :merchant_types
     resources :accounts
     resources :checkouts, only: [:new, :create, :show]
-    get 'admin' => 'admin/dashboard#show'
-    get 'admin/merchandise' => 'admin/merchandise/summary#show'
+    get 'admin' => 'admin/dashboard#index'
+    get 'admin/merchandise' => 'admin/merchandise/summary#index'
 
     resource :about, only: [:show]
     resources :states, only: [:index]
-    resource :terms, only: [:show]
 
 
-    namespace :myaccount do
+
+    namespace :profile do
       resources :orders, only: [:index, :show]
       resources :addresses
       resources :referrals, only: [:index, :create, :update]
@@ -93,9 +97,9 @@ Rails.application.routes.draw do
           resource :store_credits, only: [:show, :edit, :update]
                 end
       end
-      # resources :overviews, only: [:show]
+      # resources :overviews, only: [:index]
       resources :merchants
-      get "help" => "help#show"
+      get "help" => "help#index"
 
 
       namespace :history do

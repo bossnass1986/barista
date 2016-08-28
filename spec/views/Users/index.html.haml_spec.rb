@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "people/show", :type => :view do
+RSpec.describe "people/terms", :type => :view do
   before(:each) do
     assign(:users, [
       User.create!(

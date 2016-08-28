@@ -5,8 +5,8 @@ class ReferralBonusControllerTest < ActionController::TestCase
     referral_bonus = referral_bonus(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:referral_bonus)
   end
@@ -24,8 +24,8 @@ class ReferralBonusControllerTest < ActionController::TestCase
     assert_redirected_to referral_bonu_path(assigns(:referral_bonus))
   end
 
-  test "should show referral_bonu" do
-    get :show, id: referral_bonus
+  test "should terms referral_bonu" do
+    get :terms, id: referral_bonus
     assert_response :success
   end
 

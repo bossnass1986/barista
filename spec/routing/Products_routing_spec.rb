@@ -3,16 +3,16 @@ require "spec_helper"
 describe ProductsController do
   describe "routing" do
 
-    it "routes to #show" do
-      get("/Products").should route_to("menu_items#show")
+    it "routes to #terms" do
+      get("/Products").should route_to("menu_items#terms")
     end
 
     it "routes to #new" do
       get("/Products/new").should route_to("menu_items#new")
     end
 
-    it "routes to #show" do
-      get("/Products/1").should route_to("menu_items#show", :id => "1")
+    it "routes to #terms" do
+      get("/Products/1").should route_to("menu_items#terms", :id => "1")
     end
 
     it "routes to #edit" do

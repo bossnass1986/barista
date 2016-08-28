@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "venues/show", :type => :view do
+RSpec.describe "venues/terms", :type => :view do
   before(:each) do
     @venue = assign(:venue, Venue.create!(
       :name => "Name",

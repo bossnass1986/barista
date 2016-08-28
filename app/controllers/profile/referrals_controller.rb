@@ -1,5 +1,5 @@
-class Myaccount::ReferralsController < Myaccount::BaseController
-  helper_method :sort_column, :sort_direction
+class Profile::ReferralsController < Myaccount::BaseController
+
   def index
     @referral  = Referral.new
     @referrals = current_user.referrals.order(sort_column + " " + sort_direction)
@@ -28,19 +28,8 @@ class Myaccount::ReferralsController < Myaccount::BaseController
 
   private
 
-  def allowed_params
-    params.require(:referral).permit(:email, :name)
-  end
+    def allowed_params
+      params.require(:referral).permit(:email, :name)
+    end
 
-  def selected_myaccount_tab(tab)
-    tab == 'referrals'
-  end
-
-  def sort_column
-    Referral.column_names.include?(params[:sort]) ? params[:sort] : "name"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
 end

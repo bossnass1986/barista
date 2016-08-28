@@ -36,18 +36,18 @@ RSpec.describe MerchantsController, type: :controller do
   # MerchantsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all merchants as @merchants" do
       supplier = Merchant.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:merchants)).to eq([supplier])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested supplier as @supplier" do
       supplier = Merchant.create! valid_attributes
-      get :show, {:id => supplier.to_param}, valid_session
+      get :terms, {:id => supplier.to_param}, valid_session
       expect(assigns(:supplier)).to eq(supplier)
     end
   end

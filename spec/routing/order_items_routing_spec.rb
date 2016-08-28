@@ -3,16 +3,16 @@ require "rails_helper"
 RSpec.describe OrderItemsController, type: :routing do
   describe "routing" do
 
-    it "routes to #show" do
-      expect(:get => "/order_items").to route_to("order_items#show")
+    it "routes to #terms" do
+      expect(:get => "/order_items").to route_to("order_items#terms")
     end
 
     it "routes to #new" do
       expect(:get => "/order_items/new").to route_to("order_items#new")
     end
 
-    it "routes to #show" do
-      expect(:get => "/order_items/1").to route_to("order_items#show", :id => "1")
+    it "routes to #terms" do
+      expect(:get => "/order_items/1").to route_to("order_items#terms", :id => "1")
     end
 
     it "routes to #edit" do

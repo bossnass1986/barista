@@ -76,7 +76,7 @@ braintree.client.create({
         }
 
         hostedFieldsInstance.on('validityChange', function (event) {
-            // Check if all fields are valid, then show submit button
+            // Check if all fields are valid, then terms submit button
             var formValid = Object.keys(event.fields).every(function (key) {
                 return event.fields[key].isValid;
             });
@@ -124,7 +124,7 @@ braintree.client.create({
                 //
                 $.ajax({
                     type: "POST",
-                    url: "/myaccount/payment_methods",
+                    url: "/profile/payment_methods",
                     data: {"payment_method_nonce": payload.nonce}
                 });
                 (function () {

@@ -36,18 +36,18 @@ RSpec.describe VariantSuppliersController, type: :controller do
   # VariantSuppliersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all variant_suppliers as @variant_suppliers" do
       variant_supplier = VariantMerchant.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:variant_suppliers)).to eq([variant_supplier])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested variant_supplier as @variant_supplier" do
       variant_supplier = VariantMerchant.create! valid_attributes
-      get :show, {:id => variant_supplier.to_param}, valid_session
+      get :terms, {:id => variant_supplier.to_param}, valid_session
       expect(assigns(:variant_supplier)).to eq(variant_supplier)
     end
   end

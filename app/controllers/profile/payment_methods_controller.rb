@@ -1,13 +1,12 @@
-class Myaccount::PaymentMethodsController < Myaccount::BaseController
+class Profile::PaymentMethodsController < ApplicationController
   def index
-    # @payment_methods = PaymentMethod.where('user_id = ?', current_user)
     @customer = Braintree::Customer.find(current_user.customer_cim_id)
       # customer.payment_methods # array of PaymentMethod instances
       # puts customer.payment_methods.count
   end
 
   def show
-    # @payment_method = current_user.payment_methods.find(params[:id])
+
   end
 
   def new
@@ -30,23 +29,6 @@ class Myaccount::PaymentMethodsController < Myaccount::BaseController
       puts customer.payment_methods[0].token
       params[:payment_methods][:payment_cim_id] = customer.id
       params[:payment_methods][:token] = customer.payment_methods[0].token
-      # payment_method = Braintree::PaymentMethod.find(customer.payment_methods[0].token)
-      # puts payment_method.cardholder_name
-      # params[:payment_methods][:cardholder_name] = payment_method.cardholder_name
-      # puts payment_method.card_type
-      # params[:payment_methods][:card_type] = payment_method.card_type
-      # puts payment_method.issuing_bank
-      # params[:payment_methods][:issuing_bank] = payment_method.issuing_bank
-      # puts payment_method.masked_number
-      # params[:payment_methods][:masked_number] = payment_method.masked_number
-      # puts payment_method.country_of_issuance
-      # params[:payment_methods][:country_of_issuance] = payment_method.country_of_issuance
-      # puts payment_method.expiration_month
-      # params[:payment_methods][:month] = payment_method.expiration_month
-      # puts payment_method.expiration_year
-      # params[:payment_methods][:year] = payment_method.expiration_year
-      # puts payment_method.expired?
-      # params[:payment_methods][:active] = payment_method.expired?
     else
       # p result.errors
       result.errors.each do |error|

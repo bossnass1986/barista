@@ -5,8 +5,8 @@ class PrototypePropertiesControllerTest < ActionController::TestCase
     @prototype_property = prototype_properties(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:prototype_properties)
   end
@@ -24,8 +24,8 @@ class PrototypePropertiesControllerTest < ActionController::TestCase
     assert_redirected_to prototype_property_path(assigns(:prototype_property))
   end
 
-  test "should show prototype_property" do
-    get :show, id: @prototype_property
+  test "should terms prototype_property" do
+    get :terms, id: @prototype_property
     assert_response :success
   end
 

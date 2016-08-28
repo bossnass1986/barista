@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe ProductTypesController, type: :routing do
   describe "routing" do
 
-    it "routes to #show" do
+    it "routes to #terms" do
       expect(:get => "/product_types").to route_to("product_types#index")
     end
 
@@ -11,7 +11,7 @@ RSpec.describe ProductTypesController, type: :routing do
       expect(:get => "/product_types/new").to route_to("product_types#new")
     end
 
-    it "routes to #show" do
+    it "routes to #terms" do
       expect(:get => "/product_types/1").to route_to("product_types#show", :id => "1")
     end
 

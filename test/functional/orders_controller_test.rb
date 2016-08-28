@@ -5,8 +5,8 @@ class OrdersControllerTest < ActionController::TestCase
     @order = orders(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:orders)
   end
@@ -24,8 +24,8 @@ class OrdersControllerTest < ActionController::TestCase
     assert_redirected_to order_path(assigns(:order))
   end
 
-  test "should show order" do
-    get :show, id: @order
+  test "should terms order" do
+    get :terms, id: @order
     assert_response :success
   end
 

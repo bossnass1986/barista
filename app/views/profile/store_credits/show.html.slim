@@ -8,5 +8,5 @@
       .mdl-typography--title= number_to_currency(@store_credit.amount)
 .mdl-grid--no-spacing
   .mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
-    = form_for(@store_credit, :url => myaccount_store_credit_path) do |f|
+    = form_for(@store_credit, :url => profile_store_credit_path) do |f|
       = render :partial => 'form', :locals => {:f => f}

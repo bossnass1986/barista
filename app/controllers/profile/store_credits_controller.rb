@@ -1,4 +1,4 @@
-class Myaccount::StoreCreditsController < Myaccount::BaseController
+class Profile::StoreCreditsController < ApplicationController
 
   def show
     @store_credit = customer.store_credit
@@ -16,7 +16,7 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
     if result.success?
       logger.info "Added to #{params[:amount_to_add].to_f} to #{customer.first_name} #{customer.last_name} (#{customer.customer_cim_id})"
       customer.store_credit.add_credit(params[:amount_to_add].to_f)
-      redirect_to myaccount_store_credit_path
+      redirect_to profile_store_credit_path
       # , :notice => "Successfully updated store credit."
     else
       result.errors.each do |error|
@@ -35,7 +35,7 @@ class Myaccount::StoreCreditsController < Myaccount::BaseController
   #     redirect_to myaccount_store_credit_path
   #     # , :notice => "Successfully updated store credit."
   #   else
-  #     render :show
+  #     render :terms
   #   end
   # end
 

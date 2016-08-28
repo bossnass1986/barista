@@ -5,8 +5,8 @@ class ReferralsControllerTest < ActionController::TestCase
     @referral = referrals(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:referrals)
   end
@@ -24,8 +24,8 @@ class ReferralsControllerTest < ActionController::TestCase
     assert_redirected_to referral_path(assigns(:referral))
   end
 
-  test "should show referral" do
-    get :show, id: @referral
+  test "should terms referral" do
+    get :terms, id: @referral
     assert_response :success
   end
 

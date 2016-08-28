@@ -36,18 +36,18 @@ RSpec.describe VariantsController, type: :controller do
   # VariantsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all variants as @variants" do
       variant = Variant.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:variants)).to eq([variant])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested variant as @variant" do
       variant = Variant.create! valid_attributes
-      get :show, {:id => variant.to_param}, valid_session
+      get :terms, {:id => variant.to_param}, valid_session
       expect(assigns(:variant)).to eq(variant)
     end
   end

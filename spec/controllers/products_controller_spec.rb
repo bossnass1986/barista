@@ -34,18 +34,18 @@ describe ProductsController do
     {}
   end
 
-  describe "GET show" do
+  describe "GET terms" do
     it "assigns all Products as @Products" do
       menu_item = Product.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       assigns(:products).should eq([menu_item])
     end
   end
 
-  describe "GET show" do
+  describe "GET terms" do
     it "assigns the requested product as @product" do
       menu_item = Product.create! valid_attributes
-      get :show, {:id => menu_item.to_param}, valid_session
+      get :terms, {:id => menu_item.to_param}, valid_session
       assigns(:products).should eq(menu_item)
     end
   end

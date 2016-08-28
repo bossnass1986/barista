@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "merchants/show", type: :view do
+RSpec.describe "merchants/terms", type: :view do
   before(:each) do
     assign(:merchants, [
         Merchant.create!(

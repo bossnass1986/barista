@@ -5,8 +5,8 @@ class CouponsControllerTest < ActionController::TestCase
     @coupon = coupons(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:coupons)
   end
@@ -24,8 +24,8 @@ class CouponsControllerTest < ActionController::TestCase
     assert_redirected_to coupon_path(assigns(:coupon))
   end
 
-  test "should show coupon" do
-    get :show, id: @coupon
+  test "should terms coupon" do
+    get :terms, id: @coupon
     assert_response :success
   end
 

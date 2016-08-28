@@ -5,8 +5,8 @@ class StatesControllerTest < ActionController::TestCase
     @state = states(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:states)
   end
@@ -24,8 +24,8 @@ class StatesControllerTest < ActionController::TestCase
     assert_redirected_to state_path(assigns(:state))
   end
 
-  test "should show state" do
-    get :show, id: @state
+  test "should terms state" do
+    get :terms, id: @state
     assert_response :success
   end
 

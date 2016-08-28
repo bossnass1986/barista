@@ -3,16 +3,16 @@ require "rails_helper"
 RSpec.describe UsersController, :type => :routing do
   describe "routing" do
 
-    it "routes to #show" do
-      expect(:get => "/people").to route_to("people#show")
+    it "routes to #terms" do
+      expect(:get => "/people").to route_to("people#terms")
     end
 
     it "routes to #new" do
       expect(:get => "/people/new").to route_to("people#new")
     end
 
-    it "routes to #show" do
-      expect(:get => "/people/1").to route_to("people#show", :id => "1")
+    it "routes to #terms" do
+      expect(:get => "/people/1").to route_to("people#terms", :id => "1")
     end
 
     it "routes to #edit" do

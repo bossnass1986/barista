@@ -36,18 +36,18 @@ RSpec.describe CartItemsController, type: :controller do
   # CartItemsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all cart_items as @cart_items" do
       cart_item = CartItem.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:cart_items)).to eq([cart_item])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested cart_item as @cart_item" do
       cart_item = CartItem.create! valid_attributes
-      get :show, {:id => cart_item.to_param}, valid_session
+      get :terms, {:id => cart_item.to_param}, valid_session
       expect(assigns(:cart_item)).to eq(cart_item)
     end
   end

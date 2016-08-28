@@ -36,18 +36,18 @@ RSpec.describe OrderItemsController, type: :controller do
   # OrderItemsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all order_items as @order_items" do
       order_item = OrderItem.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:order_items)).to eq([order_item])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested order_item as @order_item" do
       order_item = OrderItem.create! valid_attributes
-      get :show, {:id => order_item.to_param}, valid_session
+      get :terms, {:id => order_item.to_param}, valid_session
       expect(assigns(:order_item)).to eq(order_item)
     end
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "variant_suppliers/show", type: :view do
+RSpec.describe "variant_suppliers/terms", type: :view do
   before(:each) do
     @variant_supplier = assign(:variant_supplier, VariantMerchant.create!(
       :variant_id => 1,

@@ -5,8 +5,8 @@ class PrototypesControllerTest < ActionController::TestCase
     @prototype = prototypes(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:prototypes)
   end
@@ -24,8 +24,8 @@ class PrototypesControllerTest < ActionController::TestCase
     assert_redirected_to prototype_path(assigns(:prototype))
   end
 
-  test "should show prototype" do
-    get :show, id: @prototype
+  test "should terms prototype" do
+    get :terms, id: @prototype
     assert_response :success
   end
 

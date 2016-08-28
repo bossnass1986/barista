@@ -5,8 +5,8 @@ class AccountsControllerTest < ActionController::TestCase
     @account = accounts(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:accounts)
   end
@@ -24,8 +24,8 @@ class AccountsControllerTest < ActionController::TestCase
     assert_redirected_to account_path(assigns(:account))
   end
 
-  test "should show account" do
-    get :show, id: @account
+  test "should terms account" do
+    get :terms, id: @account
     assert_response :success
   end
 

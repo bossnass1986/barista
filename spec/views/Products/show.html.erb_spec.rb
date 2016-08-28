@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Products/show" do
+describe "Products/terms" do
   before(:each) do
     product = assign(:products, stub_model(Product,
       :name => "Name",

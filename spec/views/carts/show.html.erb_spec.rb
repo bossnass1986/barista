@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "carts/show", type: :view do
+RSpec.describe "carts/terms", type: :view do
   before(:each) do
     @cart = assign(:cart, Cart.create!(
       :user_id => 1,

@@ -3,16 +3,16 @@ require "rails_helper"
 RSpec.describe CartItemsController, type: :routing do
   describe "routing" do
 
-    it "routes to #show" do
-      expect(:get => "/cart_items").to route_to("cart_items#show")
+    it "routes to #terms" do
+      expect(:get => "/cart_items").to route_to("cart_items#terms")
     end
 
     it "routes to #new" do
       expect(:get => "/cart_items/new").to route_to("cart_items#new")
     end
 
-    it "routes to #show" do
-      expect(:get => "/cart_items/1").to route_to("cart_items#show", :id => "1")
+    it "routes to #terms" do
+      expect(:get => "/cart_items/1").to route_to("cart_items#terms", :id => "1")
     end
 
     it "routes to #edit" do

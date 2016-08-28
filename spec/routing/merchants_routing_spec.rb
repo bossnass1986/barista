@@ -3,16 +3,16 @@ require "rails_helper"
 RSpec.describe MerchantsController, type: :routing do
   describe "routing" do
 
-    it "routes to #show" do
-      expect(:get => "/merchants").to route_to("merchants#show")
+    it "routes to #terms" do
+      expect(:get => "/merchants").to route_to("merchants#terms")
     end
 
     it "routes to #new" do
       expect(:get => "/merchants/new").to route_to("merchants#new")
     end
 
-    it "routes to #show" do
-      expect(:get => "/merchants/1").to route_to("merchants#show", :id => "1")
+    it "routes to #terms" do
+      expect(:get => "/merchants/1").to route_to("merchants#terms", :id => "1")
     end
 
     it "routes to #edit" do

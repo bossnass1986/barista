@@ -5,8 +5,8 @@ class PhonesControllerTest < ActionController::TestCase
     @phone = phones(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:phones)
   end
@@ -24,8 +24,8 @@ class PhonesControllerTest < ActionController::TestCase
     assert_redirected_to phone_path(assigns(:phone))
   end
 
-  test "should show phone" do
-    get :show, id: @phone
+  test "should terms phone" do
+    get :terms, id: @phone
     assert_response :success
   end
 

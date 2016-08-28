@@ -5,8 +5,8 @@ class TaxRatesControllerTest < ActionController::TestCase
     @tax_rate = tax_rates(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:tax_rates)
   end
@@ -24,8 +24,8 @@ class TaxRatesControllerTest < ActionController::TestCase
     assert_redirected_to tax_rate_path(assigns(:tax_rate))
   end
 
-  test "should show tax_rate" do
-    get :show, id: @tax_rate
+  test "should terms tax_rate" do
+    get :terms, id: @tax_rate
     assert_response :success
   end
 

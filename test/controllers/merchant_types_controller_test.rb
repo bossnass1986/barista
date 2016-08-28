@@ -5,8 +5,8 @@ class MerchantTypesControllerTest < ActionController::TestCase
     @merchant_type = merchant_types(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:merchant_types)
   end
@@ -24,8 +24,8 @@ class MerchantTypesControllerTest < ActionController::TestCase
     assert_redirected_to merchant_type_path(assigns(:merchant_type))
   end
 
-  test "should show merchant_type" do
-    get :show, id: @merchant_type
+  test "should terms merchant_type" do
+    get :terms, id: @merchant_type
     assert_response :success
   end
 

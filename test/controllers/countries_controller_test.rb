@@ -5,8 +5,8 @@ class CountriesControllerTest < ActionController::TestCase
     @country = countries(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:countries)
   end
@@ -24,8 +24,8 @@ class CountriesControllerTest < ActionController::TestCase
     assert_redirected_to country_path(assigns(:country))
   end
 
-  test "should show country" do
-    get :show, id: @country
+  test "should terms country" do
+    get :terms, id: @country
     assert_response :success
   end
 

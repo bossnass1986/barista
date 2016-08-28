@@ -36,18 +36,18 @@ RSpec.describe ProductTypesController, type: :controller do
   # ProductTypesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns all product_types as @product_types" do
       product_type = ProductType.create! valid_attributes
-      get :show, {}, valid_session
+      get :terms, {}, valid_session
       expect(assigns(:product_types)).to eq([product_type])
     end
   end
 
-  describe "GET #show" do
+  describe "GET #terms" do
     it "assigns the requested product_type as @product_type" do
       product_type = ProductType.create! valid_attributes
-      get :show, {:id => product_type.to_param}, valid_session
+      get :terms, {:id => product_type.to_param}, valid_session
       expect(assigns(:product_type)).to eq(product_type)
     end
   end

@@ -1,4 +1,4 @@
-class Myaccount::OverviewsController < Myaccount::BaseController
+class Profile::OverviewsController < ApplicationController
 
   def index
   end
@@ -22,6 +22,6 @@ class Myaccount::OverviewsController < Myaccount::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :mobile, :email, :avatar)
+    params.require(:user).permit(:password, :first_name, :last_name, :mobile, :email, :avatar)
   end
 end

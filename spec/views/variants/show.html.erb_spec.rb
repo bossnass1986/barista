@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "variants/show", type: :view do
+RSpec.describe "variants/terms", type: :view do
   before(:each) do
     @variant = assign(:variant, Variant.create!(
       :variant_id => 1,

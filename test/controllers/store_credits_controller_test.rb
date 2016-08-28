@@ -5,8 +5,8 @@ class StoreCreditsControllerTest < ActionController::TestCase
     @store_credit = store_credits(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:store_credits)
   end
@@ -24,8 +24,8 @@ class StoreCreditsControllerTest < ActionController::TestCase
     assert_redirected_to store_credit_path(assigns(:store_credit))
   end
 
-  test "should show store_credit" do
-    get :show, id: @store_credit
+  test "should terms store_credit" do
+    get :terms, id: @store_credit
     assert_response :success
   end
 

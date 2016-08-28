@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "product_properties/show", type: :view do
+RSpec.describe "product_properties/terms", type: :view do
   before(:each) do
     @product_property = assign(:product_property, ProductProperty.create!(
       :variant_id => 1,

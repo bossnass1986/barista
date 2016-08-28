@@ -5,8 +5,8 @@ class SupplierTradingHoursControllerTest < ActionController::TestCase
     trading_hour = supplier_trading_hours(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:trading_hours)
   end
@@ -24,8 +24,8 @@ class SupplierTradingHoursControllerTest < ActionController::TestCase
     assert_redirected_to supplier_trading_hour_path(assigns(:trading_hour))
   end
 
-  test "should show trading_hour" do
-    get :show, id: trading_hour
+  test "should terms trading_hour" do
+    get :terms, id: trading_hour
     assert_response :success
   end
 

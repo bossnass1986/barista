@@ -2,19 +2,19 @@ nav.mdl-navigation
   = link_to root_path, class: 'mdl-navigation__link' do
     i.material-icons> local_cafe
     = t('.merchants')
-  = link_to myaccount_orders_url, class: 'mdl-navigation__link' do
+  = link_to profile_orders_url, class: 'mdl-navigation__link' do
     i.material-icons> history
     = t('.order_history')
-  = link_to myaccount_payment_methods_path, class: 'mdl-navigation__link' do
+  = link_to profile_payment_methods_path, class: 'mdl-navigation__link' do
     i.material-icons> credit_card
     = t('.payment_methds')
-  = link_to myaccount_store_credit_path, class: 'mdl-navigation__link' do
+  = link_to profile_store_credit_path, class: 'mdl-navigation__link' do
     i.material-icons> account_balance_wallet
     = t('.credits')
-  = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
+  = link_to profile_referrals_path, class: 'mdl-navigation__link' do
     i.material-icons> loyalty
     | My Rewards
-  = link_to myaccount_referrals_path, class: 'mdl-navigation__link' do
+  = link_to profile_referrals_path, class: 'mdl-navigation__link' do
     i.material-icons> plus_one
     = t('.referrals')
   /- if current_user.admin?

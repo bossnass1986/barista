@@ -5,8 +5,8 @@ class StoresControllerTest < ActionController::TestCase
     @store = stores(:one)
   end
 
-  test "should get show" do
-    get :show
+  test "should get terms" do
+    get :terms
     assert_response :success
     assert_not_nil assigns(:stores)
   end
@@ -24,8 +24,8 @@ class StoresControllerTest < ActionController::TestCase
     assert_redirected_to store_path(assigns(:store))
   end
 
-  test "should show store" do
-    get :show, id: @store
+  test "should terms store" do
+    get :terms, id: @store
     assert_response :success
   end
 
