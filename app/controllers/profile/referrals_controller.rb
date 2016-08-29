@@ -2,7 +2,7 @@ class Profile::ReferralsController < ApplicationController
 
   def index
     @referral  = Referral.new
-    @referrals = current_user.referrals.order(sort_column + " " + sort_direction)
+    @referrals = current_user.referrals
   end
 
   def create

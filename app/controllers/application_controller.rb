@@ -13,10 +13,8 @@ class ApplicationController < ActionController::Base
                 :is_production_simulation,
                 :search_product,
                 :product_types,
-                :myaccount_tab,
                 :select_countries,
                 :customer_confirmation_page_view,
-                :sort_direction
 
   rescue_from ActiveRecord::DeleteRestrictionError do |exception|
     redirect_to :back, alert: exception.message
