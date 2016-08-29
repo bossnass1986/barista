@@ -11,9 +11,5 @@ class Profile::OrdersController < ApplicationController
     # @order = current_user.finished_orders.includes([:invoices]).find_by_number(params[:id])
     @order = Order.find_by_number(params[:id])
   end
-  private
 
-  def selected_myaccount_tab(tab)
-    tab == 'orders'
-  end
 end

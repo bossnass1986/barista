@@ -1,4 +1,4 @@
-class Profile::ReferralsController < Myaccount::BaseController
+class Profile::ReferralsController < ApplicationController
 
   def index
     @referral  = Referral.new

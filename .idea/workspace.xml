@@ -1,110 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="model clean up">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/base_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/shopping/addresses_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/shopping/billing_addresses_controller.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/orders_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/overviews_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/overviews_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/payment_methods_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/payment_methods_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/referrals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/myaccount/store_credits_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/store_credits_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/terms_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/legal/terms_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/orders/index.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/orders/index.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/orders/show.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/orders/show.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/overviews/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/overviews/_form.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/overviews/edit.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/overviews/edit.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/payment_methods/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/payment_methods/_form.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/payment_methods/index.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/payment_methods/index.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/payment_methods/new.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/payment_methods/new.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/referrals/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/referrals/_form.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/referrals/index.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/referrals/index.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/store_credits/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/store_credits/_form.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/myaccount/store_credits/show.html.slim" afterPath="$PROJECT_DIR$/app/views/profile/store_credits/show.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/terms/show.html.slim" afterPath="$PROJECT_DIR$/app/views/legal/terms/show.html.slim" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="controller clean up">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/merchant.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/merchant.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/shopping/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/shopping/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mdl.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/mdl.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.slim" afterPath="$PROJECT_DIR$/app/views/shared/_compact_menu.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profile/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/orders_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_footer.html.slim" afterPath="$PROJECT_DIR$/app/views/shared/_footer.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/friendly_id.rb" afterPath="$PROJECT_DIR$/config/initializers/friendly_id.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/app/MenuItemsController.html" afterPath="$PROJECT_DIR$/doc/app/MenuItemsController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/app/OrdersController.html" afterPath="$PROJECT_DIR$/doc/app/OrdersController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/app/StoreConfigsController.html" afterPath="$PROJECT_DIR$/doc/app/StoreConfigsController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/app/js/search_index.js" afterPath="$PROJECT_DIR$/doc/app/js/search_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/cart_items_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/cart_items_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/carts_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/carts_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/home_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/home_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/order_items_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/order_items_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/product_properties_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/product_properties_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/product_types_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/product_types_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/products_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/products_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/suppliers_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/suppliers_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/users_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/users_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/variant_properties_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/variant_properties_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/variant_suppliers_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/variant_suppliers_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/variants_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/variants_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/Products_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/Products_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/Users_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/Users_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/cart_items_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/cart_items_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/carts_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/carts_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/merchants_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/merchants_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/order_items_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/order_items_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/product_properties_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/product_properties_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/product_types_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/product_types_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/variant_properties_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/variant_properties_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/variant_suppliers_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/variant_suppliers_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/variants_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/variants_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/Products/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/Products/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/Products/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/Products/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/Users/index.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/Users/index.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/Users/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/Users/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/cart_items/index.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/cart_items/index.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/cart_items/show.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/cart_items/show.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/carts/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/carts/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/carts/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/carts/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/home/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/home/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/order_items/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/order_items/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/order_items/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/order_items/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/product_properties/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/product_properties/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/product_properties/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/product_properties/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/product_types/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/product_types/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/product_types/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/product_types/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/suppliers/index.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/suppliers/index.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/suppliers/show.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/suppliers/show.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variant_properties/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variant_properties/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variant_properties/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variant_properties/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variant_suppliers/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variant_suppliers/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variant_suppliers/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variant_suppliers/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variants/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variants/index.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/variants/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/variants/show.html.erb_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/venues/index.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/venues/index.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/venues/show.html.haml_spec.rb" afterPath="$PROJECT_DIR$/spec/views/venues/show.html.haml_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/accounts_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/accounts_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/countries_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/countries_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/coupons_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/coupons_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchant_types_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchant_types_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/phone_types_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/phone_types_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/phones_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/phones_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/prototype_properties_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/prototype_properties_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/prototypes_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/prototypes_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/referral_bonus_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/referral_bonus_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/referral_programs_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/referral_programs_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/referral_types_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/referral_types_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/referrals_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/referrals_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/states_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/states_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/store_credits_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/store_credits_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/supplier_trading_hours_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/supplier_trading_hours_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/tax_rates_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/tax_rates_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/orders_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/orders_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/stores_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/stores_controller_test.rb" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="690">
               <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
@@ -209,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/shared/_footer.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -228,8 +129,8 @@
       <file leaf-file-name="referrals_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -275,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/profile/orders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -428,7 +329,6 @@
         <option value="$PROJECT_DIR$/app/controllers/myaccount/payment_methods_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/myaccount/store_credits_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profile/payment_methods_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/profile/store_credits/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/mdl.html.slim" />
@@ -436,10 +336,11 @@
         <option value="$PROJECT_DIR$/app/controllers/profile/store_credits_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profile/overviews_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/profile/overviews/edit.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/profile/orders_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/shopping/merchants_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_footer.html.slim" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_footer.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/profile/orders_controller.rb" />
       </list>
     </option>
   </component>
@@ -489,12 +390,83 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -918,14 +890,7 @@
       <workItem from="1472299121818" duration="201000" />
       <workItem from="1472299377112" duration="12279000" />
       <workItem from="1472389290866" duration="362000" />
-      <workItem from="1472389682599" duration="288000" />
-    </task>
-    <task id="LOCAL-00259" summary="intercom">
-      <created>1468057356791</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1468057356791</updated>
+      <workItem from="1472389682599" duration="977000" />
     </task>
     <task id="LOCAL-00260" summary="cards replaced with grids">
       <created>1468138526055</created>
@@ -1263,11 +1228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472374909347</updated>
     </task>
-    <option name="localTasksCounter" value="308" />
+    <task id="LOCAL-00308" summary="controller clean up">
+      <created>1472391425835</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1472391425837</updated>
+    </task>
+    <option name="localTasksCounter" value="309" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="643167000" />
+    <option name="totallyTimeSpent" value="643856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1282,12 +1254,12 @@
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2453505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2453505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6450331" sideWeight="0.53576535" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4317881" sideWeight="0.46494994" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4317881" sideWeight="0.46494994" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6423841" sideWeight="0.46423462" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1340,7 +1312,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="svg logo" />
     <MESSAGE value="heroku fixes" />
     <MESSAGE value="svg logos" />
     <MESSAGE value="Submit your nonce to your server here!" />
@@ -1365,7 +1336,8 @@
     <MESSAGE value="travis?" />
     <MESSAGE value="start of the legal stuff" />
     <MESSAGE value="model clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="model clean up" />
+    <MESSAGE value="controller clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller clean up" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1393,6 +1365,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,6 +1425,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1461,6 +1435,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,6 +1503,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,26 +1555,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb" />
     <entry file="file://$PROJECT_DIR$/app/controllers/myaccount/base_controller.rb" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile/payment_methods_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1627,22 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile/store_credits_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile/overviews_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/profile/overviews/edit.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1655,14 +1599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile/orders_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1691,18 +1627,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_footer.html.slim">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="690">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_footer.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile/referrals_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile/store_credits_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile/payment_methods_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile/overviews_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
