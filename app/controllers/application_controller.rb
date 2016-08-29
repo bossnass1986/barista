@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
                 :search_product,
                 :product_types,
                 :select_countries,
-                :customer_confirmation_page_view,
+                :customer_confirmation_page_view
 
   rescue_from ActiveRecord::DeleteRestrictionError do |exception|
     redirect_to :back, alert: exception.message
@@ -35,14 +35,18 @@ class ApplicationController < ActionController::Base
     session[:locale] = I18n.locale
   end
 
+  # @param [Object] options
   def default_url_options(options={})
     # logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
+    @options = options
   end
 
 
   def require_user
-    redirect_to login_url and store_return_location and return if logged_out?
+    if logged_out?
+      redirect_to login_url and store_return_location
+    end
   end
 
 
@@ -58,7 +62,7 @@ class ApplicationController < ActionController::Base
         @session_cart = Cart.create(:user_id => current_user.id)
         cookies[:cart_id] = @session_cart.id
       end
-    elsif current_user && current_user.current_cart
+    elsif current_user&.current_cart
       @session_cart = current_user.current_cart
       cookies[:cart_id] = @session_cart.id
     else
