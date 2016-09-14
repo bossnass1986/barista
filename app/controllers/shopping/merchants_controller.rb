@@ -1,4 +1,4 @@
-class Shopping::MerchantsController < Shopping::BaseController
+class Shopping::MerchantsController < ApplicationController
   respond_to :json, :html, :xml
   before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 

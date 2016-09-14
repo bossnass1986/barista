@@ -1,5 +1,6 @@
 class Legal::TermsController < ApplicationController
-  def show
+  layout 'landing'
 
+  def show
   end
 end

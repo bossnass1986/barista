@@ -9,9 +9,9 @@ class Profile::ReferralsController < ApplicationController
     @referral = current_user.referrals.new(allowed_params)
     @referral.referral_type_id = ReferralType::DIRECT_WEB_FORM_ID
     if @referral.save
-      redirect_to myaccount_referrals_url, :notice => "Successfully created referral."
+      redirect_to myaccount_referrals_url, notice: 'Successfully created referral.'
     else
-      @referrals = current_user.referrals.order(sort_column + " " + sort_direction)
+      @referrals = current_user.referrals
       render :index
     end
   end
@@ -19,9 +19,9 @@ class Profile::ReferralsController < ApplicationController
   def update
     @referral = current_user.referrals.find(params[:id])
     if @referral.update_attributes(allowed_params)
-      redirect_to myaccount_referrals_url, :notice  => "Successfully updated referral."
+      redirect_to myaccount_referrals_url, notice: 'Successfully updated referral.'
     else
-      @referrals = current_user.referrals.order(sort_column + " " + sort_direction)
+      @referrals = current_user.referrals
       render :index
     end
   end

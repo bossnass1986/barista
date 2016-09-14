@@ -5,8 +5,8 @@ class Profile::PaymentMethodsController < ApplicationController
       # puts customer.payment_methods.count
   end
 
+  # @return [Object]
   def show
-
   end
 
   def new
@@ -40,37 +40,24 @@ class Profile::PaymentMethodsController < ApplicationController
     @payment_method = current_user.payment_methods.new(allowed_params)
     if @payment_method.save
       flash[:notice] = 'Successfully created credit card.'
-      redirect_to myaccount_payment_methods_url
+      redirect_to profile_payment_methods_url
     else
       render :action => 'new'
     end
   end
 
-  def edit
-    @payment_method = current_user.payment_methods.find(params[:id])
-  end
-
-  def update
-    @payment_method = current_user.payment_methods.find(params[:id])
-    if @payment_method.update_attributes(allowed_params)
-      flash[:notice] = "Successfully updated credit card."
-      redirect_to myaccount_credit_card_url(@payment_method)
-    else
-      render :action => 'edit'
-    end
-  end
 
   def destroy
     @payment_method = current_user.payment_methods.find(params[:id])
     @payment_method.inactivate!
-    flash[:notice] = "Successfully destroyed credit card."
-    redirect_to myaccount_credit_cards_url
+    flash[:notice] = 'Successfully destroyed credit card.'
+    redirect_to profile_credit_cards_url
   end
 
   private
 
   def allowed_params
-    params.require(:payment_methods).permit(:user_id, :payment_method_nonce, :address_id, :payment_cim_id, :token)
+    params.require(:payment_methods).permit(:user_id, :payment_method_nonce, :payment_cim_id, :token)
   end
 
 end

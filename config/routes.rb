@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+  # scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
 
     concern :paginatable do
       get '(page/:page)', :action => :index, :on => :collection, :as => ''
@@ -44,8 +44,6 @@ Rails.application.routes.draw do
 
     resource :about, only: [:show]
     resources :states, only: [:index]
-
-
 
     namespace :profile do
       resources :orders, only: [:index, :show]
@@ -99,8 +97,6 @@ Rails.application.routes.draw do
       end
       # resources :overviews, only: [:index]
       resources :merchants
-      get "help" => "help#index"
-
 
       namespace :history do
         resources :orders, only: [:index, :show] do
@@ -184,4 +180,4 @@ Rails.application.routes.draw do
     end
 
   end
-end
+# end

@@ -1,9 +1,16 @@
 - title 'Cuptown Terms of Use'
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col
-    h4
+  .mdl-cell.mdl-cell--4-col-phone.mdl-cell.mdl-cell--8-col-tablet.mdl-cell.mdl-cell--12-col-desktop
+    h1.mdl-typography--title.mdl-typography--text-center
+      | Terms & Conditions
+    h6.mdl-typography--caption-color-contrast.mdl-typography--text-center
+      | Date of revision:
+      span>= File.mtime(Rails.root.join("app/views/legal/terms/show.html.slim")).strftime("%d %B %Y")
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
+      | Introduction
+    h5.mdl-typography--font-bold
       | Before you start using Cuptown, our lawyers want you to know a few things. So read over this document and  make sure you understand how it’s all going to work.
-    .contents
+    h5.mdl-typography--font-light
       | The Cuptown website
       a href="http://www.cup.town" target="_blank"  cup.town
       | (and any associated device applications) (
@@ -11,11 +18,10 @@
       | )  is a platform provided by Australian Local Search Pty Ltd (
       strong Us, We or Our
       | ). By using Cuptown You  agree to comply with the Cuptown terms of use.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | How Cuptown Works
-    .contents
+    h5.mdl-typography--font-light
       | Cuptown is a platform that connects buyers and sellers by enabling ends users (
       strong You
       | ) to select and purchase goods/services from participating third party advertisers (
@@ -26,19 +32,17 @@
       | If you would like a list of your last 10 transactions on Cuptown you can email us at
       /= succeed "." do
         a href="mailto:support@skipapp.com.au"  support@skipapp.com.au
-    .simply
+    .simply.mdl-typ
       | ￼PUT SIMPLY: Cuptown allows you to purchase items online. It’s up to you to be there when you say you will, if you get stuck talking to Barry from accounts that’s not the café’s fault.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Fees and Charges
-    .contents
+    h5.mdl-typography--font-light
       | When You use Cuptown no other fees or charges are payable other than those relating to goods/services purchased from Advertisers.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Responsibility for Content
-    .contents
+    h5.mdl-typography--font-light
       | You acknowledge that much of the content provided on Cuptown relates to Advertiser products, services or information (
       strong> Advertiser Content
       | ). Advertiser Content is not endorsed by Us and We do not warrant that Advertiser Content is accurate, reliable, suitable, complete or of a particular quality.
@@ -50,35 +54,31 @@
       | We may receive fees from third parties for Advertiser Content. You acknowledge and consent to Us receiving such fees.
     .simply
       | ￼￼PUT SIMPLY: Businesses are responsible for ensuring their products are correct on Cuptown.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Unauthorised/Mistaken Transactions
-    .contents
+    h5.mdl-typography--font-light
       | If you believe there has been a mistake or unauthorised transaction on Your account, please notify us along with details of the transaction at
       a href="mailto:support@skipapp.com.au"  support@skipapp.com.au
       | and we will investigate it. We will respond to You within two business days. You may also have rights to dispute transactions relating to Cuptown charged to Your scheme (e.g. Mastercard or Visa) credit or debit card with your bank. If You have such a transaction, You should contact Your bank for more information.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Intellectual Property
     .contents
       | You grant Us and Our related bodies corporate a royalty free licence to use, reproduce, modify, adapt and communicate to the public the content that You provide to Us or We collect from You for the purposes of using Cuptown.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Privacy
-    .contents
+    h5.mdl-typography--font-light
       | Our commitment to privacy is set out
       /= succeed "." do
         a href="http://www.truelocal.com.au/cms/privacy-policy/" target="_blank"  here
         = succeed "." do
           a href="http://www.truelocal.com.au/cms/privacy-policy/" target="_blank"  Our Privacy Statement
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Your Use of Cuptown
-    .contents
+    h5.mdl-typography--font-light
       | By using Cuptown You warrant and represent that you:
       ul
         li are capable of forming legally binding contracts;
@@ -89,11 +89,10 @@
       | In consideration of the circumstances, and where We think it is reasonable to do so, We may suspend or terminate Your access to Cuptown and reserve the right to take any appropriate steps at law to protect Our interests or those of third parties.
     .simply
       | PUT SIMPLY: Don’t be that annoying person at a house party, otherwise we’ll have to politely ask you to leave (and by politely we mean suspend your account).
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Refunds on Refusal to Provide Alcohol
-    .contents
+    h5.mdl-typography--font-light
       | If the Advertiser Refuses to provide You with Alcoholic Goods You ordered through Cuptown, the Advertiser will let Us know and We will refund your purchase. This may take a few days.
       br/
       br/
@@ -101,11 +100,10 @@
       br/
       br/
       | Remember, it's Your responsibility to be there to collect goods ordered through Cuptown at the time and place agreed between you and the Advertiser. Failing to arrive at the collection point doesn’t count as a Refusal.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Our Warranties and Limitation of Liability
-    .contents
+    h5.mdl-typography--font-light
       | Except for any express warranties set out in these terms and any term implied by law (that cannot be excluded) and Your rights under statutory guarantees provided under the consumer protection laws, We provide no warranties or guarantees to You (including in relation to the performance of Cuptown).
       br/
       br/
@@ -118,24 +116,17 @@
       | These terms and conditions are governed by the laws in force in the State of Victoria, Australia.
     .simply
       | PUT SIMPLY: We’re not perfect. If something goes wrong we’ll stop playing ping pong and sort it out for you.
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | Promotional terms and conditions
       a name="promotion"
-    .contents
+    h5.mdl-typography--font-light
       | Our promotional terms and conditions can be found
       a href="./skip-promo-terms.html"  here
-.mdl-grid
   .mdl-cell.mdl-cell--12-col
-    h4
+    h3.mdl-typography--headline.mdl-typography--text-uppercase
       | We may change these terms
-    .contents
+    h5.mdl-typography--font-light
       | We may change these terms of use by publishing an updated version on Cuptown and you may get a copy when accessing Cuptown next.  Your continued use of Cuptown following any change will indicate Your acceptance of the change. If the change has a detrimental impact on you but is required by law, or is necessary for technical or security reasons and we will try and give you 3 days prior notice of the change. Otherwise we will give you 10 days notice of the change.
   .summation
     | That’s it from our lawyers, enjoy using Cuptown!
-.mdl-grid
-  .mdl-cell.mdl-cell--12-col
-    h6
-      | Date of revision:
-      span>= File.mtime(Rails.root.join("app/views/legal/terms/show.html.slim")).strftime("%d %B %Y")
