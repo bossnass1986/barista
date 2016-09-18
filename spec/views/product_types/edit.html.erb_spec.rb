@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "product_types/edit", type: :view do
+RSpec.describe "@attribute_sets/edit", type: :view do
   before(:each) do
-    @product_type = assign(:product_type, ProductType.create!(
+    @attribute_set = assign(:attribute_set, AttributeSet.create!(
       :name => "MyString"
     ))
   end
 
-  it "renders the edit product_type form" do
+  it "renders the edit @attribute_set form" do
     render
 
-    assert_select "form[action=?][method=?]", product_type_path(@product_type), "post" do
+    assert_select "form[action=?][method=?]", product_type_path(@attribute_set), "post" do
 
-      assert_select "input#product_type_name[name=?]", "product_type[name]"
+      assert_select "input#product_type_name[name=?]", "@attribute_set[name]"
     end
   end
 end

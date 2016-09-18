@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "product_types/terms", type: :view do
+RSpec.describe "@attribute_sets/terms", type: :view do
   before(:each) do
-    @product_type = assign(:product_type, ProductType.create!(
+    @attribute_set = assign(:attribute_set, AttributeSet.create!(
       :name => "Name"
     ))
   end

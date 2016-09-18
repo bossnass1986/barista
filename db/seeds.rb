@@ -4,17 +4,17 @@ Role.destroy_all
 User.delete_all
 Country.destroy_all
 MerchantType.delete_all
-ProductType.delete_all
-Prototype.delete_all
-Product.delete_all
+AttributeSet.destroy_all
+Attribute.delete_all
+Product.destroy_all
 Variant.destroy_all
-PrototypeProperty.delete_all
-ProductProperty.delete_all
+# PrototypeProperty.delete_all
+# ProductProperty.delete_all
 VariantMerchant.delete_all
 VariantProperty.delete_all
 Cart.destroy_all
 Order.destroy_all
-Property.delete_all
+# Property.delete_all
 
 %w(customer banned merchant staff admin).each do |role|
   Role.find_or_create_by({name: role})
@@ -53,15 +53,15 @@ MerchantType.create!([
                          {id: 4, name: 'Bar/Pub', active: true}
                      ])
 
-puts 'Creating Standard Product Types'
-ProductType.create!([
-                        {id: 1, name: 'Coffee', merchant_type_id: 1},
-                        {id: 2, name: 'Hot Drinks', merchant_type_id: 1},
-                        {id: 3, name: 'Iced Drinks', merchant_type_id: 1},
-                        {id: 4, name: 'Cold Drinks', merchant_type_id: 1},
-                        {id: 5, name: 'Smoothie', merchant_type_id: 1},
-                        {id: 6, name: 'Frappe', merchant_type_id: 1},
-                        {id: 7, name: 'Food', merchant_type_id: 1},
+puts 'Creating Attribute Sets'
+AttributeSet.create!([
+                        {id: 1, name: 'Coffee'},
+                        {id: 2, name: 'Hot Drinks'},
+                        {id: 3, name: 'Iced Drinks'},
+                        {id: 4, name: 'Cold Drinks'},
+                        {id: 5, name: 'Smoothie'},
+                        {id: 6, name: 'Frappe'},
+                        {id: 7, name: 'Food'},
                         {id: 8, name: 'Vodka'},
                         {id: 9, name: 'Bourbon'},
                         {id: 10, name: 'Scotch'}
@@ -73,36 +73,36 @@ ProductType.create!([
 #     {id: 2, name: 'Cold', active: true}
 # ])
 
-PrototypeProperty.create!([
-                            {property_id: 1, prototype_id: 1},
-                            {property_id: 1, prototype_id: 2},
-                            {property_id: 2, prototype_id: 1},
-                            {property_id: 2, prototype_id: 2},
-                            {property_id: 3, prototype_id: 1},
-                            {property_id: 4, prototype_id: 1},
-                            {property_id: 5, prototype_id: 1},
-                            {property_id: 5, prototype_id: 2},
-                          ])
+# PrototypeProperty.create!([
+#                             {property_id: 1, prototype_id: 1},
+#                             {property_id: 1, prototype_id: 2},
+#                             {property_id: 2, prototype_id: 1},
+#                             {property_id: 2, prototype_id: 2},
+#                             {property_id: 3, prototype_id: 1},
+#                             {property_id: 4, prototype_id: 1},
+#                             {property_id: 5, prototype_id: 1},
+#                             {property_id: 5, prototype_id: 2},
+#                           ])
 
 puts 'Sugar CRUSH!'
-Property.create!([
-                   {id:1, display_name: 'Size', identifying_name: :Size},
-                   {id:2, display_name: 'Milk' , identifying_name: :Milk},
-                   {id:3, display_name: 'Sugar' , identifying_name: :Sugar},
-                   {id:4, display_name: 'Coffee Blend' , identifying_name: 'Coffee Blend'},
-                   {id:5, display_name: 'Strength' , identifying_name: :Strenth},
-                   {id:6, display_name: 'Extra Shot', identifying_name: 'Extra Shot'},
-                   {id:7, display_name: 'Syrup', identifying_name: :Syrup},
-                   {id:8, display_name: 'Flavour', identifying_name: :Flavour},
-                   {id:9, display_name: 'Topping', identifying_name: :Toppings},
-                   {id:10, display_name: 'Sweetness', identifying_name: :Sweetness}
+Attribute.create!([
+                   {id:1, display_name: 'Size'},
+                   {id:2, display_name: 'Milk'},
+                   {id:3, display_name: 'Sugar'},
+                   {id:4, display_name: 'Coffee Blend'},
+                   {id:5, display_name: 'Strength'},
+                   {id:6, display_name: 'Extra Shot'},
+                   {id:7, display_name: 'Syrup'},
+                   {id:8, display_name: 'Flavour'},
+                   {id:9, display_name: 'Topping'},
+                   {id:10, display_name: 'Sweetness'}
                 ])
 
 puts 'Creating Standard Menu Items'
 
 product_seed = Rails.root.join('db', 'seed', 'products.yml')
 product = YAML::load_file(product_seed)
-Product.create!(product)
+# Product.create!(product)
 
 #
 # puts 'Creating Sample Products with Attributes'

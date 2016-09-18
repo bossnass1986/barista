@@ -10,7 +10,7 @@ class Product < ActiveRecord::Base
 
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
 
-  belongs_to :product_type
+  belongs_to :attribute_set
   belongs_to :prototype
   has_many :product_properties
   has_many :properties,         through: :product_properties

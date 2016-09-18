@@ -16,8 +16,8 @@ class Shopping::MerchantsController < ApplicationController
   # GET /merchants/1
   def show
     # @merchant = Merchant.select('product.name','product.description').joins(products: :variants).find(params[:id])
-    @merchant = Merchant.select('id').find(params[:id])
-    @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
+    @merchant = Merchant.find(params[:id])
+    # @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @merchant }

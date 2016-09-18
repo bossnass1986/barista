@@ -1,7 +1,7 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def index
-    @products = Product.order(:name).includes(:active_variants, :product_type).page params[:page]
+    @products = Product.order(:name).includes(:active_variants, :attribute_set).page params[:page]
   end
 
   def show
@@ -113,7 +113,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def product_types
-    @product_types ||= ProductType.all
+    @attribute_sets ||= AttributeSet.all
   end
 
   def sort_column

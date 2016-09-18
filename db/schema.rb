@@ -30,40 +30,21 @@ ActiveRecord::Schema.define(version: 20160821142943) do
 
   add_index "accounts", ["merchant_id"], name: "index_accounts_on_merchant_id", using: :btree
 
-  create_table "address_types", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "attribute_sets", force: :cascade do |t|
+    t.string   "name",       limit: 255,                null: false
+    t.boolean  "active",                 default: true
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
-  add_index "address_types", ["name"], name: "index_address_types_on_name", using: :btree
-
-  create_table "addresses", force: :cascade do |t|
-    t.integer  "address_type_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "addressable_type"
-    t.integer  "addressable_id"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "suburb"
-    t.integer  "state_id"
-    t.string   "state_name"
-    t.string   "postcode"
-    t.integer  "phone_id"
-    t.string   "alternative_phone"
-    t.boolean  "default"
-    t.boolean  "billing_default"
-    t.boolean  "active"
-    t.integer  "country_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+  create_table "attributes", force: :cascade do |t|
+    t.string   "display_name",     limit: 45,                null: false
+    t.string   "code",             limit: 45
+    t.integer  "attribute_set_id"
+    t.boolean  "active",                      default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-  add_index "addresses", ["addressable_id"], name: "index_addresses_on_addressable_id", using: :btree
-  add_index "addresses", ["addressable_type"], name: "index_addresses_on_addressable_type", using: :btree
-  add_index "addresses", ["state_id"], name: "index_addresses_on_state_id", using: :btree
 
   create_table "badges_sashes", force: :cascade do |t|
     t.integer  "badge_id"
@@ -101,6 +82,17 @@ ActiveRecord::Schema.define(version: 20160821142943) do
 
   add_index "carts", ["customer_id"], name: "index_carts_on_customer_id", using: :btree
   add_index "carts", ["user_id"], name: "index_carts_on_user_id", using: :btree
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",             limit: 50,                 null: false
+    t.string   "meta_keywords",    limit: 255
+    t.string   "meta_description", limit: 160
+    t.boolean  "active",                       default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["name"], name: "index_categories_on_name", using: :btree
 
   create_table "countries", force: :cascade do |t|
     t.string   "name",         limit: 50
@@ -161,6 +153,12 @@ ActiveRecord::Schema.define(version: 20160821142943) do
   create_table "merchants", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "address"
+    t.string   "city"
+    t.string   "region"
+    t.string   "postal_code"
+    t.integer  "state_id"
+    t.integer  "country_id"
     t.integer  "account_id"
     t.integer  "merchant_type_id"
     t.string   "permalink",        limit: 255
@@ -280,68 +278,26 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "product_properties", force: :cascade do |t|
-    t.integer  "product_id",              null: false
-    t.integer  "property_id",             null: false
-    t.string   "description", limit: 255, null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
-  create_table "product_types", force: :cascade do |t|
-    t.integer  "merchant_type_id"
-    t.string   "name",             limit: 255,                null: false
-    t.boolean  "active",                       default: true
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+  create_table "product_attributes", force: :cascade do |t|
+    t.integer  "attribute_id", null: false
+    t.integer  "product_id",   null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",               limit: 255,                 null: false
-    t.text     "description"
-    t.text     "product_keywords"
-    t.integer  "product_type_id",                                null: false
-    t.integer  "prototype_id"
-    t.string   "permalink",          limit: 255
-    t.datetime "available_at"
-    t.datetime "deleted_at"
-    t.string   "meta_keywords",      limit: 255
-    t.string   "meta_description",   limit: 255
-    t.boolean  "featured",                       default: false
-    t.text     "description_markup"
+    t.string   "name",             limit: 50,                  null: false
+    t.string   "meta_keywords",    limit: 255
+    t.string   "meta_description", limit: 160
+    t.boolean  "active",                       default: true
+    t.boolean  "featured",                     default: false
     t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree
-  add_index "products", ["deleted_at"], name: "index_products_on_deleted_at", using: :btree
   add_index "products", ["name"], name: "index_products_on_name", using: :btree
-  add_index "products", ["permalink"], name: "index_products_on_permalink", unique: true, using: :btree
-  add_index "products", ["product_type_id"], name: "index_products_on_product_type_id", using: :btree
-  add_index "products", ["prototype_id"], name: "index_products_on_prototype_id", using: :btree
-
-  create_table "properties", force: :cascade do |t|
-    t.string   "display_name",     limit: 255,                null: false
-    t.string   "identifying_name", limit: 255
-    t.boolean  "active",                       default: true
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "prototype_properties", force: :cascade do |t|
-    t.integer  "prototype_id"
-    t.integer  "property_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "prototypes", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "referral_bonus", force: :cascade do |t|
     t.integer  "amount"
@@ -434,7 +390,7 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-08-27', null: false
+    t.date     "start_date",                         default: '2016-09-18', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -461,23 +417,19 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.string   "state"
     t.string   "mobile"
     t.string   "customer_cim_id"
-    t.string   "encrypted_password",  limit: 128,                null: false
-    t.string   "confirmation_token",  limit: 128
+    t.string   "encrypted_password", limit: 128,                null: false
+    t.string   "confirmation_token", limit: 128
     t.string   "access_token"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "sms_notification",                default: true, null: false
-    t.boolean  "push_notification",               default: true, null: false
+    t.boolean  "sms_notification",               default: true, null: false
+    t.boolean  "push_notification",              default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "role"
-    t.string   "remember_token",      limit: 128
+    t.string   "remember_token",     limit: 128
     t.integer  "sash_id"
-    t.integer  "level",                           default: 0
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.integer  "level",                          default: 0
   end
 
   add_index "users", ["access_token"], name: "index_users_on_access_token", unique: true, using: :btree

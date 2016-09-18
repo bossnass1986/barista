@@ -16,7 +16,7 @@
     %tbody
       - @products.each do |product|
         %tr
-          %td.mdl-data-table__cell--non-numeric= product.product_type.name
+          %td.mdl-data-table__cell--non-numeric= product.attribute_set.name
           %td.mdl-data-table__cell--non-numeric= link_to product.name, edit_admin_merchandise_product_path(product)
           %td.mdl-data-table__cell--non-numeric= product.available? ? 'Yes' : 'No'
           -#%td.mdl-data-table__cell--non-numeric= product.prototype.name

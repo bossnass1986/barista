@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def product_types
-    @product_types ||= ProductType.roots
+    @attribute_sets ||= AttributeSet.roots
   end
 
   private

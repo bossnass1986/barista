@@ -7,7 +7,7 @@
     %h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    = form.select :product_type_id, options_for_select(ProductType.all.map{ |pt| [pt.name, pt.id] })
+    = form.select :product_type_id, options_for_select(AttributeSet.all.map{ |pt| [pt.name, pt.id] })
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
       -#= form.collection_select(:product_type_id, ProductType.all, :id, :name)
       = form.text_field :name, class: 'mdl-textfield__input'

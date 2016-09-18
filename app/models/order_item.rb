@@ -40,7 +40,7 @@ class OrderItem < ActiveRecord::Base
   # end
 
   def product_type
-    variant.product.product_type
+    variant.product.attribute_set
   end
 
   def product_type_ids

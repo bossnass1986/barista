@@ -10,8 +10,6 @@ class Admin::MerchantsController < Admin::BaseController
     @states = State.form_selector
     @merchant.build_address
     @merchant.build_account
-    # @product = @merchant.products.create!
-    # @merchant.build_primary_phone
   end
 
   def create
@@ -30,8 +28,8 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant = Merchant.find(params[:id])
     binding.pry
     @states = State.form_selector
-    @merchant.build_address if @merchant.address.blank?
-    @merchant.build_account if @merchant.account.blank?
+    # @merchant.build_address if @merchant.address.blank?
+    # @merchant.build_account if @merchant.account.blank?
     @products = Product.all
   end
 
@@ -50,8 +48,8 @@ class Admin::MerchantsController < Admin::BaseController
   def show
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
-    @merchant.build_address
-    @merchant.build_account
+    # @merchant.build_address
+    # @merchant.build_account
     @products = Product.all
     respond_to do |format|
       format.html

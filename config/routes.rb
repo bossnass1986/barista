@@ -152,7 +152,7 @@ Rails.application.routes.draw do
         end
         resources :properties
         resources :prototypes
-        resources :product_types
+        resources :attribute_sets
         resources :prototype_properties
 
         namespace :changes do
