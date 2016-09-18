@@ -1,4 +1,4 @@
 class MerchantType < ActiveRecord::Base
-  has_many :merchants, :through => :AttributeSet, dependent: :destroy
-  has_one :attribute_set
+  has_many :merchants, :through => :PropertySet, dependent: :destroy
+  has_one :property_set
 end

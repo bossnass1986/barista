@@ -1,7 +1,8 @@
-class AttributeSet < ActiveRecord::Base
+class PropertySet < ActiveRecord::Base
 
   # belongs_to :merchant_type
-  # has_many :attributes
+  has_many :properties
+  has_many :products
   # has_many :products, through: :merchant_types, dependent: :restrict_with_exception
 
 

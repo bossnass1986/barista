@@ -1,6 +1,6 @@
-class CreateAttributeSets < ActiveRecord::Migration
+class CreatePropertySets < ActiveRecord::Migration
   def change
-    create_table :attribute_sets do |t|
+    create_table :property_sets do |t|
       t.string :name, limit: 45, null: false
       t.boolean :active, default: true
 

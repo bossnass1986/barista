@@ -8,8 +8,8 @@ class Admin::MerchantsController < Admin::BaseController
   def new
     @merchant = Merchant.new
     @states = State.form_selector
-    @merchant.build_address
-    @merchant.build_account
+    # @merchant.build_address
+    # @merchant.build_account
   end
 
   def create

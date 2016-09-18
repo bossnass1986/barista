@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821142943) do
+ActiveRecord::Schema.define(version: 20160818114307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,22 +29,6 @@ ActiveRecord::Schema.define(version: 20160821142943) do
   end
 
   add_index "accounts", ["merchant_id"], name: "index_accounts_on_merchant_id", using: :btree
-
-  create_table "attribute_sets", force: :cascade do |t|
-    t.string   "name",       limit: 255,                null: false
-    t.boolean  "active",                 default: true
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-  end
-
-  create_table "attributes", force: :cascade do |t|
-    t.string   "display_name",     limit: 45,                null: false
-    t.string   "code",             limit: 45
-    t.integer  "attribute_set_id"
-    t.boolean  "active",                      default: true
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "badges_sashes", force: :cascade do |t|
     t.integer  "badge_id"
@@ -286,11 +270,11 @@ ActiveRecord::Schema.define(version: 20160821142943) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",             limit: 50,                  null: false
-    t.string   "meta_keywords",    limit: 255
-    t.string   "meta_description", limit: 160
-    t.boolean  "active",                       default: true
-    t.boolean  "featured",                     default: false
+    t.string   "name",        limit: 50,                  null: false
+    t.string   "keywords",    limit: 255
+    t.string   "description", limit: 160
+    t.boolean  "active",                  default: true
+    t.boolean  "featured",                default: false
     t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -298,6 +282,22 @@ ActiveRecord::Schema.define(version: 20160821142943) do
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree
   add_index "products", ["name"], name: "index_products_on_name", using: :btree
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "name",            limit: 45,                null: false
+    t.string   "code",            limit: 45
+    t.integer  "property_set_id"
+    t.boolean  "active",                     default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "property_sets", force: :cascade do |t|
+    t.string   "name",       limit: 45,                null: false
+    t.boolean  "active",                default: true
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
 
   create_table "referral_bonus", force: :cascade do |t|
     t.integer  "amount"
@@ -390,7 +390,7 @@ ActiveRecord::Schema.define(version: 20160821142943) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-09-18', null: false
+    t.date     "start_date",                         default: '2016-09-19', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

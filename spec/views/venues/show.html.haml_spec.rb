@@ -12,7 +12,7 @@ RSpec.describe "venues/terms", :type => :view do
     ))
   end
 
-  it "renders attributes in <p>" do
+  it "renders properties in <p>" do
     render
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Address/)

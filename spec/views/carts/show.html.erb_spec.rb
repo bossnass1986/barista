@@ -8,7 +8,7 @@ RSpec.describe "carts/terms", type: :view do
     ))
   end
 
-  it "renders attributes in <p>" do
+  it "renders properties in <p>" do
     render
     expect(rendered).to match(/1/)
     expect(rendered).to match(/2/)

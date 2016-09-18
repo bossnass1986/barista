@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "@attribute_sets/terms", type: :view do
+RSpec.describe "@@property_sets/terms", type: :view do
   before(:each) do
-    assign(:attribute_sets, [
-        AttributeSet.create!(
+    assign(:property_sets, [
+        PropertySet.create!(
         :name => "Name"
       ),
-        AttributeSet.create!(
+        PropertySet.create!(
         :name => "Name"
       )
     ])
   end
 
-  it "renders a list of @attribute_sets" do
+  it "renders a list of @@property_sets" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
   end

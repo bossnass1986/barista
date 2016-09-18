@@ -1,5 +1,4 @@
 class Admin::Merchandise::PropertiesController < Admin::BaseController
-  helper_method :sort_column, :sort_direction
 
   def index
     @properties = Property.all
@@ -43,11 +42,7 @@ class Admin::Merchandise::PropertiesController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:property).permit(:identifing_name, :display_name, :active)
-  end
-
-  def sort_column
-    Property.column_names.include?(params[:sort]) ? params[:sort] : "identifing_name"
+    params.require(:property).permit(:name, :code, :property_set_id, :active)
   end
 
 end

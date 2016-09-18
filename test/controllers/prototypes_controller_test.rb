@@ -8,7 +8,7 @@ class PrototypesControllerTest < ActionController::TestCase
   test "should get terms" do
     get :terms
     assert_response :success
-    assert_not_nil assigns(:prototypes)
+    assert_not_nil assigns(:property_sets)
   end
 
   test "should get new" do
@@ -17,7 +17,7 @@ class PrototypesControllerTest < ActionController::TestCase
   end
 
   test "should create prototype" do
-    assert_difference('Prototype.count') do
+    assert_difference('Category.count') do
       post :create, prototype: { active: @prototype.active, name: @prototype.name }
     end
 
@@ -40,7 +40,7 @@ class PrototypesControllerTest < ActionController::TestCase
   end
 
   test "should destroy prototype" do
-    assert_difference('Prototype.count', -1) do
+    assert_difference('Category.count', -1) do
       delete :destroy, id: @prototype
     end
 

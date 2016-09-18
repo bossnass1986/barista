@@ -40,7 +40,7 @@ class OrderItem < ActiveRecord::Base
   # end
 
   def product_type
-    variant.product.attribute_set
+    variant.product.property_set
   end
 
   def product_type_ids
@@ -90,7 +90,7 @@ class OrderItem < ActiveRecord::Base
   #  it is better to do the math in SQL than ruby
   #
   # @param [Integer]  order.id
-  # @return [OrderItem] Object has addional attributes of [sum_price, sum_total, shipping_category_id, and quantity]
+  # @return [OrderItem] Object has addional properties of [sum_price, sum_total, shipping_category_id, and quantity]
   def self.order_items_in_cart(order_id)
     joins({:variant => :product }).
         where({ :order_items => { :order_id => order_id}}).
@@ -133,7 +133,7 @@ class OrderItem < ActiveRecord::Base
     order.update_attribute(:calculated_at, nil)
   end
 
-  # determines if the order item has all the attributes set and thus you can now determine the final total
+  # determines if the order item has all the properties set and thus you can now determine the final total
   #
   # @param [none]
   # @return [Boolean]

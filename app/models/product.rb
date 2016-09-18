@@ -1,8 +1,8 @@
 class VariantRequiredError < StandardError; end
 
 class Product < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :permalink, use: :finders
+  # extend FriendlyId
+  # friendly_id :permalink, use: :finders
   # include Presentation::ProductPresenter
   # include ProductFilters
 
@@ -10,9 +10,9 @@ class Product < ActiveRecord::Base
 
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
 
-  belongs_to :attribute_set
-  belongs_to :prototype
-  has_many :product_properties
+  belongs_to :property_set
+  belongs_to :category
+  has_many :product_attributes
   has_many :properties,         through: :product_properties
 
   has_many :variants, dependent: :destroy
@@ -28,17 +28,11 @@ class Product < ActiveRecord::Base
   before_validation :not_active_on_create!, on: :create
   before_save :create_content
 
-  accepts_nested_attributes_for :variants,           reject_if: proc { |attributes| attributes['sku'].blank? }
-  accepts_nested_attributes_for :product_properties, reject_if: proc { |attributes| attributes['description'].blank? }, allow_destroy: true
+  # accepts_nested_attributes_for :variants,           reject_if: proc { |properties| properties['sku'].blank? }
+  # accepts_nested_attributes_for :@product_attributes, reject_if: proc { |properties| properties['description'].blank? }, allow_destroy: true
   # accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
 
-  # validates :shipping_category_id,  presence: true
-  # validates :product_type_id,       presence: true
   validates :name,                  presence: true,   length: { maximum: 165 }
-  # validates :description_markup,    presence: true,   length: { maximum: 2255 },     if: :active
-  # validates :meta_keywords,         presence: true,        length: { maximum: 255 }, if: :active
-  # validates :meta_description,      presence: true,        length: { maximum: 255 }, if: :active
-  # validates :permalink,             uniqueness: true,      length: { maximum: 150 }
 
   # scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
 
@@ -133,13 +127,13 @@ class Product < ActiveRecord::Base
     #where("products.available_at IS NULL OR products.available_at >= ?", Time.zone.now)
   end
 
-  def active(at = Time.zone.now)
-    deleted_at.nil? || deleted_at > (at + 1.second)
-  end
+  # def active(at = Time.zone.now)
+  #   deleted_at.nil? || deleted_at > (at + 1.second)
+  # end
 
-  def active?(at = Time.zone.now)
-    active(at)
-  end
+  # def active?(at = Time.zone.now)
+  #   active(at)
+  # end
 
   def activate!
     self.deleted_at = nil
@@ -162,23 +156,23 @@ class Product < ActiveRecord::Base
   end
 
   def create_content
-    self.description = BlueCloth.new(self.description_markup).to_html unless self.description_markup.blank?
+    # self.description = BlueCloth.new(self.description_markup).to_html unless self.description_markup.blank?
   end
 
   def not_active_on_create!
-    self.deleted_at ||= Time.zone.now
+    # self.deleted_at ||= Time.zone.now
   end
 
   # if the permalink is not filled in set it equal to the name
   def sanitize_data
-    sanitize_permalink
-    assign_meta_keywords  if meta_keywords.blank? && description
-    sanitize_meta_description
+    # sanitize_permalink
+    # assign_meta_keywords  if meta_keywords.blank? && description
+    # sanitize_meta_description
   end
 
   def sanitize_permalink
-    self.permalink = name if permalink.blank? && name
-    self.permalink = permalink.squeeze(' ').strip.gsub(' ', '-').downcase if permalink
+    # self.permalink = name if permalink.blank? && name
+    # self.permalink = permalink.squeeze(' ').strip.gsub(' ', '-').downcase if permalink
   end
 
   def sanitize_meta_description

@@ -184,7 +184,7 @@ class Order < ActiveRecord::Base
   # This returns a hash where product_type_id is the key and an Array of prices are the values.
   #   This method is specifically used for Deal.rb
   #
-  #   So for example you have a shirt that has @attribute_set of "shirt" which is a child of @attribute_set "clothing"
+  #   So for example you have a shirt that has @@property_set of "shirt" which is a child of @@property_set "clothing"
   #     "shirt" product_type_id    == 1
   #     "clothing" product_type_id == 2
   #

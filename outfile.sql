@@ -673,7 +673,7 @@ ALTER SEQUENCE phones_id_seq OWNED BY phones.id;
 
 
 --
--- Name: product_properties; Type: TABLE; Schema: public; Owner: paulmcguane
+-- Name: @product_attributes; Type: TABLE; Schema: public; Owner: paulmcguane
 --
 
 CREATE TABLE product_properties (
@@ -2255,7 +2255,7 @@ SELECT pg_catalog.setval('phones_id_seq', 1, false);
 
 
 --
--- Data for Name: product_properties; Type: TABLE DATA; Schema: public; Owner: paulmcguane
+-- Data for Name: @product_attributes; Type: TABLE DATA; Schema: public; Owner: paulmcguane
 --
 
 COPY product_properties (id, product_id, property_id, description, created_at, updated_at) FROM stdin;

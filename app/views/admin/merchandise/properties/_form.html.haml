@@ -1,5 +1,20 @@
-%fieldset#admin-property-names
-  %label Identifing Name
-  = form.text_field :identifying_name
-  %label Display Name
-  = form.text_field :display_name
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :name, class: 'mdl-textfield__input'
+      = form.label :name, class: 'mdl-textfield__label'
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :code, class: 'mdl-textfield__input'
+      = form.label :code, class: 'mdl-textfield__label'
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :property_set_id, class: 'mdl-textfield__input'
+      = form.label :property_set_id, class: 'mdl-textfield__label'
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :active, class: 'mdl-textfield__input'
+      = form.label :active, class: 'mdl-textfield__label'

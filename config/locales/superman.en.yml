@@ -87,10 +87,15 @@ en:
       products:
         index:
           title: 'Products'
-          product: 'Product Name'
-          available: 'Available'
-          product_type: 'Product Type'
+          id: 'ID'
+          name: 'Name'
+          type: 'Type'
+          category: 'Category'
+          visibility: 'Visibility'
+          actions: 'Actions'
           new_button: 'Add New Product'
+          property_sets_button: 'Attribute Sets'
+          properties_button: 'Attributes'
         new:
           title: 'New Product'
         edit:
@@ -103,13 +108,13 @@ en:
           sub_title: 'Cafe Add Ons'
       properties:
         index:
-          title: 'Properties'
+          title: 'Attributes'
         edit:
           title: 'Edit Property'
-      prototypes:
+      property_sets:
         index:
-          title: 'Prototypes'
-          new_button: 'Add New Prototype'
+          title: 'Attribute Sets'
+          new_button: 'Add New Attribute Set'
     suppliers:
         index:
           title: 'Merchants'

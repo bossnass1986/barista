@@ -1,0 +1,6 @@
+- title 'New Property'
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col-tablet.mdl-cell--10-col-desktop.mdl-cell--1-offset-desktop.superman-settings.mdl-shadow--2dp
+    = form_for @property, :url  => admin_merchandise_properties_path, :html => {:class => 'prepend-6'}  do |form|
+      = render :partial => '/admin/merchandise/properties/form', :locals => {:form => form }
+      = submit_tag

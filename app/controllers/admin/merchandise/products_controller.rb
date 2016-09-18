@@ -1,7 +1,7 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def index
-    @products = Product.order(:name).includes(:active_variants, :attribute_set).page params[:page]
+    @products = Product.order(:name).includes(:active_variants, :property_set).page params[:page]
   end
 
   def show
@@ -19,7 +19,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       redirect_to new_admin_merchandise_prototype_url
     else
       @product            = Product.new
-      @product.prototype  = Prototype.new
+      @product.prototype  = Category.new
     end
   end
 
@@ -55,7 +55,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def add_properties
-    prototype  = Prototype.includes(:properties).find(params[:id])
+    prototype  = Category.includes(:properties).find(params[:id])
     @properties = prototype.properties
     all_properties = Property.all
 
@@ -106,14 +106,14 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def form_info
-    @prototypes               = Prototype.all.map{|pt| [pt.name, pt.id]}
+    @prototypes               = Category.all.map{|pt| [pt.name, pt.id]}
     @all_properties           = Property.all
     # @select_shipping_category = ShippingCategory.all.map {|sc| [sc.name, sc.id]}
     # @brands                   = Brand.order(:name).map {|ts| [ts.name, ts.id]}
   end
 
   def product_types
-    @attribute_sets ||= AttributeSet.all
+    @property_sets ||= PropertySet.all
   end
 
   def sort_column

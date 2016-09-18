@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "@attribute_sets/terms", type: :view do
+RSpec.describe "@@property_sets/terms", type: :view do
   before(:each) do
-    @attribute_set = assign(:attribute_set, AttributeSet.create!(
+    @property_set = assign(:property_set, PropertySet.create!(
       :name => "Name"
     ))
   end
 
-  it "renders attributes in <p>" do
+  it "renders properties in <p>" do
     render
     expect(rendered).to match(/Name/)
   end

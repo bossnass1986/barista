@@ -34,8 +34,8 @@ IntercomRails.config do |config|
   #
   config.user.model = Proc.new { User }
 
-  # == Lead/custom attributes for non-signed up users
-  # Pass additional attributes to for potential leads or
+  # == Lead/custom properties for non-signed up users
+  # Pass additional properties to for potential leads or
   # non-signed up users as an an array.
   # Any attribute contained in config.user.lead_attributes can be used
   # as custom attribute in the application.

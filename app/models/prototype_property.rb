@@ -1,6 +1,6 @@
 class PrototypeProperty < ActiveRecord::Base
 
-  belongs_to :prototype
+  belongs_to :category
   belongs_to :property
 
   #validates :prototype_id,    :presence => true

@@ -17,11 +17,11 @@
     %label Meta Description
     %p= @product.meta_description
     %label Product Type
-    %p= @product.attribute_set.name
+    %p= @product.property_set.name
 .mdl-cell.mdl-cell--4-col
   %fieldset
     %legend Properties
-    - @product.product_properties.each do |product_prop|
+    - @product.product_attributes.each do |product_prop|
       %label
         = product_prop.property.identifying_name
         \:

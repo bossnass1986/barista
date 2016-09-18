@@ -95,7 +95,6 @@ Rails.application.routes.draw do
           resource :store_credits, only: [:show, :edit, :update]
                 end
       end
-      # resources :overviews, only: [:index]
       resources :merchants
 
       namespace :history do
@@ -105,9 +104,6 @@ Rails.application.routes.draw do
 
       namespace :fulfillment do
         resources :orders do
-          # member do
-          #   put :create_shipment
-          # end
           resources :comments
         end
 
@@ -151,8 +147,7 @@ Rails.application.routes.draw do
           resources :products, :concerns => :paginatable
         end
         resources :properties
-        resources :prototypes
-        resources :attribute_sets
+        resources :property_sets
         resources :prototype_properties
 
         namespace :changes do

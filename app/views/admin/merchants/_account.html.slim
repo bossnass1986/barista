@@ -1,7 +1,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.account_title')
-= form.fields_for :address do |address_fields|
+/= form.fields_for :address do |address_fields|
   .mdl-grid
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col
       = address_fields.text_field :first_name, class: 'mdl-textfield__input'
