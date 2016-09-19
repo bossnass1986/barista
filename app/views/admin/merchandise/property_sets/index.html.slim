@@ -1,6 +1,6 @@
 - title t('.title')
 .mdl-cell.mdl-cell--12-col
-  = link_to t('.new_button'), new_admin_merchandise_property_set_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+  = link_to t('.new_button'), new_admin_merchandise_attribute_set_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
 .mdl-cell.mdl-cell--12-col
   table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     thead
@@ -12,7 +12,7 @@
     tbody
       - @property_sets.each do |property_set|
         tr
-          td.mdl-data-table__cell--non-numeric= link_to property_set.name, edit_admin_merchandise_property_set_path(property_set)
+          td.mdl-data-table__cell--non-numeric= link_to property_set.name, edit_admin_merchandise_attribute_set_path(property_set)
           td.mdl-data-table__cell--non-numeric= property_set.properties.count
           td.mdl-data-table__cell--non-numeric= property_set.active? ? 'Yes' : 'No'
           td.mdl-data-table__cell--non-numeric

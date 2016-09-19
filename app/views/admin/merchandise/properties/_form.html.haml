@@ -10,11 +10,11 @@
       = form.label :code, class: 'mdl-textfield__label'
 .mdl-grid
   .mdl-cell.mdl-cell--6-col
-    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-      = form.text_field :property_set_id, class: 'mdl-textfield__input'
-      = form.label :property_set_id, class: 'mdl-textfield__label'
-.mdl-grid
+    = form.collection_select(:property_set_id, PropertySet.all, :id, :name)
+-#.mdl-grid
   .mdl-cell.mdl-cell--6-col
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-      = form.text_field :active, class: 'mdl-textfield__input'
-      = form.label :active, class: 'mdl-textfield__label'
+      -#- checked = @property_set.name && @property_set.properties.include?(property)
+      %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => :active}
+        = check_box_tag :active
+        %span.mdl-switch__label Active

@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       t.boolean  :active,                default: true
       t.boolean  :featured,             default: false
       t.integer  :brand_id,             limit: 4
+      t.integer  :category_id,          limit: 4
 
       t.timestamps
     end

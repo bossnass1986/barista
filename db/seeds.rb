@@ -5,6 +5,7 @@ User.delete_all
 Country.destroy_all
 MerchantType.delete_all
 Category.destroy_all
+Product.delete_all
 PropertySet.destroy_all
 Property.delete_all
 # Product.destroy_all
@@ -54,7 +55,7 @@ MerchantType.create!([
                          {id: 4, name: 'Bar/Pub', active: true}
                      ])
 
-puts 'Creating Categories Sets'
+puts 'Creating Categories'
 Category.create!([
                         {id: 1, name: 'Coffee'},
                         {id: 2, name: 'Hot Drinks'},
@@ -67,23 +68,6 @@ Category.create!([
                         {id: 9, name: 'Bourbon'},
                         {id: 10, name: 'Scotch'}
 ])
-
-# puts 'Creating Standard Product Types'
-# Category.create!([
-#     {id: 1, name: 'Hot', active: true},
-#     {id: 2, name: 'Cold', active: true}
-# ])
-
-# PrototypeProperty.create!([
-#                             {property_id: 1, prototype_id: 1},
-#                             {property_id: 1, prototype_id: 2},
-#                             {property_id: 2, prototype_id: 1},
-#                             {property_id: 2, prototype_id: 2},
-#                             {property_id: 3, prototype_id: 1},
-#                             {property_id: 4, prototype_id: 1},
-#                             {property_id: 5, prototype_id: 1},
-#                             {property_id: 5, prototype_id: 2},
-#                           ])
 
 puts 'Sugar CRUSH!'
 PropertySet.create!([
@@ -105,25 +89,37 @@ product_seed = Rails.root.join('db', 'seed', 'products.yml')
 product = YAML::load_file(product_seed)
 Product.create!(product)
 
-
-# puts 'Creating Sample Products with Attributes'
-# ProductProperty.create!([
-#   {property_id: 1, product_id: 2},
-#   # {property_id: 1, product_id: 2},
-#   # {property_id: 1, product_id: 3},
-#   # {property_id: 1, product_id: 4},
-#   # {property_id: 3, product_id: 1},
-# ])
-
 puts 'Creating Attributes'
 Property.create!([
+    # Sizes
     {property_set_id: 1, name: 'Short'},
     {property_set_id: 1, name: 'Tall'},
     {property_set_id: 1, name: 'Grande'},
     {property_set_id: 1, name: 'Venti'},
+    # Milk
     {property_set_id: 2, name: 'Full Cream'},
     {property_set_id: 2, name: 'Skim'},
     {property_set_id: 2, name: 'Soy'},
+    {property_set_id: 2, name: 'Lactose Free'},
+    {property_set_id: 2, name: 'Almond'},
+    {property_set_id: 2, name: 'Coconut'},
+    # Sugar
+    {property_set_id: 3, name: 'None'},
+    {property_set_id: 3, name: '1/2'},
+    {property_set_id: 3, name: '1'},
+    {property_set_id: 3, name: '2'},
+
+    # Strength
+    {property_set_id: 5, name: 'Weak'},
+    {property_set_id: 5, name: 'Regular'},
+    {property_set_id: 5, name: 'Strong'},
+    {property_set_id: 5, name: 'Extra Strong'},
+
+    # Flavouring
+    {property_set_id: 8, name: 'None'},
+    {property_set_id: 8, name: 'Vanilla'},
+    {property_set_id: 8, name: 'Carmel'},
+    {property_set_id: 8, name: 'Hazelnut'},
 ])
 
 

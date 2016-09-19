@@ -9,4 +9,5 @@ class Property < ActiveRecord::Base
 
   validates :name,       :presence => true, :length => { :maximum => 165 }
 
+
 end

@@ -147,7 +147,8 @@ Rails.application.routes.draw do
           resources :products, :concerns => :paginatable
         end
         resources :properties
-        resources :property_sets
+        # resources :property_sets
+        resources :attribute_sets, controller: 'property_sets'
         resources :prototype_properties
 
         namespace :changes do

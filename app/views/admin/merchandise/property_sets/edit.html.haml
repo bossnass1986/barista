@@ -1,4 +1,4 @@
-- title "Editing Category #{@property_set.name}"
-= form_for @property_set, :url  => admin_merchandise_property_set_path(@property_set) do |form|
+- title "Editing Attribute Set #{@property_set.name}"
+= form_for @property_set, :url  => admin_merchandise_attribute_set_path(@property_set) do |form|
   = render :partial => '/admin/merchandise/property_sets/form', :locals => {:form => form}
   = form.submit :class  => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'

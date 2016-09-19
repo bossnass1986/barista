@@ -12,13 +12,13 @@
     %label
       Description (#{link_to 'edit', edit_admin_merchandise_products_description_path(@product)})
     %p= @product.description
-    %label Meta Keywords
-    %p= @product.meta_keywords
-    %label Meta Description
-    %p= @product.meta_description
-    %label Product Type
-    %p= @product.property_set.name
-.mdl-cell.mdl-cell--4-col
+    -#%label Meta Keywords
+    -#%p= @product.meta_keywords
+    -#%label Meta Description
+    -#%p= @product.meta_description
+    %label Category
+    %p= @product.category.name
+-#.mdl-cell.mdl-cell--4-col
   %fieldset
     %legend Properties
     - @product.product_attributes.each do |product_prop|

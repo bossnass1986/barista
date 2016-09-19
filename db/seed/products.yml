@@ -1,49 +1,49 @@
 - name: Bubble Tea
   description: A refreshing flavoured fruit tea or milk teas served ice cold or piping hot with chewy natural tapioca balls.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Cappuccino
   description: Silky frothed milk poured over a shot of espresso, topped with a touch of chocolate.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Chai Latte
   description:
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Flat White
   description: Steamed milk with small, fine bubbles and a glossy or velvety consistency poured over a shot of espresso.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Hot Chocolate
   description: Silky steamed milk poured over melted chocolate topped with chocolate powder.
-#  attribute_set_id: 1
+  category_id: 2
 
 - name: Latte
   description: A drink made by adding perfectly steamed milk to a shot of espresso served in a glass.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Long Black
   description: A long black is made by pouring a double-shot of espresso or ristretto over hot water.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Long Macchiato
   description: A double shot of espresso with a small amount of steamed milk.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Macchiato
   description: A single shot of espresso with a small amount of steamed milk.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Mocha
   description: Mocha, in its most basic formulation, can also be referred to as hot chocolate with a shot of espresso added to it.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Short Black
   description: A short black is made by pouring a single-shot of espresso or ristretto over hot water.
-#  attribute_set_id: 1
+  category_id: 1
 
 - name: Tea
   description:
-#  attribute_set_id: 1
+  category_id: 2
 
 

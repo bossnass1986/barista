@@ -276,6 +276,7 @@ ActiveRecord::Schema.define(version: 20160818114307) do
     t.boolean  "active",                  default: true
     t.boolean  "featured",                default: false
     t.integer  "brand_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
