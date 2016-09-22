@@ -2,21 +2,21 @@
 = link_to admin_path, class: 'mdl-navigation__link' do
   i.material-icons> dashboard
   = t('.dashboard')
+= link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
+  i.material-icons> local_cafe
+  = t('.products')
 = link_to admin_history_orders_path, class: 'mdl-navigation__link' do
   i.material-icons> move_to_inbox
   = t('.orders')
 = link_to admin_users_path, class: 'mdl-navigation__link' do
   i.material-icons> people
   = t('.customers')
-= link_to admin_merchandise_products_path, class: 'mdl-navigation__link' do
-  i.material-icons> local_cafe
-  = t('.products')
 = link_to admin_merchants_path, class: 'mdl-navigation__link' do
   i.material-icons> store_mall_directory
   = t('.merchants')
-= link_to admin_generic_coupons_path, class: 'mdl-navigation__link' do
-  i.material-icons> content_cut
-  = t('.discounts')
+= link_to admin_marketing_coupons_path, class: 'mdl-navigation__link' do
+  i.material-icons> local_offer
+  = t('.promotions')
 = link_to admin_user_datas_referrals_path, class: 'mdl-navigation__link' do
   i.material-icons> plus_one
   = t('.referrals')

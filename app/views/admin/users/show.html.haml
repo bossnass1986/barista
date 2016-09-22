@@ -4,7 +4,6 @@
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab{:href => '#information-panel'} Information
     %a.mdl-tabs__tab.is-active{:href => '#orders-panel'} Orders
-    %a.mdl-tabs__tab{:href => '#addresses-panel'} Addresses
     %a.mdl-tabs__tab{:href => '#payments-panel'} Payments
   #information-panel.mdl-tabs__panel
     = form_for @user, :url => admin_user_path(@user)  do |form|
@@ -25,11 +24,6 @@
         %li
           %label Status:
           = order.state
-  #addresses-panel.mdl-tabs__panel
-    %ul.vertical-list
-      - @user.addresses.each do |address|
-        %li
-          = render :partial => '/shared/compact_address', :locals => {:shopping_address => address}
   #payments-panel.mdl-tabs__panel
     .mdl-cell.mdl-cell--8-col
       %h3.mdl-typography--title

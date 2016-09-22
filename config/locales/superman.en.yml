@@ -8,7 +8,7 @@ en:
         merchants: 'Merchants'
         dashboard: 'Dashboard'
         products: 'Menu Items'
-        discounts: 'Discount Codes'
+        promotions: 'Promotions'
         orders: 'Orders'
         customers: 'Customers'
         users: 'Users'

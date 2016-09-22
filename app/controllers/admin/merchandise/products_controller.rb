@@ -55,8 +55,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def add_properties
-    prototype  = Category.includes(:properties).find(params[:id])
-    @properties = prototype.properties
+    property_sets  = PropertySet.includes(:properties).find(params[:id])
+    @properties = property_sets.properties
     all_properties = Property.all
 
     @properties_hash = all_properties.inject({:active => [], :inactive => []}) do |h, property|
@@ -99,9 +99,9 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:product).permit(:name, :description, :product_keywords, :set_keywords, :product_type_id,
-                                    :prototype_id, :shipping_category_id, :permalink, :available_at, :deleted_at,
-                                    :meta_keywords, :meta_description, :featured, :description_markup, :brand_id,
+    params.require(:product).permit(:name, :description, :keywords, :category_id,
+                                    :prototype_id, :available_at, :deleted_at,
+                                    :featured, :description_markup,
                                     product_properties_attributes: [:id, :product_id, :property_id, :position, :description])
   end
 
@@ -116,8 +116,5 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     @property_sets ||= PropertySet.all
   end
 
-  def sort_column
-    Product.column_names.include?(params[:sort]) ? params[:sort] : "name"
-  end
 
 end

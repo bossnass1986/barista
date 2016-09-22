@@ -5,7 +5,9 @@ class Shopping::MerchantsController < ApplicationController
   # GET /merchants
   def index
     # Only pull the fields we require
-    @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    @user = request.location.address
+    @merchants = Merchant.near(request.location.address).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    # @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @merchants.as_json }
@@ -67,13 +69,13 @@ class Shopping::MerchantsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-  def set_merchant
-    @merchant = Merchant.find(params[:id])
+    def set_merchant
+      @merchant = Merchant.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
-  def merchant_params
-    params.require(:merchant).permit(:name, :address, :latitude, :longitude, :email, :phone)
+    def merchant_params
+      params.require(:merchant).permit(:name, :address, :latitude, :longitude, :email, :phone)
     end
 
     def form_info

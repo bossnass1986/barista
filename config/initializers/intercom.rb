@@ -61,7 +61,7 @@ IntercomRails.config do |config|
 
   # == Current company method/variable
   # The method/variable that contains the current company for the current user,
-  # in your controllers. 'Companies' are generic groupings of users, so this
+  # in your controllers. 'Companies' are marketing groupings of users, so this
   # could be a company, app or group.
   #
   # config.company.current = Proc.new { current_company }

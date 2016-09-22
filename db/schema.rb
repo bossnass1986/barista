@@ -106,19 +106,6 @@ ActiveRecord::Schema.define(version: 20160818114307) do
   add_index "coupons", ["code"], name: "index_coupons_on_code", using: :btree
   add_index "coupons", ["expires_at"], name: "index_coupons_on_expires_at", using: :btree
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope"
-    t.datetime "created_at"
-  end
-
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-
   create_table "merchant_products", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "merchant_id"
@@ -143,18 +130,18 @@ ActiveRecord::Schema.define(version: 20160818114307) do
     t.string   "postal_code"
     t.integer  "state_id"
     t.integer  "country_id"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "account_id"
     t.integer  "merchant_type_id"
     t.string   "permalink",        limit: 255
     t.datetime "available_at"
     t.datetime "deleted_at"
-    t.string   "meta_keywords",    limit: 255
-    t.string   "meta_description", limit: 255
+    t.string   "keywords",         limit: 255
+    t.string   "description",      limit: 255
     t.boolean  "featured",                     default: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
-    t.float    "latitude"
-    t.float    "longitude"
   end
 
   add_index "merchants", ["name"], name: "index_merchants_on_name", using: :btree
@@ -260,13 +247,6 @@ ActiveRecord::Schema.define(version: 20160818114307) do
     t.boolean  "primary"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "product_attributes", force: :cascade do |t|
-    t.integer  "attribute_id", null: false
-    t.integer  "product_id",   null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -391,7 +371,7 @@ ActiveRecord::Schema.define(version: 20160818114307) do
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-09-19', null: false
+    t.date     "start_date",                         default: '2016-09-22', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false

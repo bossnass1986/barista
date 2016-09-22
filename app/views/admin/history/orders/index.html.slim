@@ -1,0 +1,22 @@
+- title t('admin.history.orders.title')
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+      thead
+        tr
+          th Number
+          th Date
+          th Customer
+          th Status
+          th Expected At
+          th Total
+          th Actions
+
+      tbody
+        - @orders.each do |order|
+          tr
+            td= order.number.upcase
+            td= order.created_at
+            td= order.user.name
+            td= order.order_status.name
+            td= order.completed_at

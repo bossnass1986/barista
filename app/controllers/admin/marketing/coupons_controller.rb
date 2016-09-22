@@ -1,4 +1,4 @@
-class Admin::Generic::CouponsController < Admin::Generic::BaseController
+class Admin::Marketing::CouponsController < Admin::BaseController
   def index
     @coupons = Coupon.all
   end

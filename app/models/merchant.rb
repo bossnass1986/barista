@@ -1,30 +1,35 @@
 class Merchant < ActiveRecord::Base
 
+  geocoded_by :full_address
+
+  belongs_to :account, dependent: :destroy
+  belongs_to :merchant_type
+  belongs_to :state
   # has_many :variant_merchants
   # has_many :variants, through: :variant_merchants, dependent: :destroy
   # has_many :products, through: :variants, dependent: :destroy
 
-  has_many :products
-  has_many :products, through: :PropertySet
+  # has_many :products
+  has_many :products, through: :property_sets
   has_many :trading_hours, dependent: :destroy
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
-  has_one :address, as: :addressable, dependent: :destroy
-  belongs_to :account, dependent: :destroy
-  belongs_to :merchant_type
+  # has_one :address, as: :addressable, dependent: :destroy
+
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_variants
 
+  after_validation :geocode
   validates :terms_of_service, acceptance: true
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
   # after_create :sanitize_dates
 
-  accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
+  # accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
   accepts_nested_attributes_for :account, reject_if: proc { |attributes| attributes['account_name'].blank? }
@@ -66,6 +71,10 @@ class Merchant < ActiveRecord::Base
     self.where product_type_id: product_types
   end
 
+  def full_address
+    [self.address, self.city, self.postal_code, self.state].reject(&:blank?).join(', ')
+  end
+
   def add_trading_hours
     (0..6).each do |i|
       TradingHour.create!(merchant_id: self.id, weekday: i, trades: true)
@@ -83,7 +92,7 @@ class Merchant < ActiveRecord::Base
   def sanitize_data
     sanitize_permalink
     # assign_meta_keywords  if meta_keywords.blank?
-    sanitize_meta_description
+    sanitize_description
   end
 
 
@@ -92,9 +101,9 @@ class Merchant < ActiveRecord::Base
     self.permalink = [permalink.squeeze(' ').strip.gsub(/[^0-9a-z]/i, '-').downcase].join('-') if permalink
   end
 
-  def sanitize_meta_description
-    if name && meta_description.blank?
-      self.meta_description = [name.first(55)]
+  def sanitize_description
+    if name && description.blank?
+      self.description = [name.first(55)]
     end
   end
 

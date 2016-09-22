@@ -77,11 +77,11 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resource :dashboard, only: [:index]
-      namespace :customer_service do
-        resources :users do
-          resources :comments
-        end
-      end
+      # namespace :customer_service do
+      #   resources :users do
+      #     resources :comments
+      #   end
+      # end
       resources :users
       namespace :user_datas do
 
@@ -111,7 +111,7 @@ Rails.application.routes.draw do
       namespace :shopping do
         resources :carts
         resources :products
-        resources :users
+        # resources :users
         namespace :checkout do
           resources :credit_cards
           resource :order, only: [:show, :update, :start_checkout_process] do
@@ -133,7 +133,7 @@ Rails.application.routes.draw do
         # resources :tax_categories
       end
 
-      namespace :generic do
+      namespace :marketing do
         resources :coupons
         # resources :deals
         # resources :sales

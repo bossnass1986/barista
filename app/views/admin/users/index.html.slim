@@ -1,6 +1,6 @@
 - title t('.title')
 .mdl-cell.mdl-cell--12-col
-  table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp.mdl-cell--12-col
+  table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     thead
       tr
         th.mdl-data-table__cell--non-numeric Full Name
@@ -23,4 +23,9 @@
           td.mdl-data-table__cell--non-numeric= number_to_currency(user.store_credit.amount)
           td.mdl-data-table__cell--non-numeric= user.payment_methods.count
           td.mdl-data-table__cell--non-numeric= user.state
-          td.mdl-data-table__cell--non-numeric test
+          td.mdl-data-table__cell--non-numeric
+            button.mdl-button.mdl-js-button.mdl-button--icon id=user.id
+              i.material-icons more_vert
+            ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=user.id
+              li.mdl-menu__item= link_to "Edit User",  edit_admin_user_path(user)
+              li.mdl-menu__item= link_to "Show",  admin_user_path(user)
