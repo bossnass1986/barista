@@ -2,27 +2,27 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col.mdl-shadow--2dp.mdl-color--white.mdl-grid
     .mdl-cell.mdl-cell--2-col
-      .mdl-typography--display-1-color-contrast
+      .mdl-typography--display-1-color-contrast.mdl-typography--text-center
         = number_to_currency(@sales, precision: 0)
         .mdl-typography--title-color-contrast
           = "Sale".pluralize(@sales)
     .mdl-cell.mdl-cell--2-col
-      .mdl-typography--display-1-color-contrast
+      .mdl-typography--display-1-color-contrast.mdl-typography--text-center
         = @users
         .mdl-typography--title-color-contrast
           = "Customer".pluralize(@users)
     .mdl-cell.mdl-cell--2-col
-      .mdl-typography--display-1-color-contrast
+      .mdl-typography--display-1-color-contrast.mdl-typography--text-center
         = @merchants
         .mdl-typography--title-color-contrast
           = "Merchant".pluralize(@merchants)
     .mdl-cell.mdl-cell--3-col
-      .mdl-typography--display-1-color-contrast
+      .mdl-typography--display-1-color-contrast.mdl-typography--text-center
         = number_to_currency(@turnover, precision: 0)
         .mdl-typography--title-color-contrast
           | Turnover
     .mdl-cell.mdl-cell--3-col
-      .mdl-typography--display-1-color-contrast
+      .mdl-typography--display-1-color-contrast.mdl-typography--text-center
         = number_to_currency(@commissions, precision: 0)
         .mdl-typography--title-color-contrast
           = "Commission".pluralize(@commissions)

@@ -2,6 +2,8 @@ class CreateTaxRates < ActiveRecord::Migration
   def change
     create_table :tax_rates do |t|
       t.decimal :percentage, precision: 8, scale: 2, default: 0.0,  null: false
+      t.string :code
+      t.string :name
       t.integer :state_id, limit: 4
       t.integer :country_id, limit: 4
       t.date :start_date, null: false, default: Time.now

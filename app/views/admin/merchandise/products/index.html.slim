@@ -20,7 +20,9 @@
           td.mdl-data-table__cell--non-numeric= link_to product.name, edit_admin_merchandise_product_path(product)
           td.mdl-data-table__cell--non-numeric= product.property_set
           td.mdl-data-table__cell--non-numeric= product.category.name
-          td.mdl-data-table__cell--non-numeric= product.active ? 'Yes' : 'No'
+          td.mdl-data-table__cell--non-numeric
+            i.material-icons>
+              = status(product.active)
           td.mdl-data-table__cell--non-numeric
             button.mdl-button.mdl-js-button.mdl-button--icon id=product.id
               i.material-icons more_vert

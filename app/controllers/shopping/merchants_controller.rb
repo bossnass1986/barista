@@ -6,7 +6,7 @@ class Shopping::MerchantsController < ApplicationController
   def index
     # Only pull the fields we require
     @user = request.location.address
-    @merchants = Merchant.near(request.location.address).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    @merchants = Merchant.near(request.location.address, 50, :units => :km).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     # @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     respond_to do |format|
       format.html # show.html.erb
@@ -75,7 +75,7 @@ class Shopping::MerchantsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def merchant_params
-      params.require(:merchant).permit(:name, :address, :latitude, :longitude, :email, :phone)
+      params.require(:merchant).permit(:name, :address, :city, :postal_code, :state_id, :country_id)
     end
 
     def form_info

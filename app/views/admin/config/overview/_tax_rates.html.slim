@@ -1,0 +1,28 @@
+.mdl-cell.mdl-cell--12-col
+  = link_to 'New Tax rate', new_admin_config_tax_rate_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+.mdl-cell.mdl-cell--12-col
+  table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+    thead
+      tr
+        th.mdl-data-table__cell--non-numeric Code
+        th.mdl-data-table__cell--non-numeric Name
+        th.mdl-data-table__cell--non-numeric Country
+        th.mdl-data-table__cell--non-numeric Amount
+        th.mdl-data-table__cell--non-numeric Status
+        th.mdl-data-table__cell--non-numeric Actions
+    tbody
+      - @tax_rates.each do |tax_rate|
+        tr
+          td.mdl-data-table__cell--non-numeric
+          td.mdl-data-table__cell--non-numeric
+          td.mdl-data-table__cell--non-numeric= tax_rate.country.name
+          td.mdl-data-table__cell--non-numeric= number_to_percentage(tax_rate.percentage, precision: 2)
+          td.mdl-data-table__cell--non-numeric= tax_rate.active.to_s
+          td.mdl-data-table__cell--non-numeric
+            button.mdl-button.mdl-js-button.mdl-button--icon id=tax_rate.id
+              i.material-icons more_vert
+            ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=tax_rate.id
+              li.mdl-menu__item= link_to 'Edit Rate',  edit_admin_config_tax_rate_path(tax_rate)
+              li.mdl-menu__item= link_to 'Destroy', admin_config_tax_rate_path(tax_rate), :confirm => 'Are you sure?', :method => :delete
+  /= link_to_previous_page @tax_rates, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+  /= link_to_next_page @tax_rates, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'

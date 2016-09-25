@@ -14,12 +14,12 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def new
     form_info
-    if @prototypes.empty?
-      flash[:notice] = "You must create a prototype before you create a product."
+    if @categories.empty?
+      flash[:notice] = 'You must create a category before you create a product.'
       redirect_to new_admin_merchandise_prototype_url
     else
       @product            = Product.new
-      @product.prototype  = Category.new
+      @product.category  = Category.new
     end
   end
 
@@ -106,8 +106,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def form_info
-    @prototypes               = Category.all.map{|pt| [pt.name, pt.id]}
-    @all_properties           = Property.all
+    @categories               = Category.all.map{|c| [c.name, c.id]}
+    @properties           = Property.all
     # @select_shipping_category = ShippingCategory.all.map {|sc| [sc.name, sc.id]}
     # @brands                   = Brand.order(:name).map {|ts| [ts.name, ts.id]}
   end

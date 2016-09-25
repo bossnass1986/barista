@@ -412,6 +412,7 @@
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.10.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.3.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="wicked (v1.3.0, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" name="material" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

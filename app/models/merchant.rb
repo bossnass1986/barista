@@ -11,12 +11,13 @@ class Merchant < ActiveRecord::Base
 
   # has_many :products
   has_many :products, through: :property_sets
+  has_many :orders
+  has_many :users, through: :orders
   has_many :trading_hours, dependent: :destroy
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
-  # has_one :address, as: :addressable, dependent: :destroy
 
 
   before_validation :sanitize_data

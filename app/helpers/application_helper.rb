@@ -14,4 +14,12 @@ module ApplicationHelper
     return (today.at_beginning_of_week..today.at_end_of_week).to_a
   end
 
+  def status(item)
+    if item == true
+      "done"
+    else
+      "clear"
+    end
+  end
+
 end

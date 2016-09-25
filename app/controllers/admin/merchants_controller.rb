@@ -26,8 +26,8 @@ class Admin::MerchantsController < Admin::BaseController
 
   def edit
     @merchant = Merchant.find(params[:id])
-    binding.pry
-    @states = State.form_selector
+    # binding.pry
+    # @states = State.form_selector
     # @merchant.build_address if @merchant.address.blank?
     # @merchant.build_account if @merchant.account.blank?
     @products = Product.all

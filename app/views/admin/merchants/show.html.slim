@@ -1,14 +1,14 @@
 - title @merchant.name
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab{:href => '#account-panel'}= t('.account')
-    %a.mdl-tabs__tab{:href => '#menu-panel'}= t('.menu')
-    %a.mdl-tabs__tab.is-active{:href => '#orders-panel'}= t('.orders')
-    %a.mdl-tabs__tab{:href => '#customers-panel'}= t('.customers')
+    a.mdl-tabs__tab href='#account-panel' = t('.account')
+    a.mdl-tabs__tab href='#menu-panel' = t('.menu')
+    a.mdl-tabs__tab.is-active href='#orders-panel' = t('.orders')
+    a.mdl-tabs__tab href='#customers-panel' = t('.customers')
   .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
     = form_for @merchant, :url => admin_merchant_path(@merchant) do |form|
       #account-panel.mdl-tabs__panel
-        = render :partial => 'venue', :locals => {:form => form}
+        = render :partial => 'venue', :locals => {:address_fields => form}
         = render :partial => 'account', :locals => {:form => form}
         .mdl-grid
           .mdl-cell.mdl-cell--12-col
@@ -16,9 +16,9 @@
       #menu-panel.mdl-tabs__panel
         = render :partial => 'product', :locals => {:form => form}
 
-      -#- @merchant.products.select(&:id).flatten.uniq.each do |item|
+      /- @merchant.products.select(&:id).flatten.uniq.each do |item|
           = render :partial => 'product', :locals => {:item => item }
       #orders-panel.mdl-tabs__panel.is-active
-      -#- @merchant.variants.order_item.order.each do |order|
-      -#  = order.number
+      /- @merchant.variants.order_item.order.each do |order|
+      /  = order.number
       #customers-panel.mdl-tabs__panel
