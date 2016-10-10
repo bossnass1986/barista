@@ -20,7 +20,7 @@
               = status(merchant.featured)
           td.mdl-data-table__cell--non-numeric= link_to merchant.name, admin_merchant_path(merchant)
           td.mdl-data-table__cell--non-numeric= merchant.email
-          td.mdl-data-table__cell--non-numeric= merchant.phones
+          td.mdl-data-table__cell--non-numeric= merchant.phones.first
           td.mdl-data-table__cell--non-numeric= merchant.city
           td.mdl-data-table__cell--non-numeric= merchant.orders.count
           /td.mdl-data-table__cell--non-numeric= merchant.orders.customers.count

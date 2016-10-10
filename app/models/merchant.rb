@@ -21,7 +21,7 @@ class Merchant < ActiveRecord::Base
 
 
   before_validation :sanitize_data
-  after_create :add_trading_hours, :add_variants
+  after_create :add_trading_hours, :add_variants, :sms_creation
 
   after_validation :geocode
   validates :terms_of_service, acceptance: true
@@ -82,18 +82,21 @@ class Merchant < ActiveRecord::Base
     end
   end
 
-  def add_variants
+  def add_products
     @product = Product.all
     @product.each do |product|
-      # @merchant = Merchant.variant.create!(product_id: product.id, sku: SecureRandom.hex(6), price: 3)
+      @merchant = ::MerchantProducts.create!(product_id: product.id, merchant_id: self.id)
     end
   end
 
+  def sms_creation
+    SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{self.name} has been created", '61430091464')
+  end
   # if the permalink is not filled in set it equal to the name
   def sanitize_data
-    sanitize_permalink
+    # sanitize_permalink
     # assign_meta_keywords  if meta_keywords.blank?
-    sanitize_description
+    # sanitize_description
   end
 
 
