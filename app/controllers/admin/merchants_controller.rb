@@ -8,7 +8,7 @@ class Admin::MerchantsController < Admin::BaseController
   def new
     @merchant = Merchant.new
     @states = State.form_selector
-    # @merchant.build_account
+    @merchant.trading_hours.build
   end
 
   def create
@@ -25,10 +25,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def edit
     @merchant = Merchant.find(params[:id])
-    # binding.pry
-    # @states = State.form_selector
-    # @merchant.build_address if @merchant.address.blank?
-    # @merchant.build_account if @merchant.account.blank?
+    @states = State.form_selector
     @products = Product.all
   end
 
@@ -46,7 +43,7 @@ class Admin::MerchantsController < Admin::BaseController
   def show
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
-    # @merchant.build_address
+    @merchant.trading_hours.build
     # @merchant.build_account
     @products = Product.all
     respond_to do |format|
@@ -59,9 +56,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def allowed_params
     params.require(:merchant).permit(:name, :email, :terms_of_service, :address, :city, :postal_code, :state_id, :country_id,
-                                     # account_attributes: [:id, :merchant_id, :account_name, :bsb, :account_number, :account_type, :charge, :active],
-                                     # address_attributes: [:id, :address_type_id, :first_name, :last_name, :address1, :address2, :suburb, :postcode, :state_id, :country_id, :default],
-                                     trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :trades]
+                                     trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :active]
     )
   end
 

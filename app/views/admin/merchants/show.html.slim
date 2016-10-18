@@ -9,6 +9,7 @@
     = form_for @merchant, :url => admin_merchant_path(@merchant) do |form|
       #account-panel.mdl-tabs__panel
         = render :partial => 'venue', :locals => {:address_fields => form}
+        = render :partial => 'hours', :locals => {:form => form}
         = render :partial => 'account', :locals => {:form => form}
         .mdl-grid
           .mdl-cell.mdl-cell--12-col

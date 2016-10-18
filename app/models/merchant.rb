@@ -21,7 +21,8 @@ class Merchant < ActiveRecord::Base
 
 
   before_validation :sanitize_data
-  after_create :add_trading_hours, :add_variants, :sms_creation
+  after_create :add_trading_hours
+  # , :add_variants, :sms_creation
 
   after_validation :geocode
   validates :terms_of_service, acceptance: true
@@ -31,7 +32,7 @@ class Merchant < ActiveRecord::Base
   # after_create :sanitize_dates
 
   # accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
-  accepts_nested_attributes_for :trading_hours
+  accepts_nested_attributes_for :trading_hours, reject_if: proc { |attributes| attributes['weekday'].blank? }
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
   accepts_nested_attributes_for :account, reject_if: proc { |attributes| attributes['account_name'].blank? }
 
@@ -77,9 +78,9 @@ class Merchant < ActiveRecord::Base
   end
 
   def add_trading_hours
-    (0..6).each do |i|
-      TradingHour.create!(merchant_id: self.id, weekday: i, trades: true)
-    end
+    # (0..6).each do |i|
+    #   TradingHour.create!(merchant_id: self.id, weekday: i, open_time: '9:00', close_time: '17:00', active: true)
+    # end
   end
 
   def add_products
@@ -92,6 +93,7 @@ class Merchant < ActiveRecord::Base
   def sms_creation
     SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{self.name} has been created", '61430091464')
   end
+
   # if the permalink is not filled in set it equal to the name
   def sanitize_data
     # sanitize_permalink

@@ -369,9 +369,11 @@ ActiveRecord::Schema.define(version: 20160818114307) do
 
   create_table "tax_rates", force: :cascade do |t|
     t.decimal  "percentage", precision: 8, scale: 2, default: 0.0,          null: false
+    t.string   "code"
+    t.string   "name"
     t.integer  "state_id"
     t.integer  "country_id"
-    t.date     "start_date",                         default: '2016-09-22', null: false
+    t.date     "start_date",                         default: '2016-10-14', null: false
     t.date     "end_date"
     t.boolean  "active",                             default: true
     t.datetime "created_at",                                                null: false
@@ -384,9 +386,10 @@ ActiveRecord::Schema.define(version: 20160818114307) do
   create_table "trading_hours", force: :cascade do |t|
     t.integer "merchant_id"
     t.integer "weekday"
+    t.integer "[:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :s"
     t.time    "open_time"
     t.time    "close_time"
-    t.boolean "trades"
+    t.boolean "active"
   end
 
   add_index "trading_hours", ["merchant_id"], name: "index_trading_hours_on_merchant_id", using: :btree

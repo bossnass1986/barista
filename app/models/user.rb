@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
   rolify
   has_merit
 
-  geocoded_by :ip_address,
-              :latitude => :latitude, :longitude => :longitude
-  after_validation :geocode
+  # geocoded_by :ip_address,
+  #             :latitude => :latitude, :longitude => :longitude
+  # after_validation :geocode
 
   before_validation :sanitize_data
   after_create :start_store_credits #, :subscribe_to_newsletters

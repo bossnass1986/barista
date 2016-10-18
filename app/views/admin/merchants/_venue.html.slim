@@ -22,6 +22,6 @@
       = address_fields.select :country_id, select_countries, :include_blank => true
   .mdl-cell.mdl-cell--6-col
     img src='http://placehold.it/550x250'
-  .mdl-cell.mdl-cell--12-col
+  /.mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.trading_hours_title')
-    = render 'admin/merchants/hours'
+    = render 'admin/merchants/hours', :locals => {:form => form}

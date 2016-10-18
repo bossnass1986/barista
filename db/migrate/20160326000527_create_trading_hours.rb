@@ -5,7 +5,7 @@ class CreateTradingHours < ActiveRecord::Migration
       t.integer :weekday
       t.time :open_time
       t.time :close_time
-      t.boolean :trades
+      t.boolean :active
     end
     add_index :trading_hours, :merchant_id
   end

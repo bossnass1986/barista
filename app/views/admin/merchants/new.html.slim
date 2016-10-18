@@ -1,26 +1,19 @@
-- title t('.title')
-- content_for :tabs
-  .mdl-layout__tab-bar.mdl-js-ripple-effect
-    a.mdl-layout__tab.is-active href='#account-panel' = t('.account')
-    a.mdl-layout__tab href='#venue-panel' = t('.venue')
-    a.mdl-layout__tab href='#menu-panel' = t('.menu')
-.mdl-grid
-  .mdl-cell.mdl-cell--12-col-tablet.mdl-cell--10-col-desktop.mdl-cell--1-offset-desktop.superman-settings.mdl-shadow--2dp
+- title @merchant.name
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    a.mdl-tabs__tab.is-active href='#account-panel' = t('.account')
+    a.mdl-tabs__tab href='#menu-panel' = t('.menu')
+  .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
     = form_for @merchant, :url => admin_merchants_path do |form|
-      section#account-panel.mdl-layout__tab-panel.is-active
-        .page-content
-          /! Account Details
-          = render :partial => 'account', :locals => {:form => form}
-        .mdl-cell--1-offset
-            label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=:terms_of_service
-              = form.check_box :terms_of_service, :class => 'mdl-checkbox__input', :id => :terms_of_service
-              span.mdl-checkbox__label I agree to the terms and conditions. Make our lawyers happy by reading their T&Cs
-            = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'
-      section#venue-panel.mdl-layout__tab-panel
-        .page-content
-          /! Venue Details
-          /= render :partial => 'venue', :locals => {:form => form}
-      section#menu-panel.mdl-layout__tab-panel
-        .page-content
-          /! Menu Details
-          = render :partial => 'product'
+      #account-panel.mdl-tabs__panel.is-active
+        = render :partial => 'venue', :locals => {:address_fields => form}
+        = render :partial => 'hours', :locals => {:form => form}
+        = render :partial => 'account', :locals => {:form => form}
+        .mdl-grid
+          .mdl-cell.mdl-cell--12-col
+            = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+      #menu-panel.mdl-tabs__panel
+        = render :partial => 'product', :locals => {:form => form}
+
+      /- @merchant.products.select(&:id).flatten.uniq.each do |item|
+          = render :partial => 'product', :locals => {:item => item }
