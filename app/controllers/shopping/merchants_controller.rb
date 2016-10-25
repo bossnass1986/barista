@@ -6,7 +6,7 @@ class Shopping::MerchantsController < ApplicationController
   def index
     # Only pull the fields we require
     @user = request.location.address
-    @merchants = Merchant.near(request.location.address, 50, :units => :km).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    @merchants = Merchant.near(@user, 50, :units => :km).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     # @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     respond_to do |format|
       format.html # show.html.erb

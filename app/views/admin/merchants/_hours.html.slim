@@ -1,19 +1,13 @@
 .mdl-cell.mdl-cell--12-col
   /h3.mdl-typography--display-1.teal-heading= t('.trading_hours_title')
-  - (0..6).each do |i|
-    = form.fields_for :trading_hours do |hour_fields|
-      .mdl-grid
-        .mdl-cell.mdl-cell--1-col
-          label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=hour_fields.index
-            = hour_fields.check_box :active, :class => 'mdl-checkbox__input', :id => hour_fields.index
-            span.mdl-checkbox__label= Date::DAYNAMES[hour_fields.index]
-        .mdl-cell.mdl-cell--2-col
-          = hour_fields.time_select :open_time, {:minute_step => 30, :ampm => true}
-        .mdl-cell.mdl-cell--2-col
-          = hour_fields.time_select :close_time, {:minute_step => 30, :ampm => true}
+  = form.fields_for :trading_hours do |hour_fields|
+    .mdl-grid
+      .mdl-cell.mdl-cell--1-col
+        label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=hour_fields
+          = hour_fields.check_box :active, :class => 'mdl-checkbox__input', :id => hour_fields
+          span.mdl-checkbox__label= Date::DAYNAMES[hour_fields.index]
+      .mdl-cell.mdl-cell--2-col
+        /= hour_fields.time_select :open_time, {:minute_step => 30, :ampm => true}
+      .mdl-cell.mdl-cell--2-col
+        /= hour_fields.time_select :close_time, {:minute_step => 30, :ampm => true}
       /li.mdl-list__item.mdl-list__item--two-line
-      /= form.fields_for :trading_hours do |hour_fields|
-        span.mdl-list__item-primary-content
-          = Date::DAYNAMES[i]
-          span.mdl-list__item-sub-title
-            = hour_fields.time_select :open_time, {:minute_step => 30, :ampm => true}

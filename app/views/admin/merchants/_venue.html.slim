@@ -1,3 +1,7 @@
+script src=("//maps.google.com/maps/api/js?key=[your API key]")
+script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"
+script src="//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" type="text/javascript"
+/! only if you need custom infoboxes
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.location_title')
@@ -21,7 +25,9 @@
     - else
       = address_fields.select :country_id, select_countries, :include_blank => true
   .mdl-cell.mdl-cell--6-col
-    img src='http://placehold.it/550x250'
+    div style=("width: 550px;")
+      #map style=("width: 550px; height: 250px;")
+    /img src='http://placehold.it/550x250'
   /.mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.trading_hours_title')
     = render 'admin/merchants/hours', :locals => {:form => form}
