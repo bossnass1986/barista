@@ -2,11 +2,10 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails barista: development" uuid="4ab14069-0621-4096-811b-6a492b108389">
-      <database-info product="PostgreSQL" version="9.3.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <introspection-scope>beanngone_dev:public</introspection-scope>
       <resolve-scope>beanngone_dev:*</resolve-scope>
     </data-source>
     <data-source name="Rails barista: test" uuid="6a1990b7-8cab-42b3-a60f-381d83b83b37">
@@ -14,7 +13,6 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <introspection-scope>beanngone_test:*</introspection-scope>
       <resolve-scope>beanngone_test:*</resolve-scope>
     </data-source>
     <data-source name="Rails barista: production" uuid="d99f50ea-b9a5-434a-a955-9a9793c8f307">
@@ -24,7 +22,6 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>cnpddodvfflmmf</user-name>
-      <introspection-scope>dbv8978gh59hs:pg_catalog,public</introspection-scope>
       <resolve-scope>dbv8978gh59hs:pg_catalog,public</resolve-scope>
     </data-source>
   </component>

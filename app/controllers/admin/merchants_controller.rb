@@ -8,6 +8,7 @@ class Admin::MerchantsController < Admin::BaseController
   def new
     @merchant = Merchant.new
     @states = State.form_selector
+    @products = Product.all
     @merchant.trading_hours.build
   end
 

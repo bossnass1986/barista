@@ -21,7 +21,7 @@
       = form.text_area :description, class: 'mdl-textfield__input'
       = form.label :description, class: 'mdl-textfield__label'
   /.mdl-grid-
-  .mdl-cell.mdl-cell--12-col
+  /.mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')
     - @properties.each do |property|
       - if @product.id && !@product.properties.detect { |p| p.id == property.id }
