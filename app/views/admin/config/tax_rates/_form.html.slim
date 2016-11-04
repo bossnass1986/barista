@@ -1,0 +1,23 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    /h3.mdl-typography--display-1.teal-heading= t('.location_title')
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--2-col
+      = f.text_field :percentage, class: 'mdl-textfield__input'
+      = f.label :percentage, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--5-col
+      = f.select :country_id, countries, {:include_blank => true}
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--5-col
+      = f.select :state_id, @states, {:include_blank => true}
+
+/%fieldset
+  %label Start Date
+  .date-select
+    = f.date_select :start_date, {:start_year => Time.zone.now.year, :end_year => Time.zone.now.year + 12}
+  %label End Date
+  .date-select
+    = f.date_select :end_date, {:include_blank => true, :start_year => Time.zone.now.year, :end_year => Time.zone.now.year + 12}
+  %label Active
+  = f.check_box :active
+= f.submit "Create", :class => "button"

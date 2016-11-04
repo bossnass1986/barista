@@ -8,8 +8,9 @@ class Admin::MerchantsController < Admin::BaseController
   def new
     @merchant = Merchant.new
     @states = State.form_selector
-    @products = Product.all
-    @merchant.trading_hours.build
+    @products = Product.order(:name => 'asc')
+    @properties = Property.where(property_set_id: 1)
+    # @merchant.trading_hours.build
   end
 
   def create
@@ -28,6 +29,7 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
     @products = Product.all
+    @properties = Property.where(property_set_id: 1)
   end
 
   def update

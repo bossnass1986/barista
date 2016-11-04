@@ -15,11 +15,11 @@ module ApplicationHelper
   end
 
   def status(item)
-    if item == true
-      "done"
-    else
-      "clear"
-    end
+    (item == true) ? "done" : "clear"
+  end
+
+  def visibility(item)
+    (item == true) ? "visibility" : "visibility_off"
   end
 
 end
