@@ -70,18 +70,18 @@ en:
           orders: 'Orders'
           customers: 'Customers'
         account:
-          account_title: 'Account Details'
-          business_title: 'Business Name'
+          title: 'Account Details'
           bank_title: 'Bank Details'
           bsb_error: "Oops BSB number isn't correct"
           account_number_error: "Oops account number isn't correct"
+        hours:
+          title: 'Trading Hours'
         product:
           title: 'Products'
           sub_title: 'Add-ons'
         venue:
-          location_title: 'Location Details'
+          title: 'Location Details'
           business_name: 'Business Name'
-          trading_hours_title: 'Trading Hours'
           postcode_error: "Oops post code isn't correct"
     merchandise:
       products:

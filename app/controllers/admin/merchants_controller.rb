@@ -49,6 +49,7 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant.trading_hours.build
     # @merchant.build_account
     @products = Product.all
+    @properties = Property.where(property_set_id: 1)
     respond_to do |format|
       format.html
       format.json { render json: @merchant }

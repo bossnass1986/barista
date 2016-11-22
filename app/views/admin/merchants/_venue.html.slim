@@ -2,6 +2,16 @@ script src=("//maps.google.com/maps/api/js?key=[your API key]")
 script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"
 script src="//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" type="text/javascript"
 /! only if you need custom infoboxes
+/.mdl-grid
+/  .mdl-cell.mdl-cell--12-col
+/    h3.mdl-typography--display-1.teal-heading= t('.business_name')
+/.mdl-grid
+/  .mdl-cell.mdl-cell--6-col
+/    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+/      = form.text_field :name, class: 'mdl-textfield__input'
+/      = form.label :name, class: 'mdl-textfield__label'
+/  .mdl-cell.mdl-cell--6-col
+/    img
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.location_title')
