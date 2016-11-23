@@ -11,11 +11,10 @@
         th.mdl-data-table__cell--non-numeric Credits
         th.mdl-data-table__cell--non-numeric Payments
         th.mdl-data-table__cell--non-numeric Status
-        th.mdl-data-table__cell--non-numeric Actions
     tbody
       - @users.each do |user|
-        tr
-          td.mdl-data-table__cell--non-numeric= link_to user.full_name, admin_user_path(user)
+        tr data-href=edit_admin_user_path(user)
+          td.mdl-data-table__cell--non-numeric= user.full_name
           td.mdl-data-table__cell--non-numeric= user.email
           td.mdl-data-table__cell--non-numeric= user.mobile
           td.mdl-data-table__cell--non-numeric= user.level
@@ -23,9 +22,3 @@
           td.mdl-data-table__cell--non-numeric= number_to_currency(user.store_credit.amount)
           td.mdl-data-table__cell--non-numeric= user.payment_methods.count
           td.mdl-data-table__cell--non-numeric= user.state
-          td.mdl-data-table__cell--non-numeric
-            button.mdl-button.mdl-js-button.mdl-button--icon id=user.id
-              i.material-icons more_vert
-            ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=user.id
-              li.mdl-menu__item= link_to "Edit User",  edit_admin_user_path(user)
-              li.mdl-menu__item= link_to "Show",  admin_user_path(user)

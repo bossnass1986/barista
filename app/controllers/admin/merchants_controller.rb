@@ -46,7 +46,7 @@ class Admin::MerchantsController < Admin::BaseController
   def show
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
-    @merchant.trading_hours.build
+    # @merchant.trading_hours.build
     # @merchant.build_account
     @products = Product.all
     @properties = Property.where(property_set_id: 1)

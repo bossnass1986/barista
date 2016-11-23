@@ -14,16 +14,16 @@
         th.mdl-data-table__cell--non-numeric Customers
     tbody
       - @merchants.each do |merchant|
-        tr
+        tr data-href=edit_admin_merchant_path(merchant)
           td.mdl-data-table__cell--non-numeric
             i.material-icons>
               = status(merchant.featured)
-          td.mdl-data-table__cell--non-numeric= link_to merchant.name, admin_merchant_path(merchant)
+          td.mdl-data-table__cell--non-numeric= merchant.name
           td.mdl-data-table__cell--non-numeric= merchant.email
           td.mdl-data-table__cell--non-numeric= merchant.phones.first
           td.mdl-data-table__cell--non-numeric= merchant.city
           td.mdl-data-table__cell--non-numeric= merchant.orders.count
-          /td.mdl-data-table__cell--non-numeric= merchant.orders.customers.count
+          td.mdl-data-table__cell--non-numeric= merchant.orders.count
 .mdl-cell.mdl-cell--12-col
   = link_to_previous_page @merchants, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
   = link_to_next_page @merchants, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'

@@ -78,9 +78,9 @@ class Merchant < ActiveRecord::Base
   end
 
   def add_trading_hours
-    # (0..6).each do |i|
-    #   TradingHour.create!(merchant_id: self.id, weekday: i, open_time: '9:00', close_time: '17:00', active: true)
-    # end
+    (0..6).each do |i|
+      TradingHour.create!(merchant_id: self.id, weekday: i, open_time: '9:00', close_time: '17:00', active: true)
+    end
   end
 
   def add_productspostgres
