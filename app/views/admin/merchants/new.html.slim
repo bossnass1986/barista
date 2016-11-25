@@ -2,17 +2,17 @@
 .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
   .mdl-tabs__tab-bar
     a.mdl-tabs__tab.is-active href='#account-panel' = t('.account')
-    a.mdl-tabs__tab href='#menu-panel' = t('.menu')
+    /a.mdl-tabs__tab href='#menu-panel' = t('.menu')
   .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
     = form_for @merchant, :url => admin_merchants_path do |form|
       #account-panel.mdl-tabs__panel.is-active
         = render :partial => 'venue', :locals => {:address_fields => form}
-        = render :partial => 'hours', :locals => {:form => form}
+        /= render :partial => 'hours', :locals => {:form => form}
         = render :partial => 'account', :locals => {:form => form}
         .mdl-grid
           .mdl-cell.mdl-cell--12-col
             = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-      #menu-panel.mdl-tabs__panel
+      /#menu-panel.mdl-tabs__panel
         = render :partial => 'product', :locals => {:form => form}
 
       /- @merchant.products.select(&:id).flatten.uniq.each do |item|

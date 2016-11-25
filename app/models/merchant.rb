@@ -83,7 +83,7 @@ class Merchant < ActiveRecord::Base
     end
   end
 
-  def add_productspostgres
+  def add_products
     @product = Product.all
     @product.each do |product|
       @merchant = ::MerchantProducts.create!(product_id: product.id, merchant_id: self.id)

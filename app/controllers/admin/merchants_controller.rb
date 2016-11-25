@@ -10,7 +10,7 @@ class Admin::MerchantsController < Admin::BaseController
     @states = State.form_selector
     @products = Product.order(:name => 'asc')
     @properties = Property.where(property_set_id: 1)
-    # @merchant.trading_hours.build
+    @merchant.trading_hours.build
   end
 
   def create
