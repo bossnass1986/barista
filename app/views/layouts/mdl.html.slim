@@ -16,7 +16,6 @@ html lang='en' ng-app='Cuptown'
           .mdl-layout-title= content_for?(:title) ? yield(:title).upcase : t('.site_name')
           .mdl-layout-spacer
           /! Navigation. We hide it in small screens.
-          nav.mdl-navigation.mdl-layout--large-screen-only
           nav.mdl-navigation
             = render 'shared/top_cart'
       .mdl-layout__drawer

@@ -9,8 +9,8 @@ class Merchant < ActiveRecord::Base
   # has_many :variants, through: :variant_merchants, dependent: :destroy
   # has_many :products, through: :variants, dependent: :destroy
 
-  # has_many :products
-  has_many :products, through: :property_sets
+  has_many :products
+  # has_many :products, through: :property_sets
   has_many :orders
   has_many :users, through: :orders
   has_many :trading_hours, dependent: :destroy
@@ -21,7 +21,7 @@ class Merchant < ActiveRecord::Base
 
 
   before_validation :sanitize_data
-  after_create :add_trading_hours
+  after_create :add_trading_hours, :add_products
   # , :add_variants, :sms_creation
 
   after_validation :geocode
@@ -86,7 +86,7 @@ class Merchant < ActiveRecord::Base
   def add_products
     @product = Product.all
     @product.each do |product|
-      @merchant = ::MerchantProducts.create!(product_id: product.id, merchant_id: self.id)
+      MerchantProducts.create!(product_id: product.id, merchant_id: self.id)
     end
   end
 
