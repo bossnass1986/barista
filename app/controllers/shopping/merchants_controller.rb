@@ -8,6 +8,7 @@ class Shopping::MerchantsController < ApplicationController
     @user = request.location.address
     @merchants = Merchant.near(@user, 50, :units => :km).select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
     # @merchants = Merchant.select('id', 'name', 'featured').order(featured: :desc, id: :asc).page(params[:page])
+    ahoy.track 'Viewed Merchants'#, title: "Hot, Flat, and Crowded"
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @merchants.as_json }
@@ -19,6 +20,7 @@ class Shopping::MerchantsController < ApplicationController
   def show
     # @merchant = Merchant.select('product.name','product.description').joins(products: :variants).find(params[:id])
     @merchant = Merchant.find(params[:id])
+    ahoy.track 'Viewed Merchant', title: @merchant.name
     # @merchant_product_lists = @merchant.products.where('products.prototype_id' => [1, 2]).group_by(&:prototype_id)
     respond_to do |format|
       format.html # show.html.erb

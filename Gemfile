@@ -8,7 +8,9 @@ gem 'responders'
 # Server
 gem 'puma'
 
+# Analytics
 gem 'intercom-rails'
+gem 'ahoy_matey'
 
 gem 'activemerchant', '~> 1.48'
 # ==========

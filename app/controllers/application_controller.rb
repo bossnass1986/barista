@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :require_login, :set_locale
 
-  after_action :set_csrf_cookie_for_ng
+  after_action :set_csrf_cookie_for_ng, :ahoy_track
 
   helper_method :most_likely_user,
                 :random_user,
@@ -112,8 +112,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def verified_request?
-    super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
-  end
+    def verified_request?
+      super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
+    end
+
+    def ahoy_track
+      ahoy.track_visit
+    end
 
 end

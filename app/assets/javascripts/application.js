@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ahoy
 //= require angular
 
 var form = document.querySelector('#cardForm');
