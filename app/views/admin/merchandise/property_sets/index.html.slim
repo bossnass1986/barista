@@ -8,14 +8,9 @@
         th.mdl-data-table__cell--non-numeric Name
         th.mdl-data-table__cell--non-numeric Attributes
         th.mdl-data-table__cell--non-numeric Active
-        th.mdl-data-table__cell--non-numeric Actions
     tbody
       - @property_sets.each do |property_set|
-        tr
-          td.mdl-data-table__cell--non-numeric= link_to property_set.name, edit_admin_merchandise_attribute_set_path(property_set)
+        tr data-href=edit_admin_merchandise_attribute_set_path(property_set)
+          td.mdl-data-table__cell--non-numeric= property_set.name
           td.mdl-data-table__cell--non-numeric= property_set.properties.count
           td.mdl-data-table__cell--non-numeric= property_set.active? ? 'Yes' : 'No'
-          td.mdl-data-table__cell--non-numeric
-            button.mdl-button.mdl-js-button.mdl-button--icon id=property_set.id
-              i.material-icons more_vert
-            ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=property_set.id

@@ -1,6 +1,7 @@
 - @properties.each do |property|
+  = property.property_set.name
   .property_form.left.span-9.last
     - checked = @property_set.name && @property_set.properties.include?(property)
-    %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => property.name}
+    label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=property.name
       = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.name
-      %span.mdl-switch__label= property.name
+      span.mdl-switch__label= property.name

@@ -12,7 +12,6 @@
         th.mdl-data-table__cell--non-numeric= t('.type')
         th.mdl-data-table__cell--non-numeric= t('.category')
         th.mdl-data-table__cell--non-numeric= t('.visibility')
-        th.mdl-data-table__cell--non-numeric= t('.actions')
     tbody
       - @products.each do |product|
         tr data-href=edit_admin_merchandise_product_path(product)
@@ -23,12 +22,6 @@
           td.mdl-data-table__cell--non-numeric
             i.material-icons>
               = visibility(product.active)
-          td.mdl-data-table__cell--non-numeric
-            button.mdl-button.mdl-js-button.mdl-button--icon id=product.id
-              i.material-icons more_vert
-            ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=product.id
-              li.mdl-menu__item= link_to "Edit Variants",  edit_admin_merchandise_multi_product_variant_path(product)
-              li.mdl-menu__item= link_to "Show",  admin_merchandise_product_path(product)
 .mdl-cell.mdl-cell--12-col
   = link_to_previous_page @products, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
   = link_to_next_page @products, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'

@@ -74,6 +74,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'gmaps-autocomplete-rails'
 
+# Admin
+gem 'chartkick'
+
 group :development do
   gem 'quiet_assets'
   gem 'refills'

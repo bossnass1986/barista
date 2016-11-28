@@ -77,11 +77,6 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resource :dashboard, only: [:index]
-      # namespace :customer_service do
-      #   resources :users do
-      #     resources :comments
-      #   end
-      # end
       resources :users
       namespace :user_datas do
 
@@ -162,13 +157,14 @@ Rails.application.routes.draw do
             resource :variant, only: [:edit, :update]
           end
         end
-        resources :products do
-          member do
-            get :add_properties
-            put :activate
-          end
-          resources :variants
-        end
+        resources :products,  except: [:show]
+        # resources :products do
+        #   member do
+        #     get :add_properties
+        #     put :activate
+        #   end
+        #   resources :variants
+        # end
         namespace :products do
           resources :descriptions, only: [:edit, :update]
         end

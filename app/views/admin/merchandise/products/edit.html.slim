@@ -1,9 +1,11 @@
 - title t('.title')
-.mdl-cell.mdl-cell--12-col
-  = link_to t('admin.merchandise.products.edit.add_image_button'), edit_admin_merchandise_images_product_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-  = link_to t('admin.merchandise.products.edit.variants_button'), admin_merchandise_product_variants_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-  = link_to t('admin.merchandise.products.edit.return_button'), admin_merchandise_product_path(@product), :class => 'mdl-button mdl-js-button mdl-js-ripple-effect'
-  = form_for @product, :url => admin_merchandise_product_path(@product), :html => {:class => 'mdl-grid'}  do |form|
-    .mdl-cell.mdl-cell--12-col-desktop.mdl-color--white.mdl-shadow--2dp
-      = render :partial => 'form', :locals => {:form => form}
-    = form.submit
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    = link_to t('admin.merchandise.products.edit.add_image_button'), edit_admin_merchandise_images_product_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+    /= link_to t('admin.merchandise.products.edit.variants_button'), admin_merchandise_product_variants_path(@product), :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+    = link_to t('admin.merchandise.products.edit.return_button'), admin_merchandise_product_path(@product), :class => 'mdl-button mdl-js-button mdl-js-ripple-effect'
+= form_for @product, :url => admin_merchandise_product_path(@product), :html => {:class => 'mdl-grid'}  do |form|
+  .mdl-cell.mdl-cell--12-col-desktop.mdl-color--white.mdl-shadow--2dp
+    = render :partial => 'form', :locals => {:form => form}
+  .mdl-cell.mdl-cell--12-col
+    = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

@@ -1,9 +1,0 @@
-.mdl-textfield.mdl-js-textfield
-  = form.text_field :name, :class => 'mdl-textfield__input', :pattern => "[A-Z,a-z, ]*"
-  = form.label :name, :class => 'mdl-textfield__label'
-  %span.mdl-textfield__error Letters and spaces only
-%label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => 'active'}
-  = form.check_box :active, :class => 'mdl-switch__input', :id => 'active'
-  %span.mdl-switch__label Active
-#prototype_properties
-  = render :partial => "property_form", :locals => { :form => form }

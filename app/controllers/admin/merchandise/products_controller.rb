@@ -45,7 +45,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def update
     @product = Product.find(params[:id])
-
+    form_info
     if @product.update_attributes(allowed_params)
       redirect_to admin_merchandise_product_url(@product)
     else
@@ -106,10 +106,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def form_info
-    @categories               = Category.all.map{|c| [c.name, c.id]}
-    @properties           = Property.all
-    # @select_shipping_category = ShippingCategory.all.map {|sc| [sc.name, sc.id]}
-    # @brands                   = Brand.order(:name).map {|ts| [ts.name, ts.id]}
+    @categories = Category.all.map{|c| [c.name, c.id]}
+    @properties = Property.all
   end
 
   def product_types
