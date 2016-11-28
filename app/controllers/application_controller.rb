@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   layout 'mdl'
 
   before_action :require_login, :set_locale
-
   after_action :set_csrf_cookie_for_ng, :ahoy_track
 
   helper_method :most_likely_user,

@@ -175,7 +175,5 @@ Rails.application.routes.draw do
       end
     end
 
-    mount PgHero::Engine, at: "pghero"
-
   end
 # end
