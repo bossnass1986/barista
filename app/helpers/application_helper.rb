@@ -19,7 +19,7 @@ module ApplicationHelper
   end
 
   def visibility(item)
-    (item == true) ? "visibility" : "visibility_off"
+    (item == true) ? "check_box" : "visibility_off"
   end
 
 end
