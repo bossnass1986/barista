@@ -17,7 +17,7 @@
     <schema id="5" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-timestamp>2016-11-27.00:02:46.942</introspection-timestamp>
+      <introspection-timestamp>2016-12-06.22:38:30.553</introspection-timestamp>
     </schema>
     <schema id="6" parent="1" name="pg_catalog">
       <object-id>11</object-id>

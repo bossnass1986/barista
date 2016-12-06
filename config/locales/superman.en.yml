@@ -115,6 +115,8 @@ en:
         index:
           title: 'Attribute Sets'
           new_button: 'Add New Attribute Set'
+        new:
+          title: 'New Attribute Set'
     suppliers:
         index:
           title: 'Merchants'
