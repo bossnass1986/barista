@@ -7,6 +7,7 @@ class Admin::Merchandise::PropertySetsController < Admin::BaseController
 
   def new
     @property_set = PropertySet.new
+    @property_set.properties.build
   end
 
   def create
@@ -23,8 +24,9 @@ class Admin::Merchandise::PropertySetsController < Admin::BaseController
   end
 
   def edit
-    @properties = Property.all
+    # @properties = Property.all
     @property_set = PropertySet.includes(:properties).find(params[:id])
+    @property_set.properties.build
   end
 
   def update

@@ -3,10 +3,10 @@
     h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
   - @products.each do |product|
-    .mdl-cell.mdl-cell--4-col.item-border
+    .mdl-cell.mdl-cell--4-col.item-border.mdl-shadow--2dp
       .mdl-cell.mdl-cell--1-col.mdl-cell--10-offset
-        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=product.id
-          input.mdl-switch__input checked="checked" type="checkbox" id=product.id /
+        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=product.name
+          input.mdl-switch__input checked="checked" type="checkbox" id=product.name /
           span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col
         h4.teal-heading= product.name
@@ -16,10 +16,10 @@
             input.mdl-textfield__input type="text" id=property.id
             label.mdl-textfield__label for=property.id
               = "#{property.name } Price"
-.mdl-grid
+/.mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')
-.mdl-grid
+/.mdl-grid
   .mdl-cell.mdl-cell--12-col.item-border
     .mdl-grid
       .mdl-cell.mdl-cell--6-col

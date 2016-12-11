@@ -2,4 +2,5 @@
 = form_for @property_set, :url => admin_merchandise_attribute_sets_path, :html => {:class => 'mdl-grid'} do |form|
   .mdl-cell.mdl-cell--12-col-desktop.mdl-color--white.mdl-shadow--2dp
     = render :partial => 'form', :locals => {:form => form}
-  = form.submit :class => "button"
+  .mdl-cell.mdl-cell--12-col
+    = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

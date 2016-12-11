@@ -8,4 +8,6 @@ class PropertySet < ActiveRecord::Base
 
   validates :name,    presence: true, length: { :maximum => 45 }
 
+  accepts_nested_attributes_for :properties
+
 end

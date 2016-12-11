@@ -23,3 +23,12 @@ $("tr[data-href]").hover(function() {
 }, function() {
     $(this).css('cursor','auto');
 });
+// $(".MySelectorDiv")
+//     .fadeTo(500, 0.2)
+//     .hover(function () {
+//         $(this).fadeTo(500, 1);
+//     }, function () {
+//         $(this).fadeTo(500, 0.2);
+//     });
+
+$('.mdl-switch__input').click(function(){ $(this).parent('.mdl-cell--4-col').$(this).fadeTo(500, 0.2); });

@@ -1,29 +1,30 @@
 - title t('.title')
-.mdl-cell.mdl-cell--12-col
-  = link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-.mdl-cell.mdl-cell--12-col
-  table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
-    thead
-      tr
-        th.mdl-data-table__cell--non-numeric Featured
-        th.mdl-data-table__cell--non-numeric= t('.name')
-        th.mdl-data-table__cell--non-numeric Email
-        th.mdl-data-table__cell--non-numeric Phone
-        th.mdl-data-table__cell--non-numeric City
-        th.mdl-data-table__cell--non-numeric Orders
-        th.mdl-data-table__cell--non-numeric Customers
-    tbody
-      - @merchants.each do |merchant|
-        tr data-href=edit_admin_merchant_path(merchant)
-          td.mdl-data-table__cell--non-numeric
-            i.material-icons>
-              = status(merchant.featured)
-          td.mdl-data-table__cell--non-numeric= merchant.name
-          td.mdl-data-table__cell--non-numeric= merchant.email
-          td.mdl-data-table__cell--non-numeric= merchant.phones.first
-          td.mdl-data-table__cell--non-numeric= merchant.city
-          td.mdl-data-table__cell--non-numeric= merchant.orders.count
-          td.mdl-data-table__cell--non-numeric= merchant.orders.count
-.mdl-cell.mdl-cell--12-col
-  = link_to_previous_page @merchants, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
-  = link_to_next_page @merchants, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    = link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
+  .mdl-cell.mdl-cell--12-col
+    table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+      thead
+        tr
+          /th.mdl-data-table__cell--non-numeric Featured
+          th.mdl-data-table__cell--non-numeric= t('.name')
+          th.mdl-data-table__cell--non-numeric Email
+          th.mdl-data-table__cell--non-numeric Phone
+          th.mdl-data-table__cell--non-numeric City
+          th.mdl-data-table__cell--non-numeric Orders
+          th.mdl-data-table__cell--non-numeric Customers
+      tbody
+        - @merchants.each do |merchant|
+          tr data-href=edit_admin_merchant_path(merchant)
+            /td.mdl-data-table__cell--non-numeric
+              i.material-icons>
+                = status(merchant.featured)
+            td.mdl-data-table__cell--non-numeric= merchant.name
+            td.mdl-data-table__cell--non-numeric= merchant.email
+            td.mdl-data-table__cell--non-numeric= merchant.phones.first
+            td.mdl-data-table__cell--non-numeric= merchant.city
+            td.mdl-data-table__cell--non-numeric= merchant.orders.count
+            td.mdl-data-table__cell--non-numeric= merchant.orders.count
+  .mdl-cell.mdl-cell--12-col
+    = link_to_previous_page @merchants, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+    = link_to_next_page @merchants, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'

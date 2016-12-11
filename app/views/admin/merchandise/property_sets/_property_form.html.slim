@@ -2,10 +2,13 @@
   - Property.all.group_by(&:property_set_id).each do |property_set, properties|
     .mdl-cell.mdl-cell--4-col.item-border
       h4.teal-heading= PropertySet.find(property_set).try(:name)
-      - properties.each do |property|
-        .property_form.left.span-9.last
-          /- checked = PropertySet.find(property_set).try(:name) && PPropertySet.find(properties).include?(property)
-          - checked = false
-          label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=property.name
-            = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.name
-            span.mdl-switch__label= property.name
+  = form.fields_for :properties do |property_fields|
+    = property_fields.label :id, class: 'mdl-textfield__label'
+    = property_fields.check_box :name
+    /- properties.each do |property|
+      //- checked = PropertySet.find(property_set).try(:name) && PropertySet.find(properties).include?(property)
+      /- checked = false
+      /label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=property.id
+      /  = property_fields.check_box :property
+      /  /= check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.id
+      /  span.mdl-switch__label= property.name
