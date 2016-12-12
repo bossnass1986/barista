@@ -31,4 +31,8 @@ $("tr[data-href]").hover(function() {
 //         $(this).fadeTo(500, 0.2);
 //     });
 
-$('.mdl-switch__input').click(function(){ $(this).parent('.mdl-cell--4-col').$(this).fadeTo(500, 0.2); });
+$('.mdl-switch__input').click(function() {
+    $(this).prop("checked") ? $(this).closest('.mdl-cell--4-col').fadeTo(500, 1) : $(this).closest('.mdl-cell--4-col').fadeTo(500, 0.2);
+    $(this).closest('.mdl-cell--4-col').find('input').attr('disabled','disabled');
+    $(".mdl-switch__input").prop("disabled", false);
+});

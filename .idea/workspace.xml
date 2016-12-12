@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="product set clean up">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/6a1990b7-8cab-42b3-a60f-381d83b83b37.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6a1990b7-8cab-42b3-a60f-381d83b83b37.xml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="merchant products">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/superman.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchandise/property_sets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchandise/property_sets_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/property_set.rb" afterPath="$PROJECT_DIR$/app/models/property_set.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/_property_form.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/_property_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/index.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/index.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/new.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/new.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.slim" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,8 +91,8 @@
       <file leaf-file-name="superman.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+            <state relative-caret-position="540">
+              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -254,8 +243,8 @@
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
       </list>
     </option>
   </component>
@@ -790,14 +779,7 @@
       <workItem from="1480854849787" duration="6898000" />
       <workItem from="1481024302609" duration="3445000" />
       <workItem from="1481111933569" duration="1864000" />
-      <workItem from="1481181768806" duration="5841000" />
-    </task>
-    <task id="LOCAL-00284" summary="fix production caching">
-      <created>1470996661388</created>
-      <option name="number" value="00284" />
-      <option name="presentableId" value="LOCAL-00284" />
-      <option name="project" value="LOCAL" />
-      <updated>1470996661389</updated>
+      <workItem from="1481181768806" duration="7006000" />
     </task>
     <task id="LOCAL-00285" summary="fix production caching">
       <created>1470996812530</created>
@@ -1135,11 +1117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481028104029</updated>
     </task>
-    <option name="localTasksCounter" value="333" />
+    <task id="LOCAL-00333" summary="merchant products">
+      <created>1481463530084</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1481463530086</updated>
+    </task>
+    <option name="localTasksCounter" value="334" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="838815000" />
+    <option name="totallyTimeSpent" value="839980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1212,7 +1201,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="placeholder background" />
     <MESSAGE value="user avatars" />
     <MESSAGE value="lets get personal" />
     <MESSAGE value="intercom attributes" />
@@ -1237,7 +1225,8 @@
     <MESSAGE value="product sets" />
     <MESSAGE value="grouping within product sets" />
     <MESSAGE value="product set clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="product set clean up" />
+    <MESSAGE value="merchant products" />
+    <option name="LAST_COMMIT_MESSAGE" value="merchant products" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1514,6 +1503,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,8 +1643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        <state relative-caret-position="540">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
