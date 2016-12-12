@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="merchant products">
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="merchant products disable">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/superman.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
     </list>
@@ -91,8 +91,8 @@
       <file leaf-file-name="superman.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -779,14 +779,7 @@
       <workItem from="1480854849787" duration="6898000" />
       <workItem from="1481024302609" duration="3445000" />
       <workItem from="1481111933569" duration="1864000" />
-      <workItem from="1481181768806" duration="7006000" />
-    </task>
-    <task id="LOCAL-00285" summary="fix production caching">
-      <created>1470996812530</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1470996812531</updated>
+      <workItem from="1481181768806" duration="7500000" />
     </task>
     <task id="LOCAL-00286" summary="fix production caching">
       <created>1470997854439</created>
@@ -1124,11 +1117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481463530086</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="merchant products disable">
+      <created>1481531500893</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1481531500893</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="839980000" />
+    <option name="totallyTimeSpent" value="840474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1201,7 +1201,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="user avatars" />
     <MESSAGE value="lets get personal" />
     <MESSAGE value="intercom attributes" />
     <MESSAGE value="travis?" />
@@ -1226,7 +1225,8 @@
     <MESSAGE value="grouping within product sets" />
     <MESSAGE value="product set clean up" />
     <MESSAGE value="merchant products" />
-    <option name="LAST_COMMIT_MESSAGE" value="merchant products" />
+    <MESSAGE value="merchant products disable" />
+    <option name="LAST_COMMIT_MESSAGE" value="merchant products disable" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1643,8 +1643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -23,16 +23,16 @@ $("tr[data-href]").hover(function() {
 }, function() {
     $(this).css('cursor','auto');
 });
-// $(".MySelectorDiv")
-//     .fadeTo(500, 0.2)
-//     .hover(function () {
-//         $(this).fadeTo(500, 1);
-//     }, function () {
-//         $(this).fadeTo(500, 0.2);
-//     });
 
 $('.mdl-switch__input').click(function() {
-    $(this).prop("checked") ? $(this).closest('.mdl-cell--4-col').fadeTo(500, 1) : $(this).closest('.mdl-cell--4-col').fadeTo(500, 0.2);
-    $(this).closest('.mdl-cell--4-col').find('input').attr('disabled','disabled');
+    if ($(this).prop("checked"))
+    {
+        $(this).closest('.mdl-cell--4-col').fadeTo(500, 1);
+        $(this).closest('.mdl-cell--4-col').find('input').prop("disabled", false);
+    }
+    else {
+        $(this).closest('.mdl-cell--4-col').fadeTo(500, 0.2);
+        $(this).closest('.mdl-cell--4-col').find('input').prop("disabled", true);
+    }
     $(".mdl-switch__input").prop("disabled", false);
 });
