@@ -1,8 +1,6 @@
 class Merchant < ActiveRecord::Base
 
-  geocoded_by :full_address
-
-  belongs_to :account, dependent: :destroy
+  has_one :account, dependent: :destroy
   belongs_to :merchant_type
   belongs_to :state
   # has_many :variant_merchants
@@ -17,14 +15,15 @@ class Merchant < ActiveRecord::Base
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
+  # has_one  :account
 
 
 
   before_validation :sanitize_data
   after_create :add_trading_hours, :add_products
-  # , :add_variants, :sms_creation
+  geocoded_by :full_address               # can also be an IP address
+  after_validation :geocode          # auto-fetch coordinates
 
-  after_validation :geocode
   validates :terms_of_service, acceptance: true
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }

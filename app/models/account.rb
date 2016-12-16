@@ -1,6 +1,6 @@
 class Account < ActiveRecord::Base
 
-  # belongs_to :merchants
+  belongs_to :merchant
 
   FREE = 'Free'
   TYPES = {FREE => 0.00}

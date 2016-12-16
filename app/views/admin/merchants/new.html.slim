@@ -6,6 +6,7 @@
   .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
     = form_for @merchant, :url => admin_merchants_path do |form|
       #account-panel.mdl-tabs__panel.is-active
+        = render :partial => 'type', :locals => {:form => form}
         = render :partial => 'venue', :locals => {:address_fields => form}
         /= render :partial => 'hours', :locals => {:form => form}
         = render :partial => 'account', :locals => {:form => form}

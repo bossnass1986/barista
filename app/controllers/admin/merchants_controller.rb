@@ -6,6 +6,7 @@ class Admin::MerchantsController < Admin::BaseController
   end
 
   def new
+    @merchant_type =  MerchantType.all
     @merchant = Merchant.new
     @states = State.form_selector
     @products = Product.order(:name => 'asc')
@@ -27,6 +28,7 @@ class Admin::MerchantsController < Admin::BaseController
 
   def edit
     @merchant = Merchant.find(params[:id])
+    # @merchant.account.build
     @states = State.form_selector
     @products = Product.all
     @properties = Property.where(property_set_id: 1)
@@ -35,7 +37,6 @@ class Admin::MerchantsController < Admin::BaseController
   def update
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
-    # @products = @merchant.products.create!
     if @merchant.update_attributes(allowed_params)
       redirect_to :action => :index
     else
@@ -44,16 +45,16 @@ class Admin::MerchantsController < Admin::BaseController
   end
 
   def show
-    @merchant = Merchant.find(params[:id])
-    @states = State.form_selector
-    # @merchant.trading_hours.build
-    # @merchant.build_account
-    @products = Product.all
-    @properties = Property.where(property_set_id: 1)
-    respond_to do |format|
-      format.html
-      format.json { render json: @merchant }
-    end
+    # @merchant = Merchant.find(params[:id])
+    # @states = State.form_selector
+    # # @merchant.trading_hours.build
+    # # @merchant.build_account
+    # @products = Product.all
+    # @properties = Property.where(property_set_id: 1)
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @merchant }
+    # end
   end
 
   private

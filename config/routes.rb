@@ -88,21 +88,19 @@ Rails.application.routes.draw do
 
         resources :users do
           resource :store_credits, only: [:show, :edit, :update]
-                end
+        end
       end
-      resources :merchants
+      resources :merchants, except: [:show]
 
       namespace :history do
-        resources :orders, only: [:index, :show] do
-        end
+        resources :orders, only: [:index, :show]
       end
 
-      namespace :fulfillment do
-        resources :orders do
-          resources :comments
-        end
-
-      end
+      # namespace :fulfillment do
+      #   resources :orders do
+      #     resources :comments
+      #   end
+      # end
       namespace :shopping do
         resources :carts
         resources :products
@@ -133,18 +131,15 @@ Rails.application.routes.draw do
         # resources :deals
         # resources :sales
       end
-      namespace :inventory do
-        resources :merchants
-      end
 
       namespace :merchandise do
-        namespace :images do
-          resources :products, :concerns => :paginatable
-        end
+        # namespace :images do
+        #   resources :products, :concerns => :paginatable
+        # end
         resources :properties
         # resources :property_sets
         resources :attribute_sets, controller: 'property_sets'
-        resources :prototype_properties
+        # resources :prototype_properties
 
         namespace :changes do
           resources :products do
@@ -165,9 +160,9 @@ Rails.application.routes.draw do
         #   end
         #   resources :variants
         # end
-        namespace :products do
-          resources :descriptions, only: [:edit, :update]
-        end
+        # namespace :products do
+        #   resources :descriptions, only: [:edit, :update]
+        # end
       end
     end
 

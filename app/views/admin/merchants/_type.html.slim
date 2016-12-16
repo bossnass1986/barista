@@ -1,0 +1,10 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    h3.mdl-typography--display-1.teal-heading Account Type
+.mdl-grid
+  - @merchant_type.each do |mt|
+    .mdl-cell.mdl-cell--3-col
+        = image_tag "places/#{mt.id}"
+        = form.label :merchant_type, for: mt.id, class: 'mdl-radio mdl-js-radio mdl-js-ripple-effect' do
+          = form.radio_button :merchant_type, mt.name, id: mt.id, class: 'mdl-radio__button'
+          span.mdl-radio__label= mt.name
