@@ -3,7 +3,7 @@
     h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
   - @products.each do |product|
-    .mdl-cell.mdl-cell--4-col.item-border.mdl-shadow--2dp
+    .mdl-cell.mdl-cell--4-col.item-border.card-item-type--volume
       .mdl-cell.mdl-cell--1-col.mdl-cell--10-offset
         label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=product.name
           input.mdl-switch__input checked="checked" type="checkbox" id=product.name /

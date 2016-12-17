@@ -36,7 +36,7 @@ class Admin::UsersController < Admin::BaseController
 
   def edit
     @user = User.includes(:roles).find(params[:id])
-    authorize! :create_users, current_user
+    # authorize! :create_users, current_user
     form_info
   end
 

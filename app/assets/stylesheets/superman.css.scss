@@ -706,3 +706,12 @@ select:focus {
   -ms-flex-pack: center;
   justify-content: center
 }
+
+.card-item-type--volume {
+  border-radius: 4px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);
+  -webkit-transition: all .4s;
+  transition: all .4s
+}

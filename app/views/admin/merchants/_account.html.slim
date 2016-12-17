@@ -16,19 +16,19 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.bank_title')
-= form.fields_for :account do |account_fields|
+= form.fields_for :account do |form|
   .mdl-grid
     .mdl-cell.mdl-cell--6-col
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-        = account_fields.text_field :account_name, class: 'mdl-textfield__input'
-        = account_fields.label :account_name, class: 'mdl-textfield__label'
+        = form.text_field :account_name, class: 'mdl-textfield__input'
+        = form.label :account_name, class: 'mdl-textfield__label'
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
         /= account_fields.number_field :bsb, class: 'mdl-textfield__input', :pattern => '^[0-9]{6}$'
-        = account_fields.label :bsb, class: 'mdl-textfield__label'
+        = form.label :bsb, class: 'mdl-textfield__label'
         span.mdl-textfield__error= t('.bsb_error')
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-        = account_fields.number_field :account_number, class: 'mdl-textfield__input', :pattern => '^[0-9]{6,10}$'
-        = account_fields.label :account_number, class: 'mdl-textfield__label'
+        = form.number_field :account_number, class: 'mdl-textfield__input', :pattern => '^[0-9]{6,10}$'
+        = form.label :account_number, class: 'mdl-textfield__label'
         span.mdl-textfield__error= t('.account_number_error')
     .mdl-cell.mdl-cell--6-col
       img

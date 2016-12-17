@@ -20,7 +20,8 @@ class Merchant < ActiveRecord::Base
 
 
   before_validation :sanitize_data
-  after_create :add_trading_hours, :add_products
+  after_create :add_trading_hours
+  # , :add_products
   geocoded_by :full_address               # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
 

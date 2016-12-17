@@ -6,7 +6,7 @@
     a.mdl-tabs__tab.is-active href='#orders-panel' = t('.orders')
     a.mdl-tabs__tab href='#customers-panel' = t('.customers')
   .mdl-grid
-    .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
+    .mdl-cell.mdl-cell--12-col
       = form_for @merchant, :url => admin_merchant_path(@merchant) do |form|
         #account-panel.mdl-tabs__panel
           = render :partial => 'venue', :locals => {:address_fields => form}

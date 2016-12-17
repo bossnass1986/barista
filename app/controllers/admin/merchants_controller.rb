@@ -17,6 +17,7 @@ class Admin::MerchantsController < Admin::BaseController
   def create
     @merchant = Merchant.new(allowed_params)
     @states = State.form_selector
+    @merchant_type =  MerchantType.all
 
     if @merchant.save
       redirect_to :action => :index
@@ -60,7 +61,7 @@ class Admin::MerchantsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:merchant).permit(:name, :email, :terms_of_service, :address, :city, :postal_code, :state_id, :country_id,
+    params.require(:merchant).permit(:merchant_type_id, :name, :email, :terms_of_service, :address, :city, :postal_code, :state_id, :country_id,
                                      trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :active]
     )
   end
