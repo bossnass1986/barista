@@ -32,7 +32,7 @@ Rails.application.routes.draw do
       root to: 'clearance/sessions#new'
     end
 
-    resources :after_signup, only: [:show, :update]
+    # resources :after_signup, only: [:show, :update]
 
     resources :users, controller: :users, only: :create
 
@@ -40,10 +40,10 @@ Rails.application.routes.draw do
     resources :accounts
     resources :checkouts, only: [:new, :create, :show]
     get 'admin' => 'admin/dashboard#index'
-    get 'admin/merchandise' => 'admin/merchandise/summary#index'
+    # get 'admin/merchandise' => 'admin/merchandise/summary#index'
 
     resource :about, only: [:show]
-    resources :states, only: [:index]
+    # resources :states, only: [:index]
 
     namespace :profile do
       resources :orders, only: [:index, :show]
@@ -147,11 +147,11 @@ Rails.application.routes.draw do
           end
         end
 
-        namespace :multi do
-          resources :products do
-            resource :variant, only: [:edit, :update]
-          end
-        end
+        # namespace :multi do
+        #   resources :products do
+        #     resource :variant, only: [:edit, :update]
+        #   end
+        # end
         resources :products,  except: [:show]
         # resources :products do
         #   member do

@@ -1,0 +1,75 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    h3.mdl-typography--display-1.teal-heading= t('.customer_details')
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col.card-item-type--volume
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.email_field :customer_cim_id, class: 'mdl-textfield__input', readonly: true
+      = form.label :customer_cim_id, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :first_name, class: 'mdl-textfield__input'
+      = form.label :first_name, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :last_name, class: 'mdl-textfield__input'
+      = form.label :last_name, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.email_field :email, class: 'mdl-textfield__input'
+      = form.label :email, class: 'mdl-textfield__label'
+  = form.select :state, @states
+  .mdl-cell.mdl-cell--6-col
+    div style=("width: 510px;")
+      #map
+      script
+        |  function initMap() { var merchant = {lat:
+        /= @merchant.latitude
+        | , lng:
+        /= @merchant.longitude
+        | }; var map = new google.maps.Map(document.getElementById('map'), { zoom: 17, center: merchant }); var image = '
+        = image_url "places/1.svg"
+        | '; var marker = new google.maps.Marker({ position: merchant, map: map, icon: image });  }
+      script[async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC33yqanl24vVIFSWRDTr7sXC8Evuf4huo&callback=initMap"]
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    h3.mdl-typography--display-1.teal-heading= t('.contact_details')
+  .mdl-cell.mdl-cell--6-col
+    h3.mdl-typography--display-1.teal-heading= t('.user_roles')
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col.card-item-type--volume
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :email, class: 'mdl-textfield__input'
+      = form.label :email, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.text_field :mobile, class: 'mdl-textfield__input'
+      = form.label :mobile, class: 'mdl-textfield__label'
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+      = form.email_field :email, class: 'mdl-textfield__input'
+      = form.label :email, class: 'mdl-textfield__label'
+  .mdl-cell.mdl-cell--6-col.card-item-type--volume
+    - @all_roles.each do |role|
+      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect.mdl-cell.mdl-cell--12-col for=role.id
+        - checked = @user.id && @user.roles.include?(role)
+        = check_box_tag 'user[role_ids][]', role.id, checked, :class => 'mdl-checkbox__input', :id => role.id
+        span.mdl-checkbox__label= role.name.titlecase
+/%fieldset
+  legend New User
+  .row
+    .six.large-6.columns
+      label First Name
+      = form.text_field :first_name
+      label Email Address
+      = form.text_field :email
+    .six.large-6.columns
+      label Last Name
+      = form.text_field :last_name
+      label State
+      = form.select :state, @states
+/- if current_user.admin?
+fieldset#admin-password.span-12
+  p Leave blank if you don't want to change the password.
+  ul
+    li
+      = form.label :password
+      = form.password_field :password
+    li
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation

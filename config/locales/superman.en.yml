@@ -133,4 +133,16 @@ en:
     users:
       index:
         title: 'Customers'
+        full_name: 'Full Name'
+        email: 'Email'
+        mobile: 'Mobile'
+        level: 'Level'
+        orders: 'Orders'
+        credits: 'Credits'
+        payments: 'Payments'
+        status: 'Status'
+      form:
+        customer_details: 'Customer Details'
+        contact_details: 'Contact Details'
+        user_roles: 'User Roles'
 

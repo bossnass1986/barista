@@ -1,0 +1,38 @@
+- title @user.name
+.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+  .mdl-tabs__tab-bar
+    a.mdl-tabs__tab href='#information-panel'  Information
+    a.mdl-tabs__tab.is-active href='#orders-panel'  Orders
+    a.mdl-tabs__tab href='#payments-panel'  Payments
+  #information-panel.mdl-tabs__panel
+    = form_for @user, :url => admin_user_path(@user)  do |form|
+      = render :partial => '/admin/users/form', :locals => {:form => form}
+      = form.submit "Update", :class => 'button'
+  #orders-panel.mdl-tabs__panel.is-active
+    - @user.finished_orders.sort_by{ |o| o.completed_at }.reverse!.each do |order|
+      ul.vertical-list
+        li
+          label Order #
+          = link_to order.number, edit_admin_fulfillment_order_path(order)
+        li
+          label Price
+          = order.first_invoice_amount.present? ? number_to_currency(order.first_invoice_amount) : 'Not Charged yet.'
+        li
+          label Completed at:
+          = order.display_completed_at
+        li
+          label Status:
+          = order.state
+  #payments-panel.mdl-tabs__panel
+    .mdl-cell.mdl-cell--8-col
+      h3.mdl-typography--title
+        | Payments
+      ul.vertical-list
+        - @user.payment_methods.each do |payment|
+          li
+    /= payment.card_type
+    /= payment.masked_number
+    .mdl-cell.mdl-cell--4-col
+      h3.mdl-typography--title
+        | Credits
+        = @user.store_credit.amount

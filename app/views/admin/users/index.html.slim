@@ -1,24 +1,25 @@
 - title t('.title')
-.mdl-cell.mdl-cell--12-col
-  table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
-    thead
-      tr
-        th.mdl-data-table__cell--non-numeric Full Name
-        th.mdl-data-table__cell--non-numeric Email
-        th.mdl-data-table__cell--non-numeric Mobile
-        th.mdl-data-table__cell--non-numeric Level
-        th.mdl-data-table__cell--non-numeric Orders
-        th.mdl-data-table__cell--non-numeric Credits
-        th.mdl-data-table__cell--non-numeric Payments
-        th.mdl-data-table__cell--non-numeric Status
-    tbody
-      - @users.each do |user|
-        tr data-href=edit_admin_user_path(user)
-          td.mdl-data-table__cell--non-numeric= user.full_name
-          td.mdl-data-table__cell--non-numeric= user.email
-          td.mdl-data-table__cell--non-numeric= user.mobile
-          td.mdl-data-table__cell--non-numeric= user.level
-          td.mdl-data-table__cell--non-numeric= user.orders.count
-          td.mdl-data-table__cell--non-numeric= number_to_currency(user.store_credit.amount)
-          td.mdl-data-table__cell--non-numeric= user.payment_methods.count
-          td.mdl-data-table__cell--non-numeric= user.state
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
+      thead
+        tr
+          th.mdl-data-table__cell--non-numeric= t('.full_name')
+          th.mdl-data-table__cell--non-numeric= t('.email')
+          th.mdl-data-table__cell--non-numeric= t('.mobile')
+          th.mdl-data-table__cell--non-numeric= t('.level')
+          th.mdl-data-table__cell--non-numeric= t('.orders')
+          th.mdl-data-table__cell--non-numeric= t('.credits')
+          th.mdl-data-table__cell--non-numeric= t('.payments')
+          th.mdl-data-table__cell--non-numeric= t('.status')
+      tbody
+        - @users.each do |user|
+          tr data-href=edit_admin_user_path(user)
+            td.mdl-data-table__cell--non-numeric= user.full_name
+            td.mdl-data-table__cell--non-numeric= user.email
+            td.mdl-data-table__cell--non-numeric= user.mobile
+            td.mdl-data-table__cell--non-numeric= user.level
+            td.mdl-data-table__cell--non-numeric= user.orders.count
+            td.mdl-data-table__cell--non-numeric= number_to_currency(user.store_credit.amount)
+            td.mdl-data-table__cell--non-numeric= user.payment_methods.count
+            td.mdl-data-table__cell--non-numeric= user.state
