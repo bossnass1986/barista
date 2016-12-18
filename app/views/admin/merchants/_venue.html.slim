@@ -27,6 +27,9 @@ style
           = address_fields.hidden_field :country_id
         - else
           = address_fields.select :country_id, select_countries, :include_blank => true
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+          = address_fields.email_field :email, class: 'mdl-textfield__input'
+          = address_fields.label :email, class: 'mdl-textfield__label'
       /.mdl-cell.mdl-cell--6-col
         div style=("width: 510px;")
           #map
