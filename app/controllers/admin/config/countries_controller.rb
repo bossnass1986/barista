@@ -27,6 +27,16 @@ class Admin::Config::CountriesController < Admin::Config::BaseController
     end
   end
 
+  def deactivate
+    @country = Country.find(params[:id])
+    @country.active = false
+    if @country.save
+      redirect_to admin_config_overview_index_url, :notice  => "Successfully deactivated country."
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @country = Country.find(params[:id])
     @country.active = false

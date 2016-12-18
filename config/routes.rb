@@ -116,14 +116,14 @@ Rails.application.routes.draw do
       end
       namespace :config do
         resources :accounts
-        resources :countries, only: [:index, :edit, :update, :destroy] do
+        resources :countries, only: [:index] do
           member do
             put :activate
+            put :deactivate
           end
         end
         resources :overview, only: [:index]
         resources :tax_rates
-        # resources :tax_categories
       end
 
       namespace :marketing do

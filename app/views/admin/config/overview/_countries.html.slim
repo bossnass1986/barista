@@ -1,6 +1,4 @@
 .mdl-cell.mdl-cell--12-col
-  /= link_to 'New Country', new_admin_config_country_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
-.mdl-cell.mdl-cell--12-col
   table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col
     thead
       tr
@@ -11,7 +9,7 @@
     tbody
       - @countries.each do |country|
         tr
-          td.mdl-data-table__cell--non-numeric= link_to country.name, [:edit, :admin, :config, country]
+          td.mdl-data-table__cell--non-numeric= country.name
           td.mdl-data-table__cell--non-numeric= country.abbreviation
           td.mdl-data-table__cell--non-numeric= country.active
           td.mdl-data-table__cell--non-numeric
@@ -20,6 +18,5 @@
             ul.mdl-menu.mdl-js-menu.mdl-js-ripple-effect for=country.id
               - if !country.active
                 li.mdl-menu__item= link_to "Activate #{country.name}",  [:activate, :admin, :config, country], :method => :put
-              /li.mdl-menu__item= link_to "Show",  admin_user_path(user)
-  /= link_to_previous_page @active_countries, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
-  /= link_to_next_page @active_countries, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+              - else
+                li.mdl-menu__item= link_to "Dectivate #{country.name}",  [:deactivate, :admin, :config, country], :method => :put
