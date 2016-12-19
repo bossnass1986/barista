@@ -1,8 +1,6 @@
 class VariantRequiredError < StandardError; end
 
 class Product < ActiveRecord::Base
-  # extend FriendlyId
-  # friendly_id :permalink, use: :finders
   # include Presentation::ProductPresenter
   # include ProductFilters
 
@@ -23,10 +21,7 @@ class Product < ActiveRecord::Base
   has_many :active_variants, -> { where(deleted_at: nil) },
            class_name: 'Variant'
 
-
-  before_validation :sanitize_data
   before_validation :not_active_on_create!, on: :create
-  before_save :create_content
 
   # accepts_nested_attributes_for :variants,           reject_if: proc { |properties| properties['sku'].blank? }
   # accepts_nested_attributes_for :@product_attributes, reject_if: proc { |properties| properties['description'].blank? }, allow_destroy: true
@@ -141,7 +136,6 @@ class Product < ActiveRecord::Base
   end
 
   def available?
-    # has_shipping_method? && has_active_variants?
     has_active_variants?
   end
 

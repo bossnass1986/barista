@@ -39,7 +39,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def edit
-    @product        = Product.find(params[:id])
+    @product = Product.find(params[:id])
     form_info
   end
 
@@ -106,7 +106,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   end
 
   def form_info
-    @categories = Category.all.map{|c| [c.name, c.id]}
+    @categories = Category.all
     @properties = Property.all
   end
 

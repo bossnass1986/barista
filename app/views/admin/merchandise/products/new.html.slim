@@ -1,0 +1,4 @@
+- title t('.title')
+.mdl-cell.mdl-cell--12-col
+  = form_for @product, :url  => admin_merchandise_products_path, :html => {:class => ''}  do |form|
+    = render :partial => 'form', :locals => {:form => form}

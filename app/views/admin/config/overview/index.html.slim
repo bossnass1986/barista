@@ -4,8 +4,11 @@
     .mdl-tabs__tab-bar
       a.mdl-tabs__tab href='#country-panel' = t('.countries')
       a.mdl-tabs__tab href='#tax-rate-panel' = t('.tax_rates')
+      a.mdl-tabs__tab href='#merchant-type-panel' = t('.merchant_types')
     .mdl-cell.mdl-cell--12-col
       .mdl-tabs__panel#country-panel
         = render 'countries'
       .mdl-tabs__panel#tax-rate-panel
         = render 'tax_rates'
+      .mdl-tabs__panel#merchant-type-panel
+        = render 'merchant_types'

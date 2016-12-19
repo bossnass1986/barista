@@ -1,5 +1,4 @@
 class Admin::Config::CountriesController < Admin::Config::BaseController
-  helper_method :sort_column, :shipping_zones
   def index
     @countries = Country.all
     @active_countries = Country.active_countries.all

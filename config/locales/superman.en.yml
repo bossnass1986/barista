@@ -28,11 +28,14 @@ en:
           title: 'Application Configurations'
           countries: 'Countries'
           tax_rates: 'Tax Rates'
+          merchant_types: 'Merchant Types'
       tax_rates:
         index:
           title: 'Tax Rates'
         new:
           title: 'New Tax Rate'
+      merchant_type:
+          title: 'Merchant Types'
 
     dashboard:
       title: 'Dashboard'
