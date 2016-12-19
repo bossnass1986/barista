@@ -155,26 +155,6 @@ class Product < ActiveRecord::Base
     active_variants.any?{|v| v.is_available? }
   end
 
-  def create_content
-    # self.description = BlueCloth.new(self.description_markup).to_html unless self.description_markup.blank?
-  end
-
-  def not_active_on_create!
-    # self.deleted_at ||= Time.zone.now
-  end
-
-  # if the permalink is not filled in set it equal to the name
-  def sanitize_data
-    # sanitize_permalink
-    # assign_meta_keywords  if meta_keywords.blank? && description
-    # sanitize_meta_description
-  end
-
-  def sanitize_permalink
-    # self.permalink = name if permalink.blank? && name
-    # self.permalink = permalink.squeeze(' ').strip.gsub(' ', '-').downcase if permalink
-  end
-
   def sanitize_meta_description
     if name && description.present? && meta_description.blank?
       self.meta_description = [name.first(55), description.remove_hyper_text.first(197)].join(': ')
@@ -183,9 +163,15 @@ class Product < ActiveRecord::Base
 
   def ensure_available
     if active? && deleted_at_changed?
-      self.errors.add(:base, 'There must be active variants.')  if active_variants.blank?
-      self.errors.add(:base, 'Variants must have inventory.')   unless active_variants.any?{|v| v.is_available? }
-      self.deleted_at = deleted_at_was if active_variants.blank? || !active_variants.any?{|v| v.is_available? }
+      if active_variants.blank?
+        self.errors.add(:base, 'There must be active variants.')
+      end
+      unless active_variants.any? { |v| v.is_available? }
+        self.errors.add(:base, 'Variants must have inventory.')
+      end
+      if active_variants.blank? || !active_variants.any? { |v| v.is_available? }
+        self.deleted_at = deleted_at_was
+      end
     end
   end
 

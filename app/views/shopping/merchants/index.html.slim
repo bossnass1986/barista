@@ -2,7 +2,7 @@
 /= form_for(@merchants) do |f|
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    = text_field_tag :address, "", :placeholder => 'Start typing a place...', class: 'mdl-cell--12-col'
+    = text_field_tag :address, @user, :placeholder => 'Start typing a place...', class: 'mdl-cell--12-col'
 /= @user
 .mdl-grid
   = render @merchants
