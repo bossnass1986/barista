@@ -43,7 +43,7 @@ class Admin::UsersController < Admin::BaseController
   def update
     params[:user][:role_ids] ||= []
     @user = User.includes(:roles).find(params[:id])
-    authorize! :create_users, current_user
+    # authorize! :create_users, current_user
     if @user.update_attributes(user_params)
       flash[:notice] = "#{@user.name} has been updated."
       redirect_to admin_users_url
@@ -56,7 +56,7 @@ class Admin::UsersController < Admin::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :email, :state, :role_ids => [])
+    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name, :email, :mobile, :state, :role_ids => [])
   end
 
   def form_info

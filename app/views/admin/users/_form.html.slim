@@ -4,7 +4,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--6-col.card-item-type--volume
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-      = form.email_field :customer_cim_id, class: 'mdl-textfield__input', readonly: true
+      = form.email_field :customer_cim_id, class: 'mdl-textfield__input', disabled: true
       = form.label :customer_cim_id, class: 'mdl-textfield__label'
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = form.text_field :first_name, class: 'mdl-textfield__input'
@@ -50,26 +50,4 @@
         - checked = @user.id && @user.roles.include?(role)
         = check_box_tag 'user[role_ids][]', role.id, checked, :class => 'mdl-checkbox__input', :id => role.id
         span.mdl-checkbox__label= role.name.titlecase
-/%fieldset
-  legend New User
-  .row
-    .six.large-6.columns
-      label First Name
-      = form.text_field :first_name
-      label Email Address
-      = form.text_field :email
-    .six.large-6.columns
-      label Last Name
-      = form.text_field :last_name
-      label State
-      = form.select :state, @states
 /- if current_user.admin?
-fieldset#admin-password.span-12
-  p Leave blank if you don't want to change the password.
-  ul
-    li
-      = form.label :password
-      = form.password_field :password
-    li
-      = form.label :password_confirmation
-      = form.password_field :password_confirmation
