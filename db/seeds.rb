@@ -6,7 +6,7 @@ Country.destroy_all
 # MerchantType.delete_all
 Category.destroy_all
 Product.delete_all
-# PropertySet.destroy_all
+PropertySet.destroy_all
 Property.delete_all
 # Product.destroy_all
 Variant.destroy_all
