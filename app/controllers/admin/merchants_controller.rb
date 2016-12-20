@@ -11,7 +11,6 @@ class Admin::MerchantsController < Admin::BaseController
     @states = State.form_selector
     @products = Product.order(:name => 'asc')
     @properties = Property.where(property_set_id: 1)
-    @merchant.trading_hours.build
     @merchant.build_account
   end
 
@@ -51,7 +50,7 @@ class Admin::MerchantsController < Admin::BaseController
   def allowed_params
     params.require(:merchant).permit(:merchant_type_id, :name, :email, :terms_of_service, :address, :city, :postal_code, :state_id, :country_id,
                                      trading_hours_attributes: [:id, :weekday, :open_time, :close_time, :active],
-                                     account_attributes: [:id, :account_name, :bsb, :account_number]
+                                     account_attributes: [:id, :name, :account_name, :bsb, :account_number]
     )
   end
 

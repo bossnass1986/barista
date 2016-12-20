@@ -15,13 +15,9 @@ class Merchant < ActiveRecord::Base
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
-  # has_one  :account
-
-
 
   before_validation :sanitize_data
   after_create :add_trading_hours
-  # , :add_products
   geocoded_by :full_address               # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
 
@@ -29,12 +25,11 @@ class Merchant < ActiveRecord::Base
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
-  # after_create :sanitize_dates
 
   # accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
-  accepts_nested_attributes_for :account#, reject_if: proc { |attributes| attributes['account_name'].blank? }
+  accepts_nested_attributes_for :account, reject_if: proc { |attributes| attributes['account_name'].blank? }
 
   # @param [Object] day
   # @param [Object] hour
