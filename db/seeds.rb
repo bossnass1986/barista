@@ -83,11 +83,11 @@ PropertySet.create!([
                    {id:10, name: 'Sweetness'}
                 ])
 
-puts 'Creating Standard Menu Items'
-
-product_seed = Rails.root.join('db', 'seed', 'products.yml')
-product = YAML::load_file(product_seed)
-Product.create!(product)
+# puts 'Creating Standard Menu Items'
+#
+# product_seed = Rails.root.join('db', 'seed', 'products.yml')
+# product = YAML::load_file(product_seed)
+# Product.create!(product)
 
 puts 'Creating Attributes'
 Property.create!([
