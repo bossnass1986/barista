@@ -67,6 +67,7 @@ en:
           account: 'Account'
           venue: 'Venue'
           menu: 'Menu'
+          menu_options: 'Menu Options'
         show:
           account: 'Account'
           menu: 'Menu'

@@ -16,6 +16,24 @@
             input.mdl-textfield__input type="text" id=property.id
             label.mdl-textfield__label for=property.id
               = "#{property.name } Price"
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    h3.mdl-typography--display-1.teal-heading= t('.sub_title')
+.mdl-grid
+  - Property.all.group_by(&:property_set_id).each do |property_set, properties|
+    .mdl-cell.mdl-cell--4-col.card-item-type--volume
+      .mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--12-col
+          h4.teal-heading= PropertySet.find(property_set).try(:name)
+      .mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--12-col
+          - properties.each do |property|
+            //- checked = PropertySet.find(property_set).try(:name) && PropertySet.find(properties).include?(property)
+            - checked = false
+            label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=property.id
+              /= property_fields.check_box :property
+              = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.id
+              span.mdl-switch__label= property.name
 /.mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')

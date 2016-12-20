@@ -28,7 +28,7 @@
               = check_box_tag 'user[role_ids][]', c.id, checked, :class => 'mdl-checkbox__input', :id => c.id
               span.mdl-checkbox__label= c.name.titlecase
   .mdl-cell.mdl-cell--6-col.card-item-type--volume
-    /- @properties.each do |property|
+    - @properties.each do |property|
       - if @product.id && !@product.properties.detect { |p| p.id == property.id }
         = form.fields_for :product_attributes, property.product_attributes.find_or_initialize_by(product_id: @product.id) do |product_property_form|
           label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=property.id
