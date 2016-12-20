@@ -3,7 +3,7 @@ puts 'Execute Order 66!'
 Role.destroy_all
 User.delete_all
 Country.destroy_all
-# MerchantType.delete_all
+MerchantType.delete_all
 Category.destroy_all
 Product.delete_all
 PropertySet.destroy_all

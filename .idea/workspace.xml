@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/1.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/1.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/2.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/2.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/property_set.rb" afterPath="$PROJECT_DIR$/app/models/property_set.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="barista.iws" />
@@ -99,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="property_set.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="property_set.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/property_set.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -242,8 +241,8 @@
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_menu_options.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/property_set.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -778,14 +777,7 @@
       <workItem from="1480854849787" duration="6898000" />
       <workItem from="1481024302609" duration="3445000" />
       <workItem from="1481111933569" duration="1864000" />
-      <workItem from="1481181768806" duration="54034000" />
-    </task>
-    <task id="LOCAL-00298" summary="travis">
-      <created>1471608165963</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1471608165963</updated>
+      <workItem from="1481181768806" duration="54189000" />
     </task>
     <task id="LOCAL-00299" summary="placeholder background">
       <created>1471786709701</created>
@@ -1123,11 +1115,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482231315426</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="seeds">
+      <created>1482231669825</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1482231669825</updated>
+    </task>
+    <option name="localTasksCounter" value="348" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="887008000" />
+    <option name="totallyTimeSpent" value="887163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1662,15 +1661,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/property_set.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="45">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/property_set.rb">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
