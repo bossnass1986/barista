@@ -1,11 +1,11 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def index
-    @products = Product.order(:name).includes(:active_variants, :property_set).page params[:page]
+    @products = Product.order(:name).page params[:page]
   end
 
   def show
-    @product        = Product.find(params[:id])
+    @product = Product.find(params[:id])
     respond_to do |format|
       format.html
       format.json { render json: @product }
@@ -18,8 +18,9 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       flash[:notice] = 'You must create a category before you create a product.'
       redirect_to new_admin_merchandise_prototype_url
     else
-      @product            = Product.new
-      @product.category  = Category.new
+      @product = Product.new
+      @product.categories << @categories
+      # @product.category  = Category.new
     end
   end
 
@@ -99,20 +100,13 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:product).permit(:name, :description, :keywords, :category_id,
-                                    :prototype_id, :available_at, :deleted_at,
-                                    :featured, :description_markup,
-                                    product_properties_attributes: [:id, :product_id, :property_id, :position, :description])
+    params.require(:product).permit(:name, :description, :keywords, :categories,
+                                    :available_at, :deleted_at,
+                                    :featured)
   end
 
   def form_info
     @categories = Category.all
-    @properties = Property.all
   end
-
-  def product_types
-    @property_sets ||= PropertySet.all
-  end
-
 
 end

@@ -18,11 +18,11 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant = Merchant.new(allowed_params)
     @states = State.form_selector
     @merchant_type =  MerchantType.all
-
     if @merchant.save
+      flash[:notice] = "#{@merchant.name} was created successfully. What’s next?"
       redirect_to :action => :index
     else
-      flash[:error] = "The supplier could not be saved"
+      flash[:error] = "The merchant could not be created!"
       render :action => :new
     end
   end
@@ -39,8 +39,10 @@ class Admin::MerchantsController < Admin::BaseController
     @merchant = Merchant.find(params[:id])
     @states = State.form_selector
     if @merchant.update_attributes(allowed_params)
+      flash[:notice] = "#{@merchant.name} was updated successfully. What’s next?"
       redirect_to :action => :index
     else
+      flash[:error] = "The merchant could not be updated!"
       render :action => :edit
     end
   end

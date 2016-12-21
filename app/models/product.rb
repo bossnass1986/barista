@@ -4,15 +4,9 @@ class Product < ActiveRecord::Base
   # include Presentation::ProductPresenter
   # include ProductFilters
 
-  serialize :product_keywords, Array
-
-  attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
-
   belongs_to :property_set
-  belongs_to :category
   has_many :product_attributes
   has_many :properties,         through: :product_properties
-
   has_many :variants, dependent: :destroy
   # has_many :images, -> {order(:position)},
   #          as:        :imageable,
@@ -20,16 +14,12 @@ class Product < ActiveRecord::Base
 
   has_many :active_variants, -> { where(deleted_at: nil) },
            class_name: 'Variant'
-
-  before_validation :not_active_on_create!, on: :create
-
+  has_and_belongs_to_many :categories
   # accepts_nested_attributes_for :variants,           reject_if: proc { |properties| properties['sku'].blank? }
   # accepts_nested_attributes_for :@product_attributes, reject_if: proc { |properties| properties['description'].blank? }, allow_destroy: true
   # accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
 
   validates :name,                  presence: true,   length: { maximum: 165 }
-
-  # scope :for_companies, ->(_companies) {joins(:companies).where(company: _companies)}
 
   def hero_variant
     active_variants.detect{|v| v.master } || active_variants.first

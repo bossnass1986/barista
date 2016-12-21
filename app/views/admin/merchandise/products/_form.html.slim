@@ -15,26 +15,15 @@
 .mdl-grid
   .mdl-cell.mdl-cell--6-col
     h3.mdl-typography--display-1.teal-heading Categories
-  .mdl-cell.mdl-cell--6-col
-    h3.mdl-typography--display-1.teal-heading= t('.sub_title')
-.mdl-grid
-  .mdl-cell.mdl-cell--6-col.card-item-type--volume
+/.mdl-grid
+  .mdl-cell.mdl-cell--12-col.card-item-type--volume
     .mdl-grid
-      - @categories.each_slice((@categories.count/2.0).ceil) do |cg|
-        .mdl-cell.mdl-cell--6-col
+      - @categories.each_slice((@categories.count/3).ceil) do |cg|
+        .mdl-cell.mdl-cell--3-col
           - cg.each do |c|
             label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect.mdl-cell.mdl-cell--12-col for=c.id
-              - checked = false
-              = check_box_tag 'user[role_ids][]', c.id, checked, :class => 'mdl-checkbox__input', :id => c.id
+              = form.check_box :categories, :class => 'mdl-checkbox__input', :id => c.id
               span.mdl-checkbox__label= c.name.titlecase
-  .mdl-cell.mdl-cell--6-col.card-item-type--volume
-    - @properties.each do |property|
-      - if @product.id && !@product.properties.detect { |p| p.id == property.id }
-        = form.fields_for :product_attributes, property.product_attributes.find_or_initialize_by(product_id: @product.id) do |product_property_form|
-          label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=property.id
-            = product_property_form.check_box :property_id, :class => 'mdl-checkbox__input', :id => property.id
-            span.mdl-checkbox__label= property.identifying_name
-            = product_property_form.hidden_field :property_id
 .mdl-grid
   .mdl-cell.mdl-cel--12-col
     = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

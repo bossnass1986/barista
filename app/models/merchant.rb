@@ -16,7 +16,7 @@ class Merchant < ActiveRecord::Base
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
 
-  before_validation :sanitize_data
+  # before_validation :sanitize_data
   after_create :add_trading_hours
   geocoded_by :full_address               # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
@@ -25,11 +25,9 @@ class Merchant < ActiveRecord::Base
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
-
-  # accepts_nested_attributes_for :address, reject_if: proc { |attributes| attributes['address1'].blank? }
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
-  accepts_nested_attributes_for :account, reject_if: proc { |attributes| attributes['account_name'].blank? }
+  accepts_nested_attributes_for :account, reject_if: :all_blank
 
   # @param [Object] day
   # @param [Object] hour
@@ -56,20 +54,20 @@ class Merchant < ActiveRecord::Base
     self.products.count(:id, :distinct => true)
   end
 
-  def self.find_by_product_types(product_type_id)
-    # return [] if product_type_id.nil?
-
-    product_type = PropertySet.find_by_id product_type_id
-    product_types = product_type.self_and_descendants.map(&:id) if product_type
-
-    # return if @@property_sets.nil?
-    # self.active
-  # else
-    self.where product_type_id: product_types
-  end
+  # def self.find_by_product_types(product_type_id)
+  #   # return [] if product_type_id.nil?
+  #
+  #   product_type = PropertySet.find_by_id product_type_id
+  #   product_types = product_type.self_and_descendants.map(&:id) if product_type
+  #
+  #   # return if @@property_sets.nil?
+  #   # self.active
+  # # else
+  #   self.where product_type_id: product_types
+  # end
 
   def full_address
-    [self.address, self.city, self.postal_code, self.state].reject(&:blank?).join(', ')
+    [self.address, self.city, self.postal_code].reject(&:blank?).join(', ')
   end
 
   def add_trading_hours
@@ -78,24 +76,9 @@ class Merchant < ActiveRecord::Base
     end
   end
 
-  def add_products
-    @product = Product.all
-    @product.each do |product|
-      MerchantProducts.create!(product_id: product.id, merchant_id: self.id)
-    end
-  end
-
   def sms_creation
     SinchSms.send('7de7254e-36be-4131-b142-76cdca2e10fe', 'KahGlTOGUk6HGO33XtEXbw==', "#{self.name} has been created", '61430091464')
   end
-
-  # if the permalink is not filled in set it equal to the name
-  def sanitize_data
-    # sanitize_permalink
-    # assign_meta_keywords  if meta_keywords.blank?
-    # sanitize_description
-  end
-
 
   def sanitize_permalink
     self.permalink = name if permalink.blank? && name

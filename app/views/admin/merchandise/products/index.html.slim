@@ -20,10 +20,10 @@
             td.mdl-data-table__cell--non-numeric= product.id
             td.mdl-data-table__cell--non-numeric= product.name
             td.mdl-data-table__cell--non-numeric= product.property_set
-            td.mdl-data-table__cell--non-numeric= product.category.name
+            /td.mdl-data-table__cell--non-numeric= product.category.name
             td.mdl-data-table__cell--non-numeric
               i.material-icons>
                 = visibility(product.active)
 .mdl-cell.mdl-cell--12-col
-  = link_to_previous_page @products, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
-  = link_to_next_page @products, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+  /= link_to_previous_page @products, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
+  /= link_to_next_page @products, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
