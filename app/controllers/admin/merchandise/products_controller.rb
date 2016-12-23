@@ -28,11 +28,11 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     @product = Product.new(allowed_params)
 
     if @product.save
-      flash[:notice] = "Success, You should create a variant for the product."
+      flash[:notice] = "#{@product.name} was created successfully. What’s next?"
       redirect_to admin_merchandise_products_path
     else
       form_info
-      flash[:error] = "The product could not be saved"
+      flash[:error] = "The product could not be created!"
       render action: :new
     end
       # rescue
@@ -48,6 +48,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     @product = Product.find(params[:id])
     form_info
     if @product.update_attributes(allowed_params)
+      flash[:notice] = "#{@product.name} was updated successfully. What’s next?"
       redirect_to admin_merchandise_product_url(@product)
     else
       form_info

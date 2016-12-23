@@ -7,7 +7,7 @@
       #account-panel.mdl-tabs__panel.is-active
         = render :partial => 'type', :locals => {:form => form}
         = render :partial => 'venue', :locals => {:address_fields => form}
-        = render :partial => 'account', :locals => {:form => form}
+        /= render :partial => 'account', :locals => {:form => form}
         .mdl-grid
           .mdl-cell.mdl-cell--12-col
             = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'

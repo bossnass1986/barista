@@ -5,14 +5,14 @@
   .mdl-grid
     .mdl-cell.mdl-cell--6-col.card-item-type--volume
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-        = ac.text_field :account_name, class: 'mdl-textfield__input'
+        = ac.text_field :account_name, class: 'mdl-textfield__input', required: true
         = ac.label :account_name, class: 'mdl-textfield__label'
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-        = ac.number_field :bsb, class: 'mdl-textfield__input', :pattern => '^[0-9]{6}$'
+        = ac.number_field :bsb, class: 'mdl-textfield__input', pattern: :'^[0-9]{6}$'
         = ac.label :bsb, class: 'mdl-textfield__label'
         span.mdl-textfield__error= t('.bsb_error')
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-        = ac.number_field :account_number, class: 'mdl-textfield__input', :pattern => '^[0-9]{6,10}$'
+        = ac.number_field :account_number, class: 'mdl-textfield__input', pattern: :'^[0-9]{6,10}$'
         = ac.label :account_number, class: 'mdl-textfield__label'
         span.mdl-textfield__error= t('.account_number_error')
     .mdl-cell.mdl-cell--6-col

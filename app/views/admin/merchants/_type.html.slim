@@ -8,5 +8,5 @@
         .mdl-cell.mdl-cell--3-col
             = image_tag "places/#{mt.id}"
             = form.label :merchant_type_id, for: mt.id, class: 'mdl-radio mdl-js-radio mdl-js-ripple-effect' do
-              = form.radio_button :merchant_type_id, mt.id, id: mt.id, class: 'mdl-radio__button'
+              = form.radio_button :merchant_type_id, mt.id, id: mt.id, class: 'mdl-radio__button', required: true
               span.mdl-radio__label= mt.name

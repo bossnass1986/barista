@@ -12,16 +12,10 @@
         #account-panel.mdl-tabs__panel
           = render :partial => 'venue', :locals => {:address_fields => form}
           = render :partial => 'hours', :locals => {:form => form}
-          = render :partial => 'account', :locals => {:form => form}
+          /= render :partial => 'account', :locals => {:form => form}
           .mdl-grid
             .mdl-cell.mdl-cell--12-col
               = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
-        /#menu-options-panel.mdl-tabs__panel
-          = render :partial => 'menu_options', :locals => {:form => form}
-          .mdl-grid
-            .mdl-cell.mdl-cell--12-col
-              = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
-
         #menu-panel.mdl-tabs__panel
           = render :partial => 'product', :locals => {:form => form}
           .mdl-grid

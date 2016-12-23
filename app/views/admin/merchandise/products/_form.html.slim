@@ -4,7 +4,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col.card-item-type--volume
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-      = form.text_field :name, class: 'mdl-textfield__input'
+      = form.text_field :name, class: 'mdl-textfield__input', required: true
       = form.label :name, class: 'mdl-textfield__label'
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = form.text_area :keywords, class: 'mdl-textfield__input'
@@ -15,7 +15,7 @@
 .mdl-grid
   .mdl-cell.mdl-cell--6-col
     h3.mdl-typography--display-1.teal-heading Categories
-/.mdl-grid
+.mdl-grid
   .mdl-cell.mdl-cell--12-col.card-item-type--volume
     .mdl-grid
       - @categories.each_slice((@categories.count/3).ceil) do |cg|
