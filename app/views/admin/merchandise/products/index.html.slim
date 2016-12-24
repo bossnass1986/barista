@@ -20,7 +20,7 @@
             td.mdl-data-table__cell--non-numeric= product.id
             td.mdl-data-table__cell--non-numeric= product.name
             td.mdl-data-table__cell--non-numeric= product.property_set
-            /td.mdl-data-table__cell--non-numeric= product.category.name
+            td.mdl-data-table__cell--non-numeric= product.categories.collect(&:name).join(', ')
             td.mdl-data-table__cell--non-numeric
               i.material-icons>
                 = visibility(product.active)

@@ -18,12 +18,13 @@
 .mdl-grid
   .mdl-cell.mdl-cell--12-col.card-item-type--volume
     .mdl-grid
-      - @categories.each_slice((@categories.count/3).ceil) do |cg|
-        .mdl-cell.mdl-cell--3-col
-          - cg.each do |c|
-            label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect.mdl-cell.mdl-cell--12-col for=c.id
-              = form.check_box :categories, :class => 'mdl-checkbox__input', :id => c.id
-              span.mdl-checkbox__label= c.name.titlecase
+      /- @categories.each_slice((@categories.count/3).ceil) do |cg|
+      .mdl-cell.mdl-cell--3-col
+        /- cg.each do |c|
+        = form.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
+          = category.label class: :'mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-cell.mdl-cell--12-col' do
+            = category.check_box class: :'mdl-checkbox__input'
+            span.mdl-checkbox__label= category.label
 .mdl-grid
   .mdl-cell.mdl-cel--12-col
     = form.submit class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'

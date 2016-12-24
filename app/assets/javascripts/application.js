@@ -12,14 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ahoy
-//= require angular
 
 var form = document.querySelector('#cardForm');
 var submit = document.querySelector('input[type="submit"]');
 
 braintree.client.create({
-    authorization: 'sandbox_92dswc7q_mbmb637xwpzgxbrd'
+    authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b'
 }, function (err, clientInstance) {
     if (err) {
         console.error(err);
@@ -138,9 +136,6 @@ braintree.client.create({
                         snackbarContainer.MaterialSnackbar.showSnackbar(data);
                     });
                 }());
-                // // If this was a real integration, this is where you would
-                // // send the nonce to your server.
-                // console.log('Got a nonce: ' + payload.nonce);
             });
         }, false);
     });
