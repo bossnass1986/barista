@@ -1,7 +1,7 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
 
   def index
-    @products = Product.order(:name).page params[:page]
+    @products = Product.includes(:categories, :property_set).order(:name).page params[:page]
   end
 
   def show
@@ -49,7 +49,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     form_info
     if @product.update_attributes(allowed_params)
       flash[:notice] = "#{@product.name} was updated successfully. What’s next?"
-      redirect_to admin_merchandise_product_url(@product)
+      redirect_to admin_merchandise_products_path
     else
       form_info
       render action: :index
@@ -101,9 +101,9 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   private
 
   def allowed_params
-    params.require(:product).permit(:name, :description, :keywords, :categories,
-                                    :available_at, :deleted_at,
-                                    :featured)
+    params.require(:product).permit(:name, :description, :keywords, category_ids: [])
+                                    #:available_at, :deleted_at,
+                                    #:featured)
   end
 
   def form_info

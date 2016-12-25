@@ -1,5 +1,0 @@
-- title t('.title')
-= form_for(@payment_method, :url => myaccount_payment_methods_path(@payment_method), :html => {:id => 'cardForm'}) do |f|
-  = render :partial => 'form', :locals => {:f => f}
-/ Load Hosted Fields component.
-%script{:src => '//js.braintreegateway.com/web/3.0.0-beta.10/js/hosted-fields.min.js'}
