@@ -17,6 +17,7 @@ Cart.destroy_all
 Order.destroy_all
 # Property.delete_all
 
+
 %w(customer banned merchant staff admin).each do |role|
   Role.find_or_create_by({name: role})
 end
