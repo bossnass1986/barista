@@ -2,8 +2,8 @@ class VariantRequiredError < StandardError; end
 
 class Product < ActiveRecord::Base
 
-  has_many :categories_products
-  has_many :categories, :through => :categories_products
+  has_many :category_products
+  has_many :categories, :through => :category_products
   # include Presentation::ProductPresenter
   # include ProductFilters
 
@@ -19,13 +19,13 @@ class Product < ActiveRecord::Base
            class_name: 'Variant'
 
 
-
+  accepts_nested_attributes_for :category_products, allow_destroy: true
   # accepts_nested_attributes_for :variants,           reject_if: proc { |properties| properties['sku'].blank? }
   # accepts_nested_attributes_for :@product_attributes, reject_if: proc { |properties| properties['description'].blank? }, allow_destroy: true
   # accepts_nested_attributes_for :images,             reject_if: proc { |t| (t['photo'].nil? && t['photo_from_link'].blank? && t['id'].blank?) }, allow_destroy: true
 
   validates :name,                  presence: true,   length: { maximum: 165 }
-  validates_presence_of :categories
+  validates_presence_of :category_id
 
   def hero_variant
     active_variants.detect{|v| v.master } || active_variants.first
