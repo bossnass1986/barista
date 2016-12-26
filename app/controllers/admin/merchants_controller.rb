@@ -6,18 +6,16 @@ class Admin::MerchantsController < Admin::BaseController
   end
 
   def new
-    @merchant_type =  MerchantType.all
     @merchant = Merchant.new
-    @states = State.form_selector
-    @products = Product.order(:name => 'asc')
-    @properties = Property.where(property_set_id: 1)
+    @merchant_type =  MerchantType.all
+    form_info
     @merchant.build_account
   end
 
   def create
     @merchant = Merchant.new(allowed_params)
-    @states = State.form_selector
     @merchant_type =  MerchantType.all
+    form_info
     if @merchant.save
       flash[:notice] = "#{@merchant.name} was created successfully. What’s next?"
       redirect_to :action => :index
@@ -30,9 +28,7 @@ class Admin::MerchantsController < Admin::BaseController
   def edit
     @merchant = Merchant.find(params[:id])
     @merchant.build_account
-    @states = State.form_selector
-    @products = Product.all
-    @properties = Property.where(property_set_id: 1)
+    form_info
   end
 
   def update
@@ -48,6 +44,12 @@ class Admin::MerchantsController < Admin::BaseController
   end
 
   private
+
+  def form_info
+    @states = State.form_selector
+    @products = Product.order(:name => 'asc')
+    @properties = Property.where(property_set_id: 1)
+  end
 
   def allowed_params
     params.require(:merchant).permit(:merchant_type_id, :name, :email, :terms_of_service, :address, :city, :postal_code, :state_id, :country_id,

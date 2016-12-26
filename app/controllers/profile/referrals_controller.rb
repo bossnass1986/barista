@@ -9,7 +9,7 @@ class Profile::ReferralsController < ApplicationController
     @referral = current_user.referrals.new(allowed_params)
     @referral.referral_type_id = ReferralType::DIRECT_WEB_FORM_ID
     if @referral.save
-      redirect_to myaccount_referrals_url, notice: 'Successfully created referral.'
+      redirect_to profile_referrals_url, notice: 'Successfully created referral.'
     else
       @referrals = current_user.referrals
       render :index

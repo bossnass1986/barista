@@ -2,7 +2,7 @@
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
-  = form.collection_check_boxes(:product_ids, Product.all, :id, :name) do |product|
+  = form.collection_check_boxes(:product_ids, @products, :id, :name) do |product|
     .mdl-cell.mdl-cell--4-col.item-border.card-item-type--volume
       .mdl-cell.mdl-cell--1-col.mdl-cell--10-offset
         = product.label class: :'mdl-switch mdl-js-switch mdl-js-ripple-effect' do
@@ -27,11 +27,11 @@
         .mdl-cell.mdl-cell--12-col
           h4.teal-heading= PropertySet.find(property_set).try(:name)
       .mdl-grid--no-spacing
-        .mdl-cell.mdl-cell--12-col
+        .mdl-cell.mdl-cell--6-col
           - properties.each do |property|
             //- checked = PropertySet.find(property_set).try(:name) && PropertySet.find(properties).include?(property)
             - checked = false
-            label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=property.id
-              /= property_fields.check_box :property
-              = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.id
-              span.mdl-switch__label= property.name
+            label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=property.id
+              = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-checkbox__input', :id => property.id
+              span.mdl-checkbox__label= property.name
+        .mdl-cell.mdl-cell--6-col

@@ -3,7 +3,6 @@ class CreateMerchantProducts < ActiveRecord::Migration
     create_table :merchant_products do |t|
       t.integer :product_id, limit: 4
       t.integer :merchant_id, limit: 4
-      t.boolean :active, default: true
 
       t.timestamps null: false
     end

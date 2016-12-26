@@ -63,7 +63,7 @@ class Notifier < ActionMailer::Base
   def referral_invite(referral_id, inviter_id)
     @user     = User.find(inviter_id)
     @referral = Referral.find(referral_id)
-    @url      = root_url
+    @url = 'http://www.cup.town'
 
     mail(:to => 'paul.mcguane@me.com',
          :subject => "Referral from #{@user.name}")

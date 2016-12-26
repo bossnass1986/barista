@@ -39,8 +39,8 @@
     <schema id="11" parent="2" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>12088</introspection-state-number>
-      <introspection-timestamp>2016-12-24.22:12:19.030</introspection-timestamp>
+      <introspection-state-number>12790</introspection-state-number>
+      <introspection-timestamp>2016-12-26.23:00:03.408</introspection-timestamp>
     </schema>
     <schema id="12" parent="2" name="pg_catalog">
       <object-id>11</object-id>
@@ -350,320 +350,320 @@
       <state-number>6490</state-number>
     </table>
     <sequence id="90" parent="11" name="accounts_id_seq">
-      <object-id>26468</object-id>
-      <state-number>11614</state-number>
+      <object-id>27570</object-id>
+      <state-number>12647</state-number>
     </sequence>
     <sequence id="91" parent="11" name="ahoy_events_id_seq">
-      <object-id>26481</object-id>
-      <state-number>11617</state-number>
+      <object-id>27583</object-id>
+      <state-number>12650</state-number>
     </sequence>
     <sequence id="92" parent="11" name="badges_sashes_id_seq">
-      <object-id>26495</object-id>
-      <state-number>11622</state-number>
+      <object-id>27597</object-id>
+      <state-number>12655</state-number>
     </sequence>
     <sequence id="93" parent="11" name="cart_items_id_seq">
-      <object-id>26507</object-id>
-      <state-number>11627</state-number>
+      <object-id>27609</object-id>
+      <state-number>12660</state-number>
     </sequence>
     <sequence id="94" parent="11" name="carts_id_seq">
-      <object-id>26521</object-id>
-      <state-number>11633</state-number>
+      <object-id>27623</object-id>
+      <state-number>12666</state-number>
     </sequence>
     <sequence id="95" parent="11" name="categories_id_seq">
-      <object-id>26531</object-id>
-      <state-number>11637</state-number>
+      <object-id>27633</object-id>
+      <state-number>12670</state-number>
     </sequence>
     <sequence id="96" parent="11" name="countries_id_seq">
-      <object-id>26546</object-id>
-      <state-number>11644</state-number>
+      <object-id>27651</object-id>
+      <state-number>12679</state-number>
     </sequence>
     <sequence id="97" parent="11" name="coupons_id_seq">
-      <object-id>26557</object-id>
-      <state-number>11648</state-number>
+      <object-id>27662</object-id>
+      <state-number>12683</state-number>
     </sequence>
     <sequence id="98" parent="11" name="merchant_products_id_seq">
-      <object-id>26572</object-id>
-      <state-number>11652</state-number>
+      <object-id>27677</object-id>
+      <state-number>12687</state-number>
     </sequence>
     <sequence id="99" parent="11" name="merchant_types_id_seq">
-      <object-id>26581</object-id>
-      <state-number>11654</state-number>
+      <object-id>27686</object-id>
+      <state-number>12689</state-number>
     </sequence>
     <sequence id="100" parent="11" name="merchants_id_seq">
-      <object-id>26592</object-id>
-      <state-number>11656</state-number>
+      <object-id>27697</object-id>
+      <state-number>12691</state-number>
     </sequence>
     <sequence id="101" parent="11" name="merit_actions_id_seq">
-      <object-id>26606</object-id>
-      <state-number>11660</state-number>
+      <object-id>27711</object-id>
+      <state-number>12695</state-number>
     </sequence>
     <sequence id="102" parent="11" name="merit_activity_logs_id_seq">
-      <object-id>26619</object-id>
-      <state-number>11662</state-number>
+      <object-id>27724</object-id>
+      <state-number>12697</state-number>
     </sequence>
     <sequence id="103" parent="11" name="merit_score_points_id_seq">
-      <object-id>26630</object-id>
-      <state-number>11664</state-number>
+      <object-id>27735</object-id>
+      <state-number>12699</state-number>
     </sequence>
     <sequence id="104" parent="11" name="merit_scores_id_seq">
-      <object-id>26642</object-id>
-      <state-number>11666</state-number>
+      <object-id>27747</object-id>
+      <state-number>12701</state-number>
     </sequence>
     <sequence id="105" parent="11" name="order_items_id_seq">
-      <object-id>26654</object-id>
-      <state-number>11668</state-number>
+      <object-id>27759</object-id>
+      <state-number>12703</state-number>
     </sequence>
     <sequence id="106" parent="11" name="orders_id_seq">
-      <object-id>26665</object-id>
-      <state-number>11673</state-number>
+      <object-id>27770</object-id>
+      <state-number>12708</state-number>
     </sequence>
     <sequence id="107" parent="11" name="payment_methods_id_seq">
-      <object-id>26684</object-id>
-      <state-number>11681</state-number>
+      <object-id>27789</object-id>
+      <state-number>12716</state-number>
     </sequence>
     <sequence id="108" parent="11" name="phone_types_id_seq">
-      <object-id>26698</object-id>
-      <state-number>11686</state-number>
+      <object-id>27803</object-id>
+      <state-number>12721</state-number>
     </sequence>
     <sequence id="109" parent="11" name="phones_id_seq">
-      <object-id>26709</object-id>
-      <state-number>11688</state-number>
+      <object-id>27814</object-id>
+      <state-number>12723</state-number>
     </sequence>
     <sequence id="110" parent="11" name="products_id_seq">
-      <object-id>26720</object-id>
-      <state-number>11690</state-number>
+      <object-id>27825</object-id>
+      <state-number>12725</state-number>
     </sequence>
     <sequence id="111" parent="11" name="properties_id_seq">
-      <object-id>26732</object-id>
-      <state-number>11694</state-number>
+      <object-id>27837</object-id>
+      <state-number>12729</state-number>
     </sequence>
     <sequence id="112" parent="11" name="property_sets_id_seq">
-      <object-id>26741</object-id>
-      <state-number>11696</state-number>
+      <object-id>27846</object-id>
+      <state-number>12731</state-number>
     </sequence>
     <sequence id="113" parent="11" name="referral_bonus_id_seq">
-      <object-id>26750</object-id>
-      <state-number>11698</state-number>
+      <object-id>27855</object-id>
+      <state-number>12733</state-number>
     </sequence>
     <sequence id="114" parent="11" name="referral_programs_id_seq">
-      <object-id>26761</object-id>
-      <state-number>11700</state-number>
+      <object-id>27866</object-id>
+      <state-number>12735</state-number>
     </sequence>
     <sequence id="115" parent="11" name="referral_types_id_seq">
-      <object-id>26773</object-id>
-      <state-number>11703</state-number>
+      <object-id>27878</object-id>
+      <state-number>12738</state-number>
     </sequence>
     <sequence id="116" parent="11" name="referrals_id_seq">
-      <object-id>26784</object-id>
-      <state-number>11705</state-number>
+      <object-id>27889</object-id>
+      <state-number>12740</state-number>
     </sequence>
     <sequence id="117" parent="11" name="roles_id_seq">
-      <object-id>26801</object-id>
-      <state-number>11712</state-number>
+      <object-id>27906</object-id>
+      <state-number>12747</state-number>
     </sequence>
     <sequence id="118" parent="11" name="sashes_id_seq">
-      <object-id>26814</object-id>
-      <state-number>11716</state-number>
+      <object-id>27919</object-id>
+      <state-number>12751</state-number>
     </sequence>
     <sequence id="119" parent="11" name="states_id_seq">
-      <object-id>26822</object-id>
-      <state-number>11718</state-number>
+      <object-id>27927</object-id>
+      <state-number>12753</state-number>
     </sequence>
     <sequence id="120" parent="11" name="store_credits_id_seq">
-      <object-id>26836</object-id>
-      <state-number>11723</state-number>
+      <object-id>27941</object-id>
+      <state-number>12758</state-number>
     </sequence>
     <sequence id="121" parent="11" name="tax_rates_id_seq">
-      <object-id>26846</object-id>
-      <state-number>11726</state-number>
+      <object-id>27951</object-id>
+      <state-number>12761</state-number>
     </sequence>
     <sequence id="122" parent="11" name="trading_hours_id_seq">
-      <object-id>26862</object-id>
-      <state-number>11730</state-number>
+      <object-id>27967</object-id>
+      <state-number>12765</state-number>
     </sequence>
     <sequence id="123" parent="11" name="users_id_seq">
-      <object-id>26871</object-id>
-      <state-number>11733</state-number>
+      <object-id>27976</object-id>
+      <state-number>12768</state-number>
     </sequence>
     <sequence id="124" parent="11" name="variant_merchants_id_seq">
-      <object-id>26895</object-id>
-      <state-number>11744</state-number>
+      <object-id>28000</object-id>
+      <state-number>12779</state-number>
     </sequence>
     <sequence id="125" parent="11" name="variant_properties_id_seq">
-      <object-id>26904</object-id>
-      <state-number>11746</state-number>
+      <object-id>28009</object-id>
+      <state-number>12781</state-number>
     </sequence>
     <sequence id="126" parent="11" name="variants_id_seq">
-      <object-id>26915</object-id>
-      <state-number>11750</state-number>
+      <object-id>28020</object-id>
+      <state-number>12785</state-number>
     </sequence>
     <sequence id="127" parent="11" name="visits_id_seq">
-      <object-id>26927</object-id>
-      <state-number>11753</state-number>
+      <object-id>28032</object-id>
+      <state-number>12788</state-number>
     </sequence>
     <table id="128" parent="11" name="accounts">
-      <object-id>26470</object-id>
-      <state-number>11614</state-number>
+      <object-id>27572</object-id>
+      <state-number>12647</state-number>
     </table>
     <table id="129" parent="11" name="ahoy_events">
-      <object-id>26483</object-id>
-      <state-number>11617</state-number>
+      <object-id>27585</object-id>
+      <state-number>12650</state-number>
     </table>
     <table id="130" parent="11" name="badges_sashes">
-      <object-id>26497</object-id>
-      <state-number>11622</state-number>
+      <object-id>27599</object-id>
+      <state-number>12655</state-number>
     </table>
     <table id="131" parent="11" name="cart_items">
-      <object-id>26509</object-id>
-      <state-number>11627</state-number>
+      <object-id>27611</object-id>
+      <state-number>12660</state-number>
     </table>
     <table id="132" parent="11" name="carts">
-      <object-id>26523</object-id>
-      <state-number>11633</state-number>
+      <object-id>27625</object-id>
+      <state-number>12666</state-number>
     </table>
     <table id="133" parent="11" name="categories">
-      <object-id>26533</object-id>
-      <state-number>11637</state-number>
+      <object-id>27635</object-id>
+      <state-number>12670</state-number>
     </table>
     <table id="134" parent="11" name="category_products">
-      <object-id>26541</object-id>
-      <state-number>12088</state-number>
+      <object-id>27646</object-id>
+      <state-number>12675</state-number>
     </table>
     <table id="135" parent="11" name="countries">
-      <object-id>26548</object-id>
-      <state-number>11644</state-number>
+      <object-id>27653</object-id>
+      <state-number>12679</state-number>
     </table>
     <table id="136" parent="11" name="coupons">
-      <object-id>26559</object-id>
-      <state-number>11648</state-number>
+      <object-id>27664</object-id>
+      <state-number>12683</state-number>
     </table>
     <table id="137" parent="11" name="merchant_products">
-      <object-id>26574</object-id>
-      <state-number>11652</state-number>
+      <object-id>27679</object-id>
+      <state-number>12687</state-number>
     </table>
     <table id="138" parent="11" name="merchant_types">
-      <object-id>26583</object-id>
-      <state-number>11654</state-number>
+      <object-id>27688</object-id>
+      <state-number>12689</state-number>
     </table>
     <table id="139" parent="11" name="merchants">
-      <object-id>26594</object-id>
-      <state-number>11656</state-number>
+      <object-id>27699</object-id>
+      <state-number>12691</state-number>
     </table>
     <table id="140" parent="11" name="merit_actions">
-      <object-id>26608</object-id>
-      <state-number>11660</state-number>
+      <object-id>27713</object-id>
+      <state-number>12695</state-number>
     </table>
     <table id="141" parent="11" name="merit_activity_logs">
-      <object-id>26621</object-id>
-      <state-number>11662</state-number>
+      <object-id>27726</object-id>
+      <state-number>12697</state-number>
     </table>
     <table id="142" parent="11" name="merit_score_points">
-      <object-id>26632</object-id>
-      <state-number>11664</state-number>
+      <object-id>27737</object-id>
+      <state-number>12699</state-number>
     </table>
     <table id="143" parent="11" name="merit_scores">
-      <object-id>26644</object-id>
-      <state-number>11666</state-number>
+      <object-id>27749</object-id>
+      <state-number>12701</state-number>
     </table>
     <table id="144" parent="11" name="order_items">
-      <object-id>26656</object-id>
-      <state-number>11668</state-number>
+      <object-id>27761</object-id>
+      <state-number>12703</state-number>
     </table>
     <table id="145" parent="11" name="orders">
-      <object-id>26667</object-id>
-      <state-number>11673</state-number>
+      <object-id>27772</object-id>
+      <state-number>12708</state-number>
     </table>
     <table id="146" parent="11" name="payment_methods">
-      <object-id>26686</object-id>
-      <state-number>11681</state-number>
+      <object-id>27791</object-id>
+      <state-number>12716</state-number>
     </table>
     <table id="147" parent="11" name="phone_types">
-      <object-id>26700</object-id>
-      <state-number>11686</state-number>
+      <object-id>27805</object-id>
+      <state-number>12721</state-number>
     </table>
     <table id="148" parent="11" name="phones">
-      <object-id>26711</object-id>
-      <state-number>11688</state-number>
+      <object-id>27816</object-id>
+      <state-number>12723</state-number>
     </table>
     <table id="149" parent="11" name="products">
-      <object-id>26722</object-id>
-      <state-number>11690</state-number>
+      <object-id>27827</object-id>
+      <state-number>12725</state-number>
     </table>
     <table id="150" parent="11" name="properties">
-      <object-id>26734</object-id>
-      <state-number>11694</state-number>
+      <object-id>27839</object-id>
+      <state-number>12729</state-number>
     </table>
     <table id="151" parent="11" name="property_sets">
-      <object-id>26743</object-id>
-      <state-number>11696</state-number>
+      <object-id>27848</object-id>
+      <state-number>12731</state-number>
     </table>
     <table id="152" parent="11" name="referral_bonus">
-      <object-id>26752</object-id>
-      <state-number>11698</state-number>
+      <object-id>27857</object-id>
+      <state-number>12733</state-number>
     </table>
     <table id="153" parent="11" name="referral_programs">
-      <object-id>26763</object-id>
-      <state-number>11700</state-number>
+      <object-id>27868</object-id>
+      <state-number>12735</state-number>
     </table>
     <table id="154" parent="11" name="referral_types">
-      <object-id>26775</object-id>
-      <state-number>11703</state-number>
+      <object-id>27880</object-id>
+      <state-number>12738</state-number>
     </table>
     <table id="155" parent="11" name="referrals">
-      <object-id>26786</object-id>
-      <state-number>11705</state-number>
+      <object-id>27891</object-id>
+      <state-number>12740</state-number>
     </table>
     <table id="156" parent="11" name="roles">
-      <object-id>26803</object-id>
-      <state-number>11712</state-number>
+      <object-id>27908</object-id>
+      <state-number>12747</state-number>
     </table>
     <table id="157" parent="11" name="sashes">
-      <object-id>26816</object-id>
-      <state-number>11716</state-number>
+      <object-id>27921</object-id>
+      <state-number>12751</state-number>
     </table>
     <table id="158" parent="11" name="schema_migrations">
       <object-id>16827</object-id>
       <state-number>961</state-number>
     </table>
     <table id="159" parent="11" name="states">
-      <object-id>26824</object-id>
-      <state-number>11718</state-number>
+      <object-id>27929</object-id>
+      <state-number>12753</state-number>
     </table>
     <table id="160" parent="11" name="store_credits">
-      <object-id>26838</object-id>
-      <state-number>11723</state-number>
+      <object-id>27943</object-id>
+      <state-number>12758</state-number>
     </table>
     <table id="161" parent="11" name="tax_rates">
-      <object-id>26848</object-id>
-      <state-number>11726</state-number>
+      <object-id>27953</object-id>
+      <state-number>12761</state-number>
     </table>
     <table id="162" parent="11" name="trading_hours">
-      <object-id>26864</object-id>
-      <state-number>11730</state-number>
+      <object-id>27969</object-id>
+      <state-number>12765</state-number>
     </table>
     <table id="163" parent="11" name="users">
-      <object-id>26873</object-id>
-      <state-number>11733</state-number>
+      <object-id>27978</object-id>
+      <state-number>12768</state-number>
     </table>
     <table id="164" parent="11" name="users_roles">
-      <object-id>26891</object-id>
-      <state-number>11741</state-number>
+      <object-id>27996</object-id>
+      <state-number>12776</state-number>
     </table>
     <table id="165" parent="11" name="variant_merchants">
-      <object-id>26897</object-id>
-      <state-number>11744</state-number>
+      <object-id>28002</object-id>
+      <state-number>12779</state-number>
     </table>
     <table id="166" parent="11" name="variant_properties">
-      <object-id>26906</object-id>
-      <state-number>11746</state-number>
+      <object-id>28011</object-id>
+      <state-number>12781</state-number>
     </table>
     <table id="167" parent="11" name="variants">
-      <object-id>26917</object-id>
-      <state-number>11750</state-number>
+      <object-id>28022</object-id>
+      <state-number>12785</state-number>
     </table>
     <table id="168" parent="11" name="visits">
-      <object-id>26929</object-id>
-      <state-number>11753</state-number>
+      <object-id>28034</object-id>
+      <state-number>12788</state-number>
     </table>
     <column id="169" parent="53" name="id">
       <state-number>6363</state-number>
@@ -2732,2289 +2732,2277 @@ user_id</columns>
       <primary>1</primary>
     </key>
     <column id="590" parent="128" name="id">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;accounts_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="591" parent="128" name="merchant_id">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="592" parent="128" name="account_name">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="593" parent="128" name="bsb">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="594" parent="128" name="account_number">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="595" parent="128" name="account_type">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="596" parent="128" name="charge">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <mandatory>1</mandatory>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>4.4</default-expression>
     </column>
     <column id="597" parent="128" name="active">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <data-type>boolean|0</data-type>
     </column>
     <column id="598" parent="128" name="created_at">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="599" parent="128" name="updated_at">
-      <state-number>11614</state-number>
+      <state-number>12647</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="600" parent="128" name="accounts_pkey">
-      <object-id>26478</object-id>
+      <object-id>27580</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="601" parent="128" name="index_accounts_on_merchant_id">
-      <object-id>26480</object-id>
+      <object-id>27582</object-id>
       <columns>merchant_id</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="602" parent="128" name="accounts_pkey">
-      <object-id>26479</object-id>
+      <object-id>27581</object-id>
       <columns>id</columns>
       <underlying-index>accounts_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="603" parent="129" name="id">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;ahoy_events_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="604" parent="129" name="visit_id">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="605" parent="129" name="user_id">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="606" parent="129" name="name">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="607" parent="129" name="properties">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <data-type>jsonb|0</data-type>
     </column>
     <column id="608" parent="129" name="time">
-      <state-number>11617</state-number>
+      <state-number>12650</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="609" parent="129" name="ahoy_events_pkey">
-      <object-id>26490</object-id>
+      <object-id>27592</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="610" parent="129" name="index_ahoy_events_on_visit_id_and_name">
-      <object-id>26494</object-id>
+      <object-id>27596</object-id>
       <columns>visit_id
 name</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="611" parent="129" name="index_ahoy_events_on_user_id_and_name">
-      <object-id>26493</object-id>
+      <object-id>27595</object-id>
       <columns>user_id
 name</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="612" parent="129" name="index_ahoy_events_on_name_and_time">
-      <object-id>26492</object-id>
+      <object-id>27594</object-id>
       <columns>name
 time</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="613" parent="129" name="ahoy_events_pkey">
-      <object-id>26491</object-id>
+      <object-id>27593</object-id>
       <columns>id</columns>
       <underlying-index>ahoy_events_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="614" parent="130" name="id">
-      <state-number>11622</state-number>
+      <state-number>12655</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;badges_sashes_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="615" parent="130" name="badge_id">
-      <state-number>11622</state-number>
+      <state-number>12655</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="616" parent="130" name="sash_id">
-      <state-number>11622</state-number>
+      <state-number>12655</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="617" parent="130" name="notified_user">
-      <state-number>11622</state-number>
+      <state-number>12655</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
     <column id="618" parent="130" name="created_at">
-      <state-number>11622</state-number>
+      <state-number>12655</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="619" parent="130" name="badges_sashes_pkey">
-      <object-id>26502</object-id>
+      <object-id>27604</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="620" parent="130" name="index_badges_sashes_on_badge_id_and_sash_id">
-      <object-id>26504</object-id>
+      <object-id>27606</object-id>
       <columns>badge_id
 sash_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="621" parent="130" name="index_badges_sashes_on_badge_id">
-      <object-id>26505</object-id>
+      <object-id>27607</object-id>
       <columns>badge_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="622" parent="130" name="index_badges_sashes_on_sash_id">
-      <object-id>26506</object-id>
+      <object-id>27608</object-id>
       <columns>sash_id</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="623" parent="130" name="badges_sashes_pkey">
-      <object-id>26503</object-id>
+      <object-id>27605</object-id>
       <columns>id</columns>
       <underlying-index>badges_sashes_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="624" parent="131" name="id">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;cart_items_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="625" parent="131" name="user_id">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="626" parent="131" name="cart_id">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="627" parent="131" name="variant_id">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <column id="628" parent="131" name="quantity">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>integer|0</data-type>
       <default-expression>1</default-expression>
     </column>
     <column id="629" parent="131" name="item_type_id">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <column id="630" parent="131" name="active">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
     <column id="631" parent="131" name="created_at">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="632" parent="131" name="updated_at">
-      <state-number>11627</state-number>
+      <state-number>12660</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="633" parent="131" name="cart_items_pkey">
-      <object-id>26515</object-id>
+      <object-id>27617</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="634" parent="131" name="index_cart_items_on_user_id">
-      <object-id>26519</object-id>
+      <object-id>27621</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="635" parent="131" name="index_cart_items_on_cart_id">
-      <object-id>26517</object-id>
+      <object-id>27619</object-id>
       <columns>cart_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="636" parent="131" name="index_cart_items_on_variant_id">
-      <object-id>26520</object-id>
+      <object-id>27622</object-id>
       <columns>variant_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="637" parent="131" name="index_cart_items_on_item_type_id">
-      <object-id>26518</object-id>
+      <object-id>27620</object-id>
       <columns>item_type_id</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="638" parent="131" name="cart_items_pkey">
-      <object-id>26516</object-id>
+      <object-id>27618</object-id>
       <columns>id</columns>
       <underlying-index>cart_items_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="639" parent="132" name="id">
-      <state-number>11633</state-number>
+      <state-number>12666</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;carts_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="640" parent="132" name="user_id">
-      <state-number>11633</state-number>
+      <state-number>12666</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="641" parent="132" name="customer_id">
-      <state-number>11633</state-number>
+      <state-number>12666</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="642" parent="132" name="created_at">
-      <state-number>11633</state-number>
+      <state-number>12666</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="643" parent="132" name="updated_at">
-      <state-number>11633</state-number>
+      <state-number>12666</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="644" parent="132" name="carts_pkey">
-      <object-id>26527</object-id>
+      <object-id>27629</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="645" parent="132" name="index_carts_on_user_id">
-      <object-id>26530</object-id>
+      <object-id>27632</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="646" parent="132" name="index_carts_on_customer_id">
-      <object-id>26529</object-id>
+      <object-id>27631</object-id>
       <columns>customer_id</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="647" parent="132" name="carts_pkey">
-      <object-id>26528</object-id>
+      <object-id>27630</object-id>
       <columns>id</columns>
       <underlying-index>carts_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="648" parent="133" name="id">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;categories_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="649" parent="133" name="name">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
     <column id="650" parent="133" name="meta_keywords">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
     <column id="651" parent="133" name="meta_description">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <data-type>varchar(160)|0</data-type>
     </column>
     <column id="652" parent="133" name="active">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
     <column id="653" parent="133" name="created_at">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="654" parent="133" name="updated_at">
-      <state-number>11637</state-number>
+      <state-number>12670</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="655" parent="133" name="categories_pkey">
-      <object-id>26538</object-id>
+      <object-id>27640</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="656" parent="133" name="index_categories_on_name">
-      <object-id>26540</object-id>
+      <object-id>27642</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="657" parent="133" name="categories_pkey">
-      <object-id>26539</object-id>
+      <object-id>27641</object-id>
       <columns>id</columns>
       <underlying-index>categories_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="658" parent="134" name="category_id">
-      <state-number>11640</state-number>
+      <state-number>12675</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <column id="659" parent="134" name="product_id">
-      <state-number>11640</state-number>
+      <state-number>12675</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <index id="660" parent="134" name="index_categories_products_on_category_id_and_product_id">
-      <object-id>26544</object-id>
+      <object-id>27649</object-id>
       <columns>category_id
 product_id</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="661" parent="134" name="index_categories_products_on_product_id_and_category_id">
-      <object-id>26545</object-id>
+      <object-id>27650</object-id>
       <columns>product_id
 category_id</columns>
       <desc-columns></desc-columns>
     </index>
     <column id="662" parent="135" name="id">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;countries_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="663" parent="135" name="name">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <data-type>varchar(50)|0</data-type>
     </column>
     <column id="664" parent="135" name="abbreviation">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <data-type>varchar(3)|0</data-type>
     </column>
     <column id="665" parent="135" name="active">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
     <column id="666" parent="135" name="created_at">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="667" parent="135" name="updated_at">
-      <state-number>11644</state-number>
+      <state-number>12679</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="668" parent="135" name="countries_pkey">
-      <object-id>26553</object-id>
+      <object-id>27658</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="669" parent="135" name="index_countries_on_name">
-      <object-id>26556</object-id>
+      <object-id>27661</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="670" parent="135" name="index_countries_on_active">
-      <object-id>26555</object-id>
+      <object-id>27660</object-id>
       <columns>active</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="671" parent="135" name="countries_pkey">
-      <object-id>26554</object-id>
+      <object-id>27659</object-id>
       <columns>id</columns>
       <underlying-index>countries_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="672" parent="136" name="id">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;coupons_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="673" parent="136" name="type">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
     <column id="674" parent="136" name="code">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
     <column id="675" parent="136" name="amount">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>0.0</default-expression>
     </column>
     <column id="676" parent="136" name="minimum_value">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>numeric(8,2)|0</data-type>
     </column>
     <column id="677" parent="136" name="percent">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="678" parent="136" name="description">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="679" parent="136" name="combine">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
     <column id="680" parent="136" name="starts_at">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="681" parent="136" name="expires_at">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="682" parent="136" name="created_at">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="683" parent="136" name="updated_at">
-      <state-number>11648</state-number>
+      <state-number>12683</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="684" parent="136" name="coupons_pkey">
-      <object-id>26568</object-id>
+      <object-id>27673</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="685" parent="136" name="index_coupons_on_code">
-      <object-id>26570</object-id>
+      <object-id>27675</object-id>
       <columns>code</columns>
       <desc-columns></desc-columns>
     </index>
     <index id="686" parent="136" name="index_coupons_on_expires_at">
-      <object-id>26571</object-id>
+      <object-id>27676</object-id>
       <columns>expires_at</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="687" parent="136" name="coupons_pkey">
-      <object-id>26569</object-id>
+      <object-id>27674</object-id>
       <columns>id</columns>
       <underlying-index>coupons_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="688" parent="137" name="id">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merchant_products_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="689" parent="137" name="product_id">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="690" parent="137" name="merchant_id">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="691" parent="137" name="active">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
     <column id="692" parent="137" name="created_at">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="693" parent="137" name="updated_at">
-      <state-number>11652</state-number>
+      <state-number>12687</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="694" parent="137" name="merchant_products_pkey">
-      <object-id>26579</object-id>
-      <columns>id</columns>
-      <desc-columns></desc-columns>
-      <unique>1</unique>
-    </index>
-    <key id="695" parent="137" name="merchant_products_pkey">
-      <object-id>26580</object-id>
-      <columns>id</columns>
-      <underlying-index>merchant_products_pkey</underlying-index>
-      <primary>1</primary>
-    </key>
-    <column id="696" parent="138" name="id">
-      <state-number>11654</state-number>
+    <column id="694" parent="138" name="id">
+      <state-number>12689</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merchant_types_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="697" parent="138" name="name">
-      <state-number>11654</state-number>
+    <column id="695" parent="138" name="name">
+      <state-number>12689</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="698" parent="138" name="active">
-      <state-number>11654</state-number>
+    <column id="696" parent="138" name="active">
+      <state-number>12689</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="699" parent="138" name="created_at">
-      <state-number>11654</state-number>
+    <column id="697" parent="138" name="created_at">
+      <state-number>12689</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="700" parent="138" name="updated_at">
-      <state-number>11654</state-number>
+    <column id="698" parent="138" name="updated_at">
+      <state-number>12689</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="701" parent="138" name="merchant_types_pkey">
-      <object-id>26590</object-id>
+    <index id="699" parent="138" name="merchant_types_pkey">
+      <object-id>27695</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="702" parent="138" name="merchant_types_pkey">
-      <object-id>26591</object-id>
+    <key id="700" parent="138" name="merchant_types_pkey">
+      <object-id>27696</object-id>
       <columns>id</columns>
       <underlying-index>merchant_types_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="703" parent="139" name="id">
-      <state-number>11656</state-number>
+    <column id="701" parent="139" name="id">
+      <state-number>12691</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merchants_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="704" parent="139" name="name">
-      <state-number>11656</state-number>
+    <column id="702" parent="139" name="name">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="705" parent="139" name="email">
-      <state-number>11656</state-number>
+    <column id="703" parent="139" name="email">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="706" parent="139" name="address">
-      <state-number>11656</state-number>
+    <column id="704" parent="139" name="address">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="707" parent="139" name="city">
-      <state-number>11656</state-number>
+    <column id="705" parent="139" name="city">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="708" parent="139" name="region">
-      <state-number>11656</state-number>
+    <column id="706" parent="139" name="region">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="709" parent="139" name="postal_code">
-      <state-number>11656</state-number>
+    <column id="707" parent="139" name="postal_code">
+      <state-number>12691</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="710" parent="139" name="state_id">
-      <state-number>11656</state-number>
+    <column id="708" parent="139" name="state_id">
+      <state-number>12691</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="711" parent="139" name="country_id">
-      <state-number>11656</state-number>
+    <column id="709" parent="139" name="country_id">
+      <state-number>12691</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="712" parent="139" name="latitude">
-      <state-number>11656</state-number>
+    <column id="710" parent="139" name="latitude">
+      <state-number>12691</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="713" parent="139" name="longitude">
-      <state-number>11656</state-number>
+    <column id="711" parent="139" name="longitude">
+      <state-number>12691</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="714" parent="139" name="account_id">
-      <state-number>11656</state-number>
+    <column id="712" parent="139" name="account_id">
+      <state-number>12691</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="715" parent="139" name="merchant_type_id">
-      <state-number>11656</state-number>
+    <column id="713" parent="139" name="merchant_type_id">
+      <state-number>12691</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="716" parent="139" name="permalink">
-      <state-number>11656</state-number>
+    <column id="714" parent="139" name="permalink">
+      <state-number>12691</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="717" parent="139" name="available_at">
-      <state-number>11656</state-number>
+    <column id="715" parent="139" name="available_at">
+      <state-number>12691</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="718" parent="139" name="deleted_at">
-      <state-number>11656</state-number>
+    <column id="716" parent="139" name="deleted_at">
+      <state-number>12691</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="719" parent="139" name="keywords">
-      <state-number>11656</state-number>
+    <column id="717" parent="139" name="keywords">
+      <state-number>12691</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="720" parent="139" name="description">
-      <state-number>11656</state-number>
+    <column id="718" parent="139" name="description">
+      <state-number>12691</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="721" parent="139" name="featured">
-      <state-number>11656</state-number>
+    <column id="719" parent="139" name="featured">
+      <state-number>12691</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="722" parent="139" name="created_at">
-      <state-number>11656</state-number>
+    <column id="720" parent="139" name="created_at">
+      <state-number>12691</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="723" parent="139" name="updated_at">
-      <state-number>11656</state-number>
+    <column id="721" parent="139" name="updated_at">
+      <state-number>12691</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="724" parent="139" name="merchants_pkey">
-      <object-id>26602</object-id>
+    <index id="722" parent="139" name="merchants_pkey">
+      <object-id>27707</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="725" parent="139" name="index_merchants_on_permalink">
-      <object-id>26605</object-id>
+    <index id="723" parent="139" name="index_merchants_on_permalink">
+      <object-id>27710</object-id>
       <columns>permalink</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="726" parent="139" name="index_merchants_on_name">
-      <object-id>26604</object-id>
+    <index id="724" parent="139" name="index_merchants_on_name">
+      <object-id>27709</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="727" parent="139" name="merchants_pkey">
-      <object-id>26603</object-id>
+    <key id="725" parent="139" name="merchants_pkey">
+      <object-id>27708</object-id>
       <columns>id</columns>
       <underlying-index>merchants_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="728" parent="140" name="id">
-      <state-number>11660</state-number>
+    <column id="726" parent="140" name="id">
+      <state-number>12695</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merit_actions_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="729" parent="140" name="user_id">
-      <state-number>11660</state-number>
+    <column id="727" parent="140" name="user_id">
+      <state-number>12695</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="730" parent="140" name="action_method">
-      <state-number>11660</state-number>
+    <column id="728" parent="140" name="action_method">
+      <state-number>12695</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="731" parent="140" name="action_value">
-      <state-number>11660</state-number>
+    <column id="729" parent="140" name="action_value">
+      <state-number>12695</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="732" parent="140" name="had_errors">
-      <state-number>11660</state-number>
+    <column id="730" parent="140" name="had_errors">
+      <state-number>12695</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="733" parent="140" name="target_model">
-      <state-number>11660</state-number>
+    <column id="731" parent="140" name="target_model">
+      <state-number>12695</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="734" parent="140" name="target_id">
-      <state-number>11660</state-number>
+    <column id="732" parent="140" name="target_id">
+      <state-number>12695</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="735" parent="140" name="target_data">
-      <state-number>11660</state-number>
+    <column id="733" parent="140" name="target_data">
+      <state-number>12695</state-number>
       <data-type>text|0</data-type>
     </column>
-    <column id="736" parent="140" name="processed">
-      <state-number>11660</state-number>
+    <column id="734" parent="140" name="processed">
+      <state-number>12695</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="737" parent="140" name="created_at">
-      <state-number>11660</state-number>
+    <column id="735" parent="140" name="created_at">
+      <state-number>12695</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="738" parent="140" name="updated_at">
-      <state-number>11660</state-number>
+    <column id="736" parent="140" name="updated_at">
+      <state-number>12695</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="739" parent="140" name="merit_actions_pkey">
-      <object-id>26617</object-id>
+    <index id="737" parent="140" name="merit_actions_pkey">
+      <object-id>27722</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="740" parent="140" name="merit_actions_pkey">
-      <object-id>26618</object-id>
+    <key id="738" parent="140" name="merit_actions_pkey">
+      <object-id>27723</object-id>
       <columns>id</columns>
       <underlying-index>merit_actions_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="741" parent="141" name="id">
-      <state-number>11662</state-number>
+    <column id="739" parent="141" name="id">
+      <state-number>12697</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merit_activity_logs_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="742" parent="141" name="action_id">
-      <state-number>11662</state-number>
+    <column id="740" parent="141" name="action_id">
+      <state-number>12697</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="743" parent="141" name="related_change_type">
-      <state-number>11662</state-number>
+    <column id="741" parent="141" name="related_change_type">
+      <state-number>12697</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="744" parent="141" name="related_change_id">
-      <state-number>11662</state-number>
+    <column id="742" parent="141" name="related_change_id">
+      <state-number>12697</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="745" parent="141" name="description">
-      <state-number>11662</state-number>
+    <column id="743" parent="141" name="description">
+      <state-number>12697</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="746" parent="141" name="created_at">
-      <state-number>11662</state-number>
+    <column id="744" parent="141" name="created_at">
+      <state-number>12697</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="747" parent="141" name="merit_activity_logs_pkey">
-      <object-id>26628</object-id>
+    <index id="745" parent="141" name="merit_activity_logs_pkey">
+      <object-id>27733</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="748" parent="141" name="merit_activity_logs_pkey">
-      <object-id>26629</object-id>
+    <key id="746" parent="141" name="merit_activity_logs_pkey">
+      <object-id>27734</object-id>
       <columns>id</columns>
       <underlying-index>merit_activity_logs_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="749" parent="142" name="id">
-      <state-number>11664</state-number>
+    <column id="747" parent="142" name="id">
+      <state-number>12699</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merit_score_points_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="750" parent="142" name="score_id">
-      <state-number>11664</state-number>
+    <column id="748" parent="142" name="score_id">
+      <state-number>12699</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="751" parent="142" name="num_points">
-      <state-number>11664</state-number>
+    <column id="749" parent="142" name="num_points">
+      <state-number>12699</state-number>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="752" parent="142" name="log">
-      <state-number>11664</state-number>
+    <column id="750" parent="142" name="log">
+      <state-number>12699</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="753" parent="142" name="created_at">
-      <state-number>11664</state-number>
+    <column id="751" parent="142" name="created_at">
+      <state-number>12699</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="754" parent="142" name="merit_score_points_pkey">
-      <object-id>26640</object-id>
+    <index id="752" parent="142" name="merit_score_points_pkey">
+      <object-id>27745</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="755" parent="142" name="merit_score_points_pkey">
-      <object-id>26641</object-id>
+    <key id="753" parent="142" name="merit_score_points_pkey">
+      <object-id>27746</object-id>
       <columns>id</columns>
       <underlying-index>merit_score_points_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="756" parent="143" name="id">
-      <state-number>11666</state-number>
+    <column id="754" parent="143" name="id">
+      <state-number>12701</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;merit_scores_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="757" parent="143" name="sash_id">
-      <state-number>11666</state-number>
+    <column id="755" parent="143" name="sash_id">
+      <state-number>12701</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="758" parent="143" name="category">
-      <state-number>11666</state-number>
+    <column id="756" parent="143" name="category">
+      <state-number>12701</state-number>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;default&apos;::character varying</default-expression>
     </column>
-    <index id="759" parent="143" name="merit_scores_pkey">
-      <object-id>26652</object-id>
+    <index id="757" parent="143" name="merit_scores_pkey">
+      <object-id>27757</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="760" parent="143" name="merit_scores_pkey">
-      <object-id>26653</object-id>
+    <key id="758" parent="143" name="merit_scores_pkey">
+      <object-id>27758</object-id>
       <columns>id</columns>
       <underlying-index>merit_scores_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="761" parent="144" name="id">
-      <state-number>11668</state-number>
+    <column id="759" parent="144" name="id">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;order_items_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="762" parent="144" name="price">
-      <state-number>11668</state-number>
+    <column id="760" parent="144" name="price">
+      <state-number>12703</state-number>
       <data-type>numeric(8,2)|0</data-type>
     </column>
-    <column id="763" parent="144" name="total">
-      <state-number>11668</state-number>
+    <column id="761" parent="144" name="total">
+      <state-number>12703</state-number>
       <data-type>numeric(8,2)|0</data-type>
     </column>
-    <column id="764" parent="144" name="order_id">
-      <state-number>11668</state-number>
+    <column id="762" parent="144" name="order_id">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="765" parent="144" name="variant_id">
-      <state-number>11668</state-number>
+    <column id="763" parent="144" name="variant_id">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="766" parent="144" name="state">
-      <state-number>11668</state-number>
+    <column id="764" parent="144" name="state">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="767" parent="144" name="tax_rate_id">
-      <state-number>11668</state-number>
+    <column id="765" parent="144" name="tax_rate_id">
+      <state-number>12703</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="768" parent="144" name="created_at">
-      <state-number>11668</state-number>
+    <column id="766" parent="144" name="created_at">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="769" parent="144" name="updated_at">
-      <state-number>11668</state-number>
+    <column id="767" parent="144" name="updated_at">
+      <state-number>12703</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="770" parent="144" name="order_items_pkey">
-      <object-id>26660</object-id>
+    <index id="768" parent="144" name="order_items_pkey">
+      <object-id>27765</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="771" parent="144" name="index_order_items_on_order_id">
-      <object-id>26662</object-id>
+    <index id="769" parent="144" name="index_order_items_on_order_id">
+      <object-id>27767</object-id>
       <columns>order_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="772" parent="144" name="index_order_items_on_variant_id">
-      <object-id>26664</object-id>
+    <index id="770" parent="144" name="index_order_items_on_variant_id">
+      <object-id>27769</object-id>
       <columns>variant_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="773" parent="144" name="index_order_items_on_tax_rate_id">
-      <object-id>26663</object-id>
+    <index id="771" parent="144" name="index_order_items_on_tax_rate_id">
+      <object-id>27768</object-id>
       <columns>tax_rate_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="774" parent="144" name="order_items_pkey">
-      <object-id>26661</object-id>
+    <key id="772" parent="144" name="order_items_pkey">
+      <object-id>27766</object-id>
       <columns>id</columns>
       <underlying-index>order_items_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="775" parent="145" name="id">
-      <state-number>11673</state-number>
+    <column id="773" parent="145" name="id">
+      <state-number>12708</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;orders_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="776" parent="145" name="number">
-      <state-number>11673</state-number>
+    <column id="774" parent="145" name="number">
+      <state-number>12708</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="777" parent="145" name="ip_address">
-      <state-number>11673</state-number>
+    <column id="775" parent="145" name="ip_address">
+      <state-number>12708</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="778" parent="145" name="email">
-      <state-number>11673</state-number>
+    <column id="776" parent="145" name="email">
+      <state-number>12708</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="779" parent="145" name="state">
-      <state-number>11673</state-number>
+    <column id="777" parent="145" name="state">
+      <state-number>12708</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="780" parent="145" name="user_id">
-      <state-number>11673</state-number>
+    <column id="778" parent="145" name="user_id">
+      <state-number>12708</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="781" parent="145" name="merchant_id">
-      <state-number>11673</state-number>
+    <column id="779" parent="145" name="merchant_id">
+      <state-number>12708</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="782" parent="145" name="bill_address_id">
-      <state-number>11673</state-number>
+    <column id="780" parent="145" name="bill_address_id">
+      <state-number>12708</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="783" parent="145" name="order_status_id">
-      <state-number>11673</state-number>
+    <column id="781" parent="145" name="order_status_id">
+      <state-number>12708</state-number>
       <data-type>smallint|0</data-type>
     </column>
-    <column id="784" parent="145" name="coupon_id">
-      <state-number>11673</state-number>
+    <column id="782" parent="145" name="coupon_id">
+      <state-number>12708</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="785" parent="145" name="active">
-      <state-number>11673</state-number>
+    <column id="783" parent="145" name="active">
+      <state-number>12708</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="786" parent="145" name="shipped">
-      <state-number>11673</state-number>
+    <column id="784" parent="145" name="shipped">
+      <state-number>12708</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="787" parent="145" name="calculated_at">
-      <state-number>11673</state-number>
+    <column id="785" parent="145" name="calculated_at">
+      <state-number>12708</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="788" parent="145" name="completed_at">
-      <state-number>11673</state-number>
+    <column id="786" parent="145" name="completed_at">
+      <state-number>12708</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="789" parent="145" name="created_at">
-      <state-number>11673</state-number>
+    <column id="787" parent="145" name="created_at">
+      <state-number>12708</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="790" parent="145" name="updated_at">
-      <state-number>11673</state-number>
+    <column id="788" parent="145" name="updated_at">
+      <state-number>12708</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="791" parent="145" name="orders_pkey">
-      <object-id>26676</object-id>
+    <index id="789" parent="145" name="orders_pkey">
+      <object-id>27781</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="792" parent="145" name="index_orders_on_number">
-      <object-id>26682</object-id>
+    <index id="790" parent="145" name="index_orders_on_number">
+      <object-id>27787</object-id>
       <columns>number</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="793" parent="145" name="index_orders_on_email">
-      <object-id>26680</object-id>
+    <index id="791" parent="145" name="index_orders_on_email">
+      <object-id>27785</object-id>
       <columns>email</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="794" parent="145" name="index_orders_on_user_id">
-      <object-id>26683</object-id>
+    <index id="792" parent="145" name="index_orders_on_user_id">
+      <object-id>27788</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="795" parent="145" name="index_orders_on_merchant_id">
-      <object-id>26681</object-id>
+    <index id="793" parent="145" name="index_orders_on_merchant_id">
+      <object-id>27786</object-id>
       <columns>merchant_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="796" parent="145" name="index_orders_on_bill_address_id">
-      <object-id>26678</object-id>
+    <index id="794" parent="145" name="index_orders_on_bill_address_id">
+      <object-id>27783</object-id>
       <columns>bill_address_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="797" parent="145" name="index_orders_on_coupon_id">
-      <object-id>26679</object-id>
+    <index id="795" parent="145" name="index_orders_on_coupon_id">
+      <object-id>27784</object-id>
       <columns>coupon_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="798" parent="145" name="orders_pkey">
-      <object-id>26677</object-id>
+    <key id="796" parent="145" name="orders_pkey">
+      <object-id>27782</object-id>
       <columns>id</columns>
       <underlying-index>orders_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="799" parent="146" name="id">
-      <state-number>11681</state-number>
+    <column id="797" parent="146" name="id">
+      <state-number>12716</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;payment_methods_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="800" parent="146" name="user_id">
-      <state-number>11681</state-number>
+    <column id="798" parent="146" name="user_id">
+      <state-number>12716</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="801" parent="146" name="customer_cim_id">
-      <state-number>11681</state-number>
+    <column id="799" parent="146" name="customer_cim_id">
+      <state-number>12716</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="802" parent="146" name="token">
-      <state-number>11681</state-number>
+    <column id="800" parent="146" name="token">
+      <state-number>12716</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="803" parent="146" name="address_id">
-      <state-number>11681</state-number>
+    <column id="801" parent="146" name="address_id">
+      <state-number>12716</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="804" parent="146" name="address_cim_id">
-      <state-number>11681</state-number>
+    <column id="802" parent="146" name="address_cim_id">
+      <state-number>12716</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="805" parent="146" name="default">
-      <state-number>11681</state-number>
+    <column id="803" parent="146" name="default">
+      <state-number>12716</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="806" parent="146" name="payment_methods_pkey">
-      <object-id>26693</object-id>
+    <index id="804" parent="146" name="payment_methods_pkey">
+      <object-id>27798</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="807" parent="146" name="index_payment_methods_on_user_id">
-      <object-id>26697</object-id>
+    <index id="805" parent="146" name="index_payment_methods_on_user_id">
+      <object-id>27802</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="808" parent="146" name="index_payment_methods_on_customer_cim_id">
-      <object-id>26696</object-id>
+    <index id="806" parent="146" name="index_payment_methods_on_customer_cim_id">
+      <object-id>27801</object-id>
       <columns>customer_cim_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="809" parent="146" name="index_payment_methods_on_address_id">
-      <object-id>26695</object-id>
+    <index id="807" parent="146" name="index_payment_methods_on_address_id">
+      <object-id>27800</object-id>
       <columns>address_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="810" parent="146" name="payment_methods_pkey">
-      <object-id>26694</object-id>
+    <key id="808" parent="146" name="payment_methods_pkey">
+      <object-id>27799</object-id>
       <columns>id</columns>
       <underlying-index>payment_methods_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="811" parent="147" name="id">
-      <state-number>11686</state-number>
+    <column id="809" parent="147" name="id">
+      <state-number>12721</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;phone_types_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="812" parent="147" name="name">
-      <state-number>11686</state-number>
+    <column id="810" parent="147" name="name">
+      <state-number>12721</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="813" parent="147" name="created_at">
-      <state-number>11686</state-number>
+    <column id="811" parent="147" name="created_at">
+      <state-number>12721</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="814" parent="147" name="updated_at">
-      <state-number>11686</state-number>
+    <column id="812" parent="147" name="updated_at">
+      <state-number>12721</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="815" parent="147" name="phone_types_pkey">
-      <object-id>26707</object-id>
+    <index id="813" parent="147" name="phone_types_pkey">
+      <object-id>27812</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="816" parent="147" name="phone_types_pkey">
-      <object-id>26708</object-id>
+    <key id="814" parent="147" name="phone_types_pkey">
+      <object-id>27813</object-id>
       <columns>id</columns>
       <underlying-index>phone_types_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="817" parent="148" name="id">
-      <state-number>11688</state-number>
+    <column id="815" parent="148" name="id">
+      <state-number>12723</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;phones_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="818" parent="148" name="phone_type_id">
-      <state-number>11688</state-number>
+    <column id="816" parent="148" name="phone_type_id">
+      <state-number>12723</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="819" parent="148" name="number">
-      <state-number>11688</state-number>
+    <column id="817" parent="148" name="number">
+      <state-number>12723</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="820" parent="148" name="phoneable_type">
-      <state-number>11688</state-number>
+    <column id="818" parent="148" name="phoneable_type">
+      <state-number>12723</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="821" parent="148" name="phoneable_id">
-      <state-number>11688</state-number>
+    <column id="819" parent="148" name="phoneable_id">
+      <state-number>12723</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="822" parent="148" name="primary">
-      <state-number>11688</state-number>
+    <column id="820" parent="148" name="primary">
+      <state-number>12723</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="823" parent="148" name="created_at">
-      <state-number>11688</state-number>
+    <column id="821" parent="148" name="created_at">
+      <state-number>12723</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="824" parent="148" name="updated_at">
-      <state-number>11688</state-number>
+    <column id="822" parent="148" name="updated_at">
+      <state-number>12723</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="825" parent="148" name="phones_pkey">
-      <object-id>26718</object-id>
+    <index id="823" parent="148" name="phones_pkey">
+      <object-id>27823</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="826" parent="148" name="phones_pkey">
-      <object-id>26719</object-id>
+    <key id="824" parent="148" name="phones_pkey">
+      <object-id>27824</object-id>
       <columns>id</columns>
       <underlying-index>phones_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="827" parent="149" name="id">
-      <state-number>11690</state-number>
+    <column id="825" parent="149" name="id">
+      <state-number>12725</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;products_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="828" parent="149" name="name">
-      <state-number>11690</state-number>
+    <column id="826" parent="149" name="name">
+      <state-number>12725</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="829" parent="149" name="keywords">
-      <state-number>11690</state-number>
+    <column id="827" parent="149" name="keywords">
+      <state-number>12725</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="830" parent="149" name="description">
-      <state-number>11690</state-number>
+    <column id="828" parent="149" name="description">
+      <state-number>12725</state-number>
       <data-type>varchar(160)|0</data-type>
     </column>
-    <column id="831" parent="149" name="active">
-      <state-number>11690</state-number>
+    <column id="829" parent="149" name="active">
+      <state-number>12725</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="832" parent="149" name="featured">
-      <state-number>11690</state-number>
+    <column id="830" parent="149" name="featured">
+      <state-number>12725</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="833" parent="149" name="brand_id">
-      <state-number>11690</state-number>
+    <column id="831" parent="149" name="brand_id">
+      <state-number>12725</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="834" parent="149" name="category_id">
-      <state-number>11690</state-number>
+    <column id="832" parent="149" name="category_id">
+      <state-number>12725</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="835" parent="149" name="created_at">
-      <state-number>11690</state-number>
+    <column id="833" parent="149" name="created_at">
+      <state-number>12725</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="836" parent="149" name="updated_at">
-      <state-number>11690</state-number>
+    <column id="834" parent="149" name="updated_at">
+      <state-number>12725</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="837" parent="149" name="products_pkey">
-      <object-id>26728</object-id>
+    <index id="835" parent="149" name="products_pkey">
+      <object-id>27833</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="838" parent="149" name="index_products_on_name">
-      <object-id>26731</object-id>
+    <index id="836" parent="149" name="index_products_on_name">
+      <object-id>27836</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="839" parent="149" name="index_products_on_brand_id">
-      <object-id>26730</object-id>
+    <index id="837" parent="149" name="index_products_on_brand_id">
+      <object-id>27835</object-id>
       <columns>brand_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="840" parent="149" name="products_pkey">
-      <object-id>26729</object-id>
+    <key id="838" parent="149" name="products_pkey">
+      <object-id>27834</object-id>
       <columns>id</columns>
       <underlying-index>products_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="841" parent="150" name="id">
-      <state-number>11694</state-number>
+    <column id="839" parent="150" name="id">
+      <state-number>12729</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;properties_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="842" parent="150" name="name">
-      <state-number>11694</state-number>
+    <column id="840" parent="150" name="name">
+      <state-number>12729</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="843" parent="150" name="code">
-      <state-number>11694</state-number>
+    <column id="841" parent="150" name="code">
+      <state-number>12729</state-number>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="844" parent="150" name="property_set_id">
-      <state-number>11694</state-number>
+    <column id="842" parent="150" name="property_set_id">
+      <state-number>12729</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="845" parent="150" name="active">
-      <state-number>11694</state-number>
+    <column id="843" parent="150" name="active">
+      <state-number>12729</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="846" parent="150" name="created_at">
-      <state-number>11694</state-number>
+    <column id="844" parent="150" name="created_at">
+      <state-number>12729</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="847" parent="150" name="updated_at">
-      <state-number>11694</state-number>
+    <column id="845" parent="150" name="updated_at">
+      <state-number>12729</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="848" parent="150" name="properties_pkey">
-      <object-id>26739</object-id>
+    <index id="846" parent="150" name="properties_pkey">
+      <object-id>27844</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="849" parent="150" name="properties_pkey">
-      <object-id>26740</object-id>
+    <key id="847" parent="150" name="properties_pkey">
+      <object-id>27845</object-id>
       <columns>id</columns>
       <underlying-index>properties_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="850" parent="151" name="id">
-      <state-number>11696</state-number>
+    <column id="848" parent="151" name="id">
+      <state-number>12731</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;property_sets_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="851" parent="151" name="name">
-      <state-number>11696</state-number>
+    <column id="849" parent="151" name="name">
+      <state-number>12731</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="852" parent="151" name="active">
-      <state-number>11696</state-number>
+    <column id="850" parent="151" name="active">
+      <state-number>12731</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="853" parent="151" name="created_at">
-      <state-number>11696</state-number>
+    <column id="851" parent="151" name="created_at">
+      <state-number>12731</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="854" parent="151" name="updated_at">
-      <state-number>11696</state-number>
+    <column id="852" parent="151" name="updated_at">
+      <state-number>12731</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="855" parent="151" name="property_sets_pkey">
-      <object-id>26748</object-id>
+    <index id="853" parent="151" name="property_sets_pkey">
+      <object-id>27853</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="856" parent="151" name="property_sets_pkey">
-      <object-id>26749</object-id>
+    <key id="854" parent="151" name="property_sets_pkey">
+      <object-id>27854</object-id>
       <columns>id</columns>
       <underlying-index>property_sets_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="857" parent="152" name="id">
-      <state-number>11698</state-number>
+    <column id="855" parent="152" name="id">
+      <state-number>12733</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;referral_bonus_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="858" parent="152" name="amount">
-      <state-number>11698</state-number>
+    <column id="856" parent="152" name="amount">
+      <state-number>12733</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="859" parent="152" name="name">
-      <state-number>11698</state-number>
+    <column id="857" parent="152" name="name">
+      <state-number>12733</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="860" parent="152" name="created_at">
-      <state-number>11698</state-number>
+    <column id="858" parent="152" name="created_at">
+      <state-number>12733</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="861" parent="152" name="updated_at">
-      <state-number>11698</state-number>
+    <column id="859" parent="152" name="updated_at">
+      <state-number>12733</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="862" parent="152" name="referral_bonus_pkey">
-      <object-id>26759</object-id>
+    <index id="860" parent="152" name="referral_bonus_pkey">
+      <object-id>27864</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="863" parent="152" name="referral_bonus_pkey">
-      <object-id>26760</object-id>
+    <key id="861" parent="152" name="referral_bonus_pkey">
+      <object-id>27865</object-id>
       <columns>id</columns>
       <underlying-index>referral_bonus_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="864" parent="153" name="id">
-      <state-number>11700</state-number>
+    <column id="862" parent="153" name="id">
+      <state-number>12735</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;referral_programs_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="865" parent="153" name="active">
-      <state-number>11700</state-number>
+    <column id="863" parent="153" name="active">
+      <state-number>12735</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="866" parent="153" name="description">
-      <state-number>11700</state-number>
+    <column id="864" parent="153" name="description">
+      <state-number>12735</state-number>
       <data-type>text|0</data-type>
     </column>
-    <column id="867" parent="153" name="name">
-      <state-number>11700</state-number>
+    <column id="865" parent="153" name="name">
+      <state-number>12735</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="868" parent="153" name="referral_bonus_id">
-      <state-number>11700</state-number>
+    <column id="866" parent="153" name="referral_bonus_id">
+      <state-number>12735</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="869" parent="153" name="created_at">
-      <state-number>11700</state-number>
+    <column id="867" parent="153" name="created_at">
+      <state-number>12735</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="870" parent="153" name="updated_at">
-      <state-number>11700</state-number>
+    <column id="868" parent="153" name="updated_at">
+      <state-number>12735</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="871" parent="153" name="referral_programs_pkey">
-      <object-id>26770</object-id>
+    <index id="869" parent="153" name="referral_programs_pkey">
+      <object-id>27875</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="872" parent="153" name="index_referral_programs_on_referral_bonus_id">
-      <object-id>26772</object-id>
+    <index id="870" parent="153" name="index_referral_programs_on_referral_bonus_id">
+      <object-id>27877</object-id>
       <columns>referral_bonus_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="873" parent="153" name="referral_programs_pkey">
-      <object-id>26771</object-id>
+    <key id="871" parent="153" name="referral_programs_pkey">
+      <object-id>27876</object-id>
       <columns>id</columns>
       <underlying-index>referral_programs_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="874" parent="154" name="id">
-      <state-number>11703</state-number>
+    <column id="872" parent="154" name="id">
+      <state-number>12738</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;referral_types_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="875" parent="154" name="name">
-      <state-number>11703</state-number>
+    <column id="873" parent="154" name="name">
+      <state-number>12738</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="876" parent="154" name="created_at">
-      <state-number>11703</state-number>
+    <column id="874" parent="154" name="created_at">
+      <state-number>12738</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="877" parent="154" name="updated_at">
-      <state-number>11703</state-number>
+    <column id="875" parent="154" name="updated_at">
+      <state-number>12738</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="878" parent="154" name="referral_types_pkey">
-      <object-id>26782</object-id>
+    <index id="876" parent="154" name="referral_types_pkey">
+      <object-id>27887</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="879" parent="154" name="referral_types_pkey">
-      <object-id>26783</object-id>
+    <key id="877" parent="154" name="referral_types_pkey">
+      <object-id>27888</object-id>
       <columns>id</columns>
       <underlying-index>referral_types_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="880" parent="155" name="id">
-      <state-number>11705</state-number>
+    <column id="878" parent="155" name="id">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;referrals_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="881" parent="155" name="applied">
-      <state-number>11705</state-number>
+    <column id="879" parent="155" name="applied">
+      <state-number>12740</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="882" parent="155" name="clicked_at">
-      <state-number>11705</state-number>
+    <column id="880" parent="155" name="clicked_at">
+      <state-number>12740</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="883" parent="155" name="email">
-      <state-number>11705</state-number>
+    <column id="881" parent="155" name="email">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="884" parent="155" name="name">
-      <state-number>11705</state-number>
+    <column id="882" parent="155" name="name">
+      <state-number>12740</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="885" parent="155" name="purchased_at">
-      <state-number>11705</state-number>
+    <column id="883" parent="155" name="purchased_at">
+      <state-number>12740</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="886" parent="155" name="referral_program_id">
-      <state-number>11705</state-number>
+    <column id="884" parent="155" name="referral_program_id">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="887" parent="155" name="referral_type_id">
-      <state-number>11705</state-number>
+    <column id="885" parent="155" name="referral_type_id">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="888" parent="155" name="referral_user_id">
-      <state-number>11705</state-number>
+    <column id="886" parent="155" name="referral_user_id">
+      <state-number>12740</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="889" parent="155" name="referring_user_id">
-      <state-number>11705</state-number>
+    <column id="887" parent="155" name="referring_user_id">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="890" parent="155" name="registered_at">
-      <state-number>11705</state-number>
+    <column id="888" parent="155" name="registered_at">
+      <state-number>12740</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="891" parent="155" name="sent_at">
-      <state-number>11705</state-number>
+    <column id="889" parent="155" name="sent_at">
+      <state-number>12740</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="892" parent="155" name="created_at">
-      <state-number>11705</state-number>
+    <column id="890" parent="155" name="created_at">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="893" parent="155" name="updated_at">
-      <state-number>11705</state-number>
+    <column id="891" parent="155" name="updated_at">
+      <state-number>12740</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="894" parent="155" name="referrals_pkey">
-      <object-id>26794</object-id>
+    <index id="892" parent="155" name="referrals_pkey">
+      <object-id>27899</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="895" parent="155" name="index_referrals_on_email">
-      <object-id>26796</object-id>
+    <index id="893" parent="155" name="index_referrals_on_email">
+      <object-id>27901</object-id>
       <columns>email</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="896" parent="155" name="index_referrals_on_referral_program_id">
-      <object-id>26797</object-id>
+    <index id="894" parent="155" name="index_referrals_on_referral_program_id">
+      <object-id>27902</object-id>
       <columns>referral_program_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="897" parent="155" name="index_referrals_on_referral_type_id">
-      <object-id>26798</object-id>
+    <index id="895" parent="155" name="index_referrals_on_referral_type_id">
+      <object-id>27903</object-id>
       <columns>referral_type_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="898" parent="155" name="index_referrals_on_referral_user_id">
-      <object-id>26799</object-id>
+    <index id="896" parent="155" name="index_referrals_on_referral_user_id">
+      <object-id>27904</object-id>
       <columns>referral_user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="899" parent="155" name="index_referrals_on_referring_user_id">
-      <object-id>26800</object-id>
+    <index id="897" parent="155" name="index_referrals_on_referring_user_id">
+      <object-id>27905</object-id>
       <columns>referring_user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="900" parent="155" name="referrals_pkey">
-      <object-id>26795</object-id>
+    <key id="898" parent="155" name="referrals_pkey">
+      <object-id>27900</object-id>
       <columns>id</columns>
       <underlying-index>referrals_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="901" parent="156" name="id">
-      <state-number>11712</state-number>
+    <column id="899" parent="156" name="id">
+      <state-number>12747</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;roles_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="902" parent="156" name="name">
-      <state-number>11712</state-number>
+    <column id="900" parent="156" name="name">
+      <state-number>12747</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="903" parent="156" name="resource_id">
-      <state-number>11712</state-number>
+    <column id="901" parent="156" name="resource_id">
+      <state-number>12747</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="904" parent="156" name="resource_type">
-      <state-number>11712</state-number>
+    <column id="902" parent="156" name="resource_type">
+      <state-number>12747</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="905" parent="156" name="created_at">
-      <state-number>11712</state-number>
+    <column id="903" parent="156" name="created_at">
+      <state-number>12747</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="906" parent="156" name="updated_at">
-      <state-number>11712</state-number>
+    <column id="904" parent="156" name="updated_at">
+      <state-number>12747</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="907" parent="156" name="roles_pkey">
-      <object-id>26810</object-id>
+    <index id="905" parent="156" name="roles_pkey">
+      <object-id>27915</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="908" parent="156" name="index_roles_on_name_and_resource_type_and_resource_id">
-      <object-id>26812</object-id>
+    <index id="906" parent="156" name="index_roles_on_name_and_resource_type_and_resource_id">
+      <object-id>27917</object-id>
       <columns>name
 resource_type
 resource_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="909" parent="156" name="index_roles_on_name">
-      <object-id>26813</object-id>
+    <index id="907" parent="156" name="index_roles_on_name">
+      <object-id>27918</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="910" parent="156" name="roles_pkey">
-      <object-id>26811</object-id>
+    <key id="908" parent="156" name="roles_pkey">
+      <object-id>27916</object-id>
       <columns>id</columns>
       <underlying-index>roles_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="911" parent="157" name="id">
-      <state-number>11716</state-number>
+    <column id="909" parent="157" name="id">
+      <state-number>12751</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;sashes_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="912" parent="157" name="created_at">
-      <state-number>11716</state-number>
+    <column id="910" parent="157" name="created_at">
+      <state-number>12751</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="913" parent="157" name="updated_at">
-      <state-number>11716</state-number>
+    <column id="911" parent="157" name="updated_at">
+      <state-number>12751</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="914" parent="157" name="sashes_pkey">
-      <object-id>26820</object-id>
+    <index id="912" parent="157" name="sashes_pkey">
+      <object-id>27925</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="915" parent="157" name="sashes_pkey">
-      <object-id>26821</object-id>
+    <key id="913" parent="157" name="sashes_pkey">
+      <object-id>27926</object-id>
       <columns>id</columns>
       <underlying-index>sashes_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="916" parent="158" name="version">
+    <column id="914" parent="158" name="version">
       <state-number>961</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
-    <index id="917" parent="158" name="unique_schema_migrations">
+    <index id="915" parent="158" name="unique_schema_migrations">
       <object-id>16833</object-id>
       <columns>version</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <column id="918" parent="159" name="id">
-      <state-number>11718</state-number>
+    <column id="916" parent="159" name="id">
+      <state-number>12753</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;states_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="919" parent="159" name="name">
-      <state-number>11718</state-number>
+    <column id="917" parent="159" name="name">
+      <state-number>12753</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="920" parent="159" name="abbreviation">
-      <state-number>11718</state-number>
+    <column id="918" parent="159" name="abbreviation">
+      <state-number>12753</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="921" parent="159" name="described_as">
-      <state-number>11718</state-number>
+    <column id="919" parent="159" name="described_as">
+      <state-number>12753</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="922" parent="159" name="country_id">
-      <state-number>11718</state-number>
+    <column id="920" parent="159" name="country_id">
+      <state-number>12753</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="923" parent="159" name="shipping_zone_id">
-      <state-number>11718</state-number>
+    <column id="921" parent="159" name="shipping_zone_id">
+      <state-number>12753</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="924" parent="159" name="created_at">
-      <state-number>11718</state-number>
+    <column id="922" parent="159" name="created_at">
+      <state-number>12753</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="925" parent="159" name="updated_at">
-      <state-number>11718</state-number>
+    <column id="923" parent="159" name="updated_at">
+      <state-number>12753</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="926" parent="159" name="states_pkey">
-      <object-id>26831</object-id>
+    <index id="924" parent="159" name="states_pkey">
+      <object-id>27936</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="927" parent="159" name="index_states_on_name">
-      <object-id>26835</object-id>
+    <index id="925" parent="159" name="index_states_on_name">
+      <object-id>27940</object-id>
       <columns>name</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="928" parent="159" name="index_states_on_abbreviation">
-      <object-id>26833</object-id>
+    <index id="926" parent="159" name="index_states_on_abbreviation">
+      <object-id>27938</object-id>
       <columns>abbreviation</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="929" parent="159" name="index_states_on_country_id">
-      <object-id>26834</object-id>
+    <index id="927" parent="159" name="index_states_on_country_id">
+      <object-id>27939</object-id>
       <columns>country_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="930" parent="159" name="states_pkey">
-      <object-id>26832</object-id>
+    <key id="928" parent="159" name="states_pkey">
+      <object-id>27937</object-id>
       <columns>id</columns>
       <underlying-index>states_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="931" parent="160" name="id">
-      <state-number>11723</state-number>
+    <column id="929" parent="160" name="id">
+      <state-number>12758</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;store_credits_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="932" parent="160" name="amount">
-      <state-number>11723</state-number>
+    <column id="930" parent="160" name="amount">
+      <state-number>12758</state-number>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>0.0</default-expression>
     </column>
-    <column id="933" parent="160" name="user_id">
-      <state-number>11723</state-number>
+    <column id="931" parent="160" name="user_id">
+      <state-number>12758</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="934" parent="160" name="expire_at">
-      <state-number>11723</state-number>
+    <column id="932" parent="160" name="expire_at">
+      <state-number>12758</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="935" parent="160" name="last_expired_at">
-      <state-number>11723</state-number>
+    <column id="933" parent="160" name="last_expired_at">
+      <state-number>12758</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="936" parent="160" name="created_at">
-      <state-number>11723</state-number>
+    <column id="934" parent="160" name="created_at">
+      <state-number>12758</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="937" parent="160" name="updated_at">
-      <state-number>11723</state-number>
+    <column id="935" parent="160" name="updated_at">
+      <state-number>12758</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="938" parent="160" name="store_credits_pkey">
-      <object-id>26843</object-id>
+    <index id="936" parent="160" name="store_credits_pkey">
+      <object-id>27948</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="939" parent="160" name="index_store_credits_on_user_id">
-      <object-id>26845</object-id>
+    <index id="937" parent="160" name="index_store_credits_on_user_id">
+      <object-id>27950</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="940" parent="160" name="store_credits_pkey">
-      <object-id>26844</object-id>
+    <key id="938" parent="160" name="store_credits_pkey">
+      <object-id>27949</object-id>
       <columns>id</columns>
       <underlying-index>store_credits_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="941" parent="161" name="id">
-      <state-number>11726</state-number>
+    <column id="939" parent="161" name="id">
+      <state-number>12761</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;tax_rates_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="942" parent="161" name="percentage">
-      <state-number>11726</state-number>
+    <column id="940" parent="161" name="percentage">
+      <state-number>12761</state-number>
       <mandatory>1</mandatory>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>0.0</default-expression>
     </column>
-    <column id="943" parent="161" name="code">
-      <state-number>11726</state-number>
+    <column id="941" parent="161" name="code">
+      <state-number>12761</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="944" parent="161" name="name">
-      <state-number>11726</state-number>
+    <column id="942" parent="161" name="name">
+      <state-number>12761</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="945" parent="161" name="state_id">
-      <state-number>11726</state-number>
+    <column id="943" parent="161" name="state_id">
+      <state-number>12761</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="946" parent="161" name="country_id">
-      <state-number>11726</state-number>
+    <column id="944" parent="161" name="country_id">
+      <state-number>12761</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="947" parent="161" name="start_date">
-      <state-number>11726</state-number>
+    <column id="945" parent="161" name="start_date">
+      <state-number>12761</state-number>
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
       <default-expression>&apos;2016-10-14&apos;::date</default-expression>
     </column>
-    <column id="948" parent="161" name="end_date">
-      <state-number>11726</state-number>
+    <column id="946" parent="161" name="end_date">
+      <state-number>12761</state-number>
       <data-type>date|0</data-type>
     </column>
-    <column id="949" parent="161" name="active">
-      <state-number>11726</state-number>
+    <column id="947" parent="161" name="active">
+      <state-number>12761</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="950" parent="161" name="created_at">
-      <state-number>11726</state-number>
+    <column id="948" parent="161" name="created_at">
+      <state-number>12761</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="951" parent="161" name="updated_at">
-      <state-number>11726</state-number>
+    <column id="949" parent="161" name="updated_at">
+      <state-number>12761</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="952" parent="161" name="tax_rates_pkey">
-      <object-id>26858</object-id>
+    <index id="950" parent="161" name="tax_rates_pkey">
+      <object-id>27963</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="953" parent="161" name="index_tax_rates_on_state_id">
-      <object-id>26861</object-id>
+    <index id="951" parent="161" name="index_tax_rates_on_state_id">
+      <object-id>27966</object-id>
       <columns>state_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="954" parent="161" name="index_tax_rates_on_country_id">
-      <object-id>26860</object-id>
+    <index id="952" parent="161" name="index_tax_rates_on_country_id">
+      <object-id>27965</object-id>
       <columns>country_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="955" parent="161" name="tax_rates_pkey">
-      <object-id>26859</object-id>
+    <key id="953" parent="161" name="tax_rates_pkey">
+      <object-id>27964</object-id>
       <columns>id</columns>
       <underlying-index>tax_rates_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="956" parent="162" name="id">
-      <state-number>11730</state-number>
+    <column id="954" parent="162" name="id">
+      <state-number>12765</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;trading_hours_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="957" parent="162" name="merchant_id">
-      <state-number>11730</state-number>
+    <column id="955" parent="162" name="merchant_id">
+      <state-number>12765</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="958" parent="162" name="weekday">
-      <state-number>11730</state-number>
+    <column id="956" parent="162" name="weekday">
+      <state-number>12765</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="959" parent="162" name="[:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :s">
-      <state-number>11730</state-number>
+    <column id="957" parent="162" name="[:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :s">
+      <state-number>12765</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="960" parent="162" name="open_time">
-      <state-number>11730</state-number>
+    <column id="958" parent="162" name="open_time">
+      <state-number>12765</state-number>
       <data-type>time|0</data-type>
     </column>
-    <column id="961" parent="162" name="close_time">
-      <state-number>11730</state-number>
+    <column id="959" parent="162" name="close_time">
+      <state-number>12765</state-number>
       <data-type>time|0</data-type>
     </column>
-    <column id="962" parent="162" name="active">
-      <state-number>11730</state-number>
+    <column id="960" parent="162" name="active">
+      <state-number>12765</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="963" parent="162" name="trading_hours_pkey">
-      <object-id>26868</object-id>
+    <index id="961" parent="162" name="trading_hours_pkey">
+      <object-id>27973</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="964" parent="162" name="index_trading_hours_on_merchant_id">
-      <object-id>26870</object-id>
+    <index id="962" parent="162" name="index_trading_hours_on_merchant_id">
+      <object-id>27975</object-id>
       <columns>merchant_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="965" parent="162" name="trading_hours_pkey">
-      <object-id>26869</object-id>
+    <key id="963" parent="162" name="trading_hours_pkey">
+      <object-id>27974</object-id>
       <columns>id</columns>
       <underlying-index>trading_hours_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="966" parent="163" name="id">
-      <state-number>11733</state-number>
+    <column id="964" parent="163" name="id">
+      <state-number>12768</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="967" parent="163" name="first_name">
-      <state-number>11733</state-number>
+    <column id="965" parent="163" name="first_name">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="968" parent="163" name="last_name">
-      <state-number>11733</state-number>
+    <column id="966" parent="163" name="last_name">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="969" parent="163" name="email">
-      <state-number>11733</state-number>
+    <column id="967" parent="163" name="email">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="970" parent="163" name="state">
-      <state-number>11733</state-number>
+    <column id="968" parent="163" name="state">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="971" parent="163" name="mobile">
-      <state-number>11733</state-number>
+    <column id="969" parent="163" name="mobile">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="972" parent="163" name="customer_cim_id">
-      <state-number>11733</state-number>
+    <column id="970" parent="163" name="customer_cim_id">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="973" parent="163" name="encrypted_password">
-      <state-number>11733</state-number>
+    <column id="971" parent="163" name="encrypted_password">
+      <state-number>12768</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(128)|0</data-type>
     </column>
-    <column id="974" parent="163" name="confirmation_token">
-      <state-number>11733</state-number>
+    <column id="972" parent="163" name="confirmation_token">
+      <state-number>12768</state-number>
       <data-type>varchar(128)|0</data-type>
     </column>
-    <column id="975" parent="163" name="access_token">
-      <state-number>11733</state-number>
+    <column id="973" parent="163" name="access_token">
+      <state-number>12768</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="976" parent="163" name="latitude">
-      <state-number>11733</state-number>
+    <column id="974" parent="163" name="latitude">
+      <state-number>12768</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="977" parent="163" name="longitude">
-      <state-number>11733</state-number>
+    <column id="975" parent="163" name="longitude">
+      <state-number>12768</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="978" parent="163" name="sms_notification">
-      <state-number>11733</state-number>
+    <column id="976" parent="163" name="sms_notification">
+      <state-number>12768</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="979" parent="163" name="push_notification">
-      <state-number>11733</state-number>
+    <column id="977" parent="163" name="push_notification">
+      <state-number>12768</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="980" parent="163" name="created_at">
-      <state-number>11733</state-number>
+    <column id="978" parent="163" name="created_at">
+      <state-number>12768</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="981" parent="163" name="updated_at">
-      <state-number>11733</state-number>
+    <column id="979" parent="163" name="updated_at">
+      <state-number>12768</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="982" parent="163" name="role">
-      <state-number>11733</state-number>
+    <column id="980" parent="163" name="role">
+      <state-number>12768</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="983" parent="163" name="remember_token">
-      <state-number>11733</state-number>
+    <column id="981" parent="163" name="remember_token">
+      <state-number>12768</state-number>
       <data-type>varchar(128)|0</data-type>
     </column>
-    <column id="984" parent="163" name="sash_id">
-      <state-number>11733</state-number>
+    <column id="982" parent="163" name="sash_id">
+      <state-number>12768</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="985" parent="163" name="level">
-      <state-number>11733</state-number>
+    <column id="983" parent="163" name="level">
+      <state-number>12768</state-number>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <index id="986" parent="163" name="users_pkey">
-      <object-id>26883</object-id>
+    <index id="984" parent="163" name="users_pkey">
+      <object-id>27988</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="987" parent="163" name="index_users_on_email">
-      <object-id>26886</object-id>
+    <index id="985" parent="163" name="index_users_on_email">
+      <object-id>27991</object-id>
       <columns>email</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="988" parent="163" name="index_users_on_mobile">
-      <object-id>26889</object-id>
+    <index id="986" parent="163" name="index_users_on_mobile">
+      <object-id>27994</object-id>
       <columns>mobile</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="989" parent="163" name="index_users_on_access_token">
-      <object-id>26885</object-id>
+    <index id="987" parent="163" name="index_users_on_access_token">
+      <object-id>27990</object-id>
       <columns>access_token</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="990" parent="163" name="index_users_on_first_name">
-      <object-id>26887</object-id>
+    <index id="988" parent="163" name="index_users_on_first_name">
+      <object-id>27992</object-id>
       <columns>first_name</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="991" parent="163" name="index_users_on_last_name">
-      <object-id>26888</object-id>
+    <index id="989" parent="163" name="index_users_on_last_name">
+      <object-id>27993</object-id>
       <columns>last_name</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="992" parent="163" name="index_users_on_remember_token">
-      <object-id>26890</object-id>
+    <index id="990" parent="163" name="index_users_on_remember_token">
+      <object-id>27995</object-id>
       <columns>remember_token</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="993" parent="163" name="users_pkey">
-      <object-id>26884</object-id>
+    <key id="991" parent="163" name="users_pkey">
+      <object-id>27989</object-id>
       <columns>id</columns>
       <underlying-index>users_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="994" parent="164" name="user_id">
-      <state-number>11741</state-number>
+    <column id="992" parent="164" name="user_id">
+      <state-number>12776</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="995" parent="164" name="role_id">
-      <state-number>11741</state-number>
+    <column id="993" parent="164" name="role_id">
+      <state-number>12776</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <index id="996" parent="164" name="index_users_roles_on_role_id_and_user_id">
-      <object-id>26894</object-id>
+    <index id="994" parent="164" name="index_users_roles_on_role_id_and_user_id">
+      <object-id>27999</object-id>
       <columns>role_id
 user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <column id="997" parent="165" name="id">
-      <state-number>11744</state-number>
+    <column id="995" parent="165" name="id">
+      <state-number>12779</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;variant_merchants_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="998" parent="165" name="variant_id">
-      <state-number>11744</state-number>
+    <column id="996" parent="165" name="variant_id">
+      <state-number>12779</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="999" parent="165" name="merchant_id">
-      <state-number>11744</state-number>
+    <column id="997" parent="165" name="merchant_id">
+      <state-number>12779</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1000" parent="165" name="active">
-      <state-number>11744</state-number>
+    <column id="998" parent="165" name="active">
+      <state-number>12779</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
-    <column id="1001" parent="165" name="created_at">
-      <state-number>11744</state-number>
+    <column id="999" parent="165" name="created_at">
+      <state-number>12779</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="1002" parent="165" name="updated_at">
-      <state-number>11744</state-number>
+    <column id="1000" parent="165" name="updated_at">
+      <state-number>12779</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="1003" parent="165" name="variant_merchants_pkey">
-      <object-id>26902</object-id>
+    <index id="1001" parent="165" name="variant_merchants_pkey">
+      <object-id>28007</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="1004" parent="165" name="variant_merchants_pkey">
-      <object-id>26903</object-id>
+    <key id="1002" parent="165" name="variant_merchants_pkey">
+      <object-id>28008</object-id>
       <columns>id</columns>
       <underlying-index>variant_merchants_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="1005" parent="166" name="id">
-      <state-number>11746</state-number>
+    <column id="1003" parent="166" name="id">
+      <state-number>12781</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;variant_properties_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="1006" parent="166" name="property_id">
-      <state-number>11746</state-number>
+    <column id="1004" parent="166" name="property_id">
+      <state-number>12781</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1007" parent="166" name="variant_id">
-      <state-number>11746</state-number>
+    <column id="1005" parent="166" name="variant_id">
+      <state-number>12781</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1008" parent="166" name="description">
-      <state-number>11746</state-number>
+    <column id="1006" parent="166" name="description">
+      <state-number>12781</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="1009" parent="166" name="primary">
-      <state-number>11746</state-number>
+    <column id="1007" parent="166" name="primary">
+      <state-number>12781</state-number>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="1010" parent="166" name="created_at">
-      <state-number>11746</state-number>
+    <column id="1008" parent="166" name="created_at">
+      <state-number>12781</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="1011" parent="166" name="updated_at">
-      <state-number>11746</state-number>
+    <column id="1009" parent="166" name="updated_at">
+      <state-number>12781</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="1012" parent="166" name="variant_properties_pkey">
-      <object-id>26911</object-id>
+    <index id="1010" parent="166" name="variant_properties_pkey">
+      <object-id>28016</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="1013" parent="166" name="index_variant_properties_on_property_id">
-      <object-id>26913</object-id>
+    <index id="1011" parent="166" name="index_variant_properties_on_property_id">
+      <object-id>28018</object-id>
       <columns>property_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="1014" parent="166" name="index_variant_properties_on_variant_id">
-      <object-id>26914</object-id>
+    <index id="1012" parent="166" name="index_variant_properties_on_variant_id">
+      <object-id>28019</object-id>
       <columns>variant_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="1015" parent="166" name="variant_properties_pkey">
-      <object-id>26912</object-id>
+    <key id="1013" parent="166" name="variant_properties_pkey">
+      <object-id>28017</object-id>
       <columns>id</columns>
       <underlying-index>variant_properties_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="1016" parent="167" name="id">
-      <state-number>11750</state-number>
+    <column id="1014" parent="167" name="id">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;variants_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="1017" parent="167" name="product_id">
-      <state-number>11750</state-number>
+    <column id="1015" parent="167" name="product_id">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1018" parent="167" name="sku">
-      <state-number>11750</state-number>
+    <column id="1016" parent="167" name="sku">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="1019" parent="167" name="price">
-      <state-number>11750</state-number>
+    <column id="1017" parent="167" name="price">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>0.0</default-expression>
     </column>
-    <column id="1020" parent="167" name="cost">
-      <state-number>11750</state-number>
+    <column id="1018" parent="167" name="cost">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>numeric(8,2)|0</data-type>
       <default-expression>0.0</default-expression>
     </column>
-    <column id="1021" parent="167" name="master">
-      <state-number>11750</state-number>
+    <column id="1019" parent="167" name="master">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
-    <column id="1022" parent="167" name="deleted_at">
-      <state-number>11750</state-number>
+    <column id="1020" parent="167" name="deleted_at">
+      <state-number>12785</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="1023" parent="167" name="created_at">
-      <state-number>11750</state-number>
+    <column id="1021" parent="167" name="created_at">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="1024" parent="167" name="updated_at">
-      <state-number>11750</state-number>
+    <column id="1022" parent="167" name="updated_at">
+      <state-number>12785</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="1025" parent="167" name="variants_pkey">
-      <object-id>26924</object-id>
+    <index id="1023" parent="167" name="variants_pkey">
+      <object-id>28029</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="1026" parent="167" name="index_variants_on_product_id">
-      <object-id>26926</object-id>
+    <index id="1024" parent="167" name="index_variants_on_product_id">
+      <object-id>28031</object-id>
       <columns>product_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="1027" parent="167" name="variants_pkey">
-      <object-id>26925</object-id>
+    <key id="1025" parent="167" name="variants_pkey">
+      <object-id>28030</object-id>
       <columns>id</columns>
       <underlying-index>variants_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="1028" parent="168" name="id">
-      <state-number>11753</state-number>
+    <column id="1026" parent="168" name="id">
+      <state-number>12788</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;visits_id_seq&apos;::regclass)</default-expression>
     </column>
-    <column id="1029" parent="168" name="visit_token">
-      <state-number>11753</state-number>
+    <column id="1027" parent="168" name="visit_token">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1030" parent="168" name="visitor_token">
-      <state-number>11753</state-number>
+    <column id="1028" parent="168" name="visitor_token">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1031" parent="168" name="ip">
-      <state-number>11753</state-number>
+    <column id="1029" parent="168" name="ip">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1032" parent="168" name="user_agent">
-      <state-number>11753</state-number>
+    <column id="1030" parent="168" name="user_agent">
+      <state-number>12788</state-number>
       <data-type>text|0</data-type>
     </column>
-    <column id="1033" parent="168" name="referrer">
-      <state-number>11753</state-number>
+    <column id="1031" parent="168" name="referrer">
+      <state-number>12788</state-number>
       <data-type>text|0</data-type>
     </column>
-    <column id="1034" parent="168" name="landing_page">
-      <state-number>11753</state-number>
+    <column id="1032" parent="168" name="landing_page">
+      <state-number>12788</state-number>
       <data-type>text|0</data-type>
     </column>
-    <column id="1035" parent="168" name="user_id">
-      <state-number>11753</state-number>
+    <column id="1033" parent="168" name="user_id">
+      <state-number>12788</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1036" parent="168" name="referring_domain">
-      <state-number>11753</state-number>
+    <column id="1034" parent="168" name="referring_domain">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1037" parent="168" name="search_keyword">
-      <state-number>11753</state-number>
+    <column id="1035" parent="168" name="search_keyword">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1038" parent="168" name="browser">
-      <state-number>11753</state-number>
+    <column id="1036" parent="168" name="browser">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1039" parent="168" name="os">
-      <state-number>11753</state-number>
+    <column id="1037" parent="168" name="os">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1040" parent="168" name="device_type">
-      <state-number>11753</state-number>
+    <column id="1038" parent="168" name="device_type">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1041" parent="168" name="screen_height">
-      <state-number>11753</state-number>
+    <column id="1039" parent="168" name="screen_height">
+      <state-number>12788</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1042" parent="168" name="screen_width">
-      <state-number>11753</state-number>
+    <column id="1040" parent="168" name="screen_width">
+      <state-number>12788</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="1043" parent="168" name="country">
-      <state-number>11753</state-number>
+    <column id="1041" parent="168" name="country">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1044" parent="168" name="region">
-      <state-number>11753</state-number>
+    <column id="1042" parent="168" name="region">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1045" parent="168" name="city">
-      <state-number>11753</state-number>
+    <column id="1043" parent="168" name="city">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1046" parent="168" name="postal_code">
-      <state-number>11753</state-number>
+    <column id="1044" parent="168" name="postal_code">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1047" parent="168" name="latitude">
-      <state-number>11753</state-number>
+    <column id="1045" parent="168" name="latitude">
+      <state-number>12788</state-number>
       <data-type>numeric|0</data-type>
     </column>
-    <column id="1048" parent="168" name="longitude">
-      <state-number>11753</state-number>
+    <column id="1046" parent="168" name="longitude">
+      <state-number>12788</state-number>
       <data-type>numeric|0</data-type>
     </column>
-    <column id="1049" parent="168" name="utm_source">
-      <state-number>11753</state-number>
+    <column id="1047" parent="168" name="utm_source">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1050" parent="168" name="utm_medium">
-      <state-number>11753</state-number>
+    <column id="1048" parent="168" name="utm_medium">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1051" parent="168" name="utm_term">
-      <state-number>11753</state-number>
+    <column id="1049" parent="168" name="utm_term">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1052" parent="168" name="utm_content">
-      <state-number>11753</state-number>
+    <column id="1050" parent="168" name="utm_content">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1053" parent="168" name="utm_campaign">
-      <state-number>11753</state-number>
+    <column id="1051" parent="168" name="utm_campaign">
+      <state-number>12788</state-number>
       <data-type>varchar|0</data-type>
     </column>
-    <column id="1054" parent="168" name="started_at">
-      <state-number>11753</state-number>
+    <column id="1052" parent="168" name="started_at">
+      <state-number>12788</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <index id="1055" parent="168" name="visits_pkey">
-      <object-id>26936</object-id>
+    <index id="1053" parent="168" name="visits_pkey">
+      <object-id>28041</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="1056" parent="168" name="index_visits_on_visit_token">
-      <object-id>26939</object-id>
+    <index id="1054" parent="168" name="index_visits_on_visit_token">
+      <object-id>28044</object-id>
       <columns>visit_token</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <index id="1057" parent="168" name="index_visits_on_user_id">
-      <object-id>26938</object-id>
+    <index id="1055" parent="168" name="index_visits_on_user_id">
+      <object-id>28043</object-id>
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="1058" parent="168" name="visits_pkey">
-      <object-id>26937</object-id>
+    <key id="1056" parent="168" name="visits_pkey">
+      <object-id>28042</object-id>
       <columns>id</columns>
       <underlying-index>visits_pkey</underlying-index>
       <primary>1</primary>

@@ -25,6 +25,8 @@ class Merchant < ActiveRecord::Base
   validates :name,        presence: true,       length: { maximum: 255 }
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
+  validates_presence_of :product_ids
+
   accepts_nested_attributes_for :trading_hours
   accepts_nested_attributes_for :merchant_products
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
