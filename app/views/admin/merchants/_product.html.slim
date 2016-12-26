@@ -2,20 +2,21 @@
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.title')
 .mdl-grid
-  - @products.each do |product|
+  = form.collection_check_boxes(:product_ids, Product.all, :id, :name) do |product|
     .mdl-cell.mdl-cell--4-col.item-border.card-item-type--volume
       .mdl-cell.mdl-cell--1-col.mdl-cell--10-offset
-        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=product.name
-          input.mdl-switch__input checked="checked" type="checkbox" id=product.name /
+        = product.label class: :'mdl-switch mdl-js-switch mdl-js-ripple-effect' do
+          = product.check_box class: :'mdl-switch__input'
+          /span.mdl-checkbox__label= product.label
           span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col
-        h4.teal-heading= product.name
-      - @properties.each do |property|
-        .mdl-cell.mdl-cell--12-col
-          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-            input.mdl-textfield__input type="text" id=property.id
-            label.mdl-textfield__label for=property.id
-              = "#{property.name } Price"
+        h4.teal-heading= product.label
+        /- @properties.each do |property|
+          .mdl-cell.mdl-cell--12-col
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+              input.mdl-textfield__input type="text" id=property.id
+              label.mdl-textfield__label for=property.id
+                = "#{property.name } Price"
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')
@@ -34,35 +35,3 @@
               /= property_fields.check_box :property
               = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-switch__input', :id => property.id
               span.mdl-switch__label= property.name
-/.mdl-grid
-  .mdl-cell.mdl-cell--12-col
-    h3.mdl-typography--display-1.teal-heading= t('.sub_title')
-/.mdl-grid
-  .mdl-cell.mdl-cell--12-col.item-border
-    .mdl-grid
-      .mdl-cell.mdl-cell--6-col
-        - (0..2).each do |i|
-          .mdl-grid
-            .mdl-cell.mdl-cell--2-col
-              label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=i
-                input.mdl-switch__input checked="checked" type="checkbox" id=i /
-                span.mdl-switch__label
-            .mdl-cell.mdl-cell--8-col
-              .mdl-typography--title  Property
-            .mdl-cell.mdl-cell--2-col
-              .mdl-textfield.mdl-js-textfield
-                input#sample1.mdl-textfield__input type="text"
-                label.mdl-textfield__label for="sample1"  Text...
-      .mdl-cell.mdl-cell--6-col
-        - (0..2).each do |i|
-          .mdl-grid
-            .mdl-cell.mdl-cell--2-col
-              label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for=i
-                input.mdl-switch__input checked="checked" type="checkbox" id=i /
-                span.mdl-switch__label
-            .mdl-cell.mdl-cell--8-col
-              .mdl-typography--title Property
-            .mdl-cell.mdl-cell--2-col
-              .mdl-textfield.mdl-js-textfield
-                input#sample1.mdl-textfield__input type="text"
-                label.mdl-textfield__label for="sample1"  Text...

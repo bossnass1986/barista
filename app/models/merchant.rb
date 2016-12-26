@@ -1,20 +1,20 @@
 class Merchant < ActiveRecord::Base
 
   has_one :account, dependent: :destroy
+
   belongs_to :merchant_type
   belongs_to :state
-  # has_many :variant_merchants
-  # has_many :variants, through: :variant_merchants, dependent: :destroy
-  # has_many :products, through: :variants, dependent: :destroy
 
-  has_many :products
-  # has_many :products, through: :property_sets
   has_many :orders
   has_many :users, through: :orders
   has_many :trading_hours, dependent: :destroy
 
   has_many    :phones,          dependent: :destroy,       as: :phoneable
   has_one     :primary_phone, -> { where(primary: true) }, as: :phoneable, class_name: 'Phone'
+
+  # Allows Products to be allocated to a Merchant
+  has_many :merchant_products
+  has_many :products, through: :merchant_products
 
   # before_validation :sanitize_data
   after_create :add_trading_hours
@@ -26,6 +26,7 @@ class Merchant < ActiveRecord::Base
   validates :email,       format: { with: CustomValidators::Emails.email_validator },       :length => { :maximum => 255 }
 
   accepts_nested_attributes_for :trading_hours
+  accepts_nested_attributes_for :merchant_products
   accepts_nested_attributes_for :phones, :reject_if => lambda { |t| ( t['display_number'].gsub(/\D+/, '').blank?) }
   accepts_nested_attributes_for :account, reject_if: :all_blank
 
