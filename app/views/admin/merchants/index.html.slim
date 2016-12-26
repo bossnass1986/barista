@@ -24,9 +24,9 @@
             td.mdl-data-table__cell--non-numeric= merchant.email
             td.mdl-data-table__cell--non-numeric= merchant.phones.first
             td.mdl-data-table__cell--non-numeric= merchant.city
-            td.mdl-data-table__cell= merchant.products.count
-            td.mdl-data-table__cell= merchant.orders.count
-            td.mdl-data-table__cell= merchant.orders.count
+            td.mdl-data-table__cell--non-numeric= merchant.products.count
+            td.mdl-data-table__cell--non-numeric= merchant.orders.count
+            td.mdl-data-table__cell--non-numeric= merchant.orders.count
   .mdl-cell.mdl-cell--12-col
     = link_to_previous_page @merchants, 'Prev Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
     = link_to_next_page @merchants, 'Next Page', :class => 'mdl-button mdl-js-button.mdl-button--raised mdl-js-ripple-effect'
