@@ -20,7 +20,6 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     else
       @product = Product.new
       @product.categories << @categories
-      # @product.category  = Category.new
     end
   end
 
@@ -35,8 +34,6 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       flash[:error] = "The product could not be created!"
       render action: :new
     end
-      # rescue
-      # render :text => "Please make sure you have solr started... Run this in the command line => bundle exec rake sunspot:solr:start"
   end
 
   def edit
