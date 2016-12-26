@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular
 
 $("tr[data-href]").on('click',function ()  {
     $(this).css('cursor', 'pointer');

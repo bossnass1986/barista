@@ -1,0 +1,6 @@
+- title t('.title')
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col.card-item-type--volume
+    = form_for(@coupon, :as => :coupon, :url => admin_marketing_coupons_path(@coupon)) do |f|
+      = render :partial => 'form', :locals => {:f => f}
+      = link_to "Back to List", admin_marketing_coupons_path, :class => "button"

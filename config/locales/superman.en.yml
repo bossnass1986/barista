@@ -44,8 +44,8 @@ en:
         orders: 'Orders'
         users: 'Users'
         products: 'Products'
-    generic:
-      discounts:
+    marketing:
+      coupons:
         index:
           title: 'Discount Codes'
         new:

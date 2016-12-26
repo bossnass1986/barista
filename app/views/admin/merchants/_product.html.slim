@@ -11,12 +11,12 @@
           span.mdl-switch__label
       .mdl-cell.mdl-cell--12-col
         h4.teal-heading= product.label
-          /- @properties.each do |property|
-            .mdl-cell.mdl-cell--12-col
-              .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-                input.mdl-textfield__input type="text" id=property.id
-                label.mdl-textfield__label for=property.id
-                  = "#{property.name } Price"
+      - @properties.each do |property|
+    .mdl-cell.mdl-cell--12-col
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+    input.mdl-textfield__input type="text" id=property.id
+    label.mdl-textfield__label for=property.id
+    = "#{property.name } Price"
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')
@@ -26,12 +26,12 @@
       .mdl-grid--no-spacing
         .mdl-cell.mdl-cell--12-col
           h4.teal-heading= PropertySet.find(property_set).try(:name)
-      .mdl-grid--no-spacing
-        .mdl-cell.mdl-cell--6-col
-          - properties.each do |property|
+
+      .mdl-grid
+        - properties.each do |property|
+          .mdl-cell.mdl-cell--12-col
             //- checked = PropertySet.find(property_set).try(:name) && PropertySet.find(properties).include?(property)
             - checked = false
             label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect for=property.id
               = check_box_tag "prototype[property_ids][]", property.id, checked, :class => 'mdl-checkbox__input', :id => property.id
               span.mdl-checkbox__label= property.name
-        .mdl-cell.mdl-cell--6-col
