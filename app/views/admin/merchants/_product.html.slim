@@ -12,11 +12,11 @@
       .mdl-cell.mdl-cell--12-col
         h4.teal-heading= product.label
           /- @properties.each do |property|
-          .mdl-cell.mdl-cell--12-col
-            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-              input.mdl-textfield__input type="text" id=property.id
-              label.mdl-textfield__label for=property.id
-                = "#{property.name } Price"
+            .mdl-cell.mdl-cell--12-col
+              .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+                input.mdl-textfield__input type="text" id=property.id
+                label.mdl-textfield__label for=property.id
+                  = "#{property.name } Price"
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
     h3.mdl-typography--display-1.teal-heading= t('.sub_title')
