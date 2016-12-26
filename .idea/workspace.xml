@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="merchant toast">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/category_product.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/prototype_property.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4ab14069-0621-4096-811b-6a492b108389.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4ab14069-0621-4096-811b-6a492b108389.xml" />
+    <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="basic additional of products to a merchant">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/1.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/1.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/2.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/2.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/superman.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/category.rb" afterPath="$PROJECT_DIR$/app/models/category.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_account.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_account.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_type.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_type.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_venue.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_venue.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/new.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/new.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,13 +23,13 @@
     <SUITE FILE_PATH="coverage/barista@db_schema_load__barista.coverage" NAME="db:schema:load: barista Coverage Results" MODIFIED="1441270992421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_seed__barista.coverage" NAME="db:seed: barista Coverage Results" MODIFIED="1474546830008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_setup__barista.coverage" NAME="db:setup: barista Coverage Results" MODIFIED="1441031157635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1482232560123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@Development__barista.coverage" NAME="Development: barista Coverage Results" MODIFIED="1482589410534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_rollback__barista.coverage" NAME="db:rollback: barista Coverage Results" MODIFIED="1441542297183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@assets_precompile__barista.coverage" NAME="assets:precompile: barista Coverage Results" MODIFIED="1466835110839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_create__barista.coverage" NAME="db:create: barista Coverage Results" MODIFIED="1441028197722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_schema_dump__barista.coverage" NAME="db:schema:dump: barista Coverage Results" MODIFIED="1465473902003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@routes__barista.coverage" NAME="routes: barista Coverage Results" MODIFIED="1482064858498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1482471852571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@routes__barista.coverage" NAME="routes: barista Coverage Results" MODIFIED="1482489808596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@db_reset__barista.coverage" NAME="db:reset: barista Coverage Results" MODIFIED="1482589323644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@assets_clean_keep___barista.coverage" NAME="assets:clean[keep]: barista Coverage Results" MODIFIED="1466834767316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@doc_app__barista.coverage" NAME="doc:app: barista Coverage Results" MODIFIED="1441031348815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@db_drop__barista.coverage" NAME="db:drop: barista Coverage Results" MODIFIED="1454669749013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
@@ -53,7 +37,7 @@
     <SUITE FILE_PATH="coverage/barista@IRB_console__barista.coverage" NAME="IRB console: barista Coverage Results" MODIFIED="1442492645928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@csv_import_suppliers__barista.coverage" NAME="csv:import_suppliers: barista Coverage Results" MODIFIED="1480077922993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@assets_clobber__barista.coverage" NAME="assets:clobber: barista Coverage Results" MODIFIED="1466835088082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
-    <SUITE FILE_PATH="coverage/barista@db_migrate__barista.coverage" NAME="db:migrate: barista Coverage Results" MODIFIED="1482408452217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
+    <SUITE FILE_PATH="coverage/barista@db_migrate__barista.coverage" NAME="db:migrate: barista Coverage Results" MODIFIED="1482589115467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
     <SUITE FILE_PATH="coverage/barista@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1463741141880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="barista" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -73,88 +57,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="245">
-      <file leaf-file-name="_form.html.slim" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="110" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="-61">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="dev_cuptown.public.merchant_products" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.merchant_products">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_product.html.slim" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
+      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="262">
+              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+              <folding>
+                <marker date="1482737525000" expanded="true" signature="32:213" ph=".mdl-cell.mdl-cell--12-col" />
+                <marker date="1482737525000" expanded="true" signature="63:213" ph="= link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class =&gt; 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'" />
+                <marker date="1482737525000" expanded="true" signature="216:1371" ph=".mdl-cell.mdl-cell--12-col" />
+                <marker date="1482737525000" expanded="true" signature="247:1371" ph="table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col" />
+                <marker date="1482737525000" expanded="true" signature="325:663" ph="thead" />
+                <marker date="1482737525000" expanded="true" signature="339:663" ph="tr" />
+                <marker date="1482737525000" expanded="true" signature="409:457" ph="th.mdl-data-table__cell--non-numeric= t('.name')" />
+                <marker date="1482737525000" expanded="true" signature="1227:1371" ph="tr data-href=edit_admin_merchant_path(merchant)" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_menu_options.html.slim" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_menu_options.html.slim">
+      <file leaf-file-name="show.html.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding>
+                <marker date="1482737525000" expanded="true" signature="882:995" ph="- @merchant.products.select(&amp;:id).flatten.uniq.each do |item|" />
+                <marker date="1482737525000" expanded="true" signature="936:995" ph="= render :partial =&gt; 'product', :locals =&gt; {:item =&gt; item }" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file leaf-file-name="_product.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="90">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding>
+                <marker date="1482737525000" expanded="true" signature="73:335" ph="%li.mdl-list__item.mdl-list__item--three-line" />
+                <marker date="1482737525000" expanded="true" signature="123:246" ph="%span.mdl-list__item-primary-content" />
+                <marker date="1482737525000" expanded="true" signature="189:246" ph="%span.mdl-list__item-text-body" />
+                <marker date="1482737525000" expanded="true" signature="228:246" ph="= item.description" />
+                <marker date="1482737525000" expanded="true" signature="251:335" ph="%span.mdl-list__item-secondary-content" />
+                <marker date="1482737525000" expanded="true" signature="296:335" ph="%i.material-icons" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category_product.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/category_product.rb">
+      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/shopping/products_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="331">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merchant_product.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/merchant_product.rb">
+      <file leaf-file-name="_merchant.html.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_merchant.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -163,11 +151,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dev_cuptown.public.visits" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.visits">
+      <file leaf-file-name="_form.html.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+              <folding>
+                <marker date="1482737525000" expanded="true" signature="389:600" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
+                <marker date="1482737525000" expanded="true" signature="483:600" ph="= form.text_area :keywords, class: 'mdl-textfield__input'" />
+                <marker date="1482737525000" expanded="true" signature="605:822" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
+                <marker date="1482737525000" expanded="true" signature="699:822" ph="= form.text_area :description, class: 'mdl-textfield__input'" />
+                <marker date="1482737525000" expanded="true" signature="823:917" ph=".mdl-grid" />
+                <marker date="1482737525000" expanded="true" signature="835:917" ph=".mdl-cell.mdl-cell--6-col" />
+                <marker date="1482737525000" expanded="true" signature="865:917" ph="h3.mdl-typography--display-1.teal-heading Categories" />
+                <marker date="1482737525000" expanded="true" signature="918:1370" ph=".mdl-grid" />
+                <marker date="1482737525000" expanded="true" signature="930:1370" ph=".mdl-cell.mdl-cell--12-col.card-item-type--volume" />
+                <marker date="1482737525000" expanded="true" signature="984:1370" ph=".mdl-grid" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_product.html.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev_cuptown.public.category_products" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.category_products">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
             </state>
           </provider>
           <provider editor-type-id="text-editor">
@@ -204,6 +226,11 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="categories" />
+      </map>
+    </option>
     <option name="FORCE_PUSH_ALLOWED" value="true" />
     <push-targets>
       <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="master" />
@@ -212,16 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/edit.html.slim" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/new.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/new.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/admin/user_datas/referrals/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/property_sets_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/models/account.rb" />
-        <option value="$PROJECT_DIR$/app/assets/images/brand/user.svg" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_hours.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/dashboard/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/dashboard/_quick_summary.html.slim" />
@@ -235,7 +252,6 @@
         <option value="$PROJECT_DIR$/app/views/admin/users/_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/index.html.slim" />
         <option value="$PROJECT_DIR$/app/models/payment_method.rb" />
-        <option value="$PROJECT_DIR$/app/models/merchant_product.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/config/countries_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/config/overview/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.slim" />
@@ -243,12 +259,8 @@
         <option value="$PROJECT_DIR$/config/locales/superman.en.yml" />
         <option value="$PROJECT_DIR$/app/views/admin/merchandise/property_sets/_property_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_menu_options.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
         <option value="$PROJECT_DIR$/app/models/property_set.rb" />
-        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/superman.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/superman.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_venue.html.slim" />
@@ -256,13 +268,28 @@
         <option value="$PROJECT_DIR$/app/views/admin/merchants/_type.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/new.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim" />
-        <option value="$PROJECT_DIR$/db/migrate/20161222120717_create_join_table_category_product.rb" />
-        <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/models/category_product.rb" />
+        <option value="$PROJECT_DIR$/app/views/profile/payment_methods/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/profile/payment_methods/new.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/profile/payment_methods/new.html.slim" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/models/category.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/index.html.slim" />
+        <option value="$PROJECT_DIR$/db/migrate/20161222120717_create_join_table_category_product.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/models/merchant_product.rb" />
+        <option value="$PROJECT_DIR$/app/models/merchant.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/shopping/merchants/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/shopping/products_controller.rb" />
       </list>
     </option>
   </component>
@@ -310,10 +337,107 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merchants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -797,70 +921,8 @@
       <workItem from="1480854849787" duration="6898000" />
       <workItem from="1481024302609" duration="3445000" />
       <workItem from="1481111933569" duration="1864000" />
-      <workItem from="1481181768806" duration="73292000" />
-    </task>
-    <task id="LOCAL-00302" summary="intercom attributes">
-      <created>1471921247229</created>
-      <option name="number" value="00302" />
-      <option name="presentableId" value="LOCAL-00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1471921247230</updated>
-    </task>
-    <task id="LOCAL-00303" summary="intercom attributes">
-      <created>1471921271557</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1471921271557</updated>
-    </task>
-    <task id="LOCAL-00304" summary="travis?">
-      <created>1472043419837</created>
-      <option name="number" value="00304" />
-      <option name="presentableId" value="LOCAL-00304" />
-      <option name="project" value="LOCAL" />
-      <updated>1472043419838</updated>
-    </task>
-    <task id="LOCAL-00305" summary="start of the legal stuff">
-      <created>1472206259299</created>
-      <option name="number" value="00305" />
-      <option name="presentableId" value="LOCAL-00305" />
-      <option name="project" value="LOCAL" />
-      <updated>1472206259300</updated>
-    </task>
-    <task id="LOCAL-00306" summary="model clean up">
-      <created>1472302735815</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1472302735816</updated>
-    </task>
-    <task id="LOCAL-00307" summary="model clean up">
-      <created>1472374909347</created>
-      <option name="number" value="00307" />
-      <option name="presentableId" value="LOCAL-00307" />
-      <option name="project" value="LOCAL" />
-      <updated>1472374909347</updated>
-    </task>
-    <task id="LOCAL-00308" summary="controller clean up">
-      <created>1472391425835</created>
-      <option name="number" value="00308" />
-      <option name="presentableId" value="LOCAL-00308" />
-      <option name="project" value="LOCAL" />
-      <updated>1472391425837</updated>
-    </task>
-    <task id="LOCAL-00309" summary="controller clean up">
-      <created>1472468217699</created>
-      <option name="number" value="00309" />
-      <option name="presentableId" value="LOCAL-00309" />
-      <option name="project" value="LOCAL" />
-      <updated>1472468217699</updated>
-    </task>
-    <task id="LOCAL-00310" summary="controller clean up">
-      <created>1472470462264</created>
-      <option name="number" value="00310" />
-      <option name="presentableId" value="LOCAL-00310" />
-      <option name="project" value="LOCAL" />
-      <updated>1472470462269</updated>
+      <workItem from="1481181768806" duration="85639000" />
+      <workItem from="1482586058072" duration="16922000" />
     </task>
     <task id="LOCAL-00311" summary="controller clean up">
       <created>1472471135914</created>
@@ -1142,11 +1204,74 @@
       <option name="project" value="LOCAL" />
       <updated>1482324407580</updated>
     </task>
-    <option name="localTasksCounter" value="351" />
+    <task id="LOCAL-00351" summary="products get interesting">
+      <created>1482486863519</created>
+      <option name="number" value="00351" />
+      <option name="presentableId" value="LOCAL-00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1482486863519</updated>
+    </task>
+    <task id="LOCAL-00352" summary="products get interesting">
+      <created>1482590483952</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1482590483952</updated>
+    </task>
+    <task id="LOCAL-00353" summary="products get interesting">
+      <created>1482672187988</created>
+      <option name="number" value="00353" />
+      <option name="presentableId" value="LOCAL-00353" />
+      <option name="project" value="LOCAL" />
+      <updated>1482672187988</updated>
+    </task>
+    <task id="LOCAL-00354" summary="products get interesting">
+      <created>1482672964057</created>
+      <option name="number" value="00354" />
+      <option name="presentableId" value="LOCAL-00354" />
+      <option name="project" value="LOCAL" />
+      <updated>1482672964057</updated>
+    </task>
+    <task id="LOCAL-00355" summary="products get interesting">
+      <created>1482673181843</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1482673181843</updated>
+    </task>
+    <task id="LOCAL-00356" summary="products get interesting">
+      <created>1482673342668</created>
+      <option name="number" value="00356" />
+      <option name="presentableId" value="LOCAL-00356" />
+      <option name="project" value="LOCAL" />
+      <updated>1482673342668</updated>
+    </task>
+    <task id="LOCAL-00357" summary="basic additional of products to a merchant">
+      <created>1482735591525</created>
+      <option name="number" value="00357" />
+      <option name="presentableId" value="LOCAL-00357" />
+      <option name="project" value="LOCAL" />
+      <updated>1482735591526</updated>
+    </task>
+    <task id="LOCAL-00358" summary="basic additional of products to a merchant">
+      <created>1482735897466</created>
+      <option name="number" value="00358" />
+      <option name="presentableId" value="LOCAL-00358" />
+      <option name="project" value="LOCAL" />
+      <updated>1482735897466</updated>
+    </task>
+    <task id="LOCAL-00359" summary="basic additional of products to a merchant">
+      <created>1482737464867</created>
+      <option name="number" value="00359" />
+      <option name="presentableId" value="LOCAL-00359" />
+      <option name="project" value="LOCAL" />
+      <updated>1482737464867</updated>
+    </task>
+    <option name="localTasksCounter" value="360" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="906266000" />
+    <option name="totallyTimeSpent" value="935535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1159,21 +1284,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27825466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18597998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32734275" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63414633" sideWeight="0.5443491" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21101573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31707317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33774835" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42105263" sideWeight="0.45636624" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42105263" sideWeight="0.45636624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63414633" sideWeight="0.45565093" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32734275" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1195,7 +1320,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42105263" sideWeight="0.45636624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63414633" sideWeight="0.45565093" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27825466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18597998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21101573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31707317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1219,8 +1344,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="working on merchants" />
-    <MESSAGE value="brainkid it up" />
     <MESSAGE value="finally getting somewhere with trading hours" />
     <MESSAGE value="products for merchants" />
     <MESSAGE value="on click for entire row" />
@@ -1244,8 +1367,11 @@
     <MESSAGE value="seeds" />
     <MESSAGE value="merchant fix" />
     <MESSAGE value="merchant toast" />
-    <option name="LAST_COMMIT_MESSAGE" value="merchant toast" />
+    <MESSAGE value="products get interesting" />
+    <MESSAGE value="basic additional of products to a merchant" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic additional of products to a merchant" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1254,31 +1380,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/config/merchant_types_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/config/overview/_merchant_types.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/config/overview/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.categories">
+    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.phones">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1287,50 +1389,116 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/superman.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/categories_product.rb" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="719" column="36" selection-start-line="719" selection-start-column="36" selection-end-line="719" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_type.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_venue.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_account.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/new.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20161222120608_create_join_table_product_category.rb" />
+    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.visits">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20161222123353_create_join_table_merchant_product.rb" />
+    <entry file="file://$PROJECT_DIR$/app/views/profile/payment_methods/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/users/_form.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/views/profile/payment_methods/new.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="5" column="91" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="91" />
+        <state relative-caret-position="555">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/users/edit.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <marker date="1482146543000" expanded="true" signature="0:19" ph="- title t('.title')" />
-            <marker date="1482146543000" expanded="true" signature="8:19" ph="&quot;New Product&quot;" />
-            <marker date="1482146543000" expanded="true" signature="20:206" ph=".mdl-cell.mdl-cell--12-col" />
-            <marker date="1482146543000" expanded="true" signature="49:206" ph="= form_for @product, :url  =&gt; admin_merchandise_products_path, :html =&gt; {:class =&gt; ''}  do |form|" />
-            <marker date="1482146543000" expanded="true" signature="137:206" ph="do ... end" />
-            <marker date="1482146543000" expanded="true" signature="151:206" ph="= render :partial =&gt; 'form', :locals =&gt; {:form =&gt; form}" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_prop_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/profile/payment_methods/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1244">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1338,7 +1506,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1346,7 +1530,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.properties">
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seed/products.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1359,15 +1559,451 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/superman.en.yml">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20161222120717_create_join_table_category_products.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/property_sets/edit.html.slim">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category_product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/#barista">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>#barista</OriginalElement>
+          <nodes>
+            <node x="2809.0" y="1200.1199473180068">Variant</node>
+            <node x="1937.5" y="1272.3699473180068">Cart</node>
+            <node x="3544.0" y="907.0">Property</node>
+            <node x="3890.0" y="896.0">PropertySet</node>
+            <node x="2474.5" y="484.75">ReferralType</node>
+            <node x="571.0" y="2152.869947318007">Merit::BadgeRules</node>
+            <node x="5464.0" y="997.3967073754777">CategoryProduct</node>
+            <node x="4287.0" y="1111.5565732758623">Product</node>
+            <node x="4801.0" y="998.6467073754777">Category</node>
+            <node x="251.0" y="704.1199473180067">Visit</node>
+            <node x="5936.0" y="1753.6883740421445">Order</node>
+            <node x="7193.0" y="1712.6199473180068">Country</node>
+            <node x="7458.0" y="1607.3645593869724">State</node>
+            <node x="6019.0" y="909.7717073754777">MerchantType</node>
+            <node x="6471.5" y="1655.8699473180068">OrderItem</node>
+            <node x="188.0" y="2152.869947318007">VariantRequiredError</node>
+            <node x="6015.5" y="1545.8699473180068">TradingHour</node>
+            <node x="4883.0" y="1368.8645593869724">MerchantProduct</node>
+            <node x="0.0" y="2152.869947318007">VariantMerchant</node>
+            <node x="1019.0" y="933.3699473180068">User</node>
+            <node x="1911.5" y="158.0">ReferralBonus</node>
+            <node x="506.0" y="1368.1199473180068">Role</node>
+            <node x="2396.0" y="265.77170737547794">ReferralProgram</node>
+            <node x="394.0" y="2152.869947318007">ProductProperty</node>
+            <node x="1980.0" y="0.0">StoreCredit</node>
+            <node x="1960.0" y="631.0">PaymentMethod</node>
+            <node x="6819.0" y="1633.8699473180068">TaxRate</node>
+            <node x="5983.5" y="685.7717073754777">Phone</node>
+            <node x="6428.0" y="1857.8699473180068">Coupon</node>
+            <node x="719.0" y="2152.869947318007">Merit::PointRules</node>
+            <node x="862.0" y="2152.869947318007">Merit::RankRules</node>
+            <node x="2459.5" y="1233.1199473180068">CartItem</node>
+            <node x="5258.0" y="1121.0217073754777">Merchant</node>
+            <node x="0.0" y="1113.1199473180068">Ahoy::Event</node>
+            <node x="1004.0" y="2152.869947318007">Notifier</node>
+            <node x="6503.5" y="740.7717073754777">PhoneType</node>
+            <node x="3243.0" y="872.25">VariantProperty</node>
+            <node x="5995.5" y="1321.8699473180068">Account</node>
+            <node x="1815.0" y="294.0">Referral</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="PropertySet" target="Property">
+              <point x="-158.5" y="-35.0" />
+              <point x="133.0" y="-29.5" />
+            </edge>
+            <edge source="Merchant" target="Phone">
+              <point x="299.0" y="-178.66666666666674" />
+              <point x="5936.0" y="846.7717073754777" />
+              <point x="-158.5" y="69.0" />
+            </edge>
+            <edge source="ReferralType" target="Referral">
+              <point x="-88.0" y="-18.5" />
+              <point x="2396.0" y="503.25" />
+              <point x="250.5" y="39.5" />
+            </edge>
+            <edge source="Ahoy::Event" target="User">
+              <point x="85.5" y="39.33333333333326" />
+              <point x="251.0" y="1496.6199473180068" />
+              <point x="939.0" y="1496.6199473180068" />
+              <point x="-358.0" y="215.33333333333326" />
+            </edge>
+            <edge source="Phone" target="PhoneType">
+              <point x="158.5" y="46.0" />
+              <point x="6348.0" y="823.7717073754777" />
+              <point x="6428.0" y="796.2717073754777" />
+              <point x="-80.0" y="18.5" />
+            </edge>
+            <edge source="CartItem" target="Variant">
+              <point x="103.0" y="-0.0" />
+              <point x="-177.0" y="-0.0" />
+            </edge>
+            <edge source="Ahoy::Event" target="Visit">
+              <point x="85.5" y="-0.0" />
+              <point x="-344.0" y="156.0" />
+            </edge>
+            <edge source="User" target="PaymentMethod">
+              <point x="358.0" y="-100.9375" />
+              <point x="1815.0" y="712.0" />
+              <point x="-105.5" y="-0.0" />
+            </edge>
+            <edge source="User" target="Referral">
+              <point x="358.0" y="-222.0625" />
+              <point x="-250.5" y="-0.0" />
+            </edge>
+            <edge source="Merchant" target="Order">
+              <point x="299.0" y="238.22222222222217" />
+              <point x="-206.0" y="-67.59999999999991" />
+            </edge>
+            <edge source="Variant" target="VariantProperty">
+              <point x="177.0" y="-91.20000000000005" />
+              <point x="-110.5" y="-0.0" />
+            </edge>
+            <edge source="Cart" target="CartItem">
+              <point x="128.0" y="35.0" />
+              <point x="2316.0" y="1377.3699473180068" />
+              <point x="2396.0" y="1374.8699473180068" />
+              <point x="-103.0" y="60.75" />
+            </edge>
+            <edge source="State" target="Country">
+              <point x="-137.0" y="23.0" />
+              <point x="92.5" y="-29.5" />
+            </edge>
+            <edge source="Order" target="OrderItem">
+              <point x="206.0" y="-112.66666666666674" />
+              <point x="6428.0" y="1777.3699473180068" />
+              <point x="-112.0" y="40.5" />
+            </edge>
+            <edge source="Product" target="Variant">
+              <point x="-217.0" y="39.5" />
+              <point x="4207.0" y="1312.2916666666667" />
+              <point x="3243.0" y="1312.2916666666667" />
+              <point x="177.0" y="-0.0" />
+            </edge>
+            <edge source="Cart" target="User">
+              <point x="-128.0" y="-0.0" />
+              <point x="1815.0" y="1342.3699473180068" />
+              <point x="358.0" y="100.9375" />
+            </edge>
+            <edge source="TaxRate" target="Country">
+              <point x="147.0" y="51.5" />
+              <point x="-92.5" y="-0.0" />
+            </edge>
+            <edge source="Category" target="CategoryProduct">
+              <point x="188.5" y="-0.0" />
+              <point x="5258.0" y="1052.1467073754777" />
+              <point x="-93.0" y="18.25" />
+            </edge>
+            <edge source="Order" target="Coupon">
+              <point x="206.0" y="112.66666666666674" />
+              <point x="-155.5" y="62.5" />
+            </edge>
+            <edge source="Referral" target="User">
+              <point x="-250.5" y="-105.33333333333326" />
+              <point x="358.0" y="-262.4375" />
+            </edge>
+            <edge source="User" target="Cart">
+              <point x="358.0" y="141.3125" />
+              <point x="1815.0" y="1389.0366139846735" />
+              <point x="-128.0" y="46.66666666666674" />
+            </edge>
+            <edge source="Variant" target="Property">
+              <point x="177.0" y="-45.59999999999991" />
+              <point x="3243.0" y="1000.75" />
+              <point x="3464.0" y="1000.75" />
+              <point x="-133.0" y="29.5" />
+            </edge>
+            <edge source="User" target="Phone">
+              <point x="358.0" y="-60.5625" />
+              <point x="1815.0" y="803.5" />
+              <point x="5856.0" y="803.5" />
+              <point x="5936.0" y="754.7717073754777" />
+              <point x="-158.5" y="-23.0" />
+            </edge>
+            <edge source="PropertySet" target="MerchantType">
+              <point x="158.5" y="-17.5" />
+              <point x="4287.0" y="968.2717073754777" />
+              <point x="5856.0" y="968.2717073754777" />
+              <point x="5936.0" y="957.7717073754777" />
+              <point x="-123.0" y="-0.0" />
+            </edge>
+            <edge source="Product" target="Merchant">
+              <point x="217.0" y="79.0" />
+              <point x="4801.0" y="1358.3645593869724" />
+              <point x="5178.0" y="1358.3645593869724" />
+              <point x="-299.0" y="-67.0" />
+            </edge>
+            <edge source="Visit" target="Ahoy::Event">
+              <point x="-344.0" y="-156.0" />
+              <point x="85.5" y="-39.33333333333326" />
+            </edge>
+            <edge source="PhoneType" target="Phone">
+              <point x="-80.0" y="-18.5" />
+              <point x="6428.0" y="759.2717073754777" />
+              <point x="6348.0" y="731.7717073754777" />
+              <point x="158.5" y="-46.0" />
+            </edge>
+            <edge source="State" target="TaxRate">
+              <point x="-137.0" y="-23.0" />
+              <point x="7378.0" y="1702.1199473180068" />
+              <point x="7193.0" y="1702.1199473180068" />
+              <point x="147.0" y="-51.5" />
+            </edge>
+            <edge source="Merchant" target="TradingHour">
+              <point x="299.0" y="119.11111111111109" />
+              <point x="5936.0" y="1615.8699473180068" />
+              <point x="-126.5" y="-0.0" />
+            </edge>
+            <edge source="MerchantType" target="PropertySet">
+              <point x="-123.0" y="-32.0" />
+              <point x="4287.0" y="925.5" />
+              <point x="158.5" y="-52.5" />
+            </edge>
+            <edge source="Phone" target="User">
+              <point x="-158.5" y="-69.0" />
+              <point x="5936.0" y="708.7717073754777" />
+              <point x="5856.0" y="620.5" />
+              <point x="1815.0" y="620.5" />
+              <point x="358.0" y="-141.3125" />
+            </edge>
+            <edge source="ReferralBonus" target="ReferralProgram">
+              <point x="154.0" y="-0.0" />
+              <point x="2316.0" y="206.0" />
+              <point x="-166.5" y="-54.0" />
+            </edge>
+            <edge source="Visit" target="User">
+              <point x="344.0" y="-0.0" />
+              <point x="-358.0" y="-215.33333333333348" />
+            </edge>
+            <edge source="Role" target="User">
+              <point x="89.0" y="-0.0" />
+              <point x="939.0" y="1427.1199473180068" />
+              <point x="-358.0" y="-0.0" />
+            </edge>
+            <edge source="PropertySet" target="Product">
+              <point x="158.5" y="52.5" />
+              <point x="-217.0" y="-39.5" />
+            </edge>
+            <edge source="Product" target="Category">
+              <point x="217.0" y="-26.333333333333258" />
+              <point x="-188.5" y="40.5" />
+            </edge>
+            <edge source="Referral" target="ReferralProgram">
+              <point x="250.5" y="-39.5" />
+              <point x="-166.5" y="54.0" />
+            </edge>
+            <edge source="OrderItem" target="TaxRate">
+              <point x="112.0" y="-0.0" />
+              <point x="-147.0" y="-0.0" />
+            </edge>
+            <edge source="Merchant" target="MerchantType">
+              <point x="299.0" y="-119.11111111111109" />
+              <point x="5936.0" y="989.7717073754777" />
+              <point x="-123.0" y="32.0" />
+            </edge>
+            <edge source="Country" target="State">
+              <point x="92.5" y="29.5" />
+              <point x="-137.0" y="69.0" />
+            </edge>
+            <edge source="Account" target="Merchant">
+              <point x="-146.5" y="-46.0" />
+              <point x="5936.0" y="1367.8699473180068" />
+              <point x="299.0" y="-0.0" />
+            </edge>
+            <edge source="User" target="Order">
+              <point x="358.0" y="302.8125" />
+              <point x="1815.0" y="1998.9699473180067" />
+              <point x="5856.0" y="1998.9699473180067" />
+              <point x="-206.0" y="135.19999999999982" />
+            </edge>
+            <edge source="VariantProperty" target="Property">
+              <point x="110.5" y="-0.0" />
+              <point x="-133.0" y="-29.5" />
+            </edge>
+            <edge source="Referral" target="ReferralType">
+              <point x="250.5" y="118.5" />
+              <point x="2396.0" y="540.25" />
+              <point x="-88.0" y="18.5" />
+            </edge>
+            <edge source="ReferralProgram" target="Referral">
+              <point x="-166.5" y="-0.0" />
+              <point x="250.5" y="-118.5" />
+            </edge>
+            <edge source="Product" target="PropertySet">
+              <point x="-217.0" y="-118.5" />
+              <point x="158.5" y="17.5" />
+            </edge>
+            <edge source="MerchantProduct" target="Merchant">
+              <point x="106.5" y="-0.0" />
+              <point x="5178.0" y="1416.8645593869724" />
+              <point x="-299.0" y="67.0" />
+            </edge>
+            <edge source="Merchant" target="Product">
+              <point x="-299.0" y="-201.0" />
+              <point x="5178.0" y="1308.3899066091958" />
+              <point x="4801.0" y="1308.3899066091958" />
+              <point x="217.0" y="26.333333333333258" />
+            </edge>
+            <edge source="Variant" target="OrderItem">
+              <point x="177.0" y="91.20000000000005" />
+              <point x="3243.0" y="1696.3699473180068" />
+              <point x="-112.0" y="-40.5" />
+            </edge>
+            <edge source="Property" target="PropertySet">
+              <point x="133.0" y="29.5" />
+              <point x="-158.5" y="35.0" />
+            </edge>
+            <edge source="User" target="StoreCredit">
+              <point x="358.0" y="-302.8125" />
+              <point x="1815.0" y="59.0" />
+              <point x="-85.5" y="-0.0" />
+            </edge>
+            <edge source="Merchant" target="Account">
+              <point x="299.0" y="59.55555555555566" />
+              <point x="5936.0" y="1459.8699473180068" />
+              <point x="-146.5" y="46.0" />
+            </edge>
+            <edge source="Merchant" target="User">
+              <point x="-299.0" y="201.0" />
+              <point x="5178.0" y="1840.8055555555554" />
+              <point x="1815.0" y="1840.8055555555554" />
+              <point x="358.0" y="181.6875" />
+            </edge>
+            <edge source="User" target="CartItem">
+              <point x="358.0" y="20.1875" />
+              <point x="1815.0" y="1261.8699473180068" />
+              <point x="2316.0" y="1261.8699473180068" />
+              <point x="2396.0" y="1293.8699473180068" />
+              <point x="-103.0" y="-20.25" />
+            </edge>
+            <edge source="Coupon" target="Order">
+              <point x="-155.5" y="-62.5" />
+              <point x="206.0" y="-0.0" />
+            </edge>
+            <edge source="State" target="Merchant">
+              <point x="-137.0" y="-69.0" />
+              <point x="7378.0" y="1228.920114942528" />
+              <point x="5936.0" y="1228.920114942528" />
+              <point x="299.0" y="-59.55555555555566" />
+            </edge>
+            <edge source="Product" target="CategoryProduct">
+              <point x="217.0" y="-131.66666666666674" />
+              <point x="4801.0" y="988.1467073754777" />
+              <point x="5178.0" y="988.1467073754777" />
+              <point x="5258.0" y="1015.6467073754777" />
+              <point x="-93.0" y="-18.25" />
+            </edge>
+            <edge source="Order" target="Merchant">
+              <point x="-206.0" y="-135.20000000000005" />
+              <point x="299.0" y="178.66666666666652" />
+            </edge>
+            <edge source="Category" target="Product">
+              <point x="-188.5" y="-40.5" />
+              <point x="217.0" y="-79.0" />
+            </edge>
+            <edge source="Product" target="MerchantProduct">
+              <point x="217.0" y="131.66666666666652" />
+              <point x="4801.0" y="1416.8645593869724" />
+              <point x="-106.5" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5770123839009288" x="4825.9356136820925" y="1225.9356136820925" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/merchant_product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_menu_options.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="123" selection-start-line="17" selection-start-column="123" selection-end-line="17" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_hours.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/property_sets/_property_form.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1383,45 +2019,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/property_sets/_property_form.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/properties/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seed/products.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchant_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/property_set.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/d99f50ea-b9a5-434a-a955-9a9793c8f307/dbv8978gh59hs.public.merchants">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -1430,625 +2029,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/merchant.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/d99f50ea-b9a5-434a-a955-9a9793c8f307/dbv8978gh59hs.public.products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/d99f50ea-b9a5-434a-a955-9a9793c8f307/dbv8978gh59hs.public.categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161220124351_create_categories_products.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.property_sets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.phones">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/superman.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/categories_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/superman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/superman.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="719" column="36" selection-start-line="719" selection-start-column="36" selection-end-line="719" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_type.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_venue.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_account.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="-554">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161222120608_create_join_table_product_category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161222120717_create_join_table_category_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="123" selection-start-line="17" selection-start-column="123" selection-end-line="17" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://RailsDependency/#barista">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>#barista</OriginalElement>
-          <nodes>
-            <node x="3508.0" y="1363.625">Variant</node>
-            <node x="1937.5" y="833.0">Cart</node>
-            <node x="4282.0" y="1549.0906432748534">Property</node>
-            <node x="3526.5" y="1659.9583333333333">PropertySet</node>
-            <node x="2607.0" y="315.0">ReferralType</node>
-            <node x="571.0" y="2461.2387426900586">Merit::BadgeRules</node>
-            <node x="2602.0" y="1438.7317982456143">CategoryProduct</node>
-            <node x="3074.0" y="1511.9054093567254">Product</node>
-            <node x="3149.5" y="1354.9054093567254">Category</node>
-            <node x="251.0" y="854.5833333333333">Visit</node>
-            <node x="1859.5" y="1115.5">Order</node>
-            <node x="4642.0" y="1231.25">Country</node>
-            <node x="4907.0" y="1264.3567982456143">State</node>
-            <node x="3942.0" y="1915.2387426900586">MerchantType</node>
-            <node x="3953.0" y="1244.0">OrderItem</node>
-            <node x="3124.5" y="1788.4583333333333">TradingHour</node>
-            <node x="188.0" y="2461.2387426900586">VariantRequiredError</node>
-            <node x="1959.0" y="1769.9817982456143">MerchantProduct</node>
-            <node x="0.0" y="2461.2387426900586">VariantMerchant</node>
-            <node x="1019.0" y="603.3333333333334">User</node>
-            <node x="1911.5" y="0.0">ReferralBonus</node>
-            <node x="506.0" y="696.5833333333333">Role</node>
-            <node x="2528.5" y="53.79203216374208">ReferralProgram</node>
-            <node x="394.0" y="2461.2387426900586">ProductProperty</node>
-            <node x="1980.0" y="694.0">StoreCredit</node>
-            <node x="1960.0" y="492.0">PaymentMethod</node>
-            <node x="4268.0" y="1222.0">TaxRate</node>
-            <node x="3092.5" y="2232.2387426900586">Phone</node>
-            <node x="2539.5" y="1024.0">Coupon</node>
-            <node x="719.0" y="2461.2387426900586">Merit::PointRules</node>
-            <node x="862.0" y="2461.2387426900586">Merit::RankRules</node>
-            <node x="2592.0" y="822.0">CartItem</node>
-            <node x="2396.0" y="1818.2387426900586">Merchant</node>
-            <node x="0.0" y="951.5833333333333">Ahoy::Event</node>
-            <node x="1004.0" y="2461.2387426900586">Notifier</node>
-            <node x="3605.0" y="2287.2387426900586">PhoneType</node>
-            <node x="3954.5" y="1516.375">VariantProperty</node>
-            <node x="3104.5" y="1968.4583333333333">Account</node>
-            <node x="1815.0" y="136.0">Referral</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="CategoryProduct" target="Product">
-              <point x="93.0" y="18.25" />
-              <point x="2994.0" y="1493.4817982456143" />
-              <point x="-177.0" y="-57.0" />
-            </edge>
-            <edge source="PropertySet" target="Property">
-              <point x="158.5" y="-52.5" />
-              <point x="3862.0" y="1677.4583333333333" />
-              <point x="3942.0" y="1644.875" />
-              <point x="4188.0" y="1644.875" />
-              <point x="4268.0" y="1622.8406432748534" />
-              <point x="-133.0" y="14.75" />
-            </edge>
-            <edge source="Merchant" target="Phone">
-              <point x="299.0" y="167.5" />
-              <point x="-158.5" y="-69.0" />
-            </edge>
-            <edge source="ReferralType" target="Referral">
-              <point x="-88.0" y="-18.5" />
-              <point x="250.5" y="39.5" />
-            </edge>
-            <edge source="Phone" target="PhoneType">
-              <point x="158.5" y="46.0" />
-              <point x="3428.0" y="2370.2387426900586" />
-              <point x="3508.0" y="2342.7387426900586" />
-              <point x="-80.0" y="18.5" />
-            </edge>
-            <edge source="Ahoy::Event" target="User">
-              <point x="85.5" y="-39.33333333333326" />
-              <point x="251.0" y="686.0833333333333" />
-              <point x="939.0" y="686.0833333333333" />
-              <point x="-358.0" y="-215.33333333333348" />
-            </edge>
-            <edge source="CartItem" target="Variant">
-              <point x="103.0" y="-0.0" />
-              <point x="2994.0" y="903.0" />
-              <point x="3074.0" y="1344.4054093567254" />
-              <point x="3428.0" y="1344.4054093567254" />
-              <point x="-177.0" y="-76.0" />
-            </edge>
-            <edge source="Ahoy::Event" target="Visit">
-              <point x="85.5" y="39.33333333333326" />
-              <point x="-344.0" y="156.0" />
-            </edge>
-            <edge source="User" target="PaymentMethod">
-              <point x="358.0" y="-181.6875" />
-              <point x="1815.0" y="573.0" />
-              <point x="-105.5" y="-0.0" />
-            </edge>
-            <edge source="User" target="Referral">
-              <point x="358.0" y="-222.0625" />
-              <point x="-250.5" y="105.33333333333337" />
-            </edge>
-            <edge source="Merchant" target="Order">
-              <point x="-299.0" y="-201.0" />
-              <point x="2316.0" y="1352.1" />
-              <point x="206.0" y="67.59999999999991" />
-            </edge>
-            <edge source="Variant" target="VariantProperty">
-              <point x="177.0" y="76.0" />
-              <point x="3942.0" y="1575.375" />
-              <point x="-110.5" y="-0.0" />
-            </edge>
-            <edge source="Cart" target="CartItem">
-              <point x="128.0" y="35.0" />
-              <point x="2316.0" y="938.0" />
-              <point x="2396.0" y="923.25" />
-              <point x="-103.0" y="20.25" />
-            </edge>
-            <edge source="State" target="Country">
-              <point x="-137.0" y="-69.0" />
-              <point x="92.5" y="-29.5" />
-            </edge>
-            <edge source="Order" target="OrderItem">
-              <point x="206.0" y="-0.0" />
-              <point x="-112.0" y="-40.5" />
-            </edge>
-            <edge source="Cart" target="User">
-              <point x="-128.0" y="-46.66666666666674" />
-              <point x="1815.0" y="856.3333333333333" />
-              <point x="358.0" y="-60.5625" />
-            </edge>
-            <edge source="TaxRate" target="Country">
-              <point x="147.0" y="-51.5" />
-              <point x="-92.5" y="-0.0" />
-            </edge>
-            <edge source="Product" target="Variant">
-              <point x="177.0" y="-28.5" />
-              <point x="-177.0" y="76.0" />
-            </edge>
-            <edge source="Order" target="Coupon">
-              <point x="206.0" y="-67.59999999999991" />
-              <point x="2316.0" y="1216.9" />
-              <point x="2396.0" y="1211.5" />
-              <point x="-155.5" y="62.5" />
-            </edge>
-            <edge source="Referral" target="User">
-              <point x="-250.5" y="-105.33333333333326" />
-              <point x="358.0" y="-302.8125" />
-            </edge>
-            <edge source="User" target="Cart">
-              <point x="358.0" y="20.1875" />
-              <point x="1815.0" y="949.6666666666667" />
-              <point x="-128.0" y="46.66666666666674" />
-            </edge>
-            <edge source="Variant" target="Property">
-              <point x="177.0" y="-0.0" />
-              <point x="4188.0" y="1477.625" />
-              <point x="4268.0" y="1563.8406432748534" />
-              <point x="-133.0" y="-44.25" />
-            </edge>
-            <edge source="MerchantProduct" target="PropertySet">
-              <point x="106.5" y="-24.0" />
-              <point x="2316.0" y="1793.9817982456143" />
-              <point x="2396.0" y="1771.2387426900586" />
-              <point x="3428.0" y="1771.2387426900586" />
-              <point x="3508.0" y="1776.6249999999998" />
-              <point x="-158.5" y="46.66666666666663" />
-            </edge>
-            <edge source="User" target="Phone">
-              <point x="358.0" y="262.4375" />
-              <point x="1815.0" y="2364.7387426900586" />
-              <point x="2994.0" y="2364.7387426900586" />
-              <point x="3074.0" y="2347.2387426900586" />
-              <point x="-158.5" y="23.0" />
-            </edge>
-            <edge source="PropertySet" target="MerchantType">
-              <point x="158.5" y="52.5" />
-              <point x="3862.0" y="1782.4583333333333" />
-              <point x="-123.0" y="-0.0" />
-            </edge>
-            <edge source="Visit" target="Ahoy::Event">
-              <point x="-344.0" y="-156.0" />
-              <point x="85.5" y="-0.0" />
-            </edge>
-            <edge source="State" target="TaxRate">
-              <point x="-137.0" y="23.0" />
-              <point x="4827.0" y="1359.75" />
-              <point x="4642.0" y="1359.75" />
-              <point x="147.0" y="51.5" />
-            </edge>
-            <edge source="PhoneType" target="Phone">
-              <point x="-80.0" y="-18.5" />
-              <point x="3508.0" y="2305.7387426900586" />
-              <point x="3428.0" y="2278.2387426900586" />
-              <point x="158.5" y="-46.0" />
-            </edge>
-            <edge source="Merchant" target="TradingHour">
-              <point x="299.0" y="-167.5" />
-              <point x="3074.0" y="1858.4583333333333" />
-              <point x="-126.5" y="-0.0" />
-            </edge>
-            <edge source="MerchantType" target="PropertySet">
-              <point x="-123.0" y="-32.0" />
-              <point x="3862.0" y="1747.4583333333333" />
-              <point x="158.5" y="17.5" />
-            </edge>
-            <edge source="Phone" target="User">
-              <point x="-158.5" y="69.0" />
-              <point x="3074.0" y="2393.2387426900586" />
-              <point x="2994.0" y="2375.7387426900586" />
-              <point x="1815.0" y="2375.7387426900586" />
-              <point x="358.0" y="302.8125" />
-            </edge>
-            <edge source="ReferralBonus" target="ReferralProgram">
-              <point x="154.0" y="-0.0" />
-              <point x="2316.0" y="48.0" />
-              <point x="2396.0" y="80.79203216374208" />
-              <point x="-166.5" y="-54.0" />
-            </edge>
-            <edge source="Visit" target="User">
-              <point x="344.0" y="-0.0" />
-              <point x="-358.0" y="215.33333333333326" />
-            </edge>
-            <edge source="Role" target="User">
-              <point x="89.0" y="-0.0" />
-              <point x="939.0" y="755.5833333333333" />
-              <point x="-358.0" y="-0.0" />
-            </edge>
-            <edge source="PropertySet" target="Product">
-              <point x="-158.5" y="-46.66666666666663" />
-              <point x="3508.0" y="1683.2916666666665" />
-              <point x="177.0" y="28.5" />
-            </edge>
-            <edge source="Referral" target="ReferralProgram">
-              <point x="250.5" y="-39.5" />
-              <point x="2396.0" y="188.79203216374208" />
-              <point x="-166.5" y="54.0" />
-            </edge>
-            <edge source="Country" target="State">
-              <point x="92.5" y="29.5" />
-              <point x="-137.0" y="-23.0" />
-            </edge>
-            <edge source="OrderItem" target="TaxRate">
-              <point x="112.0" y="-0.0" />
-              <point x="-147.0" y="-0.0" />
-            </edge>
-            <edge source="Merchant" target="MerchantType">
-              <point x="299.0" y="33.5" />
-              <point x="3074.0" y="2162.958333333333" />
-              <point x="3862.0" y="2162.958333333333" />
-              <point x="-123.0" y="32.0" />
-            </edge>
-            <edge source="Account" target="Merchant">
-              <point x="-146.5" y="-46.0" />
-              <point x="3074.0" y="2014.4583333333333" />
-              <point x="299.0" y="-100.5" />
-            </edge>
-            <edge source="User" target="Order">
-              <point x="358.0" y="181.6875" />
-              <point x="1815.0" y="1397.1666666666667" />
-              <point x="-206.0" y="112.66666666666674" />
-            </edge>
-            <edge source="VariantProperty" target="Property">
-              <point x="110.5" y="-0.0" />
-              <point x="4188.0" y="1575.375" />
-              <point x="4268.0" y="1593.3406432748534" />
-              <point x="-133.0" y="-14.75" />
-            </edge>
-            <edge source="Referral" target="ReferralType">
-              <point x="250.5" y="118.5" />
-              <point x="2396.0" y="370.5" />
-              <point x="-88.0" y="18.5" />
-            </edge>
-            <edge source="CategoryProduct" target="Category">
-              <point x="93.0" y="-18.25" />
-              <point x="2994.0" y="1456.9817982456143" />
-              <point x="3074.0" y="1413.4054093567254" />
-              <point x="-101.5" y="-0.0" />
-            </edge>
-            <edge source="ReferralProgram" target="Referral">
-              <point x="-166.5" y="-0.0" />
-              <point x="2396.0" y="134.79203216374208" />
-              <point x="250.5" y="-118.5" />
-            </edge>
-            <edge source="Product" target="PropertySet">
-              <point x="177.0" y="85.5" />
-              <point x="3508.0" y="1729.9583333333333" />
-              <point x="-158.5" y="-0.0" />
-            </edge>
-            <edge source="MerchantProduct" target="Merchant">
-              <point x="106.5" y="24.0" />
-              <point x="2316.0" y="1841.9817982456143" />
-              <point x="-299.0" y="67.0" />
-            </edge>
-            <edge source="Merchant" target="Product">
-              <point x="299.0" y="-234.5" />
-              <point x="-177.0" y="57.0" />
-            </edge>
-            <edge source="Variant" target="OrderItem">
-              <point x="177.0" y="-76.0" />
-              <point x="-112.0" y="40.5" />
-            </edge>
-            <edge source="Property" target="PropertySet">
-              <point x="-133.0" y="44.25" />
-              <point x="4268.0" y="1652.3406432748534" />
-              <point x="4188.0" y="1712.4583333333333" />
-              <point x="158.5" y="-17.5" />
-            </edge>
-            <edge source="User" target="StoreCredit">
-              <point x="358.0" y="-141.3125" />
-              <point x="1815.0" y="753.0" />
-              <point x="-85.5" y="-0.0" />
-            </edge>
-            <edge source="Merchant" target="Account">
-              <point x="299.0" y="-33.5" />
-              <point x="3074.0" y="2106.458333333333" />
-              <point x="-146.5" y="46.0" />
-            </edge>
-            <edge source="Merchant" target="User">
-              <point x="-299.0" y="201.0" />
-              <point x="2316.0" y="2255.4239766081864" />
-              <point x="1815.0" y="2255.4239766081864" />
-              <point x="358.0" y="222.0625" />
-            </edge>
-            <edge source="User" target="CartItem">
-              <point x="358.0" y="60.5625" />
-              <point x="1815.0" y="1017.4170321637423" />
-              <point x="2316.0" y="1017.4170321637423" />
-              <point x="2396.0" y="963.75" />
-              <point x="-103.0" y="60.75" />
-            </edge>
-            <edge source="Coupon" target="Order">
-              <point x="-155.5" y="-62.5" />
-              <point x="2396.0" y="1086.5" />
-              <point x="2316.0" y="1149.3" />
-              <point x="206.0" y="-135.20000000000005" />
-            </edge>
-            <edge source="State" target="Merchant">
-              <point x="-137.0" y="69.0" />
-              <point x="4827.0" y="2212.9817982456143" />
-              <point x="3074.0" y="2212.9817982456143" />
-              <point x="299.0" y="100.5" />
-            </edge>
-            <edge source="Order" target="Merchant">
-              <point x="206.0" y="135.20000000000005" />
-              <point x="2316.0" y="1419.7" />
-              <point x="-299.0" y="-67.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7799189651514599" x="297.72427742335014" y="947.7242774233501" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Association fields</Category>
-            <Category>Migration fields</Category>
-            <Category>Own fields</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.visits">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchant_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161222123353_create_join_table_merchant_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_menu_options.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="479">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -2056,7 +2046,122 @@
     <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="26" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="110" />
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding>
+            <marker date="1482737525000" expanded="true" signature="389:600" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
+            <marker date="1482737525000" expanded="true" signature="483:600" ph="= form.text_area :keywords, class: 'mdl-textfield__input'" />
+            <marker date="1482737525000" expanded="true" signature="605:822" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
+            <marker date="1482737525000" expanded="true" signature="699:822" ph="= form.text_area :description, class: 'mdl-textfield__input'" />
+            <marker date="1482737525000" expanded="true" signature="823:917" ph=".mdl-grid" />
+            <marker date="1482737525000" expanded="true" signature="835:917" ph=".mdl-cell.mdl-cell--6-col" />
+            <marker date="1482737525000" expanded="true" signature="865:917" ph="h3.mdl-typography--display-1.teal-heading Categories" />
+            <marker date="1482737525000" expanded="true" signature="918:1370" ph=".mdl-grid" />
+            <marker date="1482737525000" expanded="true" signature="930:1370" ph=".mdl-cell.mdl-cell--12-col.card-item-type--volume" />
+            <marker date="1482737525000" expanded="true" signature="984:1370" ph=".mdl-grid" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.category_products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.merchant_products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <marker date="1482737525000" expanded="true" signature="32:213" ph=".mdl-cell.mdl-cell--12-col" />
+            <marker date="1482737525000" expanded="true" signature="63:213" ph="= link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class =&gt; 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'" />
+            <marker date="1482737525000" expanded="true" signature="216:1371" ph=".mdl-cell.mdl-cell--12-col" />
+            <marker date="1482737525000" expanded="true" signature="247:1371" ph="table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col" />
+            <marker date="1482737525000" expanded="true" signature="325:663" ph="thead" />
+            <marker date="1482737525000" expanded="true" signature="339:663" ph="tr" />
+            <marker date="1482737525000" expanded="true" signature="409:457" ph="th.mdl-data-table__cell--non-numeric= t('.name')" />
+            <marker date="1482737525000" expanded="true" signature="1227:1371" ph="tr data-href=edit_admin_merchant_path(merchant)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_merchant.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <marker date="1482737525000" expanded="true" signature="882:995" ph="- @merchant.products.select(&amp;:id).flatten.uniq.each do |item|" />
+            <marker date="1482737525000" expanded="true" signature="936:995" ph="= render :partial =&gt; 'product', :locals =&gt; {:item =&gt; item }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <marker date="1482737525000" expanded="true" signature="73:335" ph="%li.mdl-list__item.mdl-list__item--three-line" />
+            <marker date="1482737525000" expanded="true" signature="123:246" ph="%span.mdl-list__item-primary-content" />
+            <marker date="1482737525000" expanded="true" signature="189:246" ph="%span.mdl-list__item-text-body" />
+            <marker date="1482737525000" expanded="true" signature="228:246" ph="= item.description" />
+            <marker date="1482737525000" expanded="true" signature="251:335" ph="%span.mdl-list__item-secondary-content" />
+            <marker date="1482737525000" expanded="true" signature="296:335" ph="%i.material-icons" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/shopping/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
