@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="623b0ddd-6c77-4fdd-a99f-b0bba5dca360" name="Default" comment="basic additional of products to a merchant">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/1.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/1.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/places/2.svg" afterPath="$PROJECT_DIR$/app/assets/images/places/2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" afterPath="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
     </list>
     <ignored path="barista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,18 +84,9 @@
       <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-              <folding>
-                <marker date="1482737525000" expanded="true" signature="32:213" ph=".mdl-cell.mdl-cell--12-col" />
-                <marker date="1482737525000" expanded="true" signature="63:213" ph="= link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class =&gt; 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'" />
-                <marker date="1482737525000" expanded="true" signature="216:1371" ph=".mdl-cell.mdl-cell--12-col" />
-                <marker date="1482737525000" expanded="true" signature="247:1371" ph="table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col" />
-                <marker date="1482737525000" expanded="true" signature="325:663" ph="thead" />
-                <marker date="1482737525000" expanded="true" signature="339:663" ph="tr" />
-                <marker date="1482737525000" expanded="true" signature="409:457" ph="th.mdl-data-table__cell--non-numeric= t('.name')" />
-                <marker date="1482737525000" expanded="true" signature="1227:1371" ph="tr data-href=edit_admin_merchant_path(merchant)" />
-              </folding>
+            <state relative-caret-position="337">
+              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="products_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/shopping/products_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -154,29 +144,18 @@
       <file leaf-file-name="_form.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-              <folding>
-                <marker date="1482737525000" expanded="true" signature="389:600" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
-                <marker date="1482737525000" expanded="true" signature="483:600" ph="= form.text_area :keywords, class: 'mdl-textfield__input'" />
-                <marker date="1482737525000" expanded="true" signature="605:822" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
-                <marker date="1482737525000" expanded="true" signature="699:822" ph="= form.text_area :description, class: 'mdl-textfield__input'" />
-                <marker date="1482737525000" expanded="true" signature="823:917" ph=".mdl-grid" />
-                <marker date="1482737525000" expanded="true" signature="835:917" ph=".mdl-cell.mdl-cell--6-col" />
-                <marker date="1482737525000" expanded="true" signature="865:917" ph="h3.mdl-typography--display-1.teal-heading Categories" />
-                <marker date="1482737525000" expanded="true" signature="918:1370" ph=".mdl-grid" />
-                <marker date="1482737525000" expanded="true" signature="930:1370" ph=".mdl-cell.mdl-cell--12-col.card-item-type--volume" />
-                <marker date="1482737525000" expanded="true" signature="984:1370" ph=".mdl-grid" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_product.html.slim" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_product.html.slim" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="337">
+              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -285,11 +264,11 @@
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/merchandise/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/merchants_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/merchants/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/shopping/merchants/_product.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/shopping/products_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim" />
       </list>
     </option>
   </component>
@@ -922,21 +901,7 @@
       <workItem from="1481024302609" duration="3445000" />
       <workItem from="1481111933569" duration="1864000" />
       <workItem from="1481181768806" duration="85639000" />
-      <workItem from="1482586058072" duration="16922000" />
-    </task>
-    <task id="LOCAL-00311" summary="controller clean up">
-      <created>1472471135914</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1472471135914</updated>
-    </task>
-    <task id="LOCAL-00312" summary="start of something BIG">
-      <created>1473849798437</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1473849798443</updated>
+      <workItem from="1482586058072" duration="17204000" />
     </task>
     <task id="LOCAL-00313" summary="simplier migrations">
       <created>1474202646160</created>
@@ -1267,11 +1232,25 @@
       <option name="project" value="LOCAL" />
       <updated>1482737464867</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="basic additional of products to a merchant">
+      <created>1482737557956</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1482737557957</updated>
+    </task>
+    <task id="LOCAL-00361" summary="basic additional of products to a merchant">
+      <created>1482737627160</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1482737627160</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="935535000" />
+    <option name="totallyTimeSpent" value="935817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1476,9 +1455,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2043,25 +2020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-          <folding>
-            <marker date="1482737525000" expanded="true" signature="389:600" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
-            <marker date="1482737525000" expanded="true" signature="483:600" ph="= form.text_area :keywords, class: 'mdl-textfield__input'" />
-            <marker date="1482737525000" expanded="true" signature="605:822" ph=".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col" />
-            <marker date="1482737525000" expanded="true" signature="699:822" ph="= form.text_area :description, class: 'mdl-textfield__input'" />
-            <marker date="1482737525000" expanded="true" signature="823:917" ph=".mdl-grid" />
-            <marker date="1482737525000" expanded="true" signature="835:917" ph=".mdl-cell.mdl-cell--6-col" />
-            <marker date="1482737525000" expanded="true" signature="865:917" ph="h3.mdl-typography--display-1.teal-heading Categories" />
-            <marker date="1482737525000" expanded="true" signature="918:1370" ph=".mdl-grid" />
-            <marker date="1482737525000" expanded="true" signature="930:1370" ph=".mdl-cell.mdl-cell--12-col.card-item-type--volume" />
-            <marker date="1482737525000" expanded="true" signature="984:1370" ph=".mdl-grid" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.category_products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -2086,14 +2044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/541f875b/4ab14069-0621-4096-811b-6a492b108389/dev_cuptown.public.merchant_products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -2104,23 +2054,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <marker date="1482737525000" expanded="true" signature="32:213" ph=".mdl-cell.mdl-cell--12-col" />
-            <marker date="1482737525000" expanded="true" signature="63:213" ph="= link_to t('admin.suppliers.index.new_button'), new_admin_merchant_path, :class =&gt; 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'" />
-            <marker date="1482737525000" expanded="true" signature="216:1371" ph=".mdl-cell.mdl-cell--12-col" />
-            <marker date="1482737525000" expanded="true" signature="247:1371" ph="table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp.mdl-cell--12-col" />
-            <marker date="1482737525000" expanded="true" signature="325:663" ph="thead" />
-            <marker date="1482737525000" expanded="true" signature="339:663" ph="tr" />
-            <marker date="1482737525000" expanded="true" signature="409:457" ph="th.mdl-data-table__cell--non-numeric= t('.name')" />
-            <marker date="1482737525000" expanded="true" signature="1227:1371" ph="tr data-href=edit_admin_merchant_path(merchant)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2161,7 +2094,31 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/shopping/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchandise/products/_form.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/merchants/_product.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
           <folding />
         </state>
       </provider>
