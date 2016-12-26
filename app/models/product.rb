@@ -2,14 +2,23 @@ class VariantRequiredError < StandardError; end
 
 class Product < ActiveRecord::Base
 
-  has_many :category_products
-  has_many :categories, :through => :category_products
+
   # include Presentation::ProductPresenter
   # include ProductFilters
 
   belongs_to :property_set
   has_many :product_attributes
-  has_many :properties,         through: :product_properties
+
+  # Allows Multiple Categories for a Product
+  has_many :category_products
+  has_many :categories, through: :category_products
+
+  # Allows Products to be allocated to a Merchant
+  has_many :merchant_products
+  has_many :merchants, through: :merchant_products
+
+
+  has_many :properties, through: :product_properties
   has_many :variants, dependent: :destroy
   # has_many :images, -> {order(:position)},
   #          as:        :imageable,
