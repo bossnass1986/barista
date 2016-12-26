@@ -93,5 +93,4 @@ class Shopping::ProductsController < Shopping::BaseController
     def form_info
       @cart_item = CartItem.new
     end
-
 end
