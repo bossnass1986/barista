@@ -26,7 +26,6 @@
       .mdl-grid--no-spacing
         .mdl-cell.mdl-cell--12-col
           h4.teal-heading= PropertySet.find(property_set).try(:name)
-
       .mdl-grid
         - properties.each do |property|
           .mdl-cell.mdl-cell--12-col

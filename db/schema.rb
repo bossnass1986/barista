@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222120717) do
+ActiveRecord::Schema.define(version: 20161229073406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,11 +90,6 @@ ActiveRecord::Schema.define(version: 20161222120717) do
 
   add_index "categories", ["name"], name: "index_categories_on_name", using: :btree
 
-  create_table "categories_products", id: false, force: :cascade do |t|
-    t.integer "category_id", null: false
-    t.integer "product_id",  null: false
-  end
-
   create_table "category_products", id: false, force: :cascade do |t|
     t.integer "category_id", null: false
     t.integer "product_id",  null: false
@@ -131,13 +126,22 @@ ActiveRecord::Schema.define(version: 20161222120717) do
   add_index "coupons", ["code"], name: "index_coupons_on_code", using: :btree
   add_index "coupons", ["expires_at"], name: "index_coupons_on_expires_at", using: :btree
 
-  create_table "merchant_products", force: :cascade do |t|
+  create_table "merchant_products", id: false, force: :cascade do |t|
+    t.integer "id", default: "nextval('merchant_products_id_seq'::regclass)", null: false
     t.integer  "product_id"
     t.integer  "merchant_id"
     t.boolean  "active",      default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  create_table "merchant_properteries", id: false, force: :cascade do |t|
+    t.integer "merchant_id", null: false
+    t.integer "propertery_id", null: false
+  end
+
+  add_index "merchant_properteries", ["merchant_id", "propertery_id"], name: "index_merchant_properteries_on_merchant_id_and_propertery_id", using: :btree
+  add_index "merchant_properteries", ["propertery_id", "merchant_id"], name: "index_merchant_properteries_on_propertery_id_and_merchant_id", using: :btree
 
   create_table "merchant_types", force: :cascade do |t|
     t.string   "name"
