@@ -1,7 +1,6 @@
 - title t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop= t('.summary')
-.mdl-grid--no-spacing
-  .mdl-cell--4-col-phone.mdl-cell--8-col-tablet.mdl-cell--12-col-desktop
-    = form_for @referral, :url => profile_referrals_path(@referral) do |f|
-      = render :partial => 'form', :locals => {:f => f}
+.mdl-grid
+  = form_for @referral, :url => profile_referrals_path(@referral) do |f|
+    = render :partial => 'form', :locals => {:f => f}

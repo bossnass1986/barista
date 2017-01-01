@@ -1,23 +1,23 @@
 - title t('.title')
 .mdl-grid
   .mdl-cell.mdl-cell--12-col
-    - if  @cart_items.blank? && @saved_cart_items.empty?
+    - if  @cart_items.blank?
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
-      %button.text-center.button.alert= t('cart.create_first_order')
+      button.text-center.button.alert= t('cart.create_first_order')
     - elsif  @cart_items.blank?
-      %h2.text-center
+      h2.text-center
         = t(:only_items_saved_for_later)
       .panel.graceful
-        %h3.text-center
+        h3.text-center
           = t(:add_items_saved_for_later)
     = form_for session_cart, url: shopping_cart_item_path(session_cart), :as => :cart do |cart_form|
       - unless @cart_items.blank?
         .grid-block
           .grid-content
-            %section.block-list
-              %ul
+            section.block-list
+              ul
                 - @cart_items.each_with_index do |item, i|
-                  %li
+                  li
                     = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
                       = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
         .grid-block

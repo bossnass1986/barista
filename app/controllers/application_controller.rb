@@ -53,10 +53,11 @@ class ApplicationController < ActionController::Base
     return @session_cart if defined?(@session_cart)
     session_cart!
   end
+
   # use this method if you want to force a SQL query to get the cart.
   def session_cart!
     if cookies[:cart_id]
-      @session_cart = Cart.includes(:shopping_cart_items).find_by_id(cookies[:cart_id])
+      @session_cart = Cart.find_by_id(cookies[:cart_id])
       unless @session_cart
         @session_cart = Cart.create(:user_id => current_user.id)
         cookies[:cart_id] = @session_cart.id
