@@ -7,7 +7,9 @@
   #information-panel.mdl-tabs__panel
     = form_for @user, :url => admin_user_path(@user)  do |form|
       = render :partial => '/admin/users/form', :locals => {:form => form}
-      = form.submit "Update", :class => 'button'
+      .mdl-grid
+        .mdl-cell.mdl-cell--12-col
+          = form.submit :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'
   #orders-panel.mdl-tabs__panel.is-active
     - @user.finished_orders.sort_by{ |o| o.completed_at }.reverse!.each do |order|
       ul.vertical-list

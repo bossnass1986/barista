@@ -1,6 +1,8 @@
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col
+  .mdl-cell.mdl-cell--6-col
     h3.mdl-typography--display-1.teal-heading= t('.customer_details')
+  .mdl-cell.mdl-cell--6-col
+    h3.mdl-typography--display-1.teal-heading= t('.contact_details')
 .mdl-grid
   .mdl-cell.mdl-cell--6-col.card-item-type--volume
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
@@ -12,28 +14,6 @@
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = form.text_field :last_name, class: 'mdl-textfield__input'
       = form.label :last_name, class: 'mdl-textfield__label'
-    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
-      = form.email_field :email, class: 'mdl-textfield__input'
-      = form.label :email, class: 'mdl-textfield__label'
-  = form.select :state, @states
-  .mdl-cell.mdl-cell--6-col
-    div style=("width: 510px;")
-      #map
-      script
-        |  function initMap() { var merchant = {lat:
-        /= @merchant.latitude
-        | , lng:
-        /= @merchant.longitude
-        | }; var map = new google.maps.Map(document.getElementById('map'), { zoom: 17, center: merchant }); var image = '
-        = image_url "places/1.svg"
-        | '; var marker = new google.maps.Marker({ position: merchant, map: map, icon: image });  }
-      script[async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC33yqanl24vVIFSWRDTr7sXC8Evuf4huo&callback=initMap"]
-.mdl-grid
-  .mdl-cell.mdl-cell--6-col
-    h3.mdl-typography--display-1.teal-heading= t('.contact_details')
-  .mdl-cell.mdl-cell--6-col
-    h3.mdl-typography--display-1.teal-heading= t('.user_roles')
-.mdl-grid
   .mdl-cell.mdl-cell--6-col.card-item-type--volume
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = form.text_field :email, class: 'mdl-textfield__input'
@@ -44,6 +24,18 @@
     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
       = form.email_field :email, class: 'mdl-textfield__input'
       = form.label :email, class: 'mdl-textfield__label'
+
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col
+    h3.mdl-typography--display-1.teal-heading User Status
+  .mdl-cell.mdl-cell--6-col
+    h3.mdl-typography--display-1.teal-heading= t('.user_roles')
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col.card-item-type--volume
+    - @states.each do |s|
+      = form.label :state, for: s, class: 'mdl-radio mdl-js-radio mdl-js-ripple-effect' do
+        = form.radio_button :state, s, id: s, class: 'mdl-radio__button', required: true
+        span.mdl-radio__label= s.titlecase
   .mdl-cell.mdl-cell--6-col.card-item-type--volume
     - @all_roles.each do |role|
       label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect.mdl-cell.mdl-cell--12-col for=role.id
