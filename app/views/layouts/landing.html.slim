@@ -3,16 +3,13 @@ html lang='en'
   head
     = render 'shared/meta_data'
     = stylesheet_link_tag 'application'
-    link href='//fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' /
-    script defer='' src='//code.getmdl.io/1.1.3/material.min.js'
-    script defer='' src='//js.braintreegateway.com/v2/braintree.js'
-    = csrf_meta_tags
   body
     main.mdl-layout__container
       .page-content
         .mdl-grid
           .mdl-cell.mdl-cell--12-col.landing-page-logo
-          .mdl-cell.mdl-cell--12-col.mdl-color--white.mdl-shadow--2dp
+          .mdl-cell.mdl-cell--12-col.card-item-type--volume
             = yield
-      /= render partial: '/users/new'
       = render 'shared/footer'
+    script defer='' src='//code.getmdl.io/1.1.3/material.min.js'
+    script defer='' src='//js.braintreegateway.com/v2/braintree.js'

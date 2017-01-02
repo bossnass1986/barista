@@ -16,6 +16,8 @@ meta content='#B2DFDB' name='msapplication-TileColor'
 /! SEO Information
 meta content=t('.meta_description') name='description'
 meta content=t('.meta_keywords') name='keywords'
+= csrf_meta_tags
 base href='/'
+link href='//fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' /
 title= content_for?(:title) ? yield(:title) : t('.site_name')
 = yield :head
