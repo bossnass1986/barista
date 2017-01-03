@@ -216,21 +216,31 @@ class User < ActiveRecord::Base
   end
 
   def create_braintree_customer
-    # self.access_token = SecureRandom::hex(9+rand(6)) if access_token.nil?
-    result = Braintree::Customer.create(
-        :first_name => self.first_name,
-        :last_name => self.last_name,
-        :email => self.email,
-        :phone => self.mobile,
-        :payment_method_nonce => 'fake-valid-nonce'
+    Stripe.api_key = "sk_test_clU7R87hYWIbdt7BzzAZFYoC"
+
+    result = Stripe::Customer.create(
+        {
+            :description => self.full_name,
+            :email => self.email
+        },
+        # {:stripe_account => CONNECTED_STRIPE_ACCOUNT_ID}
     )
-    if result.success?
-      puts result.customer.id
-      puts result.customer.payment_methods[0].token
-      update_column(:customer_cim_id, result.customer.id)
-    else
-      p result.errors
-    end
+    puts result.id
+    update_column(:customer_cim_id, result.id)
+    # result = Braintree::Customer.create(
+    #     :first_name => self.first_name,
+    #     :last_name => self.last_name,
+    #     :email => self.email,
+    #     :phone => self.mobile,
+    #     :payment_method_nonce => 'fake-valid-nonce'
+    # )
+    # if result.success?
+    #   puts result.customer.id
+    #   puts result.customer.payment_methods[0].token
+    #   update_column(:customer_cim_id, result.customer.id)
+    # else
+    #   p result.errors
+    # end
   end
 
   def assign_user_role

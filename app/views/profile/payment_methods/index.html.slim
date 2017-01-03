@@ -13,3 +13,12 @@
       .mdl-typography--headline= @customer.payment_methods[0].masked_number
   .mdl-cell.mdl-cell--4-col-phone
   = link_to t('.submit_button'), new_profile_payment_method_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'
+script.stripe-button[src="https://checkout.stripe.com/checkout.js"
+  data-key="pk_test_zY7uJEVlgA9vNFAOZefhNvT1"
+  data-amount="500"
+  data-locale="auto"
+  data-zip-code="true"
+  data-currency="aud"
+  data-name="Cuptown"
+  data-description="2 widgets"
+  data-image="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/13226817_796438817122829_105830192436463261_n.png?oh=37c0e802fdfaecb4f06c83b7dfb26709&oe=58E85C0A"]

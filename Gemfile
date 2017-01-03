@@ -25,8 +25,6 @@ gem 'pry'
 # Template
 gem 'material_design_lite-sass'
 gem 'initialjs-rails'
-#gem 'angularjs-rails'
-#gem 'rails-angular-material'
 gem 'haml'
 gem 'slim-rails'
 gem 'html2haml'
@@ -47,6 +45,7 @@ gem 'merit'
 # Payment Gateway
 gem 'awesome_nested_set', '~> 3.0.1'
 gem 'braintree'
+gem 'stripe'
 gem 'aasm'
 
 # Image Uploads

@@ -1,6 +1,6 @@
 class Profile::PaymentMethodsController < ApplicationController
   def index
-    @customer = Braintree::Customer.find(current_user.customer_cim_id)
+    # @customer = Braintree::Customer.find(current_user.customer_cim_id)
       # customer.payment_methods # array of PaymentMethod instances
       # puts customer.payment_methods.count
   end
