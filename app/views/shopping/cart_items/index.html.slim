@@ -1,29 +1,33 @@
 - title t('.title')
+/! Display Current Balance & Expiry
 .mdl-grid
-  .mdl-cell.mdl-cell--12-col
-    - if  @cart_items.blank?
+  .mdl-cell.mdl-cell--3-col-phone.mdl-cell--8-col-desktop
+    = t('.current_balance')
+  .mdl-cell.mdl-cell--1-col-phone.mdl-cell--4-col-desktop
+    .mdl-textfield--align-right.add_credit
+      .mdl-typography--title= number_to_currency(current_user.store_credit.amount)
+- if  @cart_items.blank?
+  .mdl-grid
+    .mdl-cell.mdl-cell--12-col
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
       button.text-center.button.alert= t('cart.create_first_order')
-    - elsif  @cart_items.blank?
-      h2.text-center
-        = t(:only_items_saved_for_later)
-      .panel.graceful
-        h3.text-center
-          = t(:add_items_saved_for_later)
-    = form_for session_cart, url: shopping_cart_item_path(session_cart), :as => :cart do |cart_form|
+- else
+  = form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'mdl-grid'}, :as => :cart do |cart_form|
+    .mdl-cell.mdl-cell--12-col.card-item-type--volume
       - unless @cart_items.blank?
+        .mdl-grid
+          .mdl-cell.mdl-cell--1-col-phone
+          .mdl-cell.mdl-cell--2-col-phone Item
+          .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right Price
+        - @cart_items.each_with_index do |item, i|
+          .mdl-grid
+            = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
+              = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
+        = @cart_items
+        /= @cart_items.total
         .grid-block
-          .grid-content
-            section.block-list
-              ul
-                - @cart_items.each_with_index do |item, i|
-                  li
-                    = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
-                      = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
-        .grid-block
-          .small-12.grid-content
-            = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button large expand'}
-          .grid-content
+          /.grid-content
             = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
-          .grid-content
-            = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'button alert'}
+    .mdl-grid
+      .mdl-cell.mdl-cell--12
+        = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'}

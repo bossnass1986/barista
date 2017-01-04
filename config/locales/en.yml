@@ -1,9 +1,9 @@
 en:
   layouts:
     mdl:
-      site_name: 'Cuptown'
+      site_name: Cuptown
     superman:
-      site_name: 'Cuptown'
+      site_name: Cuptown
   shared:
     compact_menu:
       merchants: 'Grab a Drink'
@@ -88,7 +88,7 @@ en:
   shopping:
     cart_items:
       index:
-        title: 'Customise'
+        title: Order Summary
         no_records: 'Oh no! There are no items to customise!'
     merchants:
       index:
@@ -100,11 +100,8 @@ en:
     form:
       title: 'GET STARTED WITH CUPTOWN!'
       subtitle: 'Create a Cuptown account to pre-order beverages at your favourite venues.'
-
-
-
   cart:
-    title: 'Customise'
+    title: 'Order Summary'
     nothing_in_cart: "Aww shucks, you don't have anything in your cart yet!"
     add_items_cart: 'Add some items to your cart'
     create_first_order: 'Create Your First Order'

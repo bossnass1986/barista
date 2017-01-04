@@ -63,7 +63,7 @@ class Shopping::CartItemsController < Shopping::BaseController
 
   private
   def allowed_params
-    params.require(:cart).permit!
+    params.require(:cart_tems).permit!
   end
 
 end
