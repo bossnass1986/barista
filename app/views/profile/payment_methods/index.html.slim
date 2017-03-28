@@ -12,7 +12,7 @@
     .mdl-cell.mdl-cell--3-col-phone.mdl-textfield--align-right
       .mdl-typography--headline= @customer.payment_methods[0].masked_number
   .mdl-cell.mdl-cell--4-col-phone
-  = link_to t('.submit_button'), new_profile_payment_method_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'
+= link_to t('.submit_button'), new_profile_payment_method_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'
 script.stripe-button[src="https://checkout.stripe.com/checkout.js"
   data-key="pk_test_zY7uJEVlgA9vNFAOZefhNvT1"
   data-amount="500"

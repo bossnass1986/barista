@@ -12,22 +12,36 @@
       = render :partial => 'shared/no_record_header', :locals => {:header_description => t('.no_records') }
       button.text-center.button.alert= t('cart.create_first_order')
 - else
-  = form_for session_cart, url: shopping_cart_item_path(session_cart), html: {class: 'mdl-grid'}, :as => :cart do |cart_form|
+  = form_for session_cart, url: shopping_cart_item_path(session_cart), :as => :cart do |cart_form|
     .mdl-cell.mdl-cell--12-col.card-item-type--volume
       - unless @cart_items.blank?
         .mdl-grid
-          .mdl-cell.mdl-cell--1-col-phone
           .mdl-cell.mdl-cell--2-col-phone Item
           .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right Price
+          .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right Total
         - @cart_items.each_with_index do |item, i|
           .mdl-grid
             = cart_form.fields_for :shopping_cart_items, item do |cart_items_form|
               = render :partial => 'cart_item', :locals => {:cart_items_form => cart_items_form, :item => item, :i => i }
-        = @cart_items
-        /= @cart_items.total
-        .grid-block
-          /.grid-content
-            = cart_form.submit t('cart.update').upcase, :class => 'button hollow'
-    .mdl-grid
-      .mdl-cell.mdl-cell--12
-        = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'}
+    .mdl-cell.mdl-cell--12
+      .mdl-grid
+        .mdl-cell.mdl-cell--3-col-phone.mdl-textfield--align-right Sub Total
+        .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right #
+      .mdl-grid
+        .mdl-cell.mdl-cell--3-col-phone.mdl-textfield--align-right Tax
+        .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right #
+      .mdl-grid
+        .mdl-cell.mdl-cell--3-col-phone.mdl-textfield--align-right Total
+        .mdl-cell.mdl-cell--1-col-phone.mdl-textfield--align-right #
+
+    .mdl-cell.mdl-cell--12
+      = cart_form.submit t('cart.checkout').upcase, {:checkout => 1, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect'}
+      script.stripe-button[src="https://checkout.stripe.com/checkout.js"
+        data-key="pk_test_zY7uJEVlgA9vNFAOZefhNvT1"
+        data-amount="500"
+        data-locale="auto"
+        data-zip-code="true"
+        data-currency="aud"
+        data-name="Cuptown"
+        data-description="2 widgets"
+        data-image="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/13226817_796438817122829_105830192436463261_n.png?oh=37c0e802fdfaecb4f06c83b7dfb26709&oe=58E85C0A"]

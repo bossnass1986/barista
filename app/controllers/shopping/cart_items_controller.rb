@@ -2,8 +2,7 @@ class Shopping::CartItemsController < Shopping::BaseController
 
   # GET /shopping/cart_items
   def index
-    @cart_items       = session_cart.shopping_cart_items
-    # @saved_cart_items = session_cart.saved_cart_items
+    @cart_items = session_cart.shopping_cart_items.includes(:variant)
     ahoy.track 'Viewed Cart'#, title: "Hot, Flat, and Crowded"
   end
 
